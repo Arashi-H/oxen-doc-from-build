@@ -1,0 +1,147 @@
+\hypertarget{chacha_8c}{}\doxysection{src/crypto/chacha.c File Reference}
+\label{chacha_8c}\index{src/crypto/chacha.c@{src/crypto/chacha.c}}
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/param.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}chacha.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+Include dependency graph for chacha.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chacha_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{chacha_8c_aab501c9399de1068d6ebc7539bad05aa}{U8V}}(v)~((uint8\+\_\+t)(v) \& U\+I\+N\+T8\+\_\+C(0x\+FF))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_a3dc98e26a13496cfbee7feb403a50a9d}{U32V}}(v)~((uint32\+\_\+t)(v) \& U\+I\+N\+T32\+\_\+C(0x\+F\+F\+F\+F\+F\+F\+FF))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_ab6814964f967bf82f117707f50749af1}{U8\+T\+O32\+\_\+\+L\+I\+T\+T\+LE}}(p)~S\+W\+A\+P32\+LE(((uint32\+\_\+t$\ast$)(p))\mbox{[}0\mbox{]})
+\item 
+\#define \mbox{\hyperlink{chacha_8c_a96d7fe696281d2bff1ae176c17c435e1}{U32\+T\+O8\+\_\+\+L\+I\+T\+T\+LE}}(p,  v)~(((uint32\+\_\+t$\ast$)(p))\mbox{[}0\mbox{]} = S\+W\+A\+P32\+LE(v))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}{R\+O\+T\+A\+TE}}(v,  c)~(rol32(v,c))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}{X\+OR}}(v,  w)~((v) $^\wedge$ (w))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{P\+L\+US}}(v,  w)~(\mbox{\hyperlink{chacha_8c_a3dc98e26a13496cfbee7feb403a50a9d}{U32V}}((v) + (w)))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_ae5e745942efa0b278e4b7cad31a5cde3}{P\+L\+U\+S\+O\+NE}}(v)~(\mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{P\+L\+US}}((v),1))
+\item 
+\#define \mbox{\hyperlink{chacha_8c_aae524f06f43cef9dde57fb1cecc75d4a}{Q\+U\+A\+R\+T\+E\+R\+R\+O\+U\+ND}}(a,  b,  c,  \mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{chacha_8c_ab54f6920bca87b2f652fc4c3404e5532}{chacha}} (unsigned rounds, const void $\ast$data, size\+\_\+t length, const uint8\+\_\+t $\ast$key, const uint8\+\_\+t $\ast$\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\item 
+void \mbox{\hyperlink{chacha_8c_a8b2efed6eb443a3e5606ac5dbaf9f2aa}{chacha8}} (const void $\ast$data, size\+\_\+t length, const uint8\+\_\+t $\ast$key, const uint8\+\_\+t $\ast$\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\item 
+void \mbox{\hyperlink{chacha_8c_a220bb7311582b4764e4c992e7fef633b}{chacha20}} (const void $\ast$data, size\+\_\+t length, const uint8\+\_\+t $\ast$key, const uint8\+\_\+t $\ast$\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char \mbox{\hyperlink{chacha_8c_a1008b2f2971d7bafe1c6f627da2af317}{sigma}} \mbox{[}$\,$\mbox{]} = \char`\"{}expand 32-\/byte k\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}\label{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}} 
+\index{chacha.c@{chacha.c}!PLUS@{PLUS}}
+\index{PLUS@{PLUS}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{PLUS}{PLUS}}
+{\footnotesize\ttfamily \#define P\+L\+US(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{w }\end{DoxyParamCaption})~(\mbox{\hyperlink{chacha_8c_a3dc98e26a13496cfbee7feb403a50a9d}{U32V}}((v) + (w)))}
+
+\mbox{\Hypertarget{chacha_8c_ae5e745942efa0b278e4b7cad31a5cde3}\label{chacha_8c_ae5e745942efa0b278e4b7cad31a5cde3}} 
+\index{chacha.c@{chacha.c}!PLUSONE@{PLUSONE}}
+\index{PLUSONE@{PLUSONE}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{PLUSONE}{PLUSONE}}
+{\footnotesize\ttfamily \#define P\+L\+U\+S\+O\+NE(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~(\mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{P\+L\+US}}((v),1))}
+
+\mbox{\Hypertarget{chacha_8c_aae524f06f43cef9dde57fb1cecc75d4a}\label{chacha_8c_aae524f06f43cef9dde57fb1cecc75d4a}} 
+\index{chacha.c@{chacha.c}!QUARTERROUND@{QUARTERROUND}}
+\index{QUARTERROUND@{QUARTERROUND}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{QUARTERROUND}{QUARTERROUND}}
+{\footnotesize\ttfamily \#define Q\+U\+A\+R\+T\+E\+R\+R\+O\+U\+ND(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c,  }\item[{}]{\mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}} = \mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{PLUS}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}); \mbox{\hyperlink{namespaced}{d}} = \mbox{\hyperlink{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}{ROTATE}}(\mbox{\hyperlink{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}{XOR}}(\mbox{\hyperlink{namespaced}{d}},\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}),16); \(\backslash\)}
+\DoxyCodeLine{  c = \mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{PLUS}}(c,\mbox{\hyperlink{namespaced}{d}}); \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} = \mbox{\hyperlink{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}{ROTATE}}(\mbox{\hyperlink{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}{XOR}}(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}},c),12); \(\backslash\)}
+\DoxyCodeLine{  a = \mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{PLUS}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}); \mbox{\hyperlink{namespaced}{d}} = \mbox{\hyperlink{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}{ROTATE}}(\mbox{\hyperlink{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}{XOR}}(\mbox{\hyperlink{namespaced}{d}},\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}), 8); \(\backslash\)}
+\DoxyCodeLine{  c = \mbox{\hyperlink{chacha_8c_a8ff5a08d0d15b5357e9b78092e5af465}{PLUS}}(c,\mbox{\hyperlink{namespaced}{d}}); \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} = \mbox{\hyperlink{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}{ROTATE}}(\mbox{\hyperlink{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}{XOR}}(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}},c), 7);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}\label{chacha_8c_a0c6257aa90a00e0744a9cb67d1ec6ce3}} 
+\index{chacha.c@{chacha.c}!ROTATE@{ROTATE}}
+\index{ROTATE@{ROTATE}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{ROTATE}{ROTATE}}
+{\footnotesize\ttfamily \#define R\+O\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{c }\end{DoxyParamCaption})~(rol32(v,c))}
+
+\mbox{\Hypertarget{chacha_8c_a96d7fe696281d2bff1ae176c17c435e1}\label{chacha_8c_a96d7fe696281d2bff1ae176c17c435e1}} 
+\index{chacha.c@{chacha.c}!U32TO8\_LITTLE@{U32TO8\_LITTLE}}
+\index{U32TO8\_LITTLE@{U32TO8\_LITTLE}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{U32TO8\_LITTLE}{U32TO8\_LITTLE}}
+{\footnotesize\ttfamily \#define U32\+T\+O8\+\_\+\+L\+I\+T\+T\+LE(\begin{DoxyParamCaption}\item[{}]{p,  }\item[{}]{v }\end{DoxyParamCaption})~(((uint32\+\_\+t$\ast$)(p))\mbox{[}0\mbox{]} = S\+W\+A\+P32\+LE(v))}
+
+\mbox{\Hypertarget{chacha_8c_a3dc98e26a13496cfbee7feb403a50a9d}\label{chacha_8c_a3dc98e26a13496cfbee7feb403a50a9d}} 
+\index{chacha.c@{chacha.c}!U32V@{U32V}}
+\index{U32V@{U32V}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{U32V}{U32V}}
+{\footnotesize\ttfamily \#define U32V(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~((uint32\+\_\+t)(v) \& U\+I\+N\+T32\+\_\+C(0x\+F\+F\+F\+F\+F\+F\+FF))}
+
+\mbox{\Hypertarget{chacha_8c_ab6814964f967bf82f117707f50749af1}\label{chacha_8c_ab6814964f967bf82f117707f50749af1}} 
+\index{chacha.c@{chacha.c}!U8TO32\_LITTLE@{U8TO32\_LITTLE}}
+\index{U8TO32\_LITTLE@{U8TO32\_LITTLE}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{U8TO32\_LITTLE}{U8TO32\_LITTLE}}
+{\footnotesize\ttfamily \#define U8\+T\+O32\+\_\+\+L\+I\+T\+T\+LE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~S\+W\+A\+P32\+LE(((uint32\+\_\+t$\ast$)(p))\mbox{[}0\mbox{]})}
+
+\mbox{\Hypertarget{chacha_8c_aab501c9399de1068d6ebc7539bad05aa}\label{chacha_8c_aab501c9399de1068d6ebc7539bad05aa}} 
+\index{chacha.c@{chacha.c}!U8V@{U8V}}
+\index{U8V@{U8V}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{U8V}{U8V}}
+{\footnotesize\ttfamily \#define U8V(\begin{DoxyParamCaption}\item[{}]{v }\end{DoxyParamCaption})~((uint8\+\_\+t)(v) \& U\+I\+N\+T8\+\_\+C(0x\+FF))}
+
+\mbox{\Hypertarget{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}\label{chacha_8c_afb73ad5e5dd2ba223f10bdc8daf4d208}} 
+\index{chacha.c@{chacha.c}!XOR@{XOR}}
+\index{XOR@{XOR}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{XOR}{XOR}}
+{\footnotesize\ttfamily \#define X\+OR(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{w }\end{DoxyParamCaption})~((v) $^\wedge$ (w))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{chacha_8c_ab54f6920bca87b2f652fc4c3404e5532}\label{chacha_8c_ab54f6920bca87b2f652fc4c3404e5532}} 
+\index{chacha.c@{chacha.c}!chacha@{chacha}}
+\index{chacha@{chacha}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{chacha()}{chacha()}}
+{\footnotesize\ttfamily static void chacha (\begin{DoxyParamCaption}\item[{unsigned}]{rounds,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{chacha_8c_a220bb7311582b4764e4c992e7fef633b}\label{chacha_8c_a220bb7311582b4764e4c992e7fef633b}} 
+\index{chacha.c@{chacha.c}!chacha20@{chacha20}}
+\index{chacha20@{chacha20}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{chacha20()}{chacha20()}}
+{\footnotesize\ttfamily void chacha20 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{chacha_8c_a8b2efed6eb443a3e5606ac5dbaf9f2aa}\label{chacha_8c_a8b2efed6eb443a3e5606ac5dbaf9f2aa}} 
+\index{chacha.c@{chacha.c}!chacha8@{chacha8}}
+\index{chacha8@{chacha8}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{chacha8()}{chacha8()}}
+{\footnotesize\ttfamily void chacha8 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{chacha_8c_a1008b2f2971d7bafe1c6f627da2af317}\label{chacha_8c_a1008b2f2971d7bafe1c6f627da2af317}} 
+\index{chacha.c@{chacha.c}!sigma@{sigma}}
+\index{sigma@{sigma}!chacha.c@{chacha.c}}
+\doxysubsubsection{\texorpdfstring{sigma}{sigma}}
+{\footnotesize\ttfamily const char sigma\mbox{[}$\,$\mbox{]} = \char`\"{}expand 32-\/byte k\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

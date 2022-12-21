@@ -1,0 +1,129 @@
+\hypertarget{structwallet_1_1rpc_1_1ONS__BUY__MAPPING}{}\doxysection{wallet\+::rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG Struct Reference}
+\label{structwallet_1_1rpc_1_1ONS__BUY__MAPPING}\index{wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1ONS__BUY__MAPPING__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1ONS__BUY__MAPPING__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a3a4d11e021f3ac15fdb49526ef152e25}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a820879af786fecdfe753c8885bea2b65}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a31cd3c93a4510140e3121256901a560e}{description}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Buy a Loki Name System (O\+NS) mapping that maps a unique name to a Session ID or Lokinet address.
+
+Currently supports Session, Lokinet and \mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} registrations. Lokinet registrations can be for 1, 2, 5, or 10 years by specifying a type value of \char`\"{}lokinet\char`\"{}, \char`\"{}lokinet\+\_\+2y\char`\"{}, \char`\"{}lokinet\+\_\+5y\char`\"{}, \char`\"{}lokinet\+\_\+10y\char`\"{}. Session registrations do not expire. The owner of the O\+NS entry (by default, the purchasing wallet) will be permitted to submit O\+NS update transactions to the Loki blockchain (for example to update a Session pubkey or the target Lokinet address). You may change the primary owner or add a backup owner in the registration and can change them later with update transactions. Owner addresses can be either Loki wallets, or generic ed25519 pubkeys (for advanced uses). For Session, the recommended owner or backup owner is the ed25519 public key of the user\textquotesingle{}s Session ID. When specifying owners, either a wallet (sub)address or standard ed25519 public key is supported per mapping. Updating the value that a name maps to requires one of the owners to sign the update transaction. For wallets, this is signed using the (sub)address\textquotesingle{}s spend key. For more information on updating and signing see the \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__UPDATE__MAPPING}{O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG}} documentation.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily type} -- The mapping type\+: \char`\"{}session\char`\"{}, \char`\"{}lokinet\char`\"{}, \char`\"{}lokinet\+\_\+2y\char`\"{}, \char`\"{}lokinet\+\_\+5y\char`\"{}, \char`\"{}lokinet\+\_\+10y\char`\"{}, \char`\"{}wallet\char`\"{}.
+\item {\ttfamily owner} -- (Optional)\+: The ed25519 public key or wallet address that has authority to update the mapping.
+\item {\ttfamily backup\+\_\+owner} -- (Optional)\+: The secondary, backup public key that has authority to update the mapping.
+\item {\ttfamily name} -- The name to purchase via Oxen Name Service
+\item {\ttfamily value} -- The value that the name maps to via Oxen Name Service, (i.\+e. For Session\+: \mbox{[}display name-\/$>$session public key\mbox{]}, for wallets\+: \mbox{[}name-\/$>$wallet address\mbox{]}, for Lokinet\+: \mbox{[}name-\/$>$domain name\mbox{]}).
+\item {\ttfamily account\+\_\+index} -- (Optional) Transfer from this account index. (Defaults to 0)
+\item {\ttfamily subaddr\+\_\+indices} -- (Optional) Transfer from this set of subaddresses. (Defaults to 0)
+\item {\ttfamily priority} -- Set a priority for the transaction. Accepted values are\+: or 0-\/4 for\+: default, unimportant, normal, elevated, priority.
+\item {\ttfamily get\+\_\+tx\+\_\+key} -- (Optional) Return the transaction key after sending.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, the newly created transaction will not be relayed to the oxen network. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- Return the transaction as hex string after sending (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- Return the metadata needed to relay the transaction. (Defaults to false)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash} -- Publicly searchable transaction hash.
+\item {\ttfamily tx\+\_\+key} -- Transaction key if {\ttfamily get\+\_\+tx\+\_\+key} is {\ttfamily true}, otherwise, blank string.
+\item {\ttfamily amount} -- Amount transferred for the transaction in atomic units.
+\item {\ttfamily fee} -- Value in atomic units of the fee charged for the tx.
+\item {\ttfamily tx\+\_\+blob} -- Raw transaction represented as hex string, if get\+\_\+tx\+\_\+hex is true.
+\item {\ttfamily tx\+\_\+metadata} -- Set of transaction metadata needed to relay this transfer later, if {\ttfamily get\+\_\+tx\+\_\+metadata} is {\ttfamily true}.
+\item {\ttfamily multisig\+\_\+txset} -- Set of multisig transactions in the process of being signed (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a3a4d11e021f3ac15fdb49526ef152e25}\label{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a3a4d11e021f3ac15fdb49526ef152e25}} 
+\index{wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}!names@{names}}
+\index{names@{names}!wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a31cd3c93a4510140e3121256901a560e}\label{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a31cd3c93a4510140e3121256901a560e}} 
+\index{wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}!description@{description}}
+\index{description@{description}!wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily constexpr const char$\ast$ wallet\+::rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::description\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{R\textcolor{stringliteral}{"(Buy a Loki Name System (ONS) mapping that maps a unique name to a Session ID or Lokinet address.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{Currently supports Session, Lokinet and Wallet registrations. Lokinet registrations can be for 1, 2, 5, or 10 years by specifying a type value of "lokinet", "lokinet\_2y", "lokinet\_5y", "lokinet\_10y". Session registrations do not expire.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The owner of the ONS entry (by default, the purchasing wallet) will be permitted to submit ONS update transactions to the Loki blockchain (for example to update a Session pubkey or the target Lokinet address). You may change the primary owner or add a backup owner in the registration and can change them later with update transactions. Owner addresses can be either Loki wallets, or generic ed25519 pubkeys (for advanced uses).}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{For Session, the recommended owner or backup owner is the ed25519 public key of the user's Session ID.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{When specifying owners, either a wallet (sub)address or standard ed25519 public key is supported per mapping. Updating the value that a name maps to requires one of the owners to sign the update transaction. For wallets, this is signed using the (sub)address's spend key.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{For more information on updating and signing see the ONS\_UPDATE\_MAPPING documentation.)"}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a820879af786fecdfe753c8885bea2b65}\label{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_a820879af786fecdfe753c8885bea2b65}} 
+\index{wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}!request@{request}}
+\index{request@{request}!wallet::rpc::ONS\_BUY\_MAPPING@{wallet::rpc::ONS\_BUY\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__BUY__MAPPING_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

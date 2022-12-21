@@ -1,0 +1,606 @@
+\hypertarget{db__lmdb_8cpp}{}\doxysection{src/blockchain\+\_\+db/lmdb/db\+\_\+lmdb.cpp File Reference}
+\label{db__lmdb_8cpp}\index{src/blockchain\_db/lmdb/db\_lmdb.cpp@{src/blockchain\_db/lmdb/db\_lmdb.cpp}}
+{\ttfamily \#include \char`\"{}db\+\_\+lmdb.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/circular\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/median.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checkpoints/checkpoints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+Include dependency graph for db\+\_\+lmdb.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db__lmdb_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02db__lmdb_8cpp_03_1_1pre__rct__output__data__t}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::pre\+\_\+rct\+\_\+output\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02db__lmdb_8cpp_03_1_1MDB__val__copy}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+M\+D\+B\+\_\+val\+\_\+copy$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02db__lmdb_8cpp_03_1_1MDB__val__copy_3_01std_1_1string_01_4}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+M\+D\+B\+\_\+val\+\_\+copy$<$ std\+::string $>$}}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02db__lmdb_8cpp_03_1_1MDB__val__copy_3_01const_01char_01_5_01_4}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+M\+D\+B\+\_\+val\+\_\+copy$<$ const char $\ast$ $>$}}
+\item 
+struct \mbox{\hyperlink{structanonymous__namespace_02db__lmdb_8cpp_03_1_1first__type}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::first\+\_\+type$<$ T,... $>$}}
+\item 
+class \mbox{\hyperlink{classanonymous__namespace_02db__lmdb_8cpp_03_1_1iterable__db}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::iterable\+\_\+db$<$ K, V $>$}}
+\item 
+class \mbox{\hyperlink{classanonymous__namespace_02db__lmdb_8cpp_03_1_1iterable__db_1_1iterator}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::iterable\+\_\+db$<$ K, V $>$\+::iterator}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1mdb__block__info__1}{cryptonote\+::mdb\+\_\+block\+\_\+info\+\_\+1}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1mdb__block__info__2}{cryptonote\+::mdb\+\_\+block\+\_\+info\+\_\+2}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1mdb__block__info__3}{cryptonote\+::mdb\+\_\+block\+\_\+info\+\_\+3}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1mdb__block__info}{cryptonote\+::mdb\+\_\+block\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1blk__checkpoint__header}{cryptonote\+::blk\+\_\+checkpoint\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1blk__height}{cryptonote\+::blk\+\_\+height}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1pre__rct__outkey}{cryptonote\+::pre\+\_\+rct\+\_\+outkey}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1outkey}{cryptonote\+::outkey}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1outtx}{cryptonote\+::outtx}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1blob__header}{cryptonote\+::blob\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__mdb__buffer}{cryptonote\+::checkpoint\+\_\+mdb\+\_\+buffer}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1service__node__proof__serialized__old}{cryptonote\+::service\+\_\+node\+\_\+proof\+\_\+serialized\+\_\+old}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1service__node__proof__serialized}{cryptonote\+::service\+\_\+node\+\_\+proof\+\_\+serialized}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}{M\+D\+B\+\_\+val\+\_\+set}}(var,  val)~M\+D\+B\+\_\+val var = \{sizeof(val), (void $\ast$)\&val\}
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_abfbd9a896e98ff8c07bb4da03d26a2d1}{M\+D\+B\+\_\+val\+\_\+sized}}(var,  val)~M\+D\+B\+\_\+val var = \{val.\+size(), (void $\ast$)val.\+data()\}
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_ac610ccf38613a053344e9b594b042f03}{M\+D\+B\+\_\+val\+\_\+str}}(var,  val)~M\+D\+B\+\_\+val var = \{strlen(val) + 1, (void $\ast$)val\}
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_acd83945dd3751fc00ca0b85d697b084a}{C\+U\+R\+S\+OR}}(name)~setup\+\_\+cursor(m\+\_\+\#\#name, m\+\_\+cursors-\/$>$name, $\ast$m\+\_\+write\+\_\+txn);
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a120373dfdab24968319c76c9bfe3a807}{R\+C\+U\+R\+S\+OR}}(name)~setup\+\_\+rcursor(m\+\_\+\#\#name, m\+\_\+cursors-\/$>$name, m\+\_\+txn, m\+\_\+tinfo.\+get() ? \&m\+\_\+tinfo-\/$>$m\+\_\+ti\+\_\+rflags.\+m\+\_\+rf\+\_\+\#\#name \+: nullptr, m\+\_\+cursors == \&m\+\_\+wcursors);
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_aafd041194a2cd07560252513489b2d70}{m\+\_\+cur\+\_\+blocks}}~m\+\_\+cursors-\/$>$\mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}}
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_ac7f356612e7cbbc95deecfb831c27a86}{m\+\_\+cur\+\_\+block\+\_\+heights}}~m\+\_\+cursors-\/$>$block\+\_\+heights
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a03ae27e81866c34ecd6fe86f21442253}{m\+\_\+cur\+\_\+block\+\_\+info}}~m\+\_\+cursors-\/$>$block\+\_\+info
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a3f5703b5d49de05bf02c8adbb27cf804}{m\+\_\+cur\+\_\+output\+\_\+txs}}~m\+\_\+cursors-\/$>$output\+\_\+txs
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_afab0fee09aecb54bd2acbfde400c35bb}{m\+\_\+cur\+\_\+output\+\_\+amounts}}~m\+\_\+cursors-\/$>$output\+\_\+amounts
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_ab54c105a891802c202ff8d3cde31ee2a}{m\+\_\+cur\+\_\+output\+\_\+blacklist}}~m\+\_\+cursors-\/$>$output\+\_\+blacklist
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a10bf06087862e1c5262e7e433772bf40}{m\+\_\+cur\+\_\+txs}}~m\+\_\+cursors-\/$>$txs
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_acb8eaafc3d3cb07f9aaed4e270c40082}{m\+\_\+cur\+\_\+txs\+\_\+pruned}}~m\+\_\+cursors-\/$>$txs\+\_\+pruned
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_aac89514940129e026b771a02875959bb}{m\+\_\+cur\+\_\+txs\+\_\+prunable}}~m\+\_\+cursors-\/$>$txs\+\_\+prunable
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_af2e94d6bc10eaf3420e4559c7c685426}{m\+\_\+cur\+\_\+txs\+\_\+prunable\+\_\+hash}}~m\+\_\+cursors-\/$>$txs\+\_\+prunable\+\_\+hash
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a9b3d4fa898fc6c8fc457b6a6e01b6297}{m\+\_\+cur\+\_\+txs\+\_\+prunable\+\_\+tip}}~m\+\_\+cursors-\/$>$txs\+\_\+prunable\+\_\+tip
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_af3f9f33f2b1b78f19da8df712d751316}{m\+\_\+cur\+\_\+tx\+\_\+indices}}~m\+\_\+cursors-\/$>$tx\+\_\+indices
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a1a6fb0cd40b38396651de9135c71755d}{m\+\_\+cur\+\_\+tx\+\_\+outputs}}~m\+\_\+cursors-\/$>$tx\+\_\+outputs
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_ab8b1d81f0ecc52fc0364dc52a3459522}{m\+\_\+cur\+\_\+spent\+\_\+keys}}~m\+\_\+cursors-\/$>$spent\+\_\+keys
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a66e21c729992f018a0be7b806a616e5e}{m\+\_\+cur\+\_\+txpool\+\_\+meta}}~m\+\_\+cursors-\/$>$txpool\+\_\+meta
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a4ee721fa3315bd09930d8e0b1ad90422}{m\+\_\+cur\+\_\+txpool\+\_\+blob}}~m\+\_\+cursors-\/$>$txpool\+\_\+blob
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_aa46e54d6e398aec0f47b2371b2a1690a}{m\+\_\+cur\+\_\+alt\+\_\+blocks}}~m\+\_\+cursors-\/$>$alt\+\_\+blocks
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a8b0bad4f9f0805531e61e8fd66f41b65}{m\+\_\+cur\+\_\+hf\+\_\+versions}}~m\+\_\+cursors-\/$>$hf\+\_\+versions
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a0ecf8494da28765055bd47514c4cffa2}{m\+\_\+cur\+\_\+properties}}~m\+\_\+cursors-\/$>$properties
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_aa2b8dc3e3b73a331fec5140b1ede837e}{T\+X\+N\+\_\+\+P\+R\+E\+F\+IX}}(flags)
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a332b802ed251b4e45601c4705100d274}{T\+X\+N\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+R\+D\+O\+N\+LY}}()
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a7f5146439aef96e639aa34d4ab3dd208}{T\+X\+N\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+S\+U\+C\+C\+E\+SS}}()
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_a91e23df447bd33882321f8803ab4e8b6}{T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+E\+F\+IX}}(flags)
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_aa966d274c819162a54eef8b8e16d93c0}{T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+S\+U\+C\+C\+E\+SS}}()
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_af0d8ad19f43c996e799103d08b8a786b}{R\+E\+N\+A\+M\+E\+\_\+\+DB}}(name)
+\item 
+\#define \mbox{\hyperlink{db__lmdb_8cpp_abbf16815fa574444242f95934f178e29}{D\+E\+L\+E\+T\+E\+\_\+\+DB}}(x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... T$>$ }\\using \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a0444df555b639bc3606795567a7002c0}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::first\+\_\+type\+\_\+t}} = typename first\+\_\+type$<$ T... $>$\+::type
+\item 
+typedef struct \mbox{\hyperlink{structcryptonote_1_1blk__height}{cryptonote\+::blk\+\_\+height}} \mbox{\hyperlink{namespacecryptonote_a1fea720651614cf23e5716db3f01589b}{cryptonote\+::blk\+\_\+height}}
+\item 
+typedef struct \mbox{\hyperlink{structcryptonote_1_1pre__rct__outkey}{cryptonote\+::pre\+\_\+rct\+\_\+outkey}} \mbox{\hyperlink{namespacecryptonote_a4c181ad9def792c70fcbc13387e5fcd4}{cryptonote\+::pre\+\_\+rct\+\_\+outkey}}
+\item 
+typedef struct \mbox{\hyperlink{structcryptonote_1_1outkey}{cryptonote\+::outkey}} \mbox{\hyperlink{namespacecryptonote_a114a7eee8de3e3da4f9a0264f42d2b87}{cryptonote\+::outkey}}
+\item 
+typedef struct \mbox{\hyperlink{structcryptonote_1_1outtx}{cryptonote\+::outtx}} \mbox{\hyperlink{namespacecryptonote_addb88e74fffaf6c8a7bebd5e62777daf}{cryptonote\+::outtx}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}} \{ \newline
+\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a5ed3a3ff8e5c29979502b9030e8518e0}{lmdb\+\_\+version\+::v4}} = 4, 
+\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a4b6df01946f4919a3f5af8c1f0f9c3c5}{lmdb\+\_\+version\+::v5}}, 
+\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a0af45c99beb7a9afc9192665c4a05cd3}{lmdb\+\_\+version\+::v6}}, 
+\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ae6dd71377633723164aeea0750ddafa8}{lmdb\+\_\+version\+::v7}}, 
+\newline
+\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ad69186af02738a9b3ced1bc5b652ba55}{lmdb\+\_\+version\+::\+\_\+count}}
+ \}
+\item 
+enum \{ \mbox{\hyperlink{namespacecryptonote_a8075c0486fb65c66790c7bd68b777fbfaf5b0d0118d146e49589ed986196acce2}{cryptonote\+::prune\+\_\+mode\+\_\+prune}}, 
+\mbox{\hyperlink{namespacecryptonote_a8075c0486fb65c66790c7bd68b777fbfac7ca4fa08d733e3e0e22acaf3a08bf6a}{cryptonote\+::prune\+\_\+mode\+\_\+update}}, 
+\mbox{\hyperlink{namespacecryptonote_a8075c0486fb65c66790c7bd68b777fbfadf3bb172ed8d5479391c649505eae0ee}{cryptonote\+::prune\+\_\+mode\+\_\+check}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a7b6dd48b799974996fb5111859c34c55}{cryptonote\+::blob\+\_\+type}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacecryptonote_a7b6dd48b799974996fb5111859c34c55a14511f2f5564650d129ca7cabc333278}{cryptonote\+::blob\+\_\+type\+::block}}, 
+\mbox{\hyperlink{namespacecryptonote_a7b6dd48b799974996fb5111859c34c55aa1af74ebd46eb956d2b09a188de3ab52}{cryptonote\+::blob\+\_\+type\+::checkpoint}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a85f52fc1359fd17af8587a72fedd4446}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::throw0}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&e)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a79f9b684b6a54197763626024dd2d8c7}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::throw1}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&e)
+\item 
+const std\+::string \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::lmdb\+\_\+error}} (std\+::string error\+\_\+string, int mdb\+\_\+res)
+\item 
+void \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_af6c97973b0a77708c706f0a6eedd8f8b}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::lmdb\+\_\+db\+\_\+open}} (M\+D\+B\+\_\+txn $\ast$txn, const char $\ast$name, int flags, M\+D\+B\+\_\+dbi \&dbi, const std\+::string \&error\+\_\+string)
+\item 
+void \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a822d8ff9e7e3d097fd9e95e3da9ade9e}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::setup\+\_\+cursor}} (const M\+D\+B\+\_\+dbi \&db, M\+D\+B\+\_\+cursor $\ast$\&cursor, M\+D\+B\+\_\+txn $\ast$txn)
+\item 
+void \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a792627bb89c912b32b777145e0ee1a3a}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::setup\+\_\+rcursor}} (const M\+D\+B\+\_\+dbi \&db, M\+D\+B\+\_\+cursor $\ast$\&cursor, M\+D\+B\+\_\+txn $\ast$txn, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$rflag, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} using\+\_\+wcursor)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_a32281a1e7ca49ab7cc06877012c33876}{cryptonote\+::lmdb\+\_\+resized}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}})
+\item 
+int \mbox{\hyperlink{namespacecryptonote_ae1a1870ded7e78373573adda8b50634a}{cryptonote\+::lmdb\+\_\+txn\+\_\+begin}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, M\+D\+B\+\_\+txn $\ast$parent, unsigned int flags, M\+D\+B\+\_\+txn $\ast$$\ast$txn)
+\item 
+int \mbox{\hyperlink{namespacecryptonote_a8ecfd82c576034bb006454c9895ce46e}{cryptonote\+::lmdb\+\_\+txn\+\_\+renew}} (M\+D\+B\+\_\+txn $\ast$txn)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ab6dbddf6417dfdf7148b27472cc28ba5}{cryptonote\+::is\+\_\+v1\+\_\+tx}} (M\+D\+B\+\_\+cursor $\ast$c\+\_\+txs\+\_\+pruned, M\+D\+B\+\_\+val $\ast$tx\+\_\+id)
+\item 
+static blob\+\_\+header \mbox{\hyperlink{namespacecryptonote_a341e362bc16170a62169e332b69f3dff}{cryptonote\+::write\+\_\+little\+\_\+endian\+\_\+blob\+\_\+header}} (blob\+\_\+type type, uint32\+\_\+t size)
+\item 
+static blob\+\_\+header \mbox{\hyperlink{namespacecryptonote_a4e2c884fb01a67c0261767f05a6e873b}{cryptonote\+::host\+\_\+endian\+\_\+blob\+\_\+header}} (const blob\+\_\+header $\ast$header)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a6bf4017460f480e92f50e81bc8d61916}{cryptonote\+::read\+\_\+alt\+\_\+block\+\_\+data\+\_\+from\+\_\+mdb\+\_\+val}} (M\+D\+B\+\_\+val const v, alt\+\_\+block\+\_\+data\+\_\+t $\ast$data, std\+::string $\ast$block, std\+::string $\ast$checkpoint)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a20a55178866bb3378ff490561f560c1f}{cryptonote\+::convert\+\_\+checkpoint\+\_\+into\+\_\+buffer}} (checkpoint\+\_\+t const \&checkpoint, checkpoint\+\_\+mdb\+\_\+buffer \&result)
+\item 
+static checkpoint\+\_\+t \mbox{\hyperlink{namespacecryptonote_a05dc73c85f2daa0cc53dd872540ea796}{cryptonote\+::convert\+\_\+mdb\+\_\+val\+\_\+to\+\_\+checkpoint}} (M\+D\+B\+\_\+val const value)
+\item 
+static int \mbox{\hyperlink{namespacecryptonote_ab5fdb012cc10cb99b97edfe77457a2b6}{cryptonote\+::write\+\_\+db\+\_\+version}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, M\+D\+B\+\_\+dbi \&dest, uint32\+\_\+t version)
+\item 
+{\footnotesize template$<$typename C $>$ }\\C \mbox{\hyperlink{namespacecryptonote_a8720010ff8bbbd0ca6169b9c02e791c7}{cryptonote\+::host\+\_\+to\+\_\+little\+\_\+container}} (const C \&c)
+\item 
+{\footnotesize template$<$typename C $>$ }\\C \mbox{\hyperlink{namespacecryptonote_ac074eb60cbce5a1ebdfead2ea0e429a6}{cryptonote\+::little\+\_\+to\+\_\+host\+\_\+container}} (const C \&c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}} \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} = \mbox{\hyperlink{namespacetools_a3c7f3ace0a0534eab5b5b5877611ff45}{tools\+::enum\+\_\+top}}$<$\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}}$>$
+\item 
+static auto \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_af03b92fd8bda94274e024711177a65f3}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}blockchain.\+db.\+lmdb\char`\"{})
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_af6eea3532bc278d12b26039494157c4f}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+B\+L\+O\+C\+KS}} = \char`\"{}blocks\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a39544ddbab02fdaec7b08d07a6c58e88}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+I\+G\+H\+TS}} = \char`\"{}block\+\_\+heights\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a6695597791f01db7d7b43870b07ed574}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+B\+L\+O\+C\+K\+\_\+\+I\+N\+FO}} = \char`\"{}block\+\_\+info\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_afd372ddfcd2252744ea759b2e897b04a}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+B\+L\+O\+C\+K\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS}} = \char`\"{}block\+\_\+checkpoints\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a31ba1baa6e1a0890eccd1ce16239ae70}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+XS}} = \char`\"{}txs\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a445d4a5c8746dd9837c44fa02375fd5f}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+S\+\_\+\+P\+R\+U\+N\+ED}} = \char`\"{}txs\+\_\+pruned\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a4fb4b1fc3f0409cf5b263110dfc7136b}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+S\+\_\+\+P\+R\+U\+N\+A\+B\+LE}} = \char`\"{}txs\+\_\+prunable\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a4646378623e552d89b9126e147bfe766}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+S\+\_\+\+P\+R\+U\+N\+A\+B\+L\+E\+\_\+\+H\+A\+SH}} = \char`\"{}txs\+\_\+prunable\+\_\+hash\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a5d51b0f1faadc46bf05f12e7c3a2eca8}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+S\+\_\+\+P\+R\+U\+N\+A\+B\+L\+E\+\_\+\+T\+IP}} = \char`\"{}txs\+\_\+prunable\+\_\+tip\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a98c7a6fd1efc1fd752fc5aa018d1e330}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+\_\+\+I\+N\+D\+I\+C\+ES}} = \char`\"{}tx\+\_\+indices\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a0bdb124bcce7b7994f4759ff37d62c7a}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+\_\+\+O\+U\+T\+P\+U\+TS}} = \char`\"{}tx\+\_\+outputs\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_aa7b965e55d010c15658847174cc3cee6}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+T\+XS}} = \char`\"{}output\+\_\+txs\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ab441bb478e355828a95e3eb7f985cf1a}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+M\+O\+U\+N\+TS}} = \char`\"{}output\+\_\+amounts\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a3a1070fe984aa05e5e04d495ba01ae5b}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+B\+L\+A\+C\+K\+L\+I\+ST}} = \char`\"{}output\+\_\+blacklist\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a8f95e48648a858031bfb30a3b1211c91}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+S\+P\+E\+N\+T\+\_\+\+K\+E\+YS}} = \char`\"{}spent\+\_\+keys\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a9699eadf056c4a59ac072c8e3b7c564d}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+P\+O\+O\+L\+\_\+\+M\+E\+TA}} = \char`\"{}txpool\+\_\+meta\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a8bb6c4564f57d96579060a90d2ec7379}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+T\+X\+P\+O\+O\+L\+\_\+\+B\+L\+OB}} = \char`\"{}txpool\+\_\+blob\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a3a82e45689a82a936a6019e34304b2a5}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+A\+L\+T\+\_\+\+B\+L\+O\+C\+KS}} = \char`\"{}alt\+\_\+blocks\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a5f163e7dc5a6a7974aeaef4bd4848f1d}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+H\+F\+\_\+\+S\+T\+A\+R\+T\+I\+N\+G\+\_\+\+H\+E\+I\+G\+H\+TS}} = \char`\"{}hf\+\_\+starting\+\_\+heights\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ae41f0df14075b7795aea0cf77a080654}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+H\+F\+\_\+\+V\+E\+R\+S\+I\+O\+NS}} = \char`\"{}hf\+\_\+versions\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_aa62f051404068b7b2b84e11d861b07dd}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+D\+A\+TA}} = \char`\"{}service\+\_\+node\+\_\+data\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a8d76a5a2ef2e6b050005044abf37b3d2}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+T\+E\+ST}} = \char`\"{}service\+\_\+node\+\_\+proofs\char`\"{}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_aee92c98b364dead5778e51171710e4a4}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+P\+R\+O\+P\+E\+R\+T\+I\+ES}} = \char`\"{}properties\char`\"{}
+\item 
+constexpr unsigned int \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_a6310b067eed3818be439e27777455fb7}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::\+L\+M\+D\+B\+\_\+\+D\+B\+\_\+\+C\+O\+U\+NT}} = 23
+\item 
+const char \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ac10b540262dd1ab8d7f86d095d2232cf}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::zerokey}} \mbox{[}8\mbox{]} = \{0\}
+\item 
+const M\+D\+B\+\_\+val \mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_afd4493bfdee6e102048a2a7d16baf96e}{anonymous\+\_\+namespace\{db\+\_\+lmdb.\+cpp\}\+::zerokval}} = \{ sizeof(\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}}), (void $\ast$)\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}} \}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_abe880f1c0779749b0ac5376f0520cac1}{cryptonote\+::\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+B\+L\+O\+B\+\_\+\+S\+H\+O\+R\+T\+\_\+\+T\+E\+R\+M\+\_\+\+K\+EY}} = 1
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a924d333618a38c57d86e1e17f556a300}{cryptonote\+::\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+B\+L\+O\+B\+\_\+\+L\+O\+N\+G\+\_\+\+T\+E\+R\+M\+\_\+\+K\+EY}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{db__lmdb_8cpp_acd83945dd3751fc00ca0b85d697b084a}\label{db__lmdb_8cpp_acd83945dd3751fc00ca0b85d697b084a}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!CURSOR@{CURSOR}}
+\index{CURSOR@{CURSOR}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{CURSOR}{CURSOR}}
+{\footnotesize\ttfamily \#define C\+U\+R\+S\+OR(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~setup\+\_\+cursor(m\+\_\+\#\#name, m\+\_\+cursors-\/$>$name, $\ast$m\+\_\+write\+\_\+txn);}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_abbf16815fa574444242f95934f178e29}\label{db__lmdb_8cpp_abbf16815fa574444242f95934f178e29}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!DELETE\_DB@{DELETE\_DB}}
+\index{DELETE\_DB@{DELETE\_DB}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{DELETE\_DB}{DELETE\_DB}}
+{\footnotesize\ttfamily \#define D\+E\+L\+E\+T\+E\+\_\+\+DB(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{   \(\backslash\)}
+\DoxyCodeLine{    log::info(\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}, \textcolor{stringliteral}{"  "} x \textcolor{stringliteral}{":"}); \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_txn\_begin(m\_env, NULL, 0, txn); \(\backslash\)}
+\DoxyCodeLine{    if (result) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to create a transaction for the db: "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_dbi\_open(txn, x, 0, \&dbi); \(\backslash\)}
+\DoxyCodeLine{    if (!result) \{ \(\backslash\)}
+\DoxyCodeLine{      result = mdb\_drop(txn, dbi, 1); \(\backslash\)}
+\DoxyCodeLine{      if (result) \(\backslash\)}
+\DoxyCodeLine{        throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to delete "} x \textcolor{stringliteral}{": "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    txn.commit(); \(\backslash\)}
+\DoxyCodeLine{    \} \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_aa46e54d6e398aec0f47b2371b2a1690a}\label{db__lmdb_8cpp_aa46e54d6e398aec0f47b2371b2a1690a}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_alt\_blocks@{m\_cur\_alt\_blocks}}
+\index{m\_cur\_alt\_blocks@{m\_cur\_alt\_blocks}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_alt\_blocks}{m\_cur\_alt\_blocks}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+alt\+\_\+blocks~m\+\_\+cursors-\/$>$alt\+\_\+blocks}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_ac7f356612e7cbbc95deecfb831c27a86}\label{db__lmdb_8cpp_ac7f356612e7cbbc95deecfb831c27a86}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_block\_heights@{m\_cur\_block\_heights}}
+\index{m\_cur\_block\_heights@{m\_cur\_block\_heights}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_block\_heights}{m\_cur\_block\_heights}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+block\+\_\+heights~m\+\_\+cursors-\/$>$block\+\_\+heights}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a03ae27e81866c34ecd6fe86f21442253}\label{db__lmdb_8cpp_a03ae27e81866c34ecd6fe86f21442253}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_block\_info@{m\_cur\_block\_info}}
+\index{m\_cur\_block\_info@{m\_cur\_block\_info}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_block\_info}{m\_cur\_block\_info}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+block\+\_\+info~m\+\_\+cursors-\/$>$block\+\_\+info}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_aafd041194a2cd07560252513489b2d70}\label{db__lmdb_8cpp_aafd041194a2cd07560252513489b2d70}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_blocks@{m\_cur\_blocks}}
+\index{m\_cur\_blocks@{m\_cur\_blocks}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_blocks}{m\_cur\_blocks}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+blocks~m\+\_\+cursors-\/$>$\mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}}}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a8b0bad4f9f0805531e61e8fd66f41b65}\label{db__lmdb_8cpp_a8b0bad4f9f0805531e61e8fd66f41b65}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_hf\_versions@{m\_cur\_hf\_versions}}
+\index{m\_cur\_hf\_versions@{m\_cur\_hf\_versions}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_hf\_versions}{m\_cur\_hf\_versions}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+hf\+\_\+versions~m\+\_\+cursors-\/$>$hf\+\_\+versions}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_afab0fee09aecb54bd2acbfde400c35bb}\label{db__lmdb_8cpp_afab0fee09aecb54bd2acbfde400c35bb}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_output\_amounts@{m\_cur\_output\_amounts}}
+\index{m\_cur\_output\_amounts@{m\_cur\_output\_amounts}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_output\_amounts}{m\_cur\_output\_amounts}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+output\+\_\+amounts~m\+\_\+cursors-\/$>$output\+\_\+amounts}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_ab54c105a891802c202ff8d3cde31ee2a}\label{db__lmdb_8cpp_ab54c105a891802c202ff8d3cde31ee2a}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_output\_blacklist@{m\_cur\_output\_blacklist}}
+\index{m\_cur\_output\_blacklist@{m\_cur\_output\_blacklist}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_output\_blacklist}{m\_cur\_output\_blacklist}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+output\+\_\+blacklist~m\+\_\+cursors-\/$>$output\+\_\+blacklist}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a3f5703b5d49de05bf02c8adbb27cf804}\label{db__lmdb_8cpp_a3f5703b5d49de05bf02c8adbb27cf804}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_output\_txs@{m\_cur\_output\_txs}}
+\index{m\_cur\_output\_txs@{m\_cur\_output\_txs}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_output\_txs}{m\_cur\_output\_txs}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+output\+\_\+txs~m\+\_\+cursors-\/$>$output\+\_\+txs}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a0ecf8494da28765055bd47514c4cffa2}\label{db__lmdb_8cpp_a0ecf8494da28765055bd47514c4cffa2}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_properties@{m\_cur\_properties}}
+\index{m\_cur\_properties@{m\_cur\_properties}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_properties}{m\_cur\_properties}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+properties~m\+\_\+cursors-\/$>$properties}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_ab8b1d81f0ecc52fc0364dc52a3459522}\label{db__lmdb_8cpp_ab8b1d81f0ecc52fc0364dc52a3459522}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_spent\_keys@{m\_cur\_spent\_keys}}
+\index{m\_cur\_spent\_keys@{m\_cur\_spent\_keys}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_spent\_keys}{m\_cur\_spent\_keys}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+spent\+\_\+keys~m\+\_\+cursors-\/$>$spent\+\_\+keys}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_af3f9f33f2b1b78f19da8df712d751316}\label{db__lmdb_8cpp_af3f9f33f2b1b78f19da8df712d751316}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_tx\_indices@{m\_cur\_tx\_indices}}
+\index{m\_cur\_tx\_indices@{m\_cur\_tx\_indices}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_tx\_indices}{m\_cur\_tx\_indices}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+tx\+\_\+indices~m\+\_\+cursors-\/$>$tx\+\_\+indices}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a1a6fb0cd40b38396651de9135c71755d}\label{db__lmdb_8cpp_a1a6fb0cd40b38396651de9135c71755d}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_tx\_outputs@{m\_cur\_tx\_outputs}}
+\index{m\_cur\_tx\_outputs@{m\_cur\_tx\_outputs}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_tx\_outputs}{m\_cur\_tx\_outputs}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+tx\+\_\+outputs~m\+\_\+cursors-\/$>$tx\+\_\+outputs}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a4ee721fa3315bd09930d8e0b1ad90422}\label{db__lmdb_8cpp_a4ee721fa3315bd09930d8e0b1ad90422}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txpool\_blob@{m\_cur\_txpool\_blob}}
+\index{m\_cur\_txpool\_blob@{m\_cur\_txpool\_blob}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txpool\_blob}{m\_cur\_txpool\_blob}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txpool\+\_\+blob~m\+\_\+cursors-\/$>$txpool\+\_\+blob}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a66e21c729992f018a0be7b806a616e5e}\label{db__lmdb_8cpp_a66e21c729992f018a0be7b806a616e5e}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txpool\_meta@{m\_cur\_txpool\_meta}}
+\index{m\_cur\_txpool\_meta@{m\_cur\_txpool\_meta}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txpool\_meta}{m\_cur\_txpool\_meta}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txpool\+\_\+meta~m\+\_\+cursors-\/$>$txpool\+\_\+meta}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a10bf06087862e1c5262e7e433772bf40}\label{db__lmdb_8cpp_a10bf06087862e1c5262e7e433772bf40}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txs@{m\_cur\_txs}}
+\index{m\_cur\_txs@{m\_cur\_txs}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txs}{m\_cur\_txs}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txs~m\+\_\+cursors-\/$>$txs}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_aac89514940129e026b771a02875959bb}\label{db__lmdb_8cpp_aac89514940129e026b771a02875959bb}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txs\_prunable@{m\_cur\_txs\_prunable}}
+\index{m\_cur\_txs\_prunable@{m\_cur\_txs\_prunable}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txs\_prunable}{m\_cur\_txs\_prunable}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txs\+\_\+prunable~m\+\_\+cursors-\/$>$txs\+\_\+prunable}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_af2e94d6bc10eaf3420e4559c7c685426}\label{db__lmdb_8cpp_af2e94d6bc10eaf3420e4559c7c685426}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txs\_prunable\_hash@{m\_cur\_txs\_prunable\_hash}}
+\index{m\_cur\_txs\_prunable\_hash@{m\_cur\_txs\_prunable\_hash}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txs\_prunable\_hash}{m\_cur\_txs\_prunable\_hash}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txs\+\_\+prunable\+\_\+hash~m\+\_\+cursors-\/$>$txs\+\_\+prunable\+\_\+hash}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a9b3d4fa898fc6c8fc457b6a6e01b6297}\label{db__lmdb_8cpp_a9b3d4fa898fc6c8fc457b6a6e01b6297}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txs\_prunable\_tip@{m\_cur\_txs\_prunable\_tip}}
+\index{m\_cur\_txs\_prunable\_tip@{m\_cur\_txs\_prunable\_tip}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txs\_prunable\_tip}{m\_cur\_txs\_prunable\_tip}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txs\+\_\+prunable\+\_\+tip~m\+\_\+cursors-\/$>$txs\+\_\+prunable\+\_\+tip}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_acb8eaafc3d3cb07f9aaed4e270c40082}\label{db__lmdb_8cpp_acb8eaafc3d3cb07f9aaed4e270c40082}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!m\_cur\_txs\_pruned@{m\_cur\_txs\_pruned}}
+\index{m\_cur\_txs\_pruned@{m\_cur\_txs\_pruned}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_txs\_pruned}{m\_cur\_txs\_pruned}}
+{\footnotesize\ttfamily \#define m\+\_\+cur\+\_\+txs\+\_\+pruned~m\+\_\+cursors-\/$>$txs\+\_\+pruned}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}\label{db__lmdb_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!MDB\_val\_set@{MDB\_val\_set}}
+\index{MDB\_val\_set@{MDB\_val\_set}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{MDB\_val\_set}{MDB\_val\_set}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+val\+\_\+set(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})~M\+D\+B\+\_\+val var = \{sizeof(val), (void $\ast$)\&val\}}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_abfbd9a896e98ff8c07bb4da03d26a2d1}\label{db__lmdb_8cpp_abfbd9a896e98ff8c07bb4da03d26a2d1}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!MDB\_val\_sized@{MDB\_val\_sized}}
+\index{MDB\_val\_sized@{MDB\_val\_sized}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{MDB\_val\_sized}{MDB\_val\_sized}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+val\+\_\+sized(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})~M\+D\+B\+\_\+val var = \{val.\+size(), (void $\ast$)val.\+data()\}}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_ac610ccf38613a053344e9b594b042f03}\label{db__lmdb_8cpp_ac610ccf38613a053344e9b594b042f03}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!MDB\_val\_str@{MDB\_val\_str}}
+\index{MDB\_val\_str@{MDB\_val\_str}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{MDB\_val\_str}{MDB\_val\_str}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+val\+\_\+str(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})~M\+D\+B\+\_\+val var = \{strlen(val) + 1, (void $\ast$)val\}}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_a120373dfdab24968319c76c9bfe3a807}\label{db__lmdb_8cpp_a120373dfdab24968319c76c9bfe3a807}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!RCURSOR@{RCURSOR}}
+\index{RCURSOR@{RCURSOR}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{RCURSOR}{RCURSOR}}
+{\footnotesize\ttfamily \#define R\+C\+U\+R\+S\+OR(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~setup\+\_\+rcursor(m\+\_\+\#\#name, m\+\_\+cursors-\/$>$name, m\+\_\+txn, m\+\_\+tinfo.\+get() ? \&m\+\_\+tinfo-\/$>$m\+\_\+ti\+\_\+rflags.\+m\+\_\+rf\+\_\+\#\#name \+: nullptr, m\+\_\+cursors == \&m\+\_\+wcursors);}
+
+\mbox{\Hypertarget{db__lmdb_8cpp_af0d8ad19f43c996e799103d08b8a786b}\label{db__lmdb_8cpp_af0d8ad19f43c996e799103d08b8a786b}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!RENAME\_DB@{RENAME\_DB}}
+\index{RENAME\_DB@{RENAME\_DB}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{RENAME\_DB}{RENAME\_DB}}
+{\footnotesize\ttfamily \#define R\+E\+N\+A\+M\+E\+\_\+\+DB(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    char n2[] = \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}}; \(\backslash\)}
+\DoxyCodeLine{    MDB\_dbi tdbi; \(\backslash\)}
+\DoxyCodeLine{    n2[\textcolor{keyword}{sizeof}(n2)-\/2]-\/-\/; \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* play some games to put (name) on a writable page */} \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_dbi\_open(txn, n2, MDB\_CREATE, \&tdbi); \(\backslash\)}
+\DoxyCodeLine{    if (result) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to create "} + std::string(n2) + \textcolor{stringliteral}{": "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_drop(txn, tdbi, 1); \(\backslash\)}
+\DoxyCodeLine{    if (result) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to delete "} + std::string(n2) + \textcolor{stringliteral}{": "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    k.mv\_data = (\textcolor{keywordtype}{void} *)\mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}}; \(\backslash\)}
+\DoxyCodeLine{    k.mv\_size = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}})-\/1; \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_cursor\_open(txn, 1, \&c\_cur); \(\backslash\)}
+\DoxyCodeLine{    if (result) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to open a cursor for "} \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}} \textcolor{stringliteral}{": "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    result = mdb\_cursor\_get(c\_cur, \&k, NULL, MDB\_SET\_KEY); \(\backslash\)}
+\DoxyCodeLine{    if (result) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(\textcolor{stringliteral}{"Failed to get DB record for "} \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}} \textcolor{stringliteral}{": "}, result).c\_str())); \(\backslash\)}
+\DoxyCodeLine{    ptr = (\textcolor{keywordtype}{char} *)k.mv\_data; \(\backslash\)}
+\DoxyCodeLine{    ptr[\textcolor{keyword}{sizeof}(\mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}})-\/2]++; \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_aa966d274c819162a54eef8b8e16d93c0}\label{db__lmdb_8cpp_aa966d274c819162a54eef8b8e16d93c0}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!TXN\_BLOCK\_POSTFIX\_SUCCESS@{TXN\_BLOCK\_POSTFIX\_SUCCESS}}
+\index{TXN\_BLOCK\_POSTFIX\_SUCCESS@{TXN\_BLOCK\_POSTFIX\_SUCCESS}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{TXN\_BLOCK\_POSTFIX\_SUCCESS}{TXN\_BLOCK\_POSTFIX\_SUCCESS}}
+{\footnotesize\ttfamily \#define T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+S\+U\+C\+C\+E\+SS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    if (! m\_batch\_active \&\& ! m\_write\_txn) \(\backslash\)}
+\DoxyCodeLine{      auto\_txn.commit(); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_a91e23df447bd33882321f8803ab4e8b6}\label{db__lmdb_8cpp_a91e23df447bd33882321f8803ab4e8b6}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!TXN\_BLOCK\_PREFIX@{TXN\_BLOCK\_PREFIX}}
+\index{TXN\_BLOCK\_PREFIX@{TXN\_BLOCK\_PREFIX}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{TXN\_BLOCK\_PREFIX}{TXN\_BLOCK\_PREFIX}}
+{\footnotesize\ttfamily \#define T\+X\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+P\+R\+E\+F\+IX(\begin{DoxyParamCaption}\item[{}]{flags }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ; \(\backslash\)}
+\DoxyCodeLine{  mdb\_txn\_safe auto\_txn; \(\backslash\)}
+\DoxyCodeLine{  mdb\_txn\_safe* txn\_ptr = \&auto\_txn; \(\backslash\)}
+\DoxyCodeLine{  if (m\_batch\_active || m\_write\_txn) \(\backslash\)}
+\DoxyCodeLine{    txn\_ptr = m\_write\_txn; \(\backslash\)}
+\DoxyCodeLine{  else \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    if (\textcolor{keyword}{auto} mdb\_res = \mbox{\hyperlink{namespacecryptonote_ae1a1870ded7e78373573adda8b50634a}{lmdb\_txn\_begin}}(m\_env, NULL, flags, auto\_txn)) \(\backslash\)}
+\DoxyCodeLine{      throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(std::string(\textcolor{stringliteral}{"Failed to create a transaction for the db in "})+\_\_FUNCTION\_\_+\textcolor{stringliteral}{": "}, mdb\_res).c\_str())); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_a7f5146439aef96e639aa34d4ab3dd208}\label{db__lmdb_8cpp_a7f5146439aef96e639aa34d4ab3dd208}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!TXN\_POSTFIX\_SUCCESS@{TXN\_POSTFIX\_SUCCESS}}
+\index{TXN\_POSTFIX\_SUCCESS@{TXN\_POSTFIX\_SUCCESS}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{TXN\_POSTFIX\_SUCCESS}{TXN\_POSTFIX\_SUCCESS}}
+{\footnotesize\ttfamily \#define T\+X\+N\+\_\+\+P\+O\+S\+T\+F\+I\+X\+\_\+\+S\+U\+C\+C\+E\+SS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    if (! m\_batch\_active) \(\backslash\)}
+\DoxyCodeLine{      auto\_txn.commit(); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_aa2b8dc3e3b73a331fec5140b1ede837e}\label{db__lmdb_8cpp_aa2b8dc3e3b73a331fec5140b1ede837e}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!TXN\_PREFIX@{TXN\_PREFIX}}
+\index{TXN\_PREFIX@{TXN\_PREFIX}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{TXN\_PREFIX}{TXN\_PREFIX}}
+{\footnotesize\ttfamily \#define T\+X\+N\+\_\+\+P\+R\+E\+F\+IX(\begin{DoxyParamCaption}\item[{}]{flags }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  mdb\_txn\_safe auto\_txn; \(\backslash\)}
+\DoxyCodeLine{  mdb\_txn\_safe* txn\_ptr = \&auto\_txn; \(\backslash\)}
+\DoxyCodeLine{  if (m\_batch\_active) \(\backslash\)}
+\DoxyCodeLine{    txn\_ptr = m\_write\_txn; \(\backslash\)}
+\DoxyCodeLine{  else \textcolor{keywordflow}{if} (\textcolor{keyword}{auto} mdb\_res = \mbox{\hyperlink{namespacecryptonote_ae1a1870ded7e78373573adda8b50634a}{lmdb\_txn\_begin}}(m\_env, NULL, flags, auto\_txn)) \(\backslash\)}
+\DoxyCodeLine{    throw0(DB\_ERROR(\mbox{\hyperlink{namespaceanonymous__namespace_02db__lmdb_8cpp_03_ad04df379674684bf2582680061e6974e}{lmdb\_error}}(std::string(\textcolor{stringliteral}{"Failed to create a transaction for the db in "})+\_\_FUNCTION\_\_+\textcolor{stringliteral}{": "}, mdb\_res)));}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{db__lmdb_8cpp_a332b802ed251b4e45601c4705100d274}\label{db__lmdb_8cpp_a332b802ed251b4e45601c4705100d274}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!TXN\_PREFIX\_RDONLY@{TXN\_PREFIX\_RDONLY}}
+\index{TXN\_PREFIX\_RDONLY@{TXN\_PREFIX\_RDONLY}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{TXN\_PREFIX\_RDONLY}{TXN\_PREFIX\_RDONLY}}
+{\footnotesize\ttfamily \#define T\+X\+N\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+R\+D\+O\+N\+LY(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  MDB\_txn *m\_txn; \(\backslash\)}
+\DoxyCodeLine{  mdb\_txn\_cursors *m\_cursors; \(\backslash\)}
+\DoxyCodeLine{  mdb\_txn\_safe auto\_txn; \(\backslash\)}
+\DoxyCodeLine{  bool my\_rtxn = block\_rtxn\_start(\&m\_txn, \&m\_cursors); \(\backslash\)}
+\DoxyCodeLine{  if (my\_rtxn) auto\_txn.m\_tinfo = m\_tinfo.get(); \(\backslash\)}
+\DoxyCodeLine{  else auto\_txn.uncheck()}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!lmdb\_version@{lmdb\_version}}
+\index{lmdb\_version@{lmdb\_version}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{lmdb\_version}{lmdb\_version}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v4@{v4}!db\_lmdb.cpp@{db\_lmdb.cpp}}\index{db\_lmdb.cpp@{db\_lmdb.cpp}!v4@{v4}}}\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a5ed3a3ff8e5c29979502b9030e8518e0}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a5ed3a3ff8e5c29979502b9030e8518e0}} 
+v4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v5@{v5}!db\_lmdb.cpp@{db\_lmdb.cpp}}\index{db\_lmdb.cpp@{db\_lmdb.cpp}!v5@{v5}}}\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a4b6df01946f4919a3f5af8c1f0f9c3c5}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a4b6df01946f4919a3f5af8c1f0f9c3c5}} 
+v5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v6@{v6}!db\_lmdb.cpp@{db\_lmdb.cpp}}\index{db\_lmdb.cpp@{db\_lmdb.cpp}!v6@{v6}}}\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a0af45c99beb7a9afc9192665c4a05cd3}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614a0af45c99beb7a9afc9192665c4a05cd3}} 
+v6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v7@{v7}!db\_lmdb.cpp@{db\_lmdb.cpp}}\index{db\_lmdb.cpp@{db\_lmdb.cpp}!v7@{v7}}}\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ae6dd71377633723164aeea0750ddafa8}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ae6dd71377633723164aeea0750ddafa8}} 
+v7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_count@{\_count}!db\_lmdb.cpp@{db\_lmdb.cpp}}\index{db\_lmdb.cpp@{db\_lmdb.cpp}!\_count@{\_count}}}\mbox{\Hypertarget{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ad69186af02738a9b3ced1bc5b652ba55}\label{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614ad69186af02738a9b3ced1bc5b652ba55}} 
+\+\_\+count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}\label{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}} 
+\index{db\_lmdb.cpp@{db\_lmdb.cpp}!VERSION@{VERSION}}
+\index{VERSION@{VERSION}!db\_lmdb.cpp@{db\_lmdb.cpp}}
+\doxysubsubsection{\texorpdfstring{VERSION}{VERSION}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}} V\+E\+R\+S\+I\+ON = \mbox{\hyperlink{namespacetools_a3c7f3ace0a0534eab5b5b5877611ff45}{tools\+::enum\+\_\+top}}$<$\mbox{\hyperlink{db__lmdb_8cpp_a7fb79c0c6c12066d48c866787ce83614}{lmdb\+\_\+version}}$>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+

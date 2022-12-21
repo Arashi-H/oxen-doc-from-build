@@ -1,0 +1,253 @@
+\hypertarget{classcn__heavy__hash}{}\doxysection{cn\+\_\+heavy\+\_\+hash$<$ M\+E\+M\+O\+RY, I\+T\+ER, V\+E\+R\+S\+I\+ON $>$ Class Template Reference}
+\label{classcn__heavy__hash}\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+
+
+{\ttfamily \#include $<$cn\+\_\+heavy\+\_\+hash.\+hpp$>$}
+
+
+
+Collaboration diagram for cn\+\_\+heavy\+\_\+hash$<$ M\+E\+M\+O\+RY, I\+T\+ER, V\+E\+R\+S\+I\+ON $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classcn__heavy__hash__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcn__heavy__hash_a1246c6a297f435792a6e4c0cb8094649}{cn\+\_\+heavy\+\_\+hash}} ()
+\item 
+\mbox{\hyperlink{classcn__heavy__hash_a6b13b3b36fe0e5b443c26a013c4d7778}{cn\+\_\+heavy\+\_\+hash}} (const \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \&other)=delete
+\item 
+\mbox{\hyperlink{classcn__heavy__hash_a6320af22c467c72b9e1645de33068007}{cn\+\_\+heavy\+\_\+hash}} (\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \&\&other)=delete
+\item 
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \& \mbox{\hyperlink{classcn__heavy__hash_a062963f9cfbd0c1942dae6f41c8d4225}{operator=}} (const \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \&other)=delete
+\item 
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \& \mbox{\hyperlink{classcn__heavy__hash_a97e75534e3a32e7757aed50c074211e8}{operator=}} (\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} \&\&other)=delete
+\item 
+\mbox{\hyperlink{classcn__heavy__hash_a8ee5b39082937d4476a446f2d368e4f2}{$\sim$cn\+\_\+heavy\+\_\+hash}} ()
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a3b92d9d2047750bea91970a12f369c4c}{hash}} (const void $\ast$in, size\+\_\+t len, void $\ast$out, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} prehashed=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a71dc693f3deb9e3c3a8ea952c39c1049}{software\+\_\+hash}} (const void $\ast$in, size\+\_\+t len, void $\ast$out, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} prehashed)
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a751b7caeb2b183ce7d3c48389a119f3c}{hardware\+\_\+hash}} (const void $\ast$in, size\+\_\+t len, void $\ast$out, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} prehashed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{cn__heavy__hash_8hpp_a70fc6351d7cb8bece46ef2d447dea828}{cn\+\_\+heavy\+\_\+hash\+\_\+v1}} \mbox{\hyperlink{classcn__heavy__hash_a563164b614f7025eeaf5d7261ec4e628}{make\+\_\+borrowed}} (\mbox{\hyperlink{cn__heavy__hash_8hpp_a3dc083f0d7e51b46cd14de50adb6264f}{cn\+\_\+heavy\+\_\+hash\+\_\+v2}} \&t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcn__heavy__hash_a035ccf2f741126b3b94755cb5dfad2b6}{cn\+\_\+heavy\+\_\+hash}} (void $\ast$lptr, void $\ast$sptr)
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a2d22e007c5057d5619309e3420c393f3}{free\+\_\+mem}} ()
+\item 
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash_a4f33885eb2292614ddb598b6f8359327}{scratchpad\+\_\+ptr}} (uint32\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a960da2ad1c43199e68c2fd39afbdddaf}{explode\+\_\+scratchpad\+\_\+hard}} ()
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_aa15204b4a6ac9432b16c6206dbd82b5f}{implode\+\_\+scratchpad\+\_\+hard}} ()
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_afd3a23f440b6f0bd2c8ee1aec1eb2ff3}{explode\+\_\+scratchpad\+\_\+soft}} ()
+\item 
+void \mbox{\hyperlink{classcn__heavy__hash_a8e4a25ddf613763d5b3fd706629a5416}{implode\+\_\+scratchpad\+\_\+soft}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{classcn__heavy__hash_a0a0bcd203f01f3f5424e7d549d31d822}{cn\+\_\+heavy\+\_\+hash\+\_\+v1}}
+\item 
+friend \mbox{\hyperlink{classcn__heavy__hash_a54a31fdf97b40eccffcdf1f060054d33}{cn\+\_\+heavy\+\_\+hash\+\_\+v2}}
+\item 
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash_acaadefb4c4f37d3139b2f8764486178d}{lpad}}
+\item 
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash_ab46c2b345a69b3ad909e2f46cac268f6}{spad}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcn__heavy__hash_ac991e29f1b21d52b1e37d9061ee5bfd8}{borrowed\+\_\+pad}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classcn__heavy__hash_a48e22687e6d669461bd5b7384a54d9a5}{M\+A\+SK}} = ((\mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}-\/1) $>$$>$ 4) $<$$<$ 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcn__heavy__hash_a1246c6a297f435792a6e4c0cb8094649}\label{classcn__heavy__hash_a1246c6a297f435792a6e4c0cb8094649}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash@{cn\_heavy\_hash}}
+\index{cn\_heavy\_hash@{cn\_heavy\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash()}{cn\_heavy\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a6b13b3b36fe0e5b443c26a013c4d7778}\label{classcn__heavy__hash_a6b13b3b36fe0e5b443c26a013c4d7778}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash@{cn\_heavy\_hash}}
+\index{cn\_heavy\_hash@{cn\_heavy\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash()}{cn\_heavy\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a6320af22c467c72b9e1645de33068007}\label{classcn__heavy__hash_a6320af22c467c72b9e1645de33068007}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash@{cn\_heavy\_hash}}
+\index{cn\_heavy\_hash@{cn\_heavy\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash()}{cn\_heavy\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a8ee5b39082937d4476a446f2d368e4f2}\label{classcn__heavy__hash_a8ee5b39082937d4476a446f2d368e4f2}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!````~cn\_heavy\_hash@{$\sim$cn\_heavy\_hash}}
+\index{````~cn\_heavy\_hash@{$\sim$cn\_heavy\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$cn\_heavy\_hash()}{~cn\_heavy\_hash()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::$\sim$\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a035ccf2f741126b3b94755cb5dfad2b6}\label{classcn__heavy__hash_a035ccf2f741126b3b94755cb5dfad2b6}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash@{cn\_heavy\_hash}}
+\index{cn\_heavy\_hash@{cn\_heavy\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash()}{cn\_heavy\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}} (\begin{DoxyParamCaption}\item[{void $\ast$}]{lptr,  }\item[{void $\ast$}]{sptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcn__heavy__hash_a960da2ad1c43199e68c2fd39afbdddaf}\label{classcn__heavy__hash_a960da2ad1c43199e68c2fd39afbdddaf}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!explode\_scratchpad\_hard@{explode\_scratchpad\_hard}}
+\index{explode\_scratchpad\_hard@{explode\_scratchpad\_hard}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{explode\_scratchpad\_hard()}{explode\_scratchpad\_hard()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::explode\+\_\+scratchpad\+\_\+hard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_afd3a23f440b6f0bd2c8ee1aec1eb2ff3}\label{classcn__heavy__hash_afd3a23f440b6f0bd2c8ee1aec1eb2ff3}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!explode\_scratchpad\_soft@{explode\_scratchpad\_soft}}
+\index{explode\_scratchpad\_soft@{explode\_scratchpad\_soft}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{explode\_scratchpad\_soft()}{explode\_scratchpad\_soft()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::explode\+\_\+scratchpad\+\_\+soft\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a2d22e007c5057d5619309e3420c393f3}\label{classcn__heavy__hash_a2d22e007c5057d5619309e3420c393f3}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!free\_mem@{free\_mem}}
+\index{free\_mem@{free\_mem}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{free\_mem()}{free\_mem()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::free\+\_\+mem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a751b7caeb2b183ce7d3c48389a119f3c}\label{classcn__heavy__hash_a751b7caeb2b183ce7d3c48389a119f3c}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!hardware\_hash@{hardware\_hash}}
+\index{hardware\_hash@{hardware\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{hardware\_hash()}{hardware\_hash()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::hardware\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{in,  }\item[{size\+\_\+t}]{len,  }\item[{void $\ast$}]{out,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{prehashed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a3b92d9d2047750bea91970a12f369c4c}\label{classcn__heavy__hash_a3b92d9d2047750bea91970a12f369c4c}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!hash@{hash}}
+\index{hash@{hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{in,  }\item[{size\+\_\+t}]{len,  }\item[{void $\ast$}]{out,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{prehashed = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_aa15204b4a6ac9432b16c6206dbd82b5f}\label{classcn__heavy__hash_aa15204b4a6ac9432b16c6206dbd82b5f}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!implode\_scratchpad\_hard@{implode\_scratchpad\_hard}}
+\index{implode\_scratchpad\_hard@{implode\_scratchpad\_hard}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{implode\_scratchpad\_hard()}{implode\_scratchpad\_hard()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::implode\+\_\+scratchpad\+\_\+hard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a8e4a25ddf613763d5b3fd706629a5416}\label{classcn__heavy__hash_a8e4a25ddf613763d5b3fd706629a5416}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!implode\_scratchpad\_soft@{implode\_scratchpad\_soft}}
+\index{implode\_scratchpad\_soft@{implode\_scratchpad\_soft}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{implode\_scratchpad\_soft()}{implode\_scratchpad\_soft()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::implode\+\_\+scratchpad\+\_\+soft\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a563164b614f7025eeaf5d7261ec4e628}\label{classcn__heavy__hash_a563164b614f7025eeaf5d7261ec4e628}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!make\_borrowed@{make\_borrowed}}
+\index{make\_borrowed@{make\_borrowed}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{make\_borrowed()}{make\_borrowed()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+static \mbox{\hyperlink{cn__heavy__hash_8hpp_a70fc6351d7cb8bece46ef2d447dea828}{cn\+\_\+heavy\+\_\+hash\+\_\+v1}} \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::make\+\_\+borrowed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{cn__heavy__hash_8hpp_a3dc083f0d7e51b46cd14de50adb6264f}{cn\+\_\+heavy\+\_\+hash\+\_\+v2}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a97e75534e3a32e7757aed50c074211e8}\label{classcn__heavy__hash_a97e75534e3a32e7757aed50c074211e8}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}\& \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a062963f9cfbd0c1942dae6f41c8d4225}\label{classcn__heavy__hash_a062963f9cfbd0c1942dae6f41c8d4225}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}\& \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a4f33885eb2292614ddb598b6f8359327}\label{classcn__heavy__hash_a4f33885eb2292614ddb598b6f8359327}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!scratchpad\_ptr@{scratchpad\_ptr}}
+\index{scratchpad\_ptr@{scratchpad\_ptr}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{scratchpad\_ptr()}{scratchpad\_ptr()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::scratchpad\+\_\+ptr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a71dc693f3deb9e3c3a8ea952c39c1049}\label{classcn__heavy__hash_a71dc693f3deb9e3c3a8ea952c39c1049}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!software\_hash@{software\_hash}}
+\index{software\_hash@{software\_hash}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{software\_hash()}{software\_hash()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+void \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::software\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{in,  }\item[{size\+\_\+t}]{len,  }\item[{void $\ast$}]{out,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{prehashed }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcn__heavy__hash_ac991e29f1b21d52b1e37d9061ee5bfd8}\label{classcn__heavy__hash_ac991e29f1b21d52b1e37d9061ee5bfd8}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!borrowed\_pad@{borrowed\_pad}}
+\index{borrowed\_pad@{borrowed\_pad}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{borrowed\_pad}{borrowed\_pad}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::borrowed\+\_\+pad\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a0a0bcd203f01f3f5424e7d549d31d822}\label{classcn__heavy__hash_a0a0bcd203f01f3f5424e7d549d31d822}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash\_v1@{cn\_heavy\_hash\_v1}}
+\index{cn\_heavy\_hash\_v1@{cn\_heavy\_hash\_v1}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash\_v1}{cn\_heavy\_hash\_v1}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+friend \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{cn__heavy__hash_8hpp_a70fc6351d7cb8bece46ef2d447dea828}{cn\+\_\+heavy\+\_\+hash\+\_\+v1}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a54a31fdf97b40eccffcdf1f060054d33}\label{classcn__heavy__hash_a54a31fdf97b40eccffcdf1f060054d33}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!cn\_heavy\_hash\_v2@{cn\_heavy\_hash\_v2}}
+\index{cn\_heavy\_hash\_v2@{cn\_heavy\_hash\_v2}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{cn\_heavy\_hash\_v2}{cn\_heavy\_hash\_v2}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+friend \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::\mbox{\hyperlink{cn__heavy__hash_8hpp_a3dc083f0d7e51b46cd14de50adb6264f}{cn\+\_\+heavy\+\_\+hash\+\_\+v2}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_acaadefb4c4f37d3139b2f8764486178d}\label{classcn__heavy__hash_acaadefb4c4f37d3139b2f8764486178d}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!lpad@{lpad}}
+\index{lpad@{lpad}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{lpad}{lpad}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::lpad\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_a48e22687e6d669461bd5b7384a54d9a5}\label{classcn__heavy__hash_a48e22687e6d669461bd5b7384a54d9a5}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!MASK@{MASK}}
+\index{MASK@{MASK}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{MASK}{MASK}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+constexpr size\+\_\+t \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::M\+A\+SK = ((\mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}-\/1) $>$$>$ 4) $<$$<$ 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcn__heavy__hash_ab46c2b345a69b3ad909e2f46cac268f6}\label{classcn__heavy__hash_ab46c2b345a69b3ad909e2f46cac268f6}} 
+\index{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}!spad@{spad}}
+\index{spad@{spad}!cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$@{cn\_heavy\_hash$<$ MEMORY, ITER, VERSION $>$}}
+\doxysubsubsection{\texorpdfstring{spad}{spad}}
+{\footnotesize\ttfamily template$<$size\+\_\+t M\+E\+M\+O\+RY, size\+\_\+t I\+T\+ER, size\+\_\+t V\+E\+R\+S\+I\+ON$>$ \\
+\mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} \mbox{\hyperlink{classcn__heavy__hash}{cn\+\_\+heavy\+\_\+hash}}$<$ \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}, \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}, \mbox{\hyperlink{db__lmdb_8cpp_a76685faedba095cfb83d0d9e923a70b2}{V\+E\+R\+S\+I\+ON}} $>$\+::spad\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/crypto/\mbox{\hyperlink{cn__heavy__hash_8hpp}{cn\+\_\+heavy\+\_\+hash.\+hpp}}\item 
+src/crypto/\mbox{\hyperlink{cn__heavy__hash__soft_8cpp}{cn\+\_\+heavy\+\_\+hash\+\_\+soft.\+cpp}}\end{DoxyCompactItemize}

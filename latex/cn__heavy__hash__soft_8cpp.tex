@@ -1,0 +1,245 @@
+\hypertarget{cn__heavy__hash__soft_8cpp}{}\doxysection{src/crypto/cn\+\_\+heavy\+\_\+hash\+\_\+soft.cpp File Reference}
+\label{cn__heavy__hash__soft_8cpp}\index{src/crypto/cn\_heavy\_hash\_soft.cpp@{src/crypto/cn\_heavy\_hash\_soft.cpp}}
+{\ttfamily \#include \char`\"{}cn\+\_\+heavy\+\_\+hash.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keccak.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jh.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}skein.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+Include dependency graph for cn\+\_\+heavy\+\_\+hash\+\_\+soft.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cn__heavy__hash__soft_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaesdata}{aesdata}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a092dc5f663884ff67f6298b5a26432be}{B\+U\+I\+L\+D32}}
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(w)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8dc6dd65a232996ed9ee2738c82bb5d5}{S\+A\+E\+S\+\_\+\+W\+P\+O\+LY}}~0x011b
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(b0,  b1,  b2,  b3)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(x)~((x$<$$<$1) $^\wedge$ (((x$>$$>$7) \& 1) $\ast$ \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8dc6dd65a232996ed9ee2738c82bb5d5}{S\+A\+E\+S\+\_\+\+W\+P\+O\+LY}}))
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(x)~(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(x) $^\wedge$ x)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a05a135778807bee90d6145801b7318f0}{saes\+\_\+h0}}(x)~(x)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8608d36a4c1d4f28fcfee363f0517173}{saes\+\_\+u0}}(p)~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p,          p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p))
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a9572fa743da0b37b8bf0ddac08e3efdd}{saes\+\_\+u1}}(p)~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p,          p)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_ab4085c908d02b663ebc74dc950f0bc5b}{saes\+\_\+u2}}(p)~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(         p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p)
+\item 
+\#define \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a43e320b746b32236bae382eaec9b595a}{saes\+\_\+u3}}(p)~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(         p,          p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a1269b544ab2df83fb661baf8c1a7132d}{sub\+\_\+word}} (uint32\+\_\+t key)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_ab6f7de2cc140ce31067eda683528ee34}{rotr}} (uint32\+\_\+t value, uint32\+\_\+t amount)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_ae0659f17c5c3bbcb5411576c335d89db}{sl\+\_\+xor}} (\mbox{\hyperlink{structaesdata}{aesdata}} \&x)
+\item 
+{\footnotesize template$<$uint8\+\_\+t rcon$>$ }\\void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a77708850ea52a8903e8ff25747525bfa}{soft\+\_\+aes\+\_\+genkey\+\_\+sub}} (\mbox{\hyperlink{structaesdata}{aesdata}} \&xout0, \mbox{\hyperlink{structaesdata}{aesdata}} \&xout2)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a0725d05df110e986bdff133ddeaa804b}{aes\+\_\+genkey}} (const \mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}} memory, \mbox{\hyperlink{structaesdata}{aesdata}} \&k0, \mbox{\hyperlink{structaesdata}{aesdata}} \&k1, \mbox{\hyperlink{structaesdata}{aesdata}} \&k2, \mbox{\hyperlink{structaesdata}{aesdata}} \&k3, \mbox{\hyperlink{structaesdata}{aesdata}} \&k4, \mbox{\hyperlink{structaesdata}{aesdata}} \&k5, \mbox{\hyperlink{structaesdata}{aesdata}} \&k6, \mbox{\hyperlink{structaesdata}{aesdata}} \&k7, \mbox{\hyperlink{structaesdata}{aesdata}} \&k8, \mbox{\hyperlink{structaesdata}{aesdata}} \&k9)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a815c97661eed9181437f3e193cf081a8}{aes\+\_\+round}} (\mbox{\hyperlink{structaesdata}{aesdata}} \&val, const \mbox{\hyperlink{structaesdata}{aesdata}} \&key)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a912ecc77f84e04f333e11c46a79ad497}{aes\+\_\+round8}} (const \mbox{\hyperlink{structaesdata}{aesdata}} \&key, \mbox{\hyperlink{structaesdata}{aesdata}} \&x0, \mbox{\hyperlink{structaesdata}{aesdata}} \&x1, \mbox{\hyperlink{structaesdata}{aesdata}} \&x2, \mbox{\hyperlink{structaesdata}{aesdata}} \&x3, \mbox{\hyperlink{structaesdata}{aesdata}} \&x4, \mbox{\hyperlink{structaesdata}{aesdata}} \&x5, \mbox{\hyperlink{structaesdata}{aesdata}} \&x6, \mbox{\hyperlink{structaesdata}{aesdata}} \&x7)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a238025ceac75ccb48adee9c6f05e641c}{xor\+\_\+shift}} (\mbox{\hyperlink{structaesdata}{aesdata}} \&x0, \mbox{\hyperlink{structaesdata}{aesdata}} \&x1, \mbox{\hyperlink{structaesdata}{aesdata}} \&x2, \mbox{\hyperlink{structaesdata}{aesdata}} \&x3, \mbox{\hyperlink{structaesdata}{aesdata}} \&x4, \mbox{\hyperlink{structaesdata}{aesdata}} \&x5, \mbox{\hyperlink{structaesdata}{aesdata}} \&x6, \mbox{\hyperlink{structaesdata}{aesdata}} \&x7)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a011f0493b544c519e9ae2a183e4712d7}{\+\_\+umul128}} (uint64\+\_\+t multiplier, uint64\+\_\+t multiplicand, uint64\+\_\+t $\ast$product\+\_\+hi)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_adc37c2d3c50922fd029635ea07ae43cc}{blake256\+\_\+hash}} (uint8\+\_\+t $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a213416ce2d1536ad0f0f93fca1f08e7a}{groestl}} (const unsigned char $\ast$, unsigned long long, unsigned char $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a93f03ec28e85e5cd07d66fdf762b2b08}{cpu\+\_\+aes\+\_\+enabled}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a306f104cb966e0df6ad25a63e51d7099}{saes\+\_\+table}} \mbox{[}4\mbox{]}\mbox{[}256\mbox{]} = \{ \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8608d36a4c1d4f28fcfee363f0517173}{saes\+\_\+u0}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a9572fa743da0b37b8bf0ddac08e3efdd}{saes\+\_\+u1}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_ab4085c908d02b663ebc74dc950f0bc5b}{saes\+\_\+u2}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a43e320b746b32236bae382eaec9b595a}{saes\+\_\+u3}}) \}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_aad555b83846ea252d281abc419beeef5}{saes\+\_\+sbox}} \mbox{[}256\mbox{]} = \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a05a135778807bee90d6145801b7318f0}{saes\+\_\+h0}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a092dc5f663884ff67f6298b5a26432be}\label{cn__heavy__hash__soft_8cpp_a092dc5f663884ff67f6298b5a26432be}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!BUILD32@{BUILD32}}
+\index{BUILD32@{BUILD32}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{BUILD32}{BUILD32}}
+{\footnotesize\ttfamily \#define B\+U\+I\+L\+D32}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}\label{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_b2w@{saes\_b2w}}
+\index{saes\_b2w@{saes\_b2w}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_b2w}{saes\_b2w}}
+{\footnotesize\ttfamily \#define saes\+\_\+b2w(\begin{DoxyParamCaption}\item[{}]{b0,  }\item[{}]{b1,  }\item[{}]{b2,  }\item[{}]{b3 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (((uint32\_t)(b3) << 24) | \(\backslash\)}
+\DoxyCodeLine{    ((uint32\_t)(b2) << 16) | ((uint32\_t)(b1) << 8) | (b0))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}\label{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_data@{saes\_data}}
+\index{saes\_data@{saes\_data}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_data}{saes\_data}}
+{\footnotesize\ttfamily \#define saes\+\_\+data(\begin{DoxyParamCaption}\item[{}]{w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}\label{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_f2@{saes\_f2}}
+\index{saes\_f2@{saes\_f2}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_f2}{saes\_f2}}
+{\footnotesize\ttfamily \#define saes\+\_\+f2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x$<$$<$1) $^\wedge$ (((x$>$$>$7) \& 1) $\ast$ \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8dc6dd65a232996ed9ee2738c82bb5d5}{S\+A\+E\+S\+\_\+\+W\+P\+O\+LY}}))}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}\label{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_f3@{saes\_f3}}
+\index{saes\_f3@{saes\_f3}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_f3}{saes\_f3}}
+{\footnotesize\ttfamily \#define saes\+\_\+f3(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(x) $^\wedge$ x)}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a05a135778807bee90d6145801b7318f0}\label{cn__heavy__hash__soft_8cpp_a05a135778807bee90d6145801b7318f0}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_h0@{saes\_h0}}
+\index{saes\_h0@{saes\_h0}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_h0}{saes\_h0}}
+{\footnotesize\ttfamily \#define saes\+\_\+h0(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a8608d36a4c1d4f28fcfee363f0517173}\label{cn__heavy__hash__soft_8cpp_a8608d36a4c1d4f28fcfee363f0517173}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_u0@{saes\_u0}}
+\index{saes\_u0@{saes\_u0}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_u0}{saes\_u0}}
+{\footnotesize\ttfamily \#define saes\+\_\+u0(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p,          p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p))}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a9572fa743da0b37b8bf0ddac08e3efdd}\label{cn__heavy__hash__soft_8cpp_a9572fa743da0b37b8bf0ddac08e3efdd}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_u1@{saes\_u1}}
+\index{saes\_u1@{saes\_u1}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_u1}{saes\_u1}}
+{\footnotesize\ttfamily \#define saes\+\_\+u1(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p,          p)}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_ab4085c908d02b663ebc74dc950f0bc5b}\label{cn__heavy__hash__soft_8cpp_ab4085c908d02b663ebc74dc950f0bc5b}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_u2@{saes\_u2}}
+\index{saes\_u2@{saes\_u2}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_u2}{saes\_u2}}
+{\footnotesize\ttfamily \#define saes\+\_\+u2(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(         p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p),          p)}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a43e320b746b32236bae382eaec9b595a}\label{cn__heavy__hash__soft_8cpp_a43e320b746b32236bae382eaec9b595a}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_u3@{saes\_u3}}
+\index{saes\_u3@{saes\_u3}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_u3}{saes\_u3}}
+{\footnotesize\ttfamily \#define saes\+\_\+u3(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a76d77d750926dc25bee45152f0743f9b}{saes\+\_\+b2w}}(         p,          p, \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a937070db2d75654fec823bb7585357d7}{saes\+\_\+f3}}(p), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a03c95cfb37729dd3fceeabe15f3d6491}{saes\+\_\+f2}}(p))}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a8dc6dd65a232996ed9ee2738c82bb5d5}\label{cn__heavy__hash__soft_8cpp_a8dc6dd65a232996ed9ee2738c82bb5d5}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!SAES\_WPOLY@{SAES\_WPOLY}}
+\index{SAES\_WPOLY@{SAES\_WPOLY}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{SAES\_WPOLY}{SAES\_WPOLY}}
+{\footnotesize\ttfamily \#define S\+A\+E\+S\+\_\+\+W\+P\+O\+LY~0x011b}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a011f0493b544c519e9ae2a183e4712d7}\label{cn__heavy__hash__soft_8cpp_a011f0493b544c519e9ae2a183e4712d7}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!\_umul128@{\_umul128}}
+\index{\_umul128@{\_umul128}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{\_umul128()}{\_umul128()}}
+{\footnotesize\ttfamily uint64\+\_\+t \+\_\+umul128 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{multiplier,  }\item[{uint64\+\_\+t}]{multiplicand,  }\item[{uint64\+\_\+t $\ast$}]{product\+\_\+hi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a0725d05df110e986bdff133ddeaa804b}\label{cn__heavy__hash__soft_8cpp_a0725d05df110e986bdff133ddeaa804b}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!aes\_genkey@{aes\_genkey}}
+\index{aes\_genkey@{aes\_genkey}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{aes\_genkey()}{aes\_genkey()}}
+{\footnotesize\ttfamily void aes\+\_\+genkey (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcn__sptr}{cn\+\_\+sptr}}}]{memory,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k0,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k1,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k2,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k3,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k4,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k5,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k6,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k7,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k8,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{k9 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a815c97661eed9181437f3e193cf081a8}\label{cn__heavy__hash__soft_8cpp_a815c97661eed9181437f3e193cf081a8}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!aes\_round@{aes\_round}}
+\index{aes\_round@{aes\_round}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{aes\_round()}{aes\_round()}}
+{\footnotesize\ttfamily void aes\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{val,  }\item[{const \mbox{\hyperlink{structaesdata}{aesdata}} \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a912ecc77f84e04f333e11c46a79ad497}\label{cn__heavy__hash__soft_8cpp_a912ecc77f84e04f333e11c46a79ad497}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!aes\_round8@{aes\_round8}}
+\index{aes\_round8@{aes\_round8}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{aes\_round8()}{aes\_round8()}}
+{\footnotesize\ttfamily void aes\+\_\+round8 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaesdata}{aesdata}} \&}]{key,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x0,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x1,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x2,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x3,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x4,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x5,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x6,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x7 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_adc37c2d3c50922fd029635ea07ae43cc}\label{cn__heavy__hash__soft_8cpp_adc37c2d3c50922fd029635ea07ae43cc}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!blake256\_hash@{blake256\_hash}}
+\index{blake256\_hash@{blake256\_hash}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{blake256\_hash()}{blake256\_hash()}}
+{\footnotesize\ttfamily void blake256\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a213416ce2d1536ad0f0f93fca1f08e7a}\label{cn__heavy__hash__soft_8cpp_a213416ce2d1536ad0f0f93fca1f08e7a}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!groestl@{groestl}}
+\index{groestl@{groestl}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{groestl()}{groestl()}}
+{\footnotesize\ttfamily void groestl (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{,  }\item[{unsigned long long}]{,  }\item[{unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_ab6f7de2cc140ce31067eda683528ee34}\label{cn__heavy__hash__soft_8cpp_ab6f7de2cc140ce31067eda683528ee34}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!rotr@{rotr}}
+\index{rotr@{rotr}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{rotr()}{rotr()}}
+{\footnotesize\ttfamily uint32\+\_\+t rotr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value,  }\item[{uint32\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_ae0659f17c5c3bbcb5411576c335d89db}\label{cn__heavy__hash__soft_8cpp_ae0659f17c5c3bbcb5411576c335d89db}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!sl\_xor@{sl\_xor}}
+\index{sl\_xor@{sl\_xor}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{sl\_xor()}{sl\_xor()}}
+{\footnotesize\ttfamily void sl\+\_\+xor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a77708850ea52a8903e8ff25747525bfa}\label{cn__heavy__hash__soft_8cpp_a77708850ea52a8903e8ff25747525bfa}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!soft\_aes\_genkey\_sub@{soft\_aes\_genkey\_sub}}
+\index{soft\_aes\_genkey\_sub@{soft\_aes\_genkey\_sub}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{soft\_aes\_genkey\_sub()}{soft\_aes\_genkey\_sub()}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t rcon$>$ \\
+void soft\+\_\+aes\+\_\+genkey\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{xout0,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{xout2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a1269b544ab2df83fb661baf8c1a7132d}\label{cn__heavy__hash__soft_8cpp_a1269b544ab2df83fb661baf8c1a7132d}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!sub\_word@{sub\_word}}
+\index{sub\_word@{sub\_word}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{sub\_word()}{sub\_word()}}
+{\footnotesize\ttfamily uint32\+\_\+t sub\+\_\+word (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a238025ceac75ccb48adee9c6f05e641c}\label{cn__heavy__hash__soft_8cpp_a238025ceac75ccb48adee9c6f05e641c}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!xor\_shift@{xor\_shift}}
+\index{xor\_shift@{xor\_shift}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{xor\_shift()}{xor\_shift()}}
+{\footnotesize\ttfamily void xor\+\_\+shift (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x0,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x1,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x2,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x3,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x4,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x5,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x6,  }\item[{\mbox{\hyperlink{structaesdata}{aesdata}} \&}]{x7 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a93f03ec28e85e5cd07d66fdf762b2b08}\label{cn__heavy__hash__soft_8cpp_a93f03ec28e85e5cd07d66fdf762b2b08}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!cpu\_aes\_enabled@{cpu\_aes\_enabled}}
+\index{cpu\_aes\_enabled@{cpu\_aes\_enabled}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{cpu\_aes\_enabled}{cpu\_aes\_enabled}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cpu\+\_\+aes\+\_\+enabled = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_aad555b83846ea252d281abc419beeef5}\label{cn__heavy__hash__soft_8cpp_aad555b83846ea252d281abc419beeef5}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_sbox@{saes\_sbox}}
+\index{saes\_sbox@{saes\_sbox}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_sbox}{saes\_sbox}}
+{\footnotesize\ttfamily const uint8\+\_\+t saes\+\_\+sbox\mbox{[}256\mbox{]} = \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a05a135778807bee90d6145801b7318f0}{saes\+\_\+h0}})}
+
+\mbox{\Hypertarget{cn__heavy__hash__soft_8cpp_a306f104cb966e0df6ad25a63e51d7099}\label{cn__heavy__hash__soft_8cpp_a306f104cb966e0df6ad25a63e51d7099}} 
+\index{cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}!saes\_table@{saes\_table}}
+\index{saes\_table@{saes\_table}!cn\_heavy\_hash\_soft.cpp@{cn\_heavy\_hash\_soft.cpp}}
+\doxysubsubsection{\texorpdfstring{saes\_table}{saes\_table}}
+{\footnotesize\ttfamily const uint32\+\_\+t saes\+\_\+table\mbox{[}4\mbox{]}\mbox{[}256\mbox{]} = \{ \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a8608d36a4c1d4f28fcfee363f0517173}{saes\+\_\+u0}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a9572fa743da0b37b8bf0ddac08e3efdd}{saes\+\_\+u1}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_ab4085c908d02b663ebc74dc950f0bc5b}{saes\+\_\+u2}}), \mbox{\hyperlink{cn__heavy__hash__soft_8cpp_af4de1086cfdf450d196fb45380dbe89a}{saes\+\_\+data}}(\mbox{\hyperlink{cn__heavy__hash__soft_8cpp_a43e320b746b32236bae382eaec9b595a}{saes\+\_\+u3}}) \}}
+

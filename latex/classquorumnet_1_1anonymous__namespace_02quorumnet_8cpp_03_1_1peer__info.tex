@@ -1,0 +1,180 @@
+\hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info}{}\doxysection{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info Class Reference}
+\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info}\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}{exclude\+\_\+set}} = std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_ac0e291d7015424e603a538c1223bdb35}{peer\+\_\+info}} (\mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{Qnet\+State}} \&qnet, \mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} q\+\_\+type, const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $\ast$\mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opportunistic=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}{exclude\+\_\+set}} exclude=\{\}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+workers=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\begin{DoxyCompactList}\small\item\em Singleton wrapper around \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info}{peer\+\_\+info}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Quorum\+It $>$ }\\\mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a01db8ab8747180ab73472942b04cf6d5}{peer\+\_\+info}} (\mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{Qnet\+State}} \&qnet, \mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} q\+\_\+type, Quorum\+It qbegin, Quorum\+It qend, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opportunistic=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ exclude=\{\}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+workers=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+{\footnotesize template$<$typename... T$>$ }\\void \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a53f31999823de91a1bbc25415bf93a2c}{relay\+\_\+to\+\_\+peers}} (const std\+::string\+\_\+view \&cmd, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...data)
+\begin{DoxyCompactList}\small\item\em Relays a command and any number of serialized data to everyone we\textquotesingle{}re supposed to relay to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}, std\+::string $>$ $>$ \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a113fda5674ea21cdca3401ca9f36ff78}{remotes}}
+\begin{DoxyCompactList}\small\item\em Maps pubkeys to x25519 pubkeys and zmq connection strings. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a4f41cba52ce3a11aa94f7e17e7963ea2}{peers}}
+\item 
+int \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a758dbbdb950e28b70ade749248267041}{strong\+\_\+peers}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a5071ca0069f4f2bdf918162d2baf34df}{my\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em The caller\textquotesingle{}s positions in the given quorum(s), -\/1 if not found. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_acdb52355348f1466017ed9849d0d952e}{my\+\_\+position\+\_\+count}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a74fdb42a51b6df242d122ae7573f8938}{add\+\_\+peer}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} strong=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+{\footnotesize template$<$typename Quorum\+It $>$ }\\void \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1fc6c5c7ab729a2f411a2adceafc466a}{compute\+\_\+validator\+\_\+peers}} (Quorum\+It qbegin, Quorum\+It qend, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opportunistic)
+\item 
+{\footnotesize template$<$size\+\_\+t N, size\+\_\+t... I$>$ }\\void \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a8f9054214060bc052335c556a9de9db0}{relay\+\_\+to\+\_\+peers\+\_\+impl}} (const std\+::string\+\_\+view \&cmd, std\+::array$<$ std\+::string, N $>$ relay\+\_\+data, std\+::index\+\_\+sequence$<$ I... $>$)
+\begin{DoxyCompactList}\small\item\em Relays a command and pre-\/serialized data to everyone we\textquotesingle{}re supposed to relay to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+oxenmq\+::\+Oxen\+MQ \& \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a2f474f3a270cd5c392f1b8670a8768a6}{omq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class to calculate and relay to peers of quorums.
+
+T\+O\+DO\+: add a wrapper that caches this so that looking up the same quorum peers within a certain amount of time doesn\textquotesingle{}t need to recalculate. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!exclude\_set@{exclude\_set}}
+\index{exclude\_set@{exclude\_set}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{exclude\_set}{exclude\_set}}
+{\footnotesize\ttfamily using quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}{peer\+\_\+info\+::exclude\+\_\+set}} =  std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_ac0e291d7015424e603a538c1223bdb35}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_ac0e291d7015424e603a538c1223bdb35}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!peer\_info@{peer\_info}}
+\index{peer\_info@{peer\_info}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{peer\_info()}{peer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::peer\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{Qnet\+State}} \&}]{qnet,  }\item[{\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}}}]{q\+\_\+type,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $\ast$}]{quorum,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{opportunistic = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{\mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1366ba3b74deb51f343e9cb599f91b33}{exclude\+\_\+set}}}]{exclude = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+workers = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Singleton wrapper around \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info}{peer\+\_\+info}}. 
+
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a01db8ab8747180ab73472942b04cf6d5}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a01db8ab8747180ab73472942b04cf6d5}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!peer\_info@{peer\_info}}
+\index{peer\_info@{peer\_info}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{peer\_info()}{peer\_info()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Quorum\+It $>$ \\
+quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::peer\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{Qnet\+State}} \&}]{qnet,  }\item[{\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}}}]{q\+\_\+type,  }\item[{Quorum\+It}]{qbegin,  }\item[{Quorum\+It}]{qend,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{opportunistic = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$}]{exclude = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+workers = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs peer information for the given quorums and quorum position of the caller. 
+\begin{DoxyParams}{Parameters}
+{\em qnet} & -\/ the \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{Qnet\+State}} reference \\
+\hline
+{\em q\+\_\+type} & -\/ the type of quorum \\
+\hline
+{\em qbegin,qend} & -\/ the iterators to a set of pointers (or other deferenceable type) to quorums \\
+\hline
+{\em opportunistic} & -\/ if true then the peers to relay will also attempt to relay to any incoming peers {\itshape if} those peers are already connected when the message is relayed. \\
+\hline
+{\em exclude} & -\/ can be specified as a set of peers that should be excluded from the peer list. Typically for peers that we already know have the relayed information. This SN\textquotesingle{}s pubkey is always added to this exclude list. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a74fdb42a51b6df242d122ae7573f8938}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a74fdb42a51b6df242d122ae7573f8938}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!add\_peer@{add\_peer}}
+\index{add\_peer@{add\_peer}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{add\_peer()}{add\_peer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::add\+\_\+peer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{strong = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Looks up a pubkey in known remotes and adds it to {\ttfamily peers}. If strong, it is added with an address, otherwise it is added with an empty address. If the element already exists, it will be updated {\itshape if} it the existing entry is weak and {\ttfamily strong} is true, otherwise it will be left as is. Returns true if a new entry was created or a weak entry was upgraded. \mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1fc6c5c7ab729a2f411a2adceafc466a}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a1fc6c5c7ab729a2f411a2adceafc466a}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!compute\_validator\_peers@{compute\_validator\_peers}}
+\index{compute\_validator\_peers@{compute\_validator\_peers}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{compute\_validator\_peers()}{compute\_validator\_peers()}}
+{\footnotesize\ttfamily template$<$typename Quorum\+It $>$ \\
+void quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::compute\+\_\+validator\+\_\+peers (\begin{DoxyParamCaption}\item[{Quorum\+It}]{qbegin,  }\item[{Quorum\+It}]{qend,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{opportunistic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+strong\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a53f31999823de91a1bbc25415bf93a2c}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a53f31999823de91a1bbc25415bf93a2c}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!relay\_to\_peers@{relay\_to\_peers}}
+\index{relay\_to\_peers@{relay\_to\_peers}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{relay\_to\_peers()}{relay\_to\_peers()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+void quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::relay\+\_\+to\+\_\+peers (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{cmd,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Relays a command and any number of serialized data to everyone we\textquotesingle{}re supposed to relay to. 
+
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a8f9054214060bc052335c556a9de9db0}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a8f9054214060bc052335c556a9de9db0}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!relay\_to\_peers\_impl@{relay\_to\_peers\_impl}}
+\index{relay\_to\_peers\_impl@{relay\_to\_peers\_impl}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{relay\_to\_peers\_impl()}{relay\_to\_peers\_impl()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N, size\+\_\+t... I$>$ \\
+void quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::relay\+\_\+to\+\_\+peers\+\_\+impl (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view \&}]{cmd,  }\item[{std\+::array$<$ std\+::string, N $>$}]{relay\+\_\+data,  }\item[{std\+::index\+\_\+sequence$<$ I... $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Relays a command and pre-\/serialized data to everyone we\textquotesingle{}re supposed to relay to. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a5071ca0069f4f2bdf918162d2baf34df}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a5071ca0069f4f2bdf918162d2baf34df}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!my\_position@{my\_position}}
+\index{my\_position@{my\_position}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{my\_position}{my\_position}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::my\+\_\+position}
+
+
+
+The caller\textquotesingle{}s positions in the given quorum(s), -\/1 if not found. 
+
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_acdb52355348f1466017ed9849d0d952e}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_acdb52355348f1466017ed9849d0d952e}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!my\_position\_count@{my\_position\_count}}
+\index{my\_position\_count@{my\_position\_count}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{my\_position\_count}{my\_position\_count}}
+{\footnotesize\ttfamily int quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::my\+\_\+position\+\_\+count}
+
+The number of actual positions found in my\+\_\+position (i.\+e. the number of elements of {\ttfamily my\+\_\+position} not equal to -\/1). \mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a2f474f3a270cd5c392f1b8670a8768a6}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a2f474f3a270cd5c392f1b8670a8768a6}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!omq@{omq}}
+\index{omq@{omq}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{omq}{omq}}
+{\footnotesize\ttfamily oxenmq\+::\+Oxen\+MQ\& quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::omq\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a4f41cba52ce3a11aa94f7e17e7963ea2}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a4f41cba52ce3a11aa94f7e17e7963ea2}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!peers@{peers}}
+\index{peers@{peers}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{peers}{peers}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string , std\+::string $>$ quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::peers}
+
+Stores the x25519 string pubkeys to either zmq connection strings (for a \char`\"{}strong\char`\"{} connection) or empty strings (for an opportunistic \char`\"{}weak\char`\"{} connection). \mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a113fda5674ea21cdca3401ca9f36ff78}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a113fda5674ea21cdca3401ca9f36ff78}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!remotes@{remotes}}
+\index{remotes@{remotes}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{remotes}{remotes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, std\+::pair$<$\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}, std\+::string$>$ $>$ quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::remotes}
+
+
+
+Maps pubkeys to x25519 pubkeys and zmq connection strings. 
+
+\mbox{\Hypertarget{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a758dbbdb950e28b70ade749248267041}\label{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info_a758dbbdb950e28b70ade749248267041}} 
+\index{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}!strong\_peers@{strong\_peers}}
+\index{strong\_peers@{strong\_peers}!quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info@{quorumnet::anonymous\_namespace\lcurly{}quorumnet.cpp\rcurly{}::peer\_info}}
+\doxysubsubsection{\texorpdfstring{strong\_peers}{strong\_peers}}
+{\footnotesize\ttfamily int quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info\+::strong\+\_\+peers}
+
+The number of strong peers, that is, the count of {\ttfamily peers} that has a non-\/empty second value. Will be the same as {\ttfamily \mbox{\hyperlink{namespacelmdb_1_1stream_aba452209f8756851cd8e72e4cb42e2b9}{peers.\+count()}}} if opportunistic connections are disabled. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{quorumnet_8cpp}{quorumnet.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,182 @@
+\hypertarget{classtools_1_1ringdb}{}\doxysection{tools\+::ringdb Class Reference}
+\label{classtools_1_1ringdb}\index{tools::ringdb@{tools::ringdb}}
+
+
+{\ttfamily \#include $<$ringdb.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1ringdb_a4b4275b030e61871efecb36dda7fcaa2}{ringdb}} (fs\+::path \mbox{\hyperlink{classtools_1_1ringdb_a389005e882c3b168553c52ad272703ab}{filename}}, const std\+::string \&genesis)
+\item 
+void \mbox{\hyperlink{classtools_1_1ringdb_a1699d0a7f42490e9fc4f716ab7a501e8}{close}} ()
+\item 
+\mbox{\hyperlink{classtools_1_1ringdb_aaa19f8f6a3ffecb2ddf56e680b4eec63}{$\sim$ringdb}} ()
+\item 
+const fs\+::path \& \mbox{\hyperlink{classtools_1_1ringdb_a389005e882c3b168553c52ad272703ab}{filename}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a5592e5e392fc1142b3115193fe15a6a8}{add\+\_\+rings}} (const crypto\+::chacha\+\_\+key \&chacha\+\_\+key, const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&tx)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a0bbc54e99a1651f83d7f12ac7f9c9ed9}{remove\+\_\+rings}} (const crypto\+::chacha\+\_\+key \&chacha\+\_\+key, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&key\+\_\+images)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_ae3b509476b3edd6f3fa16b5c38d38c32}{remove\+\_\+rings}} (const crypto\+::chacha\+\_\+key \&chacha\+\_\+key, const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&tx)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_acd9e29a528ac7a80ae2e6bf4ce38c8fe}{get\+\_\+ring}} (const crypto\+::chacha\+\_\+key \&chacha\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, std\+::vector$<$ uint64\+\_\+t $>$ \&outs)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a26f1e92e0c30dddd7ac46616e27125b0}{set\+\_\+ring}} (const crypto\+::chacha\+\_\+key \&chacha\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const std\+::vector$<$ uint64\+\_\+t $>$ \&outs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} relative)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a9fd1fd85bd137854e195134716cb2b1c}{blackball}} (const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&output)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a14a301b6976a137a69f598cdd49ddc53}{blackball}} (const std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$$>$ \&outputs)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a8a5debe40e2b7b9cafe3de888ee7955c}{unblackball}} (const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&output)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_aca6818dee374b4e89ddbe7544aa2fc27}{blackballed}} (const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&output)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a1bf2bf8104fff254de817e52ce4345c7}{clear\+\_\+blackballs}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1ringdb_a11efbaf39f9c4acea4108b5440cfc0b5}{blackball\+\_\+worker}} (const std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$$>$ \&outputs, int op)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+fs\+::path \mbox{\hyperlink{classtools_1_1ringdb_a32fc820a6729aad3f84d8baa162ce365}{filename\+\_\+}}
+\item 
+M\+D\+B\+\_\+env $\ast$ \mbox{\hyperlink{classtools_1_1ringdb_aded32283e04f3a8bdca187b2ac2f10fb}{env}} = nullptr
+\item 
+M\+D\+B\+\_\+dbi \mbox{\hyperlink{classtools_1_1ringdb_a4fb3b109d0c0b926b019b1f1e1e73518}{dbi\+\_\+rings}}
+\item 
+M\+D\+B\+\_\+dbi \mbox{\hyperlink{classtools_1_1ringdb_a80548d9787637de0f898e54208abe21d}{dbi\+\_\+blackballs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1ringdb_a4b4275b030e61871efecb36dda7fcaa2}\label{classtools_1_1ringdb_a4b4275b030e61871efecb36dda7fcaa2}} 
+\index{tools::ringdb@{tools::ringdb}!ringdb@{ringdb}}
+\index{ringdb@{ringdb}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{ringdb()}{ringdb()}}
+{\footnotesize\ttfamily tools\+::ringdb\+::ringdb (\begin{DoxyParamCaption}\item[{fs\+::path}]{filename,  }\item[{const std\+::string \&}]{genesis }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_aaa19f8f6a3ffecb2ddf56e680b4eec63}\label{classtools_1_1ringdb_aaa19f8f6a3ffecb2ddf56e680b4eec63}} 
+\index{tools::ringdb@{tools::ringdb}!````~ringdb@{$\sim$ringdb}}
+\index{````~ringdb@{$\sim$ringdb}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{$\sim$ringdb()}{~ringdb()}}
+{\footnotesize\ttfamily tools\+::ringdb\+::$\sim$ringdb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1ringdb_a5592e5e392fc1142b3115193fe15a6a8}\label{classtools_1_1ringdb_a5592e5e392fc1142b3115193fe15a6a8}} 
+\index{tools::ringdb@{tools::ringdb}!add\_rings@{add\_rings}}
+\index{add\_rings@{add\_rings}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{add\_rings()}{add\_rings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::add\+\_\+rings (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{chacha\+\_\+key,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&}]{tx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a9fd1fd85bd137854e195134716cb2b1c}\label{classtools_1_1ringdb_a9fd1fd85bd137854e195134716cb2b1c}} 
+\index{tools::ringdb@{tools::ringdb}!blackball@{blackball}}
+\index{blackball@{blackball}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{blackball()}{blackball()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::blackball (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a14a301b6976a137a69f598cdd49ddc53}\label{classtools_1_1ringdb_a14a301b6976a137a69f598cdd49ddc53}} 
+\index{tools::ringdb@{tools::ringdb}!blackball@{blackball}}
+\index{blackball@{blackball}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{blackball()}{blackball()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::blackball (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$$>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a11efbaf39f9c4acea4108b5440cfc0b5}\label{classtools_1_1ringdb_a11efbaf39f9c4acea4108b5440cfc0b5}} 
+\index{tools::ringdb@{tools::ringdb}!blackball\_worker@{blackball\_worker}}
+\index{blackball\_worker@{blackball\_worker}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{blackball\_worker()}{blackball\_worker()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::blackball\+\_\+worker (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$$>$ \&}]{outputs,  }\item[{int}]{op }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_aca6818dee374b4e89ddbe7544aa2fc27}\label{classtools_1_1ringdb_aca6818dee374b4e89ddbe7544aa2fc27}} 
+\index{tools::ringdb@{tools::ringdb}!blackballed@{blackballed}}
+\index{blackballed@{blackballed}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{blackballed()}{blackballed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::blackballed (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a1bf2bf8104fff254de817e52ce4345c7}\label{classtools_1_1ringdb_a1bf2bf8104fff254de817e52ce4345c7}} 
+\index{tools::ringdb@{tools::ringdb}!clear\_blackballs@{clear\_blackballs}}
+\index{clear\_blackballs@{clear\_blackballs}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{clear\_blackballs()}{clear\_blackballs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::clear\+\_\+blackballs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a1699d0a7f42490e9fc4f716ab7a501e8}\label{classtools_1_1ringdb_a1699d0a7f42490e9fc4f716ab7a501e8}} 
+\index{tools::ringdb@{tools::ringdb}!close@{close}}
+\index{close@{close}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void tools\+::ringdb\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a389005e882c3b168553c52ad272703ab}\label{classtools_1_1ringdb_a389005e882c3b168553c52ad272703ab}} 
+\index{tools::ringdb@{tools::ringdb}!filename@{filename}}
+\index{filename@{filename}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{filename()}{filename()}}
+{\footnotesize\ttfamily const fs\+::path\& tools\+::ringdb\+::filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_acd9e29a528ac7a80ae2e6bf4ce38c8fe}\label{classtools_1_1ringdb_acd9e29a528ac7a80ae2e6bf4ce38c8fe}} 
+\index{tools::ringdb@{tools::ringdb}!get\_ring@{get\_ring}}
+\index{get\_ring@{get\_ring}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{get\_ring()}{get\_ring()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::get\+\_\+ring (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{chacha\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{key\+\_\+image,  }\item[{std\+::vector$<$ uint64\+\_\+t $>$ \&}]{outs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_ae3b509476b3edd6f3fa16b5c38d38c32}\label{classtools_1_1ringdb_ae3b509476b3edd6f3fa16b5c38d38c32}} 
+\index{tools::ringdb@{tools::ringdb}!remove\_rings@{remove\_rings}}
+\index{remove\_rings@{remove\_rings}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{remove\_rings()}{remove\_rings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::remove\+\_\+rings (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{chacha\+\_\+key,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&}]{tx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a0bbc54e99a1651f83d7f12ac7f9c9ed9}\label{classtools_1_1ringdb_a0bbc54e99a1651f83d7f12ac7f9c9ed9}} 
+\index{tools::ringdb@{tools::ringdb}!remove\_rings@{remove\_rings}}
+\index{remove\_rings@{remove\_rings}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{remove\_rings()}{remove\_rings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::remove\+\_\+rings (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{chacha\+\_\+key,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&}]{key\+\_\+images }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a26f1e92e0c30dddd7ac46616e27125b0}\label{classtools_1_1ringdb_a26f1e92e0c30dddd7ac46616e27125b0}} 
+\index{tools::ringdb@{tools::ringdb}!set\_ring@{set\_ring}}
+\index{set\_ring@{set\_ring}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{set\_ring()}{set\_ring()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::set\+\_\+ring (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{chacha\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{key\+\_\+image,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{outs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{relative }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a8a5debe40e2b7b9cafe3de888ee7955c}\label{classtools_1_1ringdb_a8a5debe40e2b7b9cafe3de888ee7955c}} 
+\index{tools::ringdb@{tools::ringdb}!unblackball@{unblackball}}
+\index{unblackball@{unblackball}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{unblackball()}{unblackball()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::ringdb\+::unblackball (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \&}]{output }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1ringdb_a80548d9787637de0f898e54208abe21d}\label{classtools_1_1ringdb_a80548d9787637de0f898e54208abe21d}} 
+\index{tools::ringdb@{tools::ringdb}!dbi\_blackballs@{dbi\_blackballs}}
+\index{dbi\_blackballs@{dbi\_blackballs}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{dbi\_blackballs}{dbi\_blackballs}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi tools\+::ringdb\+::dbi\+\_\+blackballs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a4fb3b109d0c0b926b019b1f1e1e73518}\label{classtools_1_1ringdb_a4fb3b109d0c0b926b019b1f1e1e73518}} 
+\index{tools::ringdb@{tools::ringdb}!dbi\_rings@{dbi\_rings}}
+\index{dbi\_rings@{dbi\_rings}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{dbi\_rings}{dbi\_rings}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi tools\+::ringdb\+::dbi\+\_\+rings\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_aded32283e04f3a8bdca187b2ac2f10fb}\label{classtools_1_1ringdb_aded32283e04f3a8bdca187b2ac2f10fb}} 
+\index{tools::ringdb@{tools::ringdb}!env@{env}}
+\index{env@{env}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{env}{env}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+env$\ast$ tools\+::ringdb\+::env = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1ringdb_a32fc820a6729aad3f84d8baa162ce365}\label{classtools_1_1ringdb_a32fc820a6729aad3f84d8baa162ce365}} 
+\index{tools::ringdb@{tools::ringdb}!filename\_@{filename\_}}
+\index{filename\_@{filename\_}!tools::ringdb@{tools::ringdb}}
+\doxysubsubsection{\texorpdfstring{filename\_}{filename\_}}
+{\footnotesize\ttfamily fs\+::path tools\+::ringdb\+::filename\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{ringdb_8h}{ringdb.\+h}}\item 
+src/wallet/\mbox{\hyperlink{ringdb_8cpp}{ringdb.\+cpp}}\end{DoxyCompactItemize}

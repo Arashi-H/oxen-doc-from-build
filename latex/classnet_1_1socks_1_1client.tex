@@ -1,0 +1,328 @@
+\hypertarget{classnet_1_1socks_1_1client}{}\doxysection{net\+::socks\+::client Class Reference}
+\label{classnet_1_1socks_1_1client}\index{net::socks::client@{net::socks::client}}
+
+
+Client support for socks connect and resolve commands.  
+
+
+
+
+{\ttfamily \#include $<$socks.\+h$>$}
+
+
+
+Inheritance diagram for net\+::socks\+::client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classnet_1_1socks_1_1client__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1async__close}{async\+\_\+close}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1completed}{completed}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1read}{read}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1write}{write}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classnet_1_1socks_1_1client_a209cb7b633587853793f5c240658ff8d}{stream\+\_\+type}} = boost\+::asio\+::ip\+::tcp
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnet_1_1socks_1_1client_a936d372bfffa279377a60508fa13a5a9}{client}} (stream\+\_\+type\+::socket \&\&proxy, \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} ver)
+\item 
+\mbox{\hyperlink{classnet_1_1socks_1_1client_a394c2357dc9f1133b96a2d16153753dc}{client}} (const \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} \&)=delete
+\item 
+virtual \mbox{\hyperlink{classnet_1_1socks_1_1client_a52a1b4ad3dfa11ddd0929a844859c1c1}{$\sim$client}} ()
+\item 
+\mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} \& \mbox{\hyperlink{classnet_1_1socks_1_1client_a90cb61b29d081798e102158c5375d961}{operator=}} (const \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} \&)=delete
+\item 
+stream\+\_\+type\+::socket \mbox{\hyperlink{classnet_1_1socks_1_1client_a40d415675b75f68b0e360063c6fe5170}{take\+\_\+socket}} ()
+\item 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} \mbox{\hyperlink{classnet_1_1socks_1_1client_ae69bdc8d9f0d1857df02b3d775ee15ff}{socks\+\_\+version}} () const noexcept
+\item 
+epee\+::span$<$ const std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}{buffer}} () const noexcept
+\item 
+void \mbox{\hyperlink{classnet_1_1socks_1_1client_a1e26677ceb7faeffb9908f57234be799}{clear\+\_\+command}} () noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a69b5f25cfbb371cde0694a6dcddccf5a}{set\+\_\+connect\+\_\+command}} (const epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+address \&address)
+\begin{DoxyCompactList}\small\item\em Try to set {\ttfamily address} as remote connection request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a1b17455118e531dc578a171096dc9f7f}{set\+\_\+connect\+\_\+command}} (std\+::string\+\_\+view domain, std\+::uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Try to set {\ttfamily domain} + {\ttfamily port} as remote connection request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a8e5acc565a4b948c75483132adaf4075}{set\+\_\+connect\+\_\+command}} (const \mbox{\hyperlink{classnet_1_1tor__address}{net\+::tor\+\_\+address}} \&address)
+\begin{DoxyCompactList}\small\item\em Try to set {\ttfamily address} as remote Tor hidden service connection request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a5b0a29303b1266f773d1ce1a6559a874}{set\+\_\+connect\+\_\+command}} (const \mbox{\hyperlink{classnet_1_1i2p__address}{net\+::i2p\+\_\+address}} \&address)
+\begin{DoxyCompactList}\small\item\em Try to set {\ttfamily address} as remote i2p hidden service connection request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a41809d92e82b1c8a738b3996668022ef}{set\+\_\+resolve\+\_\+command}} (std\+::string\+\_\+view domain)
+\begin{DoxyCompactList}\small\item\em Try to set {\ttfamily domain} as remote D\+NS A record lookup request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_a8d1bec1709e0225479c3fb0f6a64e489}{connect\+\_\+and\+\_\+send}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$ self, const stream\+\_\+type\+::endpoint \&proxy\+\_\+address)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1socks_1_1client_ae3cf4cb174afb09524117b514d78114c}{send}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$ self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classnet_1_1socks_1_1client_a7e20efa2425f65d28377279fb207c98f}{done}} (boost\+::system\+::error\+\_\+code \mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{error}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$ self)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \mbox{\hyperlink{classnet_1_1socks_1_1client_a0ea918ea0525dc4fbb58796e7bbcc8d7}{proxy\+\_\+}}
+\item 
+boost\+::asio\+::io\+\_\+service\+::strand \mbox{\hyperlink{classnet_1_1socks_1_1client_ad8005a5057a4ee53f501484536151f04}{strand\+\_\+}}
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{classnet_1_1socks_1_1client_a6741707ad639e339b71424065f9d4f67}{buffer\+\_\+size\+\_\+}}
+\item 
+std\+::uint8\+\_\+t \mbox{\hyperlink{classnet_1_1socks_1_1client_a97faf7eb2228566dd4edd66d7cec5a0c}{buffer\+\_\+}} \mbox{[}1024\mbox{]}
+\item 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} \mbox{\hyperlink{classnet_1_1socks_1_1client_ad7445d52caee250f566666cbbf97331b}{ver\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Client support for socks connect and resolve commands. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a209cb7b633587853793f5c240658ff8d}\label{classnet_1_1socks_1_1client_a209cb7b633587853793f5c240658ff8d}} 
+\index{net::socks::client@{net::socks::client}!stream\_type@{stream\_type}}
+\index{stream\_type@{stream\_type}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{stream\_type}{stream\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1socks_1_1client_a209cb7b633587853793f5c240658ff8d}{net\+::socks\+::client\+::stream\+\_\+type}} =  boost\+::asio\+::ip\+::tcp}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a936d372bfffa279377a60508fa13a5a9}\label{classnet_1_1socks_1_1client_a936d372bfffa279377a60508fa13a5a9}} 
+\index{net::socks::client@{net::socks::client}!client@{client}}
+\index{client@{client}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily net\+::socks\+::client\+::client (\begin{DoxyParamCaption}\item[{stream\+\_\+type\+::socket \&\&}]{proxy,  }\item[{\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}}}]{ver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em proxy} & ownership is passed into {\ttfamily this}. Does not have to be in connected state. \\
+\hline
+{\em ver} & socks version for the connection. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a394c2357dc9f1133b96a2d16153753dc}\label{classnet_1_1socks_1_1client_a394c2357dc9f1133b96a2d16153753dc}} 
+\index{net::socks::client@{net::socks::client}!client@{client}}
+\index{client@{client}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily net\+::socks\+::client\+::client (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a52a1b4ad3dfa11ddd0929a844859c1c1}\label{classnet_1_1socks_1_1client_a52a1b4ad3dfa11ddd0929a844859c1c1}} 
+\index{net::socks::client@{net::socks::client}!````~client@{$\sim$client}}
+\index{````~client@{$\sim$client}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{$\sim$client()}{~client()}}
+{\footnotesize\ttfamily net\+::socks\+::client\+::$\sim$client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}\label{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}} 
+\index{net::socks::client@{net::socks::client}!buffer@{buffer}}
+\index{buffer@{buffer}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}}
+{\footnotesize\ttfamily epee\+::span$<$const std\+::uint8\+\_\+t$>$ net\+::socks\+::client\+::buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Contents of internal buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a1e26677ceb7faeffb9908f57234be799}\label{classnet_1_1socks_1_1client_a1e26677ceb7faeffb9908f57234be799}} 
+\index{net::socks::client@{net::socks::client}!clear\_command@{clear\_command}}
+\index{clear\_command@{clear\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{clear\_command()}{clear\_command()}}
+{\footnotesize\ttfamily void net\+::socks\+::client\+::clear\+\_\+command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyPostcond}{Postcondition}
+{\ttfamily buffer.\+empty()}. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a8d1bec1709e0225479c3fb0f6a64e489}\label{classnet_1_1socks_1_1client_a8d1bec1709e0225479c3fb0f6a64e489}} 
+\index{net::socks::client@{net::socks::client}!connect\_and\_send@{connect\_and\_send}}
+\index{connect\_and\_send@{connect\_and\_send}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{connect\_and\_send()}{connect\_and\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::connect\+\_\+and\+\_\+send (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$}]{self,  }\item[{const stream\+\_\+type\+::endpoint \&}]{proxy\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Asynchronously connect to {\ttfamily proxy\+\_\+address} then issue command in {\ttfamily \mbox{\hyperlink{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}{buffer()}}}. The {\ttfamily done(...)} method will be invoked upon completion with {\ttfamily self} and potential {\ttfamily error}s.
+
+\begin{DoxyNote}{Note}
+Must use one of the {\ttfamily self-\/$>$set\+\_\+$\ast$\+\_\+command} calls before using this function. 
+
+Only {\ttfamily \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1async__close}{async\+\_\+close}}} can be invoked on {\ttfamily self} until the {\ttfamily done} callback is invoked.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & ownership of object is given to function. \\
+\hline
+{\em proxy\+\_\+address} & of the socks server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if {\ttfamily self-\/$>$\mbox{\hyperlink{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}{buffer()}}.empty()} (no command set). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a7e20efa2425f65d28377279fb207c98f}\label{classnet_1_1socks_1_1client_a7e20efa2425f65d28377279fb207c98f}} 
+\index{net::socks::client@{net::socks::client}!done@{done}}
+\index{done@{done}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily virtual void net\+::socks\+::client\+::done (\begin{DoxyParamCaption}\item[{boost\+::system\+::error\+\_\+code}]{error,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Only invoked after {\ttfamily $\ast$send(...)} function completes or fails. {\ttfamily bool(error) == false} indicates success; {\ttfamily \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c8a14d36eee0d6b6caae490124afe65}{self.\+get()}}} is always {\ttfamily this} and allows implementations to skip {\ttfamily std\+::enable\+\_\+shared\+\_\+from\+\_\+this$<$T$>$} (A\+S\+IO callbacks need shared\+\_\+ptr). The design saves space and reduces cycles (everything uses moves, so no atomic operations are ever necessary).
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & when processing last command (if any). \\
+\hline
+{\em self} & {\ttfamily shared\+\_\+ptr$<$client$>$} handle to {\ttfamily this}. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classnet_1_1socks_1_1connect__client_a356cdcbe2cfcdce9c6fda6b39cfa6c68}{net\+::socks\+::connect\+\_\+client$<$ Handler $>$}}.
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a90cb61b29d081798e102158c5375d961}\label{classnet_1_1socks_1_1client_a90cb61b29d081798e102158c5375d961}} 
+\index{net::socks::client@{net::socks::client}!operator=@{operator=}}
+\index{operator=@{operator=}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}}\& net\+::socks\+::client\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_ae3cf4cb174afb09524117b514d78114c}\label{classnet_1_1socks_1_1client_ae3cf4cb174afb09524117b514d78114c}} 
+\index{net::socks::client@{net::socks::client}!send@{send}}
+\index{send@{send}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::send (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Assume existing connection to proxy server; asynchronously issue command in {\ttfamily \mbox{\hyperlink{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}{buffer()}}}. The {\ttfamily done(...)} method will be invoked upon completion with {\ttfamily self} and potential {\ttfamily error}s.
+
+\begin{DoxyNote}{Note}
+Must use one of the {\ttfamily self-\/$>$set\+\_\+$\ast$\+\_\+command} calls before using the function. 
+
+Only {\ttfamily \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1async__close}{async\+\_\+close}}} can be invoked on {\ttfamily self} until the {\ttfamily done} callback is invoked.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em self} & ownership of object is given to function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if {\ttfamily self-\/$>$\mbox{\hyperlink{classnet_1_1socks_1_1client_a0f8fbaab1803ff7bd877253973c8f221}{buffer()}}.empty()} (no command set). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a69b5f25cfbb371cde0694a6dcddccf5a}\label{classnet_1_1socks_1_1client_a69b5f25cfbb371cde0694a6dcddccf5a}} 
+\index{net::socks::client@{net::socks::client}!set\_connect\_command@{set\_connect\_command}}
+\index{set\_connect\_command@{set\_connect\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{set\_connect\_command()}{set\_connect\_command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::set\+\_\+connect\+\_\+command (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+address \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Try to set {\ttfamily address} as remote connection request. 
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a5b0a29303b1266f773d1ce1a6559a874}\label{classnet_1_1socks_1_1client_a5b0a29303b1266f773d1ce1a6559a874}} 
+\index{net::socks::client@{net::socks::client}!set\_connect\_command@{set\_connect\_command}}
+\index{set\_connect\_command@{set\_connect\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{set\_connect\_command()}{set\_connect\_command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::set\+\_\+connect\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{net\+::i2p\+\_\+address}} \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Try to set {\ttfamily address} as remote i2p hidden service connection request. 
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a8e5acc565a4b948c75483132adaf4075}\label{classnet_1_1socks_1_1client_a8e5acc565a4b948c75483132adaf4075}} 
+\index{net::socks::client@{net::socks::client}!set\_connect\_command@{set\_connect\_command}}
+\index{set\_connect\_command@{set\_connect\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{set\_connect\_command()}{set\_connect\_command()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::set\+\_\+connect\+\_\+command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{net\+::tor\+\_\+address}} \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Try to set {\ttfamily address} as remote Tor hidden service connection request. 
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a1b17455118e531dc578a171096dc9f7f}\label{classnet_1_1socks_1_1client_a1b17455118e531dc578a171096dc9f7f}} 
+\index{net::socks::client@{net::socks::client}!set\_connect\_command@{set\_connect\_command}}
+\index{set\_connect\_command@{set\_connect\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{set\_connect\_command()}{set\_connect\_command()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::set\+\_\+connect\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{domain,  }\item[{std\+::uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Try to set {\ttfamily domain} + {\ttfamily port} as remote connection request. 
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a41809d92e82b1c8a738b3996668022ef}\label{classnet_1_1socks_1_1client_a41809d92e82b1c8a738b3996668022ef}} 
+\index{net::socks::client@{net::socks::client}!set\_resolve\_command@{set\_resolve\_command}}
+\index{set\_resolve\_command@{set\_resolve\_command}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{set\_resolve\_command()}{set\_resolve\_command()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::socks\+::client\+::set\+\_\+resolve\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{domain }\end{DoxyParamCaption})}
+
+
+
+Try to set {\ttfamily domain} as remote D\+NS A record lookup request. 
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_ae69bdc8d9f0d1857df02b3d775ee15ff}\label{classnet_1_1socks_1_1client_ae69bdc8d9f0d1857df02b3d775ee15ff}} 
+\index{net::socks::client@{net::socks::client}!socks\_version@{socks\_version}}
+\index{socks\_version@{socks\_version}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{socks\_version()}{socks\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} net\+::socks\+::client\+::socks\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Socks version. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a40d415675b75f68b0e360063c6fe5170}\label{classnet_1_1socks_1_1client_a40d415675b75f68b0e360063c6fe5170}} 
+\index{net::socks::client@{net::socks::client}!take\_socket@{take\_socket}}
+\index{take\_socket@{take\_socket}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{take\_socket()}{take\_socket()}}
+{\footnotesize\ttfamily stream\+\_\+type\+::socket net\+::socks\+::client\+::take\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Ownership of socks client socket object. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a97faf7eb2228566dd4edd66d7cec5a0c}\label{classnet_1_1socks_1_1client_a97faf7eb2228566dd4edd66d7cec5a0c}} 
+\index{net::socks::client@{net::socks::client}!buffer\_@{buffer\_}}
+\index{buffer\_@{buffer\_}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{buffer\_}{buffer\_}}
+{\footnotesize\ttfamily std\+::uint8\+\_\+t net\+::socks\+::client\+::buffer\+\_\+\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a6741707ad639e339b71424065f9d4f67}\label{classnet_1_1socks_1_1client_a6741707ad639e339b71424065f9d4f67}} 
+\index{net::socks::client@{net::socks::client}!buffer\_size\_@{buffer\_size\_}}
+\index{buffer\_size\_@{buffer\_size\_}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{buffer\_size\_}{buffer\_size\_}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t net\+::socks\+::client\+::buffer\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_a0ea918ea0525dc4fbb58796e7bbcc8d7}\label{classnet_1_1socks_1_1client_a0ea918ea0525dc4fbb58796e7bbcc8d7}} 
+\index{net::socks::client@{net::socks::client}!proxy\_@{proxy\_}}
+\index{proxy\_@{proxy\_}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{proxy\_}{proxy\_}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket net\+::socks\+::client\+::proxy\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_ad8005a5057a4ee53f501484536151f04}\label{classnet_1_1socks_1_1client_ad8005a5057a4ee53f501484536151f04}} 
+\index{net::socks::client@{net::socks::client}!strand\_@{strand\_}}
+\index{strand\_@{strand\_}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{strand\_}{strand\_}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+service\+::strand net\+::socks\+::client\+::strand\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1socks_1_1client_ad7445d52caee250f566666cbbf97331b}\label{classnet_1_1socks_1_1client_ad7445d52caee250f566666cbbf97331b}} 
+\index{net::socks::client@{net::socks::client}!ver\_@{ver\_}}
+\index{ver\_@{ver\_}!net::socks::client@{net::socks::client}}
+\doxysubsubsection{\texorpdfstring{ver\_}{ver\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} net\+::socks\+::client\+::ver\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/net/\mbox{\hyperlink{socks_8h}{socks.\+h}}\item 
+src/net/\mbox{\hyperlink{socks_8cpp}{socks.\+cpp}}\end{DoxyCompactItemize}

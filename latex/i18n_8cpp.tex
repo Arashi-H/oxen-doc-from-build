@@ -1,0 +1,127 @@
+\hypertarget{i18n_8cpp}{}\doxysection{src/common/i18n.cpp File Reference}
+\label{i18n_8cpp}\index{src/common/i18n.cpp@{src/common/i18n.cpp}}
+{\ttfamily \#include \char`\"{}i18n.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}file.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$logging/oxen\+\_\+logger.\+h$>$}\newline
+Include dependency graph for i18n.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i18n_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i18n_8cpp_a0184ec86eb5851f3de0016729fa46cbe}{M\+A\+X\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+I\+ZE}}~16
+\item 
+\#define \mbox{\hyperlink{i18n_8cpp_a41fa5c540c9b05e5eb1322a5ca9bfe0d}{i18n\+\_\+log}}(x)~((void)0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{i18n_8cpp_a945f46d06b0cf912526fa3eeae1ff9ce}{i18n\+\_\+get\+\_\+language}} ()
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{i18n_8cpp_a0c96709b4892be0bb764ae42f886c788}{be32}} (const unsigned char $\ast$data)
+\item 
+static std\+::string \mbox{\hyperlink{i18n_8cpp_a00ab93f050e7e8716c671ad4555ee34f}{utf16}} (const unsigned char $\ast$data, uint32\+\_\+t len)
+\item 
+static std\+::string \mbox{\hyperlink{i18n_8cpp_a9003ba8c455726b540c18497c87e9d49}{utf8}} (const unsigned char $\ast$data, uint32\+\_\+t len)
+\item 
+int \mbox{\hyperlink{i18n_8cpp_afed44f1ec358527feb224785151d2010}{i18n\+\_\+set\+\_\+language}} (const char $\ast$directory, const char $\ast$\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, std\+::string language)
+\item 
+const char $\ast$ \mbox{\hyperlink{i18n_8cpp_a2b163f04d9b001d91e48c4af51a49248}{i18n\+\_\+translate}} (const char $\ast$\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, const std\+::string \&context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{i18n_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = oxen\+::log\+::\+Cat(\char`\"{}i18n\char`\"{})
+\item 
+static const unsigned char \mbox{\hyperlink{i18n_8cpp_a02fe3e43db1107b7676a29815cf670b3}{qm\+\_\+magic}} \mbox{[}16\mbox{]} = \{0x3c, 0xb8, 0x64, 0x18, 0xca, 0xef, 0x9c, 0x95, 0xcd, 0x21, 0x1c, 0xbf, 0x60, 0xa1, 0xbd, 0xdd\}
+\item 
+static std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{i18n_8cpp_aed0a7cce2a230e7ea52d39b86eaa0af9}{i18n\+\_\+entries}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{i18n_8cpp_a41fa5c540c9b05e5eb1322a5ca9bfe0d}\label{i18n_8cpp_a41fa5c540c9b05e5eb1322a5ca9bfe0d}} 
+\index{i18n.cpp@{i18n.cpp}!i18n\_log@{i18n\_log}}
+\index{i18n\_log@{i18n\_log}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{i18n\_log}{i18n\_log}}
+{\footnotesize\ttfamily \#define i18n\+\_\+log(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((void)0)}
+
+\mbox{\Hypertarget{i18n_8cpp_a0184ec86eb5851f3de0016729fa46cbe}\label{i18n_8cpp_a0184ec86eb5851f3de0016729fa46cbe}} 
+\index{i18n.cpp@{i18n.cpp}!MAX\_LANGUAGE\_SIZE@{MAX\_LANGUAGE\_SIZE}}
+\index{MAX\_LANGUAGE\_SIZE@{MAX\_LANGUAGE\_SIZE}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_LANGUAGE\_SIZE}{MAX\_LANGUAGE\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+S\+I\+ZE~16}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{i18n_8cpp_a0c96709b4892be0bb764ae42f886c788}\label{i18n_8cpp_a0c96709b4892be0bb764ae42f886c788}} 
+\index{i18n.cpp@{i18n.cpp}!be32@{be32}}
+\index{be32@{be32}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{be32()}{be32()}}
+{\footnotesize\ttfamily static uint32\+\_\+t be32 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{i18n_8cpp_a945f46d06b0cf912526fa3eeae1ff9ce}\label{i18n_8cpp_a945f46d06b0cf912526fa3eeae1ff9ce}} 
+\index{i18n.cpp@{i18n.cpp}!i18n\_get\_language@{i18n\_get\_language}}
+\index{i18n\_get\_language@{i18n\_get\_language}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{i18n\_get\_language()}{i18n\_get\_language()}}
+{\footnotesize\ttfamily std\+::string i18n\+\_\+get\+\_\+language (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i18n_8cpp_afed44f1ec358527feb224785151d2010}\label{i18n_8cpp_afed44f1ec358527feb224785151d2010}} 
+\index{i18n.cpp@{i18n.cpp}!i18n\_set\_language@{i18n\_set\_language}}
+\index{i18n\_set\_language@{i18n\_set\_language}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{i18n\_set\_language()}{i18n\_set\_language()}}
+{\footnotesize\ttfamily int i18n\+\_\+set\+\_\+language (\begin{DoxyParamCaption}\item[{const char $\ast$}]{directory,  }\item[{const char $\ast$}]{base,  }\item[{std\+::string}]{language }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i18n_8cpp_a2b163f04d9b001d91e48c4af51a49248}\label{i18n_8cpp_a2b163f04d9b001d91e48c4af51a49248}} 
+\index{i18n.cpp@{i18n.cpp}!i18n\_translate@{i18n\_translate}}
+\index{i18n\_translate@{i18n\_translate}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{i18n\_translate()}{i18n\_translate()}}
+{\footnotesize\ttfamily const char$\ast$ i18n\+\_\+translate (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{const std\+::string \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{i18n_8cpp_a00ab93f050e7e8716c671ad4555ee34f}\label{i18n_8cpp_a00ab93f050e7e8716c671ad4555ee34f}} 
+\index{i18n.cpp@{i18n.cpp}!utf16@{utf16}}
+\index{utf16@{utf16}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{utf16()}{utf16()}}
+{\footnotesize\ttfamily static std\+::string utf16 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{i18n_8cpp_a9003ba8c455726b540c18497c87e9d49}\label{i18n_8cpp_a9003ba8c455726b540c18497c87e9d49}} 
+\index{i18n.cpp@{i18n.cpp}!utf8@{utf8}}
+\index{utf8@{utf8}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{utf8()}{utf8()}}
+{\footnotesize\ttfamily static std\+::string utf8 (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{i18n_8cpp_aed0a7cce2a230e7ea52d39b86eaa0af9}\label{i18n_8cpp_aed0a7cce2a230e7ea52d39b86eaa0af9}} 
+\index{i18n.cpp@{i18n.cpp}!i18n\_entries@{i18n\_entries}}
+\index{i18n\_entries@{i18n\_entries}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{i18n\_entries}{i18n\_entries}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string,std\+::string$>$ i18n\+\_\+entries\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{i18n_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{i18n_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{i18n.cpp@{i18n.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = oxen\+::log\+::\+Cat(\char`\"{}i18n\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{i18n_8cpp_a02fe3e43db1107b7676a29815cf670b3}\label{i18n_8cpp_a02fe3e43db1107b7676a29815cf670b3}} 
+\index{i18n.cpp@{i18n.cpp}!qm\_magic@{qm\_magic}}
+\index{qm\_magic@{qm\_magic}!i18n.cpp@{i18n.cpp}}
+\doxysubsubsection{\texorpdfstring{qm\_magic}{qm\_magic}}
+{\footnotesize\ttfamily const unsigned char qm\+\_\+magic\mbox{[}16\mbox{]} = \{0x3c, 0xb8, 0x64, 0x18, 0xca, 0xef, 0x9c, 0x95, 0xcd, 0x21, 0x1c, 0xbf, 0x60, 0xa1, 0xbd, 0xdd\}\hspace{0.3cm}{\ttfamily [static]}}
+

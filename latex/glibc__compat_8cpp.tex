@@ -1,0 +1,93 @@
+\hypertarget{glibc__compat_8cpp}{}\doxysection{src/common/compat/glibc\+\_\+compat.cpp File Reference}
+\label{glibc__compat_8cpp}\index{src/common/compat/glibc\_compat.cpp@{src/common/compat/glibc\_compat.cpp}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$glob.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fnmatch.\+h$>$}\newline
+Include dependency graph for glibc\+\_\+compat.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{glibc__compat_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{glibc__compat_8cpp_a4c3f83c1abfb62395f0ca2f9fd863f1b}{strong\+\_\+alias}}~(\mbox{\hyperlink{glibc__compat_8cpp_aac60a77640bba7313e005292b1e9bd71}{\+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk}}, \+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk\+\_\+internal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{glibc__compat_8cpp_a9778d49e9029dd75bc53ecbbf9f5e9a1}{memmove}} (void $\ast$a, const void $\ast$b, size\+\_\+t c)
+\item 
+void $\ast$ \mbox{\hyperlink{glibc__compat_8cpp_a0f46826ab0466591e136db24394923cf}{memcpy}} (void $\ast$a, const void $\ast$b, size\+\_\+t c)
+\item 
+void \mbox{\hyperlink{glibc__compat_8cpp_a424ac71631da5ada2976630ff67051d1}{\+\_\+\+\_\+chk\+\_\+fail}} (void) \+\_\+\+\_\+attribute\+\_\+\+\_\+((\+\_\+\+\_\+noreturn\+\_\+\+\_\+))
+\item 
+void \mbox{\hyperlink{glibc__compat_8cpp_ad300c03b75c7641340d508ea95819a26}{explicit\+\_\+bzero}} (void $\ast$\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, size\+\_\+t len)
+\item 
+void \mbox{\hyperlink{glibc__compat_8cpp_aac60a77640bba7313e005292b1e9bd71}{\+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk}} (void $\ast$dst, size\+\_\+t len, size\+\_\+t dstlen)
+\item 
+int \mbox{\hyperlink{glibc__compat_8cpp_a1c07fe044766355607b8c925dd7a5369}{glob\+\_\+old}} (const char $\ast$pattern, int flags, int($\ast$errfunc)(const char $\ast$epath, int eerrno), glob\+\_\+t $\ast$pglob)
+\item 
+int \mbox{\hyperlink{glibc__compat_8cpp_afc60d22ad6f9a17f11e80b6eb4c0dc78}{\+\_\+\+\_\+wrap\+\_\+glob}} (const char $\ast$pattern, int flags, int($\ast$errfunc)(const char $\ast$epath, int eerrno), glob\+\_\+t $\ast$pglob)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{glibc__compat_8cpp_a4c3f83c1abfb62395f0ca2f9fd863f1b}\label{glibc__compat_8cpp_a4c3f83c1abfb62395f0ca2f9fd863f1b}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!strong\_alias@{strong\_alias}}
+\index{strong\_alias@{strong\_alias}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{strong\_alias}{strong\_alias}}
+{\footnotesize\ttfamily \#define strong\+\_\+alias~(\mbox{\hyperlink{glibc__compat_8cpp_aac60a77640bba7313e005292b1e9bd71}{\+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk}}, \+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk\+\_\+internal)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{glibc__compat_8cpp_a424ac71631da5ada2976630ff67051d1}\label{glibc__compat_8cpp_a424ac71631da5ada2976630ff67051d1}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!\_\_chk\_fail@{\_\_chk\_fail}}
+\index{\_\_chk\_fail@{\_\_chk\_fail}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_chk\_fail()}{\_\_chk\_fail()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+chk\+\_\+fail (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_aac60a77640bba7313e005292b1e9bd71}\label{glibc__compat_8cpp_aac60a77640bba7313e005292b1e9bd71}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!\_\_explicit\_bzero\_chk@{\_\_explicit\_bzero\_chk}}
+\index{\_\_explicit\_bzero\_chk@{\_\_explicit\_bzero\_chk}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_explicit\_bzero\_chk()}{\_\_explicit\_bzero\_chk()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+explicit\+\_\+bzero\+\_\+chk (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{size\+\_\+t}]{len,  }\item[{size\+\_\+t}]{dstlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_afc60d22ad6f9a17f11e80b6eb4c0dc78}\label{glibc__compat_8cpp_afc60d22ad6f9a17f11e80b6eb4c0dc78}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!\_\_wrap\_glob@{\_\_wrap\_glob}}
+\index{\_\_wrap\_glob@{\_\_wrap\_glob}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_wrap\_glob()}{\_\_wrap\_glob()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+wrap\+\_\+glob (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pattern,  }\item[{int}]{flags,  }\item[{int($\ast$)(const char $\ast$epath, int eerrno)}]{errfunc,  }\item[{glob\+\_\+t $\ast$}]{pglob }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_ad300c03b75c7641340d508ea95819a26}\label{glibc__compat_8cpp_ad300c03b75c7641340d508ea95819a26}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!explicit\_bzero@{explicit\_bzero}}
+\index{explicit\_bzero@{explicit\_bzero}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{explicit\_bzero()}{explicit\_bzero()}}
+{\footnotesize\ttfamily void explicit\+\_\+bzero (\begin{DoxyParamCaption}\item[{void $\ast$}]{s,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_a1c07fe044766355607b8c925dd7a5369}\label{glibc__compat_8cpp_a1c07fe044766355607b8c925dd7a5369}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!glob\_old@{glob\_old}}
+\index{glob\_old@{glob\_old}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{glob\_old()}{glob\_old()}}
+{\footnotesize\ttfamily int glob\+\_\+old (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pattern,  }\item[{int}]{flags,  }\item[{int($\ast$)(const char $\ast$epath, int eerrno)}]{errfunc,  }\item[{glob\+\_\+t $\ast$}]{pglob }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_a0f46826ab0466591e136db24394923cf}\label{glibc__compat_8cpp_a0f46826ab0466591e136db24394923cf}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!memcpy@{memcpy}}
+\index{memcpy@{memcpy}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{memcpy()}{memcpy()}}
+{\footnotesize\ttfamily void$\ast$ memcpy (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{const void $\ast$}]{b,  }\item[{size\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{glibc__compat_8cpp_a9778d49e9029dd75bc53ecbbf9f5e9a1}\label{glibc__compat_8cpp_a9778d49e9029dd75bc53ecbbf9f5e9a1}} 
+\index{glibc\_compat.cpp@{glibc\_compat.cpp}!memmove@{memmove}}
+\index{memmove@{memmove}!glibc\_compat.cpp@{glibc\_compat.cpp}}
+\doxysubsubsection{\texorpdfstring{memmove()}{memmove()}}
+{\footnotesize\ttfamily void$\ast$ memmove (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{const void $\ast$}]{b,  }\item[{size\+\_\+t}]{c }\end{DoxyParamCaption})}
+

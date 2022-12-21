@@ -1,0 +1,152 @@
+\hypertarget{structWallet_1_1AddressBook}{}\doxysection{Wallet\+::Address\+Book Struct Reference}
+\label{structWallet_1_1AddressBook}\index{Wallet::AddressBook@{Wallet::AddressBook}}
+
+
+The \mbox{\hyperlink{structWallet_1_1AddressBook}{Address\+Book}} -\/ interface for Book.  
+
+
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Address\+Book\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structWallet_1_1AddressBook__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640ca}{Error\+Code}} \{ \mbox{\hyperlink{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7d59fd33ed1be5f5ec938ace44b65421}{Status\+\_\+\+Ok}}, 
+\mbox{\hyperlink{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7fc9696ae3aee5aa8d2ebaa45be28276}{General\+\_\+\+Error}}, 
+\mbox{\hyperlink{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa88cb556f84a17b4c5ad155945dfe9ef3}{Invalid\+\_\+\+Address}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1AddressBook_a14a74e79e64df1640660319512cd9aff}{$\sim$\+Address\+Book}} ()=0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1AddressBookRow}{Address\+Book\+Row}} $\ast$ $>$ \mbox{\hyperlink{structWallet_1_1AddressBook_abd18024916d2b1fcb04cfa8e931f6acd}{get\+All}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1AddressBook_a6d2848aab007d6044159dc037436ba67}{add\+Row}} (const std\+::string \&dst\+\_\+addr, const std\+::string \&description)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1AddressBook_afa806c385dec15bf0eddd9ffdcf1a65f}{delete\+Row}} (std\+::size\+\_\+t row\+Id)=0
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1AddressBook_afd970e8a3008fd6a112fae380fe0f51c}{refresh}} ()=0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1AddressBook_af3ebeaaedb0b8371389633be2c23d885}{error\+String}} () const =0
+\item 
+virtual int \mbox{\hyperlink{structWallet_1_1AddressBook_a7923e2caa1516bc910af4bbb53eb116b}{error\+Code}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structWallet_1_1AddressBook}{Address\+Book}} -\/ interface for Book. 
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640ca}\label{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640ca}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640ca}{Wallet\+::\+Address\+Book\+::\+Error\+Code}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Ok@{Status\_Ok}!Wallet::AddressBook@{Wallet::AddressBook}}\index{Wallet::AddressBook@{Wallet::AddressBook}!Status\_Ok@{Status\_Ok}}}\mbox{\Hypertarget{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7d59fd33ed1be5f5ec938ace44b65421}\label{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7d59fd33ed1be5f5ec938ace44b65421}} 
+Status\+\_\+\+Ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{General\_Error@{General\_Error}!Wallet::AddressBook@{Wallet::AddressBook}}\index{Wallet::AddressBook@{Wallet::AddressBook}!General\_Error@{General\_Error}}}\mbox{\Hypertarget{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7fc9696ae3aee5aa8d2ebaa45be28276}\label{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa7fc9696ae3aee5aa8d2ebaa45be28276}} 
+General\+\_\+\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invalid\_Address@{Invalid\_Address}!Wallet::AddressBook@{Wallet::AddressBook}}\index{Wallet::AddressBook@{Wallet::AddressBook}!Invalid\_Address@{Invalid\_Address}}}\mbox{\Hypertarget{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa88cb556f84a17b4c5ad155945dfe9ef3}\label{structWallet_1_1AddressBook_aa9e22b45252b0b87413113ec28a640caa88cb556f84a17b4c5ad155945dfe9ef3}} 
+Invalid\+\_\+\+Address&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structWallet_1_1AddressBook_a14a74e79e64df1640660319512cd9aff}\label{structWallet_1_1AddressBook_a14a74e79e64df1640660319512cd9aff}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!````~AddressBook@{$\sim$AddressBook}}
+\index{````~AddressBook@{$\sim$AddressBook}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{$\sim$AddressBook()}{~AddressBook()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Address\+Book\+::$\sim$\+Address\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1AddressBook_a6d2848aab007d6044159dc037436ba67}\label{structWallet_1_1AddressBook_a6d2848aab007d6044159dc037436ba67}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!addRow@{addRow}}
+\index{addRow@{addRow}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{addRow()}{addRow()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Address\+Book\+::add\+Row (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dst\+\_\+addr,  }\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_aeb1739ebe5600ed65deba32b77dee7af}{Wallet\+::\+Address\+Book\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1AddressBook_afa806c385dec15bf0eddd9ffdcf1a65f}\label{structWallet_1_1AddressBook_afa806c385dec15bf0eddd9ffdcf1a65f}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!deleteRow@{deleteRow}}
+\index{deleteRow@{deleteRow}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{deleteRow()}{deleteRow()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Address\+Book\+::delete\+Row (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{row\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_a586f8258a971d2b3182378b5756556f7}{Wallet\+::\+Address\+Book\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1AddressBook_a7923e2caa1516bc910af4bbb53eb116b}\label{structWallet_1_1AddressBook_a7923e2caa1516bc910af4bbb53eb116b}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!errorCode@{errorCode}}
+\index{errorCode@{errorCode}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{errorCode()}{errorCode()}}
+{\footnotesize\ttfamily virtual int Wallet\+::\+Address\+Book\+::error\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_aceff75e2bdd5442403d6707262aa9b9c}{Wallet\+::\+Address\+Book\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1AddressBook_af3ebeaaedb0b8371389633be2c23d885}\label{structWallet_1_1AddressBook_af3ebeaaedb0b8371389633be2c23d885}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!errorString@{errorString}}
+\index{errorString@{errorString}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{errorString()}{errorString()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Address\+Book\+::error\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_a12f0e116a57b29f3f132adfb7f362808}{Wallet\+::\+Address\+Book\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1AddressBook_abd18024916d2b1fcb04cfa8e931f6acd}\label{structWallet_1_1AddressBook_abd18024916d2b1fcb04cfa8e931f6acd}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!getAll@{getAll}}
+\index{getAll@{getAll}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structWallet_1_1AddressBookRow}{Address\+Book\+Row}}$\ast$$>$ Wallet\+::\+Address\+Book\+::get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_a59d2256d4ca2c98c9aa33e72eae68707}{Wallet\+::\+Address\+Book\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1AddressBook_afd970e8a3008fd6a112fae380fe0f51c}\label{structWallet_1_1AddressBook_afd970e8a3008fd6a112fae380fe0f51c}} 
+\index{Wallet::AddressBook@{Wallet::AddressBook}!refresh@{refresh}}
+\index{refresh@{refresh}!Wallet::AddressBook@{Wallet::AddressBook}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Address\+Book\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1AddressBookImpl_a3d646412204fef70217d81fe7a8c35e9}{Wallet\+::\+Address\+Book\+Impl}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{address__book_8cpp}{address\+\_\+book.\+cpp}}\end{DoxyCompactItemize}

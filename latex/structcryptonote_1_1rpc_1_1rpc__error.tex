@@ -1,0 +1,79 @@
+\hypertarget{structcryptonote_1_1rpc_1_1rpc__error}{}\doxysection{cryptonote\+::rpc\+::rpc\+\_\+error Struct Reference}
+\label{structcryptonote_1_1rpc_1_1rpc__error}\index{cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}}
+
+
+{\ttfamily \#include $<$rpc\+\_\+command.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::rpc\+\_\+error\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{structcryptonote_1_1rpc_1_1rpc__error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::rpc\+\_\+error\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{structcryptonote_1_1rpc_1_1rpc__error__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__error_a1c0ef250e2c57c0894a9de4138deea35}{rpc\+\_\+error}} (int16\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__error_a715f4a639b80b5b2f93199019f418e9d}{code}}, std\+::string \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__error_a2057891d1742b9490b8160ff3d56dfe7}{message}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int16\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__error_a715f4a639b80b5b2f93199019f418e9d}{code}}
+\item 
+std\+::string \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__error_a2057891d1742b9490b8160ff3d56dfe7}{message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception used to signal various types of errors with a request back to the caller. This exception indicates that the caller did something wrong\+: bad data, invalid value, etc., but don\textquotesingle{}t indicate a local problem (and so we\textquotesingle{}ll log them only at debug). For more serious, internal errors a command should throw some other stl error (e.\+g. std\+::runtime\+\_\+error or perhaps std\+::logic\+\_\+error), which will result in a local daemon warning (and a generic internal error response to the user).
+
+For J\+S\+ON R\+PC these become an error response with the code as the error.\+code value and the string as the error.\+message. For H\+T\+TP J\+S\+ON these become a 500 Internal Server Error response with the message as the body. For Oxen\+MQ the code becomes the first part of the response and the message becomes the second part of the response. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1rpc__error_a1c0ef250e2c57c0894a9de4138deea35}\label{structcryptonote_1_1rpc_1_1rpc__error_a1c0ef250e2c57c0894a9de4138deea35}} 
+\index{cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}!rpc\_error@{rpc\_error}}
+\index{rpc\_error@{rpc\_error}!cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}}
+\doxysubsubsection{\texorpdfstring{rpc\_error()}{rpc\_error()}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::rpc\+\_\+error\+::rpc\+\_\+error (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{code,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & -\/ a signed, 16-\/bit numeric code. 0 must not be used (as it is used for a success code in Oxen\+MQ), and values in the -\/32xxx range are reserved by J\+S\+O\+N-\/\+R\+PC.\\
+\hline
+{\em message} & -\/ a message to send along with the error code (see general description above). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1rpc__error_a715f4a639b80b5b2f93199019f418e9d}\label{structcryptonote_1_1rpc_1_1rpc__error_a715f4a639b80b5b2f93199019f418e9d}} 
+\index{cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}!code@{code}}
+\index{code@{code}!cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily int16\+\_\+t cryptonote\+::rpc\+::rpc\+\_\+error\+::code}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1rpc__error_a2057891d1742b9490b8160ff3d56dfe7}\label{structcryptonote_1_1rpc_1_1rpc__error_a2057891d1742b9490b8160ff3d56dfe7}} 
+\index{cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}!message@{message}}
+\index{message@{message}!cryptonote::rpc::rpc\_error@{cryptonote::rpc::rpc\_error}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::rpc\+::rpc\+\_\+error\+::message}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/common/\mbox{\hyperlink{rpc__command_8h}{rpc\+\_\+command.\+h}}\end{DoxyCompactItemize}

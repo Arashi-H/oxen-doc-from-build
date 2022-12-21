@@ -1,0 +1,149 @@
+\hypertarget{structcryptonote_1_1account__keys}{}\doxysection{cryptonote\+::account\+\_\+keys Struct Reference}
+\label{structcryptonote_1_1account__keys}\index{cryptonote::account\_keys@{cryptonote::account\_keys}}
+
+
+{\ttfamily \#include $<$account.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::account\+\_\+keys\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{structcryptonote_1_1account__keys__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_afe0d359a784a2cc1ec725b6d7e4f96f3}{encrypt}} (const crypto\+::chacha\+\_\+key \&key)
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_ae1478892bd959810370bad8f7d1b1aa4}{decrypt}} (const crypto\+::chacha\+\_\+key \&key)
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_abdaa6c00d239dc54ec2376d3303198ae}{encrypt\+\_\+viewkey}} (const crypto\+::chacha\+\_\+key \&key)
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_adac1f24c31bf1639420495621920ba21}{decrypt\+\_\+viewkey}} (const crypto\+::chacha\+\_\+key \&key)
+\item 
+\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \& \mbox{\hyperlink{structcryptonote_1_1account__keys_a3cda63c0458448e790dd318cf2474d23}{get\+\_\+device}} () const
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_acae5ba4a38b2dd5701dc4e0afe1c38c4}{set\+\_\+device}} (\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \mbox{\hyperlink{structcryptonote_1_1account__keys_a9c2cf1f886e746cf6f6131de0afdc31b}{m\+\_\+account\+\_\+address}}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{structcryptonote_1_1account__keys_a453dc5a8dc1688a6ed30787f8ac0fc17}{m\+\_\+spend\+\_\+secret\+\_\+key}}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{structcryptonote_1_1account__keys_a09199700ec16c3307707abdfe96cfc4c}{m\+\_\+view\+\_\+secret\+\_\+key}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \mbox{\hyperlink{structcryptonote_1_1account__keys_a5194936e7736e2bd20628fd7bf4b7bfd}{m\+\_\+multisig\+\_\+keys}}
+\item 
+\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} $\ast$ \mbox{\hyperlink{structcryptonote_1_1account__keys_a848c034115609b2cb26c1ea60fcd4880}{m\+\_\+device}} = \&\mbox{\hyperlink{namespacehw_ab87bdd5076f345613704dc7793bca063}{hw\+::get\+\_\+device}}(\char`\"{}default\char`\"{})
+\item 
+crypto\+::chacha\+\_\+iv \mbox{\hyperlink{structcryptonote_1_1account__keys_a4692d54b0887a61fe3007f863005a106}{m\+\_\+encryption\+\_\+iv}}
+\item 
+const crypto\+::chacha\+\_\+iv \mbox{\hyperlink{structcryptonote_1_1account__keys_ac9f16b8a8e3f925fd70e019537c58233}{default\+\_\+iv}} \{\{0, 0, 0, 0, 0, 0, 0, 0\}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1account__keys_abe07b09d9519d03033dd8664df929f80}{xor\+\_\+with\+\_\+key\+\_\+stream}} (const crypto\+::chacha\+\_\+key \&key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_ae1478892bd959810370bad8f7d1b1aa4}\label{structcryptonote_1_1account__keys_ae1478892bd959810370bad8f7d1b1aa4}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::decrypt (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_adac1f24c31bf1639420495621920ba21}\label{structcryptonote_1_1account__keys_adac1f24c31bf1639420495621920ba21}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!decrypt\_viewkey@{decrypt\_viewkey}}
+\index{decrypt\_viewkey@{decrypt\_viewkey}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{decrypt\_viewkey()}{decrypt\_viewkey()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::decrypt\+\_\+viewkey (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_afe0d359a784a2cc1ec725b6d7e4f96f3}\label{structcryptonote_1_1account__keys_afe0d359a784a2cc1ec725b6d7e4f96f3}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::encrypt (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_abdaa6c00d239dc54ec2376d3303198ae}\label{structcryptonote_1_1account__keys_abdaa6c00d239dc54ec2376d3303198ae}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!encrypt\_viewkey@{encrypt\_viewkey}}
+\index{encrypt\_viewkey@{encrypt\_viewkey}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{encrypt\_viewkey()}{encrypt\_viewkey()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::encrypt\+\_\+viewkey (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a3cda63c0458448e790dd318cf2474d23}\label{structcryptonote_1_1account__keys_a3cda63c0458448e790dd318cf2474d23}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \& cryptonote\+::account\+\_\+keys\+::get\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_acae5ba4a38b2dd5701dc4e0afe1c38c4}\label{structcryptonote_1_1account__keys_acae5ba4a38b2dd5701dc4e0afe1c38c4}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!set\_device@{set\_device}}
+\index{set\_device@{set\_device}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{set\_device()}{set\_device()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::set\+\_\+device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&}]{hwdev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_abe07b09d9519d03033dd8664df929f80}\label{structcryptonote_1_1account__keys_abe07b09d9519d03033dd8664df929f80}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!xor\_with\_key\_stream@{xor\_with\_key\_stream}}
+\index{xor\_with\_key\_stream@{xor\_with\_key\_stream}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{xor\_with\_key\_stream()}{xor\_with\_key\_stream()}}
+{\footnotesize\ttfamily void cryptonote\+::account\+\_\+keys\+::xor\+\_\+with\+\_\+key\+\_\+stream (\begin{DoxyParamCaption}\item[{const crypto\+::chacha\+\_\+key \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_ac9f16b8a8e3f925fd70e019537c58233}\label{structcryptonote_1_1account__keys_ac9f16b8a8e3f925fd70e019537c58233}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!default\_iv@{default\_iv}}
+\index{default\_iv@{default\_iv}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{default\_iv}{default\_iv}}
+{\footnotesize\ttfamily const crypto\+::chacha\+\_\+iv cryptonote\+::account\+\_\+keys\+::default\+\_\+iv \{\{0, 0, 0, 0, 0, 0, 0, 0\}\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a9c2cf1f886e746cf6f6131de0afdc31b}\label{structcryptonote_1_1account__keys_a9c2cf1f886e746cf6f6131de0afdc31b}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_account\_address@{m\_account\_address}}
+\index{m\_account\_address@{m\_account\_address}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_account\_address}{m\_account\_address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} cryptonote\+::account\+\_\+keys\+::m\+\_\+account\+\_\+address}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a848c034115609b2cb26c1ea60fcd4880}\label{structcryptonote_1_1account__keys_a848c034115609b2cb26c1ea60fcd4880}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_device@{m\_device}}
+\index{m\_device@{m\_device}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_device}{m\_device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device}{hw\+::device}}$\ast$ cryptonote\+::account\+\_\+keys\+::m\+\_\+device = \&\mbox{\hyperlink{namespacehw_ab87bdd5076f345613704dc7793bca063}{hw\+::get\+\_\+device}}(\char`\"{}default\char`\"{})}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a4692d54b0887a61fe3007f863005a106}\label{structcryptonote_1_1account__keys_a4692d54b0887a61fe3007f863005a106}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_encryption\_iv@{m\_encryption\_iv}}
+\index{m\_encryption\_iv@{m\_encryption\_iv}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_encryption\_iv}{m\_encryption\_iv}}
+{\footnotesize\ttfamily crypto\+::chacha\+\_\+iv cryptonote\+::account\+\_\+keys\+::m\+\_\+encryption\+\_\+iv}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a5194936e7736e2bd20628fd7bf4b7bfd}\label{structcryptonote_1_1account__keys_a5194936e7736e2bd20628fd7bf4b7bfd}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_multisig\_keys@{m\_multisig\_keys}}
+\index{m\_multisig\_keys@{m\_multisig\_keys}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_multisig\_keys}{m\_multisig\_keys}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}$>$ cryptonote\+::account\+\_\+keys\+::m\+\_\+multisig\+\_\+keys}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a453dc5a8dc1688a6ed30787f8ac0fc17}\label{structcryptonote_1_1account__keys_a453dc5a8dc1688a6ed30787f8ac0fc17}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_spend\_secret\_key@{m\_spend\_secret\_key}}
+\index{m\_spend\_secret\_key@{m\_spend\_secret\_key}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_spend\_secret\_key}{m\_spend\_secret\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} cryptonote\+::account\+\_\+keys\+::m\+\_\+spend\+\_\+secret\+\_\+key}
+
+\mbox{\Hypertarget{structcryptonote_1_1account__keys_a09199700ec16c3307707abdfe96cfc4c}\label{structcryptonote_1_1account__keys_a09199700ec16c3307707abdfe96cfc4c}} 
+\index{cryptonote::account\_keys@{cryptonote::account\_keys}!m\_view\_secret\_key@{m\_view\_secret\_key}}
+\index{m\_view\_secret\_key@{m\_view\_secret\_key}!cryptonote::account\_keys@{cryptonote::account\_keys}}
+\doxysubsubsection{\texorpdfstring{m\_view\_secret\_key}{m\_view\_secret\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} cryptonote\+::account\+\_\+keys\+::m\+\_\+view\+\_\+secret\+\_\+key}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{account_8h}{account.\+h}}\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{account_8cpp}{account.\+cpp}}\end{DoxyCompactItemize}

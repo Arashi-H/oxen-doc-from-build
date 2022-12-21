@@ -1,0 +1,68 @@
+\hypertarget{base58_8cpp}{}\doxysection{src/common/base58.cpp File Reference}
+\label{base58_8cpp}\index{src/common/base58.cpp@{src/common/base58.cpp}}
+{\ttfamily \#include \char`\"{}base58.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}varint.\+h\char`\"{}}\newline
+Include dependency graph for base58.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{base58_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_1_1reverse__alphabet__table}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::reverse\+\_\+alphabet\+\_\+table}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1base58}{tools\+::base58}}
+\item 
+ \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_aa3c31b235678af62801f76d7465aa35a}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::uint\+\_\+8be\+\_\+to\+\_\+64}} (const uint8\+\_\+t $\ast$data, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a6a4e949c9aa371e1f064ab30a091f9bc}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::uint\+\_\+64\+\_\+to\+\_\+8be}} (uint64\+\_\+t num, size\+\_\+t size, uint8\+\_\+t $\ast$data)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a7d689a90253774e528bf2cd4c29cb1bb}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::encode\+\_\+block}} (const char $\ast$block, size\+\_\+t size, char $\ast$res)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af657800bf655a87b02f0fa51a7e70bbb}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::decode\+\_\+block}} (const char $\ast$block, size\+\_\+t size, char $\ast$res)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1base58_a5b5b49f58f360e7858bae5bfec699745}{tools\+::base58\+::encode}} (std\+::string\+\_\+view data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1base58_adf081cd035a63bc200c2f7f26cb6ee67}{tools\+::base58\+::decode}} (std\+::string\+\_\+view enc, std\+::string \&data)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1base58_a26c3367f525aafe027dd82831367a784}{tools\+::base58\+::encode\+\_\+addr}} (uint64\+\_\+t tag, std\+::string\+\_\+view data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1base58_a372d00d96d494bf1f447d65546e7a7db}{tools\+::base58\+::decode\+\_\+addr}} (std\+::string\+\_\+view addr, uint64\+\_\+t \&tag, std\+::string \&data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a5a9ea2e5101ae1685ab3542310b2e512}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::alphabet}} = \char`\"{}123456789A\+B\+C\+D\+E\+F\+G\+H\+J\+K\+L\+M\+N\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+Y\+Zabcdefghijkmnopqrstuvwxyz\char`\"{}sv
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::full\+\_\+block\+\_\+size}} = 8
+\item 
+constexpr std\+::array$<$ uint8\+\_\+t, full\+\_\+block\+\_\+size+1 $>$ \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a89d6287406a0b0563ef913d452306a4e}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::encoded\+\_\+block\+\_\+sizes}} = \{0, 2, 3, 5, 6, 7, 9, 10, 11\}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::full\+\_\+encoded\+\_\+block\+\_\+size}} = encoded\+\_\+block\+\_\+sizes.\+back()
+\item 
+constexpr std\+::array$<$ int8\+\_\+t, full\+\_\+encoded\+\_\+block\+\_\+size+1 $>$ \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a4cbaf7e7d45f41694c522f00dc90aa2a}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::decoded\+\_\+block\+\_\+sizes}} = \{0, -\/1, 1, 2, -\/1, 3, 4, 5, -\/1, 6, 7, 8\}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af56c9d984b2a534776438a4a65501af2}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::addr\+\_\+checksum\+\_\+size}} = 4
+\item 
+struct tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::reverse\+\_\+alphabet\+\_\+table \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a3dbfc488201218acca49a581d11c9b70}{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::reverse\+\_\+alphabet}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,468 @@
+\hypertarget{cryptonote__config_8h}{}\doxysection{src/cryptonote\+\_\+config.h File Reference}
+\label{cryptonote__config_8h}\index{src/cryptonote\_config.h@{src/cryptonote\_config.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$boost/uuid/uuid.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$ratio$>$}\newline
+Include dependency graph for cryptonote\+\_\+config.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__config_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1network__config}{cryptonote\+::network\+\_\+config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1hashkey}{cryptonote\+::hashkey}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1p2p}{cryptonote\+::p2p}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1feature}{cryptonote\+::feature}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1old}{cryptonote\+::old}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1config}{cryptonote\+::config}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet}{cryptonote\+::config\+::testnet}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet}{cryptonote\+::config\+::devnet}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1config_1_1fakechain}{cryptonote\+::config\+::fakechain}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a8cc15e16afe9e32744969344e7e17032}{cryptonote\+::\+M\+A\+X\+I\+M\+U\+M\+\_\+\+A\+C\+C\+E\+P\+T\+A\+B\+L\+E\+\_\+\+S\+T\+A\+KE}} = std\+::ratio$<$ 101, 100 $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa535fe2e10e5443ac1b668a4d7464a051}{cryptonote\+::hf\+::hf7}} = 7, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efac965acd754ba42e7f3e78c27f241e60f}{cryptonote\+::hf\+::hf8}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa28d00afd8adb3bbc1d4cc8181699f0a5}{cryptonote\+::hf\+::hf9\+\_\+service\+\_\+nodes}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa708ab372d7a141ad46b9f5a620ff7d92}{cryptonote\+::hf\+::hf10\+\_\+bulletproofs}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa8e24b400a358b7a0a728145b9d437b39}{cryptonote\+::hf\+::hf11\+\_\+infinite\+\_\+staking}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efacc342f263e8cddcba32c25888c93ad90}{cryptonote\+::hf\+::hf12\+\_\+checkpointing}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa9312128862c7e9fa7c5d0739343f65e0}{cryptonote\+::hf\+::hf13\+\_\+enforce\+\_\+checkpoints}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa571749981e5b93904ab832797a7883fe}{cryptonote\+::hf\+::hf14\+\_\+blink}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efab25d5af1ff4fcfd3198edfba59d05886}{cryptonote\+::hf\+::hf15\+\_\+ons}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa744198ad488063e0b9d1b6f59ce6fc84}{cryptonote\+::hf\+::hf16\+\_\+pulse}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa32f816386b9a1ad7b24dd85781a8140c}{cryptonote\+::hf\+::hf17}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa6c8bd9f07f72402ef2f8db81b7fa6257}{cryptonote\+::hf\+::hf18}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa67c436fdcf312a593986bda06b1b449e}{cryptonote\+::hf\+::hf19\+\_\+reward\+\_\+batching}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa61d0b185ef60c29f3994bfb004ef0d7c}{cryptonote\+::hf\+::hf20}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa347499bebd2e1fec2e6b542692651191}{cryptonote\+::hf\+::\+\_\+next}}, 
+\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa334c4a4c42fdb79d7ebc3e73b517e6f8}{cryptonote\+::hf\+::none}} = 0
+ \}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aa9ff86ed474dbbbbe88b28ee45ec70994}{cryptonote\+::network\+\_\+type\+::\+M\+A\+I\+N\+N\+ET}} = 0, 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}}, 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aaca73de7f27a74e7d3a56dcb603c75650}{cryptonote\+::network\+\_\+type\+::\+D\+E\+V\+N\+ET}}, 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aaa45f009ef381c3bc198dd0f352e08a2e}{cryptonote\+::network\+\_\+type\+::\+F\+A\+K\+E\+C\+H\+A\+IN}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aa0db45d2a4141101bdfe48e3314cfbca3}{cryptonote\+::network\+\_\+type\+::\+U\+N\+D\+E\+F\+I\+N\+ED}} = 255
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a2d3a835e3183ae31d8f9087eeacd279c}{cryptonote\+::hf\+\_\+prev}} (hf x)
+\item 
+constexpr network\+\_\+type \mbox{\hyperlink{namespacecryptonote_a5c7f7cef31425dd3c0aa9cac55f8aeab}{cryptonote\+::network\+\_\+type\+\_\+from\+\_\+string}} (std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_a68ac3933f2971a87adfcc57322dd1b7d}{cryptonote\+::network\+\_\+type\+\_\+to\+\_\+string}} (network\+\_\+type t)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_a5019a3fcb048d69b1d162b3e024727a6}{cryptonote\+::old\+::\+D\+I\+F\+F\+I\+C\+U\+L\+T\+Y\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+C\+O\+U\+NT}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} before\+\_\+hf16)
+\item 
+constexpr const network\+\_\+config \& \mbox{\hyperlink{namespacecryptonote_a8a68cac55cd7d6c74fbe93017070651b}{cryptonote\+::get\+\_\+config}} (network\+\_\+type nettype)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a40043c264d38b3631207a476a569fde7}{cryptonote\+::\+M\+A\+X\+\_\+\+B\+L\+O\+C\+K\+\_\+\+N\+U\+M\+B\+ER}} = 500000000
+\begin{DoxyCompactList}\small\item\em Cryptonote protocol related constants\+: \end{DoxyCompactList}\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_ae6fb6f2fde0d9ec6ba274c7d806cee08}{cryptonote\+::\+M\+A\+X\+\_\+\+T\+X\+\_\+\+S\+I\+ZE}} = 1000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a6f676969731b83dc2b52a279b157e18b}{cryptonote\+::\+M\+A\+X\+\_\+\+T\+X\+\_\+\+P\+E\+R\+\_\+\+B\+L\+O\+CK}} = 0x10000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_aabea7ed0a226396d92b4f2efc1f19218}{cryptonote\+::\+M\+I\+N\+E\+D\+\_\+\+M\+O\+N\+E\+Y\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+W\+I\+N\+D\+OW}} = 30
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_afc2c79b8a93717833d92a4f9bbb5b592}{cryptonote\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+X\+\_\+\+S\+P\+E\+N\+D\+A\+B\+L\+E\+\_\+\+A\+GE}} = 10
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a9ac9d5d290db926f69ff6620be3d00a1}{cryptonote\+::\+T\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+E\+C\+O\+YS}} = 9
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_afd6a449b3b617791e7cb3e8800eb910d}{cryptonote\+::\+T\+X\+\_\+\+B\+U\+L\+L\+E\+T\+P\+R\+O\+O\+F\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+P\+U\+TS}} = 16
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a32ac087054eb71bc454734e836430769}{cryptonote\+::\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+\_\+\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+C\+H\+E\+C\+K\+\_\+\+W\+I\+N\+D\+OW}} = 11
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a9945b0a53d655c05b9f104ea9fee59c7}{cryptonote\+::\+R\+E\+W\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+W\+I\+N\+D\+OW}} = 100
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_ad44de22bf47515ff95ebcefedd47c163}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+G\+R\+A\+N\+T\+E\+D\+\_\+\+F\+U\+L\+L\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+V1}} = 20000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a1eaad26ff33b4154d4811b285a7ec3a4}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+G\+R\+A\+N\+T\+E\+D\+\_\+\+F\+U\+L\+L\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+V5}} = 300000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_acce123f0ffaec73aa87a88ec1a4bf981}{cryptonote\+::\+L\+O\+N\+G\+\_\+\+T\+E\+R\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}} = 100000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_afd55a14bcafc05b708b2746b2f1ccaa5}{cryptonote\+::\+S\+H\+O\+R\+T\+\_\+\+T\+E\+R\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+S\+U\+R\+G\+E\+\_\+\+F\+A\+C\+T\+OR}} = 50
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_ad04aaedf7d6529402c5b77d3c80a7f58}{cryptonote\+::\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+B\+L\+O\+B\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+S\+I\+ZE}} = 600
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a182234d3f9d96df72dd598b5009492aa}{cryptonote\+::\+T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} = 2min
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a3d1634490c31f415a14adba978858289}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+H\+O\+UR}} = 1h / T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}} = 24h / T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a1d2555627298130149850248aab5912d}{cryptonote\+::\+L\+O\+C\+K\+E\+D\+\_\+\+T\+X\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+D\+E\+L\+T\+A\+\_\+\+B\+L\+O\+C\+KS}} = 1
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a35ab5307b22e922b4cbfd6bb6af11ed7}{cryptonote\+::\+M\+E\+M\+P\+O\+O\+L\+\_\+\+T\+X\+\_\+\+L\+I\+V\+E\+T\+I\+ME}} = 3 $\ast$ 24h
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_ae88327a573f131e96740e2a9f2f882ba}{cryptonote\+::\+M\+E\+M\+P\+O\+O\+L\+\_\+\+T\+X\+\_\+\+F\+R\+O\+M\+\_\+\+A\+L\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+L\+I\+V\+E\+T\+I\+ME}} = 7 $\ast$ 24h
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a61809e855d62838c4ecf87fa3920d561}{cryptonote\+::\+M\+E\+M\+P\+O\+O\+L\+\_\+\+P\+R\+U\+N\+E\+\_\+\+N\+O\+N\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+X\+\_\+\+L\+I\+F\+E\+T\+I\+ME}} = 2h
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_ae635d7e2d65c2aad6caea796aa0f6882}{cryptonote\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+M\+P\+O\+O\+L\+\_\+\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT}} = 72h / T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME $\ast$ 300\textquotesingle{}000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_ab7217d4bb9e010da1ec099921c98c250}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V13}} = 215
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a01a05f31eeb91828b9e54b4856a5b7e5}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V18}} = 5000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a10a00870017e2426345084686a51f15c}{cryptonote\+::\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+E\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+W\+E\+I\+G\+HT}} = 3000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a8f2e7812e78b68b6424a08a22593b5fd}{cryptonote\+::\+F\+E\+E\+\_\+\+Q\+U\+A\+N\+T\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+D\+E\+C\+I\+M\+A\+LS}} = 8
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a119f9f5b6fe717b072421de6910f7356}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+I\+D\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+U\+NT}} = 10000
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_accae971cafb471203c5b147ab1bfafd1}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+U\+NT}} = 100
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a20978ce81528578f64c2663bda0dc180}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+M\+A\+X\+\_\+\+C\+O\+U\+NT}} = 2048
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a960dc2758c7304f16354500b7bb26d09}{cryptonote\+::\+H\+A\+S\+H\+\_\+\+O\+F\+\_\+\+H\+A\+S\+H\+E\+S\+\_\+\+S\+T\+EP}} = 256
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a092b0ab21f1860d05d06c7c4640204ef}{cryptonote\+::hashkey\+::\+B\+U\+L\+L\+E\+T\+P\+R\+O\+O\+F\+\_\+\+E\+X\+P\+O\+N\+E\+NT}} = \char`\"{}bulletproof\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_abff383542c82899ff1458d0ec8589de6}{cryptonote\+::hashkey\+::\+R\+I\+N\+G\+DB}} = \char`\"{}ringdsb\textbackslash{}0\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_ab593c6fd0f286cfc9d109f25670ae265}{cryptonote\+::hashkey\+::\+S\+U\+B\+A\+D\+D\+R\+E\+SS}} = \char`\"{}Sub\+Addr\textbackslash{}0\char`\"{}sv
+\item 
+constexpr unsigned char \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a8c331280ec98c37fe863bc79fb2592b5}{cryptonote\+::hashkey\+::\+E\+N\+C\+R\+Y\+P\+T\+E\+D\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+ID}} = 0x8d
+\item 
+constexpr unsigned char \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a93bf372b2df16f28463bdae58cd92a7f}{cryptonote\+::hashkey\+::\+W\+A\+L\+L\+ET}} = 0x8c
+\item 
+constexpr unsigned char \mbox{\hyperlink{namespacecryptonote_1_1hashkey_acd063a04451706e2c2de5bc3d3f36b64}{cryptonote\+::hashkey\+::\+W\+A\+L\+L\+E\+T\+\_\+\+C\+A\+C\+HE}} = 0x8d
+\item 
+constexpr unsigned char \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a7613fecfb33eedb36aa14596d0230314}{cryptonote\+::hashkey\+::\+R\+P\+C\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+N\+O\+N\+CE}} = 0x58
+\item 
+constexpr unsigned char \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a2313228a6c0c6e36b317b5cae8b421cb}{cryptonote\+::hashkey\+::\+M\+E\+M\+O\+RY}} = \textquotesingle{}k\textquotesingle{}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_afbc871d4498b1b459fea40f3aa171696}{cryptonote\+::hashkey\+::\+M\+U\+L\+T\+I\+S\+IG}} = \char`\"{}Multisig\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\textbackslash{}x00\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a50f1ca0cbaa0206382917d852e944e45}{cryptonote\+::hashkey\+::\+C\+L\+S\+A\+G\+\_\+\+R\+O\+U\+ND}} = \char`\"{}C\+L\+S\+A\+G\+\_\+round\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_a02e32b9de9f28658a0c0e2f2122ac4de}{cryptonote\+::hashkey\+::\+C\+L\+S\+A\+G\+\_\+\+A\+G\+G\+\_\+0}} = \char`\"{}C\+L\+S\+A\+G\+\_\+agg\+\_\+0\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1hashkey_aa7bf4ad4cf4c3e113acdaffcdd8bc407}{cryptonote\+::hashkey\+::\+C\+L\+S\+A\+G\+\_\+\+A\+G\+G\+\_\+1}} = \char`\"{}C\+L\+S\+A\+G\+\_\+agg\+\_\+1\char`\"{}sv
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a6ccf6095ead01fb75c65ee4edf05a5b2}{cryptonote\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+F\+E\+E\+\_\+\+B\+A\+S\+IS}} = 10\textquotesingle{}000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a84799af01de703c16068b02e63e5a81c}{cryptonote\+::\+B\+A\+T\+C\+H\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+F\+A\+C\+T\+OR}} = 1000
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a555df82e1660ff9ae7ec7591407ef40b}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+M\+I\+N\+\_\+\+E\+P\+O\+CH}} = 5min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_abb3130b0d84a3376d49c7f2bec2a5137}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+E\+P\+O\+C\+H\+\_\+\+R\+A\+N\+GE}} = 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a683545efa37dde29cea7e71d326109dd}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+M\+I\+N\+\_\+\+D\+E\+L\+AY}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_aa5f29d20e3470bc2a6e8e3c3880ac32d}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+D\+E\+L\+A\+Y\+\_\+\+R\+A\+N\+GE}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a6999f76dca666760f2d32e893432f7f5}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+B\+Y\+T\+ES}} = 3 $\ast$ 1024
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_ace6db927dc0aaa8a204539dfcdd63963}{cryptonote\+::\+N\+O\+I\+S\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}} = 2
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a863de5f72ec4c278a508ca707e39a253}{cryptonote\+::\+M\+A\+X\+\_\+\+F\+R\+A\+G\+M\+E\+N\+TS}} = 20
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a6c6f0f5304837f202c592e6f9b9892c6}{cryptonote\+::p2p\+::\+L\+O\+C\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+L\+I\+M\+IT}} = 1000
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a844378b134cd6faf12863275d11d5fe6}{cryptonote\+::p2p\+::\+L\+O\+C\+A\+L\+\_\+\+G\+R\+A\+Y\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+L\+I\+M\+IT}} = 5000
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_aa04a9155c393df3ad4799601ecf24307}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+\_\+\+C\+O\+U\+N\+T\+\_\+\+O\+UT}} = 8
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a34690ec71b8df16ffc377196e02e13cd}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+\_\+\+C\+O\+U\+N\+T\+\_\+\+IN}} = 32
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_ae7223eb8badb0a4b1aff2645d24cb370}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+A\+N\+D\+S\+H\+A\+K\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 60s
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a0f23b7fdd0aa3eb2e0bc381f5933fe57}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}} = 50000000
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a19f78becb30785e53fde22e75377e572}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+R\+S\+\_\+\+I\+N\+\_\+\+H\+A\+N\+D\+S\+H\+A\+KE}} = 250
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_abbbef94583944538b4f4e6838a2a0f5b}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_ad685be93db3ad4fb32b23559d3af12e1}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+O\+C\+K\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}} = 45\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_a2b42aaf903b53bef3ac2b53c8b00cf9c}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+I\+N\+G\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+UT}} = 2\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_a783145533379db0f51c0592bb1a66c53}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+V\+O\+K\+E\+\_\+\+T\+I\+M\+E\+O\+UT}} = 2min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_aed02935bbcc012d6dfd3fbe2feed0354}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+A\+N\+D\+S\+H\+A\+K\+E\+\_\+\+I\+N\+V\+O\+K\+E\+\_\+\+T\+I\+M\+E\+O\+UT}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr int \mbox{\hyperlink{namespacecryptonote_1_1p2p_a413922e3a81e0dbeb6ebdf5c17485c4d}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+H\+I\+T\+E\+L\+I\+S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+\_\+\+P\+E\+R\+C\+E\+NT}} = 70
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a8cc28d17dfed31d7015f392e4ee29542}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+N\+C\+H\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+\_\+\+C\+O\+U\+NT}} = 2
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a03646356cc5cca94e653ee23cbe34fc0}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+\_\+\+C\+O\+U\+NT}} = 2
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a45f8aa6cfe416104c81ff9891db52273}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+UP}} = 2048
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a1ed9a3fbea53154e976d2b8c27881b6c}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+D\+O\+WN}} = 8192
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_a61c131a2256aa6d52183e63f31d377eb}{cryptonote\+::p2p\+::\+F\+A\+I\+L\+E\+D\+\_\+\+A\+D\+D\+R\+\_\+\+F\+O\+R\+G\+ET}} = 1h
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_ad152015a222e94796598723546b65627}{cryptonote\+::p2p\+::\+I\+P\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} = 24h
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_ab5735fae9fd12bf27fea4152f65a39f1}{cryptonote\+::p2p\+::\+I\+P\+\_\+\+F\+A\+I\+L\+S\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+B\+L\+O\+CK}} = 10
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1p2p_a16afa4f988d936149dfe572e417b04f8}{cryptonote\+::p2p\+::\+I\+D\+L\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+K\+I\+L\+L\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 5min
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_a68a5df0c41d9ac35da5dc206b38ede40}{cryptonote\+::p2p\+::\+S\+U\+P\+P\+O\+R\+T\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+KS}} = 0x01
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1p2p_af4f04caa3423d4452032bbc87fdb12ef}{cryptonote\+::p2p\+::\+S\+U\+P\+P\+O\+R\+T\+\_\+\+F\+L\+A\+GS}} = S\+U\+P\+P\+O\+R\+T\+\_\+\+F\+L\+A\+G\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+KS
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a371280bf141a91f8bcbde84efe9c6475}{cryptonote\+::\+D\+A\+T\+A\+\_\+\+D\+I\+R\+N\+A\+ME}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a9b1f2f9f17de0f52a112415c442a6a59}{cryptonote\+::\+C\+O\+N\+F\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}oxen.\+conf\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a46ca0e6b4431f1197b7ff21a0367738a}{cryptonote\+::\+S\+O\+C\+K\+E\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}oxend.\+sock\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a356e4fee03059d2b3041d6edfcdb7f6d}{cryptonote\+::\+L\+O\+G\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}oxen.\+log\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a88b0db58f0c7d3ebc62780d1b267ecce}{cryptonote\+::\+P\+O\+O\+L\+D\+A\+T\+A\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}poolstate.\+bin\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a09637db999f18a7d98491d8b27a297ab}{cryptonote\+::\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+D\+A\+T\+A\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}data.\+mdb\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a551b6fc37c1ab8bca710cc331b2b1032}{cryptonote\+::\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+D\+A\+T\+A\+\_\+\+L\+O\+C\+K\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}lock.\+mdb\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_aafcf2955816aba90b557f9fc38bfa873}{cryptonote\+::\+P2\+P\+\_\+\+N\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}p2pstate.\+bin\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a346580638e0a21351450182a9ec6d00c}{cryptonote\+::\+M\+I\+N\+E\+R\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+ME}} = \char`\"{}miner\+\_\+conf.\+json\char`\"{}sv
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a5e249ac868d26e231906c1334fc0568f}{cryptonote\+::\+P\+R\+U\+N\+I\+N\+G\+\_\+\+S\+T\+R\+I\+P\+E\+\_\+\+S\+I\+ZE}} = 4096
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a6c348dcffc60e24c3f0fe0ac6bd88d06}{cryptonote\+::\+P\+R\+U\+N\+I\+N\+G\+\_\+\+L\+O\+G\+\_\+\+S\+T\+R\+I\+P\+ES}} = 3
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a2f2fae8cfa1bc5bef3ebc0676749bfbc}{cryptonote\+::\+P\+R\+U\+N\+I\+N\+G\+\_\+\+T\+I\+P\+\_\+\+B\+L\+O\+C\+KS}} = 5500
+\item 
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a8714675f6531862e8fdce262f2627412}{cryptonote\+::\+P\+R\+U\+N\+I\+N\+G\+\_\+\+D\+E\+B\+U\+G\+\_\+\+S\+P\+O\+O\+F\+\_\+\+S\+E\+ED}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a7ef9c19c4214da9ad6a68b28474ae1ec}{cryptonote\+::hf\+\_\+max}} = static\+\_\+cast$<$hf$>$(static\+\_\+cast$<$uint8\+\_\+t$>$(hf\+::\+\_\+next) -\/ 1)
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a5ebf195deb691d9f4bc5a1d0e9cbcf1f}{cryptonote\+::feature\+::\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+F\+EE}} = hf\+::hf10\+\_\+bulletproofs
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a76661bc49e91bf2ed834754d7c7f1792}{cryptonote\+::feature\+::\+S\+M\+A\+L\+L\+E\+R\+\_\+\+BP}} = hf\+::hf11\+\_\+infinite\+\_\+staking
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_ae0d47b7c2a8db1d1320006bd4eb0977a}{cryptonote\+::feature\+::\+L\+O\+N\+G\+\_\+\+T\+E\+R\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+W\+E\+I\+G\+HT}} = hf\+::hf11\+\_\+infinite\+\_\+staking
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_aa6de82cb8c071a4be7174058df652790}{cryptonote\+::feature\+::\+I\+N\+C\+R\+E\+A\+S\+E\+\_\+\+F\+EE}} = hf\+::hf12\+\_\+checkpointing
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a13a0b846d1b9c82bdb301e9272a89996}{cryptonote\+::feature\+::\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+EE}} = hf\+::hf13\+\_\+enforce\+\_\+checkpoints
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a3b53bb78907b974d377a436d3b6d91de}{cryptonote\+::feature\+::\+E\+D25519\+\_\+\+K\+EY}} = hf\+::hf13\+\_\+enforce\+\_\+checkpoints
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a26f83ea7d0aff6d8557dcc94fde722e2}{cryptonote\+::feature\+::\+F\+E\+E\+\_\+\+B\+U\+R\+N\+I\+NG}} = hf\+::hf14\+\_\+blink
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a5c29ccf73b94a581f394c26554cd82e4}{cryptonote\+::feature\+::\+B\+L\+I\+NK}} = hf\+::hf14\+\_\+blink
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a653c4deb5494f406fe3224b7a6cfbf52}{cryptonote\+::feature\+::\+M\+I\+N\+\_\+2\+\_\+\+O\+U\+T\+P\+U\+TS}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_ad76a566e5ed501053a1d8bb393593b1d}{cryptonote\+::feature\+::\+R\+E\+J\+E\+C\+T\+\_\+\+S\+I\+G\+S\+\_\+\+I\+N\+\_\+\+C\+O\+I\+N\+B\+A\+SE}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_aa1dab60641678426ef67fdeebb253b8c}{cryptonote\+::feature\+::\+E\+N\+F\+O\+R\+C\+E\+\_\+\+M\+I\+N\+\_\+\+A\+GE}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a7866030d618f9dca2f52ef29201bbe0c}{cryptonote\+::feature\+::\+E\+F\+F\+E\+C\+T\+I\+V\+E\+\_\+\+S\+H\+O\+R\+T\+\_\+\+T\+E\+R\+M\+\_\+\+M\+E\+D\+I\+A\+N\+\_\+\+I\+N\+\_\+\+P\+E\+N\+A\+L\+TY}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a8f6275bfa926e4232b85ae882bb57ea1}{cryptonote\+::feature\+::\+P\+U\+L\+SE}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a319a5bd1d1b7d5b0b8be43a6c560e25e}{cryptonote\+::feature\+::\+C\+L\+S\+AG}} = hf\+::hf16\+\_\+pulse
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1feature_a25cd910d80cde2552c6da4ed40e88021}{cryptonote\+::feature\+::\+P\+R\+O\+O\+F\+\_\+\+B\+T\+E\+NC}} = hf\+::hf18
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_a6f204ab5769d1aea0daaebc4e0671130}{cryptonote\+::old\+::\+B\+L\+O\+C\+K\+\_\+\+F\+U\+T\+U\+R\+E\+\_\+\+T\+I\+M\+E\+\_\+\+L\+I\+M\+I\+T\+\_\+\+V2}} = 60$\ast$10
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_ac07a2de1e937ebbf63aaef72c1b9cade}{cryptonote\+::old\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+T\+\_\+\+L\+O\+C\+K\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+E\+X\+C\+E\+SS}} = 20
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_aff49d5bd41207b3e4a8c406c053261be}{cryptonote\+::old\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+P\+O\+R\+T\+I\+O\+NS}} = U\+I\+N\+T64\+\_\+C(0xfffffffffffffffc)
+\item 
+constexpr std\+::chrono\+::seconds \mbox{\hyperlink{namespacecryptonote_1_1old_ab09976c6afb7267e00ec24c3c5a82825}{cryptonote\+::old\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+W\+I\+N\+D\+OW}} = 14 $\ast$ 24h
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_a0ea5cfc156646bda73b4292147f1c8d1}{cryptonote\+::old\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V12}} = 17200
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_a296f05dedc2a680236a30f626660b6d3}{cryptonote\+::old\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V13}} = 20000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_ad7be512e10e1932a1f9ff7fc78246d5f}{cryptonote\+::old\+::\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+E\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+W\+E\+I\+G\+H\+T\+\_\+\+V12}} = 240000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_a887a087e7f5533a9946f4898448f75ee}{cryptonote\+::old\+::\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+K\+B\+\_\+\+B\+A\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+R\+E\+W\+A\+RD}} = U\+I\+N\+T64\+\_\+C(10000000000000)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_aa5f146ea4e4e1f88568b5bbaf8735d6a}{cryptonote\+::old\+::\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+K\+B\+\_\+\+B\+A\+S\+E\+\_\+\+F\+E\+E\+\_\+\+V5}} = 400000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1old_af5b5d4bde7c3ba2dfc0fa73d970317fd}{cryptonote\+::old\+::\+D\+I\+F\+F\+I\+C\+U\+L\+T\+Y\+\_\+\+W\+I\+N\+D\+OW}} = 59
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1old_a047f3f8b9aef5c80327aeff5323b23e1}{cryptonote\+::old\+::\+D\+A\+T\+A\+\_\+\+D\+I\+R\+N\+A\+ME}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1old_aea38cc68f45ea19cc743ceb9862fde22}{cryptonote\+::old\+::\+C\+O\+N\+F\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}loki.\+conf\char`\"{}sv
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1old_a4a54861cbf69492656e7d858b9212b4d}{cryptonote\+::old\+::\+S\+O\+C\+K\+E\+T\+\_\+\+F\+I\+L\+E\+N\+A\+ME}} = \char`\"{}lokid.\+sock\char`\"{}sv
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a05c932ed2b838a95ae48be93ab56fa2e}{cryptonote\+::config\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+U\+S\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 2000000000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a80e0ba1a41ab99d3eff4c69de4bb9e5f}{cryptonote\+::config\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+H\+E\+I\+G\+HT}} = 582088
+\item 
+constexpr time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a45db6d4a2060d583fd334b16dd501a39}{cryptonote\+::config\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}} = 1595359932
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_aee49ccad859b80e6656984ecc4b79784}{cryptonote\+::config\+::\+P\+U\+B\+L\+I\+C\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 114
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a9810167543d913f190255beb375d9959}{cryptonote\+::config\+::\+P\+U\+B\+L\+I\+C\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 115
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a6c2b8589efa67e4246803259a1f2d00f}{cryptonote\+::config\+::\+P\+U\+B\+L\+I\+C\+\_\+\+S\+U\+B\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 116
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a4d53eabd43b71e905bbb1625d772dfe9}{cryptonote\+::config\+::\+P2\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 29414
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a826d9e587c817318b41a3ddfa2f5bbac}{cryptonote\+::config\+::\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 29916
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a34154eb52a76bce6fb47fca3c639e5dd}{cryptonote\+::config\+::\+Z\+M\+Q\+\_\+\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 22024
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a671540590dc2fde7d1955090682e175a}{cryptonote\+::config\+::\+Q\+N\+E\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 29819
+\item 
+constexpr const boost\+::uuids\+::uuid \mbox{\hyperlink{namespacecryptonote_1_1config_af3dc5aa8ab1c2a7d7deb6e0a3fcc4cb6}{cryptonote\+::config\+::\+N\+E\+T\+W\+O\+R\+K\+\_\+\+ID}}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1config_a544f61154eb382c121c0be7639fced41}{cryptonote\+::config\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+TX}} = \char`\"{}021e01ff000380808d93f5d771027c4fd4553bc9886f1f49e3f76d945bf71e8632a94e6c177b19cbc780e7e6bdb48080b4ccd4dfc60302c8b9f6461f58ef3f2107e577c7425d06af584a1c7482bf19060e84059c98b4c3808088fccdbcc32302732b53b0b0db706fcc3087074fb4b786da5ab72b2065699f9453448b0db27f892101ed71f2ce3fc70d7b2036f8a4e4b3fb75c66c12184b55a908e7d1a1d6995566cf00\char`\"{}sv
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a4f31df3548ed860a06f2d109c786b5e3}{cryptonote\+::config\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+N\+O\+N\+CE}} = 1022201
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a8b8246576e6e61bcf72c595eb1a6836a}{cryptonote\+::config\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+I\+N\+\_\+\+B\+L\+O\+C\+KS}} = 7 $\ast$ \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}}
+\item 
+constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_1_1config_ab45f55fa06a0e9083e038785d85a1564}{cryptonote\+::config\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a352cf05e0e0389170b3a6b3ccf81da76}{cryptonote\+::config\+::\+H\+A\+R\+D\+F\+O\+R\+K\+\_\+\+D\+E\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+G\+R\+A\+C\+E\+\_\+\+P\+E\+R\+I\+OD}} = 7 $\ast$ \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_a9de6ae2378e35557037f1ecf9e8d8f61}{cryptonote\+::config\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} = 5min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_adba4cb09bbd7ee0eaacbda77c379b15a}{cryptonote\+::config\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+D\+E\+L\+AY}} = 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_afba6128c43463e0d6ea5e927620ab1bf}{cryptonote\+::config\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_aeab001194879b70404a203ddb9f1b2c7}{cryptonote\+::config\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}} = 1h
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_a0bc39640804a9e57973e08d3916ed88b}{cryptonote\+::config\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+V\+A\+L\+I\+D\+I\+TY}} = 2h + 5min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_a581e60aa50872d04869c6a7a67790c46}{cryptonote\+::config\+::\+R\+E\+A\+C\+H\+A\+B\+L\+E\+\_\+\+M\+A\+X\+\_\+\+F\+A\+I\+L\+U\+R\+E\+\_\+\+V\+A\+L\+I\+D\+I\+TY}} = 5min
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a165b88441947cc56d317147dfba28fba}{cryptonote\+::config\+::\+B\+A\+T\+C\+H\+I\+N\+G\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 2520
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a25db8d4025b095ee28e1b01031d4b173}{cryptonote\+::config\+::\+M\+I\+N\+\_\+\+B\+A\+T\+C\+H\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+A\+M\+O\+U\+NT}} = 1\textquotesingle{}000\textquotesingle{}000\textquotesingle{}000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_ac3f012aa8cc2bf2a1bbc41f50a46dfe8}{cryptonote\+::config\+::\+L\+I\+M\+I\+T\+\_\+\+B\+A\+T\+C\+H\+\_\+\+O\+U\+T\+P\+U\+TS}} = 15
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_a7b1c3d8ebdbc96356ed7a23b3fafba5b}{cryptonote\+::config\+::\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+P\+A\+Y\+A\+B\+L\+E\+\_\+\+A\+F\+T\+E\+R\+\_\+\+B\+L\+O\+C\+KS}} = 720
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_abd01cc94872f5ed964aafcaa5f7d19f7}{cryptonote\+::config\+::\+S\+T\+O\+R\+E\+\_\+\+L\+O\+N\+G\+\_\+\+T\+E\+R\+M\+\_\+\+S\+T\+A\+T\+E\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 10000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_ae6c61eb3b26702f26fc7e60c6e7cac0c}{cryptonote\+::config\+::testnet\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+H\+E\+I\+G\+HT}} = 339767
+\item 
+constexpr time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a158b36f738719b4c5f0dbfdb1fb1b5fe}{cryptonote\+::config\+::testnet\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}} = 1595360006
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_aac5b75cc6630d0b8ca11ac41865667a7}{cryptonote\+::config\+::testnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 156
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_ad8ec8d1c24385bacfe745f313fb66204}{cryptonote\+::config\+::testnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 157
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a51481d385637649882352608ac09db6c}{cryptonote\+::config\+::testnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+S\+U\+B\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 158
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_af7c55383458acb5fbe6f299de801530c}{cryptonote\+::config\+::testnet\+::\+P2\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 41429
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a86c9fcd653d59a41baa92987ba3cd9c2}{cryptonote\+::config\+::testnet\+::\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 41455
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a7d9a3415d8dfd2d20b3883fe4a6f379c}{cryptonote\+::config\+::testnet\+::\+Z\+M\+Q\+\_\+\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 38158
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a4e79c6b7b1cd40c879d48f1aed335e02}{cryptonote\+::config\+::testnet\+::\+Q\+N\+E\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 38159
+\item 
+constexpr const boost\+::uuids\+::uuid \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a9b350d6aa521f1ec96247f523b4fe370}{cryptonote\+::config\+::testnet\+::\+N\+E\+T\+W\+O\+R\+K\+\_\+\+ID}}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a38b78fde0cd228602a344e870a77fe49}{cryptonote\+::config\+::testnet\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+TX}} = \char`\"{}04011e1e01ff00018080c9db97f4fb2702fa27e905f604faa4eb084ee675faca77b0cfea9adec1526da33cae5e286f31624201dae05bf3fa1662b7fd373c92426763d921cf3745e10ee43edb510f690c656f247200000000000000000000000000000000000000000000000000000000000000000000\char`\"{}sv
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a8100113d8db4c0e6faf04c5d32bbcb7d}{cryptonote\+::config\+::testnet\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+N\+O\+N\+CE}} = 12345
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a19d4d0ba4cfafc9773578ab20aaf60be}{cryptonote\+::config\+::testnet\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+I\+N\+\_\+\+B\+L\+O\+C\+KS}} = 1000
+\item 
+constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a9251bdb91177708df07c0350ac351ad0}{cryptonote\+::config\+::testnet\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_acaf41638e39c8eed1735536b097dfe73}{cryptonote\+::config\+::testnet\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}} = 10min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a8a4a09304b6b0f29461d059738a1995d}{cryptonote\+::config\+::testnet\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+V\+A\+L\+I\+D\+I\+TY}} = 21min
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a4045f61d83345ed5861f6d6ffa431a7b}{cryptonote\+::config\+::testnet\+::\+B\+A\+T\+C\+H\+I\+N\+G\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 20
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a084decdfcc7cd41c7d244271a41dbd68}{cryptonote\+::config\+::testnet\+::\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+P\+A\+Y\+A\+B\+L\+E\+\_\+\+A\+F\+T\+E\+R\+\_\+\+B\+L\+O\+C\+KS}} = 4
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a4138e117597e932ec5e295756fac2484}{cryptonote\+::config\+::devnet\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+H\+E\+I\+G\+HT}} = 0
+\item 
+constexpr time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_ae49e6df7398d466748b66b4c4fd6ce7b}{cryptonote\+::config\+::devnet\+::\+H\+E\+I\+G\+H\+T\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+T\+I\+M\+E\+S\+T\+A\+MP}} = 1597170000
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a8effa97cf62f1e673ff33df40cfd4805}{cryptonote\+::config\+::devnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 3930
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a07960cb7b343c56aa4c3c536603902b0}{cryptonote\+::config\+::devnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 4442
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a31ad48099a5d133cc209becba117b596}{cryptonote\+::config\+::devnet\+::\+P\+U\+B\+L\+I\+C\+\_\+\+S\+U\+B\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+A\+S\+E58\+\_\+\+P\+R\+E\+F\+IX}} = 5850
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_ae00a8e94600459e0c0f1f699bad7d77a}{cryptonote\+::config\+::devnet\+::\+P2\+P\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 55414
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_aa61488e04f3575ce72a9c83bb50772d7}{cryptonote\+::config\+::devnet\+::\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 55819
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a8c51369408050957f79df341875f02e6}{cryptonote\+::config\+::devnet\+::\+Z\+M\+Q\+\_\+\+R\+P\+C\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 38858
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a4c4af71a892dbc7513e61eb1e6b04e91}{cryptonote\+::config\+::devnet\+::\+Q\+N\+E\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 38859
+\item 
+constexpr const boost\+::uuids\+::uuid \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a86e31472cdb82533851289345df9f323}{cryptonote\+::config\+::devnet\+::\+N\+E\+T\+W\+O\+R\+K\+\_\+\+ID}}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a0efb345b69c4baf12cde16f95c6e1cd8}{cryptonote\+::config\+::devnet\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+TX}} = \char`\"{}04011e1e01ff00018080c9db97f4fb2702fa27e905f604faa4eb084ee675faca77b0cfea9adec1526da33cae5e286f31624201dae05bf3fa1662b7fd373c92426763d921cf3745e10ee43edb510f690c656f247200000000000000000000000000000000000000000000000000000000000000000000\char`\"{}sv
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a8edd3167846b95f3ce509469ff1955f3}{cryptonote\+::config\+::devnet\+::\+G\+E\+N\+E\+S\+I\+S\+\_\+\+N\+O\+N\+CE}} = 12345
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a560d05f280dc07c27b42bbcee9f6c56c}{cryptonote\+::config\+::devnet\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+I\+N\+\_\+\+B\+L\+O\+C\+KS}} = 7 $\ast$ B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY
+\item 
+constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a0bafa5d212ec43cb9045aacd06c80b80}{cryptonote\+::config\+::devnet\+::\+G\+O\+V\+E\+R\+N\+A\+N\+C\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_a04e72953771c392560410a43b27b9cfb}{cryptonote\+::config\+::devnet\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+D\+E\+L\+AY}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1fakechain_ac52a47bba2d2b1b58bae0669369c0b33}{cryptonote\+::config\+::fakechain\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+S\+T\+A\+R\+T\+U\+P\+\_\+\+D\+E\+L\+AY}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1fakechain_a9cfdca3d9a2df7ecc838fad0c1d13f6c}{cryptonote\+::config\+::fakechain\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+C\+H\+E\+C\+K\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1fakechain_aac00dda1407047c42d929784ba4758eb}{cryptonote\+::config\+::fakechain\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}} = 1min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_1_1config_1_1fakechain_aa52e3a4da0804108bccd97988d673046}{cryptonote\+::config\+::fakechain\+::\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+V\+A\+L\+I\+D\+I\+TY}} = 2min + 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr network\+\_\+config \mbox{\hyperlink{namespacecryptonote_ac59ab59e64c8abea42096884523c524c}{cryptonote\+::mainnet\+\_\+config}}
+\item 
+constexpr network\+\_\+config \mbox{\hyperlink{namespacecryptonote_a4c92ccd0ad23087c7b16f93107238cd1}{cryptonote\+::testnet\+\_\+config}}
+\item 
+constexpr network\+\_\+config \mbox{\hyperlink{namespacecryptonote_a8fc33022a5c3e4d93f4ab92c21f017f9}{cryptonote\+::devnet\+\_\+config}}
+\item 
+constexpr network\+\_\+config \mbox{\hyperlink{namespacecryptonote_af831c3cd20a0ce795beb7fd8fff1c2ee}{cryptonote\+::fakenet\+\_\+config}}
+\end{DoxyCompactItemize}

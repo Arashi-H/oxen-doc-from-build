@@ -1,0 +1,418 @@
+\hypertarget{classtools_1_1NodeRPCProxy}{}\doxysection{tools\+::Node\+R\+P\+C\+Proxy Class Reference}
+\label{classtools_1_1NodeRPCProxy}\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+
+
+{\ttfamily \#include $<$node\+\_\+rpc\+\_\+proxy.\+h$>$}
+
+
+
+Collaboration diagram for tools\+::Node\+R\+P\+C\+Proxy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtools_1_1NodeRPCProxy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1NodeRPCProxy_a27f150037e00a3e2d198ca07cf887fe0}{Node\+R\+P\+C\+Proxy}} (\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}} \&http\+\_\+client)
+\item 
+void \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a857df870f83d83b684e646709c50aba6}{invalidate}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ac7100b8166470fdf865a18e8c05cd1f3}{set\+\_\+offline}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} offline)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a0860d66697ff6b75b2fca0e354c9f62d}{get\+\_\+rpc\+\_\+version}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_af2fa81225f6c9ccf49c611217be88320}{cryptonote\+::rpc\+::version\+\_\+t}} \&version) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a1062adb3a138b8fc6ae5eeac9333b679}{get\+\_\+height}} (uint64\+\_\+t \&height) const
+\item 
+void \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a4066b6ebef321ce8b0352b3587a5f136}{set\+\_\+height}} (uint64\+\_\+t h)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ab17d0c4a89af21eaac640f0bb952d1b6}{get\+\_\+target\+\_\+height}} (uint64\+\_\+t \&height) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a907b2181dfe43d533b1cfde7d301499e}{get\+\_\+immutable\+\_\+height}} (uint64\+\_\+t \&height) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a3f1288f1944403fce71c0813f82f8a7a}{get\+\_\+block\+\_\+weight\+\_\+limit}} (uint64\+\_\+t \&block\+\_\+weight\+\_\+limit) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ae1f7afa40c9a3623cae4db49278ef570}{get\+\_\+earliest\+\_\+height}} (uint8\+\_\+t version, uint64\+\_\+t \&earliest\+\_\+height) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a7450bbc20cf6393f726d9d403e843640}{get\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate}} (uint64\+\_\+t grace\+\_\+blocks, \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{cryptonote\+::byte\+\_\+and\+\_\+output\+\_\+fees}} \&fees) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a7103475a641c346f19920678d0c33fad}{get\+\_\+fee\+\_\+quantization\+\_\+mask}} (uint64\+\_\+t \&fee\+\_\+quantization\+\_\+mask) const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ab32b2842e43ce5f214a31b2651eafa34}{get\+\_\+hardfork\+\_\+version}} () const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_afcf08e881fe5a8c970f84d60fc66bdb4}{get\+\_\+service\+\_\+nodes}} (std\+::vector$<$ std\+::string $>$ pubkeys) const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a6b6cab5b84ae39dba790c108b4993da2}{get\+\_\+all\+\_\+service\+\_\+nodes}} () const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_adf0fddca960464820dc4ee3fed07ea50}{get\+\_\+contributed\+\_\+service\+\_\+nodes}} (const std\+::string \&contributor) const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a6896f8329938d43d429519aadf11be69}{get\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images}} () const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_af974dec58e55b5d6f835d70167cea0d1}{ons\+\_\+owners\+\_\+to\+\_\+names}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&request) const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a0e9ebc75eecec3beee59e49bf22a946c}{ons\+\_\+names\+\_\+to\+\_\+owners}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&request) const
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_aa056ee09a3035b8b72b843227b767388}{ons\+\_\+resolve}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&request) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a873946b61ab8b10a681a5125a3c5fb98}{get\+\_\+info}} () const
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\R\+P\+C\+::response \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a18f48d3422bb894fa479234d22238005}{invoke\+\_\+json\+\_\+rpc}} (const typename R\+P\+C\+::request \&req) const
+\item 
+{\footnotesize template$<$typename R\+PC , typename Get\+Value , typename Value  = decltype(std\+::declval$<$\+Get\+Value$>$()(typename R\+P\+C\+::response\{\}))$>$ }\\std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, Value $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_aeb62b2401d75e153c804887e65d52d6b}{get\+\_\+result\+\_\+pair}} (const typename R\+P\+C\+::request \&req, Get\+Value get\+\_\+value, uint64\+\_\+t $\ast$check\+\_\+height=nullptr) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a1270e828ec6d8840c8e96e6fb2ccc1ed}{update\+\_\+all\+\_\+service\+\_\+nodes\+\_\+cache}} (uint64\+\_\+t height) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ab39dd8447224d500a7db3950882ead4d}{refresh\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+cache}} (uint64\+\_\+t grace\+\_\+blocks) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}} \& \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a63c37ce8efc474cba1eb65d76558c553}{m\+\_\+http\+\_\+client}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a70c5cc82989db9099f46a16fba9e40a5}{m\+\_\+offline}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a8089bbed76461b8667274a9322910037}{m\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images\+\_\+cached\+\_\+height}}
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_affab92a7f08290a20ed1898617b984d2}{m\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images}}
+\item 
+std\+::mutex \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a7df79e584e9e4453b07a4f8ee6d7e02f}{m\+\_\+sn\+\_\+cache\+\_\+mutex}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a17558f6a71176d5147cd51a3c056deeb}{m\+\_\+all\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+height}}
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_aa7d66f67aa9e5babb0b37945f0df7ca4}{m\+\_\+all\+\_\+service\+\_\+nodes}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a76fc12623e4df6b439e5e57d42793f58}{m\+\_\+contributed\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+height}}
+\item 
+std\+::string \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a17b13c28a52446b9444becbbd956c623}{m\+\_\+contributed\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+address}}
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a088faf7e33b02206ad81f28d0b3ac3ef}{m\+\_\+contributed\+\_\+service\+\_\+nodes}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_af3cd64f229b62173e355d50efae1ecfb}{m\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a61ba89d184000a2cef06af6f52cec8a7}{m\+\_\+immutable\+\_\+height}}
+\item 
+std\+::array$<$ uint64\+\_\+t, 256 $>$ \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a39e1d79a863d83e4c73615d31ff2039a}{m\+\_\+earliest\+\_\+height}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{cryptonote\+::byte\+\_\+and\+\_\+output\+\_\+fees}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ab955f35d7297e51449022f1d6789647e}{m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a1547d7f45f2a33c69f5355883940dc82}{m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate\+\_\+cached\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ae5bc69e30c0c94564545ebebc22c6211}{m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate\+\_\+grace\+\_\+blocks}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a6f9a56d96e8a86f98de04967d3518865}{m\+\_\+fee\+\_\+quantization\+\_\+mask}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_1_1rpc_af2fa81225f6c9ccf49c611217be88320}{cryptonote\+::rpc\+::version\+\_\+t}} \mbox{\hyperlink{classtools_1_1NodeRPCProxy_ae9562acd9eca589c3f896c45a9f8587d}{m\+\_\+rpc\+\_\+version}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a15cbb0342f4b17c2472f580600f8c831}{m\+\_\+target\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a75facc8e37a64701f3b9afb4fab84708}{m\+\_\+block\+\_\+weight\+\_\+limit}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classtools_1_1NodeRPCProxy_a86af027f8172aa41443559e5bead5e09}{m\+\_\+get\+\_\+info\+\_\+time}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classtools_1_1NodeRPCProxy_aa9527c6f0ebfb73e566a44b903dbce75}{m\+\_\+height\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a27f150037e00a3e2d198ca07cf887fe0}\label{classtools_1_1NodeRPCProxy_a27f150037e00a3e2d198ca07cf887fe0}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!NodeRPCProxy@{NodeRPCProxy}}
+\index{NodeRPCProxy@{NodeRPCProxy}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{NodeRPCProxy()}{NodeRPCProxy()}}
+{\footnotesize\ttfamily tools\+::\+Node\+R\+P\+C\+Proxy\+::\+Node\+R\+P\+C\+Proxy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}} \&}]{http\+\_\+client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a6b6cab5b84ae39dba790c108b4993da2}\label{classtools_1_1NodeRPCProxy_a6b6cab5b84ae39dba790c108b4993da2}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_all\_service\_nodes@{get\_all\_service\_nodes}}
+\index{get\_all\_service\_nodes@{get\_all\_service\_nodes}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_all\_service\_nodes()}{get\_all\_service\_nodes()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+all\+\_\+service\+\_\+nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a3f1288f1944403fce71c0813f82f8a7a}\label{classtools_1_1NodeRPCProxy_a3f1288f1944403fce71c0813f82f8a7a}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_block\_weight\_limit@{get\_block\_weight\_limit}}
+\index{get\_block\_weight\_limit@{get\_block\_weight\_limit}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_block\_weight\_limit()}{get\_block\_weight\_limit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+block\+\_\+weight\+\_\+limit (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{block\+\_\+weight\+\_\+limit }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_adf0fddca960464820dc4ee3fed07ea50}\label{classtools_1_1NodeRPCProxy_adf0fddca960464820dc4ee3fed07ea50}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_contributed\_service\_nodes@{get\_contributed\_service\_nodes}}
+\index{get\_contributed\_service\_nodes@{get\_contributed\_service\_nodes}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_contributed\_service\_nodes()}{get\_contributed\_service\_nodes()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+contributed\+\_\+service\+\_\+nodes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{contributor }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a7450bbc20cf6393f726d9d403e843640}\label{classtools_1_1NodeRPCProxy_a7450bbc20cf6393f726d9d403e843640}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_dynamic\_base\_fee\_estimate@{get\_dynamic\_base\_fee\_estimate}}
+\index{get\_dynamic\_base\_fee\_estimate@{get\_dynamic\_base\_fee\_estimate}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_dynamic\_base\_fee\_estimate()}{get\_dynamic\_base\_fee\_estimate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{grace\+\_\+blocks,  }\item[{\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{cryptonote\+::byte\+\_\+and\+\_\+output\+\_\+fees}} \&}]{fees }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ae1f7afa40c9a3623cae4db49278ef570}\label{classtools_1_1NodeRPCProxy_ae1f7afa40c9a3623cae4db49278ef570}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_earliest\_height@{get\_earliest\_height}}
+\index{get\_earliest\_height@{get\_earliest\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_earliest\_height()}{get\_earliest\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+earliest\+\_\+height (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{version,  }\item[{uint64\+\_\+t \&}]{earliest\+\_\+height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a7103475a641c346f19920678d0c33fad}\label{classtools_1_1NodeRPCProxy_a7103475a641c346f19920678d0c33fad}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_fee\_quantization\_mask@{get\_fee\_quantization\_mask}}
+\index{get\_fee\_quantization\_mask@{get\_fee\_quantization\_mask}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_fee\_quantization\_mask()}{get\_fee\_quantization\_mask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+fee\+\_\+quantization\+\_\+mask (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{fee\+\_\+quantization\+\_\+mask }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ab32b2842e43ce5f214a31b2651eafa34}\label{classtools_1_1NodeRPCProxy_ab32b2842e43ce5f214a31b2651eafa34}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_hardfork\_version@{get\_hardfork\_version}}
+\index{get\_hardfork\_version@{get\_hardfork\_version}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_hardfork\_version()}{get\_hardfork\_version()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+hardfork\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a1062adb3a138b8fc6ae5eeac9333b679}\label{classtools_1_1NodeRPCProxy_a1062adb3a138b8fc6ae5eeac9333b679}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a907b2181dfe43d533b1cfde7d301499e}\label{classtools_1_1NodeRPCProxy_a907b2181dfe43d533b1cfde7d301499e}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_immutable\_height@{get\_immutable\_height}}
+\index{get\_immutable\_height@{get\_immutable\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_immutable\_height()}{get\_immutable\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+immutable\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a873946b61ab8b10a681a5125a3c5fb98}\label{classtools_1_1NodeRPCProxy_a873946b61ab8b10a681a5125a3c5fb98}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_info@{get\_info}}
+\index{get\_info@{get\_info}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_info()}{get\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_aeb62b2401d75e153c804887e65d52d6b}\label{classtools_1_1NodeRPCProxy_aeb62b2401d75e153c804887e65d52d6b}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_result\_pair@{get\_result\_pair}}
+\index{get\_result\_pair@{get\_result\_pair}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_result\_pair()}{get\_result\_pair()}}
+{\footnotesize\ttfamily template$<$typename R\+PC , typename Get\+Value , typename Value  = decltype(std\+::declval$<$\+Get\+Value$>$()(typename R\+P\+C\+::response\{\}))$>$ \\
+std\+::pair$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, Value$>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+result\+\_\+pair (\begin{DoxyParamCaption}\item[{const typename R\+P\+C\+::request \&}]{req,  }\item[{Get\+Value}]{get\+\_\+value,  }\item[{uint64\+\_\+t $\ast$}]{check\+\_\+height = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a0860d66697ff6b75b2fca0e354c9f62d}\label{classtools_1_1NodeRPCProxy_a0860d66697ff6b75b2fca0e354c9f62d}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_rpc\_version@{get\_rpc\_version}}
+\index{get\_rpc\_version@{get\_rpc\_version}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_rpc\_version()}{get\_rpc\_version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+rpc\+\_\+version (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_af2fa81225f6c9ccf49c611217be88320}{cryptonote\+::rpc\+::version\+\_\+t}} \&}]{version }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a6896f8329938d43d429519aadf11be69}\label{classtools_1_1NodeRPCProxy_a6896f8329938d43d429519aadf11be69}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_service\_node\_blacklisted\_key\_images@{get\_service\_node\_blacklisted\_key\_images}}
+\index{get\_service\_node\_blacklisted\_key\_images@{get\_service\_node\_blacklisted\_key\_images}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_service\_node\_blacklisted\_key\_images()}{get\_service\_node\_blacklisted\_key\_images()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_afcf08e881fe5a8c970f84d60fc66bdb4}\label{classtools_1_1NodeRPCProxy_afcf08e881fe5a8c970f84d60fc66bdb4}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_service\_nodes@{get\_service\_nodes}}
+\index{get\_service\_nodes@{get\_service\_nodes}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_service\_nodes()}{get\_service\_nodes()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+service\+\_\+nodes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{pubkeys }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ab17d0c4a89af21eaac640f0bb952d1b6}\label{classtools_1_1NodeRPCProxy_ab17d0c4a89af21eaac640f0bb952d1b6}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!get\_target\_height@{get\_target\_height}}
+\index{get\_target\_height@{get\_target\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{get\_target\_height()}{get\_target\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::get\+\_\+target\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a857df870f83d83b684e646709c50aba6}\label{classtools_1_1NodeRPCProxy_a857df870f83d83b684e646709c50aba6}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily void tools\+::\+Node\+R\+P\+C\+Proxy\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a18f48d3422bb894fa479234d22238005}\label{classtools_1_1NodeRPCProxy_a18f48d3422bb894fa479234d22238005}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!invoke\_json\_rpc@{invoke\_json\_rpc}}
+\index{invoke\_json\_rpc@{invoke\_json\_rpc}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{invoke\_json\_rpc()}{invoke\_json\_rpc()}}
+{\footnotesize\ttfamily template$<$typename R\+PC $>$ \\
+R\+P\+C\+::response tools\+::\+Node\+R\+P\+C\+Proxy\+::invoke\+\_\+json\+\_\+rpc (\begin{DoxyParamCaption}\item[{const typename R\+P\+C\+::request \&}]{req }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a0e9ebc75eecec3beee59e49bf22a946c}\label{classtools_1_1NodeRPCProxy_a0e9ebc75eecec3beee59e49bf22a946c}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!ons\_names\_to\_owners@{ons\_names\_to\_owners}}
+\index{ons\_names\_to\_owners@{ons\_names\_to\_owners}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{ons\_names\_to\_owners()}{ons\_names\_to\_owners()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::ons\+\_\+names\+\_\+to\+\_\+owners (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&}]{request }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_af974dec58e55b5d6f835d70167cea0d1}\label{classtools_1_1NodeRPCProxy_af974dec58e55b5d6f835d70167cea0d1}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!ons\_owners\_to\_names@{ons\_owners\_to\_names}}
+\index{ons\_owners\_to\_names@{ons\_owners\_to\_names}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{ons\_owners\_to\_names()}{ons\_owners\_to\_names()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::ons\+\_\+owners\+\_\+to\+\_\+names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&}]{request }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_aa056ee09a3035b8b72b843227b767388}\label{classtools_1_1NodeRPCProxy_aa056ee09a3035b8b72b843227b767388}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!ons\_resolve@{ons\_resolve}}
+\index{ons\_resolve@{ons\_resolve}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{ons\_resolve()}{ons\_resolve()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::ons\+\_\+resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} const \&}]{request }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ab39dd8447224d500a7db3950882ead4d}\label{classtools_1_1NodeRPCProxy_ab39dd8447224d500a7db3950882ead4d}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!refresh\_dynamic\_base\_fee\_cache@{refresh\_dynamic\_base\_fee\_cache}}
+\index{refresh\_dynamic\_base\_fee\_cache@{refresh\_dynamic\_base\_fee\_cache}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{refresh\_dynamic\_base\_fee\_cache()}{refresh\_dynamic\_base\_fee\_cache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::refresh\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+cache (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{grace\+\_\+blocks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a4066b6ebef321ce8b0352b3587a5f136}\label{classtools_1_1NodeRPCProxy_a4066b6ebef321ce8b0352b3587a5f136}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!set\_height@{set\_height}}
+\index{set\_height@{set\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{set\_height()}{set\_height()}}
+{\footnotesize\ttfamily void tools\+::\+Node\+R\+P\+C\+Proxy\+::set\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ac7100b8166470fdf865a18e8c05cd1f3}\label{classtools_1_1NodeRPCProxy_ac7100b8166470fdf865a18e8c05cd1f3}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!set\_offline@{set\_offline}}
+\index{set\_offline@{set\_offline}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{set\_offline()}{set\_offline()}}
+{\footnotesize\ttfamily void tools\+::\+Node\+R\+P\+C\+Proxy\+::set\+\_\+offline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{offline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a1270e828ec6d8840c8e96e6fb2ccc1ed}\label{classtools_1_1NodeRPCProxy_a1270e828ec6d8840c8e96e6fb2ccc1ed}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!update\_all\_service\_nodes\_cache@{update\_all\_service\_nodes\_cache}}
+\index{update\_all\_service\_nodes\_cache@{update\_all\_service\_nodes\_cache}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{update\_all\_service\_nodes\_cache()}{update\_all\_service\_nodes\_cache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::update\+\_\+all\+\_\+service\+\_\+nodes\+\_\+cache (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_aa7d66f67aa9e5babb0b37945f0df7ca4}\label{classtools_1_1NodeRPCProxy_aa7d66f67aa9e5babb0b37945f0df7ca4}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_all\_service\_nodes@{m\_all\_service\_nodes}}
+\index{m\_all\_service\_nodes@{m\_all\_service\_nodes}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_all\_service\_nodes}{m\_all\_service\_nodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+all\+\_\+service\+\_\+nodes\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a17558f6a71176d5147cd51a3c056deeb}\label{classtools_1_1NodeRPCProxy_a17558f6a71176d5147cd51a3c056deeb}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_all\_service\_nodes\_cached\_height@{m\_all\_service\_nodes\_cached\_height}}
+\index{m\_all\_service\_nodes\_cached\_height@{m\_all\_service\_nodes\_cached\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_all\_service\_nodes\_cached\_height}{m\_all\_service\_nodes\_cached\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+all\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a75facc8e37a64701f3b9afb4fab84708}\label{classtools_1_1NodeRPCProxy_a75facc8e37a64701f3b9afb4fab84708}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_block\_weight\_limit@{m\_block\_weight\_limit}}
+\index{m\_block\_weight\_limit@{m\_block\_weight\_limit}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_block\_weight\_limit}{m\_block\_weight\_limit}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+block\+\_\+weight\+\_\+limit\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a088faf7e33b02206ad81f28d0b3ac3ef}\label{classtools_1_1NodeRPCProxy_a088faf7e33b02206ad81f28d0b3ac3ef}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_contributed\_service\_nodes@{m\_contributed\_service\_nodes}}
+\index{m\_contributed\_service\_nodes@{m\_contributed\_service\_nodes}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_contributed\_service\_nodes}{m\_contributed\_service\_nodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+contributed\+\_\+service\+\_\+nodes\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a17b13c28a52446b9444becbbd956c623}\label{classtools_1_1NodeRPCProxy_a17b13c28a52446b9444becbbd956c623}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_contributed\_service\_nodes\_cached\_address@{m\_contributed\_service\_nodes\_cached\_address}}
+\index{m\_contributed\_service\_nodes\_cached\_address@{m\_contributed\_service\_nodes\_cached\_address}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_contributed\_service\_nodes\_cached\_address}{m\_contributed\_service\_nodes\_cached\_address}}
+{\footnotesize\ttfamily std\+::string tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+contributed\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+address\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a76fc12623e4df6b439e5e57d42793f58}\label{classtools_1_1NodeRPCProxy_a76fc12623e4df6b439e5e57d42793f58}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_contributed\_service\_nodes\_cached\_height@{m\_contributed\_service\_nodes\_cached\_height}}
+\index{m\_contributed\_service\_nodes\_cached\_height@{m\_contributed\_service\_nodes\_cached\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_contributed\_service\_nodes\_cached\_height}{m\_contributed\_service\_nodes\_cached\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+contributed\+\_\+service\+\_\+nodes\+\_\+cached\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ab955f35d7297e51449022f1d6789647e}\label{classtools_1_1NodeRPCProxy_ab955f35d7297e51449022f1d6789647e}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_dynamic\_base\_fee\_estimate@{m\_dynamic\_base\_fee\_estimate}}
+\index{m\_dynamic\_base\_fee\_estimate@{m\_dynamic\_base\_fee\_estimate}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_dynamic\_base\_fee\_estimate}{m\_dynamic\_base\_fee\_estimate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{cryptonote\+::byte\+\_\+and\+\_\+output\+\_\+fees}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a1547d7f45f2a33c69f5355883940dc82}\label{classtools_1_1NodeRPCProxy_a1547d7f45f2a33c69f5355883940dc82}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_dynamic\_base\_fee\_estimate\_cached\_height@{m\_dynamic\_base\_fee\_estimate\_cached\_height}}
+\index{m\_dynamic\_base\_fee\_estimate\_cached\_height@{m\_dynamic\_base\_fee\_estimate\_cached\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_dynamic\_base\_fee\_estimate\_cached\_height}{m\_dynamic\_base\_fee\_estimate\_cached\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate\+\_\+cached\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ae5bc69e30c0c94564545ebebc22c6211}\label{classtools_1_1NodeRPCProxy_ae5bc69e30c0c94564545ebebc22c6211}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_dynamic\_base\_fee\_estimate\_grace\_blocks@{m\_dynamic\_base\_fee\_estimate\_grace\_blocks}}
+\index{m\_dynamic\_base\_fee\_estimate\_grace\_blocks@{m\_dynamic\_base\_fee\_estimate\_grace\_blocks}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_dynamic\_base\_fee\_estimate\_grace\_blocks}{m\_dynamic\_base\_fee\_estimate\_grace\_blocks}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+dynamic\+\_\+base\+\_\+fee\+\_\+estimate\+\_\+grace\+\_\+blocks\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a39e1d79a863d83e4c73615d31ff2039a}\label{classtools_1_1NodeRPCProxy_a39e1d79a863d83e4c73615d31ff2039a}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_earliest\_height@{m\_earliest\_height}}
+\index{m\_earliest\_height@{m\_earliest\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_earliest\_height}{m\_earliest\_height}}
+{\footnotesize\ttfamily std\+::array$<$uint64\+\_\+t, 256$>$ tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+earliest\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a6f9a56d96e8a86f98de04967d3518865}\label{classtools_1_1NodeRPCProxy_a6f9a56d96e8a86f98de04967d3518865}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_fee\_quantization\_mask@{m\_fee\_quantization\_mask}}
+\index{m\_fee\_quantization\_mask@{m\_fee\_quantization\_mask}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_fee\_quantization\_mask}{m\_fee\_quantization\_mask}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+fee\+\_\+quantization\+\_\+mask\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a86af027f8172aa41443559e5bead5e09}\label{classtools_1_1NodeRPCProxy_a86af027f8172aa41443559e5bead5e09}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_get\_info\_time@{m\_get\_info\_time}}
+\index{m\_get\_info\_time@{m\_get\_info\_time}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_get\_info\_time}{m\_get\_info\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+get\+\_\+info\+\_\+time\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_af3cd64f229b62173e355d50efae1ecfb}\label{classtools_1_1NodeRPCProxy_af3cd64f229b62173e355d50efae1ecfb}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_aa9527c6f0ebfb73e566a44b903dbce75}\label{classtools_1_1NodeRPCProxy_aa9527c6f0ebfb73e566a44b903dbce75}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_height\_time@{m\_height\_time}}
+\index{m\_height\_time@{m\_height\_time}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_height\_time}{m\_height\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+height\+\_\+time\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a63c37ce8efc474cba1eb65d76558c553}\label{classtools_1_1NodeRPCProxy_a63c37ce8efc474cba1eb65d76558c553}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_http\_client@{m\_http\_client}}
+\index{m\_http\_client@{m\_http\_client}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_http\_client}{m\_http\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}}\& tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+http\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a61ba89d184000a2cef06af6f52cec8a7}\label{classtools_1_1NodeRPCProxy_a61ba89d184000a2cef06af6f52cec8a7}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_immutable\_height@{m\_immutable\_height}}
+\index{m\_immutable\_height@{m\_immutable\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_immutable\_height}{m\_immutable\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+immutable\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a70c5cc82989db9099f46a16fba9e40a5}\label{classtools_1_1NodeRPCProxy_a70c5cc82989db9099f46a16fba9e40a5}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_offline@{m\_offline}}
+\index{m\_offline@{m\_offline}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_offline}{m\_offline}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+offline\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_ae9562acd9eca589c3f896c45a9f8587d}\label{classtools_1_1NodeRPCProxy_ae9562acd9eca589c3f896c45a9f8587d}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_rpc\_version@{m\_rpc\_version}}
+\index{m\_rpc\_version@{m\_rpc\_version}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_rpc\_version}{m\_rpc\_version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_1_1rpc_af2fa81225f6c9ccf49c611217be88320}{cryptonote\+::rpc\+::version\+\_\+t}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+rpc\+\_\+version\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_affab92a7f08290a20ed1898617b984d2}\label{classtools_1_1NodeRPCProxy_affab92a7f08290a20ed1898617b984d2}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_service\_node\_blacklisted\_key\_images@{m\_service\_node\_blacklisted\_key\_images}}
+\index{m\_service\_node\_blacklisted\_key\_images@{m\_service\_node\_blacklisted\_key\_images}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_service\_node\_blacklisted\_key\_images}{m\_service\_node\_blacklisted\_key\_images}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a8089bbed76461b8667274a9322910037}\label{classtools_1_1NodeRPCProxy_a8089bbed76461b8667274a9322910037}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_service\_node\_blacklisted\_key\_images\_cached\_height@{m\_service\_node\_blacklisted\_key\_images\_cached\_height}}
+\index{m\_service\_node\_blacklisted\_key\_images\_cached\_height@{m\_service\_node\_blacklisted\_key\_images\_cached\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_service\_node\_blacklisted\_key\_images\_cached\_height}{m\_service\_node\_blacklisted\_key\_images\_cached\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+service\+\_\+node\+\_\+blacklisted\+\_\+key\+\_\+images\+\_\+cached\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a7df79e584e9e4453b07a4f8ee6d7e02f}\label{classtools_1_1NodeRPCProxy_a7df79e584e9e4453b07a4f8ee6d7e02f}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_sn\_cache\_mutex@{m\_sn\_cache\_mutex}}
+\index{m\_sn\_cache\_mutex@{m\_sn\_cache\_mutex}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_sn\_cache\_mutex}{m\_sn\_cache\_mutex}}
+{\footnotesize\ttfamily std\+::mutex tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+sn\+\_\+cache\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1NodeRPCProxy_a15cbb0342f4b17c2472f580600f8c831}\label{classtools_1_1NodeRPCProxy_a15cbb0342f4b17c2472f580600f8c831}} 
+\index{tools::NodeRPCProxy@{tools::NodeRPCProxy}!m\_target\_height@{m\_target\_height}}
+\index{m\_target\_height@{m\_target\_height}!tools::NodeRPCProxy@{tools::NodeRPCProxy}}
+\doxysubsubsection{\texorpdfstring{m\_target\_height}{m\_target\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::\+Node\+R\+P\+C\+Proxy\+::m\+\_\+target\+\_\+height\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{node__rpc__proxy_8h}{node\+\_\+rpc\+\_\+proxy.\+h}}\item 
+src/wallet/\mbox{\hyperlink{node__rpc__proxy_8cpp}{node\+\_\+rpc\+\_\+proxy.\+cpp}}\end{DoxyCompactItemize}

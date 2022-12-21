@@ -1,0 +1,98 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+TS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS}\index{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS@{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a83bd4a4cf04879be1918778da8bf010c}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+T\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a4ed559b46ef3d162d7e69bb7139c56fe}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the transaction pool statistics.
+
+Inputs\+: none
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily pool\+\_\+stats} Dict of pool statistics\+:
+\begin{DoxyItemize}
+\item {\ttfamily bytes\+\_\+total} the total size (in bytes) of the transactions in the transaction pool.
+\item {\ttfamily bytes\+\_\+min} the size of the smallest transaction in the tx pool.
+\item {\ttfamily bytes\+\_\+max} the size of the largest transaction in the pool.
+\item {\ttfamily bytes\+\_\+med} the median transaction size in the pool.
+\item {\ttfamily fee\+\_\+total} the total fees of all transactions in the transaction pool.
+\item {\ttfamily txs\+\_\+total} the total number of transactions in the transaction pool
+\item {\ttfamily num\+\_\+failing} the number of failing transactions\+: that is, transactions that are in the mempool but are not currently eligible to be added to the blockchain.
+\item {\ttfamily num\+\_\+10m} the number of transactions received within the last ten minutes
+\item {\ttfamily num\+\_\+not\+\_\+relayed} the number of transactions which are not being relayed to the network. Only included when the {\ttfamily include\+\_\+unrelayed} request parameter is set to true.
+\item {\ttfamily num\+\_\+double\+\_\+spends} the number of transactions in the mempool that are marked as double-\/spends of existing blockchain transactions.
+\item {\ttfamily oldest} the unix timestamp of the oldest transaction in the pool.
+\item {\ttfamily histo} pairs of \mbox{[}\# txes, size of bytes\mbox{]} that form a histogram of transactions in the mempool, if there are at least two transactions in the mempool (and omitted entirely otherwise). When present, this field will contain 10 pairs\+:
+\begin{DoxyItemize}
+\item When {\ttfamily histo\+\_\+max} is given then {\ttfamily histo} consists of 10 equally-\/spaced bins from newest to oldest where the newest bin begins at age 0 and the oldest bin ends at age {\ttfamily \textbackslash{}p histo\+\_\+max}. For example, bin {\ttfamily \mbox{[}3\mbox{]}} contains statistics for transactions with ages between {\ttfamily 3$\ast$histo\+\_\+max/10} and {\ttfamily 4$\ast$histo\+\_\+max/10}.
+\item Otherwise {\ttfamily histo\+\_\+98pc} will be present in which case {\ttfamily histo} contains 9 equally spaced bins from newest to oldest where the newest bin begins at age 0 and the oldest bin ends at age {\ttfamily histo\+\_\+98pc}, and at least 98\% of the mempool transactions will fall in these 9 bins. The 10th bin contains statistics for all transactions with ages greater than {\ttfamily histo\+\_\+98pc}.
+\end{DoxyItemize}
+\item {\ttfamily histo\+\_\+98pc} See {\ttfamily histo} for details.
+\item {\ttfamily histo\+\_\+max} See {\ttfamily histo} for details. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a83bd4a4cf04879be1918778da8bf010c}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a83bd4a4cf04879be1918778da8bf010c}} 
+\index{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS@{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS@{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+T\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a4ed559b46ef3d162d7e69bb7139c56fe}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_a4ed559b46ef3d162d7e69bb7139c56fe}} 
+\index{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS@{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS@{cryptonote::rpc::GET\_TRANSACTION\_POOL\_STATS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTION__POOL__STATS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+T\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+O\+O\+L\+\_\+\+S\+T\+A\+T\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

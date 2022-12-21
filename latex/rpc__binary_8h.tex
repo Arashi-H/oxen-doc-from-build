@@ -1,0 +1,61 @@
+\hypertarget{rpc__binary_8h}{}\doxysection{src/rpc/common/rpc\+\_\+binary.h File Reference}
+\label{rpc__binary_8h}\index{src/rpc/common/rpc\_binary.h@{src/rpc/common/rpc\_binary.h}}
+{\ttfamily \#include \char`\"{}ringct/rct\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+Include dependency graph for rpc\+\_\+binary.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rpc__binary_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rpc__binary_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy}}
+\item 
+struct \mbox{\hyperlink{structnlohmann_1_1adl__serializer_3_01T_00_01std_1_1enable__if__t_3_01cryptonote_1_1rpc_1_1is__b35e3ecd18a3f71edc0e065e1dc8eb107}{nlohmann\+::adl\+\_\+serializer$<$ T, std\+::enable\+\_\+if\+\_\+t$<$ cryptonote\+::rpc\+::is\+\_\+binary\+\_\+parameter$<$ T $>$ $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\item 
+ \mbox{\hyperlink{namespacenlohmann}{nlohmann}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a4ef1405a9b67c52354500ee290abcb31}{cryptonote\+::rpc\+::load\+\_\+binary\+\_\+parameter\+\_\+impl}} (std\+::string\+\_\+view bytes, size\+\_\+t raw\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+raw, uint8\+\_\+t $\ast$val\+\_\+data)
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$is\+\_\+binary\+\_\+parameter$<$\+T$>$$>$$>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a4954fc7b4748407426b069fdc3077c8b}{cryptonote\+::rpc\+::load\+\_\+binary\+\_\+parameter}} (std\+::string\+\_\+view bytes, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+raw, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a08a3a0dd63b718021a7d8d9370985e05}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+parameter}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a656b61bd0d146773621a8b1845617249}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+container}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a0a311d4874024f7e197f6f7837339ebe}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+parameter$<$ const T \& $>$}} = is\+\_\+binary\+\_\+parameter$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_aa51fdeb3e6a1698e452871267e3585c7}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+parameter$<$ T \&\& $>$}} = is\+\_\+binary\+\_\+parameter$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_accd188e01d1136a8da7642b2b00f022f}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+container$<$ const T \& $>$}} = is\+\_\+binary\+\_\+container$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a4d3af8fab669474df0061435953f1cad}{cryptonote\+::rpc\+::is\+\_\+binary\+\_\+container$<$ T \&\& $>$}} = is\+\_\+binary\+\_\+container$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$
+\end{DoxyCompactItemize}

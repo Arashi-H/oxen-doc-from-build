@@ -1,0 +1,221 @@
+\hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy}{}\doxysection{cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy Class Reference}
+\label{classcryptonote_1_1rpc_1_1json__binary__proxy}\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+
+
+{\ttfamily \#include $<$rpc\+\_\+binary.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{fmt}} \{ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca6920626369b1f05844f5e3d6f93b5f6e}{fmt\+::bt}}, 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbcab8d1b43eae73587ba56baef574709ecb}{fmt\+::hex}}, 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca95a1446a7120e4af5c0c8878abb7e6d2}{fmt\+::base64}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a40b6ab4b0beb7cd842512bf921c33f62}{json\+\_\+binary\+\_\+proxy}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&elem, \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{fmt}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a45a805289372007b6869189df03aac8b}{format}})
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_ad0144a9ce8f6a122ec5b71a6f7589588}{json\+\_\+binary\+\_\+proxy}} ()=delete
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_ae2ed5c4d8eb5a648cf309fed763371a0}{json\+\_\+binary\+\_\+proxy}} (const \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \&)=default
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5cae175283b9df8ef96255a010efe37b}{json\+\_\+binary\+\_\+proxy}} (\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \&\&)=default
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a145862f0e84960e52c1f489f8eff9b2d}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em Dereferencing a proxy element accesses the underlying nlohmann\+::json. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $\ast$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a7e739530ab8c9ad55f42cec578ac98d7}{operator-\/$>$}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_ae0bcb317c89584c57e0b96eab1be1f5b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&key)
+\begin{DoxyCompactList}\small\item\em Descends into the json object, returning a new binary value proxy around the child element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a130be883bd4ff9d8ec4a953579c73621}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns a binary value proxy around the first/last element (requires an underlying list) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_ad851de82daed4d0353982ab2514b6ef3}{back}} ()
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a7ec98ba730f6de12cf8800ab0e54f02b}{operator=}} (std\+::string\+\_\+view binary\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Assigns binary data from a string\+\_\+view/string/etc. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Char , std\+::enable\+\_\+if\+\_\+t$<$ sizeof(\+Char)==1 \&\&!std\+::is\+\_\+same\+\_\+v$<$ Char, char $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a0a62e32bc2f1a2329e1e87312caaa8f0}{operator=}} (std\+::basic\+\_\+string\+\_\+view$<$ Char $>$ binary\+\_\+data)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+binary\+\_\+parameter$<$ T $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a304c2b9a06084d766dc85c52a25785fb}{operator=}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+binary\+\_\+container$<$ T $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a0035e0df7b2ba1aec08cb4579dab48ea}{operator=}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&vals)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_ab250961d54174ee43c25f2b767aacb99}{emplace\+\_\+back}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a6648544c9478b1d9f9be20d0b4136ffc}{push\+\_\+back}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_aa02ae501e011bdd21ee021a388e87aca}{e}}
+\item 
+enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::fmt}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a45a805289372007b6869189df03aac8b}{format}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!fmt@{fmt}}
+\index{fmt@{fmt}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{fmt}{fmt}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::fmt}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bt@{bt}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!bt@{bt}}}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca6920626369b1f05844f5e3d6f93b5f6e}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca6920626369b1f05844f5e3d6f93b5f6e}} 
+bt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hex@{hex}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!hex@{hex}}}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbcab8d1b43eae73587ba56baef574709ecb}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbcab8d1b43eae73587ba56baef574709ecb}} 
+hex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{base64@{base64}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!base64@{base64}}}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca95a1446a7120e4af5c0c8878abb7e6d2}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbca95a1446a7120e4af5c0c8878abb7e6d2}} 
+base64&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a40b6ab4b0beb7cd842512bf921c33f62}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a40b6ab4b0beb7cd842512bf921c33f62}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!json\_binary\_proxy@{json\_binary\_proxy}}
+\index{json\_binary\_proxy@{json\_binary\_proxy}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{json\_binary\_proxy()}{json\_binary\_proxy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::json\+\_\+binary\+\_\+proxy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&}]{elem,  }\item[{\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{fmt}}}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_ad0144a9ce8f6a122ec5b71a6f7589588}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_ad0144a9ce8f6a122ec5b71a6f7589588}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!json\_binary\_proxy@{json\_binary\_proxy}}
+\index{json\_binary\_proxy@{json\_binary\_proxy}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{json\_binary\_proxy()}{json\_binary\_proxy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::json\+\_\+binary\+\_\+proxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_ae2ed5c4d8eb5a648cf309fed763371a0}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_ae2ed5c4d8eb5a648cf309fed763371a0}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!json\_binary\_proxy@{json\_binary\_proxy}}
+\index{json\_binary\_proxy@{json\_binary\_proxy}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{json\_binary\_proxy()}{json\_binary\_proxy()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::json\+\_\+binary\+\_\+proxy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a5cae175283b9df8ef96255a010efe37b}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a5cae175283b9df8ef96255a010efe37b}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!json\_binary\_proxy@{json\_binary\_proxy}}
+\index{json\_binary\_proxy@{json\_binary\_proxy}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{json\_binary\_proxy()}{json\_binary\_proxy()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::json\+\_\+binary\+\_\+proxy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_ad851de82daed4d0353982ab2514b6ef3}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_ad851de82daed4d0353982ab2514b6ef3}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!back@{back}}
+\index{back@{back}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_ab250961d54174ee43c25f2b767aacb99}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_ab250961d54174ee43c25f2b767aacb99}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!emplace\_back@{emplace\_back}}
+\index{emplace\_back@{emplace\_back}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{emplace\_back()}{emplace\_back()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::emplace\+\_\+back (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Emplaces a new nlohman\+::json to the end of an underlying list and returns a \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} wrapping it.
+
+Example\+: \begin{DoxyVerb}auto child = wrappedelem.emplace_back({"key1": 1}, {"key2": 2});
+child["binary-key"] = some_binary_thing; 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a130be883bd4ff9d8ec4a953579c73621}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a130be883bd4ff9d8ec4a953579c73621}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!front@{front}}
+\index{front@{front}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a binary value proxy around the first/last element (requires an underlying list) 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a145862f0e84960e52c1f489f8eff9b2d}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a145862f0e84960e52c1f489f8eff9b2d}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}\& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereferencing a proxy element accesses the underlying nlohmann\+::json. 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a7e739530ab8c9ad55f42cec578ac98d7}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a7e739530ab8c9ad55f42cec578ac98d7}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}$\ast$ cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a304c2b9a06084d766dc85c52a25785fb}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a304c2b9a06084d766dc85c52a25785fb}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+binary\+\_\+parameter$<$ T $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}\& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a trivial, no-\/padding data structure (e.\+g. a \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}) as the value and dumps its contents as the binary value. \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a0035e0df7b2ba1aec08cb4579dab48ea}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a0035e0df7b2ba1aec08cb4579dab48ea}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+binary\+\_\+container$<$ T $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}\& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{vals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes a vector of some json\+\_\+binary\+\_\+proxy-\/assignable type and builds an array by assigning each one into a new array of binary values. \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a0a62e32bc2f1a2329e1e87312caaa8f0}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a0a62e32bc2f1a2329e1e87312caaa8f0}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Char , std\+::enable\+\_\+if\+\_\+t$<$ sizeof(\+Char)==1 \&\&!std\+::is\+\_\+same\+\_\+v$<$ Char, char $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}\& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator= (\begin{DoxyParamCaption}\item[{std\+::basic\+\_\+string\+\_\+view$<$ Char $>$}]{binary\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assigns binary data from a string\+\_\+view over a 1-\/byte, non-\/char type (e.\+g. unsigned char or uint8\+\_\+t). \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a7ec98ba730f6de12cf8800ab0e54f02b}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a7ec98ba730f6de12cf8800ab0e54f02b}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator= (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{binary\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Assigns binary data from a string\+\_\+view/string/etc. 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_ae0bcb317c89584c57e0b96eab1be1f5b}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_ae0bcb317c89584c57e0b96eab1be1f5b}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Descends into the json object, returning a new binary value proxy around the child element. 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a6648544c9478b1d9f9be20d0b4136ffc}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a6648544c9478b1d9f9be20d0b4136ffc}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds an element to an underlying list, then copies or moves the given argument onto it via \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy}{json\+\_\+binary\+\_\+proxy}} assignment. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_aa02ae501e011bdd21ee021a388e87aca}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_aa02ae501e011bdd21ee021a388e87aca}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!e@{e}}
+\index{e@{e}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}\& cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::e}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1json__binary__proxy_a45a805289372007b6869189df03aac8b}\label{classcryptonote_1_1rpc_1_1json__binary__proxy_a45a805289372007b6869189df03aac8b}} 
+\index{cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}!format@{format}}
+\index{format@{format}!cryptonote::rpc::json\_binary\_proxy@{cryptonote::rpc::json\_binary\_proxy}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1json__binary__proxy_a5a3657c39b6bc5817af70a0771bf7cbc}{cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::fmt}} cryptonote\+::rpc\+::json\+\_\+binary\+\_\+proxy\+::format}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/common/\mbox{\hyperlink{rpc__binary_8h}{rpc\+\_\+binary.\+h}}\item 
+src/rpc/common/\mbox{\hyperlink{rpc__binary_8cpp}{rpc\+\_\+binary.\+cpp}}\end{DoxyCompactItemize}

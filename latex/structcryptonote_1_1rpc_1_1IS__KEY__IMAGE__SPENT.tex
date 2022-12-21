@@ -1,0 +1,119 @@
+\hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT}{}\doxysection{cryptonote\+::rpc\+::I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+NT Struct Reference}
+\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT}\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+NT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+NT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964}{S\+P\+E\+NT}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964aa4d86af5ddff6df59e3ab7112caac724}{S\+P\+E\+N\+T\+::\+U\+N\+S\+P\+E\+NT}} = 0, 
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964ae4b25d8c911628d527b2c97039a9f593}{S\+P\+E\+N\+T\+::\+B\+L\+O\+C\+K\+C\+H\+A\+IN}} = 1, 
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964a3225d08271bdcb752dd48b2a836c8998}{S\+P\+E\+N\+T\+::\+P\+O\+OL}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_ad0ff4ae78a8cb5112b65c49baafc7931}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_1_1request__parameters}{cryptonote\+::rpc\+::\+I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+N\+T\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a11a940767e2c335080ef229dc7f05c38}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Queries whether outputs have been spent using the key image associated with the output.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily key\+\_\+images} list of key images to check. For json requests these must be hex or base64-\/encoded; for bt-\/requests they can be hex/base64 or raw bytes.
+\end{DoxyItemize}
+
+Outputs
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily spent\+\_\+status} array of status codes returned in the same order as the {\ttfamily key\+\_\+images} input. Each value is one of\+:
+\begin{DoxyItemize}
+\item {\ttfamily 0} the key image is unspent
+\item {\ttfamily 1} the key image is spent in a mined block
+\item {\ttfamily 2} the key image is spent in a transaction currently in the mempool 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964}} 
+\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!SPENT@{SPENT}}
+\index{SPENT@{SPENT}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}
+\doxysubsubsection{\texorpdfstring{SPENT}{SPENT}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964}{cryptonote\+::rpc\+::\+I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+N\+T\+::\+S\+P\+E\+NT}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNSPENT@{UNSPENT}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!UNSPENT@{UNSPENT}}}\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964aa4d86af5ddff6df59e3ab7112caac724}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964aa4d86af5ddff6df59e3ab7112caac724}} 
+U\+N\+S\+P\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCKCHAIN@{BLOCKCHAIN}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!BLOCKCHAIN@{BLOCKCHAIN}}}\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964ae4b25d8c911628d527b2c97039a9f593}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964ae4b25d8c911628d527b2c97039a9f593}} 
+B\+L\+O\+C\+K\+C\+H\+A\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POOL@{POOL}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!POOL@{POOL}}}\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964a3225d08271bdcb752dd48b2a836c8998}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a37cdff61f6e7273ee33bc8e17d979964a3225d08271bdcb752dd48b2a836c8998}} 
+P\+O\+OL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_ad0ff4ae78a8cb5112b65c49baafc7931}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_ad0ff4ae78a8cb5112b65c49baafc7931}} 
+\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!names@{names}}
+\index{names@{names}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+N\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a11a940767e2c335080ef229dc7f05c38}\label{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_a11a940767e2c335080ef229dc7f05c38}} 
+\index{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}!request@{request}}
+\index{request@{request}!cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT@{cryptonote::rpc::IS\_KEY\_IMAGE\_SPENT}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1IS__KEY__IMAGE__SPENT_1_1request__parameters}{cryptonote\+::rpc\+::\+I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+N\+T\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+I\+S\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+P\+E\+N\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

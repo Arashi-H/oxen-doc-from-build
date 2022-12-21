@@ -1,0 +1,57 @@
+\hypertarget{txtypes_8h}{}\doxysection{src/cryptonote\+\_\+basic/txtypes.h File Reference}
+\label{txtypes_8h}\index{src/cryptonote\_basic/txtypes.h@{src/cryptonote\_basic/txtypes.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include \char`\"{}common/formattable.\+h\char`\"{}}\newline
+Include dependency graph for txtypes.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{txtypes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{txtypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736}{cryptonote\+::txversion}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a9abcde3c584628a02620bf796dee1204}{cryptonote\+::txversion\+::v0}} = 0, 
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a6654c734ccab8f440ff0825eb443dc7f}{cryptonote\+::txversion\+::v1}}, 
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736aaa5f74edab884be152efc586ab499f28}{cryptonote\+::txversion\+::v2\+\_\+ringct}}, 
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a0c47b403d3cbb8b4e78b07c12e91ee10}{cryptonote\+::txversion\+::v3\+\_\+per\+\_\+output\+\_\+unlock\+\_\+times}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a476097025cd494b9d89c3a4d91827a4b}{cryptonote\+::txversion\+::v4\+\_\+tx\+\_\+types}}, 
+\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736ad69186af02738a9b3ced1bc5b652ba55}{cryptonote\+::txversion\+::\+\_\+count}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913e}{cryptonote\+::txtype}} \+: uint16\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913eac00f0c4675b91fb8b918e4079a0b1bac}{cryptonote\+::txtype\+::standard}}, 
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913ea7d594c5aac704bc1e1418ef0e1085e8c}{cryptonote\+::txtype\+::state\+\_\+change}}, 
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913eafbdd71e4387f679e05f4bb708f7d23da}{cryptonote\+::txtype\+::key\+\_\+image\+\_\+unlock}}, 
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913ea37437c6e58976fb891456aa08ff8c4b1}{cryptonote\+::txtype\+::stake}}, 
+\newline
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913ead96e6ecf36602af490187095890df3e1}{cryptonote\+::txtype\+::oxen\+\_\+name\+\_\+system}}, 
+\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913ead69186af02738a9b3ced1bc5b652ba55}{cryptonote\+::txtype\+::\+\_\+count}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_a5af5c2221e5560964f1cd672a0bdc681}{cryptonote\+::to\+\_\+string}} (txversion v)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_adb7f5c6cbda46102c0381cc8e4c8922a}{cryptonote\+::to\+\_\+string}} (txtype type)
+\end{DoxyCompactItemize}

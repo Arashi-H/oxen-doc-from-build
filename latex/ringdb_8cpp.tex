@@ -1,0 +1,83 @@
+\hypertarget{ringdb_8cpp}{}\doxysection{src/wallet/ringdb.cpp File Reference}
+\label{ringdb_8cpp}\index{src/wallet/ringdb.cpp@{src/wallet/ringdb.cpp}}
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringdb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+Include dependency graph for ringdb.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ringdb_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ringdb_8cpp_a0d5dd9599fedec7e324e4fadea08da05}{V1\+T\+AG}}~((uint64\+\_\+t)798237759845202)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a1204255b7f45ec54005048f70b0b12a1ab30fb2df473fe7d76e32dea2fbc9063d}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::\+B\+L\+A\+C\+K\+B\+A\+L\+L\+\_\+\+B\+L\+A\+C\+K\+B\+A\+LL}}, 
+\mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a1204255b7f45ec54005048f70b0b12a1a1bbb2c396375de2cd1c16cb9ee214bed}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::\+B\+L\+A\+C\+K\+B\+A\+L\+L\+\_\+\+U\+N\+B\+L\+A\+C\+K\+B\+A\+LL}}, 
+\mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a1204255b7f45ec54005048f70b0b12a1af127e0423348ecaeff22139ba770aee2}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::\+B\+L\+A\+C\+K\+B\+A\+L\+L\+\_\+\+Q\+U\+E\+RY}}, 
+\mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a1204255b7f45ec54005048f70b0b12a1a5ace2b48b159d6bb969d817010dc9ff7}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::\+B\+L\+A\+C\+K\+B\+A\+L\+L\+\_\+\+C\+L\+E\+AR}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a51ce0194e439d4ecf8deb7026f84dac7}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::compare\+\_\+hash32}} (const M\+D\+B\+\_\+val $\ast$a, const M\+D\+B\+\_\+val $\ast$b)
+\item 
+int \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a579740b68b647f526338846a7ef1ab20}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::compare\+\_\+uint64}} (const M\+D\+B\+\_\+val $\ast$a, const M\+D\+B\+\_\+val $\ast$b)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a07814c99970de68444e7f41eb24d39d1}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::compress\+\_\+ring}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&ring, uint64\+\_\+t tag)
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a81ecae5700d24e448d60db9111a83881}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::decompress\+\_\+ring}} (const std\+::string \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, uint64\+\_\+t tag)
+\item 
+fs\+::path \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a9c81a5fcfe00f7559e112a91cc349238}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::get\+\_\+rings\+\_\+filename}} (fs\+::path filename)
+\item 
+crypto\+::chacha\+\_\+iv \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_ad6cae0a93690dfbdbc70513b00c9a4a6}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::make\+\_\+iv}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const crypto\+::chacha\+\_\+key \&key, uint8\+\_\+t field)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a5739855425657036e6def4728129d2bb}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::encrypt}} (const std\+::string \&plaintext, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const crypto\+::chacha\+\_\+key \&key, uint8\+\_\+t field)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_ad58769052979648e58022612f632f94e}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::encrypt}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const crypto\+::chacha\+\_\+key \&key, uint8\+\_\+t field)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_aea35584028cb5267af70fac7dfcef9e5}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::decrypt}} (const std\+::string \&ciphertext, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const crypto\+::chacha\+\_\+key \&key, uint8\+\_\+t field)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a16701e29d5c0bc55ed208182e315e38a}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::store\+\_\+relative\+\_\+ring}} (M\+D\+B\+\_\+txn $\ast$txn, M\+D\+B\+\_\+dbi \&dbi, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+image, const std\+::vector$<$ uint64\+\_\+t $>$ \&relative\+\_\+ring, const crypto\+::chacha\+\_\+key \&chacha\+\_\+key)
+\item 
+int \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a53493fd4d9615f94b431ff15ddc48b1b}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::resize\+\_\+env}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, const fs\+::path \&\mbox{\hyperlink{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}{db\+\_\+path}}, size\+\_\+t needed)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_a6bf8efca36708fee96cb88d8fa05e717}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::get\+\_\+ring\+\_\+data\+\_\+size}} (size\+\_\+t n\+\_\+entries)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_aee1bec84dd6feac13f3413144f77d36c}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}wallet.\+ringdb\char`\"{})
+\item 
+const char \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_ad64b7701b632542b374c52815d14fd72}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::zerokey}} \mbox{[}8\mbox{]} = \{0\}
+\item 
+const M\+D\+B\+\_\+val \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02ringdb_8cpp_03_aa38b4b06542e014d20a716ccc945327d}{tools\+::anonymous\+\_\+namespace\{ringdb.\+cpp\}\+::zerokeyval}} = \{ sizeof(\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}}), (void $\ast$)\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ringdb_8cpp_a0d5dd9599fedec7e324e4fadea08da05}\label{ringdb_8cpp_a0d5dd9599fedec7e324e4fadea08da05}} 
+\index{ringdb.cpp@{ringdb.cpp}!V1TAG@{V1TAG}}
+\index{V1TAG@{V1TAG}!ringdb.cpp@{ringdb.cpp}}
+\doxysubsubsection{\texorpdfstring{V1TAG}{V1TAG}}
+{\footnotesize\ttfamily \#define V1\+T\+AG~((uint64\+\_\+t)798237759845202)}
+

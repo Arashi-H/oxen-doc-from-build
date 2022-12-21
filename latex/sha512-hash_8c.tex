@@ -1,0 +1,89 @@
+\hypertarget{sha512-hash_8c}{}\doxysection{src/crypto/crypto\+\_\+ops\+\_\+builder/sha512-\/hash.c File Reference}
+\label{sha512-hash_8c}\index{src/crypto/crypto\_ops\_builder/sha512-\/hash.c@{src/crypto/crypto\_ops\_builder/sha512-\/hash.c}}
+{\ttfamily \#include \char`\"{}sha512.\+h\char`\"{}}\newline
+Include dependency graph for sha512-\/hash.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{sha512-hash_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}}~\mbox{\hyperlink{sha512_8h_a020efdec0e96b501411b9b185a8939e7}{crypto\+\_\+hashblocks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long long \mbox{\hyperlink{sha512-hash_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sha512-hash_8c_a020efdec0e96b501411b9b185a8939e7}{crypto\+\_\+hashblocks}} (unsigned char $\ast$statebytes, const unsigned char $\ast$in, unsigned long long inlen)
+\item 
+int \mbox{\hyperlink{sha512-hash_8c_ad11fbe3ab107fc4ec8dc128d6c48cec6}{crypto\+\_\+hash\+\_\+sha512}} (unsigned char $\ast$out, const unsigned char $\ast$in, unsigned long long inlen)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned char \mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}\label{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}} 
+\index{sha512-\/hash.c@{sha512-\/hash.c}!blocks@{blocks}}
+\index{blocks@{blocks}!sha512-\/hash.c@{sha512-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{blocks}{blocks}}
+{\footnotesize\ttfamily \#define blocks~\mbox{\hyperlink{sha512_8h_a020efdec0e96b501411b9b185a8939e7}{crypto\+\_\+hashblocks}}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{sha512-hash_8c_a29940ae63ec06c9998bba873e25407ad}\label{sha512-hash_8c_a29940ae63ec06c9998bba873e25407ad}} 
+\index{sha512-\/hash.c@{sha512-\/hash.c}!uint64@{uint64}}
+\index{uint64@{uint64}!sha512-\/hash.c@{sha512-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{uint64}{uint64}}
+{\footnotesize\ttfamily typedef unsigned long long \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sha512-hash_8c_ad11fbe3ab107fc4ec8dc128d6c48cec6}\label{sha512-hash_8c_ad11fbe3ab107fc4ec8dc128d6c48cec6}} 
+\index{sha512-\/hash.c@{sha512-\/hash.c}!crypto\_hash\_sha512@{crypto\_hash\_sha512}}
+\index{crypto\_hash\_sha512@{crypto\_hash\_sha512}!sha512-\/hash.c@{sha512-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{crypto\_hash\_sha512()}{crypto\_hash\_sha512()}}
+{\footnotesize\ttfamily int crypto\+\_\+hash\+\_\+sha512 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{out,  }\item[{const unsigned char $\ast$}]{in,  }\item[{unsigned long long}]{inlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sha512-hash_8c_a020efdec0e96b501411b9b185a8939e7}\label{sha512-hash_8c_a020efdec0e96b501411b9b185a8939e7}} 
+\index{sha512-\/hash.c@{sha512-\/hash.c}!crypto\_hashblocks@{crypto\_hashblocks}}
+\index{crypto\_hashblocks@{crypto\_hashblocks}!sha512-\/hash.c@{sha512-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{crypto\_hashblocks()}{crypto\_hashblocks()}}
+{\footnotesize\ttfamily int crypto\+\_\+hashblocks (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{statebytes,  }\item[{const unsigned char $\ast$}]{in,  }\item[{unsigned long long}]{inlen }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}\label{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}} 
+\index{sha512-\/hash.c@{sha512-\/hash.c}!iv@{iv}}
+\index{iv@{iv}!sha512-\/hash.c@{sha512-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{iv}{iv}}
+{\footnotesize\ttfamily const unsigned char iv\mbox{[}64\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  0x6a,0x09,0xe6,0x67,0xf3,0xbc,0xc9,0x08,}
+\DoxyCodeLine{  0xbb,0x67,0xae,0x85,0x84,0xca,0xa7,0x3b,}
+\DoxyCodeLine{  0x3c,0x6e,0xf3,0x72,0xfe,0x94,0xf8,0x2b,}
+\DoxyCodeLine{  0xa5,0x4f,0xf5,0x3a,0x5f,0x1d,0x36,0xf1,}
+\DoxyCodeLine{  0x51,0x0e,0x52,0x7f,0xad,0xe6,0x82,0xd1,}
+\DoxyCodeLine{  0x9b,0x05,0x68,0x8c,0x2b,0x3e,0x6c,0x1f,}
+\DoxyCodeLine{  0x1f,0x83,0xd9,0xab,0xfb,0x41,0xbd,0x6b,}
+\DoxyCodeLine{  0x5b,0xe0,0xcd,0x19,0x13,0x7e,0x21,0x79}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

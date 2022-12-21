@@ -1,0 +1,132 @@
+\hypertarget{classhw_1_1trezor_1_1DebugLink}{}\doxysection{hw\+::trezor\+::Debug\+Link Class Reference}
+\label{classhw_1_1trezor_1_1DebugLink}\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+
+
+{\ttfamily \#include $<$debug\+\_\+link.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a7bf5f7d7f9b72b78426e28b635d1bdfd}{Debug\+Link}} ()
+\item 
+virtual \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a3d5d6d72a7154f5db2dfafe727fa07e0}{$\sim$\+Debug\+Link}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a54d1e2e04621ec81169bdaf7dc392924}{init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}} $>$ \&\mbox{\hyperlink{namespacehw_1_1trezor_a85284890fe5881e97f3aacb4b9a4a42c}{transport}})
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_abdb6180d20b2ca194824afe38f024643}{close}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::debug\+::\+Debug\+Link\+State $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_af95913d795ea4fbea97126960d3a4d5a}{state}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a19c19564ce9a7099911f1452332b02d3}{input\+\_\+word}} (const std\+::string \&word)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_ac185e09bba83e1f336e4b3aa37888698}{input\+\_\+button}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} button)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_aaf31a7be2f1adb2628cf092d2388cbf2}{input\+\_\+swipe}} (messages\+::debug\+::\+Debug\+Link\+Decision\+\_\+\+Debug\+Swipe\+Direction direction)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a9ce79184f774eab8e0126183b922053d}{press\+\_\+yes}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a33f8190f3b4f62d1c6ff132c72a1ebf1}{press\+\_\+no}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_a39d57ae9ab854a3a872258818485c017}{stop}} ()
+\item 
+{\footnotesize template$<$class t\+\_\+message  = messages\+::debug\+::\+Debug\+Link\+State$>$ }\\std\+::shared\+\_\+ptr$<$ t\+\_\+message $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_ad66a723c89b0c0bbcf3519079c928c95}{call}} (const google\+::protobuf\+::\+Message \&req, const std\+::optional$<$ messages\+::\+Message\+Type $>$ \&resp\+\_\+type=std\+::nullopt, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} no\+\_\+wait=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}} $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1DebugLink_ade66d40b797166acbc0f8f07294a5590}{m\+\_\+transport}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a7bf5f7d7f9b72b78426e28b635d1bdfd}\label{classhw_1_1trezor_1_1DebugLink_a7bf5f7d7f9b72b78426e28b635d1bdfd}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!DebugLink@{DebugLink}}
+\index{DebugLink@{DebugLink}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{DebugLink()}{DebugLink()}}
+{\footnotesize\ttfamily hw\+::trezor\+::\+Debug\+Link\+::\+Debug\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a3d5d6d72a7154f5db2dfafe727fa07e0}\label{classhw_1_1trezor_1_1DebugLink_a3d5d6d72a7154f5db2dfafe727fa07e0}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!````~DebugLink@{$\sim$DebugLink}}
+\index{````~DebugLink@{$\sim$DebugLink}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{$\sim$DebugLink()}{~DebugLink()}}
+{\footnotesize\ttfamily hw\+::trezor\+::\+Debug\+Link\+::$\sim$\+Debug\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_ad66a723c89b0c0bbcf3519079c928c95}\label{classhw_1_1trezor_1_1DebugLink_ad66a723c89b0c0bbcf3519079c928c95}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!call@{call}}
+\index{call@{call}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{call()}{call()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+message  = messages\+::debug\+::\+Debug\+Link\+State$>$ \\
+std\+::shared\+\_\+ptr$<$t\+\_\+message$>$ hw\+::trezor\+::\+Debug\+Link\+::call (\begin{DoxyParamCaption}\item[{const google\+::protobuf\+::\+Message \&}]{req,  }\item[{const std\+::optional$<$ messages\+::\+Message\+Type $>$ \&}]{resp\+\_\+type = {\ttfamily std\+:\+:nullopt},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{no\+\_\+wait = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_abdb6180d20b2ca194824afe38f024643}\label{classhw_1_1trezor_1_1DebugLink_abdb6180d20b2ca194824afe38f024643}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!close@{close}}
+\index{close@{close}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a54d1e2e04621ec81169bdaf7dc392924}\label{classhw_1_1trezor_1_1DebugLink_a54d1e2e04621ec81169bdaf7dc392924}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!init@{init}}
+\index{init@{init}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}} $>$ \&}]{transport }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_ac185e09bba83e1f336e4b3aa37888698}\label{classhw_1_1trezor_1_1DebugLink_ac185e09bba83e1f336e4b3aa37888698}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!input\_button@{input\_button}}
+\index{input\_button@{input\_button}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{input\_button()}{input\_button()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::input\+\_\+button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{button }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_aaf31a7be2f1adb2628cf092d2388cbf2}\label{classhw_1_1trezor_1_1DebugLink_aaf31a7be2f1adb2628cf092d2388cbf2}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!input\_swipe@{input\_swipe}}
+\index{input\_swipe@{input\_swipe}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{input\_swipe()}{input\_swipe()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::input\+\_\+swipe (\begin{DoxyParamCaption}\item[{messages\+::debug\+::\+Debug\+Link\+Decision\+\_\+\+Debug\+Swipe\+Direction}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a19c19564ce9a7099911f1452332b02d3}\label{classhw_1_1trezor_1_1DebugLink_a19c19564ce9a7099911f1452332b02d3}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!input\_word@{input\_word}}
+\index{input\_word@{input\_word}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{input\_word()}{input\_word()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::input\+\_\+word (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{word }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a33f8190f3b4f62d1c6ff132c72a1ebf1}\label{classhw_1_1trezor_1_1DebugLink_a33f8190f3b4f62d1c6ff132c72a1ebf1}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!press\_no@{press\_no}}
+\index{press\_no@{press\_no}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{press\_no()}{press\_no()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::press\+\_\+no (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a9ce79184f774eab8e0126183b922053d}\label{classhw_1_1trezor_1_1DebugLink_a9ce79184f774eab8e0126183b922053d}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!press\_yes@{press\_yes}}
+\index{press\_yes@{press\_yes}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{press\_yes()}{press\_yes()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::press\+\_\+yes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_af95913d795ea4fbea97126960d3a4d5a}\label{classhw_1_1trezor_1_1DebugLink_af95913d795ea4fbea97126960d3a4d5a}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!state@{state}}
+\index{state@{state}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::debug\+::\+Debug\+Link\+State $>$ hw\+::trezor\+::\+Debug\+Link\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_a39d57ae9ab854a3a872258818485c017}\label{classhw_1_1trezor_1_1DebugLink_a39d57ae9ab854a3a872258818485c017}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!stop@{stop}}
+\index{stop@{stop}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Debug\+Link\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1DebugLink_ade66d40b797166acbc0f8f07294a5590}\label{classhw_1_1trezor_1_1DebugLink_ade66d40b797166acbc0f8f07294a5590}} 
+\index{hw::trezor::DebugLink@{hw::trezor::DebugLink}!m\_transport@{m\_transport}}
+\index{m\_transport@{m\_transport}!hw::trezor::DebugLink@{hw::trezor::DebugLink}}
+\doxysubsubsection{\texorpdfstring{m\_transport}{m\_transport}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}}$>$ hw\+::trezor\+::\+Debug\+Link\+::m\+\_\+transport\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{debug__link_8hpp}{debug\+\_\+link.\+hpp}}\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{debug__link_8cpp}{debug\+\_\+link.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{net__peerlist__boost__serialization_8h}{}\doxysection{src/p2p/net\+\_\+peerlist\+\_\+boost\+\_\+serialization.h File Reference}
+\label{net__peerlist__boost__serialization_8h}\index{src/p2p/net\_peerlist\_boost\_serialization.h@{src/p2p/net\_peerlist\_boost\_serialization.h}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}common/expect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/net\+\_\+utils\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/tor\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/i2p\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p/p2p\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+Include dependency graph for net\+\_\+peerlist\+\_\+boost\+\_\+serialization.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__peerlist__boost__serialization_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{net__peerlist__boost__serialization_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1serialization}{boost\+::serialization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T , class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a3389b4414c8f45819628a05d658634f7}{boost\+::serialization\+::do\+\_\+serialize}} (boost\+::mpl\+::false\+\_\+, Archive \&a, epee\+::net\+\_\+utils\+::network\+\_\+address \&na)
+\item 
+{\footnotesize template$<$class T , class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_ad3ac094a68819d692d1d3a837f9ac5c7}{boost\+::serialization\+::do\+\_\+serialize}} (boost\+::mpl\+::true\+\_\+, Archive \&a, const epee\+::net\+\_\+utils\+::network\+\_\+address \&na)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5ca7fdcdb2cc53a37f68369564692404}{boost\+::serialization\+::serialize}} (Archive \&a, epee\+::net\+\_\+utils\+::network\+\_\+address \&na, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a000499e25b52b737b6df00c2870fbf82}{boost\+::serialization\+::serialize}} (Archive \&a, epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+address \&na, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a456df65a86aa1da159faa08ad07f8a7a}{boost\+::serialization\+::serialize}} (Archive \&a, boost\+::asio\+::ip\+::address\+\_\+v6 \&v6, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a350c6194711ee5715d63ac916713495f}{boost\+::serialization\+::serialize}} (Archive \&a, epee\+::net\+\_\+utils\+::ipv6\+\_\+network\+\_\+address \&na, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_aa2b196bbe261d78dc1b14b5267801997}{boost\+::serialization\+::save}} (Archive \&a, const \mbox{\hyperlink{classnet_1_1tor__address}{net\+::tor\+\_\+address}} \&na, const ver\+\_\+type)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_aff31413fbf9611578ea91af851a635c5}{boost\+::serialization\+::save}} (Archive \&a, const \mbox{\hyperlink{classnet_1_1i2p__address}{net\+::i2p\+\_\+address}} \&na, const ver\+\_\+type)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a58d496e11c5dba15a8d03538ff7994d8}{boost\+::serialization\+::load}} (Archive \&a, \mbox{\hyperlink{classnet_1_1tor__address}{net\+::tor\+\_\+address}} \&na, const ver\+\_\+type)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a682ff4f8a1f6a01faf3341545fbb8765}{boost\+::serialization\+::load}} (Archive \&a, \mbox{\hyperlink{classnet_1_1i2p__address}{net\+::i2p\+\_\+address}} \&na, const ver\+\_\+type)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5be1138301c39eaac7d7a5c71021f19f}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{classnet_1_1tor__address}{net\+::tor\+\_\+address}} \&na, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a7b8305335e08c2a09e8f2821e3634aa6}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{classnet_1_1i2p__address}{net\+::i2p\+\_\+address}} \&na, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a9aa8f630eb2809901754498ac5cb8181}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{nodetool\+::peerlist\+\_\+entry}} \&pl, const ver\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive , class ver\+\_\+type $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_ae86f46da6b44ae14c6fd0ab5c25e545b}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{nodetool\+::anchor\+\_\+peerlist\+\_\+entry}} \&pl, const ver\+\_\+type ver)
+\end{DoxyCompactItemize}

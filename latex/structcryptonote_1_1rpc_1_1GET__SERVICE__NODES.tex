@@ -1,0 +1,173 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+ES Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES}\index{cryptonote::rpc::GET\_SERVICE\_NODES@{cryptonote::rpc::GET\_SERVICE\_NODES}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ae243526c7530c09044787a3ff4f3d48d}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ab9be0ddfff869d3e7000032f4e7b12b2}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get information on some, all, or a random subset of Service Nodes.
+
+Output variables available are as follows (you can request which parameters are returned; see the request parameters description). Note that O\+X\+EN values are returned in atomic O\+X\+EN units, which are nano-\/\+O\+X\+EN (i.\+e. 1.\+000000000 O\+X\+EN will be returned as 1000000000).
+
+
+\begin{DoxyItemize}
+\item {\ttfamily height} the height of the current top block. (Note that this is one less than the \char`\"{}blockchain height\char`\"{} as would be returned by the {\ttfamily get\+\_\+info} endpoint).
+\item {\ttfamily target\+\_\+height} the target height of the blockchain; will be greater than height+1 if this node is still syncing the chain.
+\item {\ttfamily block\+\_\+hash} the hash of the most recent block
+\item {\ttfamily hardfork} the current hardfork version of the daemon
+\item {\ttfamily snode\+\_\+revision} the current snode revision for non-\/hardfork, but mandatory, service node updates.
+\item {\ttfamily status} generic R\+PC error code; \char`\"{}\+O\+K\char`\"{} means the request was successful.
+\item {\ttfamily unchanged} when using poll\+\_\+block\+\_\+hash, this value is set to true and results are omitted if the current block hash has not changed from the requested polling block hash. If block hash has changed this is set to false (and results included). When not polling this value is omitted entirely.
+\item {\ttfamily service\+\_\+node\+\_\+states} list of information about all known service nodes; each element is a dict containing the following keys (which fields are included/omitted can be controlled via the \char`\"{}fields\char`\"{} input parameter)\+:
+\begin{DoxyItemize}
+\item {\ttfamily service\+\_\+node\+\_\+pubkey} The public key of the Service Node, in hex (json) or binary (bt).
+\item {\ttfamily registration\+\_\+height} The height at which the registration for the Service Node arrived on the blockchain.
+\item {\ttfamily registration\+\_\+hf\+\_\+version} The current hard fork at which the registration for the Service Node arrived on the blockchain.
+\item {\ttfamily requested\+\_\+unlock\+\_\+height} If an unlock has been requested for this SN, this field contains the height at which the Service Node registration expires and contributions will be released.
+\item {\ttfamily last\+\_\+reward\+\_\+block\+\_\+height} The height that determines when this service node will next receive a reward. This field is somewhat misnamed for historic reasons\+: it is updated when receiving a reward, but is also updated when a SN is activated, recommissioned, or has an IP change position reset, and so does not strictly indicate when a reward was received.
+\item {\ttfamily last\+\_\+reward\+\_\+transaction\+\_\+index} When multiple Service Nodes register (or become active/reactivated) at the same height (i.\+e. have the same last\+\_\+reward\+\_\+block\+\_\+height), this field contains the activating transaction position in the block which is used to break ties in determining which SN is next in the reward list.
+\item {\ttfamily active} True if fully funded and not currently decommissioned (and so {\ttfamily funded \&\& !active} implicitly defines decommissioned).
+\item {\ttfamily funded} True if the required stakes have been submitted to activate this Service Node.
+\item {\ttfamily state\+\_\+height} Indicates the height at which the service node entered its current state\+:
+\begin{DoxyItemize}
+\item If {\ttfamily active\+:} this is the height at which the service node last became active (i.\+e. became fully staked, or was last recommissioned);
+\item If decommissioned (i.\+e. {\ttfamily funded} but not {\ttfamily active})\+: the decommissioning height;
+\item If awaiting contributions (i.\+e. not {\ttfamily funded})\+: the height at which the last contribution (or registration) was processed.
+\end{DoxyItemize}
+\item {\ttfamily decommission\+\_\+count} The number of times the Service Node has been decommissioned since registration
+\item {\ttfamily last\+\_\+decommission\+\_\+reason\+\_\+consensus\+\_\+all} The reason for the last decommission as voted by the testing quorum S\+Ns that decommissioned the node. This is a numeric bitfield made up of the sum of given reasons (multiple reasons may be given for a decommission). Values are included here if {\itshape all} quorum members agreed on the reasons\+:
+\begin{DoxyItemize}
+\item {\ttfamily 0x01} -\/ Missing uptime proofs
+\item {\ttfamily 0x02} -\/ Missed too many checkpoint votes
+\item {\ttfamily 0x04} -\/ Missed too many pulse blocks
+\item {\ttfamily 0x08} -\/ Storage server unreachable
+\item {\ttfamily 0x10} -\/ oxend quorumnet unreachable for timesync checks
+\item {\ttfamily 0x20} -\/ oxend system clock is too far off
+\item {\ttfamily 0x40} -\/ Lokinet unreachable
+\item other bit values are reserved for future use.
+\end{DoxyItemize}
+\item {\ttfamily last\+\_\+decommission\+\_\+reason\+\_\+consensus\+\_\+any} The reason for the last decommission as voted by {\itshape any} S\+Ns. Reasons are set here if {\itshape any} quorum member gave a reason, even if not all quorum members agreed. Bit values are the same as {\ttfamily last\+\_\+decommission\+\_\+reason\+\_\+consensus\+\_\+all}.
+\item {\ttfamily decomm\+\_\+reasons} -\/ a gentler version of the last\+\_\+decommission\+\_\+reason\+\_\+consensus\+\_\+all/\+\_\+any values\+: this is returned as a dict with two keys, {\ttfamily \char`\"{}all\char`\"{}} and {\ttfamily \char`\"{}some\char`\"{}}, containing a list of short string identifiers of the reasons. {\ttfamily \char`\"{}all\char`\"{}} contains reasons that are agreed upon by all voting nodes; {\ttfamily \char`\"{}some\char`\"{}} contains reasons that were provided by some but not all nodes (and is included only if there are at least one such value). Note that, unlike {\ttfamily last\+\_\+decommission\+\_\+reason\+\_\+consensus\+\_\+any}, the {\ttfamily \char`\"{}some\char`\"{}} field only includes reasons that are {\itshape not} included in {\ttfamily \char`\"{}all\char`\"{}}. Returned values in the lists are\+:
+\begin{DoxyItemize}
+\item {\ttfamily \char`\"{}uptime\char`\"{}} 
+\item {\ttfamily \char`\"{}checkpoints\char`\"{}} 
+\item {\ttfamily \char`\"{}pulse\char`\"{}} 
+\item {\ttfamily \char`\"{}storage\char`\"{}} 
+\item {\ttfamily \char`\"{}timecheck\char`\"{}} 
+\item {\ttfamily \char`\"{}timesync\char`\"{}} 
+\item {\ttfamily \char`\"{}lokinet\char`\"{}} 
+\item other values are reserved for future use.
+\end{DoxyItemize}
+\item {\ttfamily earned\+\_\+downtime\+\_\+blocks} The number of blocks earned towards decommissioning (if currently active), or the number of blocks remaining until the service node is eligible for deregistration (if currently decommissioned).
+\item {\ttfamily service\+\_\+node\+\_\+version} The three-\/element numeric version of the Service Node (as received in the last uptime proof). Omitted if we have never received a proof.
+\item {\ttfamily lokinet\+\_\+version} The major, minor, patch version of the Service Node\textquotesingle{}s lokinet router (as received in the last uptime proof). Omitted if we have never received a proof.
+\item {\ttfamily storage\+\_\+server\+\_\+version} The major, minor, patch version of the Service Node\textquotesingle{}s storage server (as received in the last uptime proof). Omitted if we have never received a proof.
+\item {\ttfamily contributors} Array of contributors, contributing to this Service Node. Each element is a dict containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily amount} The total amount of O\+X\+EN staked by this contributor into this Service Node.
+\item {\ttfamily reserved} The amount of O\+X\+EN reserved by this contributor for this Service Node; this field will be included only if the contributor has unfilled, reserved space in the service node.
+\item {\ttfamily address} The wallet address of this contributor to which rewards are sent and from which contributions were made.
+\item {\ttfamily locked\+\_\+contributions} Array of contributions from this contributor; this field (unlike the other fields inside {\ttfamily contributors}) is controlled by the \char`\"{}fields\char`\"{} input parameter. Each element contains\+:
+\begin{DoxyItemize}
+\item {\ttfamily key\+\_\+image} The contribution\textquotesingle{}s key image which is locked on the network.
+\item {\ttfamily key\+\_\+image\+\_\+pub\+\_\+key} The contribution\textquotesingle{}s key image, public key component.
+\item {\ttfamily amount} The amount of O\+X\+EN that is locked in this contribution.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\ttfamily total\+\_\+contributed} The total amount of O\+X\+EN contributed to this Service Node.
+\item {\ttfamily total\+\_\+reserved} The total amount of O\+X\+EN contributed or reserved for this Service Node. Only included in the response if there are still unfilled reservations (i.\+e. if it is greater than total\+\_\+contributed).
+\item {\ttfamily staking\+\_\+requirement} The total O\+X\+EN staking requirement in that is/was required to be contributed for this Service Node.
+\item {\ttfamily portions\+\_\+for\+\_\+operator} The operator fee to take from the service node reward, as a fraction of 18446744073709551612 (2$^\wedge$64 -\/ 4) (that is, this number corresponds to 100\%). Note that some J\+S\+ON parsers may silently change this value while parsing as typical values do not fit into a double without loss of precision.
+\item {\ttfamily operator\+\_\+fee} The operator fee expressed in millionths (and rounded to the nearest integer value). That is, 1000000 corresponds to a 100\% fee, 34567 corresponds to a 3.\+4567\% fee. Note that this number is for human consumption; the actual value that matters for the blockchain is the precise {\ttfamily portions\+\_\+for\+\_\+operator} value.
+\item {\ttfamily swarm\+\_\+id} The numeric identifier of the Service Node\textquotesingle{}s current swarm. Note that returned values can exceed the precision available in a double value, which can result in (changed) incorrect values by some J\+S\+ON parsers. Consider using {\ttfamily swarm} instead if you are not sure your J\+S\+ON parser supports 64-\/bit values.
+\item {\ttfamily swarm} The swarm id, expressed in hexadecimal, such as {\ttfamily \char`\"{}f4ffffffffffffff\char`\"{}}.
+\item {\ttfamily operator\+\_\+address} The wallet address of the Service Node operator.
+\item {\ttfamily public\+\_\+ip} The public ip address of the service node; omitted if we have not yet received a network proof containing this information from the service node.
+\item {\ttfamily storage\+\_\+port} The port number associated with the storage server; omitted if we have no uptime proof yet.
+\item {\ttfamily storage\+\_\+lmq\+\_\+port} The port number associated with the storage server (oxenmq interface); omitted if we have no uptime proof yet.
+\item {\ttfamily quorumnet\+\_\+port} The port for direct S\+N-\/to-\/\+SN oxend communication (oxenmq interface). Omitted if we have no uptime proof yet.
+\item {\ttfamily pubkey\+\_\+ed25519} The service node\textquotesingle{}s ed25519 public key for auxiliary services. Omitted if we have no uptime proof yet. Note that for newer registrations this will be the same as the {\ttfamily service\+\_\+node\+\_\+pubkey}.
+\item {\ttfamily pubkey\+\_\+x25519} The service node\textquotesingle{}s x25519 public key for auxiliary services (mainly used for {\ttfamily quorumnet\+\_\+port} and the {\ttfamily storage\+\_\+lmq\+\_\+port} Oxen\+MQ encrypted connections).
+\item {\ttfamily last\+\_\+uptime\+\_\+proof} The last time we received an uptime proof for this service node from the network, in unix epoch time. 0 if we have never received one.
+\item {\ttfamily storage\+\_\+server\+\_\+reachable} True if this storage server is currently passing tests for the purposes of SN node testing\+: true if the last test passed, or if it has been unreachable for less than an hour; false if it has been failing tests for more than an hour (and thus is considered unreachable). This field is omitted if the queried oxend is not a service node.
+\item {\ttfamily storage\+\_\+server\+\_\+first\+\_\+unreachable} If the last test we received was a failure, this field contains the timestamp when failures started. Will be 0 if the last result was a success, and will be omitted if the node has not yet been tested since this oxend last restarted.
+\item {\ttfamily storage\+\_\+server\+\_\+last\+\_\+unreachable} The last time this service node\textquotesingle{}s storage server failed a ping test (regardless of whether or not it is currently failing). Will be omitted if it has never failed a test since startup.
+\item {\ttfamily storage\+\_\+server\+\_\+last\+\_\+reachable} The last time we received a successful ping response for this storage server (whether or not it is currently failing). Will be omitted if we have never received a successful ping response since startup.
+\item {\ttfamily lokinet\+\_\+reachable} Same as {\ttfamily storage\+\_\+server\+\_\+reachable}, but for lokinet router testing.
+\item {\ttfamily lokinet\+\_\+first\+\_\+unreachable} Same as {\ttfamily storage\+\_\+server\+\_\+first\+\_\+unreachable}, but for lokinet router testing.
+\item {\ttfamily lokinet\+\_\+last\+\_\+unreachable} Same as {\ttfamily storage\+\_\+server\+\_\+last\+\_\+unreachable}, but for lokinet router testing.
+\item {\ttfamily lokinet\+\_\+last\+\_\+reachable} Same as {\ttfamily storage\+\_\+server\+\_\+last\+\_\+reachable}, but for lokinet router testing.
+\item {\ttfamily checkpoint\+\_\+votes} dict containing recent received checkpoint voting information for this service node. Service node tests will fail if too many recent pulse blocks are missed. Contains keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily voted} list of blocks heights at which a required vote was received from this service node
+\item {\ttfamily missed} list of block heights at which a vote from this service node was required but not received.
+\end{DoxyItemize}
+\item {\ttfamily pulse\+\_\+votes} dict containing recent pulse blocks in which this service node was supposed to have participated. Service node testing will fail if too many recent pulse blocks are missed. Contains keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily voted} list of \mbox{[}H\+E\+I\+G\+HT,R\+O\+U\+ND\mbox{]} pairs in which an expected pulse participation was recorded for this node. R\+O\+U\+ND starts at 0 and increments for backup pulse quorums if a previous round does not broadcast a pulse block for the given height in time.
+\item {\ttfamily missed} list of \mbox{[}H\+E\+I\+G\+HT,R\+O\+U\+ND\mbox{]} pairs in which pulse participation by this service node was expected but did not occur.
+\end{DoxyItemize}
+\item {\ttfamily quorumnet\+\_\+tests} array containing the results of recent attempts to connect to the remote node\textquotesingle{}s quorumnet port (while conducting timesync checks). The array contains two values\+: \mbox{[}S\+U\+C\+C\+E\+S\+S\+ES,F\+A\+I\+L\+U\+R\+ES\mbox{]}, where S\+U\+C\+C\+E\+S\+S\+ES is the number of recent successful connections and F\+A\+I\+L\+U\+R\+ES is the number of recent connection and/or request timeouts. If there are two many failures then the service node will fail testing.
+\item {\ttfamily timesync\+\_\+tests} array containing the results of recent time synchronization checks of this service node. Contains \mbox{[}S\+U\+C\+C\+E\+S\+S\+ES,F\+A\+I\+L\+U\+R\+ES\mbox{]} counts where S\+U\+C\+C\+E\+S\+S\+ES is the number of recent checks where the system clock was relatively close and F\+A\+I\+L\+U\+R\+ES is the number of recent checks where we received a significantly out-\/of-\/sync timestamp response from the service node. A service node fails tests if there are too many recent out-\/of-\/sync responses. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ae243526c7530c09044787a3ff4f3d48d}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ae243526c7530c09044787a3ff4f3d48d}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES@{cryptonote::rpc::GET\_SERVICE\_NODES}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_SERVICE\_NODES@{cryptonote::rpc::GET\_SERVICE\_NODES}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ab9be0ddfff869d3e7000032f4e7b12b2}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_ab9be0ddfff869d3e7000032f4e7b12b2}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES@{cryptonote::rpc::GET\_SERVICE\_NODES}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_SERVICE\_NODES@{cryptonote::rpc::GET\_SERVICE\_NODES}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

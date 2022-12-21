@@ -1,0 +1,288 @@
+\hypertarget{classcryptonote_1_1BlockchainSQLite}{}\doxysection{cryptonote\+::Blockchain\+S\+Q\+Lite Class Reference}
+\label{classcryptonote_1_1BlockchainSQLite}\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+
+
+{\ttfamily \#include $<$db\+\_\+sqlite.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::Blockchain\+S\+Q\+Lite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classcryptonote_1_1BlockchainSQLite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::Blockchain\+S\+Q\+Lite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classcryptonote_1_1BlockchainSQLite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a6334d461f7a665cb80bbb7f588ce3183}{Blockchain\+S\+Q\+Lite}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, fs\+::path \mbox{\hyperlink{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}{db\+\_\+path}})
+\item 
+\mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ae2aa3ebb2a60b232dc473dc511e4d939}{Blockchain\+S\+Q\+Lite}} (const \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite}{Blockchain\+S\+Q\+Lite}} \&)=delete
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a0f77835f3a4147f04275d27a5a478e75}{create\+\_\+schema}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_aeda6c26c26ef457fca92e20016d103ec}{upgrade\+\_\+schema}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a3edd3057743da397a62ba2c24b7e68be}{reset\+\_\+database}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_aec6dbae8a3f6c14cd788b405465542bd}{update\+\_\+height}} (uint64\+\_\+t new\+\_\+height)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_abddfdd7b40f065a7e65c9e48c1bf12c0}{increment\+\_\+height}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ac9992be6b99a5117600f2458115f432e}{decrement\+\_\+height}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ae98466561fdac73b0e21b316856241bb}{blockchain\+\_\+detached}} (uint64\+\_\+t new\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a28ba538bbc84857b7949d0016b795a04}{add\+\_\+sn\+\_\+rewards}} (const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&payments)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_af1a139159c7f999203fd5cde50c6185d}{subtract\+\_\+sn\+\_\+rewards}} (const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&payments)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a0c9bc1f382ff73d6ae1cdb310f77655f}{get\+\_\+accrued\+\_\+earnings}} (const std\+::string \&address)
+\item 
+std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ae5a122e947f81c5a1dd348a4276a2ddb}{get\+\_\+all\+\_\+accrued\+\_\+earnings}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a9c357333416c5a6f8b60da4880a09b7b}{get\+\_\+sn\+\_\+payments}} (uint64\+\_\+t block\+\_\+height)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a786474d8fd5ac87cec500735f37e37d7}{calculate\+\_\+rewards}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} hf\+\_\+version, uint64\+\_\+t distribution\+\_\+amount, const \mbox{\hyperlink{structservice__nodes_1_1service__node__info}{service\+\_\+nodes\+::service\+\_\+node\+\_\+info}} \&sn\+\_\+info, std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&rewards)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_adccb882b9a6a2fe3178d996a8a38f2a1}{add\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}}, const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&service\+\_\+nodes\+\_\+state)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_af5e47ab02c91e0d0499d6495bbd92c8b}{pop\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}}, const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&service\+\_\+nodes\+\_\+state)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_af0b4881199a9f75cec702f13cef3c932}{validate\+\_\+batch\+\_\+payment}} (const std\+::vector$<$ std\+::tuple$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, uint64\+\_\+t $>$$>$ \&miner\+\_\+tx\+\_\+vouts, const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&calculated\+\_\+payments\+\_\+from\+\_\+batching\+\_\+db, uint64\+\_\+t block\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_aaf94e939eeee020ef43c92edb66e639a}{save\+\_\+payments}} (uint64\+\_\+t block\+\_\+height, const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{batch\+\_\+sn\+\_\+payment}} $>$ \&paid\+\_\+amounts)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_af89092d30d3ebec043830921e891ea0e}{get\+\_\+block\+\_\+payments}} (uint64\+\_\+t block\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a02fda42ca2b7c6cdbff415ebeb432e52}{delete\+\_\+block\+\_\+payments}} (uint64\+\_\+t block\+\_\+height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ace092ebb16c3708505b684790feef7cc}{height}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a331157367e36f899ecb08bd380fcf631}{m\+\_\+nettype}}
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_acb420b180988bcc681702b032187009c}{filename}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a312f892c85fb88073ad479d913ab77f5}{reward\+\_\+handler}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}}, const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&service\+\_\+nodes\+\_\+state, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} add)
+\item 
+const std\+::string \& \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a855a3c5a9416421a8950a95ab95c0aa9}{get\+\_\+address\+\_\+str}} (const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \&addr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}}, std\+::string $>$ \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a41a92507eff74741fb9d1dfa338ef86f}{address\+\_\+str\+\_\+cache}}
+\item 
+std\+::pair$<$ \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}, \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} $>$ \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_ab8cd6d2d7e321bb89d4104bbf9ac8131}{parsed\+\_\+governance\+\_\+addr}} = \{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa334c4a4c42fdb79d7ebc3e73b517e6f8}{hf\+::none}}, \{\}\}
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite_a3cc967439c7622e73acc897c7219fde4}{address\+\_\+str\+\_\+cache\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a6334d461f7a665cb80bbb7f588ce3183}\label{classcryptonote_1_1BlockchainSQLite_a6334d461f7a665cb80bbb7f588ce3183}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!BlockchainSQLite@{BlockchainSQLite}}
+\index{BlockchainSQLite@{BlockchainSQLite}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{BlockchainSQLite()}{BlockchainSQLite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::\+Blockchain\+S\+Q\+Lite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{fs\+::path}]{db\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ae2aa3ebb2a60b232dc473dc511e4d939}\label{classcryptonote_1_1BlockchainSQLite_ae2aa3ebb2a60b232dc473dc511e4d939}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!BlockchainSQLite@{BlockchainSQLite}}
+\index{BlockchainSQLite@{BlockchainSQLite}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{BlockchainSQLite()}{BlockchainSQLite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::\+Blockchain\+S\+Q\+Lite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1BlockchainSQLite}{Blockchain\+S\+Q\+Lite}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_adccb882b9a6a2fe3178d996a8a38f2a1}\label{classcryptonote_1_1BlockchainSQLite_adccb882b9a6a2fe3178d996a8a38f2a1}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!add\_block@{add\_block}}
+\index{add\_block@{add\_block}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{add\_block()}{add\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::add\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&}]{service\+\_\+nodes\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a28ba538bbc84857b7949d0016b795a04}\label{classcryptonote_1_1BlockchainSQLite_a28ba538bbc84857b7949d0016b795a04}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!add\_sn\_rewards@{add\_sn\_rewards}}
+\index{add\_sn\_rewards@{add\_sn\_rewards}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{add\_sn\_rewards()}{add\_sn\_rewards()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::add\+\_\+sn\+\_\+rewards (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&}]{payments }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ae98466561fdac73b0e21b316856241bb}\label{classcryptonote_1_1BlockchainSQLite_ae98466561fdac73b0e21b316856241bb}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!blockchain\_detached@{blockchain\_detached}}
+\index{blockchain\_detached@{blockchain\_detached}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{blockchain\_detached()}{blockchain\_detached()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::blockchain\+\_\+detached (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a786474d8fd5ac87cec500735f37e37d7}\label{classcryptonote_1_1BlockchainSQLite_a786474d8fd5ac87cec500735f37e37d7}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!calculate\_rewards@{calculate\_rewards}}
+\index{calculate\_rewards@{calculate\_rewards}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{calculate\_rewards()}{calculate\_rewards()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::calculate\+\_\+rewards (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{hf\+\_\+version,  }\item[{uint64\+\_\+t}]{distribution\+\_\+amount,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1service__node__info}{service\+\_\+nodes\+::service\+\_\+node\+\_\+info}} \&}]{sn\+\_\+info,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&}]{rewards }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a0f77835f3a4147f04275d27a5a478e75}\label{classcryptonote_1_1BlockchainSQLite_a0f77835f3a4147f04275d27a5a478e75}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!create\_schema@{create\_schema}}
+\index{create\_schema@{create\_schema}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{create\_schema()}{create\_schema()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::create\+\_\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ac9992be6b99a5117600f2458115f432e}\label{classcryptonote_1_1BlockchainSQLite_ac9992be6b99a5117600f2458115f432e}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!decrement\_height@{decrement\_height}}
+\index{decrement\_height@{decrement\_height}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{decrement\_height()}{decrement\_height()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::decrement\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a02fda42ca2b7c6cdbff415ebeb432e52}\label{classcryptonote_1_1BlockchainSQLite_a02fda42ca2b7c6cdbff415ebeb432e52}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!delete\_block\_payments@{delete\_block\_payments}}
+\index{delete\_block\_payments@{delete\_block\_payments}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{delete\_block\_payments()}{delete\_block\_payments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::delete\+\_\+block\+\_\+payments (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{block\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a0c9bc1f382ff73d6ae1cdb310f77655f}\label{classcryptonote_1_1BlockchainSQLite_a0c9bc1f382ff73d6ae1cdb310f77655f}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!get\_accrued\_earnings@{get\_accrued\_earnings}}
+\index{get\_accrued\_earnings@{get\_accrued\_earnings}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{get\_accrued\_earnings()}{get\_accrued\_earnings()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::get\+\_\+accrued\+\_\+earnings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a855a3c5a9416421a8950a95ab95c0aa9}\label{classcryptonote_1_1BlockchainSQLite_a855a3c5a9416421a8950a95ab95c0aa9}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!get\_address\_str@{get\_address\_str}}
+\index{get\_address\_str@{get\_address\_str}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{get\_address\_str()}{get\_address\_str()}}
+{\footnotesize\ttfamily const std\+::string \& cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::get\+\_\+address\+\_\+str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \&}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ae5a122e947f81c5a1dd348a4276a2ddb}\label{classcryptonote_1_1BlockchainSQLite_ae5a122e947f81c5a1dd348a4276a2ddb}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!get\_all\_accrued\_earnings@{get\_all\_accrued\_earnings}}
+\index{get\_all\_accrued\_earnings@{get\_all\_accrued\_earnings}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{get\_all\_accrued\_earnings()}{get\_all\_accrued\_earnings()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ uint64\+\_\+t $>$ $>$ cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::get\+\_\+all\+\_\+accrued\+\_\+earnings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_af89092d30d3ebec043830921e891ea0e}\label{classcryptonote_1_1BlockchainSQLite_af89092d30d3ebec043830921e891ea0e}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!get\_block\_payments@{get\_block\_payments}}
+\index{get\_block\_payments@{get\_block\_payments}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{get\_block\_payments()}{get\_block\_payments()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::get\+\_\+block\+\_\+payments (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{block\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a9c357333416c5a6f8b60da4880a09b7b}\label{classcryptonote_1_1BlockchainSQLite_a9c357333416c5a6f8b60da4880a09b7b}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!get\_sn\_payments@{get\_sn\_payments}}
+\index{get\_sn\_payments@{get\_sn\_payments}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{get\_sn\_payments()}{get\_sn\_payments()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::get\+\_\+sn\+\_\+payments (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{block\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_abddfdd7b40f065a7e65c9e48c1bf12c0}\label{classcryptonote_1_1BlockchainSQLite_abddfdd7b40f065a7e65c9e48c1bf12c0}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!increment\_height@{increment\_height}}
+\index{increment\_height@{increment\_height}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{increment\_height()}{increment\_height()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::increment\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_af5e47ab02c91e0d0499d6495bbd92c8b}\label{classcryptonote_1_1BlockchainSQLite_af5e47ab02c91e0d0499d6495bbd92c8b}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!pop\_block@{pop\_block}}
+\index{pop\_block@{pop\_block}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{pop\_block()}{pop\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::pop\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&}]{service\+\_\+nodes\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a3edd3057743da397a62ba2c24b7e68be}\label{classcryptonote_1_1BlockchainSQLite_a3edd3057743da397a62ba2c24b7e68be}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!reset\_database@{reset\_database}}
+\index{reset\_database@{reset\_database}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{reset\_database()}{reset\_database()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::reset\+\_\+database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a312f892c85fb88073ad479d913ab77f5}\label{classcryptonote_1_1BlockchainSQLite_a312f892c85fb88073ad479d913ab77f5}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!reward\_handler@{reward\_handler}}
+\index{reward\_handler@{reward\_handler}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{reward\_handler()}{reward\_handler()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::reward\+\_\+handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}} \&}]{service\+\_\+nodes\+\_\+state,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_aaf94e939eeee020ef43c92edb66e639a}\label{classcryptonote_1_1BlockchainSQLite_aaf94e939eeee020ef43c92edb66e639a}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!save\_payments@{save\_payments}}
+\index{save\_payments@{save\_payments}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{save\_payments()}{save\_payments()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::save\+\_\+payments (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{block\+\_\+height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{batch\+\_\+sn\+\_\+payment}} $>$ \&}]{paid\+\_\+amounts }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_af1a139159c7f999203fd5cde50c6185d}\label{classcryptonote_1_1BlockchainSQLite_af1a139159c7f999203fd5cde50c6185d}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!subtract\_sn\_rewards@{subtract\_sn\_rewards}}
+\index{subtract\_sn\_rewards@{subtract\_sn\_rewards}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{subtract\_sn\_rewards()}{subtract\_sn\_rewards()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::subtract\+\_\+sn\+\_\+rewards (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&}]{payments }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_aec6dbae8a3f6c14cd788b405465542bd}\label{classcryptonote_1_1BlockchainSQLite_aec6dbae8a3f6c14cd788b405465542bd}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!update\_height@{update\_height}}
+\index{update\_height@{update\_height}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{update\_height()}{update\_height()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::update\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{new\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_aeda6c26c26ef457fca92e20016d103ec}\label{classcryptonote_1_1BlockchainSQLite_aeda6c26c26ef457fca92e20016d103ec}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!upgrade\_schema@{upgrade\_schema}}
+\index{upgrade\_schema@{upgrade\_schema}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{upgrade\_schema()}{upgrade\_schema()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::upgrade\+\_\+schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_af0b4881199a9f75cec702f13cef3c932}\label{classcryptonote_1_1BlockchainSQLite_af0b4881199a9f75cec702f13cef3c932}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!validate\_batch\_payment@{validate\_batch\_payment}}
+\index{validate\_batch\_payment@{validate\_batch\_payment}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{validate\_batch\_payment()}{validate\_batch\_payment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::validate\+\_\+batch\+\_\+payment (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::tuple$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, uint64\+\_\+t $>$$>$ \&}]{miner\+\_\+tx\+\_\+vouts,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&}]{calculated\+\_\+payments\+\_\+from\+\_\+batching\+\_\+db,  }\item[{uint64\+\_\+t}]{block\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a41a92507eff74741fb9d1dfa338ef86f}\label{classcryptonote_1_1BlockchainSQLite_a41a92507eff74741fb9d1dfa338ef86f}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!address\_str\_cache@{address\_str\_cache}}
+\index{address\_str\_cache@{address\_str\_cache}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{address\_str\_cache}{address\_str\_cache}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}}, std\+::string$>$ cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::address\+\_\+str\+\_\+cache\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a3cc967439c7622e73acc897c7219fde4}\label{classcryptonote_1_1BlockchainSQLite_a3cc967439c7622e73acc897c7219fde4}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!address\_str\_cache\_mutex@{address\_str\_cache\_mutex}}
+\index{address\_str\_cache\_mutex@{address\_str\_cache\_mutex}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{address\_str\_cache\_mutex}{address\_str\_cache\_mutex}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::address\+\_\+str\+\_\+cache\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_acb420b180988bcc681702b032187009c}\label{classcryptonote_1_1BlockchainSQLite_acb420b180988bcc681702b032187009c}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!filename@{filename}}
+\index{filename@{filename}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ace092ebb16c3708505b684790feef7cc}\label{classcryptonote_1_1BlockchainSQLite_ace092ebb16c3708505b684790feef7cc}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!height@{height}}
+\index{height@{height}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::height}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_a331157367e36f899ecb08bd380fcf631}\label{classcryptonote_1_1BlockchainSQLite_a331157367e36f899ecb08bd380fcf631}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!m\_nettype@{m\_nettype}}
+\index{m\_nettype@{m\_nettype}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{m\_nettype}{m\_nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::m\+\_\+nettype\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BlockchainSQLite_ab8cd6d2d7e321bb89d4104bbf9ac8131}\label{classcryptonote_1_1BlockchainSQLite_ab8cd6d2d7e321bb89d4104bbf9ac8131}} 
+\index{cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}!parsed\_governance\_addr@{parsed\_governance\_addr}}
+\index{parsed\_governance\_addr@{parsed\_governance\_addr}!cryptonote::BlockchainSQLite@{cryptonote::BlockchainSQLite}}
+\doxysubsubsection{\texorpdfstring{parsed\_governance\_addr}{parsed\_governance\_addr}}
+{\footnotesize\ttfamily std\+::pair$<$\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}, \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}}$>$ cryptonote\+::\+Blockchain\+S\+Q\+Lite\+::parsed\+\_\+governance\+\_\+addr = \{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75efa334c4a4c42fdb79d7ebc3e73b517e6f8}{hf\+::none}}, \{\}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blockchain\+\_\+db/sqlite/\mbox{\hyperlink{db__sqlite_8h}{db\+\_\+sqlite.\+h}}\item 
+src/blockchain\+\_\+db/sqlite/\mbox{\hyperlink{db__sqlite_8cpp}{db\+\_\+sqlite.\+cpp}}\end{DoxyCompactItemize}

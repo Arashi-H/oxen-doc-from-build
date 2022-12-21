@@ -1,0 +1,233 @@
+\hypertarget{wallet2_8cpp}{}\doxysection{src/wallet/wallet2.cpp File Reference}
+\label{wallet2_8cpp}\index{src/wallet/wallet2.cpp@{src/wallet/wallet2.cpp}}
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$cpr/parameters.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/base64.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/password.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/tx\+\_\+sanity\+\_\+check.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/wallet\+\_\+errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multisig/multisig.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/boost\+\_\+serialization\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/threadpool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/binary\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/boost\+\_\+std\+\_\+variant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mnemonics/electrum-\/words.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/i18n.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/apply\+\_\+permutation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rapidjson/document.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rapidjson/writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rapidjson/stringbuffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/json\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/memwipe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/base58.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/combinator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/notify.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Sigs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/fmt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringdb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}device/device\+\_\+cold.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/keccak.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sodium.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::options}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1ons__prepared__args}{tools\+::ons\+\_\+prepared\+\_\+args}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a46d103c9e89b3bc69299b8fe894e2050}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::tx\+\_\+weight\+\_\+target}} (uint64\+\_\+t \mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6397362a071d1c5305d56f52b842c29f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+default\+\_\+ringdb\+\_\+path}} ()
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a719636d8435f893b5df7fcb16459de85}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pack\+\_\+multisignature\+\_\+keys}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&keys, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&signer\+\_\+secret\+\_\+key)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae8a05a1d8f8e4ab8b74cac48c1877fcc}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::secret\+\_\+keys\+\_\+to\+\_\+public\+\_\+keys}} (const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&keys)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6b0057dc507c45bee8c964c02d08cdfa}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::keys\+\_\+intersect}} (const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&s1, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&s2)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1e6f9fece8132f74ed9e3c2eefd12ab3}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+text\+\_\+reason}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&res, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const $\ast$tx, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a922164123c0e0791bcca2db5844d044f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+num\+\_\+outputs}} (const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&dsts, const std\+::vector$<$ \mbox{\hyperlink{classtools_1_1wallet2_aa5a0aa34d09afb50c5ff528b03099604}{tools\+::wallet2\+::transfer\+\_\+details}} $>$ \&transfers, const std\+::vector$<$ size\+\_\+t $>$ \&selected\+\_\+transfers, const \mbox{\hyperlink{structcryptonote_1_1oxen__construct__tx__params}{oxen\+\_\+construct\+\_\+tx\+\_\+params}} \&tx\+\_\+params)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a081564b0f3c564a2280f1a1d1d42660b}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::do\+\_\+prepare\+\_\+file\+\_\+names}} (const fs\+::path \&file\+\_\+path, fs\+::path \&keys\+\_\+file, fs\+::path \&wallet\+\_\+file)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1483468b546d7a7f49c3fb7bb2fac1e6}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::calculate\+\_\+fee\+\_\+from\+\_\+weight}} (\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t weight, uint64\+\_\+t outputs, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0cc88c6737e248f1488db3cb2f4f39d9}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+weight\+\_\+string}} (size\+\_\+t weight)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87b85e0fbb9493124d6574a83232026f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+weight\+\_\+string}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, size\+\_\+t blob\+\_\+size)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a898db8e06b563be876e55fcaeb6710d2}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::make\+\_\+basic}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unattended, const options \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae10fc2154419c2cd09e0685606a6a044}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+password}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const options \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter, const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} verify)
+\item 
+std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $>$, \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aebcdd5ee6b532e0278d44ac413834dff}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::generate\+\_\+from\+\_\+json}} (const fs\+::path \&json\+\_\+file, const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unattended, const options \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d32bf668d056c126605d251d4799f9a}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::emplace\+\_\+or\+\_\+replace}} (std\+::unordered\+\_\+multimap$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} $>$ \&container, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&key, const \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} \&pd)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acd796a63d18417d907e97b94d8cce0fe}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::drop\+\_\+from\+\_\+short\+\_\+history}} (std\+::list$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&short\+\_\+chain\+\_\+history, size\+\_\+t N)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7fcffc036b18bebc6c9c41b1371c7a1f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+rct\+\_\+tx\+\_\+size}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad1e775754f5ca33acf44000928f63c18}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+tx\+\_\+weight}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca306473b1e3f55517e20734ddf8b94}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+fee}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag, \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a83962596575c15c0ebbf81c340f74130}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::calculate\+\_\+fee}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, size\+\_\+t blob\+\_\+size, \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1f4b4f3fd00b0f5954fbd4df0fed4549}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+short\+\_\+payment\+\_\+id}} (\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&payment\+\_\+id8, const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&ptx, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1c76b76df4dff79b0398ba1fbca9be06}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+construction\+\_\+data\+\_\+with\+\_\+decrypted\+\_\+short\+\_\+payment\+\_\+id}} (const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&ptx, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad33b27249b93812b10697f3fa39e45e8}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+subaddress\+\_\+clamped\+\_\+sum}} (uint32\+\_\+t idx, uint32\+\_\+t extra)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a324a3f3cce0ce88dd2874859eb43e90b}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::setup\+\_\+shim}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{hw\+::wallet\+\_\+shim}} $\ast$shim, \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $\ast$wallet)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac76c6ee4c2966933f98b8e7cb24c63d4}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+pruned\+\_\+tx}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&entry, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{namespacetools_adca433931eff18e253279993682886b8}{tools\+::decode\+Rct}} (const \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} \&rv, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, unsigned int i, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mask, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+{\footnotesize template$<$typename It , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ crypto\+::hash, std\+::remove\+\_\+const\+\_\+t$<$ typename It\+::value\+\_\+type $>$$>$, int $>$  = 0$>$ }\\static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacetools_a7143d1d1d64d47168c7719fa80d59bfe}{tools\+::hashes\+\_\+to\+\_\+hex}} (It begin, It end)
+\item 
+static void \mbox{\hyperlink{namespacetools_a148786b75e0c55b2ca1a3b267e11a79d}{tools\+::set\+\_\+confirmations}} (\mbox{\hyperlink{structwallet_1_1transfer__view}{wallet\+::transfer\+\_\+view}} \&entry, uint64\+\_\+t blockchain\+\_\+height, uint64\+\_\+t block\+\_\+reward)
+\item 
+static std\+::string \mbox{\hyperlink{namespacetools_a983a8da9c5c8668ad07339aa7c11f0ea}{tools\+::hex\+\_\+payment\+\_\+id}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&p)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aaed13d28ba9a594ef4a487bed85d57ac}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+index}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec, size\+\_\+t idx)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a4a472548b907daa915a8132192bb2fda}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+random\+\_\+value}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae881497ba043f706cd5e61e1d35bb3c6}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+back}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a756e250cd4d839549abd7f0cd4e009af}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+if\+\_\+present}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} e)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a5b8a90859f73d6757545e7c2aac5a396}{tools\+::try\+\_\+generate\+\_\+ons\+\_\+signature}} (wallet2 const \&wallet, std\+::string const \&curr\+\_\+owner, std\+::string const $\ast$new\+\_\+owner, std\+::string const $\ast$new\+\_\+backup\+\_\+owner, ons\+\_\+prepared\+\_\+args \&result)
+\item 
+static ons\+\_\+prepared\+\_\+args \mbox{\hyperlink{namespacetools_a2963ca78694328295db5f72250baa83b}{tools\+::prepare\+\_\+tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system\+\_\+values}} (wallet2 const \&wallet, \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{ons\+::mapping\+\_\+type}} type, uint32\+\_\+t priority, std\+::string name, std\+::string const $\ast$value, std\+::string const $\ast$owner, std\+::string const $\ast$backup\+\_\+owner, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} make\+\_\+signature, \mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16db}{ons\+::ons\+\_\+tx\+\_\+type}} \mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913e}{txtype}}, uint32\+\_\+t account\+\_\+index, std\+::string $\ast$reason, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $\ast$response)
+\item 
+std\+::pair$<$ std\+::set$<$ uint64\+\_\+t $>$, size\+\_\+t $>$ \mbox{\hyperlink{namespacetools_a9d041b8337d9ca8f227e9bedc6f923d8}{tools\+::outs\+\_\+unique}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classtools_1_1wallet2_a4893ce184407fb6663b94db5106a43e2}{tools\+::wallet2\+::get\+\_\+outs\+\_\+entry}} $>$$>$ \&outs)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{namespacetools_ae26e2a052dc111df7d649df498dbd2b0}{tools\+::get\+\_\+count\+\_\+above}} (const std\+::vector$<$ wallet2\+::transfer\+\_\+details $>$ \&transfers, const std\+::vector$<$ size\+\_\+t $>$ \&indices, uint64\+\_\+t threshold)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a2506c69b6021d2f0b3803efdb3f118f0}{tools\+::try\+\_\+get\+\_\+tx\+\_\+pub\+\_\+key\+\_\+using\+\_\+td}} (const \mbox{\hyperlink{classtools_1_1wallet2_aa5a0aa34d09afb50c5ff528b03099604}{tools\+::wallet2\+::transfer\+\_\+details}} \&td, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub\+\_\+key)
+\item 
+static std\+::string \mbox{\hyperlink{namespacetools_a5cd549570d355afe30ff54708db6ab65}{tools\+::uri\+\_\+decode}} (std\+::string\+\_\+view encoded)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a0e9957e76ba1eb5e34be944abefe5c94}{tools\+::parse\+\_\+subaddress\+\_\+indices}} (std\+::string\+\_\+view arg, std\+::set$<$ uint32\+\_\+t $>$ \&subaddr\+\_\+indices, std\+::string $\ast$err\+\_\+msg)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a64026b2f297b61f1d512e72bc52c56e1}{tools\+::parse\+\_\+priority}} (const std\+::string \&arg, uint32\+\_\+t \&priority)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a766e93be40bd6573f64467d94ec4b8c8}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}wallet.\+wallet2\char`\"{})
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aa6c102978d3306193a5e03c2952c2907}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki unsigned tx set\textbackslash{}004\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acb88e9bd11dd6eab8863839aaf3cbde5}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki signed tx set\textbackslash{}004\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_af5a8db5c07efd78123ad06b78525c05e}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki multisig unsigned tx set\textbackslash{}001\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aafc0f6894b15a5322c1d107bd0a760aa}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87e8c04d4f1ac26be7c6a2339ac41c31}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7675f88ab1c44c9f8560a5d293f5fddd}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7793b1c576688ba0fcdcab906ae6f44b}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+A\+T\+IO}} = 0.\+5f
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} = 1.\+8f
+\item 
+constexpr time\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6e06a2626cd6dc93bfba82b8b629a8bb}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+Z\+O\+NE}} = R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS $\ast$ 86400
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a70a4ad48003df982cf5b670eb199f813}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+B\+L\+O\+C\+KS}} = R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS $\ast$ B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7edc7d3ec83c9ac0f15ade376aef08cc}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+F\+E\+E\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+G\+R\+A\+C\+E\+\_\+\+B\+L\+O\+C\+KS}} = 10
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a343ae5114a1ec93c100e03203bb93fa9}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+E\+C\+O\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+E\+L\+A\+T\+E\+D\+N\+E\+S\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 0.\+0f
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3611f93f80c027bbd696d41ae948f185}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki key image export\textbackslash{}002\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a8cc4bd0c4dcffa39fe3aba3a870f54a1}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki multisig export\textbackslash{}001\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ace04f62b2e91b7423e6788ff8075c768}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki output export\textbackslash{}003\char`\"{}sv
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0fecf69ad4fc5d2b519b51c0825c54c8}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+H\+E\+I\+G\+HT}} = 99999999
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0441e7e468a0b8b2de5dcc9732ccb0b6}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+V\+I\+C\+I\+N\+I\+TY}} = 1500
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a76971f79d6a094f0ce781c6431ae919e}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+F\+I\+R\+S\+T\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+G\+R\+A\+N\+U\+L\+A\+R\+I\+TY}} = 1024
+\item 
+constexpr double \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca1eb8fb2f1ad738b931a925a931555}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+G\+A\+M\+M\+A\+\_\+\+S\+H\+A\+PE}} = 19.\+28
+\item 
+constexpr double \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_afb25c87c741dafd0593b4974f74d1afd}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+G\+A\+M\+M\+A\+\_\+\+S\+C\+A\+LE}} = 1/1.\+61
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac9dfc4fbc80802cf09a91d68c4660911}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+O\+U\+NT}} = 5
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a5b493fd292e37430df34a7ae520572e2}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+L\+UE}} = 2$\ast$\mbox{\hyperlink{namespaceoxen_adf4713cecce29f873b3c786fd3cd2a01}{oxen\+::\+C\+O\+IN}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aea76f3310c384d1a9f7dd67e8f6a3066}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+L\+O\+C\+K\+\_\+\+T\+I\+M\+E\+O\+UT}} = 10min
+\item 
+constexpr \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a68f290af61ee0c5e793571c041fa0bc1}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+I\+G\+N\+O\+R\+E\+\_\+\+L\+O\+N\+G\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+I\+D\+\_\+\+F\+R\+O\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}} = hf\+::hf12\+\_\+checkpointing
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a15c19bdb985fee5470725ef196640bbb}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+I\+G\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Sig\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d4484831e31c72633edcfc3d9accbdc}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Multisig\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a093b0ec22aa2e765e63ca496b8d6f5bb}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Sig\+Multisig\+Pk\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac837e9c337d29f59559c847b3e626d04}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+T\+R\+A\+\_\+\+I\+N\+F\+O\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Multisigx\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_abe1153a8a034b9f3effdf22b5548dbff}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Spend\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3125925eed1aa26d615b0b53639ab08f}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+O\+U\+T\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Out\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_adf5693a06766ea39911bff27236be3d0}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+I\+N\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}In\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3decda22c076a4db98a405f0bdd91aaa}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Reserve\+Proof\+V1\char`\"{}sv
+\item 
+static const std\+::regex \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a9cd05cc3eba1d87321d4b3b44e191b56}{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::protocol\+\_\+re}} \{R\char`\"{}($^\wedge$(\mbox{[}a-\/zA-\/Z\mbox{]}\mbox{[}a-\/zA-\/Z0-\/9+.-\/\mbox{]}$\ast$)\+:)\char`\"{}\}
+\item 
+static constexpr auto \mbox{\hyperlink{namespacetools_a79eae0a802b484a739224f157e5411ae}{tools\+::uri\+\_\+prefix}} = \char`\"{}oxen\+:\char`\"{}sv
+\end{DoxyCompactItemize}

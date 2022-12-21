@@ -1,0 +1,226 @@
+\hypertarget{classtools_1_1i__wallet2__callback}{}\doxysection{tools\+::i\+\_\+wallet2\+\_\+callback Class Reference}
+\label{classtools_1_1i__wallet2__callback}\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+
+
+{\ttfamily \#include $<$wallet2.\+h$>$}
+
+
+
+Inheritance diagram for tools\+::i\+\_\+wallet2\+\_\+callback\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtools_1_1i__wallet2__callback__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a9692abe1f1e7ef2e1b46b5105114d672}{on\+\_\+new\+\_\+block}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}})
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a400a659bc63c5223c50e02f866aab718}{on\+\_\+money\+\_\+received}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, uint64\+\_\+t amount, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&subaddr\+\_\+index, uint64\+\_\+t unlock\+\_\+time, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a8dbe791ae4288f8f274ebbecb65dfc38}{on\+\_\+unconfirmed\+\_\+money\+\_\+received}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, uint64\+\_\+t amount, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&subaddr\+\_\+index)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a2c43a0510f47ecbdbdc5d2befe9de90f}{on\+\_\+money\+\_\+spent}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&in\+\_\+tx, uint64\+\_\+t amount, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&spend\+\_\+tx, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&subaddr\+\_\+index)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_aaf984acc2065d1da1d02c5d5a85a76dd}{on\+\_\+skip\+\_\+transaction}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx)
+\item 
+virtual std\+::optional$<$ epee\+::wipeable\+\_\+string $>$ \mbox{\hyperlink{classtools_1_1i__wallet2__callback_abe3724b1d75b9f48de142b99c7ccb7f3}{on\+\_\+get\+\_\+password}} (const char $\ast$reason)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_af1ae3204590220522882c05a74109660}{on\+\_\+lw\+\_\+new\+\_\+block}} (uint64\+\_\+t height)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_ab64ffb6d1f5780723b91f0585495bf06}{on\+\_\+lw\+\_\+money\+\_\+received}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, uint64\+\_\+t amount)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a5bb6e866662d8209dbe8f25f99a1857e}{on\+\_\+lw\+\_\+unconfirmed\+\_\+money\+\_\+received}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, uint64\+\_\+t amount)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a8bf4c87c4889e68703e7d2ccbde23494}{on\+\_\+lw\+\_\+money\+\_\+spent}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, uint64\+\_\+t amount)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a5e33910e29e6a738220400eab259812b}{on\+\_\+device\+\_\+button\+\_\+request}} (uint64\+\_\+t code)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a3760a0805a2b4fbfd3ab4710314bbcc4}{on\+\_\+device\+\_\+button\+\_\+pressed}} ()
+\item 
+virtual std\+::optional$<$ epee\+::wipeable\+\_\+string $>$ \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a07afc9bbf70b29fb9e7a7a3ddb294171}{on\+\_\+device\+\_\+pin\+\_\+request}} ()
+\item 
+virtual std\+::optional$<$ epee\+::wipeable\+\_\+string $>$ \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a0a0ce6479102b73155624a9d5ee6268c}{on\+\_\+device\+\_\+passphrase\+\_\+request}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&on\+\_\+device)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_af96db372f2fbf4ac0c3e65e84819f6f8}{on\+\_\+device\+\_\+progress}} (const \mbox{\hyperlink{classhw_1_1device__progress}{hw\+::device\+\_\+progress}} \&event)
+\item 
+virtual void \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a586db475e771b7afbf85dd23c270a830}{on\+\_\+pool\+\_\+tx\+\_\+removed}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid)
+\item 
+virtual \mbox{\hyperlink{classtools_1_1i__wallet2__callback_a96a0a87d76911d101a78c6669539a824}{$\sim$i\+\_\+wallet2\+\_\+callback}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a96a0a87d76911d101a78c6669539a824}\label{classtools_1_1i__wallet2__callback_a96a0a87d76911d101a78c6669539a824}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!````~i\_wallet2\_callback@{$\sim$i\_wallet2\_callback}}
+\index{````~i\_wallet2\_callback@{$\sim$i\_wallet2\_callback}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{$\sim$i\_wallet2\_callback()}{~i\_wallet2\_callback()}}
+{\footnotesize\ttfamily virtual tools\+::i\+\_\+wallet2\+\_\+callback\+::$\sim$i\+\_\+wallet2\+\_\+callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a3760a0805a2b4fbfd3ab4710314bbcc4}\label{classtools_1_1i__wallet2__callback_a3760a0805a2b4fbfd3ab4710314bbcc4}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_device\_button\_pressed@{on\_device\_button\_pressed}}
+\index{on\_device\_button\_pressed@{on\_device\_button\_pressed}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_device\_button\_pressed()}{on\_device\_button\_pressed()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+device\+\_\+button\+\_\+pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a38afae3a21741e54bb3c58486546aab3}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a5e33910e29e6a738220400eab259812b}\label{classtools_1_1i__wallet2__callback_a5e33910e29e6a738220400eab259812b}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_device\_button\_request@{on\_device\_button\_request}}
+\index{on\_device\_button\_request@{on\_device\_button\_request}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_device\_button\_request()}{on\_device\_button\_request()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+device\+\_\+button\+\_\+request (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_aa58ec137ce96a12293a5bfb0658c49bb}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a0cc49a54fce5d3e4cc86fab978532904}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a0a0ce6479102b73155624a9d5ee6268c}\label{classtools_1_1i__wallet2__callback_a0a0ce6479102b73155624a9d5ee6268c}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_device\_passphrase\_request@{on\_device\_passphrase\_request}}
+\index{on\_device\_passphrase\_request@{on\_device\_passphrase\_request}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_device\_passphrase\_request()}{on\_device\_passphrase\_request()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$epee\+::wipeable\+\_\+string$>$ tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+device\+\_\+passphrase\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{on\+\_\+device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a7863557c62f167e19cec366b7c0facac}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a1d60bc7d29245f35868a1580ea3f1ac9}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a07afc9bbf70b29fb9e7a7a3ddb294171}\label{classtools_1_1i__wallet2__callback_a07afc9bbf70b29fb9e7a7a3ddb294171}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_device\_pin\_request@{on\_device\_pin\_request}}
+\index{on\_device\_pin\_request@{on\_device\_pin\_request}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_device\_pin\_request()}{on\_device\_pin\_request()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$epee\+::wipeable\+\_\+string$>$ tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+device\+\_\+pin\+\_\+request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a2dcd4ed485a325dbba7d283709b25442}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a6b89863b2135e2cdfa7b1b382b97bb26}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_af96db372f2fbf4ac0c3e65e84819f6f8}\label{classtools_1_1i__wallet2__callback_af96db372f2fbf4ac0c3e65e84819f6f8}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_device\_progress@{on\_device\_progress}}
+\index{on\_device\_progress@{on\_device\_progress}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_device\_progress()}{on\_device\_progress()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+device\+\_\+progress (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhw_1_1device__progress}{hw\+::device\+\_\+progress}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_adc8998dc78145fcef4322ac1c7bf9d97}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_abe3724b1d75b9f48de142b99c7ccb7f3}\label{classtools_1_1i__wallet2__callback_abe3724b1d75b9f48de142b99c7ccb7f3}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_get\_password@{on\_get\_password}}
+\index{on\_get\_password@{on\_get\_password}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_get\_password()}{on\_get\_password()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$epee\+::wipeable\+\_\+string$>$ tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+get\+\_\+password (\begin{DoxyParamCaption}\item[{const char $\ast$}]{reason }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classcryptonote_1_1simple__wallet_aaf53cfda144984538d709a9b65484ecd}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_ab64ffb6d1f5780723b91f0585495bf06}\label{classtools_1_1i__wallet2__callback_ab64ffb6d1f5780723b91f0585495bf06}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_lw\_money\_received@{on\_lw\_money\_received}}
+\index{on\_lw\_money\_received@{on\_lw\_money\_received}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_lw\_money\_received()}{on\_lw\_money\_received()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+lw\+\_\+money\+\_\+received (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_af4791c87406e62736bff8a1731994ea9}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a8bf4c87c4889e68703e7d2ccbde23494}\label{classtools_1_1i__wallet2__callback_a8bf4c87c4889e68703e7d2ccbde23494}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_lw\_money\_spent@{on\_lw\_money\_spent}}
+\index{on\_lw\_money\_spent@{on\_lw\_money\_spent}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_lw\_money\_spent()}{on\_lw\_money\_spent()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+lw\+\_\+money\+\_\+spent (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_aa0426577a25a4a3f879a12a17b95d6f1}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_af1ae3204590220522882c05a74109660}\label{classtools_1_1i__wallet2__callback_af1ae3204590220522882c05a74109660}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_lw\_new\_block@{on\_lw\_new\_block}}
+\index{on\_lw\_new\_block@{on\_lw\_new\_block}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_lw\_new\_block()}{on\_lw\_new\_block()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+lw\+\_\+new\+\_\+block (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a1eb02895f0bb24dcdd9cdbea7df73b6f}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a5bb6e866662d8209dbe8f25f99a1857e}\label{classtools_1_1i__wallet2__callback_a5bb6e866662d8209dbe8f25f99a1857e}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_lw\_unconfirmed\_money\_received@{on\_lw\_unconfirmed\_money\_received}}
+\index{on\_lw\_unconfirmed\_money\_received@{on\_lw\_unconfirmed\_money\_received}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_lw\_unconfirmed\_money\_received()}{on\_lw\_unconfirmed\_money\_received()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+lw\+\_\+unconfirmed\+\_\+money\+\_\+received (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a4be84b30902fa4c027f3fd734179a1f3}{Wallet\+::\+Wallet2\+Callback\+Impl}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a400a659bc63c5223c50e02f866aab718}\label{classtools_1_1i__wallet2__callback_a400a659bc63c5223c50e02f866aab718}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_money\_received@{on\_money\_received}}
+\index{on\_money\_received@{on\_money\_received}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_money\_received()}{on\_money\_received()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+money\+\_\+received (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{subaddr\+\_\+index,  }\item[{uint64\+\_\+t}]{unlock\+\_\+time,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{blink }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_af991b68f2b678acf8a4bef788a28ea8d}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_ad580271cd57a5af35b306c553b301a89}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a2c43a0510f47ecbdbdc5d2befe9de90f}\label{classtools_1_1i__wallet2__callback_a2c43a0510f47ecbdbdc5d2befe9de90f}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_money\_spent@{on\_money\_spent}}
+\index{on\_money\_spent@{on\_money\_spent}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_money\_spent()}{on\_money\_spent()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+money\+\_\+spent (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{in\+\_\+tx,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{spend\+\_\+tx,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{subaddr\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a5aae6ccb9ba7663b7d1232def772ad01}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a016ec0a6724a72fe57ed3f831463baab}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a9692abe1f1e7ef2e1b46b5105114d672}\label{classtools_1_1i__wallet2__callback_a9692abe1f1e7ef2e1b46b5105114d672}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_new\_block@{on\_new\_block}}
+\index{on\_new\_block@{on\_new\_block}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_new\_block()}{on\_new\_block()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+new\+\_\+block (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_a75465c1d47700e13ce6fc6472360092d}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a35e9c1fc7c4c8b2379a5f951f4c221f4}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a586db475e771b7afbf85dd23c270a830}\label{classtools_1_1i__wallet2__callback_a586db475e771b7afbf85dd23c270a830}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_pool\_tx\_removed@{on\_pool\_tx\_removed}}
+\index{on\_pool\_tx\_removed@{on\_pool\_tx\_removed}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_pool\_tx\_removed()}{on\_pool\_tx\_removed()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+pool\+\_\+tx\+\_\+removed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_aaf984acc2065d1da1d02c5d5a85a76dd}\label{classtools_1_1i__wallet2__callback_aaf984acc2065d1da1d02c5d5a85a76dd}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_skip\_transaction@{on\_skip\_transaction}}
+\index{on\_skip\_transaction@{on\_skip\_transaction}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_skip\_transaction()}{on\_skip\_transaction()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+skip\+\_\+transaction (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_af95db3e65cbf70a9278c413499d25251}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_a09574e67bae1539e185ba82ddbcac77b}{cryptonote\+::simple\+\_\+wallet}}.
+
+\mbox{\Hypertarget{classtools_1_1i__wallet2__callback_a8dbe791ae4288f8f274ebbecb65dfc38}\label{classtools_1_1i__wallet2__callback_a8dbe791ae4288f8f274ebbecb65dfc38}} 
+\index{tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}!on\_unconfirmed\_money\_received@{on\_unconfirmed\_money\_received}}
+\index{on\_unconfirmed\_money\_received@{on\_unconfirmed\_money\_received}!tools::i\_wallet2\_callback@{tools::i\_wallet2\_callback}}
+\doxysubsubsection{\texorpdfstring{on\_unconfirmed\_money\_received()}{on\_unconfirmed\_money\_received()}}
+{\footnotesize\ttfamily virtual void tools\+::i\+\_\+wallet2\+\_\+callback\+::on\+\_\+unconfirmed\+\_\+money\+\_\+received (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{subaddr\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl_afac9a52d630f43c304d8d9334adeb68a}{Wallet\+::\+Wallet2\+Callback\+Impl}}, and \mbox{\hyperlink{classcryptonote_1_1simple__wallet_ac16a73e2a0c03e36c8c17e2c938eba31}{cryptonote\+::simple\+\_\+wallet}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet2_8h}{wallet2.\+h}}\end{DoxyCompactItemize}

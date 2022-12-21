@@ -1,0 +1,341 @@
+\hypertarget{classwallet_1_1DefaultDaemonComms}{}\doxysection{wallet\+::Default\+Daemon\+Comms Class Reference}
+\label{classwallet_1_1DefaultDaemonComms}\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+
+
+{\ttfamily \#include $<$default\+\_\+daemon\+\_\+comms.\+hpp$>$}
+
+
+
+Inheritance diagram for wallet\+::Default\+Daemon\+Comms\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwallet_1_1DefaultDaemonComms__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::Default\+Daemon\+Comms\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwallet_1_1DefaultDaemonComms__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aa415d25fcf11bbff656f060823f06ccf}{Default\+Daemon\+Comms}} (std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a0879f665f16b34f491d829e1fdd739ae}{omq}}, \mbox{\hyperlink{structwallet_1_1DaemonCommsConfig}{Daemon\+Comms\+Config}} cfg=\{\})
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ad4281fe11345997f6df34d179a931231}{set\+\_\+remote}} (std\+::string\+\_\+view \mbox{\hyperlink{classwallet_1_1address}{address}})
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a114d2d6e92bc1e34fae461d8e5026cc1}{propogate\+\_\+config}} ()
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aede4da2fe3609e0551aaf56f0a8cac58}{get\+\_\+height}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a51798d3e64fbd9501817b7886a8692cf}{register\+\_\+wallet}} (\mbox{\hyperlink{classwallet_1_1Wallet}{wallet\+::\+Wallet}} \&wallet, int64\+\_\+t height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+sync\+\_\+height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} new\+\_\+wallet)
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_af9dd8566cb7f7917d8e5a8707ac790d1}{deregister\+\_\+wallet}} (\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} \&wallet, std\+::promise$<$ void $>$ \&p)
+\item 
+std\+::pair$<$ int64\+\_\+t, int64\+\_\+t $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ad517763f8cad0feb64b476303d62ae0d}{get\+\_\+fee\+\_\+parameters}} ()
+\item 
+std\+::future$<$ std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}} $>$ $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a8af7c5513f8cf9da9dc1c75b6aa7aa8d}{fetch\+\_\+decoys}} (const std\+::vector$<$ int64\+\_\+t $>$ \&indexes, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} with\+\_\+txid)
+\item 
+std\+::future$<$ std\+::string $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aabadd803706ee5de204e77dcf8f13a1f}{submit\+\_\+transaction}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a4035601fc7ed14ac12df291acb3b0c72}{on\+\_\+get\+\_\+blocks\+\_\+response}} (std\+::vector$<$ std\+::string $>$ response)
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a31100834bf943fd0e00d9d60fd13782b}{request\+\_\+top\+\_\+block\+\_\+info}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a12eaa551f7e3c860498dbe25b55ea424}{for\+\_\+each\+\_\+wallet}} (std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} $>$)$>$ func)
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a0a378b7decd5ba623c2ba86eba2e8338}{get\+\_\+blocks}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_af17b8206a9eb2a3c1c4c261c72fe20c5}{got\+\_\+blocks}} (int64\+\_\+t start\+\_\+height, int64\+\_\+t end\+\_\+height)
+\item 
+void \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a765d3b33a6b8b9453c7dedf215e13d1f}{start\+\_\+syncing}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} $>$, int64\+\_\+t $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a16310defe47ee045ed0b202699219dcb}{wallets}}
+\item 
+\mbox{\hyperlink{structwallet_1_1DaemonCommsConfig}{Daemon\+Comms\+Config}} \& \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ae43c92f896155c454a4dca38ebfc559d}{config}}
+\item 
+std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$ \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a0879f665f16b34f491d829e1fdd739ae}{omq}}
+\item 
+oxenmq\+::address \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aa92c9855c634f930db49d6eb483a39a1}{remote}}
+\item 
+oxenmq\+::\+Connection\+ID \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a0b6c2b26793cfe5e06db5f855561d997}{conn}}
+\item 
+oxenmq\+::\+Timer\+ID \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a8e00b25dada668e47d5650736d86291b}{status\+\_\+timer}}
+\item 
+oxenmq\+::\+Tagged\+Thread\+ID \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a4a2833c3848fa110e0d37fd882dd8748}{sync\+\_\+thread}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a6edd338070ac8c0d3abd5015faca61b4}{max\+\_\+response\+\_\+size}} = \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a258d17fefb35385e504d84a5eb5cf808}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aa6200055ab688d30f90977835849db60}{top\+\_\+block\+\_\+hash}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a9060b2542067113a2f04974e599ccc33}{top\+\_\+block\+\_\+height}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a3a0f5af8e8743a07848b000918028d1a}{sync\+\_\+from\+\_\+height}} = 0
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a4da750f41c5647d4100ee611cc003534}{syncing}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a93893a321d12906165596cb763a1334f}{max\+\_\+sync\+\_\+blocks}} = \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a3947c89b76d068cfae19d12cd893ba44}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+S\+Y\+N\+C\+\_\+\+B\+L\+O\+C\+KS}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aef6cea9e69c9a7a0d321868cdad2a985}{fee\+\_\+per\+\_\+byte}} = \mbox{\hyperlink{namespacecryptonote_ab7217d4bb9e010da1ec099921c98c250}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V13}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ad6d417f36df1542308810589853a6c30}{fee\+\_\+per\+\_\+output}} = \mbox{\hyperlink{namespacecryptonote_a01a05f31eeb91828b9e54b4856a5b7e5}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V18}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a258d17fefb35385e504d84a5eb5cf808}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}} = 1 $\ast$ 1024 $\ast$ 1024
+\item 
+static constexpr int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a3947c89b76d068cfae19d12cd893ba44}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+S\+Y\+N\+C\+\_\+\+B\+L\+O\+C\+KS}} = 200
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aa415d25fcf11bbff656f060823f06ccf}\label{classwallet_1_1DefaultDaemonComms_aa415d25fcf11bbff656f060823f06ccf}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!DefaultDaemonComms@{DefaultDaemonComms}}
+\index{DefaultDaemonComms@{DefaultDaemonComms}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{DefaultDaemonComms()}{DefaultDaemonComms()}}
+{\footnotesize\ttfamily wallet\+::\+Default\+Daemon\+Comms\+::\+Default\+Daemon\+Comms (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$}]{omq,  }\item[{\mbox{\hyperlink{structwallet_1_1DaemonCommsConfig}{Daemon\+Comms\+Config}}}]{cfg = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_af9dd8566cb7f7917d8e5a8707ac790d1}\label{classwallet_1_1DefaultDaemonComms_af9dd8566cb7f7917d8e5a8707ac790d1}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!deregister\_wallet@{deregister\_wallet}}
+\index{deregister\_wallet@{deregister\_wallet}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{deregister\_wallet()}{deregister\_wallet()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::deregister\+\_\+wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwallet_1_1Wallet}{wallet\+::\+Wallet}} \&}]{wallet,  }\item[{std\+::promise$<$ void $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_a16421e1cff678572aa66cae0d48573eb}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a8af7c5513f8cf9da9dc1c75b6aa7aa8d}\label{classwallet_1_1DefaultDaemonComms_a8af7c5513f8cf9da9dc1c75b6aa7aa8d}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!fetch\_decoys@{fetch\_decoys}}
+\index{fetch\_decoys@{fetch\_decoys}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{fetch\_decoys()}{fetch\_decoys()}}
+{\footnotesize\ttfamily std\+::future$<$ std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}} $>$ $>$ wallet\+::\+Default\+Daemon\+Comms\+::fetch\+\_\+decoys (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int64\+\_\+t $>$ \&}]{indexes,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{with\+\_\+txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_acd677dda71c2f2a94e0818f88d113e7b}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a12eaa551f7e3c860498dbe25b55ea424}\label{classwallet_1_1DefaultDaemonComms_a12eaa551f7e3c860498dbe25b55ea424}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!for\_each\_wallet@{for\_each\_wallet}}
+\index{for\_each\_wallet@{for\_each\_wallet}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{for\_each\_wallet()}{for\_each\_wallet()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::for\+\_\+each\+\_\+wallet (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} $>$)$>$}]{func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a0a378b7decd5ba623c2ba86eba2e8338}\label{classwallet_1_1DefaultDaemonComms_a0a378b7decd5ba623c2ba86eba2e8338}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!get\_blocks@{get\_blocks}}
+\index{get\_blocks@{get\_blocks}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{get\_blocks()}{get\_blocks()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::get\+\_\+blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_ad517763f8cad0feb64b476303d62ae0d}\label{classwallet_1_1DefaultDaemonComms_ad517763f8cad0feb64b476303d62ae0d}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!get\_fee\_parameters@{get\_fee\_parameters}}
+\index{get\_fee\_parameters@{get\_fee\_parameters}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{get\_fee\_parameters()}{get\_fee\_parameters()}}
+{\footnotesize\ttfamily std\+::pair$<$ int64\+\_\+t, int64\+\_\+t $>$ wallet\+::\+Default\+Daemon\+Comms\+::get\+\_\+fee\+\_\+parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_abdd95fe5641e500989010c65dfc84c8e}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aede4da2fe3609e0551aaf56f0a8cac58}\label{classwallet_1_1DefaultDaemonComms_aede4da2fe3609e0551aaf56f0a8cac58}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_a6016d884739db8302cc539fabd504f5e}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_af17b8206a9eb2a3c1c4c261c72fe20c5}\label{classwallet_1_1DefaultDaemonComms_af17b8206a9eb2a3c1c4c261c72fe20c5}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!got\_blocks@{got\_blocks}}
+\index{got\_blocks@{got\_blocks}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{got\_blocks()}{got\_blocks()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::got\+\_\+blocks (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{start\+\_\+height,  }\item[{int64\+\_\+t}]{end\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a4035601fc7ed14ac12df291acb3b0c72}\label{classwallet_1_1DefaultDaemonComms_a4035601fc7ed14ac12df291acb3b0c72}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!on\_get\_blocks\_response@{on\_get\_blocks\_response}}
+\index{on\_get\_blocks\_response@{on\_get\_blocks\_response}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{on\_get\_blocks\_response()}{on\_get\_blocks\_response()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::on\+\_\+get\+\_\+blocks\+\_\+response (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a114d2d6e92bc1e34fae461d8e5026cc1}\label{classwallet_1_1DefaultDaemonComms_a114d2d6e92bc1e34fae461d8e5026cc1}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!propogate\_config@{propogate\_config}}
+\index{propogate\_config@{propogate\_config}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{propogate\_config()}{propogate\_config()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::propogate\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_a33777a6b6b32e29952c62aa0daf3beba}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a51798d3e64fbd9501817b7886a8692cf}\label{classwallet_1_1DefaultDaemonComms_a51798d3e64fbd9501817b7886a8692cf}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!register\_wallet@{register\_wallet}}
+\index{register\_wallet@{register\_wallet}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{register\_wallet()}{register\_wallet()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::register\+\_\+wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwallet_1_1Wallet}{wallet\+::\+Wallet}} \&}]{wallet,  }\item[{int64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+sync\+\_\+height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{new\+\_\+wallet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_a9610667a38b43ecea0909ded3431feb6}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a31100834bf943fd0e00d9d60fd13782b}\label{classwallet_1_1DefaultDaemonComms_a31100834bf943fd0e00d9d60fd13782b}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!request\_top\_block\_info@{request\_top\_block\_info}}
+\index{request\_top\_block\_info@{request\_top\_block\_info}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{request\_top\_block\_info()}{request\_top\_block\_info()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::request\+\_\+top\+\_\+block\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_ad4281fe11345997f6df34d179a931231}\label{classwallet_1_1DefaultDaemonComms_ad4281fe11345997f6df34d179a931231}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!set\_remote@{set\_remote}}
+\index{set\_remote@{set\_remote}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{set\_remote()}{set\_remote()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::set\+\_\+remote (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_ac0a74b5c352db1c93838c01ce1b851ce}{wallet\+::\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a765d3b33a6b8b9453c7dedf215e13d1f}\label{classwallet_1_1DefaultDaemonComms_a765d3b33a6b8b9453c7dedf215e13d1f}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!start\_syncing@{start\_syncing}}
+\index{start\_syncing@{start\_syncing}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{start\_syncing()}{start\_syncing()}}
+{\footnotesize\ttfamily void wallet\+::\+Default\+Daemon\+Comms\+::start\+\_\+syncing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aabadd803706ee5de204e77dcf8f13a1f}\label{classwallet_1_1DefaultDaemonComms_aabadd803706ee5de204e77dcf8f13a1f}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!submit\_transaction@{submit\_transaction}}
+\index{submit\_transaction@{submit\_transaction}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{submit\_transaction()}{submit\_transaction()}}
+{\footnotesize\ttfamily std\+::future$<$ std\+::string $>$ wallet\+::\+Default\+Daemon\+Comms\+::submit\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{blink }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classwallet_1_1DaemonComms_a1be94f2427fcb9acb6750cf0e20011cf}{wallet\+::\+Daemon\+Comms}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_ae43c92f896155c454a4dca38ebfc559d}\label{classwallet_1_1DefaultDaemonComms_ae43c92f896155c454a4dca38ebfc559d}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!config@{config}}
+\index{config@{config}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwallet_1_1DaemonCommsConfig}{Daemon\+Comms\+Config}}\& wallet\+::\+Default\+Daemon\+Comms\+::config\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a0b6c2b26793cfe5e06db5f855561d997}\label{classwallet_1_1DefaultDaemonComms_a0b6c2b26793cfe5e06db5f855561d997}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!conn@{conn}}
+\index{conn@{conn}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily oxenmq\+::\+Connection\+ID wallet\+::\+Default\+Daemon\+Comms\+::conn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a258d17fefb35385e504d84a5eb5cf808}\label{classwallet_1_1DefaultDaemonComms_a258d17fefb35385e504d84a5eb5cf808}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!DEFAULT\_MAX\_RESPONSE\_SIZE@{DEFAULT\_MAX\_RESPONSE\_SIZE}}
+\index{DEFAULT\_MAX\_RESPONSE\_SIZE@{DEFAULT\_MAX\_RESPONSE\_SIZE}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_MAX\_RESPONSE\_SIZE}{DEFAULT\_MAX\_RESPONSE\_SIZE}}
+{\footnotesize\ttfamily constexpr int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE = 1 $\ast$ 1024 $\ast$ 1024\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a3947c89b76d068cfae19d12cd893ba44}\label{classwallet_1_1DefaultDaemonComms_a3947c89b76d068cfae19d12cd893ba44}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!DEFAULT\_MAX\_SYNC\_BLOCKS@{DEFAULT\_MAX\_SYNC\_BLOCKS}}
+\index{DEFAULT\_MAX\_SYNC\_BLOCKS@{DEFAULT\_MAX\_SYNC\_BLOCKS}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_MAX\_SYNC\_BLOCKS}{DEFAULT\_MAX\_SYNC\_BLOCKS}}
+{\footnotesize\ttfamily constexpr int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+S\+Y\+N\+C\+\_\+\+B\+L\+O\+C\+KS = 200\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aef6cea9e69c9a7a0d321868cdad2a985}\label{classwallet_1_1DefaultDaemonComms_aef6cea9e69c9a7a0d321868cdad2a985}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!fee\_per\_byte@{fee\_per\_byte}}
+\index{fee\_per\_byte@{fee\_per\_byte}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{fee\_per\_byte}{fee\_per\_byte}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::fee\+\_\+per\+\_\+byte = \mbox{\hyperlink{namespacecryptonote_ab7217d4bb9e010da1ec099921c98c250}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V13}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_ad6d417f36df1542308810589853a6c30}\label{classwallet_1_1DefaultDaemonComms_ad6d417f36df1542308810589853a6c30}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!fee\_per\_output@{fee\_per\_output}}
+\index{fee\_per\_output@{fee\_per\_output}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{fee\_per\_output}{fee\_per\_output}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::fee\+\_\+per\+\_\+output = \mbox{\hyperlink{namespacecryptonote_a01a05f31eeb91828b9e54b4856a5b7e5}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V18}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a6edd338070ac8c0d3abd5015faca61b4}\label{classwallet_1_1DefaultDaemonComms_a6edd338070ac8c0d3abd5015faca61b4}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!max\_response\_size@{max\_response\_size}}
+\index{max\_response\_size@{max\_response\_size}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{max\_response\_size}{max\_response\_size}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::max\+\_\+response\+\_\+size = \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a258d17fefb35385e504d84a5eb5cf808}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+S\+I\+ZE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a93893a321d12906165596cb763a1334f}\label{classwallet_1_1DefaultDaemonComms_a93893a321d12906165596cb763a1334f}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!max\_sync\_blocks@{max\_sync\_blocks}}
+\index{max\_sync\_blocks@{max\_sync\_blocks}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{max\_sync\_blocks}{max\_sync\_blocks}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::max\+\_\+sync\+\_\+blocks = \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a3947c89b76d068cfae19d12cd893ba44}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+S\+Y\+N\+C\+\_\+\+B\+L\+O\+C\+KS}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a0879f665f16b34f491d829e1fdd739ae}\label{classwallet_1_1DefaultDaemonComms_a0879f665f16b34f491d829e1fdd739ae}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!omq@{omq}}
+\index{omq@{omq}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{omq}{omq}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$oxenmq\+::\+Oxen\+MQ$>$ wallet\+::\+Default\+Daemon\+Comms\+::omq\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aa92c9855c634f930db49d6eb483a39a1}\label{classwallet_1_1DefaultDaemonComms_aa92c9855c634f930db49d6eb483a39a1}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!remote@{remote}}
+\index{remote@{remote}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{remote}{remote}}
+{\footnotesize\ttfamily oxenmq\+::address wallet\+::\+Default\+Daemon\+Comms\+::remote\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a8e00b25dada668e47d5650736d86291b}\label{classwallet_1_1DefaultDaemonComms_a8e00b25dada668e47d5650736d86291b}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!status\_timer@{status\_timer}}
+\index{status\_timer@{status\_timer}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{status\_timer}{status\_timer}}
+{\footnotesize\ttfamily oxenmq\+::\+Timer\+ID wallet\+::\+Default\+Daemon\+Comms\+::status\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a3a0f5af8e8743a07848b000918028d1a}\label{classwallet_1_1DefaultDaemonComms_a3a0f5af8e8743a07848b000918028d1a}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!sync\_from\_height@{sync\_from\_height}}
+\index{sync\_from\_height@{sync\_from\_height}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{sync\_from\_height}{sync\_from\_height}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::sync\+\_\+from\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a4a2833c3848fa110e0d37fd882dd8748}\label{classwallet_1_1DefaultDaemonComms_a4a2833c3848fa110e0d37fd882dd8748}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!sync\_thread@{sync\_thread}}
+\index{sync\_thread@{sync\_thread}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{sync\_thread}{sync\_thread}}
+{\footnotesize\ttfamily oxenmq\+::\+Tagged\+Thread\+ID wallet\+::\+Default\+Daemon\+Comms\+::sync\+\_\+thread\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a4da750f41c5647d4100ee611cc003534}\label{classwallet_1_1DefaultDaemonComms_a4da750f41c5647d4100ee611cc003534}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!syncing@{syncing}}
+\index{syncing@{syncing}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{syncing}{syncing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::\+Default\+Daemon\+Comms\+::syncing = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_aa6200055ab688d30f90977835849db60}\label{classwallet_1_1DefaultDaemonComms_aa6200055ab688d30f90977835849db60}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!top\_block\_hash@{top\_block\_hash}}
+\index{top\_block\_hash@{top\_block\_hash}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{top\_block\_hash}{top\_block\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} wallet\+::\+Default\+Daemon\+Comms\+::top\+\_\+block\+\_\+hash\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a9060b2542067113a2f04974e599ccc33}\label{classwallet_1_1DefaultDaemonComms_a9060b2542067113a2f04974e599ccc33}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!top\_block\_height@{top\_block\_height}}
+\index{top\_block\_height@{top\_block\_height}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{top\_block\_height}{top\_block\_height}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Default\+Daemon\+Comms\+::top\+\_\+block\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1DefaultDaemonComms_a16310defe47ee045ed0b202699219dcb}\label{classwallet_1_1DefaultDaemonComms_a16310defe47ee045ed0b202699219dcb}} 
+\index{wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}!wallets@{wallets}}
+\index{wallets@{wallets}!wallet::DefaultDaemonComms@{wallet::DefaultDaemonComms}}
+\doxysubsubsection{\texorpdfstring{wallets}{wallets}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}}$>$, int64\+\_\+t$>$ wallet\+::\+Default\+Daemon\+Comms\+::wallets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{default__daemon__comms_8hpp}{default\+\_\+daemon\+\_\+comms.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{default__daemon__comms_8cpp}{default\+\_\+daemon\+\_\+comms.\+cpp}}\end{DoxyCompactItemize}

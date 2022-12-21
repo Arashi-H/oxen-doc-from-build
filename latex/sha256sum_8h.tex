@@ -1,0 +1,40 @@
+\hypertarget{sha256sum_8h}{}\doxysection{src/common/sha256sum.h File Reference}
+\label{sha256sum_8h}\index{src/common/sha256sum.h@{src/common/sha256sum.h}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}fs.\+h\char`\"{}}\newline
+Include dependency graph for sha256sum.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sha256sum_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sha256sum_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_aa55d64ab182a1286931f45048503edbd}{tools\+::sha256sum\+\_\+str}} (std\+::string\+\_\+view data, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+{\footnotesize template$<$typename Char , std\+::enable\+\_\+if\+\_\+t$<$ sizeof(\+Char)==1 \&\&!std\+::is\+\_\+same\+\_\+v$<$ Char, char $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a28e90c98f4203291bdad0f1cf3912fee}{tools\+::sha256sum\+\_\+str}} (std\+::basic\+\_\+string\+\_\+view$<$ Char $>$ str, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+{\footnotesize template$<$typename Char , std\+::enable\+\_\+if\+\_\+t$<$ sizeof(\+Char)==1, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_aa4dcb593488325e6e38de2536a77aa08}{tools\+::sha256sum\+\_\+str}} (const Char $\ast$data, size\+\_\+t len, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_ab703e15697d9c45f1aa8eeb15999bfdb}{tools\+::sha256sum\+\_\+file}} (const fs\+::path \&filename, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\end{DoxyCompactItemize}

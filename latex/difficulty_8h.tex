@@ -1,0 +1,60 @@
+\hypertarget{difficulty_8h}{}\doxysection{src/cryptonote\+\_\+basic/difficulty.h File Reference}
+\label{difficulty_8h}\index{src/cryptonote\_basic/difficulty.h@{src/cryptonote\_basic/difficulty.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+Include dependency graph for difficulty.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a9e23e786e21d2fa2bf8481faaf21b9a3}{cryptonote\+::difficulty\+\_\+calc\+\_\+mode}} \{ \mbox{\hyperlink{namespacecryptonote_a9e23e786e21d2fa2bf8481faaf21b9a3a559897c1a2458ac1366e8b33860db955}{cryptonote\+::difficulty\+\_\+calc\+\_\+mode\+::use\+\_\+old\+\_\+lwma}}, 
+\mbox{\hyperlink{namespacecryptonote_a9e23e786e21d2fa2bf8481faaf21b9a3a93996662f19217d638caad7cc0905983}{cryptonote\+::difficulty\+\_\+calc\+\_\+mode\+::hf12\+\_\+override}}, 
+\mbox{\hyperlink{namespacecryptonote_a9e23e786e21d2fa2bf8481faaf21b9a3a6f49c50d0d0db8b537c28765eb616ca4}{cryptonote\+::difficulty\+\_\+calc\+\_\+mode\+::hf16\+\_\+override}}, 
+\mbox{\hyperlink{namespacecryptonote_a9e23e786e21d2fa2bf8481faaf21b9a3afea087517c26fadd409bd4b9dc642555}{cryptonote\+::difficulty\+\_\+calc\+\_\+mode\+::normal}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a86a4bda0dfe5b3a55be27e1436617b92}{cryptonote\+::check\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash, difficulty\+\_\+type difficulty)
+\begin{DoxyCompactList}\small\item\em checks if a hash fits the given difficulty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecryptonote_abccab2f8f3e6cfc44495e8274bbf4c68}{cryptonote\+::add\+\_\+timestamp\+\_\+and\+\_\+difficulty}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t chain\+\_\+height, std\+::vector$<$ uint64\+\_\+t $>$ \&timestamps, std\+::vector$<$ difficulty\+\_\+type $>$ \&difficulties, uint64\+\_\+t timestamp, uint64\+\_\+t cumulative\+\_\+difficulty)
+\item 
+difficulty\+\_\+calc\+\_\+mode \mbox{\hyperlink{namespacecryptonote_ad2b9d4175f0d7cd6b42a7512e12ad32f}{cryptonote\+::difficulty\+\_\+mode}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t height)
+\item 
+difficulty\+\_\+type \mbox{\hyperlink{namespacecryptonote_a046a868c45191daef59326765a73118b}{cryptonote\+::next\+\_\+difficulty\+\_\+v2}} (std\+::vector$<$ std\+::uint64\+\_\+t $>$ timestamps, std\+::vector$<$ difficulty\+\_\+type $>$ cumulative\+\_\+difficulties, size\+\_\+t target\+\_\+seconds, difficulty\+\_\+calc\+\_\+mode mode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr difficulty\+\_\+type \mbox{\hyperlink{namespacecryptonote_abf13892e6ae936cd4cc33b70a4e1b2a8}{cryptonote\+::\+P\+U\+L\+S\+E\+\_\+\+F\+I\+X\+E\+D\+\_\+\+D\+I\+F\+F\+I\+C\+U\+L\+TY}} = 1\textquotesingle{}000\textquotesingle{}000
+\end{DoxyCompactItemize}

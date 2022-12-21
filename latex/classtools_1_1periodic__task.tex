@@ -1,0 +1,107 @@
+\hypertarget{classtools_1_1periodic__task}{}\doxysection{tools\+::periodic\+\_\+task Class Reference}
+\label{classtools_1_1periodic__task}\index{tools::periodic\_task@{tools::periodic\_task}}
+
+
+{\ttfamily \#include $<$periodic\+\_\+task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task_a9c8c9d06382427db46cb9264eaf0171d}{periodic\+\_\+task}} (std\+::chrono\+::microseconds \mbox{\hyperlink{classtools_1_1periodic__task_adcf011f0c1a9c02600d0da260403bd5c}{interval}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} start\+\_\+immediately=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, std\+::pair$<$ int, int $>$ random\+\_\+delay\+\_\+interval=\{\})
+\item 
+{\footnotesize template$<$class functor\+\_\+t $>$ }\\void \mbox{\hyperlink{classtools_1_1periodic__task_af1534f03030c22da758028d155b8f2a0}{do\+\_\+call}} (functor\+\_\+t functr)
+\item 
+void \mbox{\hyperlink{classtools_1_1periodic__task_a901a833c94073a3463594c3aac7ac257}{reset}} ()
+\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classtools_1_1periodic__task_adcf011f0c1a9c02600d0da260403bd5c}{interval}} () const
+\item 
+void \mbox{\hyperlink{classtools_1_1periodic__task_ae6931b168cd15aa8e69feabb7b76f244}{interval}} (std\+::chrono\+::microseconds us)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classtools_1_1periodic__task_ae9244599c949d13ffc8538fc3c6a97a9}{m\+\_\+interval}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classtools_1_1periodic__task_aa53046e25121e0a98d75df6bb4a0fd06}{m\+\_\+last\+\_\+worked\+\_\+time}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classtools_1_1periodic__task_a812ce19672b0b13c0bac064e6a4d0979}{m\+\_\+trigger\+\_\+now}}
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classtools_1_1periodic__task_af1f4578386b28a6d0d15ae4aa04effce}{m\+\_\+random\+\_\+delay\+\_\+interval}}
+\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classtools_1_1periodic__task_ac3265a786b7343f91d5bcbe309b60dd6}{m\+\_\+next\+\_\+delay}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1periodic__task_a9c8c9d06382427db46cb9264eaf0171d}\label{classtools_1_1periodic__task_a9c8c9d06382427db46cb9264eaf0171d}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!periodic\_task@{periodic\_task}}
+\index{periodic\_task@{periodic\_task}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{periodic\_task()}{periodic\_task()}}
+{\footnotesize\ttfamily tools\+::periodic\+\_\+task\+::periodic\+\_\+task (\begin{DoxyParamCaption}\item[{std\+::chrono\+::microseconds}]{interval,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{start\+\_\+immediately = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{std\+::pair$<$ int, int $>$}]{random\+\_\+delay\+\_\+interval = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1periodic__task_af1534f03030c22da758028d155b8f2a0}\label{classtools_1_1periodic__task_af1534f03030c22da758028d155b8f2a0}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!do\_call@{do\_call}}
+\index{do\_call@{do\_call}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{do\_call()}{do\_call()}}
+{\footnotesize\ttfamily template$<$class functor\+\_\+t $>$ \\
+void tools\+::periodic\+\_\+task\+::do\+\_\+call (\begin{DoxyParamCaption}\item[{functor\+\_\+t}]{functr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_adcf011f0c1a9c02600d0da260403bd5c}\label{classtools_1_1periodic__task_adcf011f0c1a9c02600d0da260403bd5c}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!interval@{interval}}
+\index{interval@{interval}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{interval()}{interval()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds tools\+::periodic\+\_\+task\+::interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_ae6931b168cd15aa8e69feabb7b76f244}\label{classtools_1_1periodic__task_ae6931b168cd15aa8e69feabb7b76f244}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!interval@{interval}}
+\index{interval@{interval}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{interval()}{interval()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tools\+::periodic\+\_\+task\+::interval (\begin{DoxyParamCaption}\item[{std\+::chrono\+::microseconds}]{us }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_a901a833c94073a3463594c3aac7ac257}\label{classtools_1_1periodic__task_a901a833c94073a3463594c3aac7ac257}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!reset@{reset}}
+\index{reset@{reset}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void tools\+::periodic\+\_\+task\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1periodic__task_ae9244599c949d13ffc8538fc3c6a97a9}\label{classtools_1_1periodic__task_ae9244599c949d13ffc8538fc3c6a97a9}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!m\_interval@{m\_interval}}
+\index{m\_interval@{m\_interval}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{m\_interval}{m\_interval}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds tools\+::periodic\+\_\+task\+::m\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_aa53046e25121e0a98d75df6bb4a0fd06}\label{classtools_1_1periodic__task_aa53046e25121e0a98d75df6bb4a0fd06}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!m\_last\_worked\_time@{m\_last\_worked\_time}}
+\index{m\_last\_worked\_time@{m\_last\_worked\_time}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{m\_last\_worked\_time}{m\_last\_worked\_time}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point tools\+::periodic\+\_\+task\+::m\+\_\+last\+\_\+worked\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_ac3265a786b7343f91d5bcbe309b60dd6}\label{classtools_1_1periodic__task_ac3265a786b7343f91d5bcbe309b60dd6}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!m\_next\_delay@{m\_next\_delay}}
+\index{m\_next\_delay@{m\_next\_delay}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{m\_next\_delay}{m\_next\_delay}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds tools\+::periodic\+\_\+task\+::m\+\_\+next\+\_\+delay\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_af1f4578386b28a6d0d15ae4aa04effce}\label{classtools_1_1periodic__task_af1f4578386b28a6d0d15ae4aa04effce}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!m\_random\_delay\_interval@{m\_random\_delay\_interval}}
+\index{m\_random\_delay\_interval@{m\_random\_delay\_interval}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{m\_random\_delay\_interval}{m\_random\_delay\_interval}}
+{\footnotesize\ttfamily std\+::pair$<$int, int$>$ tools\+::periodic\+\_\+task\+::m\+\_\+random\+\_\+delay\+\_\+interval\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1periodic__task_a812ce19672b0b13c0bac064e6a4d0979}\label{classtools_1_1periodic__task_a812ce19672b0b13c0bac064e6a4d0979}} 
+\index{tools::periodic\_task@{tools::periodic\_task}!m\_trigger\_now@{m\_trigger\_now}}
+\index{m\_trigger\_now@{m\_trigger\_now}!tools::periodic\_task@{tools::periodic\_task}}
+\doxysubsubsection{\texorpdfstring{m\_trigger\_now}{m\_trigger\_now}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ tools\+::periodic\+\_\+task\+::m\+\_\+trigger\+\_\+now\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{periodic__task_8h}{periodic\+\_\+task.\+h}}\end{DoxyCompactItemize}

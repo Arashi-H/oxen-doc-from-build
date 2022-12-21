@@ -1,0 +1,338 @@
+\hypertarget{serialization_8h}{}\doxysection{src/serialization/serialization.h File Reference}
+\label{serialization_8h}\index{src/serialization/serialization.h@{src/serialization/serialization.h}}
+
+
+Serialization base types.  
+
+
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for serialization.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialization_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serialization_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserialization}{serialization}}
+\item 
+ \mbox{\hyperlink{namespaceserialization_1_1detail}{serialization\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serialization_8h_a30254db8917baadd091556aebc9909ae}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}}(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})~namespace serialization \{ template $<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} binary\+\_\+serializable$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}; \}
+\begin{DoxyCompactList}\small\item\em Macro to add a specialization. Must be used out of the namespace. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a035cf65edbd38952f1267378266e3731}{B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}}()
+\begin{DoxyCompactList}\small\item\em macro to start a serialize\+\_\+value member function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a4871a69c9474fc7c6777b66a75267b8a}{S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+T\+E\+\_\+}}(a,  b)~a\#\#b
+\item 
+\#define \mbox{\hyperlink{serialization_8h_a2870d0176b2833307a678807ff678a24}{S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+TE}}(a,  b)~\mbox{\hyperlink{serialization_8h_a4871a69c9474fc7c6777b66a75267b8a}{S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+T\+E\+\_\+}}(a, b)
+\item 
+\#define \mbox{\hyperlink{serialization_8h_a03d69854804a85ba0bd7a03b8e4bc9aa}{B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+O\+B\+J\+E\+CT}}()
+\begin{DoxyCompactList}\small\item\em begins the environment of an object (in the J\+S\+ON sense) serialization \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_ab330e083bfa4e60f1b804550ab36527d}{E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}}()
+\item 
+\#define \mbox{\hyperlink{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}{F\+I\+E\+L\+D\+\_\+N}}(tag,  val)~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}}(ar, tag, val));
+\begin{DoxyCompactList}\small\item\em serializes a field {\itshape val} tagged {\itshape tag} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a9ad5f0d656f56f422ed8a61f02d38b48}{F\+I\+E\+LD}}(val)~\mbox{\hyperlink{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}{F\+I\+E\+L\+D\+\_\+N}}(\#val, val)
+\begin{DoxyCompactList}\small\item\em tags the field with the variable name and then serializes it \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a8d1a0ab7280b8f2983ee19b3be23c1e7}{F\+I\+E\+L\+DS}}(f)~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{serialization\+::value}}(ar, f));
+\begin{DoxyCompactList}\small\item\em does not add a tag to the serialized value \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_aedb3c41a871f6813a019f73755db2780}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+LD}}(f)~\mbox{\hyperlink{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(\#f, f)
+\begin{DoxyCompactList}\small\item\em tags and serializes the varint {\itshape f} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(tag,  val)~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{serialization\+::field\+\_\+varint}}(ar, tag, val));
+\begin{DoxyCompactList}\small\item\em tags (as {\itshape tag}) and serializes the varint {\itshape val} \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_a4e8318416a8163bff339fcf3af2c16ee}{E\+N\+U\+M\+\_\+\+F\+I\+E\+LD}}(f,  test)~\mbox{\hyperlink{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}{E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(\#f, f, test)
+\begin{DoxyCompactList}\small\item\em tags and serializes (as a varint) the scoped enum {\itshape f} with a requirement that expression {\itshape test} be true (typically for range testing). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}{E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(tag,  field,  test)~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{serialization\+::field\+\_\+varint}}(ar, tag, field, \mbox{[}$\,$\mbox{]}(auto\& field) \{ return test; \}));
+\begin{DoxyCompactList}\small\item\em tags (as {\itshape t}) and serializes (as a varint) the scoped enum {\itshape f} with a requirement that expession {\itshape test} be true (typically for range testing). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{serialization\+::value}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Serialization functions. These are used to add/read a value to/from an ongoing serialization. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate $>$ }\\void \mbox{\hyperlink{namespaceserialization_a4ae1a3b416f17671b1e53872a8b5b6ab}{serialization\+::value}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v, Predicate test)
+\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_aa12ab512142e5bbbe84b56cfb2caff4c}{serialization\+::varint}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Serializes an integer value using varint encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_ad98eda8c9ebad51890b010d8c4db6c71}{serialization\+::varint}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate test)
+\begin{DoxyCompactList}\small\item\em Serializes an integer or enum value using varint encoding with a Predicate (see \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{value()}}). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Adds a key-\/value pair. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate $>$ }\\void \mbox{\hyperlink{namespaceserialization_a68541ccb65af5107936f8d115aee35a2}{serialization\+::field}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate \&\&test)
+\begin{DoxyCompactList}\small\item\em Adds a key-\/value pair with a predicate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{serialization\+::field\+\_\+varint}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a0719cf7727dff9ba70a7d7947ea3d3f1}{serialization\+::field\+\_\+varint}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate \&\&test)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceserialization_ad8b667530b75a747a1492ab10d1e0e53}{serialization\+::done}} (Archive \&ar)
+\item 
+{\footnotesize template$<$class Archive , typename T $>$ }\\void \mbox{\hyperlink{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}{serialization\+::serialize}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_a7a80f2a7b7264644a7e781fc45fe95fa}{serialization\+::binary\+\_\+serializable}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename Archive , typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a06ab3ffa936392377aa7ded9b6f5d58e}{serialization\+::detail\+::has\+\_\+free\+\_\+serialize\+\_\+value}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily void serialize\+\_\+value(ar, t)} exists for non-\/const {\ttfamily ar} and {\ttfamily t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Archive , typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a2256d00b1c8d713ada4134027667ae56}{serialization\+::detail\+::has\+\_\+memfn\+\_\+serialize\+\_\+value}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily t.\+serialize\+\_\+value(ar)} exists (and returns void) for non-\/const {\ttfamily ar} and {\ttfamily t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_aca6a1fd6dd25f911c2a2fe4374b7b048}{serialization\+::\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+B\+LE}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+constexpr int \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Serialization base types. 
+
+This header provides the basic types for some primitive type serialization for for extending serialization for custom types.
+
+In order to use this serialization to serialize an entire, self-\/contained value you generally want to call\+: \begin{DoxyVerb}serialization::serialize(archive, value);
+\end{DoxyVerb}
+
+
+or, to append a serialized value to an ongoing composite serialization\+: \begin{DoxyVerb}serialization::value(archive, value);
+serialization::varint(archive, value);
+serialization::field(archive, "key", value);
+serialization::field_varint(archive, "key", value);
+\end{DoxyVerb}
+
+
+where {\ttfamily archive} is a serializer or deserializer from \mbox{\hyperlink{binary__archive_8h}{binary\+\_\+archive.\+h}} or \mbox{\hyperlink{json__archive_8h}{json\+\_\+archive.\+h}} (or something compatible with their shared interface). Depending on whether {\ttfamily archive} is a serializer or deserializer this will either serialize from the given value, or deserialize into the given value.
+
+{\ttfamily \mbox{\hyperlink{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}{serialization\+::serialize}}} is a wrapper around {\ttfamily \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{serialization\+::value}}} to be used when an entire serialized value is the (only) content of an input or output stream. The others, in contrast, takes the same arguments but only appends or reads one value from the input stream; as such they are the building blocks for building aggregate serialization types.\hypertarget{serialization_8h_autotoc_md14}{}\doxysubsection{Serialized types}\label{serialization_8h_autotoc_md14}
+By including just this header you get serialization of basic integer types and opt-\/in byte-\/for-\/byte serialization of binary types. Integers written with {\ttfamily \mbox{\hyperlink{namespaceserialization_a4ae1a3b416f17671b1e53872a8b5b6ab}{value()}}/field()} are written as little-\/endian byte values. Integers written with {\ttfamily \mbox{\hyperlink{namespaceserialization_ad98eda8c9ebad51890b010d8c4db6c71}{varint()}}} use a custom variable length (7 bits per byte) binary format, and binary values are copied byte-\/for-\/byte. See the various other serialization/ headers for additional serialization capabilities.\hypertarget{serialization_8h_autotoc_md15}{}\doxysubsubsection{Custom serialization}\label{serialization_8h_autotoc_md15}
+To enable custom type serialization, include this header and then use one of the following two approaches.
+
+Approach 1\+: create a free function to do serialization. Ideally put this in the same namespace as your type, named {\ttfamily serialize\+\_\+value} that takes a templated Archive type and the type to be serialized as a non-\/const lvalue reference. For example\+: \begin{DoxyVerb}namespace myns {
+struct MyType { int v1; int v2; };
+
+template <class Archive>
+void serialize_value(Archive& ar, MyType& x) {
+  serialization::value(ar, x.v1);
+  serialization::value(ar, x.v2);
+}
+}
+\end{DoxyVerb}
+
+
+The {\ttfamily serialize\+\_\+value} function will be found via A\+DL. If you cannot define it in the same namespace (for example, because you want to serialization some type from some external namespace such as an stl type) then you can also define the function inside the {\ttfamily serialization} namespace\+: \begin{DoxyVerb}namespace serialization {
+template <class Archive>
+void serialize_value(Archive& ar, myns::MyType& x) { ... }
+}
+\end{DoxyVerb}
+
+
+Approach 2\+: create a public serialize\+\_\+value member function in the type itself that takes the generic Archive type as the only argument. This is useful, in particular, where the serialization logic must access private members. For example\+: \begin{DoxyVerb}struct MyType {
+private:
+  int v1;
+  SomeType v2;
+  // ...
+
+public:
+  template <class Archive>
+  void serialize_value(Archive& ar) {
+    serialization::value(ar, v1);
+    serialization::value(ar, v2);
+  }
+};
+\end{DoxyVerb}
+
+
+Existing legacy code uses a bunch of disgusting macros to do this (which basically expand to approach 2, above). New code should avoid such nasty macros.
+
+Within the serialize\+\_\+value function you generally want to perform sub-\/serialization, as shown in the above examples. Typically this involves calling {\ttfamily serialization\+::value(ar, val)} or one of the {\ttfamily \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}}} methods which let you append an existing serialized value. Unlike \mbox{\hyperlink{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}{serialization\+::serialize}}, these functions append (or read) an additional value but do not require that the additional value consume the entire serialization.
+
+In the case of error, throw an exception that is derived from std\+::exception. (Custom exception types {\itshape not} ultimately derived from std\+::exception are not handled and should not be used).\hypertarget{serialization_8h_autotoc_md16}{}\doxysubsubsection{Binary serialization}\label{serialization_8h_autotoc_md16}
+To enable binary serialization for a type (i.\+e. where we just memcpy the object) you need to include this header and then opt-\/in for the type using either of these techniques\+:
+
+Technique 1\+: add a {\ttfamily binary\+\_\+serializable} static constexpr bool\+: \begin{DoxyVerb}struct MyType {
+  ...
+  static constexpr bool binary_serializable = true;
+};
+\end{DoxyVerb}
+
+
+Technique 2\+: explicitly specialize the serializable\+::binary\+\_\+serializable$<$\+T$>$ with a true value\+: \begin{DoxyVerb}namespace x {
+struct MyType { ... };
+}
+BLOB_SERIALIZER(x::MyType);
+// equivalent to:  namespace serialization { template<> constexpr bool binary_serializable<x::MyType> = true; }
+\end{DoxyVerb}
+
+
+Be very careful with binary serialization\+: there are myriad ways in which binary object dumps can be non-\/portable. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{serialization_8h_a035cf65edbd38952f1267378266e3731}\label{serialization_8h_a035cf65edbd38952f1267378266e3731}} 
+\index{serialization.h@{serialization.h}!BEGIN\_SERIALIZE@{BEGIN\_SERIALIZE}}
+\index{BEGIN\_SERIALIZE@{BEGIN\_SERIALIZE}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BEGIN\_SERIALIZE}{BEGIN\_SERIALIZE}}
+{\footnotesize\ttfamily \#define B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template} <\textcolor{keyword}{class} Archive> \(\backslash\)}
+\DoxyCodeLine{void \mbox{\hyperlink{namespacecryptonote_a8fbc2363ede9e1503c1a9482426776e2}{serialize\_value}}(Archive \&ar) \{ \(\backslash\)}
+\DoxyCodeLine{  (void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization::\_serialization\_macro}};}
+
+\end{DoxyCode}
+
+
+macro to start a serialize\+\_\+value member function. 
+
+\textbackslash{}macro B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE
+
+Deprecated. Define your own serialize\+\_\+value member function instead. \mbox{\Hypertarget{serialization_8h_a03d69854804a85ba0bd7a03b8e4bc9aa}\label{serialization_8h_a03d69854804a85ba0bd7a03b8e4bc9aa}} 
+\index{serialization.h@{serialization.h}!BEGIN\_SERIALIZE\_OBJECT@{BEGIN\_SERIALIZE\_OBJECT}}
+\index{BEGIN\_SERIALIZE\_OBJECT@{BEGIN\_SERIALIZE\_OBJECT}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BEGIN\_SERIALIZE\_OBJECT}{BEGIN\_SERIALIZE\_OBJECT}}
+{\footnotesize\ttfamily \#define B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+O\+B\+J\+E\+CT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{serialization_8h_a035cf65edbd38952f1267378266e3731}{BEGIN\_SERIALIZE}}() \(\backslash\)}
+\DoxyCodeLine{  auto \_obj = ar.begin\_object();}
+
+\end{DoxyCode}
+
+
+begins the environment of an object (in the J\+S\+ON sense) serialization 
+
+\textbackslash{}macro B\+E\+G\+I\+N\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+O\+B\+J\+E\+CT
+
+Deprecated. Just expand this manually instead. \mbox{\Hypertarget{serialization_8h_a30254db8917baadd091556aebc9909ae}\label{serialization_8h_a30254db8917baadd091556aebc9909ae}} 
+\index{serialization.h@{serialization.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER}{BLOB\_SERIALIZER}}
+{\footnotesize\ttfamily \#define B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} }\end{DoxyParamCaption})~namespace serialization \{ template $<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} binary\+\_\+serializable$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}; \}}
+
+
+
+Macro to add a specialization. Must be used out of the namespace. 
+
+\mbox{\Hypertarget{serialization_8h_ab330e083bfa4e60f1b804550ab36527d}\label{serialization_8h_ab330e083bfa4e60f1b804550ab36527d}} 
+\index{serialization.h@{serialization.h}!END\_SERIALIZE@{END\_SERIALIZE}}
+\index{END\_SERIALIZE@{END\_SERIALIZE}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{END\_SERIALIZE}{END\_SERIALIZE}}
+{\footnotesize\ttfamily \#define E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization::\_serialization\_macro}}; \(\backslash\)}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\textbackslash{}macro E\+N\+D\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE
+
+Deprecated. Just use {\ttfamily \}} instead. \mbox{\Hypertarget{serialization_8h_a4e8318416a8163bff339fcf3af2c16ee}\label{serialization_8h_a4e8318416a8163bff339fcf3af2c16ee}} 
+\index{serialization.h@{serialization.h}!ENUM\_FIELD@{ENUM\_FIELD}}
+\index{ENUM\_FIELD@{ENUM\_FIELD}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{ENUM\_FIELD}{ENUM\_FIELD}}
+{\footnotesize\ttfamily \#define E\+N\+U\+M\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{test }\end{DoxyParamCaption})~\mbox{\hyperlink{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}{E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(\#f, f, test)}
+
+
+
+tags and serializes (as a varint) the scoped enum {\itshape f} with a requirement that expression {\itshape test} be true (typically for range testing). 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_a4e8318416a8163bff339fcf3af2c16ee}{E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D(f, test)}} Deprecated. Call {\ttfamily field\+\_\+varint(ar, \char`\"{}f\char`\"{}, f, predicate)} instead. \mbox{\Hypertarget{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}\label{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}} 
+\index{serialization.h@{serialization.h}!ENUM\_FIELD\_N@{ENUM\_FIELD\_N}}
+\index{ENUM\_FIELD\_N@{ENUM\_FIELD\_N}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{ENUM\_FIELD\_N}{ENUM\_FIELD\_N}}
+{\footnotesize\ttfamily \#define E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D\+\_\+N(\begin{DoxyParamCaption}\item[{}]{tag,  }\item[{}]{field,  }\item[{}]{test }\end{DoxyParamCaption})~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{serialization\+::field\+\_\+varint}}(ar, tag, field, \mbox{[}$\,$\mbox{]}(auto\& field) \{ return test; \}));}
+
+
+
+tags (as {\itshape t}) and serializes (as a varint) the scoped enum {\itshape f} with a requirement that expession {\itshape test} be true (typically for range testing). 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_abbaa7a63ddb0cac5733d7a94fb383e63}{E\+N\+U\+M\+\_\+\+F\+I\+E\+L\+D\+\_\+\+N(t, f, test)}}
+
+Deprecated. Call {\ttfamily field\+\_\+varint(ar, \char`\"{}t\char`\"{}, f, predicate)} instead. \mbox{\Hypertarget{serialization_8h_a9ad5f0d656f56f422ed8a61f02d38b48}\label{serialization_8h_a9ad5f0d656f56f422ed8a61f02d38b48}} 
+\index{serialization.h@{serialization.h}!FIELD@{FIELD}}
+\index{FIELD@{FIELD}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{FIELD}{FIELD}}
+{\footnotesize\ttfamily \#define F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~\mbox{\hyperlink{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}{F\+I\+E\+L\+D\+\_\+N}}(\#val, val)}
+
+
+
+tags the field with the variable name and then serializes it 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_a9ad5f0d656f56f422ed8a61f02d38b48}{F\+I\+E\+L\+D(val)}}
+
+Deprecated. Call {\ttfamily field(ar, \char`\"{}val\char`\"{}, val);} instead. \mbox{\Hypertarget{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}\label{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}} 
+\index{serialization.h@{serialization.h}!FIELD\_N@{FIELD\_N}}
+\index{FIELD\_N@{FIELD\_N}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{FIELD\_N}{FIELD\_N}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+D\+\_\+N(\begin{DoxyParamCaption}\item[{}]{tag,  }\item[{}]{val }\end{DoxyParamCaption})~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}}(ar, tag, val));}
+
+
+
+serializes a field {\itshape val} tagged {\itshape tag} 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_abd57b7f3f61114bac9924c1289ec7e83}{F\+I\+E\+L\+D\+\_\+\+N(tag, val)}}
+
+Deprecated. Call {\ttfamily \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}}(ar, \char`\"{}name\char`\"{}, val);} instead. (In rare cases you may need to qualify the call with the serialization namespace ({\ttfamily \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field}}(ar, \char`\"{}name\char`\"{}, val)}) but usually you can omit it to use A\+DL). \mbox{\Hypertarget{serialization_8h_a8d1a0ab7280b8f2983ee19b3be23c1e7}\label{serialization_8h_a8d1a0ab7280b8f2983ee19b3be23c1e7}} 
+\index{serialization.h@{serialization.h}!FIELDS@{FIELDS}}
+\index{FIELDS@{FIELDS}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{FIELDS}{FIELDS}}
+{\footnotesize\ttfamily \#define F\+I\+E\+L\+DS(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{serialization\+::value}}(ar, f));}
+
+
+
+does not add a tag to the serialized value 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_a8d1a0ab7280b8f2983ee19b3be23c1e7}{F\+I\+E\+L\+D\+S(f)}}
+
+Deprecated. Call {\ttfamily serialization\+::value(ar, f);} instead. \mbox{\Hypertarget{serialization_8h_a2870d0176b2833307a678807ff678a24}\label{serialization_8h_a2870d0176b2833307a678807ff678a24}} 
+\index{serialization.h@{serialization.h}!SERIALIZE\_PASTE@{SERIALIZE\_PASTE}}
+\index{SERIALIZE\_PASTE@{SERIALIZE\_PASTE}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{SERIALIZE\_PASTE}{SERIALIZE\_PASTE}}
+{\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+TE(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~\mbox{\hyperlink{serialization_8h_a4871a69c9474fc7c6777b66a75267b8a}{S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+T\+E\+\_\+}}(a, b)}
+
+\mbox{\Hypertarget{serialization_8h_a4871a69c9474fc7c6777b66a75267b8a}\label{serialization_8h_a4871a69c9474fc7c6777b66a75267b8a}} 
+\index{serialization.h@{serialization.h}!SERIALIZE\_PASTE\_@{SERIALIZE\_PASTE\_}}
+\index{SERIALIZE\_PASTE\_@{SERIALIZE\_PASTE\_}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{SERIALIZE\_PASTE\_}{SERIALIZE\_PASTE\_}}
+{\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+P\+A\+S\+T\+E\+\_\+(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~a\#\#b}
+
+\mbox{\Hypertarget{serialization_8h_aedb3c41a871f6813a019f73755db2780}\label{serialization_8h_aedb3c41a871f6813a019f73755db2780}} 
+\index{serialization.h@{serialization.h}!VARINT\_FIELD@{VARINT\_FIELD}}
+\index{VARINT\_FIELD@{VARINT\_FIELD}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{VARINT\_FIELD}{VARINT\_FIELD}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})~\mbox{\hyperlink{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+N}}(\#f, f)}
+
+
+
+tags and serializes the varint {\itshape f} 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_aedb3c41a871f6813a019f73755db2780}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D(f)}} \mbox{\Hypertarget{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}\label{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}} 
+\index{serialization.h@{serialization.h}!VARINT\_FIELD\_N@{VARINT\_FIELD\_N}}
+\index{VARINT\_FIELD\_N@{VARINT\_FIELD\_N}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{VARINT\_FIELD\_N}{VARINT\_FIELD\_N}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+N(\begin{DoxyParamCaption}\item[{}]{tag,  }\item[{}]{val }\end{DoxyParamCaption})~((void) \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{serialization\+::\+\_\+serialization\+\_\+macro}}, \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{serialization\+::field\+\_\+varint}}(ar, tag, val));}
+
+
+
+tags (as {\itshape tag}) and serializes the varint {\itshape val} 
+
+\textbackslash{}macro \mbox{\hyperlink{serialization_8h_a61ba10c3f9c0451bb0241fa3976404ef}{V\+A\+R\+I\+N\+T\+\_\+\+F\+I\+E\+L\+D\+\_\+\+N(tag, val)}}
+
+Deprecated. Call {\ttfamily field\+\_\+varint(ar, \char`\"{}tag\char`\"{}, val);} instead. 

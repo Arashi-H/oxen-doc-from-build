@@ -1,0 +1,92 @@
+\hypertarget{structwallet_1_1rpc_1_1GET__ADDRESS}{}\doxysection{wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS Struct Reference}
+\label{structwallet_1_1rpc_1_1GET__ADDRESS}\index{wallet::rpc::GET\_ADDRESS@{wallet::rpc::GET\_ADDRESS}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{structwallet_1_1rpc_1_1GET__ADDRESS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1GET__ADDRESS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_1_1address__info}{address\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_abc345a1703bb16858743b40655a62df2}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_ab4cf77a24ef43583afc5cd85f48bab67}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Return the wallet\textquotesingle{}s addresses for an account. Optionally filter for specific set of subaddresses.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily account\+\_\+index} -- Get the wallet addresses for the specified account.
+\item {\ttfamily address\+\_\+index} -- (Optional) List of subaddresses to return from the aforementioned account.
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily address} -- (Deprecated) Remains to be compatible with older R\+PC format
+\item {\ttfamily addresses} -- Addresses informations.
+\begin{DoxyItemize}
+\item {\ttfamily address} -- The (sub)address string.
+\item {\ttfamily label} -- Label of the (sub)address.
+\item {\ttfamily address\+\_\+index} -- Index of the subaddress
+\item {\ttfamily used} -- True if the (sub)address has received funds before. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__ADDRESS_abc345a1703bb16858743b40655a62df2}\label{structwallet_1_1rpc_1_1GET__ADDRESS_abc345a1703bb16858743b40655a62df2}} 
+\index{wallet::rpc::GET\_ADDRESS@{wallet::rpc::GET\_ADDRESS}!names@{names}}
+\index{names@{names}!wallet::rpc::GET\_ADDRESS@{wallet::rpc::GET\_ADDRESS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__ADDRESS_ab4cf77a24ef43583afc5cd85f48bab67}\label{structwallet_1_1rpc_1_1GET__ADDRESS_ab4cf77a24ef43583afc5cd85f48bab67}} 
+\index{wallet::rpc::GET\_ADDRESS@{wallet::rpc::GET\_ADDRESS}!request@{request}}
+\index{request@{request}!wallet::rpc::GET\_ADDRESS@{wallet::rpc::GET\_ADDRESS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ADDRESS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,123 @@
+\hypertarget{classwallet_1_1DaemonComms}{}\doxysection{wallet\+::Daemon\+Comms Class Reference}
+\label{classwallet_1_1DaemonComms}\index{wallet::DaemonComms@{wallet::DaemonComms}}
+
+
+{\ttfamily \#include $<$daemon\+\_\+comms.\+hpp$>$}
+
+
+
+Inheritance diagram for wallet\+::Daemon\+Comms\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classwallet_1_1DaemonComms__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classwallet_1_1DaemonComms_ac0a74b5c352db1c93838c01ce1b851ce}{set\+\_\+remote}} (std\+::string\+\_\+view \mbox{\hyperlink{classwallet_1_1address}{address}})=0
+\item 
+virtual void \mbox{\hyperlink{classwallet_1_1DaemonComms_a33777a6b6b32e29952c62aa0daf3beba}{propogate\+\_\+config}} ()=0
+\item 
+virtual int64\+\_\+t \mbox{\hyperlink{classwallet_1_1DaemonComms_a6016d884739db8302cc539fabd504f5e}{get\+\_\+height}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classwallet_1_1DaemonComms_a9610667a38b43ecea0909ded3431feb6}{register\+\_\+wallet}} (\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} \&wallet, int64\+\_\+t height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+sync\+\_\+height=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} new\+\_\+wallet=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})=0
+\item 
+virtual void \mbox{\hyperlink{classwallet_1_1DaemonComms_a16421e1cff678572aa66cae0d48573eb}{deregister\+\_\+wallet}} (\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} \&wallet, std\+::promise$<$ void $>$ \&p)=0
+\item 
+virtual std\+::pair$<$ int64\+\_\+t, int64\+\_\+t $>$ \mbox{\hyperlink{classwallet_1_1DaemonComms_abdd95fe5641e500989010c65dfc84c8e}{get\+\_\+fee\+\_\+parameters}} ()=0
+\item 
+virtual std\+::future$<$ std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}} $>$ $>$ \mbox{\hyperlink{classwallet_1_1DaemonComms_acd677dda71c2f2a94e0818f88d113e7b}{fetch\+\_\+decoys}} (const std\+::vector$<$ int64\+\_\+t $>$ \&indexes, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} with\+\_\+txid=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})=0
+\item 
+virtual std\+::future$<$ std\+::string $>$ \mbox{\hyperlink{classwallet_1_1DaemonComms_a1be94f2427fcb9acb6750cf0e20011cf}{submit\+\_\+transaction}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_a16421e1cff678572aa66cae0d48573eb}\label{classwallet_1_1DaemonComms_a16421e1cff678572aa66cae0d48573eb}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!deregister\_wallet@{deregister\_wallet}}
+\index{deregister\_wallet@{deregister\_wallet}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{deregister\_wallet()}{deregister\_wallet()}}
+{\footnotesize\ttfamily virtual void wallet\+::\+Daemon\+Comms\+::deregister\+\_\+wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} \&}]{wallet,  }\item[{std\+::promise$<$ void $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_af9dd8566cb7f7917d8e5a8707ac790d1}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_acd677dda71c2f2a94e0818f88d113e7b}\label{classwallet_1_1DaemonComms_acd677dda71c2f2a94e0818f88d113e7b}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!fetch\_decoys@{fetch\_decoys}}
+\index{fetch\_decoys@{fetch\_decoys}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{fetch\_decoys()}{fetch\_decoys()}}
+{\footnotesize\ttfamily virtual std\+::future$<$std\+::vector$<$\mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}}$>$ $>$ wallet\+::\+Daemon\+Comms\+::fetch\+\_\+decoys (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int64\+\_\+t $>$ \&}]{indexes,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{with\+\_\+txid = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a8af7c5513f8cf9da9dc1c75b6aa7aa8d}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_abdd95fe5641e500989010c65dfc84c8e}\label{classwallet_1_1DaemonComms_abdd95fe5641e500989010c65dfc84c8e}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!get\_fee\_parameters@{get\_fee\_parameters}}
+\index{get\_fee\_parameters@{get\_fee\_parameters}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{get\_fee\_parameters()}{get\_fee\_parameters()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$int64\+\_\+t, int64\+\_\+t$>$ wallet\+::\+Daemon\+Comms\+::get\+\_\+fee\+\_\+parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ad517763f8cad0feb64b476303d62ae0d}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_a6016d884739db8302cc539fabd504f5e}\label{classwallet_1_1DaemonComms_a6016d884739db8302cc539fabd504f5e}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily virtual int64\+\_\+t wallet\+::\+Daemon\+Comms\+::get\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aede4da2fe3609e0551aaf56f0a8cac58}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_a33777a6b6b32e29952c62aa0daf3beba}\label{classwallet_1_1DaemonComms_a33777a6b6b32e29952c62aa0daf3beba}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!propogate\_config@{propogate\_config}}
+\index{propogate\_config@{propogate\_config}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{propogate\_config()}{propogate\_config()}}
+{\footnotesize\ttfamily virtual void wallet\+::\+Daemon\+Comms\+::propogate\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a114d2d6e92bc1e34fae461d8e5026cc1}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_a9610667a38b43ecea0909ded3431feb6}\label{classwallet_1_1DaemonComms_a9610667a38b43ecea0909ded3431feb6}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!register\_wallet@{register\_wallet}}
+\index{register\_wallet@{register\_wallet}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{register\_wallet()}{register\_wallet()}}
+{\footnotesize\ttfamily virtual void wallet\+::\+Daemon\+Comms\+::register\+\_\+wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} \&}]{wallet,  }\item[{int64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+sync\+\_\+height = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{new\+\_\+wallet = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_a51798d3e64fbd9501817b7886a8692cf}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_ac0a74b5c352db1c93838c01ce1b851ce}\label{classwallet_1_1DaemonComms_ac0a74b5c352db1c93838c01ce1b851ce}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!set\_remote@{set\_remote}}
+\index{set\_remote@{set\_remote}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{set\_remote()}{set\_remote()}}
+{\footnotesize\ttfamily virtual void wallet\+::\+Daemon\+Comms\+::set\+\_\+remote (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_ad4281fe11345997f6df34d179a931231}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+\mbox{\Hypertarget{classwallet_1_1DaemonComms_a1be94f2427fcb9acb6750cf0e20011cf}\label{classwallet_1_1DaemonComms_a1be94f2427fcb9acb6750cf0e20011cf}} 
+\index{wallet::DaemonComms@{wallet::DaemonComms}!submit\_transaction@{submit\_transaction}}
+\index{submit\_transaction@{submit\_transaction}!wallet::DaemonComms@{wallet::DaemonComms}}
+\doxysubsubsection{\texorpdfstring{submit\_transaction()}{submit\_transaction()}}
+{\footnotesize\ttfamily virtual std\+::future$<$std\+::string$>$ wallet\+::\+Daemon\+Comms\+::submit\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{blink }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classwallet_1_1DefaultDaemonComms_aabadd803706ee5de204e77dcf8f13a1f}{wallet\+::\+Default\+Daemon\+Comms}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{daemon__comms_8hpp}{daemon\+\_\+comms.\+hpp}}\end{DoxyCompactItemize}

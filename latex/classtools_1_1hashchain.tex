@@ -1,0 +1,173 @@
+\hypertarget{classtools_1_1hashchain}{}\doxysection{tools\+::hashchain Class Reference}
+\label{classtools_1_1hashchain}\index{tools::hashchain@{tools::hashchain}}
+
+
+{\ttfamily \#include $<$wallet2.\+h$>$}
+
+
+
+Collaboration diagram for tools\+::hashchain\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classtools_1_1hashchain__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1hashchain_aa1bb2b2982726c1466266a6d14d502b7}{hashchain}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classtools_1_1hashchain_af1313fcfc9cc7c2e10b13378e16a2dc7}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classtools_1_1hashchain_a5122ef85ec1723eade50ad36736d474a}{offset}} () const
+\item 
+const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \& \mbox{\hyperlink{classtools_1_1hashchain_ae20a1b0368a3e92e60e523bca2259958}{genesis}} () const
+\item 
+void \mbox{\hyperlink{classtools_1_1hashchain_a7dce8425a1e84bca9cb38c97ed1ad28a}{push\+\_\+back}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1hashchain_a2a4d7fdeb9957411f7caad7413fc2caa}{is\+\_\+in\+\_\+bounds}} (size\+\_\+t idx) const
+\item 
+const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \& \mbox{\hyperlink{classtools_1_1hashchain_a76d1725844b0c84a37cfb02e8f9cf81f}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t idx) const
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \& \mbox{\hyperlink{classtools_1_1hashchain_a635a751e3a21a70ec71f56be1d00f965}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classtools_1_1hashchain_a0adb61e5cd2790b6694ca304863c105c}{crop}} (size\+\_\+t height)
+\item 
+void \mbox{\hyperlink{classtools_1_1hashchain_a120a4866a656bb9273225c1631fa4b51}{clear}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1hashchain_a825648a3f2630ebe346d1469ec63e32d}{empty}} () const
+\item 
+void \mbox{\hyperlink{classtools_1_1hashchain_a726e9438203e688ee12bb0e3def6191d}{trim}} (size\+\_\+t height)
+\item 
+void \mbox{\hyperlink{classtools_1_1hashchain_ac80e5e7dbdcd33bec4813a4d2003c383}{refill}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+{\footnotesize template$<$class t\+\_\+archive $>$ }\\void \mbox{\hyperlink{classtools_1_1hashchain_ab172dc5ed3a0c4b005606b0f2c754243}{serialize}} (t\+\_\+archive \&a, const unsigned int ver)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classtools_1_1hashchain_a6b0dd36ec28bb916ca596a03570b1d84}{m\+\_\+offset}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classtools_1_1hashchain_adb5fb22bf75a588b1336065b68f63d1f}{m\+\_\+genesis}}
+\item 
+std\+::deque$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classtools_1_1hashchain_aebf761d65c13a05d88269cfd634a2ccc}{m\+\_\+blockchain}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1hashchain_aa1bb2b2982726c1466266a6d14d502b7}\label{classtools_1_1hashchain_aa1bb2b2982726c1466266a6d14d502b7}} 
+\index{tools::hashchain@{tools::hashchain}!hashchain@{hashchain}}
+\index{hashchain@{hashchain}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{hashchain()}{hashchain()}}
+{\footnotesize\ttfamily tools\+::hashchain\+::hashchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1hashchain_a120a4866a656bb9273225c1631fa4b51}\label{classtools_1_1hashchain_a120a4866a656bb9273225c1631fa4b51}} 
+\index{tools::hashchain@{tools::hashchain}!clear@{clear}}
+\index{clear@{clear}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tools\+::hashchain\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a0adb61e5cd2790b6694ca304863c105c}\label{classtools_1_1hashchain_a0adb61e5cd2790b6694ca304863c105c}} 
+\index{tools::hashchain@{tools::hashchain}!crop@{crop}}
+\index{crop@{crop}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{crop()}{crop()}}
+{\footnotesize\ttfamily void tools\+::hashchain\+::crop (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a825648a3f2630ebe346d1469ec63e32d}\label{classtools_1_1hashchain_a825648a3f2630ebe346d1469ec63e32d}} 
+\index{tools::hashchain@{tools::hashchain}!empty@{empty}}
+\index{empty@{empty}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::hashchain\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_ae20a1b0368a3e92e60e523bca2259958}\label{classtools_1_1hashchain_ae20a1b0368a3e92e60e523bca2259958}} 
+\index{tools::hashchain@{tools::hashchain}!genesis@{genesis}}
+\index{genesis@{genesis}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{genesis()}{genesis()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}\& tools\+::hashchain\+::genesis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a2a4d7fdeb9957411f7caad7413fc2caa}\label{classtools_1_1hashchain_a2a4d7fdeb9957411f7caad7413fc2caa}} 
+\index{tools::hashchain@{tools::hashchain}!is\_in\_bounds@{is\_in\_bounds}}
+\index{is\_in\_bounds@{is\_in\_bounds}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{is\_in\_bounds()}{is\_in\_bounds()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::hashchain\+::is\+\_\+in\+\_\+bounds (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a5122ef85ec1723eade50ad36736d474a}\label{classtools_1_1hashchain_a5122ef85ec1723eade50ad36736d474a}} 
+\index{tools::hashchain@{tools::hashchain}!offset@{offset}}
+\index{offset@{offset}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily size\+\_\+t tools\+::hashchain\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a635a751e3a21a70ec71f56be1d00f965}\label{classtools_1_1hashchain_a635a751e3a21a70ec71f56be1d00f965}} 
+\index{tools::hashchain@{tools::hashchain}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}\& tools\+::hashchain\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a76d1725844b0c84a37cfb02e8f9cf81f}\label{classtools_1_1hashchain_a76d1725844b0c84a37cfb02e8f9cf81f}} 
+\index{tools::hashchain@{tools::hashchain}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}\& tools\+::hashchain\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a7dce8425a1e84bca9cb38c97ed1ad28a}\label{classtools_1_1hashchain_a7dce8425a1e84bca9cb38c97ed1ad28a}} 
+\index{tools::hashchain@{tools::hashchain}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void tools\+::hashchain\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_ac80e5e7dbdcd33bec4813a4d2003c383}\label{classtools_1_1hashchain_ac80e5e7dbdcd33bec4813a4d2003c383}} 
+\index{tools::hashchain@{tools::hashchain}!refill@{refill}}
+\index{refill@{refill}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{refill()}{refill()}}
+{\footnotesize\ttfamily void tools\+::hashchain\+::refill (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_ab172dc5ed3a0c4b005606b0f2c754243}\label{classtools_1_1hashchain_ab172dc5ed3a0c4b005606b0f2c754243}} 
+\index{tools::hashchain@{tools::hashchain}!serialize@{serialize}}
+\index{serialize@{serialize}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+archive $>$ \\
+void tools\+::hashchain\+::serialize (\begin{DoxyParamCaption}\item[{t\+\_\+archive \&}]{a,  }\item[{const unsigned int}]{ver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_af1313fcfc9cc7c2e10b13378e16a2dc7}\label{classtools_1_1hashchain_af1313fcfc9cc7c2e10b13378e16a2dc7}} 
+\index{tools::hashchain@{tools::hashchain}!size@{size}}
+\index{size@{size}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t tools\+::hashchain\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a726e9438203e688ee12bb0e3def6191d}\label{classtools_1_1hashchain_a726e9438203e688ee12bb0e3def6191d}} 
+\index{tools::hashchain@{tools::hashchain}!trim@{trim}}
+\index{trim@{trim}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily void tools\+::hashchain\+::trim (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1hashchain_aebf761d65c13a05d88269cfd634a2ccc}\label{classtools_1_1hashchain_aebf761d65c13a05d88269cfd634a2ccc}} 
+\index{tools::hashchain@{tools::hashchain}!m\_blockchain@{m\_blockchain}}
+\index{m\_blockchain@{m\_blockchain}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{m\_blockchain}{m\_blockchain}}
+{\footnotesize\ttfamily std\+::deque$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ tools\+::hashchain\+::m\+\_\+blockchain\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_adb5fb22bf75a588b1336065b68f63d1f}\label{classtools_1_1hashchain_adb5fb22bf75a588b1336065b68f63d1f}} 
+\index{tools::hashchain@{tools::hashchain}!m\_genesis@{m\_genesis}}
+\index{m\_genesis@{m\_genesis}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{m\_genesis}{m\_genesis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} tools\+::hashchain\+::m\+\_\+genesis\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1hashchain_a6b0dd36ec28bb916ca596a03570b1d84}\label{classtools_1_1hashchain_a6b0dd36ec28bb916ca596a03570b1d84}} 
+\index{tools::hashchain@{tools::hashchain}!m\_offset@{m\_offset}}
+\index{m\_offset@{m\_offset}!tools::hashchain@{tools::hashchain}}
+\doxysubsubsection{\texorpdfstring{m\_offset}{m\_offset}}
+{\footnotesize\ttfamily size\+\_\+t tools\+::hashchain\+::m\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet2_8h}{wallet2.\+h}}\end{DoxyCompactItemize}

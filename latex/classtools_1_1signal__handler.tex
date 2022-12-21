@@ -1,0 +1,85 @@
+\hypertarget{classtools_1_1signal__handler}{}\doxysection{tools\+::signal\+\_\+handler Class Reference}
+\label{classtools_1_1signal__handler}\index{tools::signal\_handler@{tools::signal\_handler}}
+
+
+Defines a singleton signal handler for win32 and $\ast$nix.  
+
+
+
+
+{\ttfamily \#include $<$signal\+\_\+handler.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1signal__handler_a580e483becf30319e1c47051875d3ebe}{install}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} t)
+\begin{DoxyCompactList}\small\item\em installs a signal handler ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classtools_1_1signal__handler_ad0e4db4035bd4c0132ff7e616548281e}{posix\+\_\+handler}} (int type)
+\begin{DoxyCompactList}\small\item\em handler for N\+IX \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classtools_1_1signal__handler_a534c0386ce06c5df5298ff1df8257094}{handle\+\_\+signal}} (int type)
+\begin{DoxyCompactList}\small\item\em calles m\+\_\+handler \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::function$<$ void(int)$>$ \mbox{\hyperlink{classtools_1_1signal__handler_a7d50ce6b0ba76ed0aa0c284fe46e1b44}{m\+\_\+handler}}
+\begin{DoxyCompactList}\small\item\em where the installed handler is stored \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a singleton signal handler for win32 and $\ast$nix. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1signal__handler_a534c0386ce06c5df5298ff1df8257094}\label{classtools_1_1signal__handler_a534c0386ce06c5df5298ff1df8257094}} 
+\index{tools::signal\_handler@{tools::signal\_handler}!handle\_signal@{handle\_signal}}
+\index{handle\_signal@{handle\_signal}!tools::signal\_handler@{tools::signal\_handler}}
+\doxysubsubsection{\texorpdfstring{handle\_signal()}{handle\_signal()}}
+{\footnotesize\ttfamily static void tools\+::signal\+\_\+handler\+::handle\+\_\+signal (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+calles m\+\_\+handler 
+
+\mbox{\Hypertarget{classtools_1_1signal__handler_a580e483becf30319e1c47051875d3ebe}\label{classtools_1_1signal__handler_a580e483becf30319e1c47051875d3ebe}} 
+\index{tools::signal\_handler@{tools::signal\_handler}!install@{install}}
+\index{install@{install}!tools::signal\_handler@{tools::signal\_handler}}
+\doxysubsubsection{\texorpdfstring{install()}{install()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::signal\+\_\+handler\+::install (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+installs a signal handler ~\newline
+ 
+
+\mbox{\Hypertarget{classtools_1_1signal__handler_ad0e4db4035bd4c0132ff7e616548281e}\label{classtools_1_1signal__handler_ad0e4db4035bd4c0132ff7e616548281e}} 
+\index{tools::signal\_handler@{tools::signal\_handler}!posix\_handler@{posix\_handler}}
+\index{posix\_handler@{posix\_handler}!tools::signal\_handler@{tools::signal\_handler}}
+\doxysubsubsection{\texorpdfstring{posix\_handler()}{posix\_handler()}}
+{\footnotesize\ttfamily static void tools\+::signal\+\_\+handler\+::posix\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+handler for N\+IX 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1signal__handler_a7d50ce6b0ba76ed0aa0c284fe46e1b44}\label{classtools_1_1signal__handler_a7d50ce6b0ba76ed0aa0c284fe46e1b44}} 
+\index{tools::signal\_handler@{tools::signal\_handler}!m\_handler@{m\_handler}}
+\index{m\_handler@{m\_handler}!tools::signal\_handler@{tools::signal\_handler}}
+\doxysubsubsection{\texorpdfstring{m\_handler}{m\_handler}}
+{\footnotesize\ttfamily std\+::function$<$void(int)$>$ tools\+::signal\+\_\+handler\+::m\+\_\+handler\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+where the installed handler is stored 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{signal__handler_8h}{signal\+\_\+handler.\+h}}\end{DoxyCompactItemize}

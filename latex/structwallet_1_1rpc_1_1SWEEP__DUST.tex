@@ -1,0 +1,94 @@
+\hypertarget{structwallet_1_1rpc_1_1SWEEP__DUST}{}\doxysection{wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+D\+U\+ST Struct Reference}
+\label{structwallet_1_1rpc_1_1SWEEP__DUST}\index{wallet::rpc::SWEEP\_DUST@{wallet::rpc::SWEEP\_DUST}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+D\+U\+ST\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1SWEEP__DUST__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+D\+U\+ST\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1SWEEP__DUST__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_1_1key__list}{key\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_a2e2f36ec18fa9db92f0b15446464c885}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_1_1REQUEST}{wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_a3a527657b150072c2f44d5b884a292df}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Send all dust outputs back to the wallet\textquotesingle{}s, to make them easier to spend (and mix).
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily get\+\_\+tx\+\_\+keys} -- (Optional) Return the transaction keys after sending.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, the newly created transaction will not be relayed to the oxen network. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- (Optional) Return the transactions as hex string after sending. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- (Optional) Return list of transaction metadata needed to relay the transfer later. (Defaults to false)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash\+\_\+list} -- The tx hashes of every transaction.
+\item {\ttfamily tx\+\_\+key\+\_\+list} -- The transaction keys for every transaction.
+\item {\ttfamily amount\+\_\+list} -- The amount transferred for every transaction.
+\item {\ttfamily fee\+\_\+list} -- The amount of fees paid for every transaction.
+\item {\ttfamily tx\+\_\+blob\+\_\+list} -- The tx as hex string for every transaction.
+\item {\ttfamily tx\+\_\+metadata\+\_\+list} -- List of transaction metadata needed to relay the transactions later.
+\item {\ttfamily multisig\+\_\+txset} -- The set of signing keys used in a multisig transaction (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1SWEEP__DUST_a2e2f36ec18fa9db92f0b15446464c885}\label{structwallet_1_1rpc_1_1SWEEP__DUST_a2e2f36ec18fa9db92f0b15446464c885}} 
+\index{wallet::rpc::SWEEP\_DUST@{wallet::rpc::SWEEP\_DUST}!names@{names}}
+\index{names@{names}!wallet::rpc::SWEEP\_DUST@{wallet::rpc::SWEEP\_DUST}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1SWEEP__DUST_a3a527657b150072c2f44d5b884a292df}\label{structwallet_1_1rpc_1_1SWEEP__DUST_a3a527657b150072c2f44d5b884a292df}} 
+\index{wallet::rpc::SWEEP\_DUST@{wallet::rpc::SWEEP\_DUST}!request@{request}}
+\index{request@{request}!wallet::rpc::SWEEP\_DUST@{wallet::rpc::SWEEP\_DUST}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__DUST_1_1REQUEST}{wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

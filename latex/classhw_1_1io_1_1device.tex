@@ -1,0 +1,98 @@
+\hypertarget{classhw_1_1io_1_1device}{}\doxysection{hw\+::io\+::device Class Reference}
+\label{classhw_1_1io_1_1device}\index{hw::io::device@{hw::io::device}}
+
+
+{\ttfamily \#include $<$io\+\_\+device.\+hpp$>$}
+
+
+
+Inheritance diagram for hw\+::io\+::device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classhw_1_1io_1_1device__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classhw_1_1io_1_1device_a57bf91cd240d7e95c6976003db8aac2c}{$\sim$device}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1io_1_1device_adef1a03a156442d30dd77b51122caa9e}{init}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1io_1_1device_a8164538cd62a5cdb13f12fcf820b47aa}{release}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1io_1_1device_ac8132bfc5d0b35d3465c261a088941f3}{disconnect}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1io_1_1device_a711d19effaa0a6ecf62ad84a8c44245b}{connected}} () const =0
+\item 
+virtual int \mbox{\hyperlink{classhw_1_1io_1_1device_ae048b19421546ebaaf816916cc3ee70d}{exchange}} (const unsigned char $\ast$command, unsigned int cmd\+\_\+len, unsigned char $\ast$response, unsigned int max\+\_\+resp\+\_\+len, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} user\+\_\+input)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1io_1_1device_a57bf91cd240d7e95c6976003db8aac2c}\label{classhw_1_1io_1_1device_a57bf91cd240d7e95c6976003db8aac2c}} 
+\index{hw::io::device@{hw::io::device}!````~device@{$\sim$device}}
+\index{````~device@{$\sim$device}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{$\sim$device()}{~device()}}
+{\footnotesize\ttfamily virtual hw\+::io\+::device\+::$\sim$device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1io_1_1device_a711d19effaa0a6ecf62ad84a8c44245b}\label{classhw_1_1io_1_1device_a711d19effaa0a6ecf62ad84a8c44245b}} 
+\index{hw::io::device@{hw::io::device}!connected@{connected}}
+\index{connected@{connected}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::io\+::device\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a5553c9a88fc138ee8dfdefe14815bb39}{hw\+::io\+::ledger\+\_\+tcp}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1device_ac8132bfc5d0b35d3465c261a088941f3}\label{classhw_1_1io_1_1device_ac8132bfc5d0b35d3465c261a088941f3}} 
+\index{hw::io::device@{hw::io::device}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily virtual void hw\+::io\+::device\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a5e85ccf30a43d7acb63b255a0600add6}{hw\+::io\+::ledger\+\_\+tcp}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1device_ae048b19421546ebaaf816916cc3ee70d}\label{classhw_1_1io_1_1device_ae048b19421546ebaaf816916cc3ee70d}} 
+\index{hw::io::device@{hw::io::device}!exchange@{exchange}}
+\index{exchange@{exchange}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{exchange()}{exchange()}}
+{\footnotesize\ttfamily virtual int hw\+::io\+::device\+::exchange (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{command,  }\item[{unsigned int}]{cmd\+\_\+len,  }\item[{unsigned char $\ast$}]{response,  }\item[{unsigned int}]{max\+\_\+resp\+\_\+len,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{user\+\_\+input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ab88a0622681951ba55bb756012f3808f}{hw\+::io\+::ledger\+\_\+tcp}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1device_adef1a03a156442d30dd77b51122caa9e}\label{classhw_1_1io_1_1device_adef1a03a156442d30dd77b51122caa9e}} 
+\index{hw::io::device@{hw::io::device}!init@{init}}
+\index{init@{init}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void hw\+::io\+::device\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ad8377a9fd4abf6308106e3332d8820ec}{hw\+::io\+::ledger\+\_\+tcp}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1device_a8164538cd62a5cdb13f12fcf820b47aa}\label{classhw_1_1io_1_1device_a8164538cd62a5cdb13f12fcf820b47aa}} 
+\index{hw::io::device@{hw::io::device}!release@{release}}
+\index{release@{release}!hw::io::device@{hw::io::device}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily virtual void hw\+::io\+::device\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_aff657afd1f62c038f79193355520178b}{hw\+::io\+::ledger\+\_\+tcp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/device/\mbox{\hyperlink{io__device_8hpp}{io\+\_\+device.\+hpp}}\end{DoxyCompactItemize}

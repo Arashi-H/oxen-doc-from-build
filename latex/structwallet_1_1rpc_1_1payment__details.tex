@@ -1,0 +1,106 @@
+\hypertarget{structwallet_1_1rpc_1_1payment__details}{}\doxysection{wallet\+::rpc\+::payment\+\_\+details Struct Reference}
+\label{structwallet_1_1rpc_1_1payment__details}\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Collaboration diagram for wallet\+::rpc\+::payment\+\_\+details\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{structwallet_1_1rpc_1_1payment__details__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a04cb544e81762092276e9a8402693a6f}{payment\+\_\+id}}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_ae015d1ddba8b0a2a1f97a64e7e59a9a4}{tx\+\_\+hash}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a8cafae8a2159581b68095ba2282af136}{amount}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_aba52fe13f046373091be6b1aeb19d6df}{block\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a99ec3f6020efb79a138d2a1ebf529ea7}{unlock\+\_\+time}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a75c8920eb74079337e6024cd6627a0eb}{locked}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a14c84ab897b115c0dbf08fe506019db6}{subaddr\+\_\+index}}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details_a5e99df9ad64d091029372ce2d3a77502}{address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Payment details struct
+
+
+\begin{DoxyItemize}
+\item {\ttfamily payment\+\_\+id} -- Payment ID matching the input parameter.
+\item {\ttfamily tx\+\_\+hash} -- Transaction hash used as the transaction ID.
+\item {\ttfamily amount} -- Amount for this payment.
+\item {\ttfamily block\+\_\+height} -- Height of the block that first confirmed this payment.
+\item {\ttfamily unlock\+\_\+time} -- Time (in block height) until this payment is safe to spend.
+\item {\ttfamily locked} -- If the payment is spendable or not
+\item {\ttfamily subaddr\+\_\+index} -- Major \& minor index, account and subaddress index respectively.
+\item {\ttfamily address} -- Address receiving the payment. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a5e99df9ad64d091029372ce2d3a77502}\label{structwallet_1_1rpc_1_1payment__details_a5e99df9ad64d091029372ce2d3a77502}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!address@{address}}
+\index{address@{address}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily std\+::string wallet\+::rpc\+::payment\+\_\+details\+::address}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a8cafae8a2159581b68095ba2282af136}\label{structwallet_1_1rpc_1_1payment__details_a8cafae8a2159581b68095ba2282af136}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!amount@{amount}}
+\index{amount@{amount}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::payment\+\_\+details\+::amount}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_aba52fe13f046373091be6b1aeb19d6df}\label{structwallet_1_1rpc_1_1payment__details_aba52fe13f046373091be6b1aeb19d6df}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!block\_height@{block\_height}}
+\index{block\_height@{block\_height}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{block\_height}{block\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::payment\+\_\+details\+::block\+\_\+height}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a75c8920eb74079337e6024cd6627a0eb}\label{structwallet_1_1rpc_1_1payment__details_a75c8920eb74079337e6024cd6627a0eb}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!locked@{locked}}
+\index{locked@{locked}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{locked}{locked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::rpc\+::payment\+\_\+details\+::locked}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a04cb544e81762092276e9a8402693a6f}\label{structwallet_1_1rpc_1_1payment__details_a04cb544e81762092276e9a8402693a6f}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!payment\_id@{payment\_id}}
+\index{payment\_id@{payment\_id}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{payment\_id}{payment\_id}}
+{\footnotesize\ttfamily std\+::string wallet\+::rpc\+::payment\+\_\+details\+::payment\+\_\+id}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a14c84ab897b115c0dbf08fe506019db6}\label{structwallet_1_1rpc_1_1payment__details_a14c84ab897b115c0dbf08fe506019db6}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!subaddr\_index@{subaddr\_index}}
+\index{subaddr\_index@{subaddr\_index}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{subaddr\_index}{subaddr\_index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} wallet\+::rpc\+::payment\+\_\+details\+::subaddr\+\_\+index}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_ae015d1ddba8b0a2a1f97a64e7e59a9a4}\label{structwallet_1_1rpc_1_1payment__details_ae015d1ddba8b0a2a1f97a64e7e59a9a4}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!tx\_hash@{tx\_hash}}
+\index{tx\_hash@{tx\_hash}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{tx\_hash}{tx\_hash}}
+{\footnotesize\ttfamily std\+::string wallet\+::rpc\+::payment\+\_\+details\+::tx\+\_\+hash}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1payment__details_a99ec3f6020efb79a138d2a1ebf529ea7}\label{structwallet_1_1rpc_1_1payment__details_a99ec3f6020efb79a138d2a1ebf529ea7}} 
+\index{wallet::rpc::payment\_details@{wallet::rpc::payment\_details}!unlock\_time@{unlock\_time}}
+\index{unlock\_time@{unlock\_time}!wallet::rpc::payment\_details@{wallet::rpc::payment\_details}}
+\doxysubsubsection{\texorpdfstring{unlock\_time}{unlock\_time}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::payment\+\_\+details\+::unlock\+\_\+time}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

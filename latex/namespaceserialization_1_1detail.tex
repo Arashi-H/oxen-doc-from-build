@@ -1,0 +1,142 @@
+\hypertarget{namespaceserialization_1_1detail}{}\doxysection{serialization\+::detail Namespace Reference}
+\label{namespaceserialization_1_1detail}\index{serialization::detail@{serialization::detail}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_a3e83d9ef8b4de50983ab038745d924b5}{serialize\+\_\+container\+\_\+element}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&e)
+\item 
+{\footnotesize template$<$class Archive , typename C , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_a46b8617e07431c6cdfbe2cf874402451}{serialize\+\_\+container}} (Archive \&ar, C \&v)
+\item 
+{\footnotesize template$<$typename Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_a8ce0066b7ea6b3ca784c6bbed232dab8}{serialize\+\_\+pair\+\_\+element}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&e)
+\item 
+{\footnotesize template$<$size\+\_\+t I, class Archive , typename Variant , typename Tag $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a49d222b90a3b3b3a7529af0deb9e086d}{read\+\_\+variant\+\_\+impl\+\_\+one}} (Archive \&ar, Variant \&v, const Tag \&tag)
+\item 
+{\footnotesize template$<$class Archive , typename... T, size\+\_\+t... I$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_aaf90dc5d12514b36d17fa9fd73b0cb05}{read\+\_\+variant\+\_\+impl}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v, std\+::index\+\_\+sequence$<$ I... $>$)
+\item 
+{\footnotesize template$<$class Archive , typename... T, typename Indices  = std\+::make\+\_\+index\+\_\+sequence$<$sizeof...(\+T)$>$$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_aa0bb6e6e2a703dc5cc4c8f733539101e}{read\+\_\+variant}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive , typename... T$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_adc5dc9fd4f6ceefff5d2aa83638cd7e2}{write\+\_\+variant}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Writes a variant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a910f9047e1e99112dd28d65d0dc1fd50}{has\+\_\+reserve}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily val.\+reserve(0)} exists for {\ttfamily T val}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_af8e662806d3dbec0c7aeb837e4dbb3bf}{has\+\_\+emplace\+\_\+back}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a0845d365f0fa25814a989b621f62572a}{has\+\_\+value\+\_\+insert}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily val.\+insert(V\{\})} exists for {\ttfamily T val} and {\ttfamily using V = T\+::value\+\_\+type}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Archive , typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a06ab3ffa936392377aa7ded9b6f5d58e}{has\+\_\+free\+\_\+serialize\+\_\+value}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily void serialize\+\_\+value(ar, t)} exists for non-\/const {\ttfamily ar} and {\ttfamily t} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Archive , typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a2256d00b1c8d713ada4134027667ae56}{has\+\_\+memfn\+\_\+serialize\+\_\+value}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily t.\+serialize\+\_\+value(ar)} exists (and returns void) for non-\/const {\ttfamily ar} and {\ttfamily t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceserialization_1_1detail_aa0bb6e6e2a703dc5cc4c8f733539101e}\label{namespaceserialization_1_1detail_aa0bb6e6e2a703dc5cc4c8f733539101e}} 
+\index{serialization::detail@{serialization::detail}!read\_variant@{read\_variant}}
+\index{read\_variant@{read\_variant}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{read\_variant()}{read\_variant()}}
+{\footnotesize\ttfamily template$<$class Archive , typename... T, typename Indices  = std\+::make\+\_\+index\+\_\+sequence$<$sizeof...(\+T)$>$$>$ \\
+void serialization\+::detail\+::read\+\_\+variant (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::variant$<$ T... $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_aaf90dc5d12514b36d17fa9fd73b0cb05}\label{namespaceserialization_1_1detail_aaf90dc5d12514b36d17fa9fd73b0cb05}} 
+\index{serialization::detail@{serialization::detail}!read\_variant\_impl@{read\_variant\_impl}}
+\index{read\_variant\_impl@{read\_variant\_impl}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{read\_variant\_impl()}{read\_variant\_impl()}}
+{\footnotesize\ttfamily template$<$class Archive , typename... T, size\+\_\+t... I$>$ \\
+void serialization\+::detail\+::read\+\_\+variant\+\_\+impl (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::variant$<$ T... $>$ \&}]{v,  }\item[{std\+::index\+\_\+sequence$<$ I... $>$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a49d222b90a3b3b3a7529af0deb9e086d}\label{namespaceserialization_1_1detail_a49d222b90a3b3b3a7529af0deb9e086d}} 
+\index{serialization::detail@{serialization::detail}!read\_variant\_impl\_one@{read\_variant\_impl\_one}}
+\index{read\_variant\_impl\_one@{read\_variant\_impl\_one}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{read\_variant\_impl\_one()}{read\_variant\_impl\_one()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t I, class Archive , typename Variant , typename Tag $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::read\+\_\+variant\+\_\+impl\+\_\+one (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{Variant \&}]{v,  }\item[{const Tag \&}]{tag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a46b8617e07431c6cdfbe2cf874402451}\label{namespaceserialization_1_1detail_a46b8617e07431c6cdfbe2cf874402451}} 
+\index{serialization::detail@{serialization::detail}!serialize\_container@{serialize\_container}}
+\index{serialize\_container@{serialize\_container}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{serialize\_container()}{serialize\_container()}}
+{\footnotesize\ttfamily template$<$class Archive , typename C , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ \\
+void serialization\+::detail\+::serialize\+\_\+container (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{C \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a3e83d9ef8b4de50983ab038745d924b5}\label{namespaceserialization_1_1detail_a3e83d9ef8b4de50983ab038745d924b5}} 
+\index{serialization::detail@{serialization::detail}!serialize\_container\_element@{serialize\_container\_element}}
+\index{serialize\_container\_element@{serialize\_container\_element}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{serialize\_container\_element()}{serialize\_container\_element()}}
+{\footnotesize\ttfamily template$<$typename Archive , class T $>$ \\
+void serialization\+::detail\+::serialize\+\_\+container\+\_\+element (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a8ce0066b7ea6b3ca784c6bbed232dab8}\label{namespaceserialization_1_1detail_a8ce0066b7ea6b3ca784c6bbed232dab8}} 
+\index{serialization::detail@{serialization::detail}!serialize\_pair\_element@{serialize\_pair\_element}}
+\index{serialize\_pair\_element@{serialize\_pair\_element}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{serialize\_pair\_element()}{serialize\_pair\_element()}}
+{\footnotesize\ttfamily template$<$typename Archive , class T $>$ \\
+void serialization\+::detail\+::serialize\+\_\+pair\+\_\+element (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_adc5dc9fd4f6ceefff5d2aa83638cd7e2}\label{namespaceserialization_1_1detail_adc5dc9fd4f6ceefff5d2aa83638cd7e2}} 
+\index{serialization::detail@{serialization::detail}!write\_variant@{write\_variant}}
+\index{write\_variant@{write\_variant}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{write\_variant()}{write\_variant()}}
+{\footnotesize\ttfamily template$<$class Archive , typename... T$>$ \\
+void serialization\+::detail\+::write\+\_\+variant (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::variant$<$ T... $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Writes a variant. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceserialization_1_1detail_af8e662806d3dbec0c7aeb837e4dbb3bf}\label{namespaceserialization_1_1detail_af8e662806d3dbec0c7aeb837e4dbb3bf}} 
+\index{serialization::detail@{serialization::detail}!has\_emplace\_back@{has\_emplace\_back}}
+\index{has\_emplace\_back@{has\_emplace\_back}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{has\_emplace\_back}{has\_emplace\_back}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::has\+\_\+emplace\+\_\+back = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+True if {\ttfamily val.\+emplace\+\_\+back()} exists for {\ttfamily T val}, and that T\+::value\+\_\+type is default constructible. \mbox{\Hypertarget{namespaceserialization_1_1detail_a06ab3ffa936392377aa7ded9b6f5d58e}\label{namespaceserialization_1_1detail_a06ab3ffa936392377aa7ded9b6f5d58e}} 
+\index{serialization::detail@{serialization::detail}!has\_free\_serialize\_value@{has\_free\_serialize\_value}}
+\index{has\_free\_serialize\_value@{has\_free\_serialize\_value}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{has\_free\_serialize\_value}{has\_free\_serialize\_value}}
+{\footnotesize\ttfamily template$<$typename Archive , typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::has\+\_\+free\+\_\+serialize\+\_\+value = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+True if {\ttfamily void serialize\+\_\+value(ar, t)} exists for non-\/const {\ttfamily ar} and {\ttfamily t} 
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a2256d00b1c8d713ada4134027667ae56}\label{namespaceserialization_1_1detail_a2256d00b1c8d713ada4134027667ae56}} 
+\index{serialization::detail@{serialization::detail}!has\_memfn\_serialize\_value@{has\_memfn\_serialize\_value}}
+\index{has\_memfn\_serialize\_value@{has\_memfn\_serialize\_value}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{has\_memfn\_serialize\_value}{has\_memfn\_serialize\_value}}
+{\footnotesize\ttfamily template$<$typename Archive , typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::has\+\_\+memfn\+\_\+serialize\+\_\+value = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+True if {\ttfamily t.\+serialize\+\_\+value(ar)} exists (and returns void) for non-\/const {\ttfamily ar} and {\ttfamily t} 
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a910f9047e1e99112dd28d65d0dc1fd50}\label{namespaceserialization_1_1detail_a910f9047e1e99112dd28d65d0dc1fd50}} 
+\index{serialization::detail@{serialization::detail}!has\_reserve@{has\_reserve}}
+\index{has\_reserve@{has\_reserve}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{has\_reserve}{has\_reserve}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::has\+\_\+reserve = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+True if {\ttfamily val.\+reserve(0)} exists for {\ttfamily T val}. 
+
+\mbox{\Hypertarget{namespaceserialization_1_1detail_a0845d365f0fa25814a989b621f62572a}\label{namespaceserialization_1_1detail_a0845d365f0fa25814a989b621f62572a}} 
+\index{serialization::detail@{serialization::detail}!has\_value\_insert@{has\_value\_insert}}
+\index{has\_value\_insert@{has\_value\_insert}!serialization::detail@{serialization::detail}}
+\doxysubsubsection{\texorpdfstring{has\_value\_insert}{has\_value\_insert}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::detail\+::has\+\_\+value\+\_\+insert = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+True if {\ttfamily val.\+insert(V\{\})} exists for {\ttfamily T val} and {\ttfamily using V = T\+::value\+\_\+type}. 
+

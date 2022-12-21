@@ -1,0 +1,94 @@
+\hypertarget{structcryptonote_1_1tx__verification__batch__info}{}\doxysection{cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info Struct Reference}
+\label{structcryptonote_1_1tx__verification__batch__info}\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+
+
+{\ttfamily \#include $<$cryptonote\+\_\+tx\+\_\+utils.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1tx__verification__batch__info__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{cryptonote\+::tx\+\_\+verification\+\_\+context}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_a65fad0001a79b960df19a9a3bb97b051}{tvc}} \{\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_ae2e0d406586f21bb35c6052321540a5f}{parsed}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_af385541d71b3d3041162c07b95be5dd7}{result}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_a63fcd98cd8ac73937cb2e7eb2c123550}{already\+\_\+have}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_a23753fecb6bfe2cace7d7fe973f5a80d}{approved\+\_\+blink}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+const std\+::string $\ast$ \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_af660823199b51da8b83b8e1dd67ca588}{blob}} = nullptr
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_adbf20e59f5f3184ed589911cbcbdb321}{tx\+\_\+hash}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \mbox{\hyperlink{structcryptonote_1_1tx__verification__batch__info_a7f2a042d4c9239a294254d343c0f472b}{tx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Returned type of parse\+\_\+incoming\+\_\+txs() that provides details about which transactions failed and why. This is passed on to handle\+\_\+parsed\+\_\+txs() (potentially after modification such as setting {\ttfamily approved\+\_\+blink}) to handle\+\_\+parsed\+\_\+txs() to actually insert the transactions. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_a63fcd98cd8ac73937cb2e7eb2c123550}\label{structcryptonote_1_1tx__verification__batch__info_a63fcd98cd8ac73937cb2e7eb2c123550}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!already\_have@{already\_have}}
+\index{already\_have@{already\_have}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{already\_have}{already\_have}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::already\+\_\+have = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_a23753fecb6bfe2cace7d7fe973f5a80d}\label{structcryptonote_1_1tx__verification__batch__info_a23753fecb6bfe2cace7d7fe973f5a80d}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!approved\_blink@{approved\_blink}}
+\index{approved\_blink@{approved\_blink}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{approved\_blink}{approved\_blink}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::approved\+\_\+blink = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_af660823199b51da8b83b8e1dd67ca588}\label{structcryptonote_1_1tx__verification__batch__info_af660823199b51da8b83b8e1dd67ca588}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!blob@{blob}}
+\index{blob@{blob}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{blob}{blob}}
+{\footnotesize\ttfamily const std\+::string$\ast$ cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::blob = nullptr}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_ae2e0d406586f21bb35c6052321540a5f}\label{structcryptonote_1_1tx__verification__batch__info_ae2e0d406586f21bb35c6052321540a5f}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!parsed@{parsed}}
+\index{parsed@{parsed}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{parsed}{parsed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::parsed = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_af385541d71b3d3041162c07b95be5dd7}\label{structcryptonote_1_1tx__verification__batch__info_af385541d71b3d3041162c07b95be5dd7}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!result@{result}}
+\index{result@{result}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::result = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_a65fad0001a79b960df19a9a3bb97b051}\label{structcryptonote_1_1tx__verification__batch__info_a65fad0001a79b960df19a9a3bb97b051}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!tvc@{tvc}}
+\index{tvc@{tvc}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{tvc}{tvc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{cryptonote\+::tx\+\_\+verification\+\_\+context}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::tvc \{\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_a7f2a042d4c9239a294254d343c0f472b}\label{structcryptonote_1_1tx__verification__batch__info_a7f2a042d4c9239a294254d343c0f472b}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!tx@{tx}}
+\index{tx@{tx}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{tx}{tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::tx}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__verification__batch__info_adbf20e59f5f3184ed589911cbcbdb321}\label{structcryptonote_1_1tx__verification__batch__info_adbf20e59f5f3184ed589911cbcbdb321}} 
+\index{cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}!tx\_hash@{tx\_hash}}
+\index{tx\_hash@{tx\_hash}!cryptonote::tx\_verification\_batch\_info@{cryptonote::tx\_verification\_batch\_info}}
+\doxysubsubsection{\texorpdfstring{tx\_hash}{tx\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::tx\+\_\+verification\+\_\+batch\+\_\+info\+::tx\+\_\+hash}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{cryptonote__tx__utils_8h}{cryptonote\+\_\+tx\+\_\+utils.\+h}}\end{DoxyCompactItemize}

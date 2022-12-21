@@ -1,0 +1,160 @@
+\hypertarget{classdaemonize_1_1daemon}{}\doxysection{daemonize\+::daemon Class Reference}
+\label{classdaemonize_1_1daemon}\index{daemonize::daemon@{daemonize::daemon}}
+
+
+{\ttfamily \#include $<$daemon.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdaemonize_1_1daemon_a575a3226adeb9a4b190608e982f34c79}{daemon}} (boost\+::program\+\_\+options\+::variables\+\_\+map \mbox{\hyperlink{classdaemonize_1_1daemon_a44304cec1deb81ffa203054a83cff33f}{vm}})
+\item 
+\mbox{\hyperlink{classdaemonize_1_1daemon_a38c8159b98facf150d6fe4ad57d5a2e6}{$\sim$daemon}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1daemon_a46571cc3f8e482696c48cc9662d85a0c}{run}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} interactive=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+void \mbox{\hyperlink{classdaemonize_1_1daemon_a48fc95575bf549d35cbf48917df115bf}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdaemonize_1_1daemon_a301f3038a64589e0035245aa901cba75}{init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&option\+\_\+spec, boost\+::program\+\_\+options\+::options\+\_\+description \&hidden)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{protocol\+\_\+handler}} = \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} $>$
+\begin{DoxyCompactList}\small\item\em 💩 \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}{node\+\_\+server}} = \mbox{\hyperlink{classnodetool_1_1node__server}{nodetool\+::node\+\_\+server}}$<$ \mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{protocol\+\_\+handler}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::program\+\_\+options\+::variables\+\_\+map \mbox{\hyperlink{classdaemonize_1_1daemon_a44304cec1deb81ffa203054a83cff33f}{vm}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a84bd66482e36a05085f52860d9f6685a}{core}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{protocol\+\_\+handler}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a4b365fef5c1ed58826dd5b1dff4cebfa}{protocol}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}{node\+\_\+server}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a54488892de0c123d7b22521f3beba877}{p2p}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{cryptonote\+::rpc\+::core\+\_\+rpc\+\_\+server}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a79ed21cd72e5c196fda89a172e74808f}{rpc}}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server}{cryptonote\+::rpc\+::http\+\_\+server}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_af2b9acb804f798040b2d6aec00edb6b0}{http\+\_\+rpc\+\_\+admin}}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server}{cryptonote\+::rpc\+::http\+\_\+server}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a569c40950fb5d56b035bd478d1279c0a}{http\+\_\+rpc\+\_\+public}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc}{cryptonote\+::rpc\+::omq\+\_\+rpc}} $>$ \mbox{\hyperlink{classdaemonize_1_1daemon_a36340146abd0ddfc7d65fc2108cbc4ff}{omq\+\_\+rpc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}\label{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}} 
+\index{daemonize::daemon@{daemonize::daemon}!node\_server@{node\_server}}
+\index{node\_server@{node\_server}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{node\_server}{node\_server}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}{daemonize\+::daemon\+::node\+\_\+server}} =  \mbox{\hyperlink{classnodetool_1_1node__server}{nodetool\+::node\+\_\+server}}$<$\mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{protocol\+\_\+handler}}$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}\label{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}} 
+\index{daemonize::daemon@{daemonize::daemon}!protocol\_handler@{protocol\_handler}}
+\index{protocol\_handler@{protocol\_handler}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{protocol\_handler}{protocol\_handler}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{daemonize\+::daemon\+::protocol\+\_\+handler}} =  \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}}$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+💩 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a575a3226adeb9a4b190608e982f34c79}\label{classdaemonize_1_1daemon_a575a3226adeb9a4b190608e982f34c79}} 
+\index{daemonize::daemon@{daemonize::daemon}!daemon@{daemon}}
+\index{daemon@{daemon}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{daemon()}{daemon()}}
+{\footnotesize\ttfamily daemonize\+::daemon\+::daemon (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::variables\+\_\+map}]{vm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a38c8159b98facf150d6fe4ad57d5a2e6}\label{classdaemonize_1_1daemon_a38c8159b98facf150d6fe4ad57d5a2e6}} 
+\index{daemonize::daemon@{daemonize::daemon}!````~daemon@{$\sim$daemon}}
+\index{````~daemon@{$\sim$daemon}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{$\sim$daemon()}{~daemon()}}
+{\footnotesize\ttfamily daemonize\+::daemon\+::$\sim$daemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a301f3038a64589e0035245aa901cba75}\label{classdaemonize_1_1daemon_a301f3038a64589e0035245aa901cba75}} 
+\index{daemonize::daemon@{daemonize::daemon}!init\_options@{init\_options}}
+\index{init\_options@{init\_options}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{init\_options()}{init\_options()}}
+{\footnotesize\ttfamily void daemonize\+::daemon\+::init\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{option\+\_\+spec,  }\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{hidden }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a46571cc3f8e482696c48cc9662d85a0c}\label{classdaemonize_1_1daemon_a46571cc3f8e482696c48cc9662d85a0c}} 
+\index{daemonize::daemon@{daemonize::daemon}!run@{run}}
+\index{run@{run}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::daemon\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{interactive = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a48fc95575bf549d35cbf48917df115bf}\label{classdaemonize_1_1daemon_a48fc95575bf549d35cbf48917df115bf}} 
+\index{daemonize::daemon@{daemonize::daemon}!stop@{stop}}
+\index{stop@{stop}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void daemonize\+::daemon\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a84bd66482e36a05085f52860d9f6685a}\label{classdaemonize_1_1daemon_a84bd66482e36a05085f52860d9f6685a}} 
+\index{daemonize::daemon@{daemonize::daemon}!core@{core}}
+\index{core@{core}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{core}{core}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}}$>$ daemonize\+::daemon\+::core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_af2b9acb804f798040b2d6aec00edb6b0}\label{classdaemonize_1_1daemon_af2b9acb804f798040b2d6aec00edb6b0}} 
+\index{daemonize::daemon@{daemonize::daemon}!http\_rpc\_admin@{http\_rpc\_admin}}
+\index{http\_rpc\_admin@{http\_rpc\_admin}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{http\_rpc\_admin}{http\_rpc\_admin}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server}{cryptonote\+::rpc\+::http\+\_\+server}}$>$ daemonize\+::daemon\+::http\+\_\+rpc\+\_\+admin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a569c40950fb5d56b035bd478d1279c0a}\label{classdaemonize_1_1daemon_a569c40950fb5d56b035bd478d1279c0a}} 
+\index{daemonize::daemon@{daemonize::daemon}!http\_rpc\_public@{http\_rpc\_public}}
+\index{http\_rpc\_public@{http\_rpc\_public}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{http\_rpc\_public}{http\_rpc\_public}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server}{cryptonote\+::rpc\+::http\+\_\+server}}$>$ daemonize\+::daemon\+::http\+\_\+rpc\+\_\+public\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a36340146abd0ddfc7d65fc2108cbc4ff}\label{classdaemonize_1_1daemon_a36340146abd0ddfc7d65fc2108cbc4ff}} 
+\index{daemonize::daemon@{daemonize::daemon}!omq\_rpc@{omq\_rpc}}
+\index{omq\_rpc@{omq\_rpc}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{omq\_rpc}{omq\_rpc}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc}{cryptonote\+::rpc\+::omq\+\_\+rpc}}$>$ daemonize\+::daemon\+::omq\+\_\+rpc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a54488892de0c123d7b22521f3beba877}\label{classdaemonize_1_1daemon_a54488892de0c123d7b22521f3beba877}} 
+\index{daemonize::daemon@{daemonize::daemon}!p2p@{p2p}}
+\index{p2p@{p2p}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{p2p}{p2p}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classdaemonize_1_1daemon_a0cadd585f0bb177dd7cc91960805b9c5}{node\+\_\+server}}$>$ daemonize\+::daemon\+::p2p\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a4b365fef5c1ed58826dd5b1dff4cebfa}\label{classdaemonize_1_1daemon_a4b365fef5c1ed58826dd5b1dff4cebfa}} 
+\index{daemonize::daemon@{daemonize::daemon}!protocol@{protocol}}
+\index{protocol@{protocol}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{protocol}{protocol}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classdaemonize_1_1daemon_a22d5a7702d74431677e1d9f810bbb010}{protocol\+\_\+handler}}$>$ daemonize\+::daemon\+::protocol\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a79ed21cd72e5c196fda89a172e74808f}\label{classdaemonize_1_1daemon_a79ed21cd72e5c196fda89a172e74808f}} 
+\index{daemonize::daemon@{daemonize::daemon}!rpc@{rpc}}
+\index{rpc@{rpc}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{rpc}{rpc}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{cryptonote\+::rpc\+::core\+\_\+rpc\+\_\+server}}$>$ daemonize\+::daemon\+::rpc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1daemon_a44304cec1deb81ffa203054a83cff33f}\label{classdaemonize_1_1daemon_a44304cec1deb81ffa203054a83cff33f}} 
+\index{daemonize::daemon@{daemonize::daemon}!vm@{vm}}
+\index{vm@{vm}!daemonize::daemon@{daemonize::daemon}}
+\doxysubsubsection{\texorpdfstring{vm}{vm}}
+{\footnotesize\ttfamily boost\+::program\+\_\+options\+::variables\+\_\+map daemonize\+::daemon\+::vm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/daemon/\mbox{\hyperlink{daemon_8h}{daemon.\+h}}\item 
+src/daemon/\mbox{\hyperlink{daemon_8cpp}{daemon.\+cpp}}\end{DoxyCompactItemize}

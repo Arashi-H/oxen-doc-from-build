@@ -1,0 +1,51 @@
+\hypertarget{difficulty_8cpp}{}\doxysection{src/cryptonote\+\_\+basic/difficulty.cpp File Reference}
+\label{difficulty_8cpp}\index{src/cryptonote\_basic/difficulty.cpp@{src/cryptonote\_basic/difficulty.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}difficulty.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardfork.\+h\char`\"{}}\newline
+Include dependency graph for difficulty.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{difficulty_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{difficulty_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}{O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}~\char`\"{}difficulty\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a4fe73843b2a03607bcb99eccf418f0d3}{cryptonote\+::cadd}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a829584b1a44787c4ad7872c4fb105b68}{cryptonote\+::cadc}} (uint64\+\_\+t a, uint64\+\_\+t b, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} c)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a86a4bda0dfe5b3a55be27e1436617b92}{cryptonote\+::check\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash, difficulty\+\_\+type difficulty)
+\begin{DoxyCompactList}\small\item\em checks if a hash fits the given difficulty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecryptonote_abccab2f8f3e6cfc44495e8274bbf4c68}{cryptonote\+::add\+\_\+timestamp\+\_\+and\+\_\+difficulty}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t chain\+\_\+height, std\+::vector$<$ uint64\+\_\+t $>$ \&timestamps, std\+::vector$<$ difficulty\+\_\+type $>$ \&difficulties, uint64\+\_\+t timestamp, uint64\+\_\+t cumulative\+\_\+difficulty)
+\item 
+difficulty\+\_\+calc\+\_\+mode \mbox{\hyperlink{namespacecryptonote_ad2b9d4175f0d7cd6b42a7512e12ad32f}{cryptonote\+::difficulty\+\_\+mode}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t height)
+\item 
+difficulty\+\_\+type \mbox{\hyperlink{namespacecryptonote_a046a868c45191daef59326765a73118b}{cryptonote\+::next\+\_\+difficulty\+\_\+v2}} (std\+::vector$<$ std\+::uint64\+\_\+t $>$ timestamps, std\+::vector$<$ difficulty\+\_\+type $>$ cumulative\+\_\+difficulties, size\+\_\+t target\+\_\+seconds, difficulty\+\_\+calc\+\_\+mode mode)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{difficulty_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}\label{difficulty_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}} 
+\index{difficulty.cpp@{difficulty.cpp}!OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+\index{OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}!difficulty.cpp@{difficulty.cpp}}
+\doxysubsubsection{\texorpdfstring{OXEN\_DEFAULT\_LOG\_CATEGORY}{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY~\char`\"{}difficulty\char`\"{}}
+

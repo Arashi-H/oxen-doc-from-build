@@ -1,0 +1,86 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+GE Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE}\index{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE@{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+GE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+GE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a852d7433e5d6578a1688297caddaa586}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+G\+E\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a49459b3bdab00110c2cba72f4b12a0c6}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Similar to get\+\_\+block\+\_\+header\+\_\+by\+\_\+height above, but for a range of blocks. This method includes a starting block height and an ending block height as parameters to retrieve basic information about the range of blocks.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily start\+\_\+height} The starting block\textquotesingle{}s height.
+\item {\ttfamily end\+\_\+height} The ending block\textquotesingle{}s height.
+\item {\ttfamily fill\+\_\+pow\+\_\+hash} Tell the daemon if it should fill out pow\+\_\+hash field.
+\item {\ttfamily get\+\_\+tx\+\_\+hashes} If true (default false) then include the hashes of non-\/coinbase transactions
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily headers} Array of \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}} (a structure containing block header information. See get\+\_\+last\+\_\+block\+\_\+header). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a852d7433e5d6578a1688297caddaa586}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a852d7433e5d6578a1688297caddaa586}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE@{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE@{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+G\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a49459b3bdab00110c2cba72f4b12a0c6}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_a49459b3bdab00110c2cba72f4b12a0c6}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE@{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE@{cryptonote::rpc::GET\_BLOCK\_HEADERS\_RANGE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADERS__RANGE_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+G\+E\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+S\+\_\+\+R\+A\+N\+G\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

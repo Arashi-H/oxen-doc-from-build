@@ -1,0 +1,68 @@
+\hypertarget{util_8cpp}{}\doxysection{src/common/util.cpp File Reference}
+\label{util_8cpp}\index{src/common/util.cpp@{src/common/util.cpp}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$fmt/chrono.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/wipeable\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/readline\+\_\+buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i18n.\+h\char`\"{}}\newline
+Include dependency graph for util.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{util_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02util_8cpp_03}{tools\+::anonymous\+\_\+namespace\{util.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a31d00c847b03fe2bd6bf72f23086b0f1}{tools\+::disable\+\_\+core\+\_\+dumps}} ()
+\item 
+ssize\+\_\+t \mbox{\hyperlink{namespacetools_aa84fc22a234ee498d97ff86fd607912f}{tools\+::get\+\_\+lockable\+\_\+memory}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_ab360bea8430aefc79cc580bbf9172854}{tools\+::on\+\_\+startup}} ()
+\item 
+void \mbox{\hyperlink{namespacetools_a38b719257d678688bca4ffada090c194}{tools\+::set\+\_\+max\+\_\+concurrency}} (unsigned n)
+\item 
+unsigned \mbox{\hyperlink{namespacetools_abd06b2ea986c5f1a5be6c0a70587e45e}{tools\+::get\+\_\+max\+\_\+concurrency}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a981dc8ba241703a2c62e4e588f725f08}{tools\+::is\+\_\+local\+\_\+address}} (const std\+::string \&address)
+\item 
+int \mbox{\hyperlink{namespacetools_ad56f5a1d25e8ccc496eed684550ec692}{tools\+::vercmp}} (std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_a268600fbb504a92272006fddc878620d}{v0}}, std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_adaaed4557d71f83366fc9be982bdd8fd}{v1}})
+\item 
+std\+::optional$<$ std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ $>$ \mbox{\hyperlink{namespacetools_aecf1782378f39c6a899124ff1744a12c}{tools\+::parse\+\_\+subaddress\+\_\+lookahead}} (const std\+::string \&str)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_a4c57aa8f98994646237bbd6c23eedcad}{tools\+::get\+\_\+human\+\_\+readable\+\_\+timestamp}} (std\+::time\+\_\+t t)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_a027ccf0ff1a51a43b26e68a6abbff916}{tools\+::get\+\_\+human\+\_\+readable\+\_\+timespan}} (std\+::chrono\+::seconds seconds)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_abb5b3d3aacf5c0fe904d49df1e744be3}{tools\+::get\+\_\+human\+\_\+readable\+\_\+bytes}} (uint64\+\_\+t bytes)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_a86ebe278391e3cf14f29ff385133543a}{tools\+::cumulative\+\_\+block\+\_\+sync\+\_\+weight}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t start\+\_\+block, uint64\+\_\+t num\+\_\+blocks)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacetools_a65fb8c9740374ed493638184ee9cdea9}{tools\+::logcat}} = log\+::\+Cat(\char`\"{}util\char`\"{})
+\item 
+std\+::mutex \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02util_8cpp_03_a022ded55b75dae24f3260ef05fed1829}{tools\+::anonymous\+\_\+namespace\{util.\+cpp\}\+::max\+\_\+concurrency\+\_\+lock}}
+\item 
+unsigned \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02util_8cpp_03_a9b91b584e0c323f5a8137e3a23e1fdb9}{tools\+::anonymous\+\_\+namespace\{util.\+cpp\}\+::max\+\_\+concurrency}} = std\+::thread\+::hardware\+\_\+concurrency()
+\end{DoxyCompactItemize}

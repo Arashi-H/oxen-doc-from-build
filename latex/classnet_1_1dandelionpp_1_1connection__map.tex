@@ -1,0 +1,261 @@
+\hypertarget{classnet_1_1dandelionpp_1_1connection__map}{}\doxysection{net\+::dandelionpp\+::connection\+\_\+map Class Reference}
+\label{classnet_1_1dandelionpp_1_1connection__map}\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+
+
+Assists with mapping source -\/$>$ stem and tracking connections for stem.  
+
+
+
+
+{\ttfamily \#include $<$dandelionpp.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a8d72764fd18d676ebfa586c41c42cad9}{value\+\_\+type}} = boost\+::uuids\+::uuid
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}{size\+\_\+type}} = std\+::vector$<$ boost\+::uuids\+::uuid $>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}{size\+\_\+type}}
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}{difference\+\_\+type}} = std\+::vector$<$ boost\+::uuids\+::uuid $>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}{difference\+\_\+type}}
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}{reference}} = const boost\+::uuids\+::uuid \&
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_aefad980cd01c8d534b35851e90bb3457}{const\+\_\+reference}} = \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}{reference}}
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}{iterator}} = std\+::vector$<$ boost\+::uuids\+::uuid $>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}}
+\item 
+using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}} = \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a917393ca84758a177ba61fce3cd2a8de}{connection\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Initialized with zero stem connections. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_aac7126ebba26969744b4aa868ed0c2d9}{connection\+\_\+map}} (std\+::vector$<$ boost\+::uuids\+::uuid $>$ out\+\_\+connections, std\+::size\+\_\+t stems)
+\begin{DoxyCompactList}\small\item\em Initialized with {\ttfamily out\+\_\+connections} and {\ttfamily stem\+\_\+count}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a41d9656eac0bbae8a9f79c9835632b88}{connection\+\_\+map}} (\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&\&)=default
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a32a1d6a673e552eea37baa8efd0032b7}{$\sim$connection\+\_\+map}} () noexcept
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \& \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a5cd36255f0c44e35c702211384f97146}{operator=}} (\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&\&)=default
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \& \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a6b98098db3920c22b9a16052b0391a5a}{operator=}} (const \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&)=delete
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a6b4ea30677bbc47daf5e4b252295d1c0}{clone}} () const
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}} \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a76c92168199a5fc8bfe7f3cd84b5b094}{begin}} () const noexcept
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}} \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a4c8ec659379113ff3849d36d949cc558}{end}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_aa44da394e73426e5d84ebbe5784412df}{update}} (std\+::vector$<$ boost\+::uuids\+::uuid $>$ current)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_ae50e7cd59045aebc0ae4a3b819e989d7}{size}} () const noexcept
+\item 
+boost\+::uuids\+::uuid \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_adc63675764f0e0ed428d18ccf03e07da}{get\+\_\+stem}} (const boost\+::uuids\+::uuid \&source)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a669f69aefd068537c00f39f42866f90e}{connection\+\_\+map}} (const \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&)=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ boost\+::uuids\+::uuid $>$ \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a4885e1af752862429187a09b9fc37043}{out\+\_\+mapping\+\_\+}}
+\item 
+std\+::vector$<$ std\+::pair$<$ boost\+::uuids\+::uuid, std\+::size\+\_\+t $>$ $>$ \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a8bf00df39e50345fd0596f8837a59c4d}{in\+\_\+mapping\+\_\+}}
+\item 
+std\+::vector$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a5c6daddd2b0e6704306da2a3ce424e37}{usage\+\_\+count\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Assists with mapping source -\/$>$ stem and tracking connections for stem. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}\label{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{net\+::dandelionpp\+::connection\+\_\+map\+::const\+\_\+iterator}} =  \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}{iterator}}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_aefad980cd01c8d534b35851e90bb3457}\label{classnet_1_1dandelionpp_1_1connection__map_aefad980cd01c8d534b35851e90bb3457}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_aefad980cd01c8d534b35851e90bb3457}{net\+::dandelionpp\+::connection\+\_\+map\+::const\+\_\+reference}} =  \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}{reference}}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}\label{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}{net\+::dandelionpp\+::connection\+\_\+map\+::difference\+\_\+type}} =  std\+::vector$<$boost\+::uuids\+::uuid$>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a79c216d5405e82d71b63afe13a1590a4}{difference\+\_\+type}}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}\label{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!iterator@{iterator}}
+\index{iterator@{iterator}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a48c2d5c92695bd891654506cd69759c8}{net\+::dandelionpp\+::connection\+\_\+map\+::iterator}} =  std\+::vector$<$boost\+::uuids\+::uuid$>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}\label{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!reference@{reference}}
+\index{reference@{reference}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a12d34f9fe0d14f29e6adedd81c9d728b}{net\+::dandelionpp\+::connection\+\_\+map\+::reference}} =  const boost\+::uuids\+::uuid\&}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}\label{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}{net\+::dandelionpp\+::connection\+\_\+map\+::size\+\_\+type}} =  std\+::vector$<$boost\+::uuids\+::uuid$>$\+::\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a44d0aa1d0c04d77df98ba30d8e1b862c}{size\+\_\+type}}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a8d72764fd18d676ebfa586c41c42cad9}\label{classnet_1_1dandelionpp_1_1connection__map_a8d72764fd18d676ebfa586c41c42cad9}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a8d72764fd18d676ebfa586c41c42cad9}{net\+::dandelionpp\+::connection\+\_\+map\+::value\+\_\+type}} =  boost\+::uuids\+::uuid}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a669f69aefd068537c00f39f42866f90e}\label{classnet_1_1dandelionpp_1_1connection__map_a669f69aefd068537c00f39f42866f90e}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!connection\_map@{connection\_map}}
+\index{connection\_map@{connection\_map}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{connection\_map()}{connection\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily net\+::dandelionpp\+::connection\+\_\+map\+::connection\+\_\+map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a917393ca84758a177ba61fce3cd2a8de}\label{classnet_1_1dandelionpp_1_1connection__map_a917393ca84758a177ba61fce3cd2a8de}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!connection\_map@{connection\_map}}
+\index{connection\_map@{connection\_map}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{connection\_map()}{connection\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily net\+::dandelionpp\+::connection\+\_\+map\+::connection\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Initialized with zero stem connections. 
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_aac7126ebba26969744b4aa868ed0c2d9}\label{classnet_1_1dandelionpp_1_1connection__map_aac7126ebba26969744b4aa868ed0c2d9}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!connection\_map@{connection\_map}}
+\index{connection\_map@{connection\_map}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{connection\_map()}{connection\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily net\+::dandelionpp\+::connection\+\_\+map\+::connection\+\_\+map (\begin{DoxyParamCaption}\item[{std\+::vector$<$ boost\+::uuids\+::uuid $>$}]{out\+\_\+connections,  }\item[{std\+::size\+\_\+t}]{stems }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Initialized with {\ttfamily out\+\_\+connections} and {\ttfamily stem\+\_\+count}. 
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a41d9656eac0bbae8a9f79c9835632b88}\label{classnet_1_1dandelionpp_1_1connection__map_a41d9656eac0bbae8a9f79c9835632b88}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!connection\_map@{connection\_map}}
+\index{connection\_map@{connection\_map}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{connection\_map()}{connection\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily net\+::dandelionpp\+::connection\+\_\+map\+::connection\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a32a1d6a673e552eea37baa8efd0032b7}\label{classnet_1_1dandelionpp_1_1connection__map_a32a1d6a673e552eea37baa8efd0032b7}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!````~connection\_map@{$\sim$connection\_map}}
+\index{````~connection\_map@{$\sim$connection\_map}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{$\sim$connection\_map()}{~connection\_map()}}
+{\footnotesize\ttfamily net\+::dandelionpp\+::connection\+\_\+map\+::$\sim$connection\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a76c92168199a5fc8bfe7f3cd84b5b094}\label{classnet_1_1dandelionpp_1_1connection__map_a76c92168199a5fc8bfe7f3cd84b5b094}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!begin@{begin}}
+\index{begin@{begin}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}} net\+::dandelionpp\+::connection\+\_\+map\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+First stem connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a6b4ea30677bbc47daf5e4b252295d1c0}\label{classnet_1_1dandelionpp_1_1connection__map_a6b4ea30677bbc47daf5e4b252295d1c0}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!clone@{clone}}
+\index{clone@{clone}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} net\+::dandelionpp\+::connection\+\_\+map\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+An exact duplicate of {\ttfamily this} map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a4c8ec659379113ff3849d36d949cc558}\label{classnet_1_1dandelionpp_1_1connection__map_a4c8ec659379113ff3849d36d949cc558}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!end@{end}}
+\index{end@{end}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map_a086bad23fa1cef27810560689dc94286}{const\+\_\+iterator}} net\+::dandelionpp\+::connection\+\_\+map\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+One-\/past the last stem connection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_adc63675764f0e0ed428d18ccf03e07da}\label{classnet_1_1dandelionpp_1_1connection__map_adc63675764f0e0ed428d18ccf03e07da}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!get\_stem@{get\_stem}}
+\index{get\_stem@{get\_stem}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{get\_stem()}{get\_stem()}}
+{\footnotesize\ttfamily boost\+::uuids\+::uuid net\+::dandelionpp\+::connection\+\_\+map\+::get\+\_\+stem (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{source }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Current stem mapping for {\ttfamily source} or {\ttfamily nil\+\_\+uuid()} if none is possible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a5cd36255f0c44e35c702211384f97146}\label{classnet_1_1dandelionpp_1_1connection__map_a5cd36255f0c44e35c702211384f97146}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!operator=@{operator=}}
+\index{operator=@{operator=}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}}\& net\+::dandelionpp\+::connection\+\_\+map\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a6b98098db3920c22b9a16052b0391a5a}\label{classnet_1_1dandelionpp_1_1connection__map_a6b98098db3920c22b9a16052b0391a5a}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!operator=@{operator=}}
+\index{operator=@{operator=}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}}\& net\+::dandelionpp\+::connection\+\_\+map\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{connection\+\_\+map}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_ae50e7cd59045aebc0ae4a3b819e989d7}\label{classnet_1_1dandelionpp_1_1connection__map_ae50e7cd59045aebc0ae4a3b819e989d7}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!size@{size}}
+\index{size@{size}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t net\+::dandelionpp\+::connection\+\_\+map\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Number of outgoing connections in use. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_aa44da394e73426e5d84ebbe5784412df}\label{classnet_1_1dandelionpp_1_1connection__map_aa44da394e73426e5d84ebbe5784412df}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!update@{update}}
+\index{update@{update}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::dandelionpp\+::connection\+\_\+map\+::update (\begin{DoxyParamCaption}\item[{std\+::vector$<$ boost\+::uuids\+::uuid $>$}]{current }\end{DoxyParamCaption})}
+
+Merges in current connections with the previous set of connections. If a connection died, a new one will take its place in the stem or the stem is marked as dead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em connections} & Current outbound connection ids. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if any updates to {\ttfamily get\+\_\+connections()} was made. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a8bf00df39e50345fd0596f8837a59c4d}\label{classnet_1_1dandelionpp_1_1connection__map_a8bf00df39e50345fd0596f8837a59c4d}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!in\_mapping\_@{in\_mapping\_}}
+\index{in\_mapping\_@{in\_mapping\_}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{in\_mapping\_}{in\_mapping\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$boost\+::uuids\+::uuid, std\+::size\+\_\+t$>$ $>$ net\+::dandelionpp\+::connection\+\_\+map\+::in\+\_\+mapping\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a4885e1af752862429187a09b9fc37043}\label{classnet_1_1dandelionpp_1_1connection__map_a4885e1af752862429187a09b9fc37043}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!out\_mapping\_@{out\_mapping\_}}
+\index{out\_mapping\_@{out\_mapping\_}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{out\_mapping\_}{out\_mapping\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::uuids\+::uuid$>$ net\+::dandelionpp\+::connection\+\_\+map\+::out\+\_\+mapping\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1dandelionpp_1_1connection__map_a5c6daddd2b0e6704306da2a3ce424e37}\label{classnet_1_1dandelionpp_1_1connection__map_a5c6daddd2b0e6704306da2a3ce424e37}} 
+\index{net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}!usage\_count\_@{usage\_count\_}}
+\index{usage\_count\_@{usage\_count\_}!net::dandelionpp::connection\_map@{net::dandelionpp::connection\_map}}
+\doxysubsubsection{\texorpdfstring{usage\_count\_}{usage\_count\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::size\+\_\+t$>$ net\+::dandelionpp\+::connection\+\_\+map\+::usage\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/net/\mbox{\hyperlink{dandelionpp_8h}{dandelionpp.\+h}}\item 
+src/net/\mbox{\hyperlink{dandelionpp_8cpp}{dandelionpp.\+cpp}}\end{DoxyCompactItemize}

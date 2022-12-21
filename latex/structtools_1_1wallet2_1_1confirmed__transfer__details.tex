@@ -1,0 +1,153 @@
+\hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details}{}\doxysection{tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details Struct Reference}
+\label{structtools_1_1wallet2_1_1confirmed__transfer__details}\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+
+
+{\ttfamily \#include $<$wallet2.\+h$>$}
+
+
+
+Collaboration diagram for tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{structtools_1_1wallet2_1_1confirmed__transfer__details__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a5eb9141b09090f25a3595f75f9b6f1f1}{confirmed\+\_\+transfer\+\_\+details}} ()=default
+\item 
+\mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a93fc7e876cc2a464b0647ed5de5a45ea}{confirmed\+\_\+transfer\+\_\+details}} (const \mbox{\hyperlink{structtools_1_1wallet2_1_1unconfirmed__transfer__details}{unconfirmed\+\_\+transfer\+\_\+details}} \&utd, uint64\+\_\+t height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a8fd99b34c1cb2e80c92041c25315b4af}{m\+\_\+amount\+\_\+in}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a135526244f12798c8a4709f86f0d8839}{m\+\_\+amount\+\_\+out}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a4ec494f1b5d60af7fa6efafe2ffe0b27}{m\+\_\+change}} = std\+::numeric\+\_\+limits$<$std\+::uint64\+\_\+t$>$\+::max()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a4aa86717c3720dd5dd35568fe86237f1}{m\+\_\+block\+\_\+height}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_ab5007b24c34c77e0699c0d656f32ec88}{m\+\_\+dests}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a9516982a771469186bf66b51231240b0}{m\+\_\+payment\+\_\+id}} = \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a96469252605106423460bdd4d0587e3d}{m\+\_\+timestamp}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_aecda688ad55cc069e6bdd04b5b060e06}{m\+\_\+unlock\+\_\+time}} = 0
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a02fb925cbc343b4494816b87b5ccf58b}{m\+\_\+unlock\+\_\+times}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a62b37f405c0c24ddf27d7650179d5b8c}{m\+\_\+subaddr\+\_\+account}} = std\+::numeric\+\_\+limits$<$uint32\+\_\+t$>$\+::max()
+\item 
+std\+::set$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_aa8491203f4f9000d8dbb00da2c1e851e}{m\+\_\+subaddr\+\_\+indices}}
+\item 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, std\+::vector$<$ uint64\+\_\+t $>$ $>$ $>$ \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a2d96076592687d143b810b19a951c4c8}{m\+\_\+rings}}
+\item 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaa}{wallet\+::pay\+\_\+type}} \mbox{\hyperlink{structtools_1_1wallet2_1_1confirmed__transfer__details_a5a9e53526300fea62f9cf52f3d43a59e}{m\+\_\+pay\+\_\+type}} = \mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaac68271a63ddbc431c307beb7d2918275}{wallet\+::pay\+\_\+type\+::out}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a5eb9141b09090f25a3595f75f9b6f1f1}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a5eb9141b09090f25a3595f75f9b6f1f1}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!confirmed\_transfer\_details@{confirmed\_transfer\_details}}
+\index{confirmed\_transfer\_details@{confirmed\_transfer\_details}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{confirmed\_transfer\_details()}{confirmed\_transfer\_details()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::confirmed\+\_\+transfer\+\_\+details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a93fc7e876cc2a464b0647ed5de5a45ea}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a93fc7e876cc2a464b0647ed5de5a45ea}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!confirmed\_transfer\_details@{confirmed\_transfer\_details}}
+\index{confirmed\_transfer\_details@{confirmed\_transfer\_details}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{confirmed\_transfer\_details()}{confirmed\_transfer\_details()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::confirmed\+\_\+transfer\+\_\+details (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtools_1_1wallet2_1_1unconfirmed__transfer__details}{unconfirmed\+\_\+transfer\+\_\+details}} \&}]{utd,  }\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a8fd99b34c1cb2e80c92041c25315b4af}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a8fd99b34c1cb2e80c92041c25315b4af}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_amount\_in@{m\_amount\_in}}
+\index{m\_amount\_in@{m\_amount\_in}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_amount\_in}{m\_amount\_in}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+amount\+\_\+in = 0}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a135526244f12798c8a4709f86f0d8839}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a135526244f12798c8a4709f86f0d8839}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_amount\_out@{m\_amount\_out}}
+\index{m\_amount\_out@{m\_amount\_out}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_amount\_out}{m\_amount\_out}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+amount\+\_\+out = 0}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a4aa86717c3720dd5dd35568fe86237f1}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a4aa86717c3720dd5dd35568fe86237f1}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_block\_height@{m\_block\_height}}
+\index{m\_block\_height@{m\_block\_height}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_block\_height}{m\_block\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+block\+\_\+height = 0}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a4ec494f1b5d60af7fa6efafe2ffe0b27}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a4ec494f1b5d60af7fa6efafe2ffe0b27}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_change@{m\_change}}
+\index{m\_change@{m\_change}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_change}{m\_change}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+change = std\+::numeric\+\_\+limits$<$std\+::uint64\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_ab5007b24c34c77e0699c0d656f32ec88}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_ab5007b24c34c77e0699c0d656f32ec88}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_dests@{m\_dests}}
+\index{m\_dests@{m\_dests}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_dests}{m\_dests}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}}$>$ tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+dests}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a5a9e53526300fea62f9cf52f3d43a59e}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a5a9e53526300fea62f9cf52f3d43a59e}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_pay\_type@{m\_pay\_type}}
+\index{m\_pay\_type@{m\_pay\_type}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_pay\_type}{m\_pay\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaa}{wallet\+::pay\+\_\+type}} tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+pay\+\_\+type = \mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaac68271a63ddbc431c307beb7d2918275}{wallet\+::pay\+\_\+type\+::out}}}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a9516982a771469186bf66b51231240b0}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a9516982a771469186bf66b51231240b0}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_payment\_id@{m\_payment\_id}}
+\index{m\_payment\_id@{m\_payment\_id}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_payment\_id}{m\_payment\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+payment\+\_\+id = \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a2d96076592687d143b810b19a951c4c8}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a2d96076592687d143b810b19a951c4c8}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_rings@{m\_rings}}
+\index{m\_rings@{m\_rings}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_rings}{m\_rings}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, std\+::vector$<$uint64\+\_\+t$>$ $>$ $>$ tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+rings}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a62b37f405c0c24ddf27d7650179d5b8c}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a62b37f405c0c24ddf27d7650179d5b8c}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_subaddr\_account@{m\_subaddr\_account}}
+\index{m\_subaddr\_account@{m\_subaddr\_account}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_subaddr\_account}{m\_subaddr\_account}}
+{\footnotesize\ttfamily uint32\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+subaddr\+\_\+account = std\+::numeric\+\_\+limits$<$uint32\+\_\+t$>$\+::max()}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_aa8491203f4f9000d8dbb00da2c1e851e}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_aa8491203f4f9000d8dbb00da2c1e851e}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_subaddr\_indices@{m\_subaddr\_indices}}
+\index{m\_subaddr\_indices@{m\_subaddr\_indices}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_subaddr\_indices}{m\_subaddr\_indices}}
+{\footnotesize\ttfamily std\+::set$<$uint32\+\_\+t$>$ tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+subaddr\+\_\+indices}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a96469252605106423460bdd4d0587e3d}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a96469252605106423460bdd4d0587e3d}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_timestamp@{m\_timestamp}}
+\index{m\_timestamp@{m\_timestamp}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_timestamp}{m\_timestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+timestamp = 0}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_aecda688ad55cc069e6bdd04b5b060e06}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_aecda688ad55cc069e6bdd04b5b060e06}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_unlock\_time@{m\_unlock\_time}}
+\index{m\_unlock\_time@{m\_unlock\_time}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_unlock\_time}{m\_unlock\_time}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+unlock\+\_\+time = 0}
+
+\mbox{\Hypertarget{structtools_1_1wallet2_1_1confirmed__transfer__details_a02fb925cbc343b4494816b87b5ccf58b}\label{structtools_1_1wallet2_1_1confirmed__transfer__details_a02fb925cbc343b4494816b87b5ccf58b}} 
+\index{tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}!m\_unlock\_times@{m\_unlock\_times}}
+\index{m\_unlock\_times@{m\_unlock\_times}!tools::wallet2::confirmed\_transfer\_details@{tools::wallet2::confirmed\_transfer\_details}}
+\doxysubsubsection{\texorpdfstring{m\_unlock\_times}{m\_unlock\_times}}
+{\footnotesize\ttfamily std\+::vector$<$uint64\+\_\+t$>$ tools\+::wallet2\+::confirmed\+\_\+transfer\+\_\+details\+::m\+\_\+unlock\+\_\+times}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet2_8h}{wallet2.\+h}}\end{DoxyCompactItemize}

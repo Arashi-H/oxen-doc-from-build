@@ -1,0 +1,74 @@
+\hypertarget{structcryptonote_1_1rpc_1_1SYNC__INFO}{}\doxysection{cryptonote\+::rpc\+::S\+Y\+N\+C\+\_\+\+I\+N\+FO Struct Reference}
+\label{structcryptonote_1_1rpc_1_1SYNC__INFO}\index{cryptonote::rpc::SYNC\_INFO@{cryptonote::rpc::SYNC\_INFO}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::S\+Y\+N\+C\+\_\+\+I\+N\+FO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{structcryptonote_1_1rpc_1_1SYNC__INFO__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::S\+Y\+N\+C\+\_\+\+I\+N\+FO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{structcryptonote_1_1rpc_1_1SYNC__INFO__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SYNC__INFO_aa822439a7aa3110aa8ba3535a4562365}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get node synchronisation information. This returns information on the node\textquotesingle{}s syncing \char`\"{}spans\char`\"{} which are block segments being downloaded from peers while syncing; spans are generally downloaded out of order from multiple peers, and so these spans reflect in-\/progress downloaded blocks that have not yet been added to the block chain\+: typically because the spans is not yet complete, or because the span is for future blocks that are dependent on intermediate blocks (likely in another span) being added to the chain first.
+
+Inputs\+: none
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily height} Current block height
+\item {\ttfamily target\+\_\+height} If the node is currently syncing then this is the target height the node wants to reach. If fully synced then this field is omitted.
+\item {\ttfamily peers} dict of connection information about peers. The key is the peer connection\+\_\+id; the value is identical to the values of the {\ttfamily connections} field of \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CONNECTIONS}{G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS}}. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CONNECTIONS}{G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS}}.
+\end{DoxySeeAlso}
+
+\item {\ttfamily span} array of span information of current in progress synchronization. Element element contains\+:
+\begin{DoxyItemize}
+\item {\ttfamily start\+\_\+block\+\_\+height} Block height of the first block in the span
+\item {\ttfamily nblocks} the number of blocks in the span
+\item {\ttfamily connection\+\_\+id} the connection\+\_\+id of the connection from which we are downloading the span
+\item {\ttfamily rate} the most recent connection speed measurement
+\item {\ttfamily speed} the average connection speed over recent downloaded blocks
+\item {\ttfamily size} total number of block and transaction data stored in the span
+\end{DoxyItemize}
+\item {\ttfamily overview} a string containing a one-\/line ascii-\/art depiction of the current sync status 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SYNC__INFO_aa822439a7aa3110aa8ba3535a4562365}\label{structcryptonote_1_1rpc_1_1SYNC__INFO_aa822439a7aa3110aa8ba3535a4562365}} 
+\index{cryptonote::rpc::SYNC\_INFO@{cryptonote::rpc::SYNC\_INFO}!names@{names}}
+\index{names@{names}!cryptonote::rpc::SYNC\_INFO@{cryptonote::rpc::SYNC\_INFO}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+S\+Y\+N\+C\+\_\+\+I\+N\+F\+O\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

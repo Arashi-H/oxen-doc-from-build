@@ -1,0 +1,85 @@
+\hypertarget{blockchain_8h}{}\doxysection{src/cryptonote\+\_\+core/blockchain.h File Reference}
+\label{blockchain_8h}\index{src/cryptonote\_core/blockchain.h@{src/cryptonote\_core/blockchain.h}}
+{\ttfamily \#include $<$boost/asio/io\+\_\+service.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/serialization.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/list.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index\+\_\+container.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/global\+\_\+fun.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/hashed\+\_\+index.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/member.\+hpp$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/rolling\+\_\+median.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+binary\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/difficulty.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+tx\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/verification\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checkpoints/checkpoints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/sqlite/db\+\_\+sqlite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pulse.\+h\char`\"{}}\newline
+Include dependency graph for blockchain.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1block__and__checkpoint}{cryptonote\+::block\+\_\+and\+\_\+checkpoint}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1Blockchain_1_1block__extended__info}{cryptonote\+::\+Blockchain\+::block\+\_\+extended\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em container for passing a block and metadata about it on the blockchain \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1Blockchain_1_1block__pow__verified}{cryptonote\+::\+Blockchain\+::block\+\_\+pow\+\_\+verified}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1Blockchain_1_1block__template__info}{cryptonote\+::\+Blockchain\+::block\+\_\+template\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a04b36b4c199adbd76445d588b731e6c4}{cryptonote\+::\+Get\+Checkpoints\+Callback}} = std\+::function$<$ std\+::string\+\_\+view(\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} network)$>$
+\begin{DoxyCompactList}\small\item\em Callback routine that returns checkpoints data for specific network type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a73185ca287307c5f8e9e10dc715eceae}{cryptonote\+::blockchain\+\_\+db\+\_\+sync\+\_\+mode}} \{ \mbox{\hyperlink{namespacecryptonote_a73185ca287307c5f8e9e10dc715eceaeafc1eb148b0f52a7c995671f722a6190c}{cryptonote\+::db\+\_\+defaultsync}}, 
+\mbox{\hyperlink{namespacecryptonote_a73185ca287307c5f8e9e10dc715eceaeae981e64926017274e6692f6f13d760a1}{cryptonote\+::db\+\_\+sync}}, 
+\mbox{\hyperlink{namespacecryptonote_a73185ca287307c5f8e9e10dc715eceaea5d83f2ecd91d07fb5368dae388326631}{cryptonote\+::db\+\_\+async}}, 
+\mbox{\hyperlink{namespacecryptonote_a73185ca287307c5f8e9e10dc715eceaeaa6e0aa899bcfed98f1a35bc5169c4d79}{cryptonote\+::db\+\_\+nosync}}
+ \}
+\end{DoxyCompactItemize}

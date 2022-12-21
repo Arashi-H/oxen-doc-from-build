@@ -1,0 +1,259 @@
+\hypertarget{structserialization_1_1json__archiver}{}\doxysection{serialization\+::json\+\_\+archiver Struct Reference}
+\label{structserialization_1_1json__archiver}\index{serialization::json\_archiver@{serialization::json\_archiver}}
+
+
+a archive using the J\+S\+ON standard  
+
+
+
+
+{\ttfamily \#include $<$json\+\_\+archive.\+h$>$}
+
+
+
+Inheritance diagram for serialization\+::json\+\_\+archiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{structserialization_1_1json__archiver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for serialization\+::json\+\_\+archiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{structserialization_1_1json__archiver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__array}{nested\+\_\+array}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__object}{nested\+\_\+object}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structserialization_1_1json__archiver_a54cb094c7181e7435ea678651f2236d0}{variant\+\_\+tag\+\_\+type}} = std\+::string\+\_\+view
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structserialization_1_1json__archiver_a533386ce1e8abf316ab3fc03aea5d55a}{json\+\_\+archiver}} (std\+::ostream \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} indent=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{structserialization_1_1json__archiver_a499dd28ffa47db1f31724e032cc8be8d}{$\sim$json\+\_\+archiver}} ()
+\item 
+void \mbox{\hyperlink{structserialization_1_1json__archiver_a42f98e3375fb673ce48be6a9b15bf3f7}{tag}} (std\+::string\+\_\+view tag)
+\item 
+\mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__object}{nested\+\_\+object}} \mbox{\hyperlink{structserialization_1_1json__archiver_a64aef2171ce1412498bd7cc9601ef46b}{begin\+\_\+object}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{structserialization_1_1json__archiver_a18649db46ee14f7b2d76c09303fdecfb}{serialize\+\_\+int}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} v)
+\item 
+void \mbox{\hyperlink{structserialization_1_1json__archiver_a1f60538ee0a78ff29d5f04874faaed09}{serialize\+\_\+blob}} (void $\ast$buf, size\+\_\+t len, std\+::string\+\_\+view delimiter=\char`\"{}\textbackslash{}\char`\"{}\char`\"{}sv)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{structserialization_1_1json__archiver_a4b4c1d4b3300eae3db1ecb6fe6d763a3}{serialize\+\_\+blobs}} (const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&blobs, std\+::string\+\_\+view delimiter=\char`\"{}\textbackslash{}\char`\"{}\char`\"{}sv)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{structserialization_1_1json__archiver_a1a887cb6e8f8be232a918d03774c16e6}{serialize\+\_\+varint}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+\mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__array}{nested\+\_\+array}} \mbox{\hyperlink{structserialization_1_1json__archiver_a43d574cf1ff05f07e0aa37e8a6cd3b91}{begin\+\_\+array}} (size\+\_\+t \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}=0)
+\item 
+void \mbox{\hyperlink{structserialization_1_1json__archiver_abaf5d7a705afcfc876ed21c2afd46ce8}{delimit\+\_\+array}} ()
+\item 
+void \mbox{\hyperlink{structserialization_1_1json__archiver_aadd0a20d7fe435a9937346b5214a5465}{write\+\_\+variant\+\_\+tag}} (std\+::string\+\_\+view t)
+\item 
+unsigned int \mbox{\hyperlink{structserialization_1_1json__archiver_ac074efef37f25970decd364bf805e3a7}{streampos}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static auto \mbox{\hyperlink{structserialization_1_1json__archiver_a1562afe4495a589b8b497da0dd91278a}{promote\+\_\+to\+\_\+printable\+\_\+integer\+\_\+type}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structserialization_1_1json__archiver_ac9b438232e3a258fb4abfe0f6d81558f}{make\+\_\+indent}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{structserialization_1_1json__archiver_afaac3f16f889337bbdff0265e5efc6d6}{stream\+\_\+}}
+\item 
+std\+::ios\+\_\+base\+::iostate \mbox{\hyperlink{structserialization_1_1json__archiver_ad8332755bc10834916e2164f2026c22f}{exc\+\_\+restore\+\_\+}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structserialization_1_1json__archiver_a3a9b4d3909ba6f7ae8095f2894813523}{indent\+\_\+}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structserialization_1_1json__archiver_a2c6f676ed2278dbcf95f93244bb1cfc6}{object\+\_\+begin}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structserialization_1_1json__archiver_a30c22d871215b75bf5b1670e30af13da}{inner\+\_\+array\+\_\+contents\+\_\+}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structserialization_1_1json__archiver_a316db1213258ce8ce8e1ed06dfadcb15}{depth\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::string\+\_\+view \mbox{\hyperlink{structserialization_1_1json__archiver_af2acf9ba312c4ee5e4707d4febbcb5b3}{indents}} \{\char`\"{} \char`\"{}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+a archive using the J\+S\+ON standard 
+
+\textbackslash{}detailed there is no deserializing counterpart; we only support J\+S\+ON serializing here. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a54cb094c7181e7435ea678651f2236d0}\label{structserialization_1_1json__archiver_a54cb094c7181e7435ea678651f2236d0}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!variant\_tag\_type@{variant\_tag\_type}}
+\index{variant\_tag\_type@{variant\_tag\_type}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{variant\_tag\_type}{variant\_tag\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structserialization_1_1json__archiver_a54cb094c7181e7435ea678651f2236d0}{serialization\+::json\+\_\+archiver\+::variant\+\_\+tag\+\_\+type}} =  std\+::string\+\_\+view}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a533386ce1e8abf316ab3fc03aea5d55a}\label{structserialization_1_1json__archiver_a533386ce1e8abf316ab3fc03aea5d55a}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!json\_archiver@{json\_archiver}}
+\index{json\_archiver@{json\_archiver}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{json\_archiver()}{json\_archiver()}}
+{\footnotesize\ttfamily serialization\+::json\+\_\+archiver\+::json\+\_\+archiver (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{s,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{indent = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a499dd28ffa47db1f31724e032cc8be8d}\label{structserialization_1_1json__archiver_a499dd28ffa47db1f31724e032cc8be8d}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!````~json\_archiver@{$\sim$json\_archiver}}
+\index{````~json\_archiver@{$\sim$json\_archiver}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{$\sim$json\_archiver()}{~json\_archiver()}}
+{\footnotesize\ttfamily serialization\+::json\+\_\+archiver\+::$\sim$json\+\_\+archiver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a43d574cf1ff05f07e0aa37e8a6cd3b91}\label{structserialization_1_1json__archiver_a43d574cf1ff05f07e0aa37e8a6cd3b91}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!begin\_array@{begin\_array}}
+\index{begin\_array@{begin\_array}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{begin\_array()}{begin\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__array}{nested\+\_\+array}} serialization\+::json\+\_\+archiver\+::begin\+\_\+array (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{s = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a64aef2171ce1412498bd7cc9601ef46b}\label{structserialization_1_1json__archiver_a64aef2171ce1412498bd7cc9601ef46b}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!begin\_object@{begin\_object}}
+\index{begin\_object@{begin\_object}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{begin\_object()}{begin\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserialization_1_1json__archiver_1_1nested__object}{nested\+\_\+object}} serialization\+::json\+\_\+archiver\+::begin\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_abaf5d7a705afcfc876ed21c2afd46ce8}\label{structserialization_1_1json__archiver_abaf5d7a705afcfc876ed21c2afd46ce8}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!delimit\_array@{delimit\_array}}
+\index{delimit\_array@{delimit\_array}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{delimit\_array()}{delimit\_array()}}
+{\footnotesize\ttfamily void serialization\+::json\+\_\+archiver\+::delimit\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_ac9b438232e3a258fb4abfe0f6d81558f}\label{structserialization_1_1json__archiver_ac9b438232e3a258fb4abfe0f6d81558f}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!make\_indent@{make\_indent}}
+\index{make\_indent@{make\_indent}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{make\_indent()}{make\_indent()}}
+{\footnotesize\ttfamily void serialization\+::json\+\_\+archiver\+::make\+\_\+indent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a1562afe4495a589b8b497da0dd91278a}\label{structserialization_1_1json__archiver_a1562afe4495a589b8b497da0dd91278a}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!promote\_to\_printable\_integer\_type@{promote\_to\_printable\_integer\_type}}
+\index{promote\_to\_printable\_integer\_type@{promote\_to\_printable\_integer\_type}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{promote\_to\_printable\_integer\_type()}{promote\_to\_printable\_integer\_type()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto serialization\+::json\+\_\+archiver\+::promote\+\_\+to\+\_\+printable\+\_\+integer\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a1f60538ee0a78ff29d5f04874faaed09}\label{structserialization_1_1json__archiver_a1f60538ee0a78ff29d5f04874faaed09}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!serialize\_blob@{serialize\_blob}}
+\index{serialize\_blob@{serialize\_blob}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_blob()}{serialize\_blob()}}
+{\footnotesize\ttfamily void serialization\+::json\+\_\+archiver\+::serialize\+\_\+blob (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{std\+::string\+\_\+view}]{delimiter = {\ttfamily \char`\"{}\textbackslash{}\char`\"{}\char`\"{}sv} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a4b4c1d4b3300eae3db1ecb6fe6d763a3}\label{structserialization_1_1json__archiver_a4b4c1d4b3300eae3db1ecb6fe6d763a3}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!serialize\_blobs@{serialize\_blobs}}
+\index{serialize\_blobs@{serialize\_blobs}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_blobs()}{serialize\_blobs()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void serialization\+::json\+\_\+archiver\+::serialize\+\_\+blobs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{blobs,  }\item[{std\+::string\+\_\+view}]{delimiter = {\ttfamily \char`\"{}\textbackslash{}\char`\"{}\char`\"{}sv} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a18649db46ee14f7b2d76c09303fdecfb}\label{structserialization_1_1json__archiver_a18649db46ee14f7b2d76c09303fdecfb}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!serialize\_int@{serialize\_int}}
+\index{serialize\_int@{serialize\_int}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_int()}{serialize\_int()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void serialization\+::json\+\_\+archiver\+::serialize\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a1a887cb6e8f8be232a918d03774c16e6}\label{structserialization_1_1json__archiver_a1a887cb6e8f8be232a918d03774c16e6}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!serialize\_varint@{serialize\_varint}}
+\index{serialize\_varint@{serialize\_varint}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_varint()}{serialize\_varint()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void serialization\+::json\+\_\+archiver\+::serialize\+\_\+varint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_ac074efef37f25970decd364bf805e3a7}\label{structserialization_1_1json__archiver_ac074efef37f25970decd364bf805e3a7}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!streampos@{streampos}}
+\index{streampos@{streampos}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{streampos()}{streampos()}}
+{\footnotesize\ttfamily unsigned int serialization\+::json\+\_\+archiver\+::streampos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a42f98e3375fb673ce48be6a9b15bf3f7}\label{structserialization_1_1json__archiver_a42f98e3375fb673ce48be6a9b15bf3f7}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!tag@{tag}}
+\index{tag@{tag}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{tag()}{tag()}}
+{\footnotesize\ttfamily void serialization\+::json\+\_\+archiver\+::tag (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_aadd0a20d7fe435a9937346b5214a5465}\label{structserialization_1_1json__archiver_aadd0a20d7fe435a9937346b5214a5465}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!write\_variant\_tag@{write\_variant\_tag}}
+\index{write\_variant\_tag@{write\_variant\_tag}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{write\_variant\_tag()}{write\_variant\_tag()}}
+{\footnotesize\ttfamily void serialization\+::json\+\_\+archiver\+::write\+\_\+variant\+\_\+tag (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a316db1213258ce8ce8e1ed06dfadcb15}\label{structserialization_1_1json__archiver_a316db1213258ce8ce8e1ed06dfadcb15}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!depth\_@{depth\_}}
+\index{depth\_@{depth\_}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{depth\_}{depth\_}}
+{\footnotesize\ttfamily size\+\_\+t serialization\+::json\+\_\+archiver\+::depth\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_ad8332755bc10834916e2164f2026c22f}\label{structserialization_1_1json__archiver_ad8332755bc10834916e2164f2026c22f}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!exc\_restore\_@{exc\_restore\_}}
+\index{exc\_restore\_@{exc\_restore\_}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{exc\_restore\_}{exc\_restore\_}}
+{\footnotesize\ttfamily std\+::ios\+\_\+base\+::iostate serialization\+::json\+\_\+archiver\+::exc\+\_\+restore\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a3a9b4d3909ba6f7ae8095f2894813523}\label{structserialization_1_1json__archiver_a3a9b4d3909ba6f7ae8095f2894813523}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!indent\_@{indent\_}}
+\index{indent\_@{indent\_}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{indent\_}{indent\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::json\+\_\+archiver\+::indent\+\_\+ = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_af2acf9ba312c4ee5e4707d4febbcb5b3}\label{structserialization_1_1json__archiver_af2acf9ba312c4ee5e4707d4febbcb5b3}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!indents@{indents}}
+\index{indents@{indents}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{indents}{indents}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view serialization\+::json\+\_\+archiver\+::indents \{\char`\"{} \char`\"{}\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a30c22d871215b75bf5b1670e30af13da}\label{structserialization_1_1json__archiver_a30c22d871215b75bf5b1670e30af13da}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!inner\_array\_contents\_@{inner\_array\_contents\_}}
+\index{inner\_array\_contents\_@{inner\_array\_contents\_}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{inner\_array\_contents\_}{inner\_array\_contents\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::json\+\_\+archiver\+::inner\+\_\+array\+\_\+contents\+\_\+ = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_a2c6f676ed2278dbcf95f93244bb1cfc6}\label{structserialization_1_1json__archiver_a2c6f676ed2278dbcf95f93244bb1cfc6}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!object\_begin@{object\_begin}}
+\index{object\_begin@{object\_begin}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{object\_begin}{object\_begin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::json\+\_\+archiver\+::object\+\_\+begin = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structserialization_1_1json__archiver_afaac3f16f889337bbdff0265e5efc6d6}\label{structserialization_1_1json__archiver_afaac3f16f889337bbdff0265e5efc6d6}} 
+\index{serialization::json\_archiver@{serialization::json\_archiver}!stream\_@{stream\_}}
+\index{stream\_@{stream\_}!serialization::json\_archiver@{serialization::json\_archiver}}
+\doxysubsubsection{\texorpdfstring{stream\_}{stream\_}}
+{\footnotesize\ttfamily std\+::ostream\& serialization\+::json\+\_\+archiver\+::stream\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/serialization/\mbox{\hyperlink{json__archive_8h}{json\+\_\+archive.\+h}}\end{DoxyCompactItemize}

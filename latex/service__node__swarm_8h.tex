@@ -1,0 +1,51 @@
+\hypertarget{service__node__swarm_8h}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+swarm.h File Reference}
+\label{service__node__swarm_8h}\index{src/cryptonote\_core/service\_node\_swarm.h@{src/cryptonote\_core/service\_node\_swarm.h}}
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+Include dependency graph for service\+\_\+node\+\_\+swarm.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__swarm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__swarm_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1swarm__size}{service\+\_\+nodes\+::swarm\+\_\+size}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1excess__pool__snode}{service\+\_\+nodes\+::excess\+\_\+pool\+\_\+snode}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_ad6f2f5e453340ead64ce5ba5097f56a2}{service\+\_\+nodes\+::swarm\+\_\+snode\+\_\+map\+\_\+t}} = std\+::map$<$ swarm\+\_\+id\+\_\+t, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab1abfb41883960ea3170243426b1bd4d}{service\+\_\+nodes\+::get\+\_\+new\+\_\+swarm\+\_\+id}} (const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes)
+\item 
+void \mbox{\hyperlink{namespaceservice__nodes_abf146bcfc31ce7759ad1ddba8d20eb61}{service\+\_\+nodes\+::calc\+\_\+swarm\+\_\+changes}} (swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, uint64\+\_\+t seed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aeff2558565238c877596a20636b8c766}{service\+\_\+nodes\+::\+M\+A\+X\+\_\+\+ID}} = U\+N\+A\+S\+S\+I\+G\+N\+E\+D\+\_\+\+S\+W\+A\+R\+M\+\_\+\+ID -\/ 1
+\end{DoxyCompactItemize}

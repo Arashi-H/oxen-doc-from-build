@@ -1,0 +1,36 @@
+\hypertarget{epee__network__address__hack_8cpp}{}\doxysection{src/net/epee\+\_\+network\+\_\+address\+\_\+hack.cpp File Reference}
+\label{epee__network__address__hack_8cpp}\index{src/net/epee\_network\_address\_hack.cpp@{src/net/epee\_network\_address\_hack.cpp}}
+{\ttfamily \#include \char`\"{}epee/net/net\+\_\+utils\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/portable\+\_\+storage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tor\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2p\+\_\+address.\+h\char`\"{}}\newline
+Include dependency graph for epee\+\_\+network\+\_\+address\+\_\+hack.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{epee__network__address__hack_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceepee}{epee}}
+\item 
+ \mbox{\hyperlink{namespaceepee_1_1net__utils}{epee\+::net\+\_\+utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceepee_1_1net__utils_adcad2be35c88fc18daadad461826102d}{epee\+::net\+\_\+utils\+::if}} (!epee\+::serialization\+::perform\+\_\+serialize$<$ is\+\_\+store $>$(type, stg, parent\+\_\+section, \char`\"{}type\char`\"{})) return \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{namespaceepee_1_1net__utils_a62d7a3c204529b899100a0ffa336f173}{epee\+::net\+\_\+utils\+::switch}} (address\+\_\+type(type))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceepee_1_1net__utils_a3adaaa02a4cab4a26d393a0df57a1395}{epee\+::net\+\_\+utils\+::logcat}} = oxen\+::log\+::\+Cat(\char`\"{}global\char`\"{})
+\item 
+std\+::uint8\+\_\+t \mbox{\hyperlink{namespaceepee_1_1net__utils_a746609002779213cd81f8754611bce59}{epee\+::net\+\_\+utils\+::type}} = static\+\_\+cast$<$std\+::uint8\+\_\+t$>$(is\+\_\+store ? this\+\_\+ref.\+get\+\_\+type\+\_\+id() \+: address\+\_\+type\+::invalid)
+\end{DoxyCompactItemize}

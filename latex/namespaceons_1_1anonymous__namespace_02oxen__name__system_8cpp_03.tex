@@ -1,0 +1,386 @@
+\hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03}{}\doxysection{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\} Namespace Reference}
+\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03}\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}}
+\item 
+struct \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1scoped__db__transaction}{scoped\+\_\+db\+\_\+transaction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}{update\+\_\+variant}} = std\+::variant$<$ uint16\+\_\+t, int64\+\_\+t, uint64\+\_\+t, \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}}, std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0}{db\+\_\+version}} \{ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a9abcde3c584628a02620bf796dee1204}{db\+\_\+version\+::v0}}, 
+\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a6d8d1cba59eff73e8be213a3d74623ea}{db\+\_\+version\+::v1\+\_\+track\+\_\+updates}}, 
+\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}{db\+\_\+version\+::v2\+\_\+full\+\_\+rows}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab52b69539b9d431fd7c1d419fb2fd2cf}{ons\+\_\+extra\+\_\+string}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a726d72311eedbe7944c15da4b1d749cd}{clear\+\_\+bindings}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Clears any existing bindings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad27e2a1e5a08f1f2cefa29916c39671d}{reset}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Resets. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a225a9d178dab0b8aca2a99db05e98e56}{step}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=4), int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3b6f29d512d3717d189726af74303dc8}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a4fae061257a019a9ba333133fc694cd1}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, std\+::nullptr\+\_\+t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c26a0ade7cd0003f070d7665d096af0}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const std\+::optional$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&val)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a12eba601cd83047309d28d21b1e350ea}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, std\+::string\+\_\+view text)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af8a3ebf9fc5b2dc8401c5cc4cafdf76b}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}} blob)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_aa1f451f7615af64a1b8bc9ad6a0ec46f}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const std\+::variant$<$ T... $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}{is\+\_\+int\+\_\+enum\+\_\+impl}} ()
+\item 
+{\footnotesize template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3df468883abfca74d678d5db3cfca737}{bind}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&val)
+\item 
+{\footnotesize template$<$int... I, typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8e5a220fb3753d45176bada793b38544}{bind\+\_\+all\+\_\+impl}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, std\+::integer\+\_\+sequence$<$ int, I... $>$, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab0d1d7abb40e6d46a664083838a2e435}{bind\+\_\+all}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a515a076974d13a58304980608b01ccae}{bind\+\_\+container}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, const Container \&c)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=32), int $>$  = 0$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c8a14d36eee0d6b6caae490124afe65}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\begin{DoxyCompactList}\small\item\em Retrieve a type from an executed statement. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string\+\_\+view $>$, int $>$  = 0$>$ }\\std\+::string\+\_\+view \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a11dff3d5b6347d25dd0590021e96bb1d}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string $>$, int $>$  = 0$>$ }\\std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a49474a71a1c434c4ecb2cd3f3469a6e4}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, blob\+\_\+view $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c0658392342fdfab5223c3071c433f9}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8f7a8804987570e2c48cfa3b4b9cb6bd}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index)
+\item 
+{\footnotesize template$<$typename T , typename I $>$ }\\void \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a246f331aedaf06d98cac661b43601951}{get}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename I $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_add0008493435b479a7c00d66ae0f5b2a}{sql\+\_\+copy\+\_\+blob}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&statement, I column, void $\ast$dest, size\+\_\+t dest\+\_\+size)
+\item 
+\mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a728cc7c5fa8131a0b58ad5d7b32936ba}{sql\+\_\+get\+\_\+mapping\+\_\+from\+\_\+statement}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&statement)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afdc174127e34c7b92ce63c841b096dc9}{sql\+\_\+run\+\_\+statement}} (\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875f}{ons\+\_\+sql\+\_\+type}} type, \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&statement, void $\ast$context)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3da95bd4a68e03008f5b2d8c94846d40}{bind\+\_\+and\+\_\+run}} (\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875f}{ons\+\_\+sql\+\_\+type}} type, \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&statement, void $\ast$context, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... bind\+\_\+args)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a42e24bd2ff7952716bf9784f82165db9}{build\+\_\+default\+\_\+tables}} (\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&ons\+\_\+db)
+\item 
+std\+::optional$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac089e59e81303aff588873dc7433900f}{add\+\_\+or\+\_\+get\+\_\+owner\+\_\+id}} (\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&ons\+\_\+db, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&tx\+\_\+hash, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&entry, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&key)
+\item 
+std\+::pair$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}{update\+\_\+variant}} $>$ $>$ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afee54c6e455dcecf4eb8a1c0a5f3e228}{update\+\_\+record\+\_\+query}} (\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&ons\+\_\+db, uint64\+\_\+t height, const \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} \&entry, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a709b38d72367f4f4af84c7876dbdb2ed}{add\+\_\+ons\+\_\+entry}} (\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&ons\+\_\+db, uint64\+\_\+t height, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&entry, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&tx\+\_\+hash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac22952c590469a6bbfd50a0d28787b12}{is\+\_\+int\+\_\+enum}} = \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}{is\+\_\+int\+\_\+enum\+\_\+impl}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$()
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a892da3fcf452e7423d3be445f03bda71}{is\+\_\+optional}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a559cdf74ca89f9fc2afa1ded86e8606f}{sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+prefix}}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c02b587b8328c5d5d916032e53ac951}{sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+suffix}} = \char`\"{} G\+R\+O\+UP BY name\+\_\+hash, type\char`\"{}
+\item 
+constexpr auto \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab39484d7fe6acc71549d16c449d158dd}{D\+B\+\_\+\+V\+E\+R\+S\+I\+ON}} = \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}{db\+\_\+version\+::v2\+\_\+full\+\_\+rows}}
+\item 
+constexpr auto \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af964ec92a0f7907fd8e224921826f656}{E\+X\+P\+I\+R\+A\+T\+I\+ON}} = \char`\"{} (expiration\+\_\+height IS N\+U\+LL OR expiration\+\_\+height $>$= ?) \char`\"{}sv
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!update\_variant@{update\_variant}}
+\index{update\_variant@{update\_variant}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{update\_variant}{update\_variant}}
+{\footnotesize\ttfamily using ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}{update\+\_\+variant}} = typedef std\+::variant$<$uint16\+\_\+t, int64\+\_\+t, uint64\+\_\+t, \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}}, std\+::string$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!db\_version@{db\_version}}
+\index{db\_version@{db\_version}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{db\_version}{db\_version}}
+{\footnotesize\ttfamily enum ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0}{db\+\_\+version}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v0@{v0}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!v0@{v0}}}\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a9abcde3c584628a02620bf796dee1204}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a9abcde3c584628a02620bf796dee1204}} 
+v0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v1\_track\_updates@{v1\_track\_updates}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!v1\_track\_updates@{v1\_track\_updates}}}\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a6d8d1cba59eff73e8be213a3d74623ea}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a6d8d1cba59eff73e8be213a3d74623ea}} 
+v1\+\_\+track\+\_\+updates&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v2\_full\_rows@{v2\_full\_rows}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!v2\_full\_rows@{v2\_full\_rows}}}\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}} 
+v2\+\_\+full\+\_\+rows&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a709b38d72367f4f4af84c7876dbdb2ed}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a709b38d72367f4f4af84c7876dbdb2ed}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!add\_ons\_entry@{add\_ons\_entry}}
+\index{add\_ons\_entry@{add\_ons\_entry}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{add\_ons\_entry()}{add\_ons\_entry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::add\+\_\+ons\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&}]{ons\+\_\+db,  }\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&}]{entry,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{tx\+\_\+hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac089e59e81303aff588873dc7433900f}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac089e59e81303aff588873dc7433900f}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!add\_or\_get\_owner\_id@{add\_or\_get\_owner\_id}}
+\index{add\_or\_get\_owner\_id@{add\_or\_get\_owner\_id}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{add\_or\_get\_owner\_id()}{add\_or\_get\_owner\_id()}}
+{\footnotesize\ttfamily std\+::optional$<$int64\+\_\+t$>$ ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::add\+\_\+or\+\_\+get\+\_\+owner\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&}]{ons\+\_\+db,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{tx\+\_\+hash,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&}]{entry,  }\item[{\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3df468883abfca74d678d5db3cfca737}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3df468883abfca74d678d5db3cfca737}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{I}]{index,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af8a3ebf9fc5b2dc8401c5cc4cafdf76b}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af8a3ebf9fc5b2dc8401c5cc4cafdf76b}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{\mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}}}]{blob }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c26a0ade7cd0003f070d7665d096af0}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c26a0ade7cd0003f070d7665d096af0}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_aa1f451f7615af64a1b8bc9ad6a0ec46f}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_aa1f451f7615af64a1b8bc9ad6a0ec46f}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{const std\+::variant$<$ T... $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3b6f29d512d3717d189726af74303dc8}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3b6f29d512d3717d189726af74303dc8}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=4), int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+{\ttfamily \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3b6f29d512d3717d189726af74303dc8}{bind()}}} binds a particular parameter to a statement by index. The bind type is inferred from the argument. \mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a4fae061257a019a9ba333133fc694cd1}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a4fae061257a019a9ba333133fc694cd1}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{std\+::nullptr\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a12eba601cd83047309d28d21b1e350ea}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a12eba601cd83047309d28d21b1e350ea}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind@{bind}}
+\index{bind@{bind}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index,  }\item[{std\+::string\+\_\+view}]{text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab0d1d7abb40e6d46a664083838a2e435}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab0d1d7abb40e6d46a664083838a2e435}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind\_all@{bind\_all}}
+\index{bind\_all@{bind\_all}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind\_all()}{bind\_all()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8e5a220fb3753d45176bada793b38544}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8e5a220fb3753d45176bada793b38544}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind\_all\_impl@{bind\_all\_impl}}
+\index{bind\_all\_impl@{bind\_all\_impl}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind\_all\_impl()}{bind\_all\_impl()}}
+{\footnotesize\ttfamily template$<$int... I, typename... T$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+all\+\_\+impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{std\+::integer\+\_\+sequence$<$ int, I... $>$}]{,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&...}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3da95bd4a68e03008f5b2d8c94846d40}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3da95bd4a68e03008f5b2d8c94846d40}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind\_and\_run@{bind\_and\_run}}
+\index{bind\_and\_run@{bind\_and\_run}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind\_and\_run()}{bind\_and\_run()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+and\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875f}{ons\+\_\+sql\+\_\+type}}}]{type,  }\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{statement,  }\item[{void $\ast$}]{context,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&...}]{bind\+\_\+args }\end{DoxyParamCaption})}
+
+Does a clear\+\_\+bindings, bind\+\_\+all, and then sql\+\_\+run\+\_\+statement. First three arguments go to sql\+\_\+run\+\_\+statement, the rest go to bind\+\_\+all(statement, ...) (which does the clear\+\_\+bindings). \mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a515a076974d13a58304980608b01ccae}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a515a076974d13a58304980608b01ccae}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!bind\_container@{bind\_container}}
+\index{bind\_container@{bind\_container}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bind\_container()}{bind\_container()}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{const Container \&}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a42e24bd2ff7952716bf9784f82165db9}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a42e24bd2ff7952716bf9784f82165db9}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!build\_default\_tables@{build\_default\_tables}}
+\index{build\_default\_tables@{build\_default\_tables}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{build\_default\_tables()}{build\_default\_tables()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::build\+\_\+default\+\_\+tables (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&}]{ons\+\_\+db }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a726d72311eedbe7944c15da4b1d749cd}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a726d72311eedbe7944c15da4b1d749cd}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!clear\_bindings@{clear\_bindings}}
+\index{clear\_bindings@{clear\_bindings}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{clear\_bindings()}{clear\_bindings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::clear\+\_\+bindings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Clears any existing bindings. 
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8f7a8804987570e2c48cfa3b4b9cb6bd}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8f7a8804987570e2c48cfa3b4b9cb6bd}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{I}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a246f331aedaf06d98cac661b43601951}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a246f331aedaf06d98cac661b43601951}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T , typename I $>$ \\
+void ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{I}]{index,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c8a14d36eee0d6b6caae490124afe65}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c8a14d36eee0d6b6caae490124afe65}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=32), int $>$  = 0$>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Retrieve a type from an executed statement. 
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a11dff3d5b6347d25dd0590021e96bb1d}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a11dff3d5b6347d25dd0590021e96bb1d}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string\+\_\+view $>$, int $>$  = 0$>$ \\
+std\+::string\+\_\+view ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a49474a71a1c434c4ecb2cd3f3469a6e4}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a49474a71a1c434c4ecb2cd3f3469a6e4}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string $>$, int $>$  = 0$>$ \\
+std\+::string ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c0658392342fdfab5223c3071c433f9}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c0658392342fdfab5223c3071c433f9}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!get@{get}}
+\index{get@{get}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, blob\+\_\+view $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{blob\+\_\+view}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!is\_int\_enum\_impl@{is\_int\_enum\_impl}}
+\index{is\_int\_enum\_impl@{is\_int\_enum\_impl}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{is\_int\_enum\_impl()}{is\_int\_enum\_impl()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+int\+\_\+enum\+\_\+impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab52b69539b9d431fd7c1d419fb2fd2cf}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab52b69539b9d431fd7c1d419fb2fd2cf}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!ons\_extra\_string@{ons\_extra\_string}}
+\index{ons\_extra\_string@{ons\_extra\_string}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{ons\_extra\_string()}{ons\_extra\_string()}}
+{\footnotesize\ttfamily std\+::string ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::ons\+\_\+extra\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad27e2a1e5a08f1f2cefa29916c39671d}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad27e2a1e5a08f1f2cefa29916c39671d}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!reset@{reset}}
+\index{reset@{reset}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s }\end{DoxyParamCaption})}
+
+
+
+Resets. 
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_add0008493435b479a7c00d66ae0f5b2a}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_add0008493435b479a7c00d66ae0f5b2a}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!sql\_copy\_blob@{sql\_copy\_blob}}
+\index{sql\_copy\_blob@{sql\_copy\_blob}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sql\_copy\_blob()}{sql\_copy\_blob()}}
+{\footnotesize\ttfamily template$<$typename I $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+copy\+\_\+blob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{statement,  }\item[{I}]{column,  }\item[{void $\ast$}]{dest,  }\item[{size\+\_\+t}]{dest\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a728cc7c5fa8131a0b58ad5d7b32936ba}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a728cc7c5fa8131a0b58ad5d7b32936ba}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!sql\_get\_mapping\_from\_statement@{sql\_get\_mapping\_from\_statement}}
+\index{sql\_get\_mapping\_from\_statement@{sql\_get\_mapping\_from\_statement}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sql\_get\_mapping\_from\_statement()}{sql\_get\_mapping\_from\_statement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+get\+\_\+mapping\+\_\+from\+\_\+statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{statement }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afdc174127e34c7b92ce63c841b096dc9}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afdc174127e34c7b92ce63c841b096dc9}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!sql\_run\_statement@{sql\_run\_statement}}
+\index{sql\_run\_statement@{sql\_run\_statement}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sql\_run\_statement()}{sql\_run\_statement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+run\+\_\+statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875f}{ons\+\_\+sql\+\_\+type}}}]{type,  }\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{statement,  }\item[{void $\ast$}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a225a9d178dab0b8aca2a99db05e98e56}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a225a9d178dab0b8aca2a99db05e98e56}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!step@{step}}
+\index{step@{step}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily int ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::step (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afee54c6e455dcecf4eb8a1c0a5f3e228}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afee54c6e455dcecf4eb8a1c0a5f3e228}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!update\_record\_query@{update\_record\_query}}
+\index{update\_record\_query@{update\_record\_query}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{update\_record\_query()}{update\_record\_query()}}
+{\footnotesize\ttfamily std\+::pair$<$std\+::string, std\+::vector$<$\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}{update\+\_\+variant}}$>$ $>$ ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::update\+\_\+record\+\_\+query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&}]{ons\+\_\+db,  }\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} \&}]{entry,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab39484d7fe6acc71549d16c449d158dd}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab39484d7fe6acc71549d16c449d158dd}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!DB\_VERSION@{DB\_VERSION}}
+\index{DB\_VERSION@{DB\_VERSION}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{DB\_VERSION}{DB\_VERSION}}
+{\footnotesize\ttfamily constexpr auto ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::D\+B\+\_\+\+V\+E\+R\+S\+I\+ON = \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}{db\+\_\+version\+::v2\+\_\+full\+\_\+rows}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af964ec92a0f7907fd8e224921826f656}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af964ec92a0f7907fd8e224921826f656}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!EXPIRATION@{EXPIRATION}}
+\index{EXPIRATION@{EXPIRATION}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{EXPIRATION}{EXPIRATION}}
+{\footnotesize\ttfamily constexpr auto ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::E\+X\+P\+I\+R\+A\+T\+I\+ON = \char`\"{} (expiration\+\_\+height IS N\+U\+LL OR expiration\+\_\+height $>$= ?) \char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac22952c590469a6bbfd50a0d28787b12}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac22952c590469a6bbfd50a0d28787b12}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!is\_int\_enum@{is\_int\_enum}}
+\index{is\_int\_enum@{is\_int\_enum}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{is\_int\_enum}{is\_int\_enum}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+int\+\_\+enum = \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}{is\+\_\+int\+\_\+enum\+\_\+impl}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a892da3fcf452e7423d3be445f03bda71}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a892da3fcf452e7423d3be445f03bda71}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!is\_optional@{is\_optional}}
+\index{is\_optional@{is\_optional}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{is\_optional}{is\_optional}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+optional$<$ std\+::optional$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ $>$ = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a559cdf74ca89f9fc2afa1ded86e8606f}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a559cdf74ca89f9fc2afa1ded86e8606f}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!sql\_select\_mappings\_and\_owners\_prefix@{sql\_select\_mappings\_and\_owners\_prefix}}
+\index{sql\_select\_mappings\_and\_owners\_prefix@{sql\_select\_mappings\_and\_owners\_prefix}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sql\_select\_mappings\_and\_owners\_prefix}{sql\_select\_mappings\_and\_owners\_prefix}}
+{\footnotesize\ttfamily const std\+::string ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+prefix}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= R\textcolor{stringliteral}{"(}}
+\DoxyCodeLine{\textcolor{stringliteral}{SELECT mappings.*, o1.address, o2.address, MAX(update\_height)}}
+\DoxyCodeLine{\textcolor{stringliteral}{FROM mappings}}
+\DoxyCodeLine{\textcolor{stringliteral}{  JOIN owner o1 ON mappings.owner\_id = o1.id}}
+\DoxyCodeLine{\textcolor{stringliteral}{  LEFT JOIN owner o2 ON mappings.backup\_owner\_id = o2.id}}
+\DoxyCodeLine{\textcolor{stringliteral}{)"\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c02b587b8328c5d5d916032e53ac951}\label{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c02b587b8328c5d5d916032e53ac951}} 
+\index{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}!sql\_select\_mappings\_and\_owners\_suffix@{sql\_select\_mappings\_and\_owners\_suffix}}
+\index{sql\_select\_mappings\_and\_owners\_suffix@{sql\_select\_mappings\_and\_owners\_suffix}!ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}@{ons::anonymous\_namespace\lcurly{}oxen\_name\_system.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sql\_select\_mappings\_and\_owners\_suffix}{sql\_select\_mappings\_and\_owners\_suffix}}
+{\footnotesize\ttfamily const std\+::string ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+suffix = \char`\"{} G\+R\+O\+UP BY name\+\_\+hash, type\char`\"{}}
+

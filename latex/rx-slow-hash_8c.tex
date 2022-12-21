@@ -1,0 +1,251 @@
+\hypertarget{rx-slow-hash_8c}{}\doxysection{src/crypto/rx-\/slow-\/hash.c File Reference}
+\label{rx-slow-hash_8c}\index{src/crypto/rx-\/slow-\/hash.c@{src/crypto/rx-\/slow-\/hash.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}randomx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}c\+\_\+threads.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash-\/ops.\+h\char`\"{}}\newline
+Include dependency graph for rx-\/slow-\/hash.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rx-slow-hash_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrx__state}{rx\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structseedinfo}{seedinfo}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rx-slow-hash_8c_a1c65b8853eaffd25401a04d0fa5869c6}{R\+X\+\_\+\+L\+O\+G\+C\+AT}}~\char`\"{}randomx\char`\"{}
+\item 
+\#define \mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}}~\+\_\+\+\_\+thread
+\item 
+\#define \mbox{\hyperlink{rx-slow-hash_8c_a701e405db70398673aa99473af31cc56}{S\+E\+E\+D\+H\+A\+S\+H\+\_\+\+E\+P\+O\+C\+H\+\_\+\+B\+L\+O\+C\+KS}}~2048	/$\ast$ Must be same as B\+L\+O\+C\+K\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+M\+A\+X\+\_\+\+C\+O\+U\+NT in cryptonote\+\_\+config.\+h $\ast$/
+\item 
+\#define \mbox{\hyperlink{rx-slow-hash_8c_af527217694aad4e09bf4219a44433ace}{S\+E\+E\+D\+H\+A\+S\+H\+\_\+\+E\+P\+O\+C\+H\+\_\+\+L\+AG}}~64
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structrx__state}{rx\+\_\+state}} \mbox{\hyperlink{rx-slow-hash_8c_accc49c8046b32aa4e580c1cc2a5668fa}{rx\+\_\+state}}
+\item 
+typedef struct \mbox{\hyperlink{structseedinfo}{seedinfo}} \mbox{\hyperlink{rx-slow-hash_8c_acd841c705b7ab6619f7e10f6622ff106}{seedinfo}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{rx-slow-hash_8c_adcad57868932ca2f3b803f4f233001a7}{local\+\_\+abort}} (const char $\ast$msg)
+\item 
+static int \mbox{\hyperlink{rx-slow-hash_8c_a4c460610bc88558446ae6de44d617c51}{disabled\+\_\+flags}} (void)
+\item 
+static int \mbox{\hyperlink{rx-slow-hash_8c_a0a77fdf44fad99f4181990df803743b4}{enabled\+\_\+flags}} (void)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_a48d23c81ab4f64d3e37dd5b7652910b2}{rx\+\_\+reorg}} (const uint64\+\_\+t split\+\_\+height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{rx-slow-hash_8c_a4c47c124ff41e4f0eb699cd15f19e387}{rx\+\_\+seedheight}} (const uint64\+\_\+t height)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_a08dcf2f97df55a49083496192e0d63be}{rx\+\_\+seedheights}} (const uint64\+\_\+t height, uint64\+\_\+t $\ast$seedheight, uint64\+\_\+t $\ast$nextheight)
+\item 
+static \mbox{\hyperlink{c__threads_8h_a1eeb8a6406465c4724a1de486babfd02}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+T\+Y\+PE}} \mbox{\hyperlink{rx-slow-hash_8c_a3f8387a2f9833ed938b24d9c4efcb3f1}{rx\+\_\+seedthread}} (void $\ast$arg)
+\item 
+static void \mbox{\hyperlink{rx-slow-hash_8c_af02d7e54eef3d5f248b01f2491e4704d}{rx\+\_\+initdata}} (randomx\+\_\+cache $\ast$rs\+\_\+cache, const int miners, const uint64\+\_\+t seedheight)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_aa617c601c8baa0dfc65d2278d7d14349}{rx\+\_\+slow\+\_\+hash}} (const uint64\+\_\+t mainheight, const uint64\+\_\+t seedheight, const unsigned char $\ast$seedhash, const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int miners, int is\+\_\+alt)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_a75f13a4ab2898791278e2a7a2b07e4d0}{rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_abd361359b48326fbdc65dac3d7469f6a}{rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{rx-slow-hash_8c_a2b03e7be332754b358e49a4c45cc4d36}{rx\+\_\+stop\+\_\+mining}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{rx-slow-hash_8c_a2426b3238d2ef88ccf79698552c30c31}{rx\+\_\+mutex}} = \mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}
+\item 
+static \mbox{\hyperlink{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{rx-slow-hash_8c_a1a59b1a04af16aea17fc06106545916e}{rx\+\_\+dataset\+\_\+mutex}} = \mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}
+\item 
+static \mbox{\hyperlink{structrx__state}{rx\+\_\+state}} \mbox{\hyperlink{rx-slow-hash_8c_a3d609a2333abe83ed1eaf3a017e23540}{rx\+\_\+s}} \mbox{[}2\mbox{]} = \{\{\mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}},\{0\},0,0\},\{\mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}},\{0\},0,0\}\}
+\item 
+static randomx\+\_\+dataset $\ast$ \mbox{\hyperlink{rx-slow-hash_8c_a2fe6213c6177a690d588df876e7f15f3}{rx\+\_\+dataset}}
+\item 
+static int \mbox{\hyperlink{rx-slow-hash_8c_af0c48b9011dc6622b420d4c9b533ad15}{rx\+\_\+dataset\+\_\+nomem}}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{rx-slow-hash_8c_a33e03f4abcdcfbcd82f88dd2c9cd9fad}{rx\+\_\+dataset\+\_\+height}}
+\item 
+static \mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} randomx\+\_\+vm $\ast$ \mbox{\hyperlink{rx-slow-hash_8c_a374574094180ded46cfaa053defe9b83}{rx\+\_\+vm}} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rx-slow-hash_8c_a1c65b8853eaffd25401a04d0fa5869c6}\label{rx-slow-hash_8c_a1c65b8853eaffd25401a04d0fa5869c6}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!RX\_LOGCAT@{RX\_LOGCAT}}
+\index{RX\_LOGCAT@{RX\_LOGCAT}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{RX\_LOGCAT}{RX\_LOGCAT}}
+{\footnotesize\ttfamily \#define R\+X\+\_\+\+L\+O\+G\+C\+AT~\char`\"{}randomx\char`\"{}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a701e405db70398673aa99473af31cc56}\label{rx-slow-hash_8c_a701e405db70398673aa99473af31cc56}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!SEEDHASH\_EPOCH\_BLOCKS@{SEEDHASH\_EPOCH\_BLOCKS}}
+\index{SEEDHASH\_EPOCH\_BLOCKS@{SEEDHASH\_EPOCH\_BLOCKS}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{SEEDHASH\_EPOCH\_BLOCKS}{SEEDHASH\_EPOCH\_BLOCKS}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+H\+A\+S\+H\+\_\+\+E\+P\+O\+C\+H\+\_\+\+B\+L\+O\+C\+KS~2048	/$\ast$ Must be same as B\+L\+O\+C\+K\+S\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+I\+N\+G\+\_\+\+M\+A\+X\+\_\+\+C\+O\+U\+NT in cryptonote\+\_\+config.\+h $\ast$/}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_af527217694aad4e09bf4219a44433ace}\label{rx-slow-hash_8c_af527217694aad4e09bf4219a44433ace}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!SEEDHASH\_EPOCH\_LAG@{SEEDHASH\_EPOCH\_LAG}}
+\index{SEEDHASH\_EPOCH\_LAG@{SEEDHASH\_EPOCH\_LAG}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{SEEDHASH\_EPOCH\_LAG}{SEEDHASH\_EPOCH\_LAG}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+H\+A\+S\+H\+\_\+\+E\+P\+O\+C\+H\+\_\+\+L\+AG~64}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}\label{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!THREADV@{THREADV}}
+\index{THREADV@{THREADV}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{THREADV}{THREADV}}
+{\footnotesize\ttfamily \#define T\+H\+R\+E\+A\+DV~\+\_\+\+\_\+thread}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{rx-slow-hash_8c_accc49c8046b32aa4e580c1cc2a5668fa}\label{rx-slow-hash_8c_accc49c8046b32aa4e580c1cc2a5668fa}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_state@{rx\_state}}
+\index{rx\_state@{rx\_state}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_state}{rx\_state}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structrx__state}{rx\+\_\+state}} \mbox{\hyperlink{structrx__state}{rx\+\_\+state}}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_acd841c705b7ab6619f7e10f6622ff106}\label{rx-slow-hash_8c_acd841c705b7ab6619f7e10f6622ff106}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!seedinfo@{seedinfo}}
+\index{seedinfo@{seedinfo}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{seedinfo}{seedinfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structseedinfo}{seedinfo}} \mbox{\hyperlink{structseedinfo}{seedinfo}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rx-slow-hash_8c_a4c460610bc88558446ae6de44d617c51}\label{rx-slow-hash_8c_a4c460610bc88558446ae6de44d617c51}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!disabled\_flags@{disabled\_flags}}
+\index{disabled\_flags@{disabled\_flags}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{disabled\_flags()}{disabled\_flags()}}
+{\footnotesize\ttfamily static int disabled\+\_\+flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a0a77fdf44fad99f4181990df803743b4}\label{rx-slow-hash_8c_a0a77fdf44fad99f4181990df803743b4}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!enabled\_flags@{enabled\_flags}}
+\index{enabled\_flags@{enabled\_flags}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{enabled\_flags()}{enabled\_flags()}}
+{\footnotesize\ttfamily static int enabled\+\_\+flags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_adcad57868932ca2f3b803f4f233001a7}\label{rx-slow-hash_8c_adcad57868932ca2f3b803f4f233001a7}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!local\_abort@{local\_abort}}
+\index{local\_abort@{local\_abort}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{local\_abort()}{local\_abort()}}
+{\footnotesize\ttfamily static void local\+\_\+abort (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_af02d7e54eef3d5f248b01f2491e4704d}\label{rx-slow-hash_8c_af02d7e54eef3d5f248b01f2491e4704d}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_initdata@{rx\_initdata}}
+\index{rx\_initdata@{rx\_initdata}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_initdata()}{rx\_initdata()}}
+{\footnotesize\ttfamily static void rx\+\_\+initdata (\begin{DoxyParamCaption}\item[{randomx\+\_\+cache $\ast$}]{rs\+\_\+cache,  }\item[{const int}]{miners,  }\item[{const uint64\+\_\+t}]{seedheight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a48d23c81ab4f64d3e37dd5b7652910b2}\label{rx-slow-hash_8c_a48d23c81ab4f64d3e37dd5b7652910b2}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_reorg@{rx\_reorg}}
+\index{rx\_reorg@{rx\_reorg}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_reorg()}{rx\_reorg()}}
+{\footnotesize\ttfamily void rx\+\_\+reorg (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{split\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a4c47c124ff41e4f0eb699cd15f19e387}\label{rx-slow-hash_8c_a4c47c124ff41e4f0eb699cd15f19e387}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_seedheight@{rx\_seedheight}}
+\index{rx\_seedheight@{rx\_seedheight}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_seedheight()}{rx\_seedheight()}}
+{\footnotesize\ttfamily uint64\+\_\+t rx\+\_\+seedheight (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a08dcf2f97df55a49083496192e0d63be}\label{rx-slow-hash_8c_a08dcf2f97df55a49083496192e0d63be}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_seedheights@{rx\_seedheights}}
+\index{rx\_seedheights@{rx\_seedheights}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_seedheights()}{rx\_seedheights()}}
+{\footnotesize\ttfamily void rx\+\_\+seedheights (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t $\ast$}]{seedheight,  }\item[{uint64\+\_\+t $\ast$}]{nextheight }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a3f8387a2f9833ed938b24d9c4efcb3f1}\label{rx-slow-hash_8c_a3f8387a2f9833ed938b24d9c4efcb3f1}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_seedthread@{rx\_seedthread}}
+\index{rx\_seedthread@{rx\_seedthread}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_seedthread()}{rx\_seedthread()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{c__threads_8h_a1eeb8a6406465c4724a1de486babfd02}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+T\+Y\+PE}} rx\+\_\+seedthread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_aa617c601c8baa0dfc65d2278d7d14349}\label{rx-slow-hash_8c_aa617c601c8baa0dfc65d2278d7d14349}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_slow\_hash@{rx\_slow\_hash}}
+\index{rx\_slow\_hash@{rx\_slow\_hash}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash()}{rx\_slow\_hash()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{mainheight,  }\item[{const uint64\+\_\+t}]{seedheight,  }\item[{const unsigned char $\ast$}]{seedhash,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{miners,  }\item[{int}]{is\+\_\+alt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a75f13a4ab2898791278e2a7a2b07e4d0}\label{rx-slow-hash_8c_a75f13a4ab2898791278e2a7a2b07e4d0}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}}
+\index{rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_allocate\_state()}{rx\_slow\_hash\_allocate\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_abd361359b48326fbdc65dac3d7469f6a}\label{rx-slow-hash_8c_abd361359b48326fbdc65dac3d7469f6a}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}}
+\index{rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_free\_state()}{rx\_slow\_hash\_free\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a2b03e7be332754b358e49a4c45cc4d36}\label{rx-slow-hash_8c_a2b03e7be332754b358e49a4c45cc4d36}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_stop\_mining@{rx\_stop\_mining}}
+\index{rx\_stop\_mining@{rx\_stop\_mining}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_stop\_mining()}{rx\_stop\_mining()}}
+{\footnotesize\ttfamily void rx\+\_\+stop\+\_\+mining (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rx-slow-hash_8c_a2fe6213c6177a690d588df876e7f15f3}\label{rx-slow-hash_8c_a2fe6213c6177a690d588df876e7f15f3}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_dataset@{rx\_dataset}}
+\index{rx\_dataset@{rx\_dataset}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_dataset}{rx\_dataset}}
+{\footnotesize\ttfamily randomx\+\_\+dataset$\ast$ rx\+\_\+dataset\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a33e03f4abcdcfbcd82f88dd2c9cd9fad}\label{rx-slow-hash_8c_a33e03f4abcdcfbcd82f88dd2c9cd9fad}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_dataset\_height@{rx\_dataset\_height}}
+\index{rx\_dataset\_height@{rx\_dataset\_height}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_dataset\_height}{rx\_dataset\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t rx\+\_\+dataset\+\_\+height\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a1a59b1a04af16aea17fc06106545916e}\label{rx-slow-hash_8c_a1a59b1a04af16aea17fc06106545916e}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_dataset\_mutex@{rx\_dataset\_mutex}}
+\index{rx\_dataset\_mutex@{rx\_dataset\_mutex}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_dataset\_mutex}{rx\_dataset\_mutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE}} rx\+\_\+dataset\+\_\+mutex = \mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_af0c48b9011dc6622b420d4c9b533ad15}\label{rx-slow-hash_8c_af0c48b9011dc6622b420d4c9b533ad15}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_dataset\_nomem@{rx\_dataset\_nomem}}
+\index{rx\_dataset\_nomem@{rx\_dataset\_nomem}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_dataset\_nomem}{rx\_dataset\_nomem}}
+{\footnotesize\ttfamily int rx\+\_\+dataset\+\_\+nomem\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a2426b3238d2ef88ccf79698552c30c31}\label{rx-slow-hash_8c_a2426b3238d2ef88ccf79698552c30c31}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_mutex@{rx\_mutex}}
+\index{rx\_mutex@{rx\_mutex}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_mutex}{rx\_mutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE}} rx\+\_\+mutex = \mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a3d609a2333abe83ed1eaf3a017e23540}\label{rx-slow-hash_8c_a3d609a2333abe83ed1eaf3a017e23540}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_s@{rx\_s}}
+\index{rx\_s@{rx\_s}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_s}{rx\_s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrx__state}{rx\+\_\+state}} rx\+\_\+s\mbox{[}2\mbox{]} = \{\{\mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}},\{0\},0,0\},\{\mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}},\{0\},0,0\}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rx-slow-hash_8c_a374574094180ded46cfaa053defe9b83}\label{rx-slow-hash_8c_a374574094180ded46cfaa053defe9b83}} 
+\index{rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}!rx\_vm@{rx\_vm}}
+\index{rx\_vm@{rx\_vm}!rx-\/slow-\/hash.c@{rx-\/slow-\/hash.c}}
+\doxysubsubsection{\texorpdfstring{rx\_vm}{rx\_vm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} randomx\+\_\+vm$\ast$ rx\+\_\+vm = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+

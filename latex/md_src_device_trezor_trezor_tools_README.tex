@@ -1,0 +1,35 @@
+\hypertarget{md_src_device_trezor_trezor_tools_README_autotoc_md13}{}\doxysection{Messages rebuild}\label{md_src_device_trezor_trezor_tools_README_autotoc_md13}
+Install {\ttfamily protoc} for your distribution. Requirements\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily protobuf-\/compiler}
+\item {\ttfamily libprotobuf-\/dev}
+\item {\ttfamily python}
+\end{DoxyItemize}
+
+Soft requirement\+: Python 3, can be easily installed with \href{https://github.com/pyenv/pyenv}{\texttt{ pyenv}}. If Python 3 is used there are no additional python dependencies.
+
+Since Cmake 3.\+12 the {\ttfamily Find\+Python} module is used to locate the Python interpreter in your system. It preferably searches for Python 3, if none is found, it searches for Python 2.
+
+Lower version of the cmake uses another module which does not guarantee ordering. If you want to override the selected python you can do it in the following way\+:
+
+\`{}\`{}{\ttfamily bash export T\+R\+E\+Z\+O\+R\+\_\+\+P\+Y\+T\+H\+ON=}which python3\`{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\#\# Python 2.7+}
+\DoxyCodeLine{}
+\DoxyCodeLine{Python 3 has `tempfile.TemporaryDirectory` available but Python 2 lacks}
+\DoxyCodeLine{this class so the message generation code uses `backports.tempfile` package}
+\DoxyCodeLine{bundled in the repository.}
+\DoxyCodeLine{}
+\DoxyCodeLine{The minimal Python versions are 2.7 and 3.4}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\# Regenerate messages}
+\DoxyCodeLine{}
+\DoxyCodeLine{```bash}
+\DoxyCodeLine{cd src/device\_trezor/trezor}
+\DoxyCodeLine{python tools/build\_protob.py}
+\end{DoxyCode}
+
+
+The messages regeneration is done also automatically via cmake. 

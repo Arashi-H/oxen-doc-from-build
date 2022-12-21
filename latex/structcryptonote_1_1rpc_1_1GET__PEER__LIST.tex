@@ -1,0 +1,87 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__PEER__LIST}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+ST Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__PEER__LIST}\index{cryptonote::rpc::GET\_PEER\_LIST@{cryptonote::rpc::GET\_PEER\_LIST}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+ST\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structcryptonote_1_1rpc_1_1GET__PEER__LIST__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+ST\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__PEER__LIST__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__PEER__LIST_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__PEER__LIST_a8a0018a1b87d9dcf22909c077f43fe86}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__PEER__LIST_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+S\+T\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__PEER__LIST_ad0b4594d0472b114f3d9992e3700576e}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the list of current network peers known to this node.
+
+Inputs\+: none
+
+Output values (requires a restricted/admin R\+PC endpoint)\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily white\+\_\+list} list of \char`\"{}whitelist\char`\"{} peers (see below), that is, peers that were recorded reachable the last time this node connected to them. Peers that are unreachable or not synchronized with the network are moved to the graylist.
+\item {\ttfamily gray\+\_\+list} list of peers (see below) that this node knows of but has not (recently) tried to connect to.
+\end{DoxyItemize}
+
+Each peer list is an array of dicts containing the following fields\+:
+\begin{DoxyItemize}
+\item {\ttfamily id} a unique integer locally identifying the peer
+\item {\ttfamily host} the peer\textquotesingle{}s IP address (as a string)
+\item {\ttfamily port} the port on which the peer is reachable
+\item {\ttfamily last\+\_\+seen} unix timestamp when this node last connected to the peer. Will be omitted if never connected (e.\+g. for a peer we received from another node but haven\textquotesingle{}t yet tried). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__PEER__LIST_a8a0018a1b87d9dcf22909c077f43fe86}\label{structcryptonote_1_1rpc_1_1GET__PEER__LIST_a8a0018a1b87d9dcf22909c077f43fe86}} 
+\index{cryptonote::rpc::GET\_PEER\_LIST@{cryptonote::rpc::GET\_PEER\_LIST}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_PEER\_LIST@{cryptonote::rpc::GET\_PEER\_LIST}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+S\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__PEER__LIST_ad0b4594d0472b114f3d9992e3700576e}\label{structcryptonote_1_1rpc_1_1GET__PEER__LIST_ad0b4594d0472b114f3d9992e3700576e}} 
+\index{cryptonote::rpc::GET\_PEER\_LIST@{cryptonote::rpc::GET\_PEER\_LIST}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_PEER\_LIST@{cryptonote::rpc::GET\_PEER\_LIST}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__PEER__LIST_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+S\+T\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+P\+E\+E\+R\+\_\+\+L\+I\+S\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

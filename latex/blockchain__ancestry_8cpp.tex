@@ -1,0 +1,224 @@
+\hypertarget{blockchain__ancestry_8cpp}{}\doxysection{src/blockchain\+\_\+utilities/blockchain\+\_\+ancestry.cpp File Reference}
+\label{blockchain__ancestry_8cpp}\index{src/blockchain\_utilities/blockchain\_ancestry.cpp@{src/blockchain\_utilities/blockchain\_ancestry.cpp}}
+{\ttfamily \#include $<$cinttypes$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}common/unordered\+\_\+containers\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/signal\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/boost\+\_\+std\+\_\+variant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+objects.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+Include dependency graph for blockchain\+\_\+ancestry.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__ancestry_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structancestor}{ancestor}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01ancestor_01_4}{std\+::hash$<$ ancestor $>$}}
+\item 
+struct \mbox{\hyperlink{structtx__data__t}{tx\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{blockchain__ancestry_8cpp_a1025b01f7b2ac915a52a9bfede72a2d9}{add\+\_\+ancestor}} (std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&ancestry, uint64\+\_\+t amount, uint64\+\_\+t offset)
+\item 
+static size\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a34c45f0013fa893ac39dd6fd72001b0f}{get\+\_\+full\+\_\+ancestry}} (const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&ancestry)
+\item 
+static size\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_ae0ce8899c55d36f85c3d2548fb96dc42}{get\+\_\+deduplicated\+\_\+ancestry}} (const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&ancestry)
+\item 
+static void \mbox{\hyperlink{blockchain__ancestry_8cpp_a991da8052b799620343256c790763461}{add\+\_\+ancestry}} (std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&ancestry, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$ \&ancestors)
+\item 
+static void \mbox{\hyperlink{blockchain__ancestry_8cpp_a803fbe41f5f5f54c715d97d28c78544f}{add\+\_\+ancestry}} (std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&ancestry, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{structancestor}{ancestor}} \&new\+\_\+ancestor)
+\item 
+static std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$ \mbox{\hyperlink{blockchain__ancestry_8cpp_a043da3e8caad5d24ddc02a545806ce48}{get\+\_\+ancestry}} (const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&ancestry, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_a858ffd7e32cdec899846ac2e0503b195}{get\+\_\+block\+\_\+from\+\_\+height}} (\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$db, uint64\+\_\+t height, \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&b)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_a0bd6923b767dfb3f6374454e647a7646}{get\+\_\+transaction}} (\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$db, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, \+::\mbox{\hyperlink{structcryptonote_1_1tx__data__t}{tx\+\_\+data\+\_\+t}} \&tx\+\_\+data)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_a21b37dbafb2971874bd40b2b45d82f8a}{get\+\_\+output\+\_\+txid}} (\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$db, uint64\+\_\+t amount, uint64\+\_\+t offset, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid)
+\item 
+int \mbox{\hyperlink{blockchain__ancestry_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{blockchain__ancestry_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}bcutil\char`\"{})
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_a6b17f03fc72d524e643678ab19e597f6}{stop\+\_\+requested}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a568c4d54d4601683dbfad3a29d4893ff}{cached\+\_\+txes}} = 0
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_af8a82545d04d831cd5cecfdc0a5e09ac}{cached\+\_\+blocks}} = 0
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a8c0aec360b5867cc435f35d47565cd72}{cached\+\_\+outputs}} = 0
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a6548c0154c8418f0420ef6fc6d527a4c}{total\+\_\+txes}} = 0
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a9181bee05433b1343c3a2760b211d3f4}{total\+\_\+blocks}} = 0
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__ancestry_8cpp_a502ca32740d6a9409a08b818d0d6a66f}{total\+\_\+outputs}} = 0
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_a47ac3d95c104ec92ca9200ec33191cc2}{opt\+\_\+cache\+\_\+outputs}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_adad21a5d9795d4325723f6f25279b75c}{opt\+\_\+cache\+\_\+txes}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__ancestry_8cpp_afb7e0f5c90174160542efdcfe4d1e7f2}{opt\+\_\+cache\+\_\+blocks}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a1025b01f7b2ac915a52a9bfede72a2d9}\label{blockchain__ancestry_8cpp_a1025b01f7b2ac915a52a9bfede72a2d9}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!add\_ancestor@{add\_ancestor}}
+\index{add\_ancestor@{add\_ancestor}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_ancestor()}{add\_ancestor()}}
+{\footnotesize\ttfamily static void add\+\_\+ancestor (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&}]{ancestry,  }\item[{uint64\+\_\+t}]{amount,  }\item[{uint64\+\_\+t}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a803fbe41f5f5f54c715d97d28c78544f}\label{blockchain__ancestry_8cpp_a803fbe41f5f5f54c715d97d28c78544f}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!add\_ancestry@{add\_ancestry}}
+\index{add\_ancestry@{add\_ancestry}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_ancestry()}{add\_ancestry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void add\+\_\+ancestry (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&}]{ancestry,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{structancestor}{ancestor}} \&}]{new\+\_\+ancestor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a991da8052b799620343256c790763461}\label{blockchain__ancestry_8cpp_a991da8052b799620343256c790763461}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!add\_ancestry@{add\_ancestry}}
+\index{add\_ancestry@{add\_ancestry}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_ancestry()}{add\_ancestry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void add\+\_\+ancestry (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&}]{ancestry,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$ \&}]{ancestors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a043da3e8caad5d24ddc02a545806ce48}\label{blockchain__ancestry_8cpp_a043da3e8caad5d24ddc02a545806ce48}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_ancestry@{get\_ancestry}}
+\index{get\_ancestry@{get\_ancestry}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_ancestry()}{get\_ancestry()}}
+{\footnotesize\ttfamily static std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structancestor}{ancestor}}$>$ get\+\_\+ancestry (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structancestor}{ancestor}} $>$$>$ \&}]{ancestry,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a858ffd7e32cdec899846ac2e0503b195}\label{blockchain__ancestry_8cpp_a858ffd7e32cdec899846ac2e0503b195}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_block\_from\_height@{get\_block\_from\_height}}
+\index{get\_block\_from\_height@{get\_block\_from\_height}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_block\_from\_height()}{get\_block\_from\_height()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} get\+\_\+block\+\_\+from\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&}]{state,  }\item[{\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$}]{db,  }\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_ae0ce8899c55d36f85c3d2548fb96dc42}\label{blockchain__ancestry_8cpp_ae0ce8899c55d36f85c3d2548fb96dc42}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_deduplicated\_ancestry@{get\_deduplicated\_ancestry}}
+\index{get\_deduplicated\_ancestry@{get\_deduplicated\_ancestry}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_deduplicated\_ancestry()}{get\_deduplicated\_ancestry()}}
+{\footnotesize\ttfamily static size\+\_\+t get\+\_\+deduplicated\+\_\+ancestry (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&}]{ancestry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a34c45f0013fa893ac39dd6fd72001b0f}\label{blockchain__ancestry_8cpp_a34c45f0013fa893ac39dd6fd72001b0f}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_full\_ancestry@{get\_full\_ancestry}}
+\index{get\_full\_ancestry@{get\_full\_ancestry}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_full\_ancestry()}{get\_full\_ancestry()}}
+{\footnotesize\ttfamily static size\+\_\+t get\+\_\+full\+\_\+ancestry (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structancestor}{ancestor}}, unsigned int $>$ \&}]{ancestry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a21b37dbafb2971874bd40b2b45d82f8a}\label{blockchain__ancestry_8cpp_a21b37dbafb2971874bd40b2b45d82f8a}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_output\_txid@{get\_output\_txid}}
+\index{get\_output\_txid@{get\_output\_txid}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_output\_txid()}{get\_output\_txid()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} get\+\_\+output\+\_\+txid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&}]{state,  }\item[{\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$}]{db,  }\item[{uint64\+\_\+t}]{amount,  }\item[{uint64\+\_\+t}]{offset,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a0bd6923b767dfb3f6374454e647a7646}\label{blockchain__ancestry_8cpp_a0bd6923b767dfb3f6374454e647a7646}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!get\_transaction@{get\_transaction}}
+\index{get\_transaction@{get\_transaction}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_transaction()}{get\_transaction()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} get\+\_\+transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structancestry__state__t}{ancestry\+\_\+state\+\_\+t}} \&}]{state,  }\item[{\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$}]{db,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{\+::\mbox{\hyperlink{structcryptonote_1_1tx__data__t}{tx\+\_\+data\+\_\+t}} \&}]{tx\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{blockchain__ancestry_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!main@{main}}
+\index{main@{main}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_af8a82545d04d831cd5cecfdc0a5e09ac}\label{blockchain__ancestry_8cpp_af8a82545d04d831cd5cecfdc0a5e09ac}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!cached\_blocks@{cached\_blocks}}
+\index{cached\_blocks@{cached\_blocks}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_blocks}{cached\_blocks}}
+{\footnotesize\ttfamily uint64\+\_\+t cached\+\_\+blocks = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a8c0aec360b5867cc435f35d47565cd72}\label{blockchain__ancestry_8cpp_a8c0aec360b5867cc435f35d47565cd72}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!cached\_outputs@{cached\_outputs}}
+\index{cached\_outputs@{cached\_outputs}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_outputs}{cached\_outputs}}
+{\footnotesize\ttfamily uint64\+\_\+t cached\+\_\+outputs = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a568c4d54d4601683dbfad3a29d4893ff}\label{blockchain__ancestry_8cpp_a568c4d54d4601683dbfad3a29d4893ff}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!cached\_txes@{cached\_txes}}
+\index{cached\_txes@{cached\_txes}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{cached\_txes}{cached\_txes}}
+{\footnotesize\ttfamily uint64\+\_\+t cached\+\_\+txes = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{blockchain__ancestry_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}bcutil\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_afb7e0f5c90174160542efdcfe4d1e7f2}\label{blockchain__ancestry_8cpp_afb7e0f5c90174160542efdcfe4d1e7f2}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!opt\_cache\_blocks@{opt\_cache\_blocks}}
+\index{opt\_cache\_blocks@{opt\_cache\_blocks}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{opt\_cache\_blocks}{opt\_cache\_blocks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opt\+\_\+cache\+\_\+blocks = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a47ac3d95c104ec92ca9200ec33191cc2}\label{blockchain__ancestry_8cpp_a47ac3d95c104ec92ca9200ec33191cc2}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!opt\_cache\_outputs@{opt\_cache\_outputs}}
+\index{opt\_cache\_outputs@{opt\_cache\_outputs}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{opt\_cache\_outputs}{opt\_cache\_outputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opt\+\_\+cache\+\_\+outputs = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_adad21a5d9795d4325723f6f25279b75c}\label{blockchain__ancestry_8cpp_adad21a5d9795d4325723f6f25279b75c}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!opt\_cache\_txes@{opt\_cache\_txes}}
+\index{opt\_cache\_txes@{opt\_cache\_txes}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{opt\_cache\_txes}{opt\_cache\_txes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} opt\+\_\+cache\+\_\+txes = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a6b17f03fc72d524e643678ab19e597f6}\label{blockchain__ancestry_8cpp_a6b17f03fc72d524e643678ab19e597f6}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!stop\_requested@{stop\_requested}}
+\index{stop\_requested@{stop\_requested}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{stop\_requested}{stop\_requested}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} stop\+\_\+requested = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a9181bee05433b1343c3a2760b211d3f4}\label{blockchain__ancestry_8cpp_a9181bee05433b1343c3a2760b211d3f4}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!total\_blocks@{total\_blocks}}
+\index{total\_blocks@{total\_blocks}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{total\_blocks}{total\_blocks}}
+{\footnotesize\ttfamily uint64\+\_\+t total\+\_\+blocks = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a502ca32740d6a9409a08b818d0d6a66f}\label{blockchain__ancestry_8cpp_a502ca32740d6a9409a08b818d0d6a66f}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!total\_outputs@{total\_outputs}}
+\index{total\_outputs@{total\_outputs}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{total\_outputs}{total\_outputs}}
+{\footnotesize\ttfamily uint64\+\_\+t total\+\_\+outputs = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__ancestry_8cpp_a6548c0154c8418f0420ef6fc6d527a4c}\label{blockchain__ancestry_8cpp_a6548c0154c8418f0420ef6fc6d527a4c}} 
+\index{blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}!total\_txes@{total\_txes}}
+\index{total\_txes@{total\_txes}!blockchain\_ancestry.cpp@{blockchain\_ancestry.cpp}}
+\doxysubsubsection{\texorpdfstring{total\_txes}{total\_txes}}
+{\footnotesize\ttfamily uint64\+\_\+t total\+\_\+txes = 0\hspace{0.3cm}{\ttfamily [static]}}
+

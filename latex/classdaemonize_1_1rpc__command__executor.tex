@@ -1,0 +1,563 @@
+\hypertarget{classdaemonize_1_1rpc__command__executor}{}\doxysection{daemonize\+::rpc\+\_\+command\+\_\+executor Class Reference}
+\label{classdaemonize_1_1rpc__command__executor}\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+
+
+{\ttfamily \#include $<$rpc\+\_\+command\+\_\+executor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_aca99f4c975829790b25985ee6683fbcd}{rpc\+\_\+command\+\_\+executor}} (std\+::string http\+\_\+url, const std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{tools\+::login}} $>$ \&user)
+\begin{DoxyCompactList}\small\item\em Executor for H\+T\+TP remote connection R\+PC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a518dd0b5c37574aacf133feedb87a469}{rpc\+\_\+command\+\_\+executor}} (oxenmq\+::\+Oxen\+MQ \&omq, oxenmq\+::\+Connection\+ID conn)
+\begin{DoxyCompactList}\small\item\em Executor for O\+MQ R\+PC, either local (inproc) or remote. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a1c1af65ce5af6a79b33f77cd3ff21428}{invoke}} (typename R\+P\+C\+::request \&\&req, typename R\+P\+C\+::response \&res, const std\+::string \&\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+status\+\_\+ok=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a3614936a11ec336c8f2cb98112f9069f}{invoke}} (std\+::string\+\_\+view method, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} public\+\_\+method, std\+::optional$<$ \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ params, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+status\+\_\+ok=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+{\footnotesize template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&!cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a42ce36f243506d155376b9a5f0f35acd}{invoke}} (std\+::optional$<$ \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$ params=std\+::nullopt, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+status\+\_\+ok=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+{\footnotesize template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&!cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a5db5a135aee1b93832bd3c7de0fca05e}{invoke\+\_\+simple}} (std\+::string\+\_\+view error\+\_\+prefix, std\+::string\+\_\+view success\+\_\+msg)
+\item 
+{\footnotesize template$<$typename Response $>$ }\\\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a4b682ad4c9415d9936ed8dac60fa3440}{make\+\_\+request}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} params)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a7d1791f955f8567bfb8230365b05e87c}{print\+\_\+checkpoints}} (uint64\+\_\+t start\+\_\+height, uint64\+\_\+t end\+\_\+height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} print\+\_\+json)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ae00c719a2e6e4063656764f9932f016a}{print\+\_\+sn\+\_\+state\+\_\+changes}} (uint64\+\_\+t start\+\_\+height, uint64\+\_\+t end\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a8f0394b5c0ea7a37c40dd6dbe7db81bf}{print\+\_\+peer\+\_\+list}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} white=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} gray=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, size\+\_\+t limit=0, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pruned\+\_\+only=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a85562e651fe2b09d1e01958c9a940f19}{print\+\_\+peer\+\_\+list\+\_\+stats}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a1adc1d0e88b0ed72dbc615e37c612860}{save\+\_\+blockchain}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a1960032343713a0e406acb4f3fed2801}{show\+\_\+difficulty}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_af043a464486e57216578b48022baab73}{show\+\_\+status}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a92c77556dce9cd70abb5ef39d2b89daf}{print\+\_\+connections}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a73f7853b2cc88e284a14ce9b4be308d7}{print\+\_\+blockchain\+\_\+info}} (int64\+\_\+t start\+\_\+block\+\_\+index, uint64\+\_\+t end\+\_\+block\+\_\+index)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_aecd25e6a3d3893279f9e6451d78d799f}{print\+\_\+quorum\+\_\+state}} (uint64\+\_\+t start\+\_\+height, uint64\+\_\+t end\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a13950cb5bc01a9b27e903019234ea28f}{set\+\_\+log\+\_\+level}} (int8\+\_\+t level)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_abc4fe146666de53c87fdfefbcf3894bb}{set\+\_\+log\+\_\+categories}} (std\+::string categories)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a0f3feb4c5d9814c7636563fac44f77c4}{print\+\_\+height}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ae4831d8b9338ce696d1ce02ae89030ce}{print\+\_\+block\+\_\+by\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&block\+\_\+hash, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+hex)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ac0ff2a6e8917265391bc6a2da5dde323}{print\+\_\+block\+\_\+by\+\_\+height}} (uint64\+\_\+t height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+hex)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a031048bbe556b3725382d85cef3e0bc8}{print\+\_\+transaction}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&transaction\+\_\+hash, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+metadata, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+hex, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+json)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a42b5ccfc7bdea074ab64a08905dc609f}{is\+\_\+key\+\_\+image\+\_\+spent}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&ki)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a0387950fb8c3890b21e5735293393a13}{print\+\_\+transaction\+\_\+pool}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} long\+\_\+format)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a68ca470256d6a5c0db01f230b00530c5}{print\+\_\+transaction\+\_\+pool\+\_\+stats}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a3ef6363c0dfa9f7edb6eaa7a3e7796e2}{start\+\_\+mining}} (const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&address, int num\+\_\+threads, int num\+\_\+blocks, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a089dd9d3d3ab9d77667e4f17fad46309}{stop\+\_\+mining}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a519f141533339294b71631e5c316c057}{mining\+\_\+status}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a9130f4b2e6029cbc003900c264e255a3}{stop\+\_\+daemon}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a48adec80b08badca9412226866f552bb}{get\+\_\+limit}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ada7cccd177cfedbf3fce29a7dfa546a6}{set\+\_\+limit}} (int64\+\_\+t limit\+\_\+down, int64\+\_\+t limit\+\_\+up)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_af28d413bcd77c7cdf4b254363fec8cd1}{out\+\_\+peers}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} set, uint32\+\_\+t limit)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a2dd9be408d1feca70bb76ebeff4df9da}{in\+\_\+peers}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} set, uint32\+\_\+t limit)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a9746faa63d3ad30b0385edf382b0f1ba}{print\+\_\+bans}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a9492faea51b2e88c6e21318346d56255}{ban}} (const std\+::string \&address, time\+\_\+t seconds, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clear\+\_\+ban=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_aa2c160a1033e54a54b0bd1e4e03aa1f2}{unban}} (const std\+::string \&address)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ac6a4fdfe438810e9c5e655c2832c68c6}{banned}} (const std\+::string \&address)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a78ebe700b5eb42641d991c1e5987d485}{flush\+\_\+txpool}} (std\+::string txid)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ad8d3d11f80f286d5de415863808c0bad}{output\+\_\+histogram}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&amounts, uint64\+\_\+t min\+\_\+count, uint64\+\_\+t max\+\_\+count)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a14f9314923a1baeae58b4b8acb9094cc}{print\+\_\+coinbase\+\_\+tx\+\_\+sum}} (uint64\+\_\+t height, uint64\+\_\+t count)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a747a4edd5fd9b408cadbab6f5705ee9f}{alt\+\_\+chain\+\_\+info}} (const std\+::string \&tip, size\+\_\+t above, uint64\+\_\+t last\+\_\+blocks)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ad462e9f187b9889b088f73e57eb48201}{print\+\_\+blockchain\+\_\+dynamic\+\_\+stats}} (uint64\+\_\+t nblocks)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ac1495ad85f837f6a6e925580d569ee96}{relay\+\_\+tx}} (const std\+::string \&txid)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_af3011c23b87009686eb4fa032c50d46b}{sync\+\_\+info}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ad9b3a73782e4631b9469fa9c1b1e7382}{pop\+\_\+blocks}} (uint64\+\_\+t num\+\_\+blocks)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a16c577d2fa027f65947d8ad2fb11e3ce}{print\+\_\+sn\+\_\+key}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ac56eab491ea7d9ac66010defdf67463c}{print\+\_\+sn\+\_\+status}} (std\+::vector$<$ std\+::string $>$ args)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ae23f17eaebb47c9496ea32cf2871f9be}{print\+\_\+sr}} (uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ac708fe2ec1a2bdac8e62ab0269aa12fa}{prepare\+\_\+registration}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} force\+\_\+registration=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ae56a16eeecca475f21ce3ef797e75a27}{prepare\+\_\+registration\+\_\+hf18}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} force\+\_\+registration)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a37f768e21b29271978bf4479a464fbf1}{print\+\_\+sn}} (const std\+::vector$<$ std\+::string $>$ \&args, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} self=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a36237c2bcafcd17b7f383673b2d989d2}{prune\+\_\+blockchain}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a180198aadc06963fe5da36b85b8f845c}{check\+\_\+blockchain\+\_\+pruning}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ab95c84739bc569e95b9912e0cc6b28ac}{print\+\_\+net\+\_\+stats}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_acb0d20db2fa2c3297193f6cefd1a7899}{flush\+\_\+cache}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} bad\+\_\+txs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} invalid\+\_\+blocks)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_aa7572214d70ef407391d5066bfac7c2f}{version}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_ae1b35b480881e5572ad23e49d4f0bb3f}{test\+\_\+trigger\+\_\+uptime\+\_\+proof}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::variant$<$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}}, oxenmq\+::\+Connection\+ID $>$ \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_a94e1b1f140f0988c195c8ccd4446b812}{m\+\_\+rpc}}
+\item 
+oxenmq\+::\+Oxen\+MQ $\ast$ \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor_af69997349ac4e90c753ce6282d7ae9a7}{m\+\_\+omq}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_aca99f4c975829790b25985ee6683fbcd}\label{classdaemonize_1_1rpc__command__executor_aca99f4c975829790b25985ee6683fbcd}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!rpc\_command\_executor@{rpc\_command\_executor}}
+\index{rpc\_command\_executor@{rpc\_command\_executor}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{rpc\_command\_executor()}{rpc\_command\_executor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily daemonize\+::rpc\+\_\+command\+\_\+executor\+::rpc\+\_\+command\+\_\+executor (\begin{DoxyParamCaption}\item[{std\+::string}]{http\+\_\+url,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{tools\+::login}} $>$ \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Executor for H\+T\+TP remote connection R\+PC. 
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a518dd0b5c37574aacf133feedb87a469}\label{classdaemonize_1_1rpc__command__executor_a518dd0b5c37574aacf133feedb87a469}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!rpc\_command\_executor@{rpc\_command\_executor}}
+\index{rpc\_command\_executor@{rpc\_command\_executor}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{rpc\_command\_executor()}{rpc\_command\_executor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily daemonize\+::rpc\+\_\+command\+\_\+executor\+::rpc\+\_\+command\+\_\+executor (\begin{DoxyParamCaption}\item[{oxenmq\+::\+Oxen\+MQ \&}]{omq,  }\item[{oxenmq\+::\+Connection\+ID}]{conn }\end{DoxyParamCaption})}
+
+
+
+Executor for O\+MQ R\+PC, either local (inproc) or remote. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a747a4edd5fd9b408cadbab6f5705ee9f}\label{classdaemonize_1_1rpc__command__executor_a747a4edd5fd9b408cadbab6f5705ee9f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!alt\_chain\_info@{alt\_chain\_info}}
+\index{alt\_chain\_info@{alt\_chain\_info}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{alt\_chain\_info()}{alt\_chain\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::alt\+\_\+chain\+\_\+info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tip,  }\item[{size\+\_\+t}]{above,  }\item[{uint64\+\_\+t}]{last\+\_\+blocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a9492faea51b2e88c6e21318346d56255}\label{classdaemonize_1_1rpc__command__executor_a9492faea51b2e88c6e21318346d56255}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!ban@{ban}}
+\index{ban@{ban}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{ban()}{ban()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::ban (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{time\+\_\+t}]{seconds,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{clear\+\_\+ban = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ac6a4fdfe438810e9c5e655c2832c68c6}\label{classdaemonize_1_1rpc__command__executor_ac6a4fdfe438810e9c5e655c2832c68c6}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!banned@{banned}}
+\index{banned@{banned}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{banned()}{banned()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::banned (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a180198aadc06963fe5da36b85b8f845c}\label{classdaemonize_1_1rpc__command__executor_a180198aadc06963fe5da36b85b8f845c}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!check\_blockchain\_pruning@{check\_blockchain\_pruning}}
+\index{check\_blockchain\_pruning@{check\_blockchain\_pruning}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{check\_blockchain\_pruning()}{check\_blockchain\_pruning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::check\+\_\+blockchain\+\_\+pruning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_acb0d20db2fa2c3297193f6cefd1a7899}\label{classdaemonize_1_1rpc__command__executor_acb0d20db2fa2c3297193f6cefd1a7899}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!flush\_cache@{flush\_cache}}
+\index{flush\_cache@{flush\_cache}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{flush\_cache()}{flush\_cache()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::flush\+\_\+cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{bad\+\_\+txs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{invalid\+\_\+blocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a78ebe700b5eb42641d991c1e5987d485}\label{classdaemonize_1_1rpc__command__executor_a78ebe700b5eb42641d991c1e5987d485}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!flush\_txpool@{flush\_txpool}}
+\index{flush\_txpool@{flush\_txpool}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{flush\_txpool()}{flush\_txpool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::flush\+\_\+txpool (\begin{DoxyParamCaption}\item[{std\+::string}]{txid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a48adec80b08badca9412226866f552bb}\label{classdaemonize_1_1rpc__command__executor_a48adec80b08badca9412226866f552bb}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!get\_limit@{get\_limit}}
+\index{get\_limit@{get\_limit}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{get\_limit()}{get\_limit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::get\+\_\+limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a2dd9be408d1feca70bb76ebeff4df9da}\label{classdaemonize_1_1rpc__command__executor_a2dd9be408d1feca70bb76ebeff4df9da}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!in\_peers@{in\_peers}}
+\index{in\_peers@{in\_peers}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{in\_peers()}{in\_peers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::in\+\_\+peers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{set,  }\item[{uint32\+\_\+t}]{limit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a42ce36f243506d155376b9a5f0f35acd}\label{classdaemonize_1_1rpc__command__executor_a42ce36f243506d155376b9a5f0f35acd}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!invoke@{invoke}}
+\index{invoke@{invoke}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&!cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::invoke (\begin{DoxyParamCaption}\item[{std\+::optional$<$ \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$}]{params = {\ttfamily std\+:\+:nullopt},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+status\+\_\+ok = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Runs some R\+PC command either via json\+\_\+rpc or an internal rpc call. Returns nlohmann\+::json results on success, throws on failure.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em R\+PC} & the rpc type class \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em params} & the \char`\"{}params\char`\"{} value to pass to json\+\_\+rpc, or std\+::nullopt to omit it \\
+\hline
+{\em check\+\_\+status\+\_\+ok} & whether we require the result to have a \char`\"{}status\char`\"{} key set to S\+T\+A\+T\+U\+S\+\_\+\+OK to consider the request successful \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a3614936a11ec336c8f2cb98112f9069f}\label{classdaemonize_1_1rpc__command__executor_a3614936a11ec336c8f2cb98112f9069f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!invoke@{invoke}}
+\index{invoke@{invoke}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::invoke (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{method,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{public\+\_\+method,  }\item[{std\+::optional$<$ \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} $>$}]{params,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+status\+\_\+ok = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Runs some R\+PC command either via json\+\_\+rpc or an internal rpc call. Returns nlohmann\+::json results on success, throws on failure.
+
+Note that for a json\+\_\+rpc request this is the \char`\"{}result\char`\"{} value inside the json\+\_\+rpc wrapper, not the wrapper itself.
+
+This is the low-\/level implementing method for {\ttfamily invoke$<$S\+O\+M\+E\+R\+PC$>$(...)}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em method} & the method name, typically {\ttfamily S\+O\+M\+E\+R\+P\+C\+::names()\mbox{[}0\mbox{]}} \\
+\hline
+{\em public\+\_\+method} & true if this is a public rpc request; this is used, in particular, to decide whether \char`\"{}rpc.\char`\"{} or \char`\"{}admin.\char`\"{} should be prefixed if this goes through O\+MQ R\+PC. \\
+\hline
+{\em params} & the \char`\"{}params\char`\"{} field for the request. Can be nullopt to pass no \char`\"{}params\char`\"{}. \\
+\hline
+{\em check\+\_\+status\+\_\+ok} & whether we require the result to have a \char`\"{}status\char`\"{} key set to S\+T\+A\+T\+U\+S\+\_\+\+OK to consider the request successful. Note that this defaults to {\itshape false} if this is called directly, unlike the R\+P\+C-\/type-\/templated version, below. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a1c1af65ce5af6a79b33f77cd3ff21428}\label{classdaemonize_1_1rpc__command__executor_a1c1af65ce5af6a79b33f77cd3ff21428}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!invoke@{invoke}}
+\index{invoke@{invoke}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{invoke()}{invoke()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::invoke (\begin{DoxyParamCaption}\item[{typename R\+P\+C\+::request \&\&}]{req,  }\item[{typename R\+P\+C\+::response \&}]{res,  }\item[{const std\+::string \&}]{error,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+status\+\_\+ok = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+F\+I\+X\+ME\+: remove this!
+
+Runs some R\+PC command either via json\+\_\+rpc or a direct core rpc call.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & the request object (rvalue reference) \\
+\hline
+{\em error} & print this (and, on exception, the exception message) on failure. If empty then nothing is printed on failure. \\
+\hline
+{\em check\+\_\+status\+\_\+ok} & whether we require res.\+status == S\+T\+A\+T\+U\+S\+\_\+\+OK to consider the request successful \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a5db5a135aee1b93832bd3c7de0fca05e}\label{classdaemonize_1_1rpc__command__executor_a5db5a135aee1b93832bd3c7de0fca05e}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!invoke\_simple@{invoke\_simple}}
+\index{invoke\_simple@{invoke\_simple}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{invoke\_simple()}{invoke\_simple()}}
+{\footnotesize\ttfamily template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ cryptonote\+::rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$ \&\&!cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v$<$ R\+P\+C $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::invoke\+\_\+simple (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{error\+\_\+prefix,  }\item[{std\+::string\+\_\+view}]{success\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a42b5ccfc7bdea074ab64a08905dc609f}\label{classdaemonize_1_1rpc__command__executor_a42b5ccfc7bdea074ab64a08905dc609f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!is\_key\_image\_spent@{is\_key\_image\_spent}}
+\index{is\_key\_image\_spent@{is\_key\_image\_spent}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{is\_key\_image\_spent()}{is\_key\_image\_spent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::is\+\_\+key\+\_\+image\+\_\+spent (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&}]{ki }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a4b682ad4c9415d9936ed8dac60fa3440}\label{classdaemonize_1_1rpc__command__executor_a4b682ad4c9415d9936ed8dac60fa3440}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!make\_request@{make\_request}}
+\index{make\_request@{make\_request}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{make\_request()}{make\_request()}}
+{\footnotesize\ttfamily template$<$typename Response $>$ \\
+\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::make\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a519f141533339294b71631e5c316c057}\label{classdaemonize_1_1rpc__command__executor_a519f141533339294b71631e5c316c057}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!mining\_status@{mining\_status}}
+\index{mining\_status@{mining\_status}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{mining\_status()}{mining\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::mining\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_af28d413bcd77c7cdf4b254363fec8cd1}\label{classdaemonize_1_1rpc__command__executor_af28d413bcd77c7cdf4b254363fec8cd1}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!out\_peers@{out\_peers}}
+\index{out\_peers@{out\_peers}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{out\_peers()}{out\_peers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::out\+\_\+peers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{set,  }\item[{uint32\+\_\+t}]{limit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ad8d3d11f80f286d5de415863808c0bad}\label{classdaemonize_1_1rpc__command__executor_ad8d3d11f80f286d5de415863808c0bad}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!output\_histogram@{output\_histogram}}
+\index{output\_histogram@{output\_histogram}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{output\_histogram()}{output\_histogram()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::output\+\_\+histogram (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{amounts,  }\item[{uint64\+\_\+t}]{min\+\_\+count,  }\item[{uint64\+\_\+t}]{max\+\_\+count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ad9b3a73782e4631b9469fa9c1b1e7382}\label{classdaemonize_1_1rpc__command__executor_ad9b3a73782e4631b9469fa9c1b1e7382}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!pop\_blocks@{pop\_blocks}}
+\index{pop\_blocks@{pop\_blocks}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{pop\_blocks()}{pop\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::pop\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{num\+\_\+blocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ac708fe2ec1a2bdac8e62ab0269aa12fa}\label{classdaemonize_1_1rpc__command__executor_ac708fe2ec1a2bdac8e62ab0269aa12fa}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!prepare\_registration@{prepare\_registration}}
+\index{prepare\_registration@{prepare\_registration}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{prepare\_registration()}{prepare\_registration()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::prepare\+\_\+registration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{force\+\_\+registration = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ae56a16eeecca475f21ce3ef797e75a27}\label{classdaemonize_1_1rpc__command__executor_ae56a16eeecca475f21ce3ef797e75a27}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!prepare\_registration\_hf18@{prepare\_registration\_hf18}}
+\index{prepare\_registration\_hf18@{prepare\_registration\_hf18}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{prepare\_registration\_hf18()}{prepare\_registration\_hf18()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::prepare\+\_\+registration\+\_\+hf18 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{hf\+\_\+version,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{force\+\_\+registration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a9746faa63d3ad30b0385edf382b0f1ba}\label{classdaemonize_1_1rpc__command__executor_a9746faa63d3ad30b0385edf382b0f1ba}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_bans@{print\_bans}}
+\index{print\_bans@{print\_bans}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_bans()}{print\_bans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+bans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ae4831d8b9338ce696d1ce02ae89030ce}\label{classdaemonize_1_1rpc__command__executor_ae4831d8b9338ce696d1ce02ae89030ce}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_block\_by\_hash@{print\_block\_by\_hash}}
+\index{print\_block\_by\_hash@{print\_block\_by\_hash}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_block\_by\_hash()}{print\_block\_by\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+block\+\_\+by\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{block\+\_\+hash,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+hex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ac0ff2a6e8917265391bc6a2da5dde323}\label{classdaemonize_1_1rpc__command__executor_ac0ff2a6e8917265391bc6a2da5dde323}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_block\_by\_height@{print\_block\_by\_height}}
+\index{print\_block\_by\_height@{print\_block\_by\_height}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_block\_by\_height()}{print\_block\_by\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+block\+\_\+by\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+hex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ad462e9f187b9889b088f73e57eb48201}\label{classdaemonize_1_1rpc__command__executor_ad462e9f187b9889b088f73e57eb48201}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_blockchain\_dynamic\_stats@{print\_blockchain\_dynamic\_stats}}
+\index{print\_blockchain\_dynamic\_stats@{print\_blockchain\_dynamic\_stats}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_blockchain\_dynamic\_stats()}{print\_blockchain\_dynamic\_stats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+blockchain\+\_\+dynamic\+\_\+stats (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{nblocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a73f7853b2cc88e284a14ce9b4be308d7}\label{classdaemonize_1_1rpc__command__executor_a73f7853b2cc88e284a14ce9b4be308d7}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_blockchain\_info@{print\_blockchain\_info}}
+\index{print\_blockchain\_info@{print\_blockchain\_info}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_blockchain\_info()}{print\_blockchain\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+blockchain\+\_\+info (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{start\+\_\+block\+\_\+index,  }\item[{uint64\+\_\+t}]{end\+\_\+block\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a7d1791f955f8567bfb8230365b05e87c}\label{classdaemonize_1_1rpc__command__executor_a7d1791f955f8567bfb8230365b05e87c}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_checkpoints@{print\_checkpoints}}
+\index{print\_checkpoints@{print\_checkpoints}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_checkpoints()}{print\_checkpoints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+checkpoints (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{uint64\+\_\+t}]{end\+\_\+height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{print\+\_\+json }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a14f9314923a1baeae58b4b8acb9094cc}\label{classdaemonize_1_1rpc__command__executor_a14f9314923a1baeae58b4b8acb9094cc}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_coinbase\_tx\_sum@{print\_coinbase\_tx\_sum}}
+\index{print\_coinbase\_tx\_sum@{print\_coinbase\_tx\_sum}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_coinbase\_tx\_sum()}{print\_coinbase\_tx\_sum()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+coinbase\+\_\+tx\+\_\+sum (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a92c77556dce9cd70abb5ef39d2b89daf}\label{classdaemonize_1_1rpc__command__executor_a92c77556dce9cd70abb5ef39d2b89daf}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_connections@{print\_connections}}
+\index{print\_connections@{print\_connections}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_connections()}{print\_connections()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a0f3feb4c5d9814c7636563fac44f77c4}\label{classdaemonize_1_1rpc__command__executor_a0f3feb4c5d9814c7636563fac44f77c4}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_height@{print\_height}}
+\index{print\_height@{print\_height}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_height()}{print\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ab95c84739bc569e95b9912e0cc6b28ac}\label{classdaemonize_1_1rpc__command__executor_ab95c84739bc569e95b9912e0cc6b28ac}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_net\_stats@{print\_net\_stats}}
+\index{print\_net\_stats@{print\_net\_stats}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_net\_stats()}{print\_net\_stats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+net\+\_\+stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a8f0394b5c0ea7a37c40dd6dbe7db81bf}\label{classdaemonize_1_1rpc__command__executor_a8f0394b5c0ea7a37c40dd6dbe7db81bf}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_peer\_list@{print\_peer\_list}}
+\index{print\_peer\_list@{print\_peer\_list}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_peer\_list()}{print\_peer\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+peer\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{white = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{gray = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{size\+\_\+t}]{limit = {\ttfamily 0},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{pruned\+\_\+only = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a85562e651fe2b09d1e01958c9a940f19}\label{classdaemonize_1_1rpc__command__executor_a85562e651fe2b09d1e01958c9a940f19}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_peer\_list\_stats@{print\_peer\_list\_stats}}
+\index{print\_peer\_list\_stats@{print\_peer\_list\_stats}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_peer\_list\_stats()}{print\_peer\_list\_stats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+peer\+\_\+list\+\_\+stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_aecd25e6a3d3893279f9e6451d78d799f}\label{classdaemonize_1_1rpc__command__executor_aecd25e6a3d3893279f9e6451d78d799f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_quorum\_state@{print\_quorum\_state}}
+\index{print\_quorum\_state@{print\_quorum\_state}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_quorum\_state()}{print\_quorum\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+quorum\+\_\+state (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{uint64\+\_\+t}]{end\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a37f768e21b29271978bf4479a464fbf1}\label{classdaemonize_1_1rpc__command__executor_a37f768e21b29271978bf4479a464fbf1}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_sn@{print\_sn}}
+\index{print\_sn@{print\_sn}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_sn()}{print\_sn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+sn (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{self = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a16c577d2fa027f65947d8ad2fb11e3ce}\label{classdaemonize_1_1rpc__command__executor_a16c577d2fa027f65947d8ad2fb11e3ce}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_sn\_key@{print\_sn\_key}}
+\index{print\_sn\_key@{print\_sn\_key}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_sn\_key()}{print\_sn\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+sn\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ae00c719a2e6e4063656764f9932f016a}\label{classdaemonize_1_1rpc__command__executor_ae00c719a2e6e4063656764f9932f016a}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_sn\_state\_changes@{print\_sn\_state\_changes}}
+\index{print\_sn\_state\_changes@{print\_sn\_state\_changes}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_sn\_state\_changes()}{print\_sn\_state\_changes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+sn\+\_\+state\+\_\+changes (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{uint64\+\_\+t}]{end\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ac56eab491ea7d9ac66010defdf67463c}\label{classdaemonize_1_1rpc__command__executor_ac56eab491ea7d9ac66010defdf67463c}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_sn\_status@{print\_sn\_status}}
+\index{print\_sn\_status@{print\_sn\_status}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_sn\_status()}{print\_sn\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+sn\+\_\+status (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ae23f17eaebb47c9496ea32cf2871f9be}\label{classdaemonize_1_1rpc__command__executor_ae23f17eaebb47c9496ea32cf2871f9be}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_sr@{print\_sr}}
+\index{print\_sr@{print\_sr}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_sr()}{print\_sr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+sr (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a031048bbe556b3725382d85cef3e0bc8}\label{classdaemonize_1_1rpc__command__executor_a031048bbe556b3725382d85cef3e0bc8}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_transaction@{print\_transaction}}
+\index{print\_transaction@{print\_transaction}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_transaction()}{print\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{transaction\+\_\+hash,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+metadata,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+hex,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+json }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a0387950fb8c3890b21e5735293393a13}\label{classdaemonize_1_1rpc__command__executor_a0387950fb8c3890b21e5735293393a13}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_transaction\_pool@{print\_transaction\_pool}}
+\index{print\_transaction\_pool@{print\_transaction\_pool}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_transaction\_pool()}{print\_transaction\_pool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+transaction\+\_\+pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{long\+\_\+format }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a68ca470256d6a5c0db01f230b00530c5}\label{classdaemonize_1_1rpc__command__executor_a68ca470256d6a5c0db01f230b00530c5}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!print\_transaction\_pool\_stats@{print\_transaction\_pool\_stats}}
+\index{print\_transaction\_pool\_stats@{print\_transaction\_pool\_stats}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{print\_transaction\_pool\_stats()}{print\_transaction\_pool\_stats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::print\+\_\+transaction\+\_\+pool\+\_\+stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a36237c2bcafcd17b7f383673b2d989d2}\label{classdaemonize_1_1rpc__command__executor_a36237c2bcafcd17b7f383673b2d989d2}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!prune\_blockchain@{prune\_blockchain}}
+\index{prune\_blockchain@{prune\_blockchain}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{prune\_blockchain()}{prune\_blockchain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::prune\+\_\+blockchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ac1495ad85f837f6a6e925580d569ee96}\label{classdaemonize_1_1rpc__command__executor_ac1495ad85f837f6a6e925580d569ee96}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!relay\_tx@{relay\_tx}}
+\index{relay\_tx@{relay\_tx}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{relay\_tx()}{relay\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::relay\+\_\+tx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a1adc1d0e88b0ed72dbc615e37c612860}\label{classdaemonize_1_1rpc__command__executor_a1adc1d0e88b0ed72dbc615e37c612860}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!save\_blockchain@{save\_blockchain}}
+\index{save\_blockchain@{save\_blockchain}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{save\_blockchain()}{save\_blockchain()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::save\+\_\+blockchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ada7cccd177cfedbf3fce29a7dfa546a6}\label{classdaemonize_1_1rpc__command__executor_ada7cccd177cfedbf3fce29a7dfa546a6}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!set\_limit@{set\_limit}}
+\index{set\_limit@{set\_limit}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{set\_limit()}{set\_limit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::set\+\_\+limit (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{limit\+\_\+down,  }\item[{int64\+\_\+t}]{limit\+\_\+up }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_abc4fe146666de53c87fdfefbcf3894bb}\label{classdaemonize_1_1rpc__command__executor_abc4fe146666de53c87fdfefbcf3894bb}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!set\_log\_categories@{set\_log\_categories}}
+\index{set\_log\_categories@{set\_log\_categories}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{set\_log\_categories()}{set\_log\_categories()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::set\+\_\+log\+\_\+categories (\begin{DoxyParamCaption}\item[{std\+::string}]{categories }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a13950cb5bc01a9b27e903019234ea28f}\label{classdaemonize_1_1rpc__command__executor_a13950cb5bc01a9b27e903019234ea28f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!set\_log\_level@{set\_log\_level}}
+\index{set\_log\_level@{set\_log\_level}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{set\_log\_level()}{set\_log\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::set\+\_\+log\+\_\+level (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a1960032343713a0e406acb4f3fed2801}\label{classdaemonize_1_1rpc__command__executor_a1960032343713a0e406acb4f3fed2801}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!show\_difficulty@{show\_difficulty}}
+\index{show\_difficulty@{show\_difficulty}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{show\_difficulty()}{show\_difficulty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::show\+\_\+difficulty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_af043a464486e57216578b48022baab73}\label{classdaemonize_1_1rpc__command__executor_af043a464486e57216578b48022baab73}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!show\_status@{show\_status}}
+\index{show\_status@{show\_status}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{show\_status()}{show\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::show\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a3ef6363c0dfa9f7edb6eaa7a3e7796e2}\label{classdaemonize_1_1rpc__command__executor_a3ef6363c0dfa9f7edb6eaa7a3e7796e2}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!start\_mining@{start\_mining}}
+\index{start\_mining@{start\_mining}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{start\_mining()}{start\_mining()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::start\+\_\+mining (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&}]{address,  }\item[{int}]{num\+\_\+threads,  }\item[{int}]{num\+\_\+blocks,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a9130f4b2e6029cbc003900c264e255a3}\label{classdaemonize_1_1rpc__command__executor_a9130f4b2e6029cbc003900c264e255a3}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!stop\_daemon@{stop\_daemon}}
+\index{stop\_daemon@{stop\_daemon}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{stop\_daemon()}{stop\_daemon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::stop\+\_\+daemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a089dd9d3d3ab9d77667e4f17fad46309}\label{classdaemonize_1_1rpc__command__executor_a089dd9d3d3ab9d77667e4f17fad46309}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!stop\_mining@{stop\_mining}}
+\index{stop\_mining@{stop\_mining}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{stop\_mining()}{stop\_mining()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::stop\+\_\+mining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_af3011c23b87009686eb4fa032c50d46b}\label{classdaemonize_1_1rpc__command__executor_af3011c23b87009686eb4fa032c50d46b}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!sync\_info@{sync\_info}}
+\index{sync\_info@{sync\_info}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{sync\_info()}{sync\_info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::sync\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_ae1b35b480881e5572ad23e49d4f0bb3f}\label{classdaemonize_1_1rpc__command__executor_ae1b35b480881e5572ad23e49d4f0bb3f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!test\_trigger\_uptime\_proof@{test\_trigger\_uptime\_proof}}
+\index{test\_trigger\_uptime\_proof@{test\_trigger\_uptime\_proof}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{test\_trigger\_uptime\_proof()}{test\_trigger\_uptime\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::test\+\_\+trigger\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_aa2c160a1033e54a54b0bd1e4e03aa1f2}\label{classdaemonize_1_1rpc__command__executor_aa2c160a1033e54a54b0bd1e4e03aa1f2}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!unban@{unban}}
+\index{unban@{unban}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{unban()}{unban()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::unban (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_aa7572214d70ef407391d5066bfac7c2f}\label{classdaemonize_1_1rpc__command__executor_aa7572214d70ef407391d5066bfac7c2f}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!version@{version}}
+\index{version@{version}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::rpc\+\_\+command\+\_\+executor\+::version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_af69997349ac4e90c753ce6282d7ae9a7}\label{classdaemonize_1_1rpc__command__executor_af69997349ac4e90c753ce6282d7ae9a7}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!m\_omq@{m\_omq}}
+\index{m\_omq@{m\_omq}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{m\_omq}{m\_omq}}
+{\footnotesize\ttfamily oxenmq\+::\+Oxen\+MQ$\ast$ daemonize\+::rpc\+\_\+command\+\_\+executor\+::m\+\_\+omq = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdaemonize_1_1rpc__command__executor_a94e1b1f140f0988c195c8ccd4446b812}\label{classdaemonize_1_1rpc__command__executor_a94e1b1f140f0988c195c8ccd4446b812}} 
+\index{daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}!m\_rpc@{m\_rpc}}
+\index{m\_rpc@{m\_rpc}!daemonize::rpc\_command\_executor@{daemonize::rpc\_command\_executor}}
+\doxysubsubsection{\texorpdfstring{m\_rpc}{m\_rpc}}
+{\footnotesize\ttfamily std\+::variant$<$\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}}, oxenmq\+::\+Connection\+ID$>$ daemonize\+::rpc\+\_\+command\+\_\+executor\+::m\+\_\+rpc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/daemon/\mbox{\hyperlink{rpc__command__executor_8h}{rpc\+\_\+command\+\_\+executor.\+h}}\item 
+src/daemon/\mbox{\hyperlink{rpc__command__executor_8cpp}{rpc\+\_\+command\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}

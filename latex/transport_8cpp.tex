@@ -1,0 +1,145 @@
+\hypertarget{transport_8cpp}{}\doxysection{src/device\+\_\+trezor/trezor/transport.cpp File Reference}
+\label{transport_8cpp}\index{src/device\_trezor/trezor/transport.cpp@{src/device\_trezor/trezor/transport.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$boost/asio/io\+\_\+service.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/udp.\+hpp$>$}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/apply\+\_\+permutation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transport.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}messages/messages-\/common.\+pb.\+h\char`\"{}}\newline
+Include dependency graph for transport.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transport_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhw_1_1trezor_1_1trezor__usb__desc__t}{hw\+::trezor\+::trezor\+\_\+usb\+\_\+desc\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classhw_1_1trezor_1_1anonymous__namespace_02transport_8cpp_03_1_1WipingBody}{hw\+::trezor\+::anonymous\+\_\+namespace\{transport.\+cpp\}\+::\+Wiping\+Body}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehw}{hw}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor}{hw\+::trezor}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor_1_1anonymous__namespace_02transport_8cpp_03}{hw\+::trezor\+::anonymous\+\_\+namespace\{transport.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{transport_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}{O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}~\char`\"{}device.\+trezor.\+transport\char`\"{}
+\item 
+\#define \mbox{\hyperlink{transport_8cpp_ac7ac2745a94100d5c51c257e378c3e83}{P\+R\+O\+T\+O\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~6
+\item 
+\#define \mbox{\hyperlink{transport_8cpp_a3c0da96d79fa19343b73ddeef7001e36}{R\+E\+P\+L\+EN}}~64
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} = rapidjson\+::\+Document
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a5222a13a33ae33fc95dd3a2bc57d4d7f}{hw\+::trezor\+::t\+\_\+serialize}} (const std\+::string \&in, std\+::string \&out)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a0b13c81bc6d2854625a5099ea31ffefb}{hw\+::trezor\+::t\+\_\+serialize}} (const epee\+::wipeable\+\_\+string \&in, std\+::string \&out)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_af354dcf2670ac19d42ad49fb914cf4e8}{hw\+::trezor\+::t\+\_\+serialize}} (const json\+\_\+val \&in, std\+::string \&out)
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_a102011a46f6410eb519b02b117193147}{hw\+::trezor\+::t\+\_\+serialize}} (const json\+\_\+val \&in)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a5384f20fe3457c0006db5cf2c475dd82}{hw\+::trezor\+::t\+\_\+deserialize}} (const std\+::string \&in, std\+::string \&out)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a789f76d07a14cbd590ba34708620729b}{hw\+::trezor\+::t\+\_\+deserialize}} (std\+::string \&in, epee\+::wipeable\+\_\+string \&out)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a19f9298768edbef7f06bc488dc0ee647}{hw\+::trezor\+::t\+\_\+deserialize}} (const std\+::string \&in, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&out)
+\item 
+static std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_a80e83055d34619b5588f09ac6bd1a5c4}{hw\+::trezor\+::json\+\_\+get\+\_\+string}} (const rapidjson\+::\+Value \&in)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_aa9f30586807acc1f357e9fb4b1fb2167}{hw\+::trezor\+::pack\+\_\+version}} (uint32\+\_\+t major, uint32\+\_\+t minor, uint32\+\_\+t patch)
+\item 
+static ssize\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_ae0f1c351d68c8d079a87f22286e28559}{hw\+::trezor\+::get\+\_\+device\+\_\+idx}} (uint16\+\_\+t id\+\_\+vendor, uint16\+\_\+t id\+\_\+product)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_a5f355da4c300eafe60c058d249156011}{hw\+::trezor\+::is\+\_\+device\+\_\+supported}} (ssize\+\_\+t device\+\_\+idx)
+\item 
+static size\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_a8c81fb3cb7811737424f3fab2f14a660}{hw\+::trezor\+::message\+\_\+size}} (const google\+::protobuf\+::\+Message \&req)
+\item 
+static size\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_a0b171c0f94a5cb9d90bacb433c9d3e24}{hw\+::trezor\+::serialize\+\_\+message\+\_\+buffer\+\_\+size}} (size\+\_\+t msg\+\_\+size)
+\item 
+static void \mbox{\hyperlink{namespacehw_1_1trezor_aa14f200ac1a5b5d341fdd59087d2aef7}{hw\+::trezor\+::serialize\+\_\+message\+\_\+header}} (void $\ast$buff, uint16\+\_\+t tag, uint32\+\_\+t len)
+\item 
+static void \mbox{\hyperlink{namespacehw_1_1trezor_ace8056ee78bc28057f17b77c0602138f}{hw\+::trezor\+::deserialize\+\_\+message\+\_\+header}} (const void $\ast$buff, uint16\+\_\+t \&tag, uint32\+\_\+t \&len)
+\item 
+static void \mbox{\hyperlink{namespacehw_1_1trezor_a4cc1730dabbfce001d787757b3cde9c9}{hw\+::trezor\+::serialize\+\_\+message}} (const google\+::protobuf\+::\+Message \&req, size\+\_\+t msg\+\_\+size, uint8\+\_\+t $\ast$buff, size\+\_\+t buff\+\_\+size)
+\item 
+static void \mbox{\hyperlink{namespacehw_1_1trezor_a977c04bb7aaf3482cc03f6047468a1bd}{hw\+::trezor\+::assert\+\_\+port\+\_\+number}} (uint32\+\_\+t port)
+\item 
+static void \mbox{\hyperlink{namespacehw_1_1trezor_a017a4b99cecb6e3fd17fa9770429075d}{hw\+::trezor\+::parse\+\_\+udp\+\_\+path}} (std\+::string \&host, int \&port, std\+::string path)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_af06e03df898f9799e9e44d4da0028960}{hw\+::trezor\+::enumerate}} (t\+\_\+transport\+\_\+vect \&res)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_a023ad5776f094cbb4905a69399cf1ac5}{hw\+::trezor\+::sort\+\_\+transports\+\_\+by\+\_\+env}} (t\+\_\+transport\+\_\+vect \&res)
+\item 
+std\+::shared\+\_\+ptr$<$ Transport $>$ \mbox{\hyperlink{namespacehw_1_1trezor_a85284890fe5881e97f3aacb4b9a4a42c}{hw\+::trezor\+::transport}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_a3a59e56e1c5945d42410f46f7227ba04}{hw\+::trezor\+::throw\+\_\+failure\+\_\+exception}} (const messages\+::common\+::\+Failure $\ast$failure)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacehw_1_1trezor_a0d2d7228bc19100306a6dd923501fa70}{hw\+::trezor\+::operator$<$$<$}} (std\+::ostream \&o, \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{hw\+::trezor\+::\+Transport}} const \&t)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespacehw_1_1trezor_a968e7e607fc2846b84c10eadc484e10d}{hw\+::trezor\+::operator$<$$<$}} (std\+::ostream \&o, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{hw\+::trezor\+::\+Transport}} $>$ const \&t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static trezor\+\_\+usb\+\_\+desc\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_a4336f8b5ee58c5fc967870dbeafbddc5}{hw\+::trezor\+::\+T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+C\+\_\+\+T1}} = \{1, 0x534C, 0x0001\}
+\item 
+static trezor\+\_\+usb\+\_\+desc\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_ab8e9d217538f83f6fa6af87382a7cdfc}{hw\+::trezor\+::\+T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+C\+\_\+\+T2}} = \{2, 0x1209, 0x53\+C1\}
+\item 
+static trezor\+\_\+usb\+\_\+desc\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_a8e6f1a24336af7a49e43324b58c3acd3}{hw\+::trezor\+::\+T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+C\+\_\+\+T2\+\_\+\+BL}} = \{3, 0x1209, 0x53\+C0\}
+\item 
+static trezor\+\_\+usb\+\_\+desc\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_a81a600ad958a8569199283ae2fb4b241}{hw\+::trezor\+::\+T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+CS}} \mbox{[}$\,$\mbox{]}
+\item 
+static size\+\_\+t \mbox{\hyperlink{namespacehw_1_1trezor_abea90e75d334af28272606fd2ae111cd}{hw\+::trezor\+::\+T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+C\+S\+\_\+\+L\+EN}} = sizeof(T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+CS)/sizeof(T\+R\+E\+Z\+O\+R\+\_\+\+D\+E\+S\+CS\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{transport_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}\label{transport_8cpp_a64b4149f4edb8c9655ee3c07c6415a83}} 
+\index{transport.cpp@{transport.cpp}!OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+\index{OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}!transport.cpp@{transport.cpp}}
+\doxysubsubsection{\texorpdfstring{OXEN\_DEFAULT\_LOG\_CATEGORY}{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY~\char`\"{}device.\+trezor.\+transport\char`\"{}}
+
+\mbox{\Hypertarget{transport_8cpp_ac7ac2745a94100d5c51c257e378c3e83}\label{transport_8cpp_ac7ac2745a94100d5c51c257e378c3e83}} 
+\index{transport.cpp@{transport.cpp}!PROTO\_HEADER\_SIZE@{PROTO\_HEADER\_SIZE}}
+\index{PROTO\_HEADER\_SIZE@{PROTO\_HEADER\_SIZE}!transport.cpp@{transport.cpp}}
+\doxysubsubsection{\texorpdfstring{PROTO\_HEADER\_SIZE}{PROTO\_HEADER\_SIZE}}
+{\footnotesize\ttfamily \#define P\+R\+O\+T\+O\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE~6}
+
+\mbox{\Hypertarget{transport_8cpp_a3c0da96d79fa19343b73ddeef7001e36}\label{transport_8cpp_a3c0da96d79fa19343b73ddeef7001e36}} 
+\index{transport.cpp@{transport.cpp}!REPLEN@{REPLEN}}
+\index{REPLEN@{REPLEN}!transport.cpp@{transport.cpp}}
+\doxysubsubsection{\texorpdfstring{REPLEN}{REPLEN}}
+{\footnotesize\ttfamily \#define R\+E\+P\+L\+EN~64}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}\label{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}} 
+\index{transport.cpp@{transport.cpp}!json@{json}}
+\index{json@{json}!transport.cpp@{transport.cpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} =  rapidjson\+::\+Document}
+

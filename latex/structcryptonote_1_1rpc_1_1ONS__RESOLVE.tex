@@ -1,0 +1,87 @@
+\hypertarget{structcryptonote_1_1rpc_1_1ONS__RESOLVE}{}\doxysection{cryptonote\+::rpc\+::O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+VE Struct Reference}
+\label{structcryptonote_1_1rpc_1_1ONS__RESOLVE}\index{cryptonote::rpc::ONS\_RESOLVE@{cryptonote::rpc::ONS\_RESOLVE}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+VE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1ONS__RESOLVE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+VE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1ONS__RESOLVE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a10dd837cb37f26cda8cbcf83f71e8287}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE_1_1request__parameters}{cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a2b53b4c2491759db03e78ba570ad87c7}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Performs a simple O\+NS lookup of a B\+L\+A\+K\+E2b-\/hashed name. This R\+PC method is meant for simple, single-\/value resolutions that do not care about registration details, etc.; if you need more information use \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__NAMES__TO__OWNERS}{O\+N\+S\+\_\+\+N\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+O\+W\+N\+E\+RS}} instead.
+
+Returned values\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily encrypted\+\_\+value} The encrypted O\+NS value, in hex. Will be omitted from the response if the given name\+\_\+hash is not registered.
+\item {\ttfamily nonce} The nonce value used for encryption, in hex. Will be omitted if the given name is not registered.
+\end{DoxyItemize}
+
+Technical details\+: the returned value is encrypted using the name itself so that neither this oxend responding to the R\+PC request nor any other blockchain observers can (easily) obtain the name of registered addresses or the registration details. Thus, from a client\textquotesingle{}s point of view, resolving an O\+NS record involves\+:
+
+
+\begin{DoxyEnumerate}
+\item Lower-\/case the name.
+\item Calculate the name hash as a null-\/key, 32-\/byte B\+L\+A\+K\+E2b hash of the lower-\/case name.
+\item Obtain the encrypted value and the nonce from this R\+PC call (or \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__NAMES__TO__OWNERS}{O\+N\+S\+\_\+\+N\+A\+M\+E\+S\+\_\+\+T\+O\+\_\+\+O\+W\+N\+E\+RS}}); when using json encode the name hash using either hex or base64.
+\item Calculate the decryption key as a 32-\/byte B\+L\+A\+K\+E2b {\itshape keyed} hash of the name using the (unkeyed) name hash calculated above (in step 2) as the hash key.
+\item Decrypt (and verify) using X\+Cha\+Cha20-\/\+Poly1305 (for example libsodium\textquotesingle{}s crypto\+\_\+aead\+\_\+xchacha20poly1305\+\_\+ietf\+\_\+decrypt) using the above decryption key and using the first 24 bytes of the name hash as the public nonce. 
+\end{DoxyEnumerate}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a10dd837cb37f26cda8cbcf83f71e8287}\label{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a10dd837cb37f26cda8cbcf83f71e8287}} 
+\index{cryptonote::rpc::ONS\_RESOLVE@{cryptonote::rpc::ONS\_RESOLVE}!names@{names}}
+\index{names@{names}!cryptonote::rpc::ONS\_RESOLVE@{cryptonote::rpc::ONS\_RESOLVE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a2b53b4c2491759db03e78ba570ad87c7}\label{structcryptonote_1_1rpc_1_1ONS__RESOLVE_a2b53b4c2491759db03e78ba570ad87c7}} 
+\index{cryptonote::rpc::ONS\_RESOLVE@{cryptonote::rpc::ONS\_RESOLVE}!request@{request}}
+\index{request@{request}!cryptonote::rpc::ONS\_RESOLVE@{cryptonote::rpc::ONS\_RESOLVE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE_1_1request__parameters}{cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+V\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

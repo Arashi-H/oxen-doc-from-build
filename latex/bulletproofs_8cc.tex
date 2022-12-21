@@ -1,0 +1,154 @@
+\hypertarget{bulletproofs_8cc}{}\doxysection{src/ringct/bulletproofs.cc File Reference}
+\label{bulletproofs_8cc}\index{src/ringct/bulletproofs.cc@{src/ringct/bulletproofs.cc}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$logging/oxen\+\_\+logger.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rct\+Ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multiexp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bulletproofs.\+h\char`\"{}}\newline
+Include dependency graph for bulletproofs.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bulletproofs_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrct_1_1proof__data__t}{rct\+::proof\+\_\+data\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bulletproofs_8cc_af2e4ca012b8ffad0e6594cddd6aa6dd7}{S\+T\+R\+A\+U\+S\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+I\+M\+IT}}~232
+\item 
+\#define \mbox{\hyperlink{bulletproofs_8cc_a0cdb33734f7520289984693490614a35}{P\+I\+P\+P\+E\+N\+G\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+I\+M\+IT}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_aca167aee5a55b7082d03747cf586f00e}{rct\+::vector\+\_\+exponent}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a76d0449dbfeb24ff2db453ceab0b2d59}{rct\+::vector\+\_\+powers}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x, size\+\_\+t n)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a1c9cec429daad83b459e377957671554}{rct\+::vector\+\_\+dup}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x, size\+\_\+t n)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_ac0c823fc6b0ef97920c86746871575c9}{rct\+::inner\+\_\+product}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&b)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_aa4b8c3aabdf7b5948993cbfd7c66795d}{rct\+::multiexp}} (const std\+::vector$<$ Multiexp\+Data $>$ \&data, size\+\_\+t Hi\+Gi\+\_\+size)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_af00805b9af8959abb6a4b055f495ed76}{rct\+::is\+\_\+reduced}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&scalar)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a46696c8d28478f81d0fe18b1bd26cfc7}{rct\+::get\+\_\+exponent}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, size\+\_\+t idx)
+\item 
+static void \mbox{\hyperlink{namespacerct_ae90f51a655f428b3f4efa2c80d401ed8}{rct\+::init\+\_\+exponents}} ()
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_abb47906b2fa10d28da10616e23514042}{rct\+::cross\+\_\+vector\+\_\+exponent8}} (size\+\_\+t size, const std\+::vector$<$ \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $>$ \&A, size\+\_\+t Ao, const std\+::vector$<$ \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $>$ \&B, size\+\_\+t Bo, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, size\+\_\+t ao, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&b, size\+\_\+t bo, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} $\ast$scale, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$extra\+\_\+point, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $\ast$extra\+\_\+scalar)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a04a749a2be52c7f554bb195fae9768cd}{rct\+::vector\+\_\+power\+\_\+sum}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} x, size\+\_\+t n)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a63524af069e565c89bdcf14438078c90}{rct\+::inner\+\_\+product}} (const epee\+::span$<$ const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&a, const epee\+::span$<$ const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a7ec2533fa7e644b877f1132e9d62ee67}{rct\+::hadamard}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&b)
+\item 
+static void \mbox{\hyperlink{namespacerct_ac608d8e17c8206c1ad49b65a2edba1b0}{rct\+::hadamard\+\_\+fold}} (std\+::vector$<$ \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $>$ \&v, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} $\ast$scale, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a6175c3ad6a6de3464afa7745f3070b94}{rct\+::vector\+\_\+add}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a2c47e921f8fae8ab915df0165480c0a6}{rct\+::vector\+\_\+add}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a598d3ea077693020d3c5508a2494c692}{rct\+::vector\+\_\+subtract}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&b)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a29598af3a922d4ebf64723f2dfe97249}{rct\+::vector\+\_\+scalar}} (const epee\+::span$<$ const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a285b3204a70d1569421282ae81f512cd}{rct\+::vector\+\_\+scalar}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a18d6f08ba5bb4b339c406bd2b313c421}{rct\+::sm}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} y, int n, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a75f760821916d45e37e69142f297a059}{rct\+::invert}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x)
+\item 
+static \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_ac3b9f3d4cb1bb34937c8e36532582948}{rct\+::invert}} (\mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} x)
+\item 
+static epee\+::span$<$ const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \mbox{\hyperlink{namespacerct_ac84fda0f0b347a33352344c9356aec15}{rct\+::slice}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&a, size\+\_\+t start, size\+\_\+t stop)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a3e6c8374faea28e6205bf85ae444d55c}{rct\+::hash\+\_\+cache\+\_\+mash}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&hash\+\_\+cache, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash1)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a0008987f9844214f560f69751c6cd926}{rct\+::hash\+\_\+cache\+\_\+mash}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&hash\+\_\+cache, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash1, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash2)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a7101ad198e4cdd5d49e753e5ee4dd926}{rct\+::hash\+\_\+cache\+\_\+mash}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&hash\+\_\+cache, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash1, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash2, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mash3)
+\item 
+Bulletproof \mbox{\hyperlink{namespacerct_a4db5e8d0975a13d67e6e9e312c2c9a75}{rct\+::bulletproof\+\_\+\+P\+R\+O\+VE}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&sv, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&gamma)
+\item 
+Bulletproof \mbox{\hyperlink{namespacerct_ae7d5c8e5842a40d9579dcb6c91a0be20}{rct\+::bulletproof\+\_\+\+P\+R\+O\+VE}} (uint64\+\_\+t v, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&gamma)
+\item 
+Bulletproof \mbox{\hyperlink{namespacerct_ac9aa5c6a1a23f3eb77593e3e3bc7677c}{rct\+::bulletproof\+\_\+\+P\+R\+O\+VE}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&sv, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&gamma)
+\item 
+Bulletproof \mbox{\hyperlink{namespacerct_a2a45befada84bda72fcb353348f42e28}{rct\+::bulletproof\+\_\+\+P\+R\+O\+VE}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&v, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&gamma)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a4d7368b2cbbfa55d0237de95e21a2bd2}{rct\+::bulletproof\+\_\+\+V\+E\+R\+I\+FY}} (const std\+::vector$<$ const Bulletproof $\ast$ $>$ \&proofs)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a2277d494dad353cf8e09a46d76155de8}{rct\+::bulletproof\+\_\+\+V\+E\+R\+I\+FY}} (const std\+::vector$<$ Bulletproof $>$ \&proofs)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a1415b1408849cd4bb740356453b0fc05}{rct\+::bulletproof\+\_\+\+V\+E\+R\+I\+FY}} (const Bulletproof \&proof)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacerct_a8af5c1f35bfc03a7b40bc431932ec422}{rct\+::logcat}} = log\+::\+Cat(\char`\"{}bulletproofs\char`\"{})
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{namespacerct_ae9e1411d90f321d8af50c1e5767daa33}{rct\+::maxN}} = 64
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{namespacerct_ae28f0c8d77008e879cf516b18e61e4e2}{rct\+::maxM}} = \mbox{\hyperlink{namespacecryptonote_afd6a449b3b617791e7cb3e8800eb910d}{cryptonote\+::\+T\+X\+\_\+\+B\+U\+L\+L\+E\+T\+P\+R\+O\+O\+F\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+P\+U\+TS}}
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a7c20a6a9e243f700921dee9ba961cde1}{rct\+::\+Hi}} \mbox{[}maxN $\ast$maxM\mbox{]}
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a8f1abf84a1c31af781de718529978eae}{rct\+::\+Gi}} \mbox{[}maxN $\ast$maxM\mbox{]}
+\item 
+static \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \mbox{\hyperlink{namespacerct_a280322a11d22a5cfe4507c08b9cb7609}{rct\+::\+Hi\+\_\+p3}} \mbox{[}maxN $\ast$maxM\mbox{]}
+\item 
+static \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \mbox{\hyperlink{namespacerct_acae65ad9707b2824d1fe80b0f773e0b4}{rct\+::\+Gi\+\_\+p3}} \mbox{[}maxN $\ast$maxM\mbox{]}
+\item 
+static std\+::shared\+\_\+ptr$<$ straus\+\_\+cached\+\_\+data $>$ \mbox{\hyperlink{namespacerct_af8204e1f56236d4e2d64b63c13f6db22}{rct\+::straus\+\_\+\+Hi\+Gi\+\_\+cache}}
+\item 
+static std\+::shared\+\_\+ptr$<$ pippenger\+\_\+cached\+\_\+data $>$ \mbox{\hyperlink{namespacerct_a045aae4c82c68a6f136ceb288e900239}{rct\+::pippenger\+\_\+\+Hi\+Gi\+\_\+cache}}
+\item 
+static const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a47016b7c44b58b184c278528d86bce9f}{rct\+::\+T\+WO}} = \{ \{0x02, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 , 0x00, 0x00, 0x00,0x00 \} \}
+\item 
+static const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a3aad34a23ae9d62bca6a4a590ce7c209}{rct\+::\+M\+I\+N\+U\+S\+\_\+\+O\+NE}} = \{ \{ 0xec, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10 \} \}
+\item 
+static const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a513c5d8472d4d7a0ac44299293549761}{rct\+::\+M\+I\+N\+U\+S\+\_\+\+I\+N\+V\+\_\+\+E\+I\+G\+HT}} = \{ \{ 0x74, 0xa4, 0x19, 0x7a, 0xf0, 0x7d, 0x0b, 0xf7, 0x05, 0xc2, 0xda, 0x25, 0x2b, 0x5c, 0x0b, 0x0d, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0a \} \}
+\item 
+static const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a0ee6a17710b49c658b62e72febb3023d}{rct\+::oneN}} = vector\+\_\+dup(\mbox{\hyperlink{namespacerct_af81c33462a9089dc0260bd91df09fa17}{rct\+::identity}}(), maxN)
+\item 
+static const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \mbox{\hyperlink{namespacerct_a7f0376316297267103a6a058b8ccb3b6}{rct\+::twoN}} = vector\+\_\+powers(T\+WO, maxN)
+\item 
+static const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a01d2817feac9cf170bed201e4aa0021e}{rct\+::ip12}} = inner\+\_\+product(oneN, twoN)
+\item 
+static std\+::mutex \mbox{\hyperlink{namespacerct_add908f76207f536c77a7eb0a0fdb1385}{rct\+::init\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bulletproofs_8cc_a0cdb33734f7520289984693490614a35}\label{bulletproofs_8cc_a0cdb33734f7520289984693490614a35}} 
+\index{bulletproofs.cc@{bulletproofs.cc}!PIPPENGER\_SIZE\_LIMIT@{PIPPENGER\_SIZE\_LIMIT}}
+\index{PIPPENGER\_SIZE\_LIMIT@{PIPPENGER\_SIZE\_LIMIT}!bulletproofs.cc@{bulletproofs.cc}}
+\doxysubsubsection{\texorpdfstring{PIPPENGER\_SIZE\_LIMIT}{PIPPENGER\_SIZE\_LIMIT}}
+{\footnotesize\ttfamily \#define P\+I\+P\+P\+E\+N\+G\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+I\+M\+IT~0}
+
+\mbox{\Hypertarget{bulletproofs_8cc_af2e4ca012b8ffad0e6594cddd6aa6dd7}\label{bulletproofs_8cc_af2e4ca012b8ffad0e6594cddd6aa6dd7}} 
+\index{bulletproofs.cc@{bulletproofs.cc}!STRAUS\_SIZE\_LIMIT@{STRAUS\_SIZE\_LIMIT}}
+\index{STRAUS\_SIZE\_LIMIT@{STRAUS\_SIZE\_LIMIT}!bulletproofs.cc@{bulletproofs.cc}}
+\doxysubsubsection{\texorpdfstring{STRAUS\_SIZE\_LIMIT}{STRAUS\_SIZE\_LIMIT}}
+{\footnotesize\ttfamily \#define S\+T\+R\+A\+U\+S\+\_\+\+S\+I\+Z\+E\+\_\+\+L\+I\+M\+IT~232}
+

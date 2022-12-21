@@ -1,0 +1,77 @@
+\hypertarget{string__util_8h}{}\doxysection{src/common/string\+\_\+util.h File Reference}
+\label{string__util_8h}\index{src/common/string\_util.h@{src/common/string\_util.h}}
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$charconv$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for string\+\_\+util.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{string__util_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{string__util_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_af1f2f62c00b471f74a894d47a7f3d9ff}{tools\+::string\+\_\+iequal}} (std\+::string\+\_\+view s1, std\+::string\+\_\+view s2)
+\begin{DoxyCompactList}\small\item\em Returns true if the first string is equal to the second string, compared case-\/insensitively. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename S1 , typename... S$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a5f8dd78f8be71cd1b8d86ec672d204ee}{tools\+::string\+\_\+iequal\+\_\+any}} (const S1 \&s1, const S \&... \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a4a63c9c92ea8b661038e2beba28da7ce}{tools\+::starts\+\_\+with}} (std\+::string\+\_\+view str, std\+::string\+\_\+view prefix)
+\begin{DoxyCompactList}\small\item\em Returns true if the first argument begins with the second argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_afd35cf1169810cf410e2101b79f30c60}{tools\+::ends\+\_\+with}} (std\+::string\+\_\+view str, std\+::string\+\_\+view suffix)
+\begin{DoxyCompactList}\small\item\em Returns true if the first argument ends with the second argument. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string\+\_\+view $>$ \mbox{\hyperlink{namespacetools_a5312b6f6d66d18bc4ec3657ee55bfce0}{tools\+::split}} (std\+::string\+\_\+view str, const std\+::string\+\_\+view delim, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} trim)
+\item 
+std\+::vector$<$ std\+::string\+\_\+view $>$ \mbox{\hyperlink{namespacetools_a0749436a0fc296461afc3e5f89f4a3d4}{tools\+::split\+\_\+any}} (std\+::string\+\_\+view str, const std\+::string\+\_\+view delims, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} trim)
+\item 
+{\footnotesize template$<$typename It $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a81f02b1721a099c6e9a971984de64a84}{tools\+::join}} (std\+::string\+\_\+view delimiter, It begin, It end)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a8d3fa66a5061fd38b9d1be4be62eb2c0}{tools\+::join}} (std\+::string\+\_\+view delimiter, const Container \&c)
+\begin{DoxyCompactList}\small\item\em Same as the above, but works on a container. Just use fmt\+::join. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename It , typename Unary\+Operation $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a461ffd5c4f46749e9923df5e4ac15bf6}{tools\+::join\+\_\+transform}} (std\+::string\+\_\+view delimiter, It begin, It end, Unary\+Operation transform)
+\begin{DoxyCompactList}\small\item\em Similar to \mbox{\hyperlink{namespacetools_a81f02b1721a099c6e9a971984de64a84}{join()}}, but first applies a transformation to each element. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename Unary\+Operation $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_ad9d1e43fb5f9ef6b3e7b5c6cd0640d96}{tools\+::join\+\_\+transform}} (std\+::string\+\_\+view delimiter, const Container \&c, Unary\+Operation \&\&transform)
+\begin{DoxyCompactList}\small\item\em Wrapper around the above that takes a container and passes c.\+begin(), c.\+end(). \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename... Ts$>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a159bf197f2042882cf779ffa49d48b95}{tools\+::join\+\_\+stuff}} (std\+::string\+\_\+view delim, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&first, Ts \&\&... stuff)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a215d1bc0a82899206286cade32b30634}{tools\+::concat}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... stuff)
+\begin{DoxyCompactList}\small\item\em Concatenates arguments via fmt\+::format operator, returns as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetools_ad1aa5693ec8eecf6684f8197b120ceb7}{tools\+::trim}} (std\+::string\+\_\+view \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_aa9be8ac66b7672609020a88cb362af50}{tools\+::parse\+\_\+int}} (const std\+::string\+\_\+view str, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&value, int \mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}=10)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_ad74e527bc1323e16b07a4e7a552d4986}{tools\+::view\+\_\+guts}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a6ae639a19a139ace6eb240b6b5868a81}{tools\+::copy\+\_\+guts}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Convenience wrapper around the above that also copies the result into a new string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_a29a4a1446a6135e5995c806ebdb8b3f2}{tools\+::make\+\_\+from\+\_\+guts}} (std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Function to reverse the above view\+\_\+guts. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacetools_a67311e75ccdf5b73e91a4e43b1adf6ab}{tools\+::lowercase\+\_\+ascii\+\_\+string}} (std\+::string\+\_\+view src)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_a40f04a49c774b96ce20a2a20edb3b05e}{tools\+::friendly\+\_\+duration}} (std\+::chrono\+::nanoseconds dur)
+\begin{DoxyCompactList}\small\item\em Converts a duration into a human friendlier string, such as \char`\"{}3d7d47m12s\char`\"{} or \char`\"{}347µs\char`\"{}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacetools_a23ea015660313c0661c8da4cc922ef4c}{tools\+::short\+\_\+duration}} (std\+::chrono\+::duration$<$ double $>$ dur)
+\begin{DoxyCompactList}\small\item\em Converts a duration into a shorter, single-\/unit fractional display such as {\ttfamily 42.\+3min} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename It $>$ }\\std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_ae511664431883d4a6d099863f842e4d7}{tools\+::find\+\_\+prefixed\+\_\+value}} (It begin, It end, std\+::string\+\_\+view prefix)
+\end{DoxyCompactItemize}

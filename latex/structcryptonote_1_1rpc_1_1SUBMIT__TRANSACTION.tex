@@ -1,0 +1,104 @@
+\hypertarget{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION}{}\doxysection{cryptonote\+::rpc\+::S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON Struct Reference}
+\label{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION}\index{cryptonote::rpc::SUBMIT\_TRANSACTION@{cryptonote::rpc::SUBMIT\_TRANSACTION}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+ON\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_aa0210d86a9548b3fb69f432e4a393f77}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_a630594935b6245f66792f96227ac73b0}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Submit a transaction to be broadcast to the network.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx} the full transaction data itself. Can be hex-\/ or base64-\/encoded for json requests; can also be those or raw bytes for bt-\/encoded requests. For backwards compatibility, hex-\/encoded data can also be passed in a json request via the parameter {\ttfamily tx\+\_\+as\+\_\+hex} but that is deprecated and will eventually be removed.
+\item {\ttfamily blink} Should be set to true if this transaction is a blink transaction that should be submitted to a blink quorum rather than distributed through the mempool.
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily reason} String containing additional information on why a transaction failed.
+\item {\ttfamily blink\+\_\+status} Set to the result of submitting this transaction to the Blink quorum. 1 means the quorum rejected the transaction; 2 means the quorum accepted it; 3 means there was a timeout connecting to or waiting for a response from the blink quorum. Note that a timeout response does {\itshape not} necessarily mean the transaction has not made it to the network.
+\item {\ttfamily not\+\_\+relayed} will be set to true if some problem with the transactions prevents it from being relayed to the network, omitted otherwise.
+\item {\ttfamily reason\+\_\+codes} If the transaction was rejected this will be set to a set of reason string codes indicating why the transaction failed\+:
+\begin{DoxyItemize}
+\item {\ttfamily \char`\"{}failed\char`\"{}} -- general \char`\"{}bad transaction\char`\"{} code
+\item {\ttfamily \char`\"{}altchain\char`\"{}} -- the transaction is spending outputs that exist on an altchain.
+\item {\ttfamily \char`\"{}mixin\char`\"{}} -- the transaction has the wrong number of decoys
+\item {\ttfamily \char`\"{}double\+\_\+spend\char`\"{}} -- the transaction is spending outputs that are already spent
+\item {\ttfamily \char`\"{}invalid\+\_\+input\char`\"{}} -- one or more inputs in the transaction are invalid
+\item {\ttfamily \char`\"{}invalid\+\_\+output\char`\"{}} -- out or more outputs in the transaction are invalid
+\item {\ttfamily \char`\"{}too\+\_\+few\+\_\+outputs\char`\"{}} -- the transaction does not create enough outputs (at least two are required, currently).
+\item {\ttfamily \char`\"{}too\+\_\+big\char`\"{}} -- the transaction is too large
+\item {\ttfamily \char`\"{}overspend\char`\"{}} -- the transaction spends (via outputs + fees) more than the inputs
+\item {\ttfamily \char`\"{}fee\+\_\+too\+\_\+low\char`\"{}} -- the transaction fee is insufficient
+\item {\ttfamily \char`\"{}invalid\+\_\+version\char`\"{}} -- the transaction version is invalid (the wallet likely needs an update).
+\item {\ttfamily \char`\"{}invalid\+\_\+type\char`\"{}} -- the transaction type is invalid
+\item {\ttfamily \char`\"{}snode\+\_\+locked\char`\"{}} -- one or more outputs are currently staked to a registred service node and thus are not currently spendable on the blockchain.
+\item {\ttfamily \char`\"{}blacklisted\char`\"{}} -- the outputs are currently blacklisted (from being in the 30-\/day penalty period following a service node deregistration).
+\item {\ttfamily \char`\"{}blink\char`\"{}} -- the blink transaction failed (see {\ttfamily blink\+\_\+status}) 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_aa0210d86a9548b3fb69f432e4a393f77}\label{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_aa0210d86a9548b3fb69f432e4a393f77}} 
+\index{cryptonote::rpc::SUBMIT\_TRANSACTION@{cryptonote::rpc::SUBMIT\_TRANSACTION}!names@{names}}
+\index{names@{names}!cryptonote::rpc::SUBMIT\_TRANSACTION@{cryptonote::rpc::SUBMIT\_TRANSACTION}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_a630594935b6245f66792f96227ac73b0}\label{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_a630594935b6245f66792f96227ac73b0}} 
+\index{cryptonote::rpc::SUBMIT\_TRANSACTION@{cryptonote::rpc::SUBMIT\_TRANSACTION}!request@{request}}
+\index{request@{request}!cryptonote::rpc::SUBMIT\_TRANSACTION@{cryptonote::rpc::SUBMIT\_TRANSACTION}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SUBMIT__TRANSACTION_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

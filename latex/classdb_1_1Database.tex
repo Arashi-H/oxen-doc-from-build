@@ -1,0 +1,140 @@
+\hypertarget{classdb_1_1Database}{}\doxysection{db\+::Database Class Reference}
+\label{classdb_1_1Database}\index{db::Database@{db::Database}}
+
+
+{\ttfamily \#include $<$database.\+hpp$>$}
+
+
+
+Inheritance diagram for db\+::Database\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdb_1_1Database__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdb_1_1Database_1_1IterableStatementWrapper}{Iterable\+Statement\+Wrapper}}
+\item 
+class \mbox{\hyperlink{classdb_1_1Database_1_1StatementWrapper}{Statement\+Wrapper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdb_1_1Database_1_1StatementWrapper}{Statement\+Wrapper}} \mbox{\hyperlink{classdb_1_1Database_ae9a7079ad227274699f7d6f4afff8cae}{prepared\+\_\+st}} (const std\+::string \&query)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{classdb_1_1Database_1_1StatementWrapper}{Statement\+Wrapper}} \mbox{\hyperlink{classdb_1_1Database_ab3d440091dadefb751dd7e3043c7a716}{prepared\+\_\+bind}} (const std\+::string \&query, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&... bind)
+\item 
+{\footnotesize template$<$typename... T, typename... Bind, typename  = std\+::enable\+\_\+if\+\_\+t$<$sizeof...(\+T) != 0$>$$>$ }\\\mbox{\hyperlink{classdb_1_1Database_1_1IterableStatementWrapper}{Iterable\+Statement\+Wrapper}}$<$ T... $>$ \mbox{\hyperlink{classdb_1_1Database_a399704e8369b4f6cf2f3c698102a045e}{prepared\+\_\+results}} (const std\+::string \&query, const Bind \&... bind)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\int \mbox{\hyperlink{classdb_1_1Database_a2eb8dff869c77b1028bd1ae29f59cb54}{prepared\+\_\+exec}} (const std\+::string \&query, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&... bind)
+\item 
+{\footnotesize template$<$typename... T, typename... Bind$>$ }\\auto \mbox{\hyperlink{classdb_1_1Database_a8ca73ad7f95b402986936f713d291a2d}{prepared\+\_\+get}} (const std\+::string \&query, const Bind \&... bind)
+\item 
+{\footnotesize template$<$typename... T, typename... Bind$>$ }\\auto \mbox{\hyperlink{classdb_1_1Database_a051b88e68952d020ff4bf2c6d5f96f39}{prepared\+\_\+maybe\+\_\+get}} (const std\+::string \&query, const Bind \&... bind)
+\item 
+\mbox{\hyperlink{classdb_1_1Database_a776b1008d3c76fbcc1a645b6a23e345a}{Database}} (const fs\+::path \&\mbox{\hyperlink{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}{db\+\_\+path}}, const std\+::string\+\_\+view db\+\_\+password)
+\item 
+\mbox{\hyperlink{classdb_1_1Database_a9fdbaac44b0dccad7b98d3478b2acdc9}{$\sim$\+Database}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+Q\+Lite\+::\+Database \mbox{\hyperlink{classdb_1_1Database_a39627dcd07f6b4ea72ab5ef1df53a125}{db}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::thread\+::id, std\+::unordered\+\_\+map$<$ std\+::string, S\+Q\+Lite\+::\+Statement $>$ $>$ \mbox{\hyperlink{classdb_1_1Database_a1455db3db7e4f4775731e1e6399878cb}{prepared\+\_\+sts}}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classdb_1_1Database_a43d35ad55e06569c394cc4c7b6c90b7f}{prepared\+\_\+sts\+\_\+mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdb_1_1Database_a776b1008d3c76fbcc1a645b6a23e345a}\label{classdb_1_1Database_a776b1008d3c76fbcc1a645b6a23e345a}} 
+\index{db::Database@{db::Database}!Database@{Database}}
+\index{Database@{Database}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily db\+::\+Database\+::\+Database (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{db\+\_\+path,  }\item[{const std\+::string\+\_\+view}]{db\+\_\+password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classdb_1_1Database_a9fdbaac44b0dccad7b98d3478b2acdc9}\label{classdb_1_1Database_a9fdbaac44b0dccad7b98d3478b2acdc9}} 
+\index{db::Database@{db::Database}!````~Database@{$\sim$Database}}
+\index{````~Database@{$\sim$Database}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{$\sim$Database()}{~Database()}}
+{\footnotesize\ttfamily db\+::\+Database\+::$\sim$\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdb_1_1Database_ab3d440091dadefb751dd7e3043c7a716}\label{classdb_1_1Database_ab3d440091dadefb751dd7e3043c7a716}} 
+\index{db::Database@{db::Database}!prepared\_bind@{prepared\_bind}}
+\index{prepared\_bind@{prepared\_bind}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_bind()}{prepared\_bind()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{classdb_1_1Database_1_1StatementWrapper}{Statement\+Wrapper}} db\+::\+Database\+::prepared\+\_\+bind (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares (with caching) and binds a query, returning the active statement handle. Like {\ttfamily prepared\+\_\+st} the wrapper resets the prepared statement on destruction. \mbox{\Hypertarget{classdb_1_1Database_a2eb8dff869c77b1028bd1ae29f59cb54}\label{classdb_1_1Database_a2eb8dff869c77b1028bd1ae29f59cb54}} 
+\index{db::Database@{db::Database}!prepared\_exec@{prepared\_exec}}
+\index{prepared\_exec@{prepared\_exec}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_exec()}{prepared\_exec()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+int db\+::\+Database\+::prepared\+\_\+exec (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares (with caching) a query and then executes it, optionally binding the given parameters when executing. \mbox{\Hypertarget{classdb_1_1Database_a8ca73ad7f95b402986936f713d291a2d}\label{classdb_1_1Database_a8ca73ad7f95b402986936f713d291a2d}} 
+\index{db::Database@{db::Database}!prepared\_get@{prepared\_get}}
+\index{prepared\_get@{prepared\_get}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_get()}{prepared\_get()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Bind$>$ \\
+auto db\+::\+Database\+::prepared\+\_\+get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query,  }\item[{const Bind \&...}]{bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares (with caching) a query that returns a single row (with optional bind parameters), executes it, and returns the value. Throws if the query returns 0 or more than 1 rows. \mbox{\Hypertarget{classdb_1_1Database_a051b88e68952d020ff4bf2c6d5f96f39}\label{classdb_1_1Database_a051b88e68952d020ff4bf2c6d5f96f39}} 
+\index{db::Database@{db::Database}!prepared\_maybe\_get@{prepared\_maybe\_get}}
+\index{prepared\_maybe\_get@{prepared\_maybe\_get}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_maybe\_get()}{prepared\_maybe\_get()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Bind$>$ \\
+auto db\+::\+Database\+::prepared\+\_\+maybe\+\_\+get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query,  }\item[{const Bind \&...}]{bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares (with caching) a query that returns at most a single row (with optional bind parameters), executes it, and returns the value or nullopt if the query returned no rows. Throws if the query returns more than 1 rows. \mbox{\Hypertarget{classdb_1_1Database_a399704e8369b4f6cf2f3c698102a045e}\label{classdb_1_1Database_a399704e8369b4f6cf2f3c698102a045e}} 
+\index{db::Database@{db::Database}!prepared\_results@{prepared\_results}}
+\index{prepared\_results@{prepared\_results}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_results()}{prepared\_results()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Bind, typename  = std\+::enable\+\_\+if\+\_\+t$<$sizeof...(\+T) != 0$>$$>$ \\
+\mbox{\hyperlink{classdb_1_1Database_1_1IterableStatementWrapper}{Iterable\+Statement\+Wrapper}}$<$T...$>$ db\+::\+Database\+::prepared\+\_\+results (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query,  }\item[{const Bind \&...}]{bind }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Prepares (with caching), binds parameters, then returns an object that lets you iterate through results where each row is a T or tuple$<$\+T...$>$\+: \mbox{\Hypertarget{classdb_1_1Database_ae9a7079ad227274699f7d6f4afff8cae}\label{classdb_1_1Database_ae9a7079ad227274699f7d6f4afff8cae}} 
+\index{db::Database@{db::Database}!prepared\_st@{prepared\_st}}
+\index{prepared\_st@{prepared\_st}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_st()}{prepared\_st()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdb_1_1Database_1_1StatementWrapper}{Database\+::\+Statement\+Wrapper}} db\+::\+Database\+::prepared\+\_\+st (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{query }\end{DoxyParamCaption})}
+
+Prepares a query, caching it, and returns a wrapper that automatically resets the prepared statement on destruction. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classdb_1_1Database_a39627dcd07f6b4ea72ab5ef1df53a125}\label{classdb_1_1Database_a39627dcd07f6b4ea72ab5ef1df53a125}} 
+\index{db::Database@{db::Database}!db@{db}}
+\index{db@{db}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily S\+Q\+Lite\+::\+Database db\+::\+Database\+::db}
+
+\mbox{\Hypertarget{classdb_1_1Database_a1455db3db7e4f4775731e1e6399878cb}\label{classdb_1_1Database_a1455db3db7e4f4775731e1e6399878cb}} 
+\index{db::Database@{db::Database}!prepared\_sts@{prepared\_sts}}
+\index{prepared\_sts@{prepared\_sts}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_sts}{prepared\_sts}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::thread\+::id, std\+::unordered\+\_\+map$<$std\+::string, S\+Q\+Lite\+::\+Statement$>$ $>$ db\+::\+Database\+::prepared\+\_\+sts\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classdb_1_1Database_a43d35ad55e06569c394cc4c7b6c90b7f}\label{classdb_1_1Database_a43d35ad55e06569c394cc4c7b6c90b7f}} 
+\index{db::Database@{db::Database}!prepared\_sts\_mutex@{prepared\_sts\_mutex}}
+\index{prepared\_sts\_mutex@{prepared\_sts\_mutex}!db::Database@{db::Database}}
+\doxysubsubsection{\texorpdfstring{prepared\_sts\_mutex}{prepared\_sts\_mutex}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex db\+::\+Database\+::prepared\+\_\+sts\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sqlitedb/\mbox{\hyperlink{database_8hpp}{database.\+hpp}}\item 
+src/sqlitedb/\mbox{\hyperlink{sqlitedb_2database_8cpp}{database.\+cpp}}\end{DoxyCompactItemize}

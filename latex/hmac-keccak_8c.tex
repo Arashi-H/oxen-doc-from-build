@@ -1,0 +1,72 @@
+\hypertarget{hmac-keccak_8c}{}\doxysection{src/crypto/hmac-\/keccak.c File Reference}
+\label{hmac-keccak_8c}\index{src/crypto/hmac-\/keccak.c@{src/crypto/hmac-\/keccak.c}}
+{\ttfamily \#include \char`\"{}hmac-\/keccak.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/memwipe.\+h\char`\"{}}\newline
+Include dependency graph for hmac-\/keccak.c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hmac-keccak_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hmac-keccak_8c_ad73659506d9e95acddfadd2608a37b6b}{K\+E\+C\+C\+A\+K\+\_\+\+B\+L\+O\+C\+K\+L\+EN}}~136
+\item 
+\#define \mbox{\hyperlink{hmac-keccak_8c_ad6074dd11ab3c97c8135c43aab03ae95}{H\+A\+S\+H\+\_\+\+S\+I\+ZE}}~32
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hmac-keccak_8c_afe27ff9bc715f48f3ab0dd02c3ff8d6c}{hmac\+\_\+keccak\+\_\+init}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, const uint8\+\_\+t $\ast$\+\_\+key, size\+\_\+t keylen)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8c_ad8a2c8a08c9e2e35b791b2e009f4d48e}{hmac\+\_\+keccak\+\_\+update}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, const uint8\+\_\+t $\ast$data, size\+\_\+t datalen)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8c_a9bd7062827f0aade061117a844423468}{hmac\+\_\+keccak\+\_\+finish}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, uint8\+\_\+t $\ast$digest)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8c_a9065d0ee8841e833c940d53654cb910e}{hmac\+\_\+keccak\+\_\+hash}} (uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$key, size\+\_\+t keylen, const uint8\+\_\+t $\ast$in, size\+\_\+t inlen)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hmac-keccak_8c_ad6074dd11ab3c97c8135c43aab03ae95}\label{hmac-keccak_8c_ad6074dd11ab3c97c8135c43aab03ae95}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!HASH\_SIZE@{HASH\_SIZE}}
+\index{HASH\_SIZE@{HASH\_SIZE}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{HASH\_SIZE}{HASH\_SIZE}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+S\+I\+ZE~32}
+
+\mbox{\Hypertarget{hmac-keccak_8c_ad73659506d9e95acddfadd2608a37b6b}\label{hmac-keccak_8c_ad73659506d9e95acddfadd2608a37b6b}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!KECCAK\_BLOCKLEN@{KECCAK\_BLOCKLEN}}
+\index{KECCAK\_BLOCKLEN@{KECCAK\_BLOCKLEN}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{KECCAK\_BLOCKLEN}{KECCAK\_BLOCKLEN}}
+{\footnotesize\ttfamily \#define K\+E\+C\+C\+A\+K\+\_\+\+B\+L\+O\+C\+K\+L\+EN~136}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hmac-keccak_8c_a9bd7062827f0aade061117a844423468}\label{hmac-keccak_8c_a9bd7062827f0aade061117a844423468}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!hmac\_keccak\_finish@{hmac\_keccak\_finish}}
+\index{hmac\_keccak\_finish@{hmac\_keccak\_finish}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_finish()}{hmac\_keccak\_finish()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{uint8\+\_\+t $\ast$}]{digest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8c_a9065d0ee8841e833c940d53654cb910e}\label{hmac-keccak_8c_a9065d0ee8841e833c940d53654cb910e}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!hmac\_keccak\_hash@{hmac\_keccak\_hash}}
+\index{hmac\_keccak\_hash@{hmac\_keccak\_hash}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_hash()}{hmac\_keccak\_hash()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{size\+\_\+t}]{keylen,  }\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{size\+\_\+t}]{inlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8c_afe27ff9bc715f48f3ab0dd02c3ff8d6c}\label{hmac-keccak_8c_afe27ff9bc715f48f3ab0dd02c3ff8d6c}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!hmac\_keccak\_init@{hmac\_keccak\_init}}
+\index{hmac\_keccak\_init@{hmac\_keccak\_init}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_init()}{hmac\_keccak\_init()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{const uint8\+\_\+t $\ast$}]{\+\_\+key,  }\item[{size\+\_\+t}]{keylen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8c_ad8a2c8a08c9e2e35b791b2e009f4d48e}\label{hmac-keccak_8c_ad8a2c8a08c9e2e35b791b2e009f4d48e}} 
+\index{hmac-\/keccak.c@{hmac-\/keccak.c}!hmac\_keccak\_update@{hmac\_keccak\_update}}
+\index{hmac\_keccak\_update@{hmac\_keccak\_update}!hmac-\/keccak.c@{hmac-\/keccak.c}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_update()}{hmac\_keccak\_update()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{datalen }\end{DoxyParamCaption})}
+

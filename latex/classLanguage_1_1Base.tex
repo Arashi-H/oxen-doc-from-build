@@ -1,0 +1,258 @@
+\hypertarget{classLanguage_1_1Base}{}\doxysection{Language\+::Base Class Reference}
+\label{classLanguage_1_1Base}\index{Language::Base@{Language::Base}}
+
+
+A base language class which all languages have to inherit from for Polymorphism.  
+
+
+
+
+{\ttfamily \#include $<$language\+\_\+base.\+h$>$}
+
+
+
+Inheritance diagram for Language\+::Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLanguage_1_1Base__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLanguage_1_1Base_a8c9ae92bf817125c07ee5fdb76a90155}{Base}} (const char $\ast$\mbox{\hyperlink{classLanguage_1_1Base_a304c43a3555f8237707cc6e3af7cb964}{language\+\_\+name}}, const char $\ast$\mbox{\hyperlink{classLanguage_1_1Base_a40520d23280216bc0df7aae61def189c}{english\+\_\+language\+\_\+name}}, const std\+::vector$<$ std\+::string $>$ \&words, uint32\+\_\+t prefix\+\_\+length)
+\item 
+virtual \mbox{\hyperlink{classLanguage_1_1Base_a11bc2763c65b19efda2f911c393550e1}{$\sim$\+Base}} ()
+\item 
+void \mbox{\hyperlink{classLanguage_1_1Base_a35f52d6c53c467bd91b29780a2c4da0f}{set\+\_\+words}} (const char $\ast$const words\mbox{[}$\,$\mbox{]})
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classLanguage_1_1Base_a9f9301f3fceb2df5670b2200178647f5}{get\+\_\+word\+\_\+list}} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the word list. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}} $>$ \& \mbox{\hyperlink{classLanguage_1_1Base_a9375b550ab85d6d107b621406bd49cea}{get\+\_\+word\+\_\+map}} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the word map. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}} $>$ \& \mbox{\hyperlink{classLanguage_1_1Base_ac57fbac379eb900bd830f2f17c4104ef}{get\+\_\+trimmed\+\_\+word\+\_\+map}} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the trimmed word map. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classLanguage_1_1Base_a4c2cb8b9cc16a739dbd6e261660b026a}{get\+\_\+language\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the language. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classLanguage_1_1Base_a9ef376d40d555bdcdcf5f98ea788a243}{get\+\_\+english\+\_\+language\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of the language in \mbox{\hyperlink{classLanguage_1_1English}{English}}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classLanguage_1_1Base_adc138e1491b77db35bfd396111d1ee4d}{get\+\_\+unique\+\_\+prefix\+\_\+length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of unique starting characters to be used for matching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548aece7fa19d0fb74ae97211876fd85d004}{A\+L\+L\+O\+W\+\_\+\+S\+H\+O\+R\+T\+\_\+\+W\+O\+R\+DS}} = 1$<$$<$0, 
+\mbox{\hyperlink{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548a5227874b460dda46f0076e57a1430603}{A\+L\+L\+O\+W\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+P\+R\+E\+F\+I\+X\+ES}} = 1$<$$<$1
+ \}
+\item 
+enum \{ \mbox{\hyperlink{classLanguage_1_1Base_a54a1e33f4ddde022f247e750f35dc902ac713c85a1c1a7f613adc4ddc10311a88}{N\+W\+O\+R\+DS}} = 1626
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLanguage_1_1Base_a98b670170f029a133f036c7feef58227}{populate\+\_\+maps}} (uint32\+\_\+t flags=0)
+\begin{DoxyCompactList}\small\item\em Populates the word maps after the list is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classLanguage_1_1Base_a3c840067cac807bab11689431818956c}{word\+\_\+list}}
+\item 
+std\+::unordered\+\_\+map$<$ epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}} $>$ \mbox{\hyperlink{classLanguage_1_1Base_a2b88d2e4805c18df6aed3e442d0c659b}{word\+\_\+map}}
+\item 
+std\+::unordered\+\_\+map$<$ epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}} $>$ \mbox{\hyperlink{classLanguage_1_1Base_aa59c09deb3b1e495dc19d6adbc3fcb6f}{trimmed\+\_\+word\+\_\+map}}
+\item 
+std\+::string \mbox{\hyperlink{classLanguage_1_1Base_a304c43a3555f8237707cc6e3af7cb964}{language\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classLanguage_1_1Base_a40520d23280216bc0df7aae61def189c}{english\+\_\+language\+\_\+name}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classLanguage_1_1Base_aaae0b5f6a2dea3f1bdf5e67a9dbcd7e7}{unique\+\_\+prefix\+\_\+length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base language class which all languages have to inherit from for Polymorphism. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548}\label{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALLOW\_SHORT\_WORDS@{ALLOW\_SHORT\_WORDS}!Language::Base@{Language::Base}}\index{Language::Base@{Language::Base}!ALLOW\_SHORT\_WORDS@{ALLOW\_SHORT\_WORDS}}}\mbox{\Hypertarget{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548aece7fa19d0fb74ae97211876fd85d004}\label{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548aece7fa19d0fb74ae97211876fd85d004}} 
+A\+L\+L\+O\+W\+\_\+\+S\+H\+O\+R\+T\+\_\+\+W\+O\+R\+DS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALLOW\_DUPLICATE\_PREFIXES@{ALLOW\_DUPLICATE\_PREFIXES}!Language::Base@{Language::Base}}\index{Language::Base@{Language::Base}!ALLOW\_DUPLICATE\_PREFIXES@{ALLOW\_DUPLICATE\_PREFIXES}}}\mbox{\Hypertarget{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548a5227874b460dda46f0076e57a1430603}\label{classLanguage_1_1Base_ae71957757b32cad33741fbfe3d0be548a5227874b460dda46f0076e57a1430603}} 
+A\+L\+L\+O\+W\+\_\+\+D\+U\+P\+L\+I\+C\+A\+T\+E\+\_\+\+P\+R\+E\+F\+I\+X\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classLanguage_1_1Base_a54a1e33f4ddde022f247e750f35dc902}\label{classLanguage_1_1Base_a54a1e33f4ddde022f247e750f35dc902}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NWORDS@{NWORDS}!Language::Base@{Language::Base}}\index{Language::Base@{Language::Base}!NWORDS@{NWORDS}}}\mbox{\Hypertarget{classLanguage_1_1Base_a54a1e33f4ddde022f247e750f35dc902ac713c85a1c1a7f613adc4ddc10311a88}\label{classLanguage_1_1Base_a54a1e33f4ddde022f247e750f35dc902ac713c85a1c1a7f613adc4ddc10311a88}} 
+N\+W\+O\+R\+DS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLanguage_1_1Base_a8c9ae92bf817125c07ee5fdb76a90155}\label{classLanguage_1_1Base_a8c9ae92bf817125c07ee5fdb76a90155}} 
+\index{Language::Base@{Language::Base}!Base@{Base}}
+\index{Base@{Base}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{Base()}{Base()}}
+{\footnotesize\ttfamily Language\+::\+Base\+::\+Base (\begin{DoxyParamCaption}\item[{const char $\ast$}]{language\+\_\+name,  }\item[{const char $\ast$}]{english\+\_\+language\+\_\+name,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{words,  }\item[{uint32\+\_\+t}]{prefix\+\_\+length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classLanguage_1_1Base_a11bc2763c65b19efda2f911c393550e1}\label{classLanguage_1_1Base_a11bc2763c65b19efda2f911c393550e1}} 
+\index{Language::Base@{Language::Base}!````~Base@{$\sim$Base}}
+\index{````~Base@{$\sim$Base}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{$\sim$Base()}{~Base()}}
+{\footnotesize\ttfamily virtual Language\+::\+Base\+::$\sim$\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLanguage_1_1Base_a9ef376d40d555bdcdcf5f98ea788a243}\label{classLanguage_1_1Base_a9ef376d40d555bdcdcf5f98ea788a243}} 
+\index{Language::Base@{Language::Base}!get\_english\_language\_name@{get\_english\_language\_name}}
+\index{get\_english\_language\_name@{get\_english\_language\_name}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_english\_language\_name()}{get\_english\_language\_name()}}
+{\footnotesize\ttfamily const std\+::string\& Language\+::\+Base\+::get\+\_\+english\+\_\+language\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the name of the language in \mbox{\hyperlink{classLanguage_1_1English}{English}}. 
+
+\begin{DoxyReturn}{Returns}
+Name of the language. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_a4c2cb8b9cc16a739dbd6e261660b026a}\label{classLanguage_1_1Base_a4c2cb8b9cc16a739dbd6e261660b026a}} 
+\index{Language::Base@{Language::Base}!get\_language\_name@{get\_language\_name}}
+\index{get\_language\_name@{get\_language\_name}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_language\_name()}{get\_language\_name()}}
+{\footnotesize\ttfamily const std\+::string\& Language\+::\+Base\+::get\+\_\+language\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the name of the language. 
+
+\begin{DoxyReturn}{Returns}
+Name of the language. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_ac57fbac379eb900bd830f2f17c4104ef}\label{classLanguage_1_1Base_ac57fbac379eb900bd830f2f17c4104ef}} 
+\index{Language::Base@{Language::Base}!get\_trimmed\_word\_map@{get\_trimmed\_word\_map}}
+\index{get\_trimmed\_word\_map@{get\_trimmed\_word\_map}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_trimmed\_word\_map()}{get\_trimmed\_word\_map()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}}$>$\& Language\+::\+Base\+::get\+\_\+trimmed\+\_\+word\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the trimmed word map. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the trimmed word map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_adc138e1491b77db35bfd396111d1ee4d}\label{classLanguage_1_1Base_adc138e1491b77db35bfd396111d1ee4d}} 
+\index{Language::Base@{Language::Base}!get\_unique\_prefix\_length@{get\_unique\_prefix\_length}}
+\index{get\_unique\_prefix\_length@{get\_unique\_prefix\_length}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_unique\_prefix\_length()}{get\_unique\_prefix\_length()}}
+{\footnotesize\ttfamily uint32\+\_\+t Language\+::\+Base\+::get\+\_\+unique\+\_\+prefix\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of unique starting characters to be used for matching. 
+
+\begin{DoxyReturn}{Returns}
+Number of unique starting characters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_a9f9301f3fceb2df5670b2200178647f5}\label{classLanguage_1_1Base_a9f9301f3fceb2df5670b2200178647f5}} 
+\index{Language::Base@{Language::Base}!get\_word\_list@{get\_word\_list}}
+\index{get\_word\_list@{get\_word\_list}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_word\_list()}{get\_word\_list()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& Language\+::\+Base\+::get\+\_\+word\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the word list. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the word list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_a9375b550ab85d6d107b621406bd49cea}\label{classLanguage_1_1Base_a9375b550ab85d6d107b621406bd49cea}} 
+\index{Language::Base@{Language::Base}!get\_word\_map@{get\_word\_map}}
+\index{get\_word\_map@{get\_word\_map}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{get\_word\_map()}{get\_word\_map()}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}}$>$\& Language\+::\+Base\+::get\+\_\+word\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the word map. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the word map. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLanguage_1_1Base_a98b670170f029a133f036c7feef58227}\label{classLanguage_1_1Base_a98b670170f029a133f036c7feef58227}} 
+\index{Language::Base@{Language::Base}!populate\_maps@{populate\_maps}}
+\index{populate\_maps@{populate\_maps}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{populate\_maps()}{populate\_maps()}}
+{\footnotesize\ttfamily void Language\+::\+Base\+::populate\+\_\+maps (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Populates the word maps after the list is ready. 
+
+\mbox{\Hypertarget{classLanguage_1_1Base_a35f52d6c53c467bd91b29780a2c4da0f}\label{classLanguage_1_1Base_a35f52d6c53c467bd91b29780a2c4da0f}} 
+\index{Language::Base@{Language::Base}!set\_words@{set\_words}}
+\index{set\_words@{set\_words}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{set\_words()}{set\_words()}}
+{\footnotesize\ttfamily void Language\+::\+Base\+::set\+\_\+words (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{words\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLanguage_1_1Base_a40520d23280216bc0df7aae61def189c}\label{classLanguage_1_1Base_a40520d23280216bc0df7aae61def189c}} 
+\index{Language::Base@{Language::Base}!english\_language\_name@{english\_language\_name}}
+\index{english\_language\_name@{english\_language\_name}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{english\_language\_name}{english\_language\_name}}
+{\footnotesize\ttfamily std\+::string Language\+::\+Base\+::english\+\_\+language\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of language \mbox{\Hypertarget{classLanguage_1_1Base_a304c43a3555f8237707cc6e3af7cb964}\label{classLanguage_1_1Base_a304c43a3555f8237707cc6e3af7cb964}} 
+\index{Language::Base@{Language::Base}!language\_name@{language\_name}}
+\index{language\_name@{language\_name}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{language\_name}{language\_name}}
+{\footnotesize\ttfamily std\+::string Language\+::\+Base\+::language\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of language \mbox{\Hypertarget{classLanguage_1_1Base_aa59c09deb3b1e495dc19d6adbc3fcb6f}\label{classLanguage_1_1Base_aa59c09deb3b1e495dc19d6adbc3fcb6f}} 
+\index{Language::Base@{Language::Base}!trimmed\_word\_map@{trimmed\_word\_map}}
+\index{trimmed\_word\_map@{trimmed\_word\_map}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{trimmed\_word\_map}{trimmed\_word\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}}$>$ Language\+::\+Base\+::trimmed\+\_\+word\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+hash table to find word\textquotesingle{}s trimmed index \mbox{\Hypertarget{classLanguage_1_1Base_aaae0b5f6a2dea3f1bdf5e67a9dbcd7e7}\label{classLanguage_1_1Base_aaae0b5f6a2dea3f1bdf5e67a9dbcd7e7}} 
+\index{Language::Base@{Language::Base}!unique\_prefix\_length@{unique\_prefix\_length}}
+\index{unique\_prefix\_length@{unique\_prefix\_length}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{unique\_prefix\_length}{unique\_prefix\_length}}
+{\footnotesize\ttfamily uint32\+\_\+t Language\+::\+Base\+::unique\+\_\+prefix\+\_\+length\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of unique starting characters to trim the wordlist to when matching \mbox{\Hypertarget{classLanguage_1_1Base_a3c840067cac807bab11689431818956c}\label{classLanguage_1_1Base_a3c840067cac807bab11689431818956c}} 
+\index{Language::Base@{Language::Base}!word\_list@{word\_list}}
+\index{word\_list@{word\_list}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{word\_list}{word\_list}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Language\+::\+Base\+::word\+\_\+list\hspace{0.3cm}{\ttfamily [protected]}}
+
+A pointer to the array of words \mbox{\Hypertarget{classLanguage_1_1Base_a2b88d2e4805c18df6aed3e442d0c659b}\label{classLanguage_1_1Base_a2b88d2e4805c18df6aed3e442d0c659b}} 
+\index{Language::Base@{Language::Base}!word\_map@{word\_map}}
+\index{word\_map@{word\_map}!Language::Base@{Language::Base}}
+\doxysubsubsection{\texorpdfstring{word\_map}{word\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$epee\+::wipeable\+\_\+string, uint32\+\_\+t, \mbox{\hyperlink{structLanguage_1_1WordHash}{Word\+Hash}}, \mbox{\hyperlink{structLanguage_1_1WordEqual}{Word\+Equal}}$>$ Language\+::\+Base\+::word\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+hash table to find word\textquotesingle{}s index 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/mnemonics/\mbox{\hyperlink{language__base_8h}{language\+\_\+base.\+h}}\end{DoxyCompactItemize}

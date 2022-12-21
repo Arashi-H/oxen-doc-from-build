@@ -1,0 +1,55 @@
+\hypertarget{tx__pool_8h}{}\doxysection{src/cryptonote\+\_\+core/tx\+\_\+pool.h File Reference}
+\label{tx__pool_8h}\index{src/cryptonote\_core/tx\_pool.h@{src/cryptonote\_core/tx\_pool.h}}
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$boost/serialization/version.\+hpp$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/periodic\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/verification\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tx\+\_\+blink.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+Include dependency graph for tx\+\_\+pool.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tx__pool_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tx__pool_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1txCompare}{cryptonote\+::tx\+Compare}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{cryptonote\+::tx\+\_\+pool\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em Argument passed into add\+\_\+tx specifying different requires on the transaction. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{cryptonote\+::tx\+\_\+memory\+\_\+pool}}
+\begin{DoxyCompactList}\small\item\em Transaction pool, handles transactions which are not part of a block. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats}{cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats}}
+\begin{DoxyCompactList}\small\item\em Return type of \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}{get\+\_\+transaction\+\_\+stats()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ std\+::tuple$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, double, std\+::time\+\_\+t $>$, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{namespacecryptonote_ad52e7d48940abd955a97796d3d2e71f0}{cryptonote\+::tx\+\_\+by\+\_\+fee\+\_\+and\+\_\+receive\+\_\+time\+\_\+entry}}
+\begin{DoxyCompactList}\small\item\em tuple of $<$deregister, transaction fee, receive time$>$ for organization \end{DoxyCompactList}\item 
+typedef std\+::set$<$ tx\+\_\+by\+\_\+fee\+\_\+and\+\_\+receive\+\_\+time\+\_\+entry, tx\+Compare $>$ \mbox{\hyperlink{namespacecryptonote_a519318e9f47111feb31d73d79a8003de}{cryptonote\+::sorted\+\_\+tx\+\_\+container}}
+\begin{DoxyCompactList}\small\item\em container for sorting transactions by fee per unit size \end{DoxyCompactList}\end{DoxyCompactItemize}

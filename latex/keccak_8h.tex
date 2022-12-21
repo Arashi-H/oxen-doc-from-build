@@ -1,0 +1,115 @@
+\hypertarget{keccak_8h}{}\doxysection{src/crypto/keccak.h File Reference}
+\label{keccak_8h}\index{src/crypto/keccak.h@{src/crypto/keccak.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for keccak.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keccak_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keccak_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{keccak_8h_aaf66c2daa0f1fe906b80b79969f67424}{K\+E\+C\+C\+A\+K\+\_\+\+R\+O\+U\+N\+DS}}~24
+\item 
+\#define \mbox{\hyperlink{keccak_8h_a612c70207b96b27f06eff614e3b9ffd9}{R\+O\+T\+L64}}(x,  y)~(((x) $<$$<$ (y)) $\vert$ ((x) $>$$>$ (64 -\/ (y))))
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} \mbox{\hyperlink{keccak_8h_a9da925653139ca5ae808931679bee379}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{keccak_8h_a1772f24c54cabdaa4b9d5d9b93e9f390}{keccak}} (const uint8\+\_\+t $\ast$in, size\+\_\+t inlen, uint8\+\_\+t $\ast$md, int mdlen)
+\item 
+void \mbox{\hyperlink{keccak_8h_ac4b2e24003519303a16410a633502808}{keccakf}} (uint64\+\_\+t st\mbox{[}25\mbox{]}, int norounds)
+\item 
+void \mbox{\hyperlink{keccak_8h_a2abf9f9384d059d7d0e4ea5d92ca7703}{keccak1600}} (const uint8\+\_\+t $\ast$in, size\+\_\+t inlen, uint8\+\_\+t $\ast$md)
+\item 
+void \mbox{\hyperlink{keccak_8h_af24e533c3c3f699547349d7c30f08147}{keccak\+\_\+init}} (\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$ctx)
+\item 
+void \mbox{\hyperlink{keccak_8h_a2e5a7e61fbea0aa4a8370e58d7e905f4}{keccak\+\_\+update}} (\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$ctx, const uint8\+\_\+t $\ast$in, size\+\_\+t inlen)
+\item 
+void \mbox{\hyperlink{keccak_8h_a279302d40e35f6ebeaed2d298f727475}{keccak\+\_\+finish}} (\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$ctx, uint8\+\_\+t $\ast$md)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{keccak_8h_aaf66c2daa0f1fe906b80b79969f67424}\label{keccak_8h_aaf66c2daa0f1fe906b80b79969f67424}} 
+\index{keccak.h@{keccak.h}!KECCAK\_ROUNDS@{KECCAK\_ROUNDS}}
+\index{KECCAK\_ROUNDS@{KECCAK\_ROUNDS}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{KECCAK\_ROUNDS}{KECCAK\_ROUNDS}}
+{\footnotesize\ttfamily \#define K\+E\+C\+C\+A\+K\+\_\+\+R\+O\+U\+N\+DS~24}
+
+\mbox{\Hypertarget{keccak_8h_a612c70207b96b27f06eff614e3b9ffd9}\label{keccak_8h_a612c70207b96b27f06eff614e3b9ffd9}} 
+\index{keccak.h@{keccak.h}!ROTL64@{ROTL64}}
+\index{ROTL64@{ROTL64}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{ROTL64}{ROTL64}}
+{\footnotesize\ttfamily \#define R\+O\+T\+L64(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x) $<$$<$ (y)) $\vert$ ((x) $>$$>$ (64 -\/ (y))))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{keccak_8h_a9da925653139ca5ae808931679bee379}\label{keccak_8h_a9da925653139ca5ae808931679bee379}} 
+\index{keccak.h@{keccak.h}!KECCAK\_CTX@{KECCAK\_CTX}}
+\index{KECCAK\_CTX@{KECCAK\_CTX}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{KECCAK\_CTX}{KECCAK\_CTX}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} \mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keccak_8h_a1772f24c54cabdaa4b9d5d9b93e9f390}\label{keccak_8h_a1772f24c54cabdaa4b9d5d9b93e9f390}} 
+\index{keccak.h@{keccak.h}!keccak@{keccak}}
+\index{keccak@{keccak}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccak()}{keccak()}}
+{\footnotesize\ttfamily void keccak (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{size\+\_\+t}]{inlen,  }\item[{uint8\+\_\+t $\ast$}]{md,  }\item[{int}]{mdlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{keccak_8h_a2abf9f9384d059d7d0e4ea5d92ca7703}\label{keccak_8h_a2abf9f9384d059d7d0e4ea5d92ca7703}} 
+\index{keccak.h@{keccak.h}!keccak1600@{keccak1600}}
+\index{keccak1600@{keccak1600}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccak1600()}{keccak1600()}}
+{\footnotesize\ttfamily void keccak1600 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{size\+\_\+t}]{inlen,  }\item[{uint8\+\_\+t $\ast$}]{md }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{keccak_8h_a279302d40e35f6ebeaed2d298f727475}\label{keccak_8h_a279302d40e35f6ebeaed2d298f727475}} 
+\index{keccak.h@{keccak.h}!keccak\_finish@{keccak\_finish}}
+\index{keccak\_finish@{keccak\_finish}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccak\_finish()}{keccak\_finish()}}
+{\footnotesize\ttfamily void keccak\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$}]{ctx,  }\item[{uint8\+\_\+t $\ast$}]{md }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{keccak_8h_af24e533c3c3f699547349d7c30f08147}\label{keccak_8h_af24e533c3c3f699547349d7c30f08147}} 
+\index{keccak.h@{keccak.h}!keccak\_init@{keccak\_init}}
+\index{keccak\_init@{keccak\_init}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccak\_init()}{keccak\_init()}}
+{\footnotesize\ttfamily void keccak\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$}]{ctx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{keccak_8h_a2e5a7e61fbea0aa4a8370e58d7e905f4}\label{keccak_8h_a2e5a7e61fbea0aa4a8370e58d7e905f4}} 
+\index{keccak.h@{keccak.h}!keccak\_update@{keccak\_update}}
+\index{keccak\_update@{keccak\_update}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccak\_update()}{keccak\_update()}}
+{\footnotesize\ttfamily void keccak\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structKECCAK__CTX}{K\+E\+C\+C\+A\+K\+\_\+\+C\+TX}} $\ast$}]{ctx,  }\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{size\+\_\+t}]{inlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{keccak_8h_ac4b2e24003519303a16410a633502808}\label{keccak_8h_ac4b2e24003519303a16410a633502808}} 
+\index{keccak.h@{keccak.h}!keccakf@{keccakf}}
+\index{keccakf@{keccakf}!keccak.h@{keccak.h}}
+\doxysubsubsection{\texorpdfstring{keccakf()}{keccakf()}}
+{\footnotesize\ttfamily void keccakf (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{st\mbox{[}25\mbox{]},  }\item[{int}]{norounds }\end{DoxyParamCaption})}
+

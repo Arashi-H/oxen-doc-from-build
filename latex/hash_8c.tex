@@ -1,0 +1,46 @@
+\hypertarget{hash_8c}{}\doxysection{src/crypto/hash.c File Reference}
+\label{hash_8c}\index{src/crypto/hash.c@{src/crypto/hash.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keccak.\+h\char`\"{}}\newline
+Include dependency graph for hash.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hash_8c_aa42b9bccaca7fce82a32874a00404ad2}{hash\+\_\+permutation}} (union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$\mbox{\hyperlink{structstate}{state}})
+\item 
+void \mbox{\hyperlink{hash_8c_a1d6f6be331e7750f56c17e6a43a2f949}{hash\+\_\+process}} (union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$\mbox{\hyperlink{structstate}{state}}, const uint8\+\_\+t $\ast$buf, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{hash_8c_a2150fe174df46197ee921add9557b262}{cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hash_8c_a2150fe174df46197ee921add9557b262}\label{hash_8c_a2150fe174df46197ee921add9557b262}} 
+\index{hash.c@{hash.c}!cn\_fast\_hash@{cn\_fast\_hash}}
+\index{cn\_fast\_hash@{cn\_fast\_hash}!hash.c@{hash.c}}
+\doxysubsubsection{\texorpdfstring{cn\_fast\_hash()}{cn\_fast\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+fast\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash_8c_aa42b9bccaca7fce82a32874a00404ad2}\label{hash_8c_aa42b9bccaca7fce82a32874a00404ad2}} 
+\index{hash.c@{hash.c}!hash\_permutation@{hash\_permutation}}
+\index{hash\_permutation@{hash\_permutation}!hash.c@{hash.c}}
+\doxysubsubsection{\texorpdfstring{hash\_permutation()}{hash\_permutation()}}
+{\footnotesize\ttfamily void hash\+\_\+permutation (\begin{DoxyParamCaption}\item[{union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash_8c_a1d6f6be331e7750f56c17e6a43a2f949}\label{hash_8c_a1d6f6be331e7750f56c17e6a43a2f949}} 
+\index{hash.c@{hash.c}!hash\_process@{hash\_process}}
+\index{hash\_process@{hash\_process}!hash.c@{hash.c}}
+\doxysubsubsection{\texorpdfstring{hash\_process()}{hash\_process()}}
+{\footnotesize\ttfamily void hash\+\_\+process (\begin{DoxyParamCaption}\item[{union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$}]{state,  }\item[{const uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+

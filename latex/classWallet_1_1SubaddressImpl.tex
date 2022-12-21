@@ -1,0 +1,138 @@
+\hypertarget{classWallet_1_1SubaddressImpl}{}\doxysection{Wallet\+::Subaddress\+Impl Class Reference}
+\label{classWallet_1_1SubaddressImpl}\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+
+
+{\ttfamily \#include $<$subaddress.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Subaddress\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classWallet_1_1SubaddressImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Wallet\+::Subaddress\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classWallet_1_1SubaddressImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_1_1SubaddressImpl_ad33196f75b31fb0e11c7b60a9627c4d0}{Subaddress\+Impl}} (\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$wallet)
+\item 
+\mbox{\hyperlink{classWallet_1_1SubaddressImpl_a795a6a65f9f6f3b4d8f4584dc5e46f0a}{$\sim$\+Subaddress\+Impl}} ()
+\item 
+void \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a0e571ad8fe963722ed8d73f1bf5af8af}{refresh}} (uint32\+\_\+t account\+Index) override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1SubaddressRow}{Subaddress\+Row}} $\ast$ $>$ \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a4222f6e91d52d9bb7256f3b23bd34631}{get\+All}} () const override
+\item 
+void \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a40cb1e7c223f0b344f4d6128d9da9c8c}{add\+Row}} (uint32\+\_\+t account\+Index, const std\+::string \&label) override
+\item 
+void \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a7003cead9e56e2505b1dca5be59c12c9}{set\+Label}} (uint32\+\_\+t account\+Index, uint32\+\_\+t address\+Index, const std\+::string \&label) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a9428569868f5b84db5ac7309db079b3b}{clear\+Rows}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$ \mbox{\hyperlink{classWallet_1_1SubaddressImpl_a7cdce7c4a3a36c008683d08e4d8b1c1f}{m\+\_\+wallet}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1SubaddressRow}{Subaddress\+Row}} $\ast$ $>$ \mbox{\hyperlink{classWallet_1_1SubaddressImpl_aa0f7807d6626635433213b67e007ee81}{m\+\_\+rows}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_ad33196f75b31fb0e11c7b60a9627c4d0}\label{classWallet_1_1SubaddressImpl_ad33196f75b31fb0e11c7b60a9627c4d0}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!SubaddressImpl@{SubaddressImpl}}
+\index{SubaddressImpl@{SubaddressImpl}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{SubaddressImpl()}{SubaddressImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Subaddress\+Impl\+::\+Subaddress\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$}]{wallet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a795a6a65f9f6f3b4d8f4584dc5e46f0a}\label{classWallet_1_1SubaddressImpl_a795a6a65f9f6f3b4d8f4584dc5e46f0a}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!````~SubaddressImpl@{$\sim$SubaddressImpl}}
+\index{````~SubaddressImpl@{$\sim$SubaddressImpl}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$SubaddressImpl()}{~SubaddressImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Subaddress\+Impl\+::$\sim$\+Subaddress\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a40cb1e7c223f0b344f4d6128d9da9c8c}\label{classWallet_1_1SubaddressImpl_a40cb1e7c223f0b344f4d6128d9da9c8c}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!addRow@{addRow}}
+\index{addRow@{addRow}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{addRow()}{addRow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Subaddress\+Impl\+::add\+Row (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{const std\+::string \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1Subaddress_a6bff63d93d02d7d99f6d472d3a59885c}{Wallet\+::\+Subaddress}}.
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a9428569868f5b84db5ac7309db079b3b}\label{classWallet_1_1SubaddressImpl_a9428569868f5b84db5ac7309db079b3b}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!clearRows@{clearRows}}
+\index{clearRows@{clearRows}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{clearRows()}{clearRows()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Subaddress\+Impl\+::clear\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a4222f6e91d52d9bb7256f3b23bd34631}\label{classWallet_1_1SubaddressImpl_a4222f6e91d52d9bb7256f3b23bd34631}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!getAll@{getAll}}
+\index{getAll@{getAll}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1SubaddressRow}{Subaddress\+Row}} $\ast$ $>$ Wallet\+::\+Subaddress\+Impl\+::get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1Subaddress_a793bc67a8227e29976c163cb960ab477}{Wallet\+::\+Subaddress}}.
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a0e571ad8fe963722ed8d73f1bf5af8af}\label{classWallet_1_1SubaddressImpl_a0e571ad8fe963722ed8d73f1bf5af8af}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!refresh@{refresh}}
+\index{refresh@{refresh}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Subaddress\+Impl\+::refresh (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1Subaddress_a7ac8d442eb1bdaae0d0a48e7223c4c40}{Wallet\+::\+Subaddress}}.
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a7003cead9e56e2505b1dca5be59c12c9}\label{classWallet_1_1SubaddressImpl_a7003cead9e56e2505b1dca5be59c12c9}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!setLabel@{setLabel}}
+\index{setLabel@{setLabel}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{setLabel()}{setLabel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Subaddress\+Impl\+::set\+Label (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{uint32\+\_\+t}]{address\+Index,  }\item[{const std\+::string \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1Subaddress_a890129a6c5c0104ba8bd337b493d3e07}{Wallet\+::\+Subaddress}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_aa0f7807d6626635433213b67e007ee81}\label{classWallet_1_1SubaddressImpl_aa0f7807d6626635433213b67e007ee81}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!m\_rows@{m\_rows}}
+\index{m\_rows@{m\_rows}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{m\_rows}{m\_rows}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structWallet_1_1SubaddressRow}{Subaddress\+Row}}$\ast$$>$ Wallet\+::\+Subaddress\+Impl\+::m\+\_\+rows\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1SubaddressImpl_a7cdce7c4a3a36c008683d08e4d8b1c1f}\label{classWallet_1_1SubaddressImpl_a7cdce7c4a3a36c008683d08e4d8b1c1f}} 
+\index{Wallet::SubaddressImpl@{Wallet::SubaddressImpl}!m\_wallet@{m\_wallet}}
+\index{m\_wallet@{m\_wallet}!Wallet::SubaddressImpl@{Wallet::SubaddressImpl}}
+\doxysubsubsection{\texorpdfstring{m\_wallet}{m\_wallet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}}$\ast$ Wallet\+::\+Subaddress\+Impl\+::m\+\_\+wallet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{subaddress_8h}{subaddress.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{subaddress_8cpp}{subaddress.\+cpp}}\end{DoxyCompactItemize}

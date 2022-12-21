@@ -1,0 +1,408 @@
+\hypertarget{classcryptonote_1_1miner}{}\doxysection{cryptonote\+::miner Class Reference}
+\label{classcryptonote_1_1miner}\index{cryptonote::miner@{cryptonote::miner}}
+
+
+{\ttfamily \#include $<$miner.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::miner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1miner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1miner_1_1miner__config}{miner\+\_\+config}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1miner_a4ee6cfaa33b62b980d8519c56b94f692}{miner}} (\mbox{\hyperlink{structcryptonote_1_1i__miner__handler}{i\+\_\+miner\+\_\+handler}} $\ast$phandler, const \mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} \&gbh)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1miner_a3920afed6f8fb43b7ca542803b6056e7}{$\sim$miner}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_acd311bb781dc0593ae334c5c0f8e5790}{init}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a5ef0112bd581321b0c373fc6a18bd2b4}{set\+\_\+block\+\_\+template}} (const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&bl, const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} \&diffic, uint64\+\_\+t height, uint64\+\_\+t block\+\_\+reward)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_ab7b51851b6670477254465e4ed4fce8e}{on\+\_\+block\+\_\+chain\+\_\+update}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a6b658421b89af438d5a9f4fb405058b7}{start}} (const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \&adr, int threads\+\_\+count, int stop\+\_\+after=0, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} slow\+\_\+mining=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+double \mbox{\hyperlink{classcryptonote_1_1miner_a9b16444e6ad1befd33afe352b5cb4027}{get\+\_\+speed}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classcryptonote_1_1miner_a75ae213964da45a12fc39d5267cdae0f}{get\+\_\+threads\+\_\+count}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a35258a899bed2cc9a8d65da826896c02}{stop}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a26f4ce096915e24ed14371da08acde81}{is\+\_\+mining}} () const
+\item 
+const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \& \mbox{\hyperlink{classcryptonote_1_1miner_a0881d6555261c404b1c828751f330c92}{get\+\_\+mining\+\_\+address}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_aedd7c4a2e288dd050e542cdc9f3862bf}{on\+\_\+idle}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1miner_a16a7a48631c00c4548285abb046a621e}{on\+\_\+synchronized}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1miner_a06059f8b67c6de98323748e8d54cc583}{pause}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1miner_a5991fbed50099722c828dd42e01461f1}{resume}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1miner_a2bcbca1289654379e0c71ec5495b82f9}{get\+\_\+block\+\_\+reward}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcryptonote_1_1miner_a557e7da77f83ca8e54353a41d0a5ab61}{init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_ad8ca9c48bc99e3127dba534eaaacba15}{find\+\_\+nonce\+\_\+for\+\_\+given\+\_\+block}} (const \mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} \&gbh, \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&bl, const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} \&diffic, uint64\+\_\+t height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_af04d58ff5babcc7b2c75ae5b6f54b9a0}{worker\+\_\+thread}} (uint32\+\_\+t index, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} slow\+\_\+mining=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a5fb70b5afcd1f034fb12cf2b005e8417}{request\+\_\+block\+\_\+template}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1miner_a86de7490678afa67b17d1846e09f94aa}{update\+\_\+hashrate}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1miner_a553963366fa6ec78dcc2e9a637030ea7}{m\+\_\+stop}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1miner_a22762f2406e66303d1b62aed410c719f}{m\+\_\+stop\+\_\+height}} = std\+::numeric\+\_\+limits$<$uint64\+\_\+t$>$\+::max()
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1miner_aa052e02fa22df5cd2247170d7e59c74b}{m\+\_\+template\+\_\+lock}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block}{block}} \mbox{\hyperlink{classcryptonote_1_1miner_a2d14305cdb8fb943e0aaabcf90a190f2}{m\+\_\+template}}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1miner_ae514ee19ee1847feee45eaaaf6495325}{m\+\_\+template\+\_\+no}} = 0
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1miner_af9ad3c9b9e7f5ab482f1298e8910fd8d}{m\+\_\+starter\+\_\+nonce}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} \mbox{\hyperlink{classcryptonote_1_1miner_a4045e0b026d34aebe79490ecbfac02d8}{m\+\_\+diffic}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1miner_a6e4689823ec6f08025b0a99e6655177a}{m\+\_\+height}} = 0
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classcryptonote_1_1miner_ab3447620832919300239c3ee75c00968}{m\+\_\+threads\+\_\+total}} = 0
+\item 
+std\+::atomic$<$ int $>$ \mbox{\hyperlink{classcryptonote_1_1miner_aadc2cbea18065319819d02ebb52f2855}{m\+\_\+pausers\+\_\+count}} = 0
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1miner_a8d9da533d71b41305b86af1f99f6cb44}{m\+\_\+miners\+\_\+count\+\_\+mutex}}
+\item 
+std\+::list$<$ std\+::thread $>$ \mbox{\hyperlink{classcryptonote_1_1miner_a79d8c65fe061c3086987c4cde4bfe071}{m\+\_\+threads}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1miner_a1f115980b9c25cee5df3b750cd7a95f2}{m\+\_\+threads\+\_\+lock}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1i__miner__handler}{i\+\_\+miner\+\_\+handler}} $\ast$ \mbox{\hyperlink{classcryptonote_1_1miner_abaf56259e7f16dae86985965cf393b65}{m\+\_\+phandler}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} \mbox{\hyperlink{classcryptonote_1_1miner_a1a8560cb8c4ceb37eda8fd08baa94d0e}{m\+\_\+gbh}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \mbox{\hyperlink{classcryptonote_1_1miner_a4e1a87acfd09c03c830cee73364eb5d9}{m\+\_\+mine\+\_\+address}}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1miner_a901dbb24486ae89088b8e6657e82c64b}{m\+\_\+update\+\_\+block\+\_\+template\+\_\+interval}} \{5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1miner_ae0d90038776077b5057c10683db3453e}{m\+\_\+update\+\_\+hashrate\+\_\+interval}} \{2\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1miner_a632a6f1a7c9e31377e45d4738082774f}{m\+\_\+hashrate\+\_\+mutex}}
+\item 
+std\+::optional$<$ std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point $>$ \mbox{\hyperlink{classcryptonote_1_1miner_ad8d23bc88c085d5fe4f9d0b780b8918f}{m\+\_\+last\+\_\+hr\+\_\+update}}
+\item 
+std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1miner_a713a74d64ab1b66193f7ff364c75d0fc}{m\+\_\+hashes}} = 0
+\item 
+double \mbox{\hyperlink{classcryptonote_1_1miner_a069351f0582ccbdc960a76383ca917fe}{m\+\_\+current\+\_\+hash\+\_\+rate}} = 0.\+0
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1miner_a972099c05884d7b9b83a658876b56983}{m\+\_\+do\+\_\+mining}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1miner_aab75e7ddb6d4e013968423a9c0494df0}{m\+\_\+block\+\_\+reward}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1miner_a4ee6cfaa33b62b980d8519c56b94f692}\label{classcryptonote_1_1miner_a4ee6cfaa33b62b980d8519c56b94f692}} 
+\index{cryptonote::miner@{cryptonote::miner}!miner@{miner}}
+\index{miner@{miner}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{miner()}{miner()}}
+{\footnotesize\ttfamily cryptonote\+::miner\+::miner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1i__miner__handler}{i\+\_\+miner\+\_\+handler}} $\ast$}]{phandler,  }\item[{const \mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} \&}]{gbh }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a3920afed6f8fb43b7ca542803b6056e7}\label{classcryptonote_1_1miner_a3920afed6f8fb43b7ca542803b6056e7}} 
+\index{cryptonote::miner@{cryptonote::miner}!````~miner@{$\sim$miner}}
+\index{````~miner@{$\sim$miner}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{$\sim$miner()}{~miner()}}
+{\footnotesize\ttfamily cryptonote\+::miner\+::$\sim$miner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1miner_ad8ca9c48bc99e3127dba534eaaacba15}\label{classcryptonote_1_1miner_ad8ca9c48bc99e3127dba534eaaacba15}} 
+\index{cryptonote::miner@{cryptonote::miner}!find\_nonce\_for\_given\_block@{find\_nonce\_for\_given\_block}}
+\index{find\_nonce\_for\_given\_block@{find\_nonce\_for\_given\_block}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{find\_nonce\_for\_given\_block()}{find\_nonce\_for\_given\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::find\+\_\+nonce\+\_\+for\+\_\+given\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} \&}]{gbh,  }\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{bl,  }\item[{const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} \&}]{diffic,  }\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a2bcbca1289654379e0c71ec5495b82f9}\label{classcryptonote_1_1miner_a2bcbca1289654379e0c71ec5495b82f9}} 
+\index{cryptonote::miner@{cryptonote::miner}!get\_block\_reward@{get\_block\_reward}}
+\index{get\_block\_reward@{get\_block\_reward}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{get\_block\_reward()}{get\_block\_reward()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::miner\+::get\+\_\+block\+\_\+reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a0881d6555261c404b1c828751f330c92}\label{classcryptonote_1_1miner_a0881d6555261c404b1c828751f330c92}} 
+\index{cryptonote::miner@{cryptonote::miner}!get\_mining\_address@{get\_mining\_address}}
+\index{get\_mining\_address@{get\_mining\_address}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{get\_mining\_address()}{get\_mining\_address()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \& cryptonote\+::miner\+::get\+\_\+mining\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a9b16444e6ad1befd33afe352b5cb4027}\label{classcryptonote_1_1miner_a9b16444e6ad1befd33afe352b5cb4027}} 
+\index{cryptonote::miner@{cryptonote::miner}!get\_speed@{get\_speed}}
+\index{get\_speed@{get\_speed}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{get\_speed()}{get\_speed()}}
+{\footnotesize\ttfamily double cryptonote\+::miner\+::get\+\_\+speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a75ae213964da45a12fc39d5267cdae0f}\label{classcryptonote_1_1miner_a75ae213964da45a12fc39d5267cdae0f}} 
+\index{cryptonote::miner@{cryptonote::miner}!get\_threads\_count@{get\_threads\_count}}
+\index{get\_threads\_count@{get\_threads\_count}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{get\_threads\_count()}{get\_threads\_count()}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::miner\+::get\+\_\+threads\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_acd311bb781dc0593ae334c5c0f8e5790}\label{classcryptonote_1_1miner_acd311bb781dc0593ae334c5c0f8e5790}} 
+\index{cryptonote::miner@{cryptonote::miner}!init@{init}}
+\index{init@{init}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::init (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a557e7da77f83ca8e54353a41d0a5ab61}\label{classcryptonote_1_1miner_a557e7da77f83ca8e54353a41d0a5ab61}} 
+\index{cryptonote::miner@{cryptonote::miner}!init\_options@{init\_options}}
+\index{init\_options@{init\_options}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{init\_options()}{init\_options()}}
+{\footnotesize\ttfamily void cryptonote\+::miner\+::init\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a26f4ce096915e24ed14371da08acde81}\label{classcryptonote_1_1miner_a26f4ce096915e24ed14371da08acde81}} 
+\index{cryptonote::miner@{cryptonote::miner}!is\_mining@{is\_mining}}
+\index{is\_mining@{is\_mining}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{is\_mining()}{is\_mining()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::is\+\_\+mining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_ab7b51851b6670477254465e4ed4fce8e}\label{classcryptonote_1_1miner_ab7b51851b6670477254465e4ed4fce8e}} 
+\index{cryptonote::miner@{cryptonote::miner}!on\_block\_chain\_update@{on\_block\_chain\_update}}
+\index{on\_block\_chain\_update@{on\_block\_chain\_update}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{on\_block\_chain\_update()}{on\_block\_chain\_update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::on\+\_\+block\+\_\+chain\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_aedd7c4a2e288dd050e542cdc9f3862bf}\label{classcryptonote_1_1miner_aedd7c4a2e288dd050e542cdc9f3862bf}} 
+\index{cryptonote::miner@{cryptonote::miner}!on\_idle@{on\_idle}}
+\index{on\_idle@{on\_idle}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{on\_idle()}{on\_idle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::on\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a16a7a48631c00c4548285abb046a621e}\label{classcryptonote_1_1miner_a16a7a48631c00c4548285abb046a621e}} 
+\index{cryptonote::miner@{cryptonote::miner}!on\_synchronized@{on\_synchronized}}
+\index{on\_synchronized@{on\_synchronized}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{on\_synchronized()}{on\_synchronized()}}
+{\footnotesize\ttfamily void cryptonote\+::miner\+::on\+\_\+synchronized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a06059f8b67c6de98323748e8d54cc583}\label{classcryptonote_1_1miner_a06059f8b67c6de98323748e8d54cc583}} 
+\index{cryptonote::miner@{cryptonote::miner}!pause@{pause}}
+\index{pause@{pause}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void cryptonote\+::miner\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a5fb70b5afcd1f034fb12cf2b005e8417}\label{classcryptonote_1_1miner_a5fb70b5afcd1f034fb12cf2b005e8417}} 
+\index{cryptonote::miner@{cryptonote::miner}!request\_block\_template@{request\_block\_template}}
+\index{request\_block\_template@{request\_block\_template}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{request\_block\_template()}{request\_block\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::request\+\_\+block\+\_\+template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a5991fbed50099722c828dd42e01461f1}\label{classcryptonote_1_1miner_a5991fbed50099722c828dd42e01461f1}} 
+\index{cryptonote::miner@{cryptonote::miner}!resume@{resume}}
+\index{resume@{resume}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily void cryptonote\+::miner\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a5ef0112bd581321b0c373fc6a18bd2b4}\label{classcryptonote_1_1miner_a5ef0112bd581321b0c373fc6a18bd2b4}} 
+\index{cryptonote::miner@{cryptonote::miner}!set\_block\_template@{set\_block\_template}}
+\index{set\_block\_template@{set\_block\_template}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{set\_block\_template()}{set\_block\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::set\+\_\+block\+\_\+template (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{bl,  }\item[{const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} \&}]{diffic,  }\item[{uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t}]{block\+\_\+reward }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a6b658421b89af438d5a9f4fb405058b7}\label{classcryptonote_1_1miner_a6b658421b89af438d5a9f4fb405058b7}} 
+\index{cryptonote::miner@{cryptonote::miner}!start@{start}}
+\index{start@{start}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} \&}]{adr,  }\item[{int}]{threads\+\_\+count,  }\item[{int}]{stop\+\_\+after = {\ttfamily 0},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{slow\+\_\+mining = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a35258a899bed2cc9a8d65da826896c02}\label{classcryptonote_1_1miner_a35258a899bed2cc9a8d65da826896c02}} 
+\index{cryptonote::miner@{cryptonote::miner}!stop@{stop}}
+\index{stop@{stop}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a86de7490678afa67b17d1846e09f94aa}\label{classcryptonote_1_1miner_a86de7490678afa67b17d1846e09f94aa}} 
+\index{cryptonote::miner@{cryptonote::miner}!update\_hashrate@{update\_hashrate}}
+\index{update\_hashrate@{update\_hashrate}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{update\_hashrate()}{update\_hashrate()}}
+{\footnotesize\ttfamily void cryptonote\+::miner\+::update\+\_\+hashrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_af04d58ff5babcc7b2c75ae5b6f54b9a0}\label{classcryptonote_1_1miner_af04d58ff5babcc7b2c75ae5b6f54b9a0}} 
+\index{cryptonote::miner@{cryptonote::miner}!worker\_thread@{worker\_thread}}
+\index{worker\_thread@{worker\_thread}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{worker\_thread()}{worker\_thread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::worker\+\_\+thread (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{slow\+\_\+mining = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1miner_aab75e7ddb6d4e013968423a9c0494df0}\label{classcryptonote_1_1miner_aab75e7ddb6d4e013968423a9c0494df0}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_block\_reward@{m\_block\_reward}}
+\index{m\_block\_reward@{m\_block\_reward}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_block\_reward}{m\_block\_reward}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ cryptonote\+::miner\+::m\+\_\+block\+\_\+reward = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a069351f0582ccbdc960a76383ca917fe}\label{classcryptonote_1_1miner_a069351f0582ccbdc960a76383ca917fe}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_current\_hash\_rate@{m\_current\_hash\_rate}}
+\index{m\_current\_hash\_rate@{m\_current\_hash\_rate}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_current\_hash\_rate}{m\_current\_hash\_rate}}
+{\footnotesize\ttfamily double cryptonote\+::miner\+::m\+\_\+current\+\_\+hash\+\_\+rate = 0.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a4045e0b026d34aebe79490ecbfac02d8}\label{classcryptonote_1_1miner_a4045e0b026d34aebe79490ecbfac02d8}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_diffic@{m\_diffic}}
+\index{m\_diffic@{m\_diffic}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_diffic}{m\_diffic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{difficulty\+\_\+type}} cryptonote\+::miner\+::m\+\_\+diffic = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a972099c05884d7b9b83a658876b56983}\label{classcryptonote_1_1miner_a972099c05884d7b9b83a658876b56983}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_do\_mining@{m\_do\_mining}}
+\index{m\_do\_mining@{m\_do\_mining}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_do\_mining}{m\_do\_mining}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::miner\+::m\+\_\+do\+\_\+mining = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a1a8560cb8c4ceb37eda8fd08baa94d0e}\label{classcryptonote_1_1miner_a1a8560cb8c4ceb37eda8fd08baa94d0e}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_gbh@{m\_gbh}}
+\index{m\_gbh@{m\_gbh}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_gbh}{m\_gbh}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_adfb738cc7a1a8077f62d2841ec5528a9}{get\+\_\+block\+\_\+hash\+\_\+t}} cryptonote\+::miner\+::m\+\_\+gbh\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a713a74d64ab1b66193f7ff364c75d0fc}\label{classcryptonote_1_1miner_a713a74d64ab1b66193f7ff364c75d0fc}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_hashes@{m\_hashes}}
+\index{m\_hashes@{m\_hashes}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_hashes}{m\_hashes}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ cryptonote\+::miner\+::m\+\_\+hashes = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a632a6f1a7c9e31377e45d4738082774f}\label{classcryptonote_1_1miner_a632a6f1a7c9e31377e45d4738082774f}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_hashrate\_mutex@{m\_hashrate\_mutex}}
+\index{m\_hashrate\_mutex@{m\_hashrate\_mutex}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_hashrate\_mutex}{m\_hashrate\_mutex}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::miner\+::m\+\_\+hashrate\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a6e4689823ec6f08025b0a99e6655177a}\label{classcryptonote_1_1miner_a6e4689823ec6f08025b0a99e6655177a}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::miner\+::m\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_ad8d23bc88c085d5fe4f9d0b780b8918f}\label{classcryptonote_1_1miner_ad8d23bc88c085d5fe4f9d0b780b8918f}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_last\_hr\_update@{m\_last\_hr\_update}}
+\index{m\_last\_hr\_update@{m\_last\_hr\_update}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_last\_hr\_update}{m\_last\_hr\_update}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point$>$ cryptonote\+::miner\+::m\+\_\+last\+\_\+hr\+\_\+update\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a4e1a87acfd09c03c830cee73364eb5d9}\label{classcryptonote_1_1miner_a4e1a87acfd09c03c830cee73364eb5d9}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_mine\_address@{m\_mine\_address}}
+\index{m\_mine\_address@{m\_mine\_address}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_mine\_address}{m\_mine\_address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1account__public__address}{account\+\_\+public\+\_\+address}} cryptonote\+::miner\+::m\+\_\+mine\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a8d9da533d71b41305b86af1f99f6cb44}\label{classcryptonote_1_1miner_a8d9da533d71b41305b86af1f99f6cb44}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_miners\_count\_mutex@{m\_miners\_count\_mutex}}
+\index{m\_miners\_count\_mutex@{m\_miners\_count\_mutex}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_miners\_count\_mutex}{m\_miners\_count\_mutex}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::miner\+::m\+\_\+miners\+\_\+count\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_aadc2cbea18065319819d02ebb52f2855}\label{classcryptonote_1_1miner_aadc2cbea18065319819d02ebb52f2855}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_pausers\_count@{m\_pausers\_count}}
+\index{m\_pausers\_count@{m\_pausers\_count}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_pausers\_count}{m\_pausers\_count}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ cryptonote\+::miner\+::m\+\_\+pausers\+\_\+count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_abaf56259e7f16dae86985965cf393b65}\label{classcryptonote_1_1miner_abaf56259e7f16dae86985965cf393b65}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_phandler@{m\_phandler}}
+\index{m\_phandler@{m\_phandler}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_phandler}{m\_phandler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1i__miner__handler}{i\+\_\+miner\+\_\+handler}}$\ast$ cryptonote\+::miner\+::m\+\_\+phandler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_af9ad3c9b9e7f5ab482f1298e8910fd8d}\label{classcryptonote_1_1miner_af9ad3c9b9e7f5ab482f1298e8910fd8d}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_starter\_nonce@{m\_starter\_nonce}}
+\index{m\_starter\_nonce@{m\_starter\_nonce}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_starter\_nonce}{m\_starter\_nonce}}
+{\footnotesize\ttfamily std\+::atomic$<$uint32\+\_\+t$>$ cryptonote\+::miner\+::m\+\_\+starter\+\_\+nonce\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a553963366fa6ec78dcc2e9a637030ea7}\label{classcryptonote_1_1miner_a553963366fa6ec78dcc2e9a637030ea7}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_stop@{m\_stop}}
+\index{m\_stop@{m\_stop}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_stop}{m\_stop}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ cryptonote\+::miner\+::m\+\_\+stop\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a22762f2406e66303d1b62aed410c719f}\label{classcryptonote_1_1miner_a22762f2406e66303d1b62aed410c719f}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_stop\_height@{m\_stop\_height}}
+\index{m\_stop\_height@{m\_stop\_height}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_stop\_height}{m\_stop\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::miner\+::m\+\_\+stop\+\_\+height = std\+::numeric\+\_\+limits$<$uint64\+\_\+t$>$\+::max()\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a2d14305cdb8fb943e0aaabcf90a190f2}\label{classcryptonote_1_1miner_a2d14305cdb8fb943e0aaabcf90a190f2}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_template@{m\_template}}
+\index{m\_template@{m\_template}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_template}{m\_template}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1block}{block}} cryptonote\+::miner\+::m\+\_\+template\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_aa052e02fa22df5cd2247170d7e59c74b}\label{classcryptonote_1_1miner_aa052e02fa22df5cd2247170d7e59c74b}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_template\_lock@{m\_template\_lock}}
+\index{m\_template\_lock@{m\_template\_lock}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_template\_lock}{m\_template\_lock}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::miner\+::m\+\_\+template\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_ae514ee19ee1847feee45eaaaf6495325}\label{classcryptonote_1_1miner_ae514ee19ee1847feee45eaaaf6495325}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_template\_no@{m\_template\_no}}
+\index{m\_template\_no@{m\_template\_no}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_template\_no}{m\_template\_no}}
+{\footnotesize\ttfamily std\+::atomic$<$uint32\+\_\+t$>$ cryptonote\+::miner\+::m\+\_\+template\+\_\+no = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a79d8c65fe061c3086987c4cde4bfe071}\label{classcryptonote_1_1miner_a79d8c65fe061c3086987c4cde4bfe071}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_threads@{m\_threads}}
+\index{m\_threads@{m\_threads}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_threads}{m\_threads}}
+{\footnotesize\ttfamily std\+::list$<$std\+::thread$>$ cryptonote\+::miner\+::m\+\_\+threads\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a1f115980b9c25cee5df3b750cd7a95f2}\label{classcryptonote_1_1miner_a1f115980b9c25cee5df3b750cd7a95f2}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_threads\_lock@{m\_threads\_lock}}
+\index{m\_threads\_lock@{m\_threads\_lock}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_threads\_lock}{m\_threads\_lock}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::miner\+::m\+\_\+threads\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_ab3447620832919300239c3ee75c00968}\label{classcryptonote_1_1miner_ab3447620832919300239c3ee75c00968}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_threads\_total@{m\_threads\_total}}
+\index{m\_threads\_total@{m\_threads\_total}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_threads\_total}{m\_threads\_total}}
+{\footnotesize\ttfamily std\+::atomic$<$int$>$ cryptonote\+::miner\+::m\+\_\+threads\+\_\+total = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_a901dbb24486ae89088b8e6657e82c64b}\label{classcryptonote_1_1miner_a901dbb24486ae89088b8e6657e82c64b}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_update\_block\_template\_interval@{m\_update\_block\_template\_interval}}
+\index{m\_update\_block\_template\_interval@{m\_update\_block\_template\_interval}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_update\_block\_template\_interval}{m\_update\_block\_template\_interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} cryptonote\+::miner\+::m\+\_\+update\+\_\+block\+\_\+template\+\_\+interval \{5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1miner_ae0d90038776077b5057c10683db3453e}\label{classcryptonote_1_1miner_ae0d90038776077b5057c10683db3453e}} 
+\index{cryptonote::miner@{cryptonote::miner}!m\_update\_hashrate\_interval@{m\_update\_hashrate\_interval}}
+\index{m\_update\_hashrate\_interval@{m\_update\_hashrate\_interval}!cryptonote::miner@{cryptonote::miner}}
+\doxysubsubsection{\texorpdfstring{m\_update\_hashrate\_interval}{m\_update\_hashrate\_interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} cryptonote\+::miner\+::m\+\_\+update\+\_\+hashrate\+\_\+interval \{2\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{miner_8h}{miner.\+h}}\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{miner_8cpp}{miner.\+cpp}}\end{DoxyCompactItemize}

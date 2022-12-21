@@ -1,0 +1,360 @@
+\hypertarget{namespaceserialization}{}\doxysection{serialization Namespace Reference}
+\label{namespaceserialization}\index{serialization@{serialization}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserialization_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{binary\+\_\+archive\+\_\+nested\+\_\+array}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1binary__archive__nested__object}{binary\+\_\+archive\+\_\+nested\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__archiver}{binary\+\_\+archiver}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__string__archiver}{binary\+\_\+string\+\_\+archiver}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__string__unarchiver}{binary\+\_\+string\+\_\+unarchiver}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1deserializer}{deserializer}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1json__archiver}{json\+\_\+archiver}}
+\begin{DoxyCompactList}\small\item\em a archive using the J\+S\+ON standard \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classserialization_1_1json__string__archiver}{json\+\_\+string\+\_\+archiver}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1one__shot__read__buffer}{one\+\_\+shot\+\_\+read\+\_\+buffer}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1serializer}{serializer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{binary\+\_\+variant\+\_\+tag\+\_\+type}} = uint8\+\_\+t
+\item 
+using \mbox{\hyperlink{namespaceserialization_a462e39aa7d6a316aca0ab6d261aa5e2f}{json\+\_\+variant\+\_\+tag\+\_\+type}} = std\+::string\+\_\+view
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a978f0311bd965c5b618439b77231c7af}{parse\+\_\+binary}} (std\+::string\+\_\+view blob, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::string \mbox{\hyperlink{namespaceserialization_a24242deec2a18fdde0b256f080b6b6cd}{dump\+\_\+binary}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+{\footnotesize template$<$class Archive , typename Container , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_ad8d9c765bf335b1c7225481ea045f6ff}{deserialize\+\_\+all}} (Archive \&ar, Container \&c)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceserialization_ad0c9966a2db338775aa6b2890aaad787}{serialize\+\_\+value}} (Archive \&ar, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a9401daafe689ac6c7651169b2704cb80}{serialize\+\_\+value}} (Archive \&ar, std\+::deque$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::string \mbox{\hyperlink{namespaceserialization_aae0903a5e2b0660e894f689857de8873}{dump\+\_\+json}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+{\footnotesize template$<$class Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_aa04f17eda4555cdd47f6e2fa334c5c9a}{serialize\+\_\+value}} (Archive \&ar, std\+::list$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive , class F , class S $>$ }\\void \mbox{\hyperlink{namespaceserialization_a86a16f4183765565af7afdb3ed61052e}{serialize\+\_\+value}} (Archive \&ar, std\+::pair$<$ \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, S $>$ \&p)
+\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{value}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Serialization functions. These are used to add/read a value to/from an ongoing serialization. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate $>$ }\\void \mbox{\hyperlink{namespaceserialization_a4ae1a3b416f17671b1e53872a8b5b6ab}{value}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v, Predicate test)
+\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_aa12ab512142e5bbbe84b56cfb2caff4c}{varint}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Serializes an integer value using varint encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_ad98eda8c9ebad51890b010d8c4db6c71}{varint}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate test)
+\begin{DoxyCompactList}\small\item\em Serializes an integer or enum value using varint encoding with a Predicate (see \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{value()}}). \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{field}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Adds a key-\/value pair. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate $>$ }\\void \mbox{\hyperlink{namespaceserialization_a68541ccb65af5107936f8d115aee35a2}{field}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate \&\&test)
+\begin{DoxyCompactList}\small\item\em Adds a key-\/value pair with a predicate. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}{field\+\_\+varint}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_a0719cf7727dff9ba70a7d7947ea3d3f1}{field\+\_\+varint}} (Archive \&ar, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val, Predicate \&\&test)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceserialization_ad8b667530b75a747a1492ab10d1e0e53}{done}} (Archive \&ar)
+\item 
+{\footnotesize template$<$class Archive , typename T $>$ }\\void \mbox{\hyperlink{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}{serialize}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+{\footnotesize template$<$class Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_ab6d1055aa90cba32893df4ea47a8a87d}{serialize\+\_\+value}} (Archive \&ar, std\+::set$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceserialization_a8d54d67196155a83a4d0406b4af861df}{serialize\+\_\+value}} (Archive \&ar, std\+::string \&str)
+\item 
+{\footnotesize template$<$class Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a66752726d045b5ebb2f09afb8bb4c1b6}{serialize\+\_\+value}} (Archive \&ar, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+{\footnotesize template$<$typename T , typename Tag\+Type $>$ }\\constexpr Tag\+Type \mbox{\hyperlink{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}{variant\+\_\+not\+\_\+registered}} ()
+\item 
+{\footnotesize template$<$typename Archive , typename... T$>$ }\\void \mbox{\hyperlink{namespaceserialization_a888241447b0c0107baf03f431458cd90}{serialize\+\_\+value}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_a0217843492cfdf7558361fb829a93813}{serialize\+\_\+value}} (Archive \&ar, std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}{is\+\_\+binary}} = std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{classserialization_1_1binary__archiver}{binary\+\_\+archiver}}, Archive$>$ $\vert$$\vert$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}}, Archive$>$
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_a7a80f2a7b7264644a7e781fc45fe95fa}{binary\+\_\+serializable}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_aca6a1fd6dd25f911c2a2fe4374b7b048}{T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+B\+LE}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+constexpr int \mbox{\hyperlink{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}{\+\_\+serialization\+\_\+macro}} = 0
+\item 
+{\footnotesize template$<$typename T , typename Tag $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_af1051578d104f346bc6d974105779d94}{V\+A\+R\+I\+A\+N\+T\+\_\+\+N\+O\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$class T , class Tag\+Type $>$ }\\constexpr auto \mbox{\hyperlink{namespaceserialization_ac399e4f60b62450737d4010c520ce449}{variant\+\_\+serialization\+\_\+tag}} = \mbox{\hyperlink{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}{variant\+\_\+not\+\_\+registered}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, Tag\+Type$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}\label{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}} 
+\index{serialization@{serialization}!binary\_variant\_tag\_type@{binary\_variant\_tag\_type}}
+\index{binary\_variant\_tag\_type@{binary\_variant\_tag\_type}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{binary\_variant\_tag\_type}{binary\_variant\_tag\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{serialization\+::binary\+\_\+variant\+\_\+tag\+\_\+type}} = typedef uint8\+\_\+t}
+
+\mbox{\Hypertarget{namespaceserialization_a462e39aa7d6a316aca0ab6d261aa5e2f}\label{namespaceserialization_a462e39aa7d6a316aca0ab6d261aa5e2f}} 
+\index{serialization@{serialization}!json\_variant\_tag\_type@{json\_variant\_tag\_type}}
+\index{json\_variant\_tag\_type@{json\_variant\_tag\_type}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{json\_variant\_tag\_type}{json\_variant\_tag\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespaceserialization_a462e39aa7d6a316aca0ab6d261aa5e2f}{serialization\+::json\+\_\+variant\+\_\+tag\+\_\+type}} = typedef std\+::string\+\_\+view}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceserialization_ad8d9c765bf335b1c7225481ea045f6ff}\label{namespaceserialization_ad8d9c765bf335b1c7225481ea045f6ff}} 
+\index{serialization@{serialization}!deserialize\_all@{deserialize\_all}}
+\index{deserialize\_all@{deserialize\_all}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{deserialize\_all()}{deserialize\_all()}}
+{\footnotesize\ttfamily template$<$class Archive , typename Container , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ \\
+void serialization\+::deserialize\+\_\+all (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{Container \&}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_ad8b667530b75a747a1492ab10d1e0e53}\label{namespaceserialization_ad8b667530b75a747a1492ab10d1e0e53}} 
+\index{serialization@{serialization}!done@{done}}
+\index{done@{done}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void serialization\+::done (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})}
+
+Checks that the entire input stream has been consumed, when deserializing. Does nothing when serializing. Throws a std\+::runtime\+\_\+error if unconsumed data is still present. This is typically invoked indirectly via \mbox{\hyperlink{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}{serialization\+::serialize()}}. \mbox{\Hypertarget{namespaceserialization_a24242deec2a18fdde0b256f080b6b6cd}\label{namespaceserialization_a24242deec2a18fdde0b256f080b6b6cd}} 
+\index{serialization@{serialization}!dump\_binary@{dump\_binary}}
+\index{dump\_binary@{dump\_binary}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{dump\_binary()}{dump\_binary()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string serialization\+::dump\+\_\+binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})}
+
+serializes the data in v to a string. Throws on error. \mbox{\Hypertarget{namespaceserialization_aae0903a5e2b0660e894f689857de8873}\label{namespaceserialization_aae0903a5e2b0660e894f689857de8873}} 
+\index{serialization@{serialization}!dump\_json@{dump\_json}}
+\index{dump\_json@{dump\_json}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{dump\_json()}{dump\_json()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::string serialization\+::dump\+\_\+json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})}
+
+serializes the data in v to a string. Throws on error. \mbox{\Hypertarget{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}\label{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}} 
+\index{serialization@{serialization}!field@{field}}
+\index{field@{field}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{field()}{field()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T $>$ \\
+void serialization\+::field (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Adds a key-\/value pair. 
+
+\mbox{\Hypertarget{namespaceserialization_a68541ccb65af5107936f8d115aee35a2}\label{namespaceserialization_a68541ccb65af5107936f8d115aee35a2}} 
+\index{serialization@{serialization}!field@{field}}
+\index{field@{field}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{field()}{field()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , typename Predicate $>$ \\
+void serialization\+::field (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val,  }\item[{Predicate \&\&}]{test }\end{DoxyParamCaption})}
+
+
+
+Adds a key-\/value pair with a predicate. 
+
+\mbox{\Hypertarget{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}\label{namespaceserialization_a32f09e028e3544bc5bbde36e0aa42ffd}} 
+\index{serialization@{serialization}!field\_varint@{field\_varint}}
+\index{field\_varint@{field\_varint}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{field\_varint()}{field\_varint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::field\+\_\+varint (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+Serializes a key-\/value pair where the value is an integer or an enum using varint encoding of the value. \mbox{\Hypertarget{namespaceserialization_a0719cf7727dff9ba70a7d7947ea3d3f1}\label{namespaceserialization_a0719cf7727dff9ba70a7d7947ea3d3f1}} 
+\index{serialization@{serialization}!field\_varint@{field\_varint}}
+\index{field\_varint@{field\_varint}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{field\_varint()}{field\_varint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::field\+\_\+varint (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val,  }\item[{Predicate \&\&}]{test }\end{DoxyParamCaption})}
+
+Serializes using field\+\_\+varint(ar,name,val) with an additional predicate that must be satisfied when deserializing. \mbox{\Hypertarget{namespaceserialization_a978f0311bd965c5b618439b77231c7af}\label{namespaceserialization_a978f0311bd965c5b618439b77231c7af}} 
+\index{serialization@{serialization}!parse\_binary@{parse\_binary}}
+\index{parse\_binary@{parse\_binary}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{parse\_binary()}{parse\_binary()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void serialization\+::parse\+\_\+binary (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{blob,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})}
+
+deserializes a binary\+\_\+archiver-\/serialized value into v. Throws on error. Not consuming the entire string is considered an error. \mbox{\Hypertarget{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}\label{namespaceserialization_ab86112a5d6fecd06394bb3d3cb365c4b}} 
+\index{serialization@{serialization}!serialize@{serialize}}
+\index{serialize@{serialize}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive , typename T $>$ \\
+void serialization\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})}
+
+Serializes a value and then calls \mbox{\hyperlink{namespaceserialization_ad8b667530b75a747a1492ab10d1e0e53}{done()}} to make sure that the entire stream was consumed. You do {\itshape not} want to call this to serialize a single value as part of a larger serialization\+: you want \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{serialization\+::value()}} or \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{serialization\+::field()}} for that. \mbox{\Hypertarget{namespaceserialization_a9401daafe689ac6c7651169b2704cb80}\label{namespaceserialization_a9401daafe689ac6c7651169b2704cb80}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class T $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::deque$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_aa04f17eda4555cdd47f6e2fa334c5c9a}\label{namespaceserialization_aa04f17eda4555cdd47f6e2fa334c5c9a}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class T $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::list$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a86a16f4183765565af7afdb3ed61052e}\label{namespaceserialization_a86a16f4183765565af7afdb3ed61052e}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class F , class S $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::pair$<$ \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, S $>$ \&}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_ab6d1055aa90cba32893df4ea47a8a87d}\label{namespaceserialization_ab6d1055aa90cba32893df4ea47a8a87d}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class T $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::set$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a8d54d67196155a83a4d0406b4af861df}\label{namespaceserialization_a8d54d67196155a83a4d0406b4af861df}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a66752726d045b5ebb2f09afb8bb4c1b6}\label{namespaceserialization_a66752726d045b5ebb2f09afb8bb4c1b6}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class T $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a888241447b0c0107baf03f431458cd90}\label{namespaceserialization_a888241447b0c0107baf03f431458cd90}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily template$<$typename Archive , typename... T$>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::variant$<$ T... $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_ad0c9966a2db338775aa6b2890aaad787}\label{namespaceserialization_ad0c9966a2db338775aa6b2890aaad787}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a0217843492cfdf7558361fb829a93813}\label{namespaceserialization_a0217843492cfdf7558361fb829a93813}} 
+\index{serialization@{serialization}!serialize\_value@{serialize\_value}}
+\index{serialize\_value@{serialize\_value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{serialize\_value()}{serialize\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily template$<$class Archive , class T $>$ \\
+void serialization\+::serialize\+\_\+value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}\label{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}} 
+\index{serialization@{serialization}!value@{value}}
+\index{value@{value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Serialization functions. These are used to add/read a value to/from an ongoing serialization. 
+
+\mbox{\Hypertarget{namespaceserialization_a4ae1a3b416f17671b1e53872a8b5b6ab}\label{namespaceserialization_a4ae1a3b416f17671b1e53872a8b5b6ab}} 
+\index{serialization@{serialization}!value@{value}}
+\index{value@{value}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , typename Predicate $>$ \\
+void serialization\+::value (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v,  }\item[{Predicate}]{test }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}\label{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}} 
+\index{serialization@{serialization}!variant\_not\_registered@{variant\_not\_registered}}
+\index{variant\_not\_registered@{variant\_not\_registered}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{variant\_not\_registered()}{variant\_not\_registered()}}
+{\footnotesize\ttfamily template$<$typename T , typename Tag\+Type $>$ \\
+constexpr Tag\+Type serialization\+::variant\+\_\+not\+\_\+registered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceserialization_aa12ab512142e5bbbe84b56cfb2caff4c}\label{namespaceserialization_aa12ab512142e5bbbe84b56cfb2caff4c}} 
+\index{serialization@{serialization}!varint@{varint}}
+\index{varint@{varint}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{varint()}{varint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::varint (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Serializes an integer value using varint encoding. 
+
+Serializes an enum value using varint encoding of the underlying integer value. \mbox{\Hypertarget{namespaceserialization_ad98eda8c9ebad51890b010d8c4db6c71}\label{namespaceserialization_ad98eda8c9ebad51890b010d8c4db6c71}} 
+\index{serialization@{serialization}!varint@{varint}}
+\index{varint@{varint}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{varint()}{varint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Archive , typename T , typename Predicate , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+enum\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::varint (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val,  }\item[{Predicate}]{test }\end{DoxyParamCaption})}
+
+
+
+Serializes an integer or enum value using varint encoding with a Predicate (see \mbox{\hyperlink{namespaceserialization_a2c903a13fe2f03de6d83908a3be64bcf}{value()}}). 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}\label{namespaceserialization_a783ad6d7f32cd4e442e86dcb69b0b84a}} 
+\index{serialization@{serialization}!\_serialization\_macro@{\_serialization\_macro}}
+\index{\_serialization\_macro@{\_serialization\_macro}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{\_serialization\_macro}{\_serialization\_macro}}
+{\footnotesize\ttfamily constexpr int serialization\+::\+\_\+serialization\+\_\+macro = 0\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceserialization_a7a80f2a7b7264644a7e781fc45fe95fa}\label{namespaceserialization_a7a80f2a7b7264644a7e781fc45fe95fa}} 
+\index{serialization@{serialization}!binary\_serializable@{binary\_serializable}}
+\index{binary\_serializable@{binary\_serializable}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{binary\_serializable}{binary\_serializable}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::binary\+\_\+serializable = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\hyperlink{namespaceserialization_a7a80f2a7b7264644a7e781fc45fe95fa}{serialization\+::binary\+\_\+serializable$<$\+T$>$}}
+
+an specializable constexpr bool for indicating a byte-\/serializable type. Default to false. \mbox{\Hypertarget{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}\label{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}} 
+\index{serialization@{serialization}!is\_binary@{is\_binary}}
+\index{is\_binary@{is\_binary}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{is\_binary}{is\_binary}}
+{\footnotesize\ttfamily template$<$typename Archive $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::is\+\_\+binary = std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{classserialization_1_1binary__archiver}{binary\+\_\+archiver}}, Archive$>$ $\vert$$\vert$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}}, Archive$>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceserialization_aca6a1fd6dd25f911c2a2fe4374b7b048}\label{namespaceserialization_aca6a1fd6dd25f911c2a2fe4374b7b048}} 
+\index{serialization@{serialization}!TYPE\_IS\_NOT\_SERIALIZABLE@{TYPE\_IS\_NOT\_SERIALIZABLE}}
+\index{TYPE\_IS\_NOT\_SERIALIZABLE@{TYPE\_IS\_NOT\_SERIALIZABLE}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{TYPE\_IS\_NOT\_SERIALIZABLE}{TYPE\_IS\_NOT\_SERIALIZABLE}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::\+T\+Y\+P\+E\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+B\+LE = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceserialization_af1051578d104f346bc6d974105779d94}\label{namespaceserialization_af1051578d104f346bc6d974105779d94}} 
+\index{serialization@{serialization}!VARIANT\_NOT\_REGISTERED@{VARIANT\_NOT\_REGISTERED}}
+\index{VARIANT\_NOT\_REGISTERED@{VARIANT\_NOT\_REGISTERED}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_NOT\_REGISTERED}{VARIANT\_NOT\_REGISTERED}}
+{\footnotesize\ttfamily template$<$typename T , typename Tag $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} serialization\+::\+V\+A\+R\+I\+A\+N\+T\+\_\+\+N\+O\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespaceserialization_ac399e4f60b62450737d4010c520ce449}\label{namespaceserialization_ac399e4f60b62450737d4010c520ce449}} 
+\index{serialization@{serialization}!variant\_serialization\_tag@{variant\_serialization\_tag}}
+\index{variant\_serialization\_tag@{variant\_serialization\_tag}!serialization@{serialization}}
+\doxysubsubsection{\texorpdfstring{variant\_serialization\_tag}{variant\_serialization\_tag}}
+{\footnotesize\ttfamily template$<$class T , class Tag\+Type $>$ \\
+constexpr auto serialization\+::variant\+\_\+serialization\+\_\+tag = \mbox{\hyperlink{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}{variant\+\_\+not\+\_\+registered}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, Tag\+Type$>$()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+variant\+\_\+serialization\+\_\+tag is a constexpr template variable holds a variant type and tag.
+
+The base case is not usable; it must be specialized, typically using the V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG macro. 

@@ -1,0 +1,87 @@
+\hypertarget{structwallet_1_1rpc_1_1INCOMING__TRANSFERS}{}\doxysection{wallet\+::rpc\+::I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS Struct Reference}
+\label{structwallet_1_1rpc_1_1INCOMING__TRANSFERS}\index{wallet::rpc::INCOMING\_TRANSFERS@{wallet::rpc::INCOMING\_TRANSFERS}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{structwallet_1_1rpc_1_1INCOMING__TRANSFERS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{structwallet_1_1rpc_1_1INCOMING__TRANSFERS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a378a05e0e31188b51121b3a42715bed1}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_1_1REQUEST}{wallet\+::rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a47c964a18e4ce5e7ced71476f5fba5e0}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Return a list of incoming transfers to the wallet.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily transfer\+\_\+type} -- \char`\"{}all\char`\"{}\+: all the transfers, \char`\"{}available\char`\"{}\+: only transfers which are not yet spent, OR \char`\"{}unavailable\char`\"{}\+: only transfers which are already spent.
+\item {\ttfamily account\+\_\+index} -- (Optional) Return transfers for this account. (defaults to 0)
+\item {\ttfamily subaddr\+\_\+indices} -- (Optional) Return transfers sent to these subaddresses.
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily transfers} -- List of information of the transfers details.
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details}{transfer\+\_\+details}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a378a05e0e31188b51121b3a42715bed1}\label{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a378a05e0e31188b51121b3a42715bed1}} 
+\index{wallet::rpc::INCOMING\_TRANSFERS@{wallet::rpc::INCOMING\_TRANSFERS}!names@{names}}
+\index{names@{names}!wallet::rpc::INCOMING\_TRANSFERS@{wallet::rpc::INCOMING\_TRANSFERS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a47c964a18e4ce5e7ced71476f5fba5e0}\label{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_a47c964a18e4ce5e7ced71476f5fba5e0}} 
+\index{wallet::rpc::INCOMING\_TRANSFERS@{wallet::rpc::INCOMING\_TRANSFERS}!request@{request}}
+\index{request@{request}!wallet::rpc::INCOMING\_TRANSFERS@{wallet::rpc::INCOMING\_TRANSFERS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1INCOMING__TRANSFERS_1_1REQUEST}{wallet\+::rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

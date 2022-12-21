@@ -1,0 +1,98 @@
+\hypertarget{structwallet_1_1rpc_1_1SWEEP__SINGLE}{}\doxysection{wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+LE Struct Reference}
+\label{structwallet_1_1rpc_1_1SWEEP__SINGLE}\index{wallet::rpc::SWEEP\_SINGLE@{wallet::rpc::SWEEP\_SINGLE}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+LE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1SWEEP__SINGLE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+LE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1SWEEP__SINGLE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__SINGLE_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__SINGLE_a15b29ce0a5a0484757d5e614b2d01e57}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__SINGLE_1_1REQUEST}{wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__SINGLE_a8fad8b039de7e125f12a9b808afdc7a0}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Send all of a specific unlocked output to an address.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily address} -- Destination public address.
+\item {\ttfamily priority} -- Set a priority for the transaction. Accepted values are\+: 1 for unimportant or 5 for blink. (0 and 2-\/4 are accepted for backwards compatibility and are equivalent to 5)
+\item {\ttfamily outputs} -- ???
+\item {\ttfamily unlock\+\_\+time} -- Number of blocks before the oxen can be spent (0 to not add a lock).
+\item {\ttfamily payment\+\_\+id} -- (Optional) 64-\/character hex string to identify a transaction.
+\item {\ttfamily get\+\_\+tx\+\_\+key} -- (Optional) Return the transaction keys after sending.
+\item {\ttfamily key\+\_\+image} -- Key image of specific output to sweep.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, do not relay this sweep transfer. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- (Optional) return the transactions as hex encoded string. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- (Optional) return the transaction metadata as a string. (Defaults to false)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash} -- The tx hashes of the transaction.
+\item {\ttfamily tx\+\_\+key} -- The tx key of the transaction.
+\item {\ttfamily amount} -- The amount transfered in atomic units.
+\item {\ttfamily fee} -- The fee paid in atomic units.
+\item {\ttfamily tx\+\_\+blob} -- The tx as hex string.
+\item {\ttfamily tx\+\_\+metadata} -- Transaction metadata needed to relay the transaction later.
+\item {\ttfamily multisig\+\_\+txset} -- The set of signing keys used in a multisig transaction (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1SWEEP__SINGLE_a15b29ce0a5a0484757d5e614b2d01e57}\label{structwallet_1_1rpc_1_1SWEEP__SINGLE_a15b29ce0a5a0484757d5e614b2d01e57}} 
+\index{wallet::rpc::SWEEP\_SINGLE@{wallet::rpc::SWEEP\_SINGLE}!names@{names}}
+\index{names@{names}!wallet::rpc::SWEEP\_SINGLE@{wallet::rpc::SWEEP\_SINGLE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1SWEEP__SINGLE_a8fad8b039de7e125f12a9b808afdc7a0}\label{structwallet_1_1rpc_1_1SWEEP__SINGLE_a8fad8b039de7e125f12a9b808afdc7a0}} 
+\index{wallet::rpc::SWEEP\_SINGLE@{wallet::rpc::SWEEP\_SINGLE}!request@{request}}
+\index{request@{request}!wallet::rpc::SWEEP\_SINGLE@{wallet::rpc::SWEEP\_SINGLE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1SWEEP__SINGLE_1_1REQUEST}{wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

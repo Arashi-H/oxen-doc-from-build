@@ -1,0 +1,158 @@
+\hypertarget{classtools_1_1scoped__message__writer}{}\doxysection{tools\+::scoped\+\_\+message\+\_\+writer Class Reference}
+\label{classtools_1_1scoped__message__writer}\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+
+
+{\ttfamily \#include $<$scoped\+\_\+message\+\_\+writer.\+h$>$}
+
+
+
+Inheritance diagram for tools\+::scoped\+\_\+message\+\_\+writer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtools_1_1scoped__message__writer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer_a4a225ba1164da6e2e823e892bb1933b6}{scoped\+\_\+message\+\_\+writer}} (std\+::optional$<$ fmt\+::terminal\+\_\+color $>$ color=std\+::nullopt, std\+::string prefix=\char`\"{}\char`\"{}, log\+::\+Level log\+\_\+level=log\+::\+Level\+::info)
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer_afa6fb8e9dc02423f020d9d279e3c030e}{scoped\+\_\+message\+\_\+writer}} (\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&\&o)
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer_a4cee3933e546349744e246afdd899c4f}{scoped\+\_\+message\+\_\+writer}} (const \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{classtools_1_1scoped__message__writer_aead75ef767db5a3dd86c21bd28931ec8}{operator=}} (const \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{classtools_1_1scoped__message__writer_ac670b601a8415d7c1d3ba94ba8ad9049}{operator=}} (\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&\&rhs)=delete
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{classtools_1_1scoped__message__writer_ac832924c8a13174219e85e609cbffea4}{append}} (std\+::string\+\_\+view msg, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{classtools_1_1scoped__message__writer_aa193e6fe8d01f22208ac55572c5f07e1}{operator+=}} (std\+::string\+\_\+view msg)
+\begin{DoxyCompactList}\small\item\em Same as .append(msg). (Doesn\textquotesingle{}t format, just like the single-\/argument .append(msg)). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&\& \mbox{\hyperlink{classtools_1_1scoped__message__writer_a437d3e24bcc52ca50bc7795be9f1c963}{operator+}} (std\+::string\+\_\+view msg) \&\&
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{classtools_1_1scoped__message__writer_a909d5c482b6d5c7be2ba88bb241875a1}{flush}} ()
+\item 
+\mbox{\hyperlink{classtools_1_1scoped__message__writer_aaea72e20b1a2ac7a331de661e8f18b20}{$\sim$scoped\+\_\+message\+\_\+writer}} ()
+\begin{DoxyCompactList}\small\item\em Prints the complete message on destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtools_1_1scoped__message__writer_aa5a34ac2cb83a2584fd2b19222f764eb}{m\+\_\+prefix}}
+\item 
+std\+::string \mbox{\hyperlink{classtools_1_1scoped__message__writer_acf64f0e2573bcdcb229a5ce50921e118}{m\+\_\+content}}
+\item 
+std\+::optional$<$ fmt\+::terminal\+\_\+color $>$ \mbox{\hyperlink{classtools_1_1scoped__message__writer_aa5ef760e627b47fe952e6b14c7c75086}{m\+\_\+color}}
+\item 
+oxen\+::log\+::\+Level \mbox{\hyperlink{classtools_1_1scoped__message__writer_ad8d5731f7446d6c44d356c1662b87f1a}{m\+\_\+log\+\_\+level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_a4a225ba1164da6e2e823e892bb1933b6}\label{classtools_1_1scoped__message__writer_a4a225ba1164da6e2e823e892bb1933b6}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!scoped\_message\_writer@{scoped\_message\_writer}}
+\index{scoped\_message\_writer@{scoped\_message\_writer}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{scoped\_message\_writer()}{scoped\_message\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tools\+::scoped\+\_\+message\+\_\+writer\+::scoped\+\_\+message\+\_\+writer (\begin{DoxyParamCaption}\item[{std\+::optional$<$ fmt\+::terminal\+\_\+color $>$}]{color = {\ttfamily std\+:\+:nullopt},  }\item[{std\+::string}]{prefix = {\ttfamily \char`\"{}\char`\"{}},  }\item[{log\+::\+Level}]{log\+\_\+level = {\ttfamily log\+:\+:Level\+:\+:info} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_afa6fb8e9dc02423f020d9d279e3c030e}\label{classtools_1_1scoped__message__writer_afa6fb8e9dc02423f020d9d279e3c030e}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!scoped\_message\_writer@{scoped\_message\_writer}}
+\index{scoped\_message\_writer@{scoped\_message\_writer}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{scoped\_message\_writer()}{scoped\_message\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tools\+::scoped\+\_\+message\+\_\+writer\+::scoped\+\_\+message\+\_\+writer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&\&}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_a4cee3933e546349744e246afdd899c4f}\label{classtools_1_1scoped__message__writer_a4cee3933e546349744e246afdd899c4f}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!scoped\_message\_writer@{scoped\_message\_writer}}
+\index{scoped\_message\_writer@{scoped\_message\_writer}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{scoped\_message\_writer()}{scoped\_message\_writer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tools\+::scoped\+\_\+message\+\_\+writer\+::scoped\+\_\+message\+\_\+writer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_aaea72e20b1a2ac7a331de661e8f18b20}\label{classtools_1_1scoped__message__writer_aaea72e20b1a2ac7a331de661e8f18b20}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!````~scoped\_message\_writer@{$\sim$scoped\_message\_writer}}
+\index{````~scoped\_message\_writer@{$\sim$scoped\_message\_writer}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{$\sim$scoped\_message\_writer()}{~scoped\_message\_writer()}}
+{\footnotesize\ttfamily tools\+::scoped\+\_\+message\+\_\+writer\+::$\sim$scoped\+\_\+message\+\_\+writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the complete message on destruction. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_ac832924c8a13174219e85e609cbffea4}\label{classtools_1_1scoped__message__writer_ac832924c8a13174219e85e609cbffea4}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!append@{append}}
+\index{append@{append}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\& tools\+::scoped\+\_\+message\+\_\+writer\+::append (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{msg,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Appends a message and returns $\ast$this (so that it can be chained). If called with more than 1 argument then the first argument is fmt\+::format\textquotesingle{}ed with the remaining arguments. \mbox{\Hypertarget{classtools_1_1scoped__message__writer_a909d5c482b6d5c7be2ba88bb241875a1}\label{classtools_1_1scoped__message__writer_a909d5c482b6d5c7be2ba88bb241875a1}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!flush@{flush}}
+\index{flush@{flush}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \& tools\+::scoped\+\_\+message\+\_\+writer\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Flushes the current message to output and resets it. This is normally not called explicitly but rather implicitly when the object is destroyed. \mbox{\Hypertarget{classtools_1_1scoped__message__writer_a437d3e24bcc52ca50bc7795be9f1c963}\label{classtools_1_1scoped__message__writer_a437d3e24bcc52ca50bc7795be9f1c963}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!operator+@{operator+}}
+\index{operator+@{operator+}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\&\& tools\+::scoped\+\_\+message\+\_\+writer\+::operator+ (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{msg }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+Essentially the same as +=, but can only be used on an rvalue instance of the object, so that you can do things like\+: {\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\{\} + \char`\"{}abc\char`\"{}}, which feels more natural than {\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\{\} += \char`\"{}abc\char`\"{}}. \mbox{\Hypertarget{classtools_1_1scoped__message__writer_aa193e6fe8d01f22208ac55572c5f07e1}\label{classtools_1_1scoped__message__writer_aa193e6fe8d01f22208ac55572c5f07e1}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\& tools\+::scoped\+\_\+message\+\_\+writer\+::operator+= (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same as .append(msg). (Doesn\textquotesingle{}t format, just like the single-\/argument .append(msg)). 
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_aead75ef767db5a3dd86c21bd28931ec8}\label{classtools_1_1scoped__message__writer_aead75ef767db5a3dd86c21bd28931ec8}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!operator=@{operator=}}
+\index{operator=@{operator=}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\& tools\+::scoped\+\_\+message\+\_\+writer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_ac670b601a8415d7c1d3ba94ba8ad9049}\label{classtools_1_1scoped__message__writer_ac670b601a8415d7c1d3ba94ba8ad9049}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!operator=@{operator=}}
+\index{operator=@{operator=}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}}\& tools\+::scoped\+\_\+message\+\_\+writer\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1scoped__message__writer}{scoped\+\_\+message\+\_\+writer}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_aa5ef760e627b47fe952e6b14c7c75086}\label{classtools_1_1scoped__message__writer_aa5ef760e627b47fe952e6b14c7c75086}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!m\_color@{m\_color}}
+\index{m\_color@{m\_color}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_color}{m\_color}}
+{\footnotesize\ttfamily std\+::optional$<$fmt\+::terminal\+\_\+color$>$ tools\+::scoped\+\_\+message\+\_\+writer\+::m\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_acf64f0e2573bcdcb229a5ce50921e118}\label{classtools_1_1scoped__message__writer_acf64f0e2573bcdcb229a5ce50921e118}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!m\_content@{m\_content}}
+\index{m\_content@{m\_content}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_content}{m\_content}}
+{\footnotesize\ttfamily std\+::string tools\+::scoped\+\_\+message\+\_\+writer\+::m\+\_\+content\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_ad8d5731f7446d6c44d356c1662b87f1a}\label{classtools_1_1scoped__message__writer_ad8d5731f7446d6c44d356c1662b87f1a}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!m\_log\_level@{m\_log\_level}}
+\index{m\_log\_level@{m\_log\_level}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_log\_level}{m\_log\_level}}
+{\footnotesize\ttfamily oxen\+::log\+::\+Level tools\+::scoped\+\_\+message\+\_\+writer\+::m\+\_\+log\+\_\+level\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1scoped__message__writer_aa5a34ac2cb83a2584fd2b19222f764eb}\label{classtools_1_1scoped__message__writer_aa5a34ac2cb83a2584fd2b19222f764eb}} 
+\index{tools::scoped\_message\_writer@{tools::scoped\_message\_writer}!m\_prefix@{m\_prefix}}
+\index{m\_prefix@{m\_prefix}!tools::scoped\_message\_writer@{tools::scoped\_message\_writer}}
+\doxysubsubsection{\texorpdfstring{m\_prefix}{m\_prefix}}
+{\footnotesize\ttfamily std\+::string tools\+::scoped\+\_\+message\+\_\+writer\+::m\+\_\+prefix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{scoped__message__writer_8h}{scoped\+\_\+message\+\_\+writer.\+h}}\item 
+src/common/\mbox{\hyperlink{scoped__message__writer_8cpp}{scoped\+\_\+message\+\_\+writer.\+cpp}}\end{DoxyCompactItemize}

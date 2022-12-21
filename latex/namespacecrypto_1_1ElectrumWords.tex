@@ -1,0 +1,245 @@
+\hypertarget{namespacecrypto_1_1ElectrumWords}{}\doxysection{crypto\+::Electrum\+Words Namespace Reference}
+\label{namespacecrypto_1_1ElectrumWords}\index{crypto::ElectrumWords@{crypto::ElectrumWords}}
+
+
+Mnemonic seed word generation and wallet restoration helper functions.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$ $>$ \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a2cdda05f3e17ad9e0646320017045161}{get\+\_\+language\+\_\+list}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a43b793456543ea74b629d388ba0e7892}{words\+\_\+to\+\_\+bytes}} (const epee\+::wipeable\+\_\+string \&words, epee\+::wipeable\+\_\+string \&dst, size\+\_\+t len, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} duplicate, std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts seed words to bytes (secret key). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a953c0be8383470b44c318170f2c8bb37}{words\+\_\+to\+\_\+bytes}} (const epee\+::wipeable\+\_\+string \&words, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&dst, std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts seed words to bytes (secret key). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_acdfb7f7aa08c5e997ddba817e7b7bc85}{bytes\+\_\+to\+\_\+words}} (const unsigned char $\ast$src, size\+\_\+t len, epee\+::wipeable\+\_\+string \&words, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a0f3fb259f36212df1d1c4cd5361068cc}{bytes\+\_\+to\+\_\+words}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&src, epee\+::wipeable\+\_\+string \&words, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a06443cd5fc3775b4284d6bc81573a24b}{bytes\+\_\+to\+\_\+words}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&src, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a84479b5257da3f88e699f2bb1e5ae160}{get\+\_\+language\+\_\+list}} (std\+::vector$<$ std\+::string $>$ \&languages, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} english)
+\begin{DoxyCompactList}\small\item\em Gets a list of seed languages that are supported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a5831770e64b58a4917ccfde54be732e9}{get\+\_\+is\+\_\+old\+\_\+style\+\_\+seed}} (const epee\+::wipeable\+\_\+string \&seed)
+\begin{DoxyCompactList}\small\item\em Tells if the seed passed is an old style seed or not. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a65075d4d01a893a103596a19fe6229a6}{get\+\_\+english\+\_\+name\+\_\+for}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Returns the name of a language in English. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a38bf8a65aedd5997d928dbb4cee7660a}{seed\+\_\+length}} = 24
+\item 
+const std\+::string \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_ab2770de0dac442d68d53c4f39425dfad}{old\+\_\+language\+\_\+name}} = \char`\"{}English\+Old\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mnemonic seed word generation and wallet restoration helper functions. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a06443cd5fc3775b4284d6bc81573a24b}\label{namespacecrypto_1_1ElectrumWords_a06443cd5fc3775b4284d6bc81573a24b}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!bytes\_to\_words@{bytes\_to\_words}}
+\index{bytes\_to\_words@{bytes\_to\_words}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{bytes\_to\_words()}{bytes\_to\_words()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::string crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{src,  }\item[{const std\+::string \&}]{language\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Converts bytes (secret key) to seed words. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Secret key \\
+\hline
+{\em language\+\_\+name} & Seed language name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Space delimited concatenated words get written here. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a0f3fb259f36212df1d1c4cd5361068cc}\label{namespacecrypto_1_1ElectrumWords_a0f3fb259f36212df1d1c4cd5361068cc}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!bytes\_to\_words@{bytes\_to\_words}}
+\index{bytes\_to\_words@{bytes\_to\_words}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{bytes\_to\_words()}{bytes\_to\_words()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{src,  }\item[{epee\+::wipeable\+\_\+string \&}]{words,  }\item[{const std\+::string \&}]{language\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Converts bytes (secret key) to seed words. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Secret key \\
+\hline
+{\em words} & Space delimited concatenated words get written here. \\
+\hline
+{\em language\+\_\+name} & Seed language name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful false if not. Unsuccessful if wrong key size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_acdfb7f7aa08c5e997ddba817e7b7bc85}\label{namespacecrypto_1_1ElectrumWords_acdfb7f7aa08c5e997ddba817e7b7bc85}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!bytes\_to\_words@{bytes\_to\_words}}
+\index{bytes\_to\_words@{bytes\_to\_words}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{bytes\_to\_words()}{bytes\_to\_words()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{src,  }\item[{size\+\_\+t}]{len,  }\item[{epee\+::wipeable\+\_\+string \&}]{words,  }\item[{const std\+::string \&}]{language\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Converts bytes (secret key) to seed words. 
+
+Converts bytes to seed words.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Secret key \\
+\hline
+{\em words} & Space delimited concatenated words get written here. \\
+\hline
+{\em language\+\_\+name} & Seed language name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful false if not. Unsuccessful if wrong key size.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Secret data \\
+\hline
+{\em len} & Secret data length in bytes (positive multiples of 4 only) \\
+\hline
+{\em words} & Space delimited concatenated words get written here. \\
+\hline
+{\em language\+\_\+name} & Seed language name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful false if not. Unsuccessful if wrong key size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a65075d4d01a893a103596a19fe6229a6}\label{namespacecrypto_1_1ElectrumWords_a65075d4d01a893a103596a19fe6229a6}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!get\_english\_name\_for@{get\_english\_name\_for}}
+\index{get\_english\_name\_for@{get\_english\_name\_for}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{get\_english\_name\_for()}{get\_english\_name\_for()}}
+{\footnotesize\ttfamily std\+::string crypto\+::\+Electrum\+Words\+::get\+\_\+english\+\_\+name\+\_\+for (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the name of a language in English. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the language in its own language \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the name of the language in English 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a5831770e64b58a4917ccfde54be732e9}\label{namespacecrypto_1_1ElectrumWords_a5831770e64b58a4917ccfde54be732e9}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!get\_is\_old\_style\_seed@{get\_is\_old\_style\_seed}}
+\index{get\_is\_old\_style\_seed@{get\_is\_old\_style\_seed}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{get\_is\_old\_style\_seed()}{get\_is\_old\_style\_seed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::\+Electrum\+Words\+::get\+\_\+is\+\_\+old\+\_\+style\+\_\+seed (\begin{DoxyParamCaption}\item[{const epee\+::wipeable\+\_\+string \&}]{seed }\end{DoxyParamCaption})}
+
+
+
+Tells if the seed passed is an old style seed or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & The seed to check (a space delimited concatenated word list) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the seed passed is a old style seed false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a2cdda05f3e17ad9e0646320017045161}\label{namespacecrypto_1_1ElectrumWords_a2cdda05f3e17ad9e0646320017045161}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!get\_language\_list@{get\_language\_list}}
+\index{get\_language\_list@{get\_language\_list}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{get\_language\_list()}{get\_language\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$ $>$ crypto\+::\+Electrum\+Words\+::get\+\_\+language\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a84479b5257da3f88e699f2bb1e5ae160}\label{namespacecrypto_1_1ElectrumWords_a84479b5257da3f88e699f2bb1e5ae160}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!get\_language\_list@{get\_language\_list}}
+\index{get\_language\_list@{get\_language\_list}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{get\_language\_list()}{get\_language\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::\+Electrum\+Words\+::get\+\_\+language\+\_\+list (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{languages,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{english }\end{DoxyParamCaption})}
+
+
+
+Gets a list of seed languages that are supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em languages} & The vector is set to the list of languages.\\
+\hline
+{\em languages} & A vector is set to the list of languages. \\
+\hline
+{\em english} & whether to get the names in English or the language language \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a953c0be8383470b44c318170f2c8bb37}\label{namespacecrypto_1_1ElectrumWords_a953c0be8383470b44c318170f2c8bb37}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!words\_to\_bytes@{words\_to\_bytes}}
+\index{words\_to\_bytes@{words\_to\_bytes}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{words\_to\_bytes()}{words\_to\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::\+Electrum\+Words\+::words\+\_\+to\+\_\+bytes (\begin{DoxyParamCaption}\item[{const epee\+::wipeable\+\_\+string \&}]{words,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{dst,  }\item[{std\+::string \&}]{language\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Converts seed words to bytes (secret key). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & String containing the words separated by spaces. \\
+\hline
+{\em dst} & To put the secret key restored from the words. \\
+\hline
+{\em language\+\_\+name} & \mbox{\hyperlink{namespaceLanguage}{Language}} of the seed as found gets written here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if not a multiple of 3 words, or if word is not in the words list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a43b793456543ea74b629d388ba0e7892}\label{namespacecrypto_1_1ElectrumWords_a43b793456543ea74b629d388ba0e7892}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!words\_to\_bytes@{words\_to\_bytes}}
+\index{words\_to\_bytes@{words\_to\_bytes}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{words\_to\_bytes()}{words\_to\_bytes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::\+Electrum\+Words\+::words\+\_\+to\+\_\+bytes (\begin{DoxyParamCaption}\item[{const epee\+::wipeable\+\_\+string \&}]{words,  }\item[{epee\+::wipeable\+\_\+string \&}]{dst,  }\item[{size\+\_\+t}]{len,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{duplicate,  }\item[{std\+::string \&}]{language\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Converts seed words to bytes (secret key). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em words} & String containing the words separated by spaces. \\
+\hline
+{\em dst} & To put the secret data restored from the words. \\
+\hline
+{\em len} & The number of bytes to expect, 0 if unknown \\
+\hline
+{\em duplicate} & If true and len is not zero, we accept half the data, and duplicate it \\
+\hline
+{\em language\+\_\+name} & \mbox{\hyperlink{namespaceLanguage}{Language}} of the seed as found gets written here. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if not a multiple of 3 words, or if word is not in the words list 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_ab2770de0dac442d68d53c4f39425dfad}\label{namespacecrypto_1_1ElectrumWords_ab2770de0dac442d68d53c4f39425dfad}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!old\_language\_name@{old\_language\_name}}
+\index{old\_language\_name@{old\_language\_name}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{old\_language\_name}{old\_language\_name}}
+{\footnotesize\ttfamily const std\+::string crypto\+::\+Electrum\+Words\+::old\+\_\+language\+\_\+name = \char`\"{}English\+Old\char`\"{}}
+
+\mbox{\Hypertarget{namespacecrypto_1_1ElectrumWords_a38bf8a65aedd5997d928dbb4cee7660a}\label{namespacecrypto_1_1ElectrumWords_a38bf8a65aedd5997d928dbb4cee7660a}} 
+\index{crypto::ElectrumWords@{crypto::ElectrumWords}!seed\_length@{seed\_length}}
+\index{seed\_length@{seed\_length}!crypto::ElectrumWords@{crypto::ElectrumWords}}
+\doxysubsubsection{\texorpdfstring{seed\_length}{seed\_length}}
+{\footnotesize\ttfamily const int crypto\+::\+Electrum\+Words\+::seed\+\_\+length = 24}
+

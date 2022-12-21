@@ -1,0 +1,114 @@
+\hypertarget{structservice__nodes_1_1voting__pool}{}\doxysection{service\+\_\+nodes\+::voting\+\_\+pool Struct Reference}
+\label{structservice__nodes_1_1voting__pool}\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+
+
+{\ttfamily \#include $<$service\+\_\+node\+\_\+voting.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1checkpoint__pool__entry}{checkpoint\+\_\+pool\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1obligations__pool__entry}{obligations\+\_\+pool\+\_\+entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1pool__vote__entry}{pool\+\_\+vote\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a31d5956d209e7085ca50b783fd6e7569}{add\+\_\+pool\+\_\+vote\+\_\+if\+\_\+unique}} (const \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} \&vote, \mbox{\hyperlink{structcryptonote_1_1vote__verification__context}{cryptonote\+::vote\+\_\+verification\+\_\+context}} \&vvc)
+\item 
+void \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a2d7e4508013cf76db5b6e534279b6ea6}{set\+\_\+relayed}} (const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} $>$ \&votes)
+\item 
+void \mbox{\hyperlink{structservice__nodes_1_1voting__pool_aec36b92acd635d3bf4f226008fe063df}{remove\+\_\+expired\+\_\+votes}} (uint64\+\_\+t height)
+\item 
+void \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a0302670c22dbc93939d8a865c02faaff}{remove\+\_\+used\+\_\+votes}} (std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ const \&txs, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} $>$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a9c75898b83c3b072508576bd9f102614}{get\+\_\+relayable\+\_\+votes}} (uint64\+\_\+t height, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} quorum\+\_\+relay) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a7bac163e06a30e07dffcd2a30f0153e7}{received\+\_\+checkpoint\+\_\+vote}} (uint64\+\_\+t height, size\+\_\+t index\+\_\+in\+\_\+quorum) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1pool__vote__entry}{pool\+\_\+vote\+\_\+entry}} $>$ $\ast$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_adc7eab95085b7eb8c40c3c79bd7e3418}{find\+\_\+vote\+\_\+pool}} (const \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} \&vote, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} create\+\_\+if\+\_\+not\+\_\+found=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1obligations__pool__entry}{obligations\+\_\+pool\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a00dd1bbb68ce1d90e1f3e12e3a638d82}{m\+\_\+obligations\+\_\+pool}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1checkpoint__pool__entry}{checkpoint\+\_\+pool\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1voting__pool_a8cab39865319fe4b48e0cc609071db20}{m\+\_\+checkpoint\+\_\+pool}}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{structservice__nodes_1_1voting__pool_ab7befda1c1c97cab75009aa15b40954c}{m\+\_\+lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a31d5956d209e7085ca50b783fd6e7569}\label{structservice__nodes_1_1voting__pool_a31d5956d209e7085ca50b783fd6e7569}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!add\_pool\_vote\_if\_unique@{add\_pool\_vote\_if\_unique}}
+\index{add\_pool\_vote\_if\_unique@{add\_pool\_vote\_if\_unique}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_pool\_vote\_if\_unique()}{add\_pool\_vote\_if\_unique()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1pool__vote__entry}{pool\+\_\+vote\+\_\+entry}} $>$ service\+\_\+nodes\+::voting\+\_\+pool\+::add\+\_\+pool\+\_\+vote\+\_\+if\+\_\+unique (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} \&}]{vote,  }\item[{\mbox{\hyperlink{structcryptonote_1_1vote__verification__context}{cryptonote\+::vote\+\_\+verification\+\_\+context}} \&}]{vvc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_adc7eab95085b7eb8c40c3c79bd7e3418}\label{structservice__nodes_1_1voting__pool_adc7eab95085b7eb8c40c3c79bd7e3418}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!find\_vote\_pool@{find\_vote\_pool}}
+\index{find\_vote\_pool@{find\_vote\_pool}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{find\_vote\_pool()}{find\_vote\_pool()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1pool__vote__entry}{pool\+\_\+vote\+\_\+entry}} $>$ $\ast$ service\+\_\+nodes\+::voting\+\_\+pool\+::find\+\_\+vote\+\_\+pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} \&}]{vote,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{create\+\_\+if\+\_\+not\+\_\+found = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a9c75898b83c3b072508576bd9f102614}\label{structservice__nodes_1_1voting__pool_a9c75898b83c3b072508576bd9f102614}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!get\_relayable\_votes@{get\_relayable\_votes}}
+\index{get\_relayable\_votes@{get\_relayable\_votes}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_relayable\_votes()}{get\_relayable\_votes()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} $>$ service\+\_\+nodes\+::voting\+\_\+pool\+::get\+\_\+relayable\+\_\+votes (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{hf\+\_\+version,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{quorum\+\_\+relay }\end{DoxyParamCaption}) const}
+
+Returns relayable votes for either p2p (quorum\+\_\+relay=false) or quorumnet (quorum\+\_\+relay=true). Before H\+F14 everything goes via p2p; starting in H\+F14 obligation votes go via quorumnet, checkpoints go via p2p. \mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a7bac163e06a30e07dffcd2a30f0153e7}\label{structservice__nodes_1_1voting__pool_a7bac163e06a30e07dffcd2a30f0153e7}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!received\_checkpoint\_vote@{received\_checkpoint\_vote}}
+\index{received\_checkpoint\_vote@{received\_checkpoint\_vote}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{received\_checkpoint\_vote()}{received\_checkpoint\_vote()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::voting\+\_\+pool\+::received\+\_\+checkpoint\+\_\+vote (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{size\+\_\+t}]{index\+\_\+in\+\_\+quorum }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_aec36b92acd635d3bf4f226008fe063df}\label{structservice__nodes_1_1voting__pool_aec36b92acd635d3bf4f226008fe063df}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!remove\_expired\_votes@{remove\_expired\_votes}}
+\index{remove\_expired\_votes@{remove\_expired\_votes}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_expired\_votes()}{remove\_expired\_votes()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::voting\+\_\+pool\+::remove\+\_\+expired\+\_\+votes (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a0302670c22dbc93939d8a865c02faaff}\label{structservice__nodes_1_1voting__pool_a0302670c22dbc93939d8a865c02faaff}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!remove\_used\_votes@{remove\_used\_votes}}
+\index{remove\_used\_votes@{remove\_used\_votes}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_used\_votes()}{remove\_used\_votes()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::voting\+\_\+pool\+::remove\+\_\+used\+\_\+votes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ const \&}]{txs,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{version }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a2d7e4508013cf76db5b6e534279b6ea6}\label{structservice__nodes_1_1voting__pool_a2d7e4508013cf76db5b6e534279b6ea6}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!set\_relayed@{set\_relayed}}
+\index{set\_relayed@{set\_relayed}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{set\_relayed()}{set\_relayed()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::voting\+\_\+pool\+::set\+\_\+relayed (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{quorum\+\_\+vote\+\_\+t}} $>$ \&}]{votes }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a8cab39865319fe4b48e0cc609071db20}\label{structservice__nodes_1_1voting__pool_a8cab39865319fe4b48e0cc609071db20}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!m\_checkpoint\_pool@{m\_checkpoint\_pool}}
+\index{m\_checkpoint\_pool@{m\_checkpoint\_pool}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_checkpoint\_pool}{m\_checkpoint\_pool}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1checkpoint__pool__entry}{checkpoint\+\_\+pool\+\_\+entry}}$>$ service\+\_\+nodes\+::voting\+\_\+pool\+::m\+\_\+checkpoint\+\_\+pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_ab7befda1c1c97cab75009aa15b40954c}\label{structservice__nodes_1_1voting__pool_ab7befda1c1c97cab75009aa15b40954c}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!m\_lock@{m\_lock}}
+\index{m\_lock@{m\_lock}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_lock}{m\_lock}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex service\+\_\+nodes\+::voting\+\_\+pool\+::m\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1voting__pool_a00dd1bbb68ce1d90e1f3e12e3a638d82}\label{structservice__nodes_1_1voting__pool_a00dd1bbb68ce1d90e1f3e12e3a638d82}} 
+\index{service\_nodes::voting\_pool@{service\_nodes::voting\_pool}!m\_obligations\_pool@{m\_obligations\_pool}}
+\index{m\_obligations\_pool@{m\_obligations\_pool}!service\_nodes::voting\_pool@{service\_nodes::voting\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_obligations\_pool}{m\_obligations\_pool}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1obligations__pool__entry}{obligations\+\_\+pool\+\_\+entry}}$>$ service\+\_\+nodes\+::voting\+\_\+pool\+::m\+\_\+obligations\+\_\+pool\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__voting_8h}{service\+\_\+node\+\_\+voting.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__voting_8cpp}{service\+\_\+node\+\_\+voting.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\hypertarget{rctSigs_8cpp}{}\doxysection{src/ringct/rct\+Sigs.cpp File Reference}
+\label{rctSigs_8cpp}\index{src/ringct/rctSigs.cpp@{src/ringct/rctSigs.cpp}}
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/threadpool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rct\+Sigs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bulletproofs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+Include dependency graph for rct\+Sigs.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rctSigs_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}} \mbox{\hyperlink{namespacerct_a281d9051852e88d41f176150cf805be0}{rct\+::make\+\_\+dummy\+\_\+bulletproof}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&outamounts, \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&C, \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&masks)
+\item 
+Bulletproof \mbox{\hyperlink{namespacerct_acb5fb92e1ba8395be15f0b6c5193d764}{rct\+::prove\+Range\+Bulletproof}} (keyV \&C, keyV \&masks, const std\+::vector$<$ uint64\+\_\+t $>$ \&amounts, epee\+::span$<$ const key $>$ sk, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ae49fffe50647f153ba04dd7b566eb431}{rct\+::ver\+Bulletproof}} (const Bulletproof \&proof)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_aa8047de2eb5a1ccb2bb18a346e3596f5}{rct\+::ver\+Bulletproof}} (const std\+::vector$<$ const Bulletproof $\ast$ $>$ \&proofs)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_af7d86de9d6fc888017072f1a1c51f6ad}{rct\+::verify\+Borromean}} (const boro\+Sig \&bb, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} P1\mbox{[}64\mbox{]}, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} P2\mbox{[}64\mbox{]})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ae49edd5259d7bd1f7612f4d0c0a09f52}{rct\+::verify\+Borromean}} (const boro\+Sig \&bb, const key64 P1, const key64 P2)
+\item 
+clsag \mbox{\hyperlink{namespacerct_a7714ddcb2f8b3106436cac5ed90ff933}{rct\+::\+C\+L\+S\+A\+G\+\_\+\+Gen}} (const key \&message, const keyV \&P, const key \&p, const keyV \&C, const key \&z, const keyV \&C\+\_\+nonzero, const key \&C\+\_\+offset, const unsigned int l, const multisig\+\_\+k\+L\+Rki $\ast$k\+L\+Rki, key $\ast$mscout, key $\ast$mspout, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+clsag \mbox{\hyperlink{namespacerct_a68a2bcab788c9d0fa48635ea27710033}{rct\+::\+C\+L\+S\+A\+G\+\_\+\+Gen}} (const key \&message, const keyV \&P, const key \&p, const keyV \&C, const key \&z, const keyV \&C\+\_\+nonzero, const key \&C\+\_\+offset, const unsigned int l)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ae7940ecf7cb0399917e994018963c1ad}{rct\+::\+M\+L\+S\+A\+G\+\_\+\+Ver}} (const key \&message, const keyM \&pk, const mg\+Sig \&rv, size\+\_\+t ds\+Rows)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a619b949ebb362986018382f68f674139}{rct\+::ver\+Range}} (const key \&C, const range\+Sig \&as)
+\item 
+key \mbox{\hyperlink{namespacerct_aaf25cc259eef37cb5a3255a59116dbff}{rct\+::get\+\_\+pre\+\_\+clsag\+\_\+hash}} (const rct\+Sig \&rv, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+clsag \mbox{\hyperlink{namespacerct_ad05c521b9652032f2f2c8b62f82a3d81}{rct\+::prove\+Rct\+C\+L\+S\+A\+G\+Simple}} (const key \&message, const ctkeyV \&pubs, const ctkey \&in\+Sk, const key \&a, const key \&Cout, const multisig\+\_\+k\+L\+Rki $\ast$k\+L\+Rki, key $\ast$mscout, key $\ast$mspout, unsigned int index, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_afba24d65ac29a57f52474c08007c220f}{rct\+::ver\+Rct\+MG}} (const mg\+Sig \&mg, const ctkeyM \&pubs, const ctkeyV \&out\+Pk, const key \&txn\+Fee\+Key, const key \&message)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ad92e7bbd35f909f039f8f359463061af}{rct\+::ver\+Rct\+M\+G\+Simple}} (const key \&message, const mg\+Sig \&mg, const ctkeyV \&pubs, const key \&C)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a6e58a8e1fd82002ef42d9c114e2ad2c9}{rct\+::ver\+Rct\+C\+L\+S\+A\+G\+Simple}} (const key \&message, const clsag \&sig, const ctkeyV \&pubs, const key \&C\+\_\+offset)
+\item 
+void \mbox{\hyperlink{namespacerct_a5548df64f92358e231a376ca1263fe1d}{rct\+::get\+Key\+From\+Blockchain}} (ctkey \&a, size\+\_\+t reference\+\_\+index)
+\item 
+std\+::tuple$<$ ctkeyM, xmr\+\_\+amount $>$ \mbox{\hyperlink{namespacerct_a6c1f90cec0211d3acf49aa6d0f9de2ba}{rct\+::populate\+From\+Blockchain}} (ctkeyV in\+Pk, int mixin)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_a477692f13926f0dd03ca67f24fd04324}{rct\+::populate\+From\+Blockchain\+Simple}} (ctkeyV \&mix\+Ring, const ctkey \&in\+Pk, int mixin)
+\item 
+rct\+Sig \mbox{\hyperlink{namespacerct_a9091321440ed3b3e05b1cccbf4e12ffc}{rct\+::gen\+Rct\+Simple}} (const key \&message, const ctkeyV \&in\+Sk, const keyV \&destinations, const std\+::vector$<$ xmr\+\_\+amount $>$ \&inamounts, const std\+::vector$<$ xmr\+\_\+amount $>$ \&outamounts, xmr\+\_\+amount txn\+Fee, const ctkeyM \&mix\+Ring, const keyV \&amount\+\_\+keys, const std\+::vector$<$ multisig\+\_\+k\+L\+Rki $>$ $\ast$k\+L\+Rki, multisig\+\_\+out $\ast$msout, const std\+::vector$<$ unsigned int $>$ \&index, ctkeyV \&out\+Sk, const R\+C\+T\+Config \&rct\+\_\+config, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+rct\+Sig \mbox{\hyperlink{namespacerct_a64a753ec4e2d7f46dcfd712ce31dbea8}{rct\+::gen\+Rct\+Simple}} (const key \&message, const ctkeyV \&in\+Sk, const ctkeyV \&in\+Pk, const keyV \&destinations, const std\+::vector$<$ xmr\+\_\+amount $>$ \&inamounts, const std\+::vector$<$ xmr\+\_\+amount $>$ \&outamounts, const keyV \&amount\+\_\+keys, const std\+::vector$<$ multisig\+\_\+k\+L\+Rki $>$ $\ast$k\+L\+Rki, multisig\+\_\+out $\ast$msout, xmr\+\_\+amount txn\+Fee, unsigned int mixin, const R\+C\+T\+Config \&rct\+\_\+config, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a87daf72a5894e3727be368ea6643716f}{rct\+::ver\+Rct}} (const rct\+Sig \&rv, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} semantics)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ab72b59f996035b378d52b241dd0c6811}{rct\+::ver\+Rct\+Semantics\+Simple}} (const std\+::vector$<$ const rct\+Sig $\ast$ $>$ \&rvv)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a9b36503265ace12f5b7394c2b0c2dfa2}{rct\+::ver\+Rct\+Semantics\+Simple}} (const rct\+Sig \&rv)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_abca91b51e2132550443fdfb3711fba68}{rct\+::ver\+Rct\+Non\+Semantics\+Simple}} (const rct\+Sig \&rv)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_af21afa9289d8f34577b1736e9979fa02}{rct\+::decode\+Rct}} (const rct\+Sig \&rv, const key \&sk, unsigned int i, key \&mask, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_aecfd0f427efca97f838979058f2daf14}{rct\+::decode\+Rct}} (const rct\+Sig \&rv, const key \&sk, unsigned int i, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_ab2752c187e88ab2e08482fe543f5435c}{rct\+::decode\+Rct\+Simple}} (const rct\+Sig \&rv, const key \&sk, unsigned int i, key \&mask, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_aba67d79d72b604e47de13d76230a6310}{rct\+::decode\+Rct\+Simple}} (const rct\+Sig \&rv, const key \&sk, unsigned int i, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a73393a5a5554e536f9f63c5ca3a3192e}{rct\+::sign\+Multisig\+M\+L\+S\+AG}} (rct\+Sig \&rv, const std\+::vector$<$ unsigned int $>$ \&indices, const keyV \&k, const multisig\+\_\+out \&msout, const key \&secret\+\_\+key)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a779a05c48da2bf60b5a555dfcbe06488}{rct\+::sign\+Multisig\+C\+L\+S\+AG}} (rct\+Sig \&rv, const std\+::vector$<$ unsigned int $>$ \&indices, const keyV \&k, const multisig\+\_\+out \&msout, const key \&secret\+\_\+key)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_ac7017d479909c362cf84aec86e41c398}{rct\+::sign\+Multisig}} (rct\+Sig \&rv, const std\+::vector$<$ unsigned int $>$ \&indices, const keyV \&k, const multisig\+\_\+out \&msout, const key \&secret\+\_\+key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacerct_a8af5c1f35bfc03a7b40bc431932ec422}{rct\+::logcat}} = log\+::\+Cat(\char`\"{}ringct\char`\"{})
+\end{DoxyCompactItemize}

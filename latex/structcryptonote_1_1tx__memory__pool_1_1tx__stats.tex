@@ -1,0 +1,191 @@
+\hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats}{}\doxysection{cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats Struct Reference}
+\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats}\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+
+
+Return type of \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}{get\+\_\+transaction\+\_\+stats()}}  
+
+
+
+
+{\ttfamily \#include $<$tx\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1tx__memory__pool_1_1tx__stats__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7cc30785acab0705af82a3ed6fb32b79}{bytes\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total size of all transactions in pool. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abe0121f98df0d3ccb836792ae2fb0fc9}{bytes\+\_\+min}}
+\begin{DoxyCompactList}\small\item\em Min transaction size in pool. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a38f69e8e279b4c56c6f431a5c41998eb}{bytes\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em Max transaction size in pool. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7feb4fcf9b2ea0155c71e4e85dd2de05}{bytes\+\_\+med}}
+\begin{DoxyCompactList}\small\item\em Median transaction size in pool. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ad642b88d568e37372ef90a19ca9d954b}{fee\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total fee\textquotesingle{}s in pool in atomic units. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a82f7a0ff04f52c2eff8fd057edc61341}{oldest}}
+\begin{DoxyCompactList}\small\item\em Unix time of the oldest transaction in the pool. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abf194db5857b81ff86ec1559ad27414f}{txs\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total number of transactions. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a4addf08dbe4d8abc61d80c57256c7cc4}{num\+\_\+failing}}
+\begin{DoxyCompactList}\small\item\em Bumber of failing transactions. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_aa01c86866ce776d3c27ec6974653e1ed}{num\+\_\+10m}}
+\begin{DoxyCompactList}\small\item\em Number of transactions in pool for more than 10 minutes. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ade959d5eeea283e112753fbe114ef3a2}{num\+\_\+not\+\_\+relayed}}
+\begin{DoxyCompactList}\small\item\em Number of non-\/relayed transactions. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a9a214973222c69015a018ad6edaa6eb3}{histo\+\_\+98pc}}
+\begin{DoxyCompactList}\small\item\em the time 98\% of txes are \char`\"{}younger\char`\"{} than. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ uint32\+\_\+t, uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ac0d5b60dc8aaf2d3e1bbdd17d236e92b}{histo}}
+\begin{DoxyCompactList}\small\item\em List of txpool histo \mbox{[}number of txes, size in bytes\mbox{]} pairs. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a5bbd9aafb5c2f1a825ea82f3c9e9c166}{num\+\_\+double\+\_\+spends}}
+\begin{DoxyCompactList}\small\item\em Number of double spend transactions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Return type of \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}{get\+\_\+transaction\+\_\+stats()}} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a38f69e8e279b4c56c6f431a5c41998eb}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a38f69e8e279b4c56c6f431a5c41998eb}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!bytes\_max@{bytes\_max}}
+\index{bytes\_max@{bytes\_max}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{bytes\_max}{bytes\_max}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::bytes\+\_\+max}
+
+
+
+Max transaction size in pool. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7feb4fcf9b2ea0155c71e4e85dd2de05}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7feb4fcf9b2ea0155c71e4e85dd2de05}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!bytes\_med@{bytes\_med}}
+\index{bytes\_med@{bytes\_med}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{bytes\_med}{bytes\_med}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::bytes\+\_\+med}
+
+
+
+Median transaction size in pool. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abe0121f98df0d3ccb836792ae2fb0fc9}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abe0121f98df0d3ccb836792ae2fb0fc9}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!bytes\_min@{bytes\_min}}
+\index{bytes\_min@{bytes\_min}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{bytes\_min}{bytes\_min}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::bytes\+\_\+min}
+
+
+
+Min transaction size in pool. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7cc30785acab0705af82a3ed6fb32b79}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a7cc30785acab0705af82a3ed6fb32b79}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!bytes\_total@{bytes\_total}}
+\index{bytes\_total@{bytes\_total}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{bytes\_total}{bytes\_total}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::bytes\+\_\+total}
+
+
+
+Total size of all transactions in pool. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ad642b88d568e37372ef90a19ca9d954b}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ad642b88d568e37372ef90a19ca9d954b}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!fee\_total@{fee\_total}}
+\index{fee\_total@{fee\_total}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{fee\_total}{fee\_total}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::fee\+\_\+total}
+
+
+
+Total fee\textquotesingle{}s in pool in atomic units. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ac0d5b60dc8aaf2d3e1bbdd17d236e92b}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ac0d5b60dc8aaf2d3e1bbdd17d236e92b}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!histo@{histo}}
+\index{histo@{histo}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{histo}{histo}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$uint32\+\_\+t, uint64\+\_\+t$>$ $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::histo}
+
+
+
+List of txpool histo \mbox{[}number of txes, size in bytes\mbox{]} pairs. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a9a214973222c69015a018ad6edaa6eb3}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a9a214973222c69015a018ad6edaa6eb3}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!histo\_98pc@{histo\_98pc}}
+\index{histo\_98pc@{histo\_98pc}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{histo\_98pc}{histo\_98pc}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::histo\+\_\+98pc}
+
+
+
+the time 98\% of txes are \char`\"{}younger\char`\"{} than. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_aa01c86866ce776d3c27ec6974653e1ed}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_aa01c86866ce776d3c27ec6974653e1ed}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!num\_10m@{num\_10m}}
+\index{num\_10m@{num\_10m}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{num\_10m}{num\_10m}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::num\+\_\+10m}
+
+
+
+Number of transactions in pool for more than 10 minutes. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a5bbd9aafb5c2f1a825ea82f3c9e9c166}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a5bbd9aafb5c2f1a825ea82f3c9e9c166}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!num\_double\_spends@{num\_double\_spends}}
+\index{num\_double\_spends@{num\_double\_spends}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{num\_double\_spends}{num\_double\_spends}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::num\+\_\+double\+\_\+spends}
+
+
+
+Number of double spend transactions. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a4addf08dbe4d8abc61d80c57256c7cc4}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a4addf08dbe4d8abc61d80c57256c7cc4}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!num\_failing@{num\_failing}}
+\index{num\_failing@{num\_failing}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{num\_failing}{num\_failing}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::num\+\_\+failing}
+
+
+
+Bumber of failing transactions. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ade959d5eeea283e112753fbe114ef3a2}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_ade959d5eeea283e112753fbe114ef3a2}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!num\_not\_relayed@{num\_not\_relayed}}
+\index{num\_not\_relayed@{num\_not\_relayed}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{num\_not\_relayed}{num\_not\_relayed}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::num\+\_\+not\+\_\+relayed}
+
+
+
+Number of non-\/relayed transactions. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a82f7a0ff04f52c2eff8fd057edc61341}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_a82f7a0ff04f52c2eff8fd057edc61341}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!oldest@{oldest}}
+\index{oldest@{oldest}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{oldest}{oldest}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::oldest}
+
+
+
+Unix time of the oldest transaction in the pool. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abf194db5857b81ff86ec1559ad27414f}\label{structcryptonote_1_1tx__memory__pool_1_1tx__stats_abf194db5857b81ff86ec1559ad27414f}} 
+\index{cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}!txs\_total@{txs\_total}}
+\index{txs\_total@{txs\_total}!cryptonote::tx\_memory\_pool::tx\_stats@{cryptonote::tx\_memory\_pool::tx\_stats}}
+\doxysubsubsection{\texorpdfstring{txs\_total}{txs\_total}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats\+::txs\+\_\+total}
+
+
+
+Total number of transactions. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__pool_8h}{tx\+\_\+pool.\+h}}\end{DoxyCompactItemize}

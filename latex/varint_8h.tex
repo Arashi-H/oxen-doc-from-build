@@ -1,0 +1,88 @@
+\hypertarget{varint_8h}{}\doxysection{src/common/varint.h File Reference}
+\label{varint_8h}\index{src/common/varint.h@{src/common/varint.h}}
+
+
+provides the implementation of varint\textquotesingle{}s  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Include dependency graph for varint.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{varint_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{varint_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Output\+It , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespacetools_a28374909aa6d37021d1b0e6ee0440730}{tools\+::write\+\_\+varint}} (Output\+It \&\&it, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} i)
+\begin{DoxyCompactList}\small\item\em writes a varint to an output iterator. Only supports unsigned integer types. You could static cast a signed type to an unsigned type, but note that any actual negative values (which have a high bit set) will always end up full size since the high bit is set. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a4f35875440018b1bf07d04de138cb740}{tools\+::get\+\_\+varint\+\_\+data}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Returns the string that represents the varint. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename It , typename End\+It , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\int \mbox{\hyperlink{namespacetools_a39416afa796291ee8361bd0eba8c3bf5}{tools\+::read\+\_\+varint}} (It \&\&it, const End\+It \&end, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&write)
+\begin{DoxyCompactList}\small\item\em reads in the varint that is pointed to by Input\+It into write. {\ttfamily it} will modified to the position after the varint bytes that we read. Returns the number of bytes read on success, or one of the negative E\+V\+A\+R\+I\+A\+N\+T\+\_\+$\ast$ constants on failure. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Output\+It , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\auto \mbox{\hyperlink{namespacetools_adb1591d8efeb4b042c261a0fb158fc06}{tools\+::write\+\_\+varint}} (const Output\+It \&it\+\_\+, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} i)
+\item 
+{\footnotesize template$<$typename It , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\auto \mbox{\hyperlink{namespacetools_a9cdcba4bf17b413e6d105474066f0057}{tools\+::read\+\_\+varint}} (const It \&it\+\_\+, const It \&end, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&i)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\int \mbox{\hyperlink{namespacetools_a39737d1235983f73e9b11c9bb0a10ab9}{tools\+::read\+\_\+varint}} (std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&write)
+\begin{DoxyCompactList}\small\item\em reads the varint from an encoded string into {\ttfamily write}. Returns the number of bytes consumed, or an error value (as above). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{namespacetools_a308f3aa1a14699c3b6996d22ee435424}{tools\+::\+E\+V\+A\+R\+I\+N\+T\+\_\+\+O\+V\+E\+R\+F\+L\+OW}} = -\/1
+\begin{DoxyCompactList}\small\item\em Returned by read\+\_\+varint in case of overflow. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{namespacetools_ad7219e0b96a7f1539f592441bf54b807}{tools\+::\+E\+V\+A\+R\+I\+N\+T\+\_\+\+R\+E\+P\+R\+E\+S\+E\+NT}} = -\/2
+\begin{DoxyCompactList}\small\item\em Returned by read\+\_\+varint in case of malformed varint representation. \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{namespacetools_ac2b8dce2f49d0a5da8cf7b3b3f1edeaf}{tools\+::\+E\+V\+A\+R\+I\+N\+T\+\_\+\+T\+R\+U\+N\+C\+A\+T\+ED}} = -\/3
+\begin{DoxyCompactList}\small\item\em Returns by read\+\_\+varint if the input range ends before we finish reading a value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_a5f08eaf59aa287999ae83aee027b696a}{tools\+::\+V\+A\+R\+I\+N\+T\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+TH}} = (sizeof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}) $\ast$ 8 + 6) / 7
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+provides the implementation of varint\textquotesingle{}s 
+
+Variable length integers (\char`\"{}varints\char`\"{}) are serialized in little-\/endian order using 7 bits per byte where the most significant bit of each byte is a continuation bit (1 = more bytes coming, 0 = varint done) and the lower 7 bits are the next 7 significant bits. The varint sequence ends when there are no more significant bits to encode.
+
+Examples (with bit position drawings)\+: \begin{DoxyVerb}value       binary [' @ 7-bits]      encoded bytes    encoded binary
+=====       ===================      =============    ==============
+0x64                  0'1100100      \x64             0110'0100
+                        └┴┴┼┴┴┘                   done┛└┴┴┬┴┴┴┘
+                           ╰──────────────────────────────╯
+
+0x80            0000001'0000000      \x80\x01         1000'0000  0000'0001
+                └┴┴┼┴┴┘ └┴┴┼┴┴┘               continue┛└┴┴┬┴┴┴┘  ┃└┴┴┬┴┴┴┘
+                   │       ╰──────────────────────────────╯    done  │
+                   ╰─────────────────────────────────────────────────╯
+
+0xcc            0000001'1001100      \xcc\x01         1100'1100  0000'0001
+                └┴┴┼┴┴┘ └┴┴┼┴┴┘               continue┛└┴┴┬┴┴┴┘  ┃└┴┴┬┴┴┴┘
+                   │       ╰──────────────────────────────╯    done  │
+                   ╰─────────────────────────────────────────────────╯
+
+0xbf04  0000010'1111110'0000100      \x84\xfe\x02     1000'0100  1111'1110  0000'0010)
+        └┴┴┼┴┴┘ └┴┴┼┴┴┘ └┴┴┼┴┴┘               continue┛└┴┴┬┴┴┴┘  ┃└┴┴┬┴┴┴┘  ┃└┴┴┬┴┴┴┘
+           │       │       ╰──────────────────────────────╯ continue │    done  │
+           │       ╰─────────────────────────────────────────────────╯          │
+           ╰────────────────────────────────────────────────────────────────────╯
+\end{DoxyVerb}
+ 

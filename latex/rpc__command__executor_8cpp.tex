@@ -1,0 +1,96 @@
+\hypertarget{rpc__command__executor_8cpp}{}\doxysection{src/daemon/rpc\+\_\+command\+\_\+executor.cpp File Reference}
+\label{rpc__command__executor_8cpp}\index{src/daemon/rpc\_command\_executor.cpp@{src/daemon/rpc\_command\_executor.cpp}}
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/password.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/scoped\+\_\+message\+\_\+writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/median.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemon/rpc\+\_\+command\+\_\+executor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}checkpoints/checkpoints.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$oxenc/base32z.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/variant.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/chrono.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$oxenmq/connections.\+h$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for rpc\+\_\+command\+\_\+executor.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rpc__command__executor_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedaemonize}{daemonize}}
+\item 
+ \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ad72cfe774df1a8ebfe407eb36205070e}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+result}} \{ \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ad72cfe774df1a8ebfe407eb36205070eaa6105c0a611b41b08f1209506350279e}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+result\+::yes}}, 
+\mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ad72cfe774df1a8ebfe407eb36205070ea7fa3b767c460b54a2be4d49030b349c7}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+result\+::no}}, 
+\mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ad72cfe774df1a8ebfe407eb36205070ea10aec35353f9c4096a71c38654c3d402}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+result\+::cancel}}, 
+\mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ad72cfe774df1a8ebfe407eb36205070ea469bba0a564235dfceede42db14f17b0}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+result\+::back}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::string \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a788c80667a4f364e39d03788e7cf6d76}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line}} (Args \&\&... prompt)
+\item 
+input\+\_\+line\+\_\+result \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_ac4fbc2fe1fa05d3a30f17706b6844ff1}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+ask}} (std\+::string\+\_\+view msg)
+\item 
+std\+::pair$<$ input\+\_\+line\+\_\+result, std\+::string $>$ \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a9662e18d7fd6690b207106afb312b3eb}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::input\+\_\+line\+\_\+value}} (std\+::string\+\_\+view msg, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} back=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, const std\+::string \&extra\+\_\+opt=\char`\"{}\char`\"{}, const std\+::string \&default\+\_\+=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a0f25214aca1301a9ae2e5ebd4104ed35}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::print\+\_\+block\+\_\+header}} (\mbox{\hyperlink{structcryptonote_1_1rpc_1_1block__header__response}{block\+\_\+header\+\_\+response}} const \&header)
+\item 
+{\footnotesize template$<$typename Rep , typename Period $>$ }\\std\+::string \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a5c953ebbf8f818859a7370b837829702}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::get\+\_\+human\+\_\+time\+\_\+ago}} (std\+::chrono\+::duration$<$ Rep, Period $>$ ago\+\_\+dur, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} abbreviate=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+std\+::string \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a352b05b8016e86075f185fde9e9d7b8d}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::get\+\_\+human\+\_\+time\+\_\+ago}} (std\+::time\+\_\+t t, std\+::time\+\_\+t now, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} abbreviate=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_abfab712d798c6e3fcb6c91594909bf5f}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::print\+\_\+peer}} (std\+::string\+\_\+view prefix, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&peer, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pruned\+\_\+only)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a8812ef8c1465a8e275955fe38b32683a}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::print\+\_\+peers}} (std\+::string\+\_\+view prefix, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&peers, size\+\_\+t \&limit, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename Callback $>$ }\\static auto \mbox{\hyperlink{namespacedaemonize_ac859fe6f591581f96c884b1c9927ad83}{daemonize\+::try\+\_\+running}} (Callback code, std\+::string\+\_\+view error\+\_\+prefix) -\/$>$ std\+::optional$<$ decltype(code())$>$
+\item 
+static std\+::string \mbox{\hyperlink{namespacedaemonize_aaf93d962cfb4fd9fab50cdde96810497}{daemonize\+::get\+\_\+mining\+\_\+speed}} (uint64\+\_\+t hr)
+\item 
+static \mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{namespacedaemonize_a5cbc44da5996da8f2df184baa24295e4}{daemonize\+::print\+\_\+fork\+\_\+extra\+\_\+info}} (\mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}} \&msg, uint64\+\_\+t t, uint64\+\_\+t now, std\+::chrono\+::seconds block\+\_\+time)
+\item 
+static float \mbox{\hyperlink{namespacedaemonize_a6008450ffe96e2c41901c02b18935870}{daemonize\+::get\+\_\+sync\+\_\+percentage}} (uint64\+\_\+t height, uint64\+\_\+t target\+\_\+height)
+\item 
+static const char $\ast$ \mbox{\hyperlink{namespacedaemonize_a3bd7076428ce032e19ef00ea39bc43a4}{daemonize\+::get\+\_\+address\+\_\+type\+\_\+name}} (epee\+::net\+\_\+utils\+::address\+\_\+type address\+\_\+type)
+\item 
+static void \mbox{\hyperlink{namespacedaemonize_a5aa66ae7620b4d6dbf0c245bf5d3fb50}{daemonize\+::print\+\_\+pool}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&txs)
+\item 
+static std\+::string \mbox{\hyperlink{namespacedaemonize_a235e311c894d996553f54216c096aa09}{daemonize\+::to\+\_\+string\+\_\+rounded}} (double \mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}, int precision)
+\item 
+{\footnotesize template$<$typename E , typename E\+Printer $>$ }\\void \mbox{\hyperlink{namespacedaemonize_a9416c8deb5df3478514612749e386649}{daemonize\+::print\+\_\+votes}} (std\+::ostream \&o, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&elem, const std\+::string \&key, E\+Printer eprint)
+\item 
+static void \mbox{\hyperlink{namespacedaemonize_a0d1c2eddeb46db9a462b533def38a781}{daemonize\+::append\+\_\+printable\+\_\+service\+\_\+node\+\_\+list\+\_\+entry}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} detailed\+\_\+view, uint64\+\_\+t blockchain\+\_\+height, uint64\+\_\+t entry\+\_\+index, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&entry, std\+::string \&buffer)
+\item 
+std\+::optional$<$ std\+::string\+\_\+view $>$ \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_a5359cc99dcfbdde661c8cacc53654b93}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::is\+\_\+invalid\+\_\+staking\+\_\+address}} (std\+::string\+\_\+view addr, const \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+std\+::string \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03_aed65930e55de264299c2856a2be23a50}{daemonize\+::anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}\+::highlight\+\_\+money}} (uint64\+\_\+t amount)
+\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{hmac-keccak_8h}{}\doxysection{src/crypto/hmac-\/keccak.h File Reference}
+\label{hmac-keccak_8h}\index{src/crypto/hmac-\/keccak.h@{src/crypto/hmac-\/keccak.h}}
+{\ttfamily \#include \char`\"{}keccak.\+h\char`\"{}}\newline
+Include dependency graph for hmac-\/keccak.h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hmac-keccak_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hmac-keccak_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hmac-keccak_8h_afe27ff9bc715f48f3ab0dd02c3ff8d6c}{hmac\+\_\+keccak\+\_\+init}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, const uint8\+\_\+t $\ast$\+\_\+key, size\+\_\+t keylen)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8h_ad8a2c8a08c9e2e35b791b2e009f4d48e}{hmac\+\_\+keccak\+\_\+update}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, const uint8\+\_\+t $\ast$data, size\+\_\+t datalen)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8h_a9bd7062827f0aade061117a844423468}{hmac\+\_\+keccak\+\_\+finish}} (\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$S, uint8\+\_\+t $\ast$digest)
+\item 
+void \mbox{\hyperlink{hmac-keccak_8h_a9065d0ee8841e833c940d53654cb910e}{hmac\+\_\+keccak\+\_\+hash}} (uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$key, size\+\_\+t keylen, const uint8\+\_\+t $\ast$in, size\+\_\+t inlen)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hmac-keccak_8h_a9bd7062827f0aade061117a844423468}\label{hmac-keccak_8h_a9bd7062827f0aade061117a844423468}} 
+\index{hmac-\/keccak.h@{hmac-\/keccak.h}!hmac\_keccak\_finish@{hmac\_keccak\_finish}}
+\index{hmac\_keccak\_finish@{hmac\_keccak\_finish}!hmac-\/keccak.h@{hmac-\/keccak.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_finish()}{hmac\_keccak\_finish()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{uint8\+\_\+t $\ast$}]{digest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8h_a9065d0ee8841e833c940d53654cb910e}\label{hmac-keccak_8h_a9065d0ee8841e833c940d53654cb910e}} 
+\index{hmac-\/keccak.h@{hmac-\/keccak.h}!hmac\_keccak\_hash@{hmac\_keccak\_hash}}
+\index{hmac\_keccak\_hash@{hmac\_keccak\_hash}!hmac-\/keccak.h@{hmac-\/keccak.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_hash()}{hmac\_keccak\_hash()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{size\+\_\+t}]{keylen,  }\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{size\+\_\+t}]{inlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8h_afe27ff9bc715f48f3ab0dd02c3ff8d6c}\label{hmac-keccak_8h_afe27ff9bc715f48f3ab0dd02c3ff8d6c}} 
+\index{hmac-\/keccak.h@{hmac-\/keccak.h}!hmac\_keccak\_init@{hmac\_keccak\_init}}
+\index{hmac\_keccak\_init@{hmac\_keccak\_init}!hmac-\/keccak.h@{hmac-\/keccak.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_init()}{hmac\_keccak\_init()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{const uint8\+\_\+t $\ast$}]{\+\_\+key,  }\item[{size\+\_\+t}]{keylen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hmac-keccak_8h_ad8a2c8a08c9e2e35b791b2e009f4d48e}\label{hmac-keccak_8h_ad8a2c8a08c9e2e35b791b2e009f4d48e}} 
+\index{hmac-\/keccak.h@{hmac-\/keccak.h}!hmac\_keccak\_update@{hmac\_keccak\_update}}
+\index{hmac\_keccak\_update@{hmac\_keccak\_update}!hmac-\/keccak.h@{hmac-\/keccak.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_keccak\_update()}{hmac\_keccak\_update()}}
+{\footnotesize\ttfamily void hmac\+\_\+keccak\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__keccak__state}{hmac\+\_\+keccak\+\_\+state}} $\ast$}]{S,  }\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{datalen }\end{DoxyParamCaption})}
+

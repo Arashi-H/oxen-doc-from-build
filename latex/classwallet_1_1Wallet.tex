@@ -1,0 +1,295 @@
+\hypertarget{classwallet_1_1Wallet}{}\doxysection{wallet\+::Wallet Class Reference}
+\label{classwallet_1_1Wallet}\index{wallet::Wallet@{wallet::Wallet}}
+
+
+{\ttfamily \#include $<$wallet.\+hpp$>$}
+
+
+
+Inheritance diagram for wallet\+::Wallet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classwallet_1_1Wallet__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::Wallet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwallet_1_1Wallet__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classwallet_1_1Wallet_ac8474a72702d0beee97aa69721b8036d}{$\sim$\+Wallet}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_aa0f3d2c449530009055e27a12bdce30e}{propogate\+\_\+config}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classwallet_1_1Wallet_a151cb23c1e6c84aeac2f3d4e3027d1a7}{get\+\_\+balance}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classwallet_1_1Wallet_aaf7a55e19e16a4ac78fb5fe969360625}{get\+\_\+unlocked\+\_\+balance}} ()
+\item 
+\mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \mbox{\hyperlink{classwallet_1_1Wallet_a059bd7ff289cc38ca0afcb72cf9e5646}{export\+\_\+keys}} ()
+\item 
+\mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \mbox{\hyperlink{classwallet_1_1Wallet_a0d9d82a41af3168b4cced6e98fd421f1}{create\+\_\+transaction}} (const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classwallet_1_1address}{address}}, int64\+\_\+t $>$$>$ \&recipients, int64\+\_\+t fee\+Per\+KB)
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_a76922aa809ced824df5c68dd6dce168a}{sign\+\_\+transaction}} (\mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&tx)
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_a5fdeab69eea78e762e79f8cb2a21b4f1}{submit\+\_\+transaction}} (const \mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&tx)
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_a39b273d88228a104d33c69b9490faa63}{add\+\_\+block}} (const \mbox{\hyperlink{structwallet_1_1Block}{Block}} \&block)
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_aaa119087505d2e86270ac6051a4f5336}{add\+\_\+blocks}} (const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Block}{Block}} $>$ \&\mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}})
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_a4d5acb6565f199979dc60ca155dcec15}{update\+\_\+top\+\_\+block\+\_\+info}} (int64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_aa907a055849f961e854b8a4084c59231}{deregister}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... T$>$ }\\static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_ae69efeb6f194567f38858ac7f0ac7245}{create}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structwallet_1_1Config}{Config}} \mbox{\hyperlink{classwallet_1_1Wallet_aa7e4dbe5b7777752fbfd824c5741cbd4}{config}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1Wallet_a582c3a942684d064ec7c4b780f96be43}{scan\+\_\+target\+\_\+height}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1Wallet_a9690925365b876088c57d894b25950fc}{last\+\_\+scan\+\_\+height}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwallet_1_1Wallet_aa408360db9fad1f4f25bd607ab9ac1e5}{Wallet}} (std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$ \mbox{\hyperlink{classwallet_1_1Wallet_a79833fd9867619ab2fb9838b21ea068b}{omq}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_afd51db56e1c80b9a7ed42159e1a7fc78}{keys}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1TransactionConstructor}{Transaction\+Constructor}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_acf2337721bb060c3f1ece2b1ffb7923a}{tx\+\_\+constructor}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1DaemonComms}{Daemon\+Comms}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_a1df0de05ebc1a9575605dea8e8078f7c}{daemon\+\_\+comms}}, std\+::string\+\_\+view db\+Filename, std\+::string\+\_\+view db\+Password, \mbox{\hyperlink{structwallet_1_1Config}{wallet\+::\+Config}} config\+\_\+in=\{\})
+\item 
+void \mbox{\hyperlink{classwallet_1_1Wallet_a443e935bac318492b944aea6ca98ed5c}{init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$ \mbox{\hyperlink{classwallet_1_1Wallet_a79833fd9867619ab2fb9838b21ea068b}{omq}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1WalletDB}{Wallet\+DB}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_a793987b5334a7f4833cfbd4dfa89379a}{db}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_afd51db56e1c80b9a7ed42159e1a7fc78}{keys}}
+\item 
+\mbox{\hyperlink{classwallet_1_1TransactionScanner}{Transaction\+Scanner}} \mbox{\hyperlink{classwallet_1_1Wallet_a03b60b4cbbf335bc5012aca236964a15}{tx\+\_\+scanner}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1TransactionConstructor}{Transaction\+Constructor}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_acf2337721bb060c3f1ece2b1ffb7923a}{tx\+\_\+constructor}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1DaemonComms}{Daemon\+Comms}} $>$ \mbox{\hyperlink{classwallet_1_1Wallet_a1df0de05ebc1a9575605dea8e8078f7c}{daemon\+\_\+comms}}
+\item 
+\mbox{\hyperlink{classwallet_1_1rpc_1_1RequestHandler}{wallet\+::rpc\+::\+Request\+Handler}} \mbox{\hyperlink{classwallet_1_1Wallet_a155e4904b559feb67b5ba57d440313a2}{request\+\_\+handler}}
+\item 
+\mbox{\hyperlink{classwallet_1_1rpc_1_1OmqServer}{wallet\+::rpc\+::\+Omq\+Server}} \mbox{\hyperlink{classwallet_1_1Wallet_ab208e6ae764408d851a1a891ee9160e9}{omq\+\_\+server}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classwallet_1_1Wallet_a7589391864ff29eba109e52294777fce}{running}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{classwallet_1_1Wallet_ac9f7fe38fd00a31aa6358995f5ce95c5}{nettype}} = \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classwallet_1_1Wallet_a2b16c304af5512f769fdcf2521c16cb9}{wallet\+::rpc\+::\+Request\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwallet_1_1Wallet_aa408360db9fad1f4f25bd607ab9ac1e5}\label{classwallet_1_1Wallet_aa408360db9fad1f4f25bd607ab9ac1e5}} 
+\index{wallet::Wallet@{wallet::Wallet}!Wallet@{Wallet}}
+\index{Wallet@{Wallet}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{Wallet()}{Wallet()}}
+{\footnotesize\ttfamily wallet\+::\+Wallet\+::\+Wallet (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ oxenmq\+::\+Oxen\+MQ $>$}]{omq,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$}]{keys,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1TransactionConstructor}{Transaction\+Constructor}} $>$}]{tx\+\_\+constructor,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1DaemonComms}{Daemon\+Comms}} $>$}]{daemon\+\_\+comms,  }\item[{std\+::string\+\_\+view}]{db\+Filename,  }\item[{std\+::string\+\_\+view}]{db\+Password,  }\item[{\mbox{\hyperlink{structwallet_1_1Config}{wallet\+::\+Config}}}]{config\+\_\+in = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_ac8474a72702d0beee97aa69721b8036d}\label{classwallet_1_1Wallet_ac8474a72702d0beee97aa69721b8036d}} 
+\index{wallet::Wallet@{wallet::Wallet}!````~Wallet@{$\sim$Wallet}}
+\index{````~Wallet@{$\sim$Wallet}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wallet()}{~Wallet()}}
+{\footnotesize\ttfamily wallet\+::\+Wallet\+::$\sim$\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1Wallet_a39b273d88228a104d33c69b9490faa63}\label{classwallet_1_1Wallet_a39b273d88228a104d33c69b9490faa63}} 
+\index{wallet::Wallet@{wallet::Wallet}!add\_block@{add\_block}}
+\index{add\_block@{add\_block}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{add\_block()}{add\_block()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::add\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structwallet_1_1Block}{Block}} \&}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_aaa119087505d2e86270ac6051a4f5336}\label{classwallet_1_1Wallet_aaa119087505d2e86270ac6051a4f5336}} 
+\index{wallet::Wallet@{wallet::Wallet}!add\_blocks@{add\_blocks}}
+\index{add\_blocks@{add\_blocks}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{add\_blocks()}{add\_blocks()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::add\+\_\+blocks (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Block}{Block}} $>$ \&}]{blocks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_ae69efeb6f194567f38858ac7f0ac7245}\label{classwallet_1_1Wallet_ae69efeb6f194567f38858ac7f0ac7245}} 
+\index{wallet::Wallet@{wallet::Wallet}!create@{create}}
+\index{create@{create}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+static std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1Wallet}{Wallet}}$>$ wallet\+::\+Wallet\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a0d9d82a41af3168b4cced6e98fd421f1}\label{classwallet_1_1Wallet_a0d9d82a41af3168b4cced6e98fd421f1}} 
+\index{wallet::Wallet@{wallet::Wallet}!create\_transaction@{create\_transaction}}
+\index{create\_transaction@{create\_transaction}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{create\_transaction()}{create\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} wallet\+::\+Wallet\+::create\+\_\+transaction (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{classwallet_1_1address}{address}}, int64\+\_\+t $>$$>$ \&}]{recipients,  }\item[{int64\+\_\+t}]{fee\+Per\+KB }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_aa907a055849f961e854b8a4084c59231}\label{classwallet_1_1Wallet_aa907a055849f961e854b8a4084c59231}} 
+\index{wallet::Wallet@{wallet::Wallet}!deregister@{deregister}}
+\index{deregister@{deregister}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{deregister()}{deregister()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::deregister (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a059bd7ff289cc38ca0afcb72cf9e5646}\label{classwallet_1_1Wallet_a059bd7ff289cc38ca0afcb72cf9e5646}} 
+\index{wallet::Wallet@{wallet::Wallet}!export\_keys@{export\_keys}}
+\index{export\_keys@{export\_keys}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{export\_keys()}{export\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} wallet\+::\+Wallet\+::export\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a151cb23c1e6c84aeac2f3d4e3027d1a7}\label{classwallet_1_1Wallet_a151cb23c1e6c84aeac2f3d4e3027d1a7}} 
+\index{wallet::Wallet@{wallet::Wallet}!get\_balance@{get\_balance}}
+\index{get\_balance@{get\_balance}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{get\_balance()}{get\_balance()}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Wallet\+::get\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_aaf7a55e19e16a4ac78fb5fe969360625}\label{classwallet_1_1Wallet_aaf7a55e19e16a4ac78fb5fe969360625}} 
+\index{wallet::Wallet@{wallet::Wallet}!get\_unlocked\_balance@{get\_unlocked\_balance}}
+\index{get\_unlocked\_balance@{get\_unlocked\_balance}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{get\_unlocked\_balance()}{get\_unlocked\_balance()}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Wallet\+::get\+\_\+unlocked\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a443e935bac318492b944aea6ca98ed5c}\label{classwallet_1_1Wallet_a443e935bac318492b944aea6ca98ed5c}} 
+\index{wallet::Wallet@{wallet::Wallet}!init@{init}}
+\index{init@{init}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_aa0f3d2c449530009055e27a12bdce30e}\label{classwallet_1_1Wallet_aa0f3d2c449530009055e27a12bdce30e}} 
+\index{wallet::Wallet@{wallet::Wallet}!propogate\_config@{propogate\_config}}
+\index{propogate\_config@{propogate\_config}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{propogate\_config()}{propogate\_config()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::propogate\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a76922aa809ced824df5c68dd6dce168a}\label{classwallet_1_1Wallet_a76922aa809ced824df5c68dd6dce168a}} 
+\index{wallet::Wallet@{wallet::Wallet}!sign\_transaction@{sign\_transaction}}
+\index{sign\_transaction@{sign\_transaction}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{sign\_transaction()}{sign\_transaction()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::sign\+\_\+transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&}]{tx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a5fdeab69eea78e762e79f8cb2a21b4f1}\label{classwallet_1_1Wallet_a5fdeab69eea78e762e79f8cb2a21b4f1}} 
+\index{wallet::Wallet@{wallet::Wallet}!submit\_transaction@{submit\_transaction}}
+\index{submit\_transaction@{submit\_transaction}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{submit\_transaction()}{submit\_transaction()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::submit\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&}]{tx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a4d5acb6565f199979dc60ca155dcec15}\label{classwallet_1_1Wallet_a4d5acb6565f199979dc60ca155dcec15}} 
+\index{wallet::Wallet@{wallet::Wallet}!update\_top\_block\_info@{update\_top\_block\_info}}
+\index{update\_top\_block\_info@{update\_top\_block\_info}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{update\_top\_block\_info()}{update\_top\_block\_info()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+::update\+\_\+top\+\_\+block\+\_\+info (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1Wallet_a2b16c304af5512f769fdcf2521c16cb9}\label{classwallet_1_1Wallet_a2b16c304af5512f769fdcf2521c16cb9}} 
+\index{wallet::Wallet@{wallet::Wallet}!wallet::rpc::RequestHandler@{wallet::rpc::RequestHandler}}
+\index{wallet::rpc::RequestHandler@{wallet::rpc::RequestHandler}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{wallet::rpc::RequestHandler}{wallet::rpc::RequestHandler}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classwallet_1_1rpc_1_1RequestHandler}{wallet\+::rpc\+::\+Request\+Handler}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classwallet_1_1Wallet_aa7e4dbe5b7777752fbfd824c5741cbd4}\label{classwallet_1_1Wallet_aa7e4dbe5b7777752fbfd824c5741cbd4}} 
+\index{wallet::Wallet@{wallet::Wallet}!config@{config}}
+\index{config@{config}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwallet_1_1Config}{Config}} wallet\+::\+Wallet\+::config}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a1df0de05ebc1a9575605dea8e8078f7c}\label{classwallet_1_1Wallet_a1df0de05ebc1a9575605dea8e8078f7c}} 
+\index{wallet::Wallet@{wallet::Wallet}!daemon\_comms@{daemon\_comms}}
+\index{daemon\_comms@{daemon\_comms}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{daemon\_comms}{daemon\_comms}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1DaemonComms}{Daemon\+Comms}}$>$ wallet\+::\+Wallet\+::daemon\+\_\+comms\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a793987b5334a7f4833cfbd4dfa89379a}\label{classwallet_1_1Wallet_a793987b5334a7f4833cfbd4dfa89379a}} 
+\index{wallet::Wallet@{wallet::Wallet}!db@{db}}
+\index{db@{db}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1WalletDB}{Wallet\+DB}}$>$ wallet\+::\+Wallet\+::db\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_afd51db56e1c80b9a7ed42159e1a7fc78}\label{classwallet_1_1Wallet_afd51db56e1c80b9a7ed42159e1a7fc78}} 
+\index{wallet::Wallet@{wallet::Wallet}!keys@{keys}}
+\index{keys@{keys}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}}$>$ wallet\+::\+Wallet\+::keys\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a9690925365b876088c57d894b25950fc}\label{classwallet_1_1Wallet_a9690925365b876088c57d894b25950fc}} 
+\index{wallet::Wallet@{wallet::Wallet}!last\_scan\_height@{last\_scan\_height}}
+\index{last\_scan\_height@{last\_scan\_height}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{last\_scan\_height}{last\_scan\_height}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+::last\+\_\+scan\+\_\+height = -\/1}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_ac9f7fe38fd00a31aa6358995f5ce95c5}\label{classwallet_1_1Wallet_ac9f7fe38fd00a31aa6358995f5ce95c5}} 
+\index{wallet::Wallet@{wallet::Wallet}!nettype@{nettype}}
+\index{nettype@{nettype}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{nettype}{nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} wallet\+::\+Wallet\+::nettype = \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a79833fd9867619ab2fb9838b21ea068b}\label{classwallet_1_1Wallet_a79833fd9867619ab2fb9838b21ea068b}} 
+\index{wallet::Wallet@{wallet::Wallet}!omq@{omq}}
+\index{omq@{omq}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{omq}{omq}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$oxenmq\+::\+Oxen\+MQ$>$ wallet\+::\+Wallet\+::omq\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_ab208e6ae764408d851a1a891ee9160e9}\label{classwallet_1_1Wallet_ab208e6ae764408d851a1a891ee9160e9}} 
+\index{wallet::Wallet@{wallet::Wallet}!omq\_server@{omq\_server}}
+\index{omq\_server@{omq\_server}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{omq\_server}{omq\_server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwallet_1_1rpc_1_1OmqServer}{wallet\+::rpc\+::\+Omq\+Server}} wallet\+::\+Wallet\+::omq\+\_\+server\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a155e4904b559feb67b5ba57d440313a2}\label{classwallet_1_1Wallet_a155e4904b559feb67b5ba57d440313a2}} 
+\index{wallet::Wallet@{wallet::Wallet}!request\_handler@{request\_handler}}
+\index{request\_handler@{request\_handler}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{request\_handler}{request\_handler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwallet_1_1rpc_1_1RequestHandler}{wallet\+::rpc\+::\+Request\+Handler}} wallet\+::\+Wallet\+::request\+\_\+handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a7589391864ff29eba109e52294777fce}\label{classwallet_1_1Wallet_a7589391864ff29eba109e52294777fce}} 
+\index{wallet::Wallet@{wallet::Wallet}!running@{running}}
+\index{running@{running}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::\+Wallet\+::running = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a582c3a942684d064ec7c4b780f96be43}\label{classwallet_1_1Wallet_a582c3a942684d064ec7c4b780f96be43}} 
+\index{wallet::Wallet@{wallet::Wallet}!scan\_target\_height@{scan\_target\_height}}
+\index{scan\_target\_height@{scan\_target\_height}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{scan\_target\_height}{scan\_target\_height}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+::scan\+\_\+target\+\_\+height = 0}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_acf2337721bb060c3f1ece2b1ffb7923a}\label{classwallet_1_1Wallet_acf2337721bb060c3f1ece2b1ffb7923a}} 
+\index{wallet::Wallet@{wallet::Wallet}!tx\_constructor@{tx\_constructor}}
+\index{tx\_constructor@{tx\_constructor}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{tx\_constructor}{tx\_constructor}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1TransactionConstructor}{Transaction\+Constructor}}$>$ wallet\+::\+Wallet\+::tx\+\_\+constructor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classwallet_1_1Wallet_a03b60b4cbbf335bc5012aca236964a15}\label{classwallet_1_1Wallet_a03b60b4cbbf335bc5012aca236964a15}} 
+\index{wallet::Wallet@{wallet::Wallet}!tx\_scanner@{tx\_scanner}}
+\index{tx\_scanner@{tx\_scanner}!wallet::Wallet@{wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{tx\_scanner}{tx\_scanner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classwallet_1_1TransactionScanner}{Transaction\+Scanner}} wallet\+::\+Wallet\+::tx\+\_\+scanner\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{wallet_8hpp}{wallet.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{_2wallet_8cpp}{wallet.\+cpp}}\end{DoxyCompactItemize}

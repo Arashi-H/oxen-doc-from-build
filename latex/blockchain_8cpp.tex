@@ -1,0 +1,100 @@
+\hypertarget{blockchain_8cpp}{}\doxysection{src/cryptonote\+\_\+core/blockchain.cpp File Reference}
+\label{blockchain_8cpp}\index{src/cryptonote\_core/blockchain.cpp@{src/cryptonote\_core/blockchain.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$sodium.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/median.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+tx\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tx\+\_\+pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/miner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/time\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/threadpool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/boost\+\_\+serialization\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Sigs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/meta.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/sha256sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for blockchain.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{blockchain_8cpp_a174f8a77f62a2a4ea00169e16bcf58a4}{F\+I\+N\+D\+\_\+\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+\_\+\+S\+U\+P\+P\+L\+E\+M\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE}}~(100$\ast$1024$\ast$1024)
+\item 
+\#define \mbox{\hyperlink{blockchain_8cpp_ab5504d50ed290b0ff8b38f1061d600c7}{B\+L\+O\+C\+K\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+O\+V\+E\+R\+E\+S\+T\+I\+M\+A\+TE}}~(10 $\ast$ 1000000000000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{blockchain_8cpp_afd10b3df37603b2cf314c199c716e8c6}{get\+\_\+transaction\+\_\+version}} (const std\+::string \&bd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{blockchain_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}blockchain\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{blockchain_8cpp_ab5504d50ed290b0ff8b38f1061d600c7}\label{blockchain_8cpp_ab5504d50ed290b0ff8b38f1061d600c7}} 
+\index{blockchain.cpp@{blockchain.cpp}!BLOCK\_REWARD\_OVERESTIMATE@{BLOCK\_REWARD\_OVERESTIMATE}}
+\index{BLOCK\_REWARD\_OVERESTIMATE@{BLOCK\_REWARD\_OVERESTIMATE}!blockchain.cpp@{blockchain.cpp}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_REWARD\_OVERESTIMATE}{BLOCK\_REWARD\_OVERESTIMATE}}
+{\footnotesize\ttfamily \#define B\+L\+O\+C\+K\+\_\+\+R\+E\+W\+A\+R\+D\+\_\+\+O\+V\+E\+R\+E\+S\+T\+I\+M\+A\+TE~(10 $\ast$ 1000000000000)}
+
+\mbox{\Hypertarget{blockchain_8cpp_a174f8a77f62a2a4ea00169e16bcf58a4}\label{blockchain_8cpp_a174f8a77f62a2a4ea00169e16bcf58a4}} 
+\index{blockchain.cpp@{blockchain.cpp}!FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE@{FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE}}
+\index{FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE@{FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE}!blockchain.cpp@{blockchain.cpp}}
+\doxysubsubsection{\texorpdfstring{FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE}{FIND\_BLOCKCHAIN\_SUPPLEMENT\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define F\+I\+N\+D\+\_\+\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+\_\+\+S\+U\+P\+P\+L\+E\+M\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+S\+I\+ZE~(100$\ast$1024$\ast$1024)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blockchain_8cpp_afd10b3df37603b2cf314c199c716e8c6}\label{blockchain_8cpp_afd10b3df37603b2cf314c199c716e8c6}} 
+\index{blockchain.cpp@{blockchain.cpp}!get\_transaction\_version@{get\_transaction\_version}}
+\index{get\_transaction\_version@{get\_transaction\_version}!blockchain.cpp@{blockchain.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_version()}{get\_transaction\_version()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+transaction\+\_\+version (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bd }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{blockchain_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{blockchain_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{blockchain.cpp@{blockchain.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!blockchain.cpp@{blockchain.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}blockchain\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

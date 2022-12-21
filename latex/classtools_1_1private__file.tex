@@ -1,0 +1,132 @@
+\hypertarget{classtools_1_1private__file}{}\doxysection{tools\+::private\+\_\+file Class Reference}
+\label{classtools_1_1private__file}\index{tools::private\_file@{tools::private\_file}}
+
+
+A file restricted to process owner A\+ND process. Deletes file on destruction.  
+
+
+
+
+{\ttfamily \#include $<$file.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1private__file_ad5c9c812c394ed4d199eeb426f5e392c}{private\+\_\+file}} () noexcept
+\begin{DoxyCompactList}\small\item\em {\ttfamily \mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle()}} == nullptr \&\& filename.\+empty()}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtools_1_1private__file_a46229a9ffb964c69aeb2eb988daf7d42}{private\+\_\+file}} (\mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \& \mbox{\hyperlink{classtools_1_1private__file_a341df24f00cd0dc3661e432a2c2e4b3e}{operator=}} (\mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtools_1_1private__file_a89b0d31aa06b89029ed811579519bb86}{$\sim$private\+\_\+file}} () noexcept
+\begin{DoxyCompactList}\small\item\em Deletes {\ttfamily \mbox{\hyperlink{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}{filename()}}} and closes {\ttfamily \mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle()}}}. \end{DoxyCompactList}\item 
+std\+::\+F\+I\+LE $\ast$ \mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle}} () const noexcept
+\item 
+const fs\+::path \& \mbox{\hyperlink{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}{filename}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \mbox{\hyperlink{classtools_1_1private__file_ae96e5ef336f7fb9b36068baf5e327cb7}{create}} (fs\+::path \mbox{\hyperlink{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}{filename}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1private__file_a320bc13e37bfe27ad546cb4a749acc4c}{private\+\_\+file}} (std\+::\+F\+I\+LE $\ast$\mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle}}, fs\+::path \mbox{\hyperlink{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}{filename}}) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ std\+::\+F\+I\+LE, \mbox{\hyperlink{structtools_1_1close__file}{close\+\_\+file}} $>$ \mbox{\hyperlink{classtools_1_1private__file_a2f9f2da0f9038c6537fecce40b9e59ab}{m\+\_\+handle}}
+\item 
+fs\+::path \mbox{\hyperlink{classtools_1_1private__file_ac0730a623310aa5a64e4f9f02ae52d82}{m\+\_\+filename}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A file restricted to process owner A\+ND process. Deletes file on destruction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1private__file_a320bc13e37bfe27ad546cb4a749acc4c}\label{classtools_1_1private__file_a320bc13e37bfe27ad546cb4a749acc4c}} 
+\index{tools::private\_file@{tools::private\_file}!private\_file@{private\_file}}
+\index{private\_file@{private\_file}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{private\_file()}{private\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tools\+::private\+\_\+file\+::private\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::\+F\+I\+LE $\ast$}]{handle,  }\item[{fs\+::path}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtools_1_1private__file_ad5c9c812c394ed4d199eeb426f5e392c}\label{classtools_1_1private__file_ad5c9c812c394ed4d199eeb426f5e392c}} 
+\index{tools::private\_file@{tools::private\_file}!private\_file@{private\_file}}
+\index{private\_file@{private\_file}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{private\_file()}{private\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tools\+::private\+\_\+file\+::private\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+{\ttfamily \mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle()}} == nullptr \&\& filename.\+empty()}. 
+
+\mbox{\Hypertarget{classtools_1_1private__file_a46229a9ffb964c69aeb2eb988daf7d42}\label{classtools_1_1private__file_a46229a9ffb964c69aeb2eb988daf7d42}} 
+\index{tools::private\_file@{tools::private\_file}!private\_file@{private\_file}}
+\index{private\_file@{private\_file}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{private\_file()}{private\_file()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tools\+::private\+\_\+file\+::private\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtools_1_1private__file_a89b0d31aa06b89029ed811579519bb86}\label{classtools_1_1private__file_a89b0d31aa06b89029ed811579519bb86}} 
+\index{tools::private\_file@{tools::private\_file}!````~private\_file@{$\sim$private\_file}}
+\index{````~private\_file@{$\sim$private\_file}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{$\sim$private\_file()}{~private\_file()}}
+{\footnotesize\ttfamily tools\+::private\+\_\+file\+::$\sim$private\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Deletes {\ttfamily \mbox{\hyperlink{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}{filename()}}} and closes {\ttfamily \mbox{\hyperlink{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}{handle()}}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1private__file_ae96e5ef336f7fb9b36068baf5e327cb7}\label{classtools_1_1private__file_ae96e5ef336f7fb9b36068baf5e327cb7}} 
+\index{tools::private\_file@{tools::private\_file}!create@{create}}
+\index{create@{create}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} tools\+::private\+\_\+file\+::create (\begin{DoxyParamCaption}\item[{fs\+::path}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+File only readable by owner and only used by this process OR {\ttfamily \mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}}\{\}} on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}\label{classtools_1_1private__file_aeb816f0e4900d36e1cc0281d448349b4}} 
+\index{tools::private\_file@{tools::private\_file}!filename@{filename}}
+\index{filename@{filename}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{filename()}{filename()}}
+{\footnotesize\ttfamily const fs\+::path\& tools\+::private\+\_\+file\+::filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}\label{classtools_1_1private__file_a07400bf3b3e862ccfd3ba9f6923a35c5}} 
+\index{tools::private\_file@{tools::private\_file}!handle@{handle}}
+\index{handle@{handle}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily std\+::\+F\+I\+LE$\ast$ tools\+::private\+\_\+file\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtools_1_1private__file_a341df24f00cd0dc3661e432a2c2e4b3e}\label{classtools_1_1private__file_a341df24f00cd0dc3661e432a2c2e4b3e}} 
+\index{tools::private\_file@{tools::private\_file}!operator=@{operator=}}
+\index{operator=@{operator=}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}}\& tools\+::private\+\_\+file\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1private__file}{private\+\_\+file}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1private__file_ac0730a623310aa5a64e4f9f02ae52d82}\label{classtools_1_1private__file_ac0730a623310aa5a64e4f9f02ae52d82}} 
+\index{tools::private\_file@{tools::private\_file}!m\_filename@{m\_filename}}
+\index{m\_filename@{m\_filename}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{m\_filename}{m\_filename}}
+{\footnotesize\ttfamily fs\+::path tools\+::private\+\_\+file\+::m\+\_\+filename\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1private__file_a2f9f2da0f9038c6537fecce40b9e59ab}\label{classtools_1_1private__file_a2f9f2da0f9038c6537fecce40b9e59ab}} 
+\index{tools::private\_file@{tools::private\_file}!m\_handle@{m\_handle}}
+\index{m\_handle@{m\_handle}!tools::private\_file@{tools::private\_file}}
+\doxysubsubsection{\texorpdfstring{m\_handle}{m\_handle}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$std\+::\+F\+I\+LE, \mbox{\hyperlink{structtools_1_1close__file}{close\+\_\+file}}$>$ tools\+::private\+\_\+file\+::m\+\_\+handle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{file_8h}{file.\+h}}\item 
+src/common/\mbox{\hyperlink{file_8cpp}{file.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\hypertarget{miner_8cpp}{}\doxysection{src/cryptonote\+\_\+basic/miner.cpp File Reference}
+\label{miner_8cpp}\index{src/cryptonote\_basic/miner.cpp@{src/cryptonote\_basic/miner.cpp}}
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$oxenc/base64.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/portable\+\_\+storage\+\_\+template\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$logging/oxen\+\_\+logger.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}miner.\+h\char`\"{}}\newline
+Include dependency graph for miner.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{miner_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02miner_8cpp_03}{cryptonote\+::anonymous\+\_\+namespace\{miner.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{miner_8cpp_a5639b8e8d203349d8fa019d7b74c97d3}{A\+U\+T\+O\+D\+E\+T\+E\+C\+T\+\_\+\+W\+I\+N\+D\+OW}}~10
+\item 
+\#define \mbox{\hyperlink{miner_8cpp_a53ec05bab96b6318b777509c83038253}{A\+U\+T\+O\+D\+E\+T\+E\+C\+T\+\_\+\+G\+A\+I\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}~1.\+02f
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{miner_8cpp_af99d10213048dc7843799ea0fc7e1a74}{rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state}} ()
+\item 
+void \mbox{\hyperlink{miner_8cpp_a644b76e3cbf084b261de991585ba257d}{rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state}} ()
+\item 
+void \mbox{\hyperlink{namespacecryptonote_ae88a03aa4886b6cda1940b909eb89fda}{cryptonote\+::rx\+\_\+stop\+\_\+mining}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}miner\char`\"{})
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02miner_8cpp_03_a87cf0a21f7e2b3bde499cb9169f5f52e}{cryptonote\+::anonymous\+\_\+namespace\{miner.\+cpp\}\+::arg\+\_\+start\+\_\+mining}} = \{\char`\"{}start-\/mining\char`\"{}, \char`\"{}Specify wallet address to mining \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}}\char`\"{}, \char`\"{}\char`\"{}, true\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02miner_8cpp_03_a2dc1455b3218f85362778a501912fbb2}{cryptonote\+::anonymous\+\_\+namespace\{miner.\+cpp\}\+::arg\+\_\+mining\+\_\+threads}} = \{\char`\"{}mining-\/threads\char`\"{}, \char`\"{}Specify mining threads count\char`\"{}, 0, true\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{miner_8cpp_a53ec05bab96b6318b777509c83038253}\label{miner_8cpp_a53ec05bab96b6318b777509c83038253}} 
+\index{miner.cpp@{miner.cpp}!AUTODETECT\_GAIN\_THRESHOLD@{AUTODETECT\_GAIN\_THRESHOLD}}
+\index{AUTODETECT\_GAIN\_THRESHOLD@{AUTODETECT\_GAIN\_THRESHOLD}!miner.cpp@{miner.cpp}}
+\doxysubsubsection{\texorpdfstring{AUTODETECT\_GAIN\_THRESHOLD}{AUTODETECT\_GAIN\_THRESHOLD}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+D\+E\+T\+E\+C\+T\+\_\+\+G\+A\+I\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD~1.\+02f}
+
+\mbox{\Hypertarget{miner_8cpp_a5639b8e8d203349d8fa019d7b74c97d3}\label{miner_8cpp_a5639b8e8d203349d8fa019d7b74c97d3}} 
+\index{miner.cpp@{miner.cpp}!AUTODETECT\_WINDOW@{AUTODETECT\_WINDOW}}
+\index{AUTODETECT\_WINDOW@{AUTODETECT\_WINDOW}!miner.cpp@{miner.cpp}}
+\doxysubsubsection{\texorpdfstring{AUTODETECT\_WINDOW}{AUTODETECT\_WINDOW}}
+{\footnotesize\ttfamily \#define A\+U\+T\+O\+D\+E\+T\+E\+C\+T\+\_\+\+W\+I\+N\+D\+OW~10}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{miner_8cpp_af99d10213048dc7843799ea0fc7e1a74}\label{miner_8cpp_af99d10213048dc7843799ea0fc7e1a74}} 
+\index{miner.cpp@{miner.cpp}!rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}}
+\index{rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}!miner.cpp@{miner.cpp}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_allocate\_state()}{rx\_slow\_hash\_allocate\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{miner_8cpp_a644b76e3cbf084b261de991585ba257d}\label{miner_8cpp_a644b76e3cbf084b261de991585ba257d}} 
+\index{miner.cpp@{miner.cpp}!rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}}
+\index{rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}!miner.cpp@{miner.cpp}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_free\_state()}{rx\_slow\_hash\_free\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

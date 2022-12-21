@@ -1,0 +1,107 @@
+\hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03}{}\doxysection{tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\} Namespace Reference}
+\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03}\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_1_1reverse__alphabet__table}{reverse\+\_\+alphabet\+\_\+table}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_aa3c31b235678af62801f76d7465aa35a}{uint\+\_\+8be\+\_\+to\+\_\+64}} (const uint8\+\_\+t $\ast$data, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a6a4e949c9aa371e1f064ab30a091f9bc}{uint\+\_\+64\+\_\+to\+\_\+8be}} (uint64\+\_\+t num, size\+\_\+t size, uint8\+\_\+t $\ast$data)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a7d689a90253774e528bf2cd4c29cb1bb}{encode\+\_\+block}} (const char $\ast$\mbox{\hyperlink{structcryptonote_1_1block}{block}}, size\+\_\+t size, char $\ast$res)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af657800bf655a87b02f0fa51a7e70bbb}{decode\+\_\+block}} (const char $\ast$\mbox{\hyperlink{structcryptonote_1_1block}{block}}, size\+\_\+t size, char $\ast$res)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a5a9ea2e5101ae1685ab3542310b2e512}{alphabet}} = \char`\"{}123456789A\+B\+C\+D\+E\+F\+G\+H\+J\+K\+L\+M\+N\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+Y\+Zabcdefghijkmnopqrstuvwxyz\char`\"{}sv
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}{full\+\_\+block\+\_\+size}} = 8
+\item 
+constexpr std\+::array$<$ uint8\+\_\+t, \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}{full\+\_\+block\+\_\+size}}+1 $>$ \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a89d6287406a0b0563ef913d452306a4e}{encoded\+\_\+block\+\_\+sizes}} = \{0, 2, 3, 5, 6, 7, 9, 10, 11\}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}{full\+\_\+encoded\+\_\+block\+\_\+size}} = encoded\+\_\+block\+\_\+sizes.\+back()
+\item 
+constexpr std\+::array$<$ int8\+\_\+t, \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}{full\+\_\+encoded\+\_\+block\+\_\+size}}+1 $>$ \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a4cbaf7e7d45f41694c522f00dc90aa2a}{decoded\+\_\+block\+\_\+sizes}} = \{0, -\/1, 1, 2, -\/1, 3, 4, 5, -\/1, 6, 7, 8\}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af56c9d984b2a534776438a4a65501af2}{addr\+\_\+checksum\+\_\+size}} = 4
+\item 
+struct tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::\mbox{\hyperlink{structtools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_1_1reverse__alphabet__table}{reverse\+\_\+alphabet\+\_\+table}} \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a3dbfc488201218acca49a581d11c9b70}{reverse\+\_\+alphabet}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af657800bf655a87b02f0fa51a7e70bbb}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af657800bf655a87b02f0fa51a7e70bbb}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!decode\_block@{decode\_block}}
+\index{decode\_block@{decode\_block}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{decode\_block()}{decode\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::decode\+\_\+block (\begin{DoxyParamCaption}\item[{const char $\ast$}]{block,  }\item[{size\+\_\+t}]{size,  }\item[{char $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a7d689a90253774e528bf2cd4c29cb1bb}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a7d689a90253774e528bf2cd4c29cb1bb}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!encode\_block@{encode\_block}}
+\index{encode\_block@{encode\_block}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{encode\_block()}{encode\_block()}}
+{\footnotesize\ttfamily void tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::encode\+\_\+block (\begin{DoxyParamCaption}\item[{const char $\ast$}]{block,  }\item[{size\+\_\+t}]{size,  }\item[{char $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a6a4e949c9aa371e1f064ab30a091f9bc}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a6a4e949c9aa371e1f064ab30a091f9bc}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!uint\_64\_to\_8be@{uint\_64\_to\_8be}}
+\index{uint\_64\_to\_8be@{uint\_64\_to\_8be}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{uint\_64\_to\_8be()}{uint\_64\_to\_8be()}}
+{\footnotesize\ttfamily void tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::uint\+\_\+64\+\_\+to\+\_\+8be (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{num,  }\item[{size\+\_\+t}]{size,  }\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_aa3c31b235678af62801f76d7465aa35a}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_aa3c31b235678af62801f76d7465aa35a}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!uint\_8be\_to\_64@{uint\_8be\_to\_64}}
+\index{uint\_8be\_to\_64@{uint\_8be\_to\_64}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{uint\_8be\_to\_64()}{uint\_8be\_to\_64()}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::uint\+\_\+8be\+\_\+to\+\_\+64 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af56c9d984b2a534776438a4a65501af2}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_af56c9d984b2a534776438a4a65501af2}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!addr\_checksum\_size@{addr\_checksum\_size}}
+\index{addr\_checksum\_size@{addr\_checksum\_size}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{addr\_checksum\_size}{addr\_checksum\_size}}
+{\footnotesize\ttfamily constexpr size\+\_\+t tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::addr\+\_\+checksum\+\_\+size = 4\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a5a9ea2e5101ae1685ab3542310b2e512}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a5a9ea2e5101ae1685ab3542310b2e512}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{alphabet}{alphabet}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::alphabet = \char`\"{}123456789A\+B\+C\+D\+E\+F\+G\+H\+J\+K\+L\+M\+N\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+Y\+Zabcdefghijkmnopqrstuvwxyz\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a4cbaf7e7d45f41694c522f00dc90aa2a}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a4cbaf7e7d45f41694c522f00dc90aa2a}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!decoded\_block\_sizes@{decoded\_block\_sizes}}
+\index{decoded\_block\_sizes@{decoded\_block\_sizes}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{decoded\_block\_sizes}{decoded\_block\_sizes}}
+{\footnotesize\ttfamily constexpr std\+::array$<$int8\+\_\+t, \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}{full\+\_\+encoded\+\_\+block\+\_\+size}} + 1$>$ tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::decoded\+\_\+block\+\_\+sizes = \{0, -\/1, 1, 2, -\/1, 3, 4, 5, -\/1, 6, 7, 8\}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a89d6287406a0b0563ef913d452306a4e}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a89d6287406a0b0563ef913d452306a4e}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!encoded\_block\_sizes@{encoded\_block\_sizes}}
+\index{encoded\_block\_sizes@{encoded\_block\_sizes}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{encoded\_block\_sizes}{encoded\_block\_sizes}}
+{\footnotesize\ttfamily constexpr std\+::array$<$uint8\+\_\+t, \mbox{\hyperlink{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}{full\+\_\+block\+\_\+size}} + 1$>$ tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::encoded\+\_\+block\+\_\+sizes = \{0, 2, 3, 5, 6, 7, 9, 10, 11\}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a9dff9211498cc2569de5c2809622a611}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!full\_block\_size@{full\_block\_size}}
+\index{full\_block\_size@{full\_block\_size}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{full\_block\_size}{full\_block\_size}}
+{\footnotesize\ttfamily constexpr size\+\_\+t tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::full\+\_\+block\+\_\+size = 8\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a2c00830bd4e51a3a11304ae300ed4b6e}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!full\_encoded\_block\_size@{full\_encoded\_block\_size}}
+\index{full\_encoded\_block\_size@{full\_encoded\_block\_size}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{full\_encoded\_block\_size}{full\_encoded\_block\_size}}
+{\footnotesize\ttfamily constexpr size\+\_\+t tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::full\+\_\+encoded\+\_\+block\+\_\+size = encoded\+\_\+block\+\_\+sizes.\+back()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a3dbfc488201218acca49a581d11c9b70}\label{namespacetools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_a3dbfc488201218acca49a581d11c9b70}} 
+\index{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}!reverse\_alphabet@{reverse\_alphabet}}
+\index{reverse\_alphabet@{reverse\_alphabet}!tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}@{tools::base58::anonymous\_namespace\lcurly{}base58.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{reverse\_alphabet}{reverse\_alphabet}}
+{\footnotesize\ttfamily struct tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::\mbox{\hyperlink{structtools_1_1base58_1_1anonymous__namespace_02base58_8cpp_03_1_1reverse__alphabet__table}{reverse\+\_\+alphabet\+\_\+table}} tools\+::base58\+::anonymous\+\_\+namespace\{base58.\+cpp\}\+::reverse\+\_\+alphabet}
+

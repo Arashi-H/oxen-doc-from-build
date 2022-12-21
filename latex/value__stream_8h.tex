@@ -1,0 +1,50 @@
+\hypertarget{value__stream_8h}{}\doxysection{src/lmdb/value\+\_\+stream.h File Reference}
+\label{value__stream_8h}\index{src/lmdb/value\_stream.h@{src/lmdb/value\_stream.h}}
+{\ttfamily \#include $<$boost/range/iterator\+\_\+range.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for value\+\_\+stream.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{value__stream_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{value__stream_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlmdb_1_1value__iterator}{lmdb\+::value\+\_\+iterator$<$ T, F, offset $>$}}
+\item 
+class \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream$<$ T, D $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb}{lmdb}}
+\item 
+ \mbox{\hyperlink{namespacelmdb_1_1stream}{lmdb\+::stream}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+mdb\+\_\+size\+\_\+t \mbox{\hyperlink{namespacelmdb_1_1stream_aba452209f8756851cd8e72e4cb42e2b9}{lmdb\+::stream\+::count}} (M\+D\+B\+\_\+cursor $\ast$cur)
+\item 
+std\+::pair$<$ epee\+::span$<$ const std\+::uint8\+\_\+t $>$, epee\+::span$<$ const std\+::uint8\+\_\+t $>$ $>$ \mbox{\hyperlink{namespacelmdb_1_1stream_ae5251d5cae44c6344fb051a81e16d2cf}{lmdb\+::stream\+::get}} (M\+D\+B\+\_\+cursor \&cur, M\+D\+B\+\_\+cursor\+\_\+op op, std\+::size\+\_\+t key, std\+::size\+\_\+t value)
+\item 
+{\footnotesize template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_ae3ae732a4b8734eb1677a830eabaa263}{lmdb\+::operator==}} (value\+\_\+iterator$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&lhs, value\+\_\+iterator$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_a43b7a3960adeeea03195710ea48d667c}{lmdb\+::operator!=}} (value\+\_\+iterator$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&lhs, value\+\_\+iterator$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&rhs) noexcept
+\end{DoxyCompactItemize}

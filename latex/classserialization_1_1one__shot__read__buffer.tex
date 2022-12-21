@@ -1,0 +1,83 @@
+\hypertarget{classserialization_1_1one__shot__read__buffer}{}\doxysection{serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer Class Reference}
+\label{classserialization_1_1one__shot__read__buffer}\index{serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}}
+
+
+{\ttfamily \#include $<$binary\+\_\+utils.\+h$>$}
+
+
+
+Inheritance diagram for serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classserialization_1_1one__shot__read__buffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classserialization_1_1one__shot__read__buffer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialization_1_1one__shot__read__buffer_ad2983a2168038c1aee21e672b9c8feac}{one\+\_\+shot\+\_\+read\+\_\+buffer}} (std\+::string\+\_\+view in)
+\begin{DoxyCompactList}\small\item\em Construct from string\+\_\+view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserialization_1_1one__shot__read__buffer_a47448395f01af47b76f82b629112b1f7}{one\+\_\+shot\+\_\+read\+\_\+buffer}} (const std\+::string \&\&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})=delete
+\begin{DoxyCompactList}\small\item\em Explicitly disallow construction with std\+::string temporary. \end{DoxyCompactList}\item 
+pos\+\_\+type \mbox{\hyperlink{classserialization_1_1one__shot__read__buffer_a64bea749c155f690b2fa4d9a3150dbc6}{seekoff}} (off\+\_\+type off, std\+::ios\+\_\+base\+::seekdir dir, std\+::ios\+\_\+base\+::openmode which) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple class to read from memory in-\/place. Intended use\+: \begin{DoxyVerb}one_shot_read_buffer buf{view};
+std::istream is{&buf};
+is >> foo; /* do some istream stuff with is *&zwj;/
+\end{DoxyVerb}
+
+
+Note that the {\ttfamily view} must be kept valid for the lifetime of the buffer.
+
+Note that this very limited implementation does not support seeking at all. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserialization_1_1one__shot__read__buffer_ad2983a2168038c1aee21e672b9c8feac}\label{classserialization_1_1one__shot__read__buffer_ad2983a2168038c1aee21e672b9c8feac}} 
+\index{serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}!one\_shot\_read\_buffer@{one\_shot\_read\_buffer}}
+\index{one\_shot\_read\_buffer@{one\_shot\_read\_buffer}!serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}}
+\doxysubsubsection{\texorpdfstring{one\_shot\_read\_buffer()}{one\_shot\_read\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer\+::one\+\_\+shot\+\_\+read\+\_\+buffer (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct from string\+\_\+view. 
+
+\mbox{\Hypertarget{classserialization_1_1one__shot__read__buffer_a47448395f01af47b76f82b629112b1f7}\label{classserialization_1_1one__shot__read__buffer_a47448395f01af47b76f82b629112b1f7}} 
+\index{serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}!one\_shot\_read\_buffer@{one\_shot\_read\_buffer}}
+\index{one\_shot\_read\_buffer@{one\_shot\_read\_buffer}!serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}}
+\doxysubsubsection{\texorpdfstring{one\_shot\_read\_buffer()}{one\_shot\_read\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer\+::one\+\_\+shot\+\_\+read\+\_\+buffer (\begin{DoxyParamCaption}\item[{const std\+::string \&\&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [delete]}}
+
+
+
+Explicitly disallow construction with std\+::string temporary. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserialization_1_1one__shot__read__buffer_a64bea749c155f690b2fa4d9a3150dbc6}\label{classserialization_1_1one__shot__read__buffer_a64bea749c155f690b2fa4d9a3150dbc6}} 
+\index{serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}!seekoff@{seekoff}}
+\index{seekoff@{seekoff}!serialization::one\_shot\_read\_buffer@{serialization::one\_shot\_read\_buffer}}
+\doxysubsubsection{\texorpdfstring{seekoff()}{seekoff()}}
+{\footnotesize\ttfamily pos\+\_\+type serialization\+::one\+\_\+shot\+\_\+read\+\_\+buffer\+::seekoff (\begin{DoxyParamCaption}\item[{off\+\_\+type}]{off,  }\item[{std\+::ios\+\_\+base\+::seekdir}]{dir,  }\item[{std\+::ios\+\_\+base\+::openmode}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+seekoff implementation that can be used {\itshape only} to obtain the current input position (i.\+e. using off=0, dir=cur, and which=in). Anything else returns -\/1. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/serialization/\mbox{\hyperlink{binary__utils_8h}{binary\+\_\+utils.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{ge__scalarmult__base_8c}{}\doxysection{src/crypto/crypto\+\_\+ops\+\_\+builder/ref10/ge\+\_\+scalarmult\+\_\+base.c File Reference}
+\label{ge__scalarmult__base_8c}\index{src/crypto/crypto\_ops\_builder/ref10/ge\_scalarmult\_base.c@{src/crypto/crypto\_ops\_builder/ref10/ge\_scalarmult\_base.c}}
+{\ttfamily \#include \char`\"{}ge.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto\+\_\+uint32.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}base.\+h\char`\"{}}\newline
+Include dependency graph for ge\+\_\+scalarmult\+\_\+base.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{ge__scalarmult__base_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned char \mbox{\hyperlink{ge__scalarmult__base_8c_aeea220203a9ea342ccc4a6b76d81b51b}{equal}} (signed char b, signed char c)
+\item 
+static unsigned char \mbox{\hyperlink{ge__scalarmult__base_8c_a2c198b7247bcbfbd086c9c96000843df}{negative}} (signed char b)
+\item 
+static void \mbox{\hyperlink{ge__scalarmult__base_8c_ac8f2af4ca58dda54a4bec3810d97ad2d}{cmov}} (\mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$t, \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$u, unsigned char b)
+\item 
+static void \mbox{\hyperlink{ge__scalarmult__base_8c_a5444cec6d43767cf6ee65bfcf3d515d9}{select}} (\mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$t, int pos, signed char b)
+\item 
+void \mbox{\hyperlink{ge__scalarmult__base_8c_ac4d168c0712af761f170649c8240fded}{ge\+\_\+scalarmult\+\_\+base}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$h, const unsigned char $\ast$a)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} \mbox{\hyperlink{ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}} \mbox{[}32\mbox{]}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ge__scalarmult__base_8c_ac8f2af4ca58dda54a4bec3810d97ad2d}\label{ge__scalarmult__base_8c_ac8f2af4ca58dda54a4bec3810d97ad2d}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!cmov@{cmov}}
+\index{cmov@{cmov}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{cmov()}{cmov()}}
+{\footnotesize\ttfamily static void cmov (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$}]{t,  }\item[{\mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$}]{u,  }\item[{unsigned char}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ge__scalarmult__base_8c_aeea220203a9ea342ccc4a6b76d81b51b}\label{ge__scalarmult__base_8c_aeea220203a9ea342ccc4a6b76d81b51b}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!equal@{equal}}
+\index{equal@{equal}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily static unsigned char equal (\begin{DoxyParamCaption}\item[{signed char}]{b,  }\item[{signed char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ge__scalarmult__base_8c_ac4d168c0712af761f170649c8240fded}\label{ge__scalarmult__base_8c_ac4d168c0712af761f170649c8240fded}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!ge\_scalarmult\_base@{ge\_scalarmult\_base}}
+\index{ge\_scalarmult\_base@{ge\_scalarmult\_base}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{ge\_scalarmult\_base()}{ge\_scalarmult\_base()}}
+{\footnotesize\ttfamily void ge\+\_\+scalarmult\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{h,  }\item[{const unsigned char $\ast$}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ge__scalarmult__base_8c_a2c198b7247bcbfbd086c9c96000843df}\label{ge__scalarmult__base_8c_a2c198b7247bcbfbd086c9c96000843df}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!negative@{negative}}
+\index{negative@{negative}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily static unsigned char negative (\begin{DoxyParamCaption}\item[{signed char}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ge__scalarmult__base_8c_a5444cec6d43767cf6ee65bfcf3d515d9}\label{ge__scalarmult__base_8c_a5444cec6d43767cf6ee65bfcf3d515d9}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!select@{select}}
+\index{select@{select}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily static void select (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} $\ast$}]{t,  }\item[{int}]{pos,  }\item[{signed char}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}\label{ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}} 
+\index{ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}!base@{base}}
+\index{base@{base}!ge\_scalarmult\_base.c@{ge\_scalarmult\_base.c}}
+\doxysubsubsection{\texorpdfstring{base}{base}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} base\mbox{[}32\mbox{]}\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

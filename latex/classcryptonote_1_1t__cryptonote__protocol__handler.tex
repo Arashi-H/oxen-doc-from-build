@@ -1,0 +1,852 @@
+\hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler}{}\doxysection{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler$<$ t\+\_\+core $>$ Class Template Reference}
+\label{classcryptonote_1_1t__cryptonote__protocol__handler}\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+
+
+{\ttfamily \#include $<$cryptonote\+\_\+protocol\+\_\+handler.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler$<$ t\+\_\+core $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classcryptonote_1_1t__cryptonote__protocol__handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler$<$ t\+\_\+core $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1t__cryptonote__protocol__handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} = \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}}
+\item 
+using \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a72ef7226b87894b00e014c5ae8e660bc}{cryptonote\+\_\+protocol\+\_\+handler}} = \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a318898f8bd70be3bb9030cacf86bbafe}{t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}} (t\+\_\+core \&rcore, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} offline=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+virtual \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a7b6207437d9c55353f733412f6c4d928}{$\sim$t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}} ()=default
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aa0f3e2ac4a2c12e6b051571f15bed4a2}{on\+\_\+idle}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a54a70a02bb2f3032bd70e8bd4a44f48d}{init}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab57619d0e1aea149fc37b41a3842b59c}{deinit}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a1b298e1b2beccdb71adec82366af2fd8}{set\+\_\+p2p\+\_\+endpoint}} (\mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint}{nodetool\+::i\+\_\+p2p\+\_\+endpoint}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} $>$ $\ast$p2p)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_af837e8309cacc6c55394a0481cb7b1d9}{process\+\_\+payload\+\_\+sync\+\_\+data}} (\mbox{\hyperlink{structcryptonote_1_1CORE__SYNC__DATA}{C\+O\+R\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+D\+A\+TA}} \&\&hshd, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+inital)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a690a17a16c728282e513251ee52c14d0}{get\+\_\+payload\+\_\+sync\+\_\+data}} (std\+::string \&data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a191a9497c2a1c1937390be6d3e506652}{get\+\_\+payload\+\_\+sync\+\_\+data}} (\mbox{\hyperlink{structcryptonote_1_1CORE__SYNC__DATA}{C\+O\+R\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+D\+A\+TA}} \&hshd)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aa9455c3a1216f85cd43951d71e33947f}{on\+\_\+callback}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+t\+\_\+core \& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a2476a6283e2e33e966233f39650827f7}{get\+\_\+core}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aeb318fe02d9c8e0bea6d7353e0654868}{is\+\_\+synchronized}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_af8877ac9da099863295ce69aff2b875e}{log\+\_\+connections}} ()
+\item 
+std\+::list$<$ \mbox{\hyperlink{structcryptonote_1_1connection__info}{connection\+\_\+info}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aacdfe42f9dfc578655256f1d42c26d2a}{get\+\_\+connections}} ()
+\item 
+const \mbox{\hyperlink{classcryptonote_1_1block__queue}{block\+\_\+queue}} \& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5d4c39a66076c3572d5abe002fc94cee}{get\+\_\+block\+\_\+queue}} () const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ad272f6d8f72b7b3cadb313b169207036}{stop}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aeb72d05b2736dc9624f85236ee5727a0}{on\+\_\+connection\+\_\+close}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a94dd81e34a34ab2c5f5f0e437112bcae}{set\+\_\+max\+\_\+out\+\_\+peers}} (unsigned int max)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab30660bedde37349b6930cb52829f941}{no\+\_\+sync}} () const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a2fdc72f7eae261482be66d5f3e76b8e3}{set\+\_\+no\+\_\+sync}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} value)
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a438a98d9cc96f2fed0571856cef02aae}{get\+\_\+peers\+\_\+overview}} () const
+\item 
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a118242e00e21ac748c0a87d286b56d33}{get\+\_\+next\+\_\+needed\+\_\+pruning\+\_\+stripe}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a588776a46ca3b7fb18b6254fbc29f318}{needs\+\_\+new\+\_\+sync\+\_\+connections}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a1fc3c84a503b7bd2ebc23821a0adc505}{handle\+\_\+notify\+\_\+new\+\_\+transactions}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__TRANSACTIONS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a76470b2cc2b8655235ceb86acad68025}{handle\+\_\+request\+\_\+get\+\_\+blocks}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__GET__BLOCKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ad5f105af50bb6eaebfed9f9cd688f705}{handle\+\_\+response\+\_\+get\+\_\+blocks}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__GET__BLOCKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a7b3db793ca8b7a0f4a6388d9771cc5a9}{handle\+\_\+request\+\_\+get\+\_\+txs}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__GET__TXS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+T\+X\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a7b07880d3a0b5bd1ec5421663eb8955a}{handle\+\_\+request\+\_\+chain}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__CHAIN_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+I\+N\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a8d02b42cbc652a185fe65ef1b66f04fb}{handle\+\_\+response\+\_\+chain\+\_\+entry}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__CHAIN__ENTRY_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+C\+H\+A\+I\+N\+\_\+\+E\+N\+T\+R\+Y\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aa8071fcd8cdb5ac98acbd9b26391b77a}{handle\+\_\+notify\+\_\+new\+\_\+fluffy\+\_\+block}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__FLUFFY__BLOCK_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+K\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aeac4a4ef03701a31e9a16f601b051fa5}{handle\+\_\+request\+\_\+fluffy\+\_\+missing\+\_\+tx}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__FLUFFY__MISSING__TX_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+M\+I\+S\+S\+I\+N\+G\+\_\+\+T\+X\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ac18d7f2ef4a8afdf55c4d88580052f6d}{handle\+\_\+uptime\+\_\+proof}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a49eea79657bfc33d815ad493831f4253}{handle\+\_\+btencoded\+\_\+uptime\+\_\+proof}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__BTENCODED__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+B\+T\+E\+N\+C\+O\+D\+E\+D\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a04dd4b92097fba48eb344c85a259625f}{handle\+\_\+notify\+\_\+new\+\_\+service\+\_\+node\+\_\+vote}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__SERVICE__NODE__VOTE_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+T\+E\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aac7135bca95818b7cebf7ef0a02c45b8}{handle\+\_\+request\+\_\+block\+\_\+blinks}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__BLOCK__BLINKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+B\+L\+I\+N\+K\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a7c5d50877b0fdeabfd233e2ef9518576}{handle\+\_\+response\+\_\+block\+\_\+blinks}} (int command, \mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__BLOCK__BLINKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+B\+L\+I\+N\+K\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a41fcac304ae4baebaab9b975404cc695}{relay\+\_\+to\+\_\+synchronized\+\_\+peers}} (typename T\+::request \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a9e8a49167ad9e26b14a15373f6ec1561}{relay\+\_\+block}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__FLUFFY__BLOCK_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+K\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a7e2be2c741c03b106c59b79052767b35}{relay\+\_\+transactions}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__TRANSACTIONS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a001593d310065e9942e648835e147516}{relay\+\_\+uptime\+\_\+proof}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aac4c806521ba04d586ceda3a253e7851}{relay\+\_\+btencoded\+\_\+uptime\+\_\+proof}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__BTENCODED__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+B\+T\+E\+N\+C\+O\+D\+E\+D\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab5b9b23098cc0129b19540ba0fcd3472}{relay\+\_\+service\+\_\+node\+\_\+votes}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__SERVICE__NODE__VOTE_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+T\+E\+::request}} \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&exclude\+\_\+context)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_af135245c124f3926c3bbe49f7959b741}{should\+\_\+drop\+\_\+connection}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, uint32\+\_\+t next\+\_\+stripe)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a217f8d892911e9d76a42450ff827ebe7}{request\+\_\+missing\+\_\+objects}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+having\+\_\+blocks, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} force\+\_\+next\+\_\+span=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a9cfc294bd19293c11f97f23aa5ff5964}{get\+\_\+synchronizing\+\_\+connections\+\_\+count}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ac57d9bc780af2f75f3621931fdbba850}{on\+\_\+connection\+\_\+synchronized}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a8f3bd65294644128138711e499ab69cb}{should\+\_\+download\+\_\+next\+\_\+span}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} standby)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a0bf9edb2d756d6fd467757b3886d3355}{drop\+\_\+connection}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} add\+\_\+fail, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} flush\+\_\+all\+\_\+spans)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a74a392ab3b1acfc3c47a210d50fea326}{kick\+\_\+idle\+\_\+peers}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aac2ab27fcc6627f4db6660e86f90c03d}{check\+\_\+standby\+\_\+peers}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a79643e8226349e723510ec1dfb75bc3e}{update\+\_\+sync\+\_\+search}} ()
+\item 
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a72009325108d00c98721b9b9e2de6a81}{try\+\_\+add\+\_\+next\+\_\+blocks}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a44bd2a817f97e2f3caaac02c358a61f6}{notify\+\_\+new\+\_\+stripe}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, uint32\+\_\+t stripe)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a01c76b00058e6c681df08380048311db}{skip\+\_\+unneeded\+\_\+hashes}} (\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check\+\_\+block\+\_\+queue) const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a048c2285d81991661542e70b63e66719}{get\+\_\+estimated\+\_\+remaining\+\_\+sync\+\_\+seconds}} (uint64\+\_\+t current\+\_\+blockchain\+\_\+height, uint64\+\_\+t target\+\_\+blockchain\+\_\+height)
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a4813102bf01d6ee1c009e65116809b41}{get\+\_\+periodic\+\_\+sync\+\_\+estimate}} (uint64\+\_\+t current\+\_\+blockchain\+\_\+height, uint64\+\_\+t target\+\_\+blockchain\+\_\+height)
+\item 
+{\footnotesize template$<$class t\+\_\+parameter $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a352254d2ba5a74f1a85f60cd4105580b}{post\+\_\+notify}} (typename t\+\_\+parameter\+::request \&arg, \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+t\+\_\+core \& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a9711bcb85e71f8f106caeec59de850f9}{m\+\_\+core}}
+\item 
+\mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_abede7eb2b2760ddf8ea945c046d57681}{m\+\_\+p2p\+\_\+stub}}
+\item 
+\mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint}{nodetool\+::i\+\_\+p2p\+\_\+endpoint}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} $>$ $\ast$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a70652d116c7dd7bdbab0a09145abdee7}{m\+\_\+p2p}}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab6111dfcb06a0defaeae7942e0816d09}{m\+\_\+syncronized\+\_\+connections\+\_\+count}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ae900d21e15e9a749156dc8d795755abe}{m\+\_\+synchronized}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab77a5c6307b790d3c9e20af103a62acf}{m\+\_\+stopping}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a2da65eb8b6682af67f4417a4fabfd790}{m\+\_\+no\+\_\+sync}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a4aafa6bf7bce3fdc783d8bd29f4a0755}{m\+\_\+sync\+\_\+lock}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1block__queue}{block\+\_\+queue}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a8abb54b4b7e8c4bc91092b761db30978}{m\+\_\+block\+\_\+queue}}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_acec0e60e33c8365690d5e12647aaaaf1}{m\+\_\+idle\+\_\+peer\+\_\+kicker}} \{30s\}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a487ab5af2baa59a6f4a755c09cdc4289}{m\+\_\+standby\+\_\+checker}} \{100ms\}
+\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ac8f8a3d346092a6c977c946df5302e82}{m\+\_\+sync\+\_\+search\+\_\+checker}} \{101\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}
+\item 
+std\+::atomic$<$ unsigned int $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a3cc5319212ca4a4992ce39d44248c55a}{m\+\_\+max\+\_\+out\+\_\+peers}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ad17938eba300c4568ba40fe2d432b1f7}{m\+\_\+sync\+\_\+timer}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_afa1c7fe34b2b81e612dfccddc2fbd6a5}{m\+\_\+last\+\_\+add\+\_\+end\+\_\+time}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_adcd8e19690a5344d3e2e5fbbef22565a}{m\+\_\+sync\+\_\+spans\+\_\+downloaded}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a583b7eb4ac5e628accf8836d7f5ff8cd}{m\+\_\+sync\+\_\+old\+\_\+spans\+\_\+downloaded}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ae1e4346afb5d810b6f4489066b10a265}{m\+\_\+sync\+\_\+bad\+\_\+spans\+\_\+downloaded}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a26353f490172054cf731396eda6a4966}{m\+\_\+sync\+\_\+download\+\_\+chain\+\_\+size}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a8890542318d065c90413c413074e4a1d}{m\+\_\+sync\+\_\+download\+\_\+objects\+\_\+size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ac00a765f913810588e03b80eb4c03a7f}{m\+\_\+block\+\_\+download\+\_\+max\+\_\+size}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a278f0e4eb8e6ae39d9696f23f531f8c0}{m\+\_\+sync\+\_\+start\+\_\+time}}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ab0cafdb21d6409f9514e7ea52388e343}{m\+\_\+period\+\_\+start\+\_\+time}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_aad83a08ab046f99c1f9815fbdc3e373f}{m\+\_\+sync\+\_\+start\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_ae5d0a642ae3b6302759383f0041b54da}{m\+\_\+period\+\_\+start\+\_\+height}}
+\item 
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a721ca0f1e388d7d76a0426f886e9d7ca}{m\+\_\+buffer\+\_\+mutex}}
+\item 
+boost\+::circular\+\_\+buffer$<$ size\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a8e7f921836dacb9b9c47fc9b632bc29a}{m\+\_\+avg\+\_\+buffer}} = boost\+::circular\+\_\+buffer$<$size\+\_\+t$>$(10)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!connection\_context@{connection\_context}}
+\index{connection\_context@{connection\_context}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{connection\_context}{connection\_context}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+using \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} =  \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a72ef7226b87894b00e014c5ae8e660bc}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a72ef7226b87894b00e014c5ae8e660bc}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!cryptonote\_protocol\_handler@{cryptonote\_protocol\_handler}}
+\index{cryptonote\_protocol\_handler@{cryptonote\_protocol\_handler}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{cryptonote\_protocol\_handler}{cryptonote\_protocol\_handler}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+using \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a72ef7226b87894b00e014c5ae8e660bc}{cryptonote\+\_\+protocol\+\_\+handler}} =  \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$t\+\_\+core$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a318898f8bd70be3bb9030cacf86bbafe}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a318898f8bd70be3bb9030cacf86bbafe}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!t\_cryptonote\_protocol\_handler@{t\_cryptonote\_protocol\_handler}}
+\index{t\_cryptonote\_protocol\_handler@{t\_cryptonote\_protocol\_handler}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{t\_cryptonote\_protocol\_handler()}{t\_cryptonote\_protocol\_handler()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}} (\begin{DoxyParamCaption}\item[{t\+\_\+core \&}]{rcore,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{offline = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a7b6207437d9c55353f733412f6c4d928}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a7b6207437d9c55353f733412f6c4d928}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!````~t\_cryptonote\_protocol\_handler@{$\sim$t\_cryptonote\_protocol\_handler}}
+\index{````~t\_cryptonote\_protocol\_handler@{$\sim$t\_cryptonote\_protocol\_handler}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$t\_cryptonote\_protocol\_handler()}{~t\_cryptonote\_protocol\_handler()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+virtual \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::$\sim$\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aac2ab27fcc6627f4db6660e86f90c03d}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aac2ab27fcc6627f4db6660e86f90c03d}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!check\_standby\_peers@{check\_standby\_peers}}
+\index{check\_standby\_peers@{check\_standby\_peers}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{check\_standby\_peers()}{check\_standby\_peers()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::check\+\_\+standby\+\_\+peers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab57619d0e1aea149fc37b41a3842b59c}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab57619d0e1aea149fc37b41a3842b59c}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!deinit@{deinit}}
+\index{deinit@{deinit}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::deinit}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a0bf9edb2d756d6fd467757b3886d3355}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a0bf9edb2d756d6fd467757b3886d3355}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!drop\_connection@{drop\_connection}}
+\index{drop\_connection@{drop\_connection}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{drop\_connection()}{drop\_connection()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::drop\+\_\+connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{add\+\_\+fail,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{flush\+\_\+all\+\_\+spans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a5d4c39a66076c3572d5abe002fc94cee}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a5d4c39a66076c3572d5abe002fc94cee}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_block\_queue@{get\_block\_queue}}
+\index{get\_block\_queue@{get\_block\_queue}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_block\_queue()}{get\_block\_queue()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+const \mbox{\hyperlink{classcryptonote_1_1block__queue}{block\+\_\+queue}}\& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+block\+\_\+queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aacdfe42f9dfc578655256f1d42c26d2a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aacdfe42f9dfc578655256f1d42c26d2a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_connections@{get\_connections}}
+\index{get\_connections@{get\_connections}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_connections()}{get\_connections()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::list$<$ \mbox{\hyperlink{structcryptonote_1_1connection__info}{connection\+\_\+info}} $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+connections}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a2476a6283e2e33e966233f39650827f7}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a2476a6283e2e33e966233f39650827f7}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_core@{get\_core}}
+\index{get\_core@{get\_core}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_core()}{get\_core()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+t\+\_\+core\& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a048c2285d81991661542e70b63e66719}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a048c2285d81991661542e70b63e66719}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_estimated\_remaining\_sync\_seconds@{get\_estimated\_remaining\_sync\_seconds}}
+\index{get\_estimated\_remaining\_sync\_seconds@{get\_estimated\_remaining\_sync\_seconds}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_estimated\_remaining\_sync\_seconds()}{get\_estimated\_remaining\_sync\_seconds()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+estimated\+\_\+remaining\+\_\+sync\+\_\+seconds (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{current\+\_\+blockchain\+\_\+height,  }\item[{uint64\+\_\+t}]{target\+\_\+blockchain\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a118242e00e21ac748c0a87d286b56d33}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a118242e00e21ac748c0a87d286b56d33}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_next\_needed\_pruning\_stripe@{get\_next\_needed\_pruning\_stripe}}
+\index{get\_next\_needed\_pruning\_stripe@{get\_next\_needed\_pruning\_stripe}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_next\_needed\_pruning\_stripe()}{get\_next\_needed\_pruning\_stripe()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::pair$<$ uint32\+\_\+t, uint32\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+next\+\_\+needed\+\_\+pruning\+\_\+stripe}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a191a9497c2a1c1937390be6d3e506652}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a191a9497c2a1c1937390be6d3e506652}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_payload\_sync\_data@{get\_payload\_sync\_data}}
+\index{get\_payload\_sync\_data@{get\_payload\_sync\_data}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_payload\_sync\_data()}{get\_payload\_sync\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+payload\+\_\+sync\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1CORE__SYNC__DATA}{C\+O\+R\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+D\+A\+TA}} \&}]{hshd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a690a17a16c728282e513251ee52c14d0}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a690a17a16c728282e513251ee52c14d0}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_payload\_sync\_data@{get\_payload\_sync\_data}}
+\index{get\_payload\_sync\_data@{get\_payload\_sync\_data}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_payload\_sync\_data()}{get\_payload\_sync\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+payload\+\_\+sync\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a438a98d9cc96f2fed0571856cef02aae}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a438a98d9cc96f2fed0571856cef02aae}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_peers\_overview@{get\_peers\_overview}}
+\index{get\_peers\_overview@{get\_peers\_overview}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_peers\_overview()}{get\_peers\_overview()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::string \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+peers\+\_\+overview}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a4813102bf01d6ee1c009e65116809b41}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a4813102bf01d6ee1c009e65116809b41}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_periodic\_sync\_estimate@{get\_periodic\_sync\_estimate}}
+\index{get\_periodic\_sync\_estimate@{get\_periodic\_sync\_estimate}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_periodic\_sync\_estimate()}{get\_periodic\_sync\_estimate()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::string \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+periodic\+\_\+sync\+\_\+estimate (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{current\+\_\+blockchain\+\_\+height,  }\item[{uint64\+\_\+t}]{target\+\_\+blockchain\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a9cfc294bd19293c11f97f23aa5ff5964}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a9cfc294bd19293c11f97f23aa5ff5964}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!get\_synchronizing\_connections\_count@{get\_synchronizing\_connections\_count}}
+\index{get\_synchronizing\_connections\_count@{get\_synchronizing\_connections\_count}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{get\_synchronizing\_connections\_count()}{get\_synchronizing\_connections\_count()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::get\+\_\+synchronizing\+\_\+connections\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a49eea79657bfc33d815ad493831f4253}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a49eea79657bfc33d815ad493831f4253}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_btencoded\_uptime\_proof@{handle\_btencoded\_uptime\_proof}}
+\index{handle\_btencoded\_uptime\_proof@{handle\_btencoded\_uptime\_proof}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_btencoded\_uptime\_proof()}{handle\_btencoded\_uptime\_proof()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+btencoded\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__BTENCODED__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+B\+T\+E\+N\+C\+O\+D\+E\+D\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aa8071fcd8cdb5ac98acbd9b26391b77a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aa8071fcd8cdb5ac98acbd9b26391b77a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_notify\_new\_fluffy\_block@{handle\_notify\_new\_fluffy\_block}}
+\index{handle\_notify\_new\_fluffy\_block@{handle\_notify\_new\_fluffy\_block}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_notify\_new\_fluffy\_block()}{handle\_notify\_new\_fluffy\_block()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+notify\+\_\+new\+\_\+fluffy\+\_\+block (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__FLUFFY__BLOCK_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+K\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a04dd4b92097fba48eb344c85a259625f}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a04dd4b92097fba48eb344c85a259625f}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_notify\_new\_service\_node\_vote@{handle\_notify\_new\_service\_node\_vote}}
+\index{handle\_notify\_new\_service\_node\_vote@{handle\_notify\_new\_service\_node\_vote}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_notify\_new\_service\_node\_vote()}{handle\_notify\_new\_service\_node\_vote()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+notify\+\_\+new\+\_\+service\+\_\+node\+\_\+vote (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__SERVICE__NODE__VOTE_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+T\+E\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a1fc3c84a503b7bd2ebc23821a0adc505}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a1fc3c84a503b7bd2ebc23821a0adc505}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_notify\_new\_transactions@{handle\_notify\_new\_transactions}}
+\index{handle\_notify\_new\_transactions@{handle\_notify\_new\_transactions}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_notify\_new\_transactions()}{handle\_notify\_new\_transactions()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+notify\+\_\+new\+\_\+transactions (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__TRANSACTIONS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aac7135bca95818b7cebf7ef0a02c45b8}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aac7135bca95818b7cebf7ef0a02c45b8}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_request\_block\_blinks@{handle\_request\_block\_blinks}}
+\index{handle\_request\_block\_blinks@{handle\_request\_block\_blinks}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_request\_block\_blinks()}{handle\_request\_block\_blinks()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+request\+\_\+block\+\_\+blinks (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__BLOCK__BLINKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+B\+L\+I\+N\+K\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a7b07880d3a0b5bd1ec5421663eb8955a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a7b07880d3a0b5bd1ec5421663eb8955a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_request\_chain@{handle\_request\_chain}}
+\index{handle\_request\_chain@{handle\_request\_chain}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_request\_chain()}{handle\_request\_chain()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+request\+\_\+chain (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__CHAIN_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+H\+A\+I\+N\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aeac4a4ef03701a31e9a16f601b051fa5}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aeac4a4ef03701a31e9a16f601b051fa5}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_request\_fluffy\_missing\_tx@{handle\_request\_fluffy\_missing\_tx}}
+\index{handle\_request\_fluffy\_missing\_tx@{handle\_request\_fluffy\_missing\_tx}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_request\_fluffy\_missing\_tx()}{handle\_request\_fluffy\_missing\_tx()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+request\+\_\+fluffy\+\_\+missing\+\_\+tx (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__FLUFFY__MISSING__TX_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+M\+I\+S\+S\+I\+N\+G\+\_\+\+T\+X\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a76470b2cc2b8655235ceb86acad68025}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a76470b2cc2b8655235ceb86acad68025}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_request\_get\_blocks@{handle\_request\_get\_blocks}}
+\index{handle\_request\_get\_blocks@{handle\_request\_get\_blocks}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_request\_get\_blocks()}{handle\_request\_get\_blocks()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+request\+\_\+get\+\_\+blocks (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__GET__BLOCKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a7b3db793ca8b7a0f4a6388d9771cc5a9}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a7b3db793ca8b7a0f4a6388d9771cc5a9}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_request\_get\_txs@{handle\_request\_get\_txs}}
+\index{handle\_request\_get\_txs@{handle\_request\_get\_txs}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_request\_get\_txs()}{handle\_request\_get\_txs()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+request\+\_\+get\+\_\+txs (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__REQUEST__GET__TXS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+G\+E\+T\+\_\+\+T\+X\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a7c5d50877b0fdeabfd233e2ef9518576}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a7c5d50877b0fdeabfd233e2ef9518576}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_response\_block\_blinks@{handle\_response\_block\_blinks}}
+\index{handle\_response\_block\_blinks@{handle\_response\_block\_blinks}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_response\_block\_blinks()}{handle\_response\_block\_blinks()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+response\+\_\+block\+\_\+blinks (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__BLOCK__BLINKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+B\+L\+I\+N\+K\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a8d02b42cbc652a185fe65ef1b66f04fb}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a8d02b42cbc652a185fe65ef1b66f04fb}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_response\_chain\_entry@{handle\_response\_chain\_entry}}
+\index{handle\_response\_chain\_entry@{handle\_response\_chain\_entry}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_response\_chain\_entry()}{handle\_response\_chain\_entry()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+response\+\_\+chain\+\_\+entry (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__CHAIN__ENTRY_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+C\+H\+A\+I\+N\+\_\+\+E\+N\+T\+R\+Y\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ad5f105af50bb6eaebfed9f9cd688f705}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ad5f105af50bb6eaebfed9f9cd688f705}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_response\_get\_blocks@{handle\_response\_get\_blocks}}
+\index{handle\_response\_get\_blocks@{handle\_response\_get\_blocks}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_response\_get\_blocks()}{handle\_response\_get\_blocks()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+response\+\_\+get\+\_\+blocks (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__RESPONSE__GET__BLOCKS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ac18d7f2ef4a8afdf55c4d88580052f6d}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ac18d7f2ef4a8afdf55c4d88580052f6d}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!handle\_uptime\_proof@{handle\_uptime\_proof}}
+\index{handle\_uptime\_proof@{handle\_uptime\_proof}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_uptime\_proof()}{handle\_uptime\_proof()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::handle\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a54a70a02bb2f3032bd70e8bd4a44f48d}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a54a70a02bb2f3032bd70e8bd4a44f48d}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!init@{init}}
+\index{init@{init}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::init (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aeb318fe02d9c8e0bea6d7353e0654868}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aeb318fe02d9c8e0bea6d7353e0654868}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!is\_synchronized@{is\_synchronized}}
+\index{is\_synchronized@{is\_synchronized}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{is\_synchronized()}{is\_synchronized()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::is\+\_\+synchronized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a74a392ab3b1acfc3c47a210d50fea326}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a74a392ab3b1acfc3c47a210d50fea326}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!kick\_idle\_peers@{kick\_idle\_peers}}
+\index{kick\_idle\_peers@{kick\_idle\_peers}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{kick\_idle\_peers()}{kick\_idle\_peers()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::kick\+\_\+idle\+\_\+peers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_af8877ac9da099863295ce69aff2b875e}\label{classcryptonote_1_1t__cryptonote__protocol__handler_af8877ac9da099863295ce69aff2b875e}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!log\_connections@{log\_connections}}
+\index{log\_connections@{log\_connections}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{log\_connections()}{log\_connections()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::log\+\_\+connections}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a588776a46ca3b7fb18b6254fbc29f318}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a588776a46ca3b7fb18b6254fbc29f318}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!needs\_new\_sync\_connections@{needs\_new\_sync\_connections}}
+\index{needs\_new\_sync\_connections@{needs\_new\_sync\_connections}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{needs\_new\_sync\_connections()}{needs\_new\_sync\_connections()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::needs\+\_\+new\+\_\+sync\+\_\+connections}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab30660bedde37349b6930cb52829f941}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab30660bedde37349b6930cb52829f941}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!no\_sync@{no\_sync}}
+\index{no\_sync@{no\_sync}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{no\_sync()}{no\_sync()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::no\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a44bd2a817f97e2f3caaac02c358a61f6}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a44bd2a817f97e2f3caaac02c358a61f6}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!notify\_new\_stripe@{notify\_new\_stripe}}
+\index{notify\_new\_stripe@{notify\_new\_stripe}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{notify\_new\_stripe()}{notify\_new\_stripe()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::notify\+\_\+new\+\_\+stripe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{uint32\+\_\+t}]{stripe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aa9455c3a1216f85cd43951d71e33947f}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aa9455c3a1216f85cd43951d71e33947f}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!on\_callback@{on\_callback}}
+\index{on\_callback@{on\_callback}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{on\_callback()}{on\_callback()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::on\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aeb72d05b2736dc9624f85236ee5727a0}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aeb72d05b2736dc9624f85236ee5727a0}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!on\_connection\_close@{on\_connection\_close}}
+\index{on\_connection\_close@{on\_connection\_close}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{on\_connection\_close()}{on\_connection\_close()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::on\+\_\+connection\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ac57d9bc780af2f75f3621931fdbba850}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ac57d9bc780af2f75f3621931fdbba850}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!on\_connection\_synchronized@{on\_connection\_synchronized}}
+\index{on\_connection\_synchronized@{on\_connection\_synchronized}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{on\_connection\_synchronized()}{on\_connection\_synchronized()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::on\+\_\+connection\+\_\+synchronized\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aa0f3e2ac4a2c12e6b051571f15bed4a2}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aa0f3e2ac4a2c12e6b051571f15bed4a2}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!on\_idle@{on\_idle}}
+\index{on\_idle@{on\_idle}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{on\_idle()}{on\_idle()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::on\+\_\+idle}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a352254d2ba5a74f1a85f60cd4105580b}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a352254d2ba5a74f1a85f60cd4105580b}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!post\_notify@{post\_notify}}
+\index{post\_notify@{post\_notify}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{post\_notify()}{post\_notify()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+template$<$class t\+\_\+parameter $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::post\+\_\+notify (\begin{DoxyParamCaption}\item[{typename t\+\_\+parameter\+::request \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_af837e8309cacc6c55394a0481cb7b1d9}\label{classcryptonote_1_1t__cryptonote__protocol__handler_af837e8309cacc6c55394a0481cb7b1d9}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!process\_payload\_sync\_data@{process\_payload\_sync\_data}}
+\index{process\_payload\_sync\_data@{process\_payload\_sync\_data}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{process\_payload\_sync\_data()}{process\_payload\_sync\_data()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::process\+\_\+payload\+\_\+sync\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1CORE__SYNC__DATA}{C\+O\+R\+E\+\_\+\+S\+Y\+N\+C\+\_\+\+D\+A\+TA}} \&\&}]{hshd,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{is\+\_\+inital }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a9e8a49167ad9e26b14a15373f6ec1561}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a9e8a49167ad9e26b14a15373f6ec1561}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_block@{relay\_block}}
+\index{relay\_block@{relay\_block}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_block()}{relay\_block()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__FLUFFY__BLOCK_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+L\+U\+F\+F\+Y\+\_\+\+B\+L\+O\+C\+K\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structcryptonote_1_1i__cryptonote__protocol_a0da05b889287cf4ae246c89dc4f6243a}{cryptonote\+::i\+\_\+cryptonote\+\_\+protocol}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aac4c806521ba04d586ceda3a253e7851}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aac4c806521ba04d586ceda3a253e7851}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_btencoded\_uptime\_proof@{relay\_btencoded\_uptime\_proof}}
+\index{relay\_btencoded\_uptime\_proof@{relay\_btencoded\_uptime\_proof}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_btencoded\_uptime\_proof()}{relay\_btencoded\_uptime\_proof()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+btencoded\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__BTENCODED__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+B\+T\+E\+N\+C\+O\+D\+E\+D\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structcryptonote_1_1i__cryptonote__protocol_aaa08b06fe3ce2facd9ca0e0154ea6853}{cryptonote\+::i\+\_\+cryptonote\+\_\+protocol}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab5b9b23098cc0129b19540ba0fcd3472}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab5b9b23098cc0129b19540ba0fcd3472}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_service\_node\_votes@{relay\_service\_node\_votes}}
+\index{relay\_service\_node\_votes@{relay\_service\_node\_votes}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_service\_node\_votes()}{relay\_service\_node\_votes()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+service\+\_\+node\+\_\+votes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__SERVICE__NODE__VOTE_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+T\+E\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structcryptonote_1_1i__cryptonote__protocol_aff26bc839d76ac94dbba20f2879d5419}{cryptonote\+::i\+\_\+cryptonote\+\_\+protocol}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a41fcac304ae4baebaab9b975404cc695}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a41fcac304ae4baebaab9b975404cc695}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_to\_synchronized\_peers@{relay\_to\_synchronized\_peers}}
+\index{relay\_to\_synchronized\_peers@{relay\_to\_synchronized\_peers}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_to\_synchronized\_peers()}{relay\_to\_synchronized\_peers()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+template$<$class T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+to\+\_\+synchronized\+\_\+peers (\begin{DoxyParamCaption}\item[{typename T\+::request \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a7e2be2c741c03b106c59b79052767b35}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a7e2be2c741c03b106c59b79052767b35}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_transactions@{relay\_transactions}}
+\index{relay\_transactions@{relay\_transactions}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_transactions()}{relay\_transactions()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+transactions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__NEW__TRANSACTIONS_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+N\+E\+W\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structcryptonote_1_1i__cryptonote__protocol_af325e8fc9b9eb9e678a92da9ccb8bce2}{cryptonote\+::i\+\_\+cryptonote\+\_\+protocol}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a001593d310065e9942e648835e147516}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a001593d310065e9942e648835e147516}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!relay\_uptime\_proof@{relay\_uptime\_proof}}
+\index{relay\_uptime\_proof@{relay\_uptime\_proof}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_uptime\_proof()}{relay\_uptime\_proof()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::relay\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&}]{arg,  }\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{exclude\+\_\+context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structcryptonote_1_1i__cryptonote__protocol_a0f177a3583be648b2263db8fbc4951fc}{cryptonote\+::i\+\_\+cryptonote\+\_\+protocol}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a217f8d892911e9d76a42450ff827ebe7}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a217f8d892911e9d76a42450ff827ebe7}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!request\_missing\_objects@{request\_missing\_objects}}
+\index{request\_missing\_objects@{request\_missing\_objects}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{request\_missing\_objects()}{request\_missing\_objects()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::request\+\_\+missing\+\_\+objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+having\+\_\+blocks,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{force\+\_\+next\+\_\+span = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a94dd81e34a34ab2c5f5f0e437112bcae}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a94dd81e34a34ab2c5f5f0e437112bcae}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!set\_max\_out\_peers@{set\_max\_out\_peers}}
+\index{set\_max\_out\_peers@{set\_max\_out\_peers}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{set\_max\_out\_peers()}{set\_max\_out\_peers()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::set\+\_\+max\+\_\+out\+\_\+peers (\begin{DoxyParamCaption}\item[{unsigned int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a2fdc72f7eae261482be66d5f3e76b8e3}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a2fdc72f7eae261482be66d5f3e76b8e3}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!set\_no\_sync@{set\_no\_sync}}
+\index{set\_no\_sync@{set\_no\_sync}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{set\_no\_sync()}{set\_no\_sync()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::set\+\_\+no\+\_\+sync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a1b298e1b2beccdb71adec82366af2fd8}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a1b298e1b2beccdb71adec82366af2fd8}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!set\_p2p\_endpoint@{set\_p2p\_endpoint}}
+\index{set\_p2p\_endpoint@{set\_p2p\_endpoint}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{set\_p2p\_endpoint()}{set\_p2p\_endpoint()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::set\+\_\+p2p\+\_\+endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint}{nodetool\+::i\+\_\+p2p\+\_\+endpoint}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}} $>$ $\ast$}]{p2p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a8f3bd65294644128138711e499ab69cb}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a8f3bd65294644128138711e499ab69cb}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!should\_download\_next\_span@{should\_download\_next\_span}}
+\index{should\_download\_next\_span@{should\_download\_next\_span}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{should\_download\_next\_span()}{should\_download\_next\_span()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::should\+\_\+download\+\_\+next\+\_\+span (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{standby }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_af135245c124f3926c3bbe49f7959b741}\label{classcryptonote_1_1t__cryptonote__protocol__handler_af135245c124f3926c3bbe49f7959b741}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!should\_drop\_connection@{should\_drop\_connection}}
+\index{should\_drop\_connection@{should\_drop\_connection}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{should\_drop\_connection()}{should\_drop\_connection()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::should\+\_\+drop\+\_\+connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{uint32\+\_\+t}]{next\+\_\+stripe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a01c76b00058e6c681df08380048311db}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a01c76b00058e6c681df08380048311db}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!skip\_unneeded\_hashes@{skip\_unneeded\_hashes}}
+\index{skip\_unneeded\_hashes@{skip\_unneeded\_hashes}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{skip\_unneeded\_hashes()}{skip\_unneeded\_hashes()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::skip\+\_\+unneeded\+\_\+hashes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check\+\_\+block\+\_\+queue }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ad272f6d8f72b7b3cadb313b169207036}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ad272f6d8f72b7b3cadb313b169207036}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!stop@{stop}}
+\index{stop@{stop}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+void \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::stop}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a72009325108d00c98721b9b9e2de6a81}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a72009325108d00c98721b9b9e2de6a81}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!try\_add\_next\_blocks@{try\_add\_next\_blocks}}
+\index{try\_add\_next\_blocks@{try\_add\_next\_blocks}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{try\_add\_next\_blocks()}{try\_add\_next\_blocks()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+int \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::try\+\_\+add\+\_\+next\+\_\+blocks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context}{cryptonote\+\_\+connection\+\_\+context}} \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a79643e8226349e723510ec1dfb75bc3e}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a79643e8226349e723510ec1dfb75bc3e}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!update\_sync\_search@{update\_sync\_search}}
+\index{update\_sync\_search@{update\_sync\_search}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{update\_sync\_search()}{update\_sync\_search()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::update\+\_\+sync\+\_\+search\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a8e7f921836dacb9b9c47fc9b632bc29a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a8e7f921836dacb9b9c47fc9b632bc29a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_avg\_buffer@{m\_avg\_buffer}}
+\index{m\_avg\_buffer@{m\_avg\_buffer}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_avg\_buffer}{m\_avg\_buffer}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+boost\+::circular\+\_\+buffer$<$size\+\_\+t$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+avg\+\_\+buffer = boost\+::circular\+\_\+buffer$<$size\+\_\+t$>$(10)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ac00a765f913810588e03b80eb4c03a7f}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ac00a765f913810588e03b80eb4c03a7f}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_block\_download\_max\_size@{m\_block\_download\_max\_size}}
+\index{m\_block\_download\_max\_size@{m\_block\_download\_max\_size}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_block\_download\_max\_size}{m\_block\_download\_max\_size}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+block\+\_\+download\+\_\+max\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a8abb54b4b7e8c4bc91092b761db30978}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a8abb54b4b7e8c4bc91092b761db30978}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_block\_queue@{m\_block\_queue}}
+\index{m\_block\_queue@{m\_block\_queue}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_block\_queue}{m\_block\_queue}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{classcryptonote_1_1block__queue}{block\+\_\+queue}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+block\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a721ca0f1e388d7d76a0426f886e9d7ca}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a721ca0f1e388d7d76a0426f886e9d7ca}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_buffer\_mutex@{m\_buffer\_mutex}}
+\index{m\_buffer\_mutex@{m\_buffer\_mutex}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_buffer\_mutex}{m\_buffer\_mutex}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+buffer\+\_\+mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a9711bcb85e71f8f106caeec59de850f9}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a9711bcb85e71f8f106caeec59de850f9}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_core@{m\_core}}
+\index{m\_core@{m\_core}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_core}{m\_core}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+t\+\_\+core\& \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_acec0e60e33c8365690d5e12647aaaaf1}\label{classcryptonote_1_1t__cryptonote__protocol__handler_acec0e60e33c8365690d5e12647aaaaf1}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_idle\_peer\_kicker@{m\_idle\_peer\_kicker}}
+\index{m\_idle\_peer\_kicker@{m\_idle\_peer\_kicker}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_idle\_peer\_kicker}{m\_idle\_peer\_kicker}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+idle\+\_\+peer\+\_\+kicker \{30s\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_afa1c7fe34b2b81e612dfccddc2fbd6a5}\label{classcryptonote_1_1t__cryptonote__protocol__handler_afa1c7fe34b2b81e612dfccddc2fbd6a5}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_last\_add\_end\_time@{m\_last\_add\_end\_time}}
+\index{m\_last\_add\_end\_time@{m\_last\_add\_end\_time}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_last\_add\_end\_time}{m\_last\_add\_end\_time}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+last\+\_\+add\+\_\+end\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a3cc5319212ca4a4992ce39d44248c55a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a3cc5319212ca4a4992ce39d44248c55a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_max\_out\_peers@{m\_max\_out\_peers}}
+\index{m\_max\_out\_peers@{m\_max\_out\_peers}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_max\_out\_peers}{m\_max\_out\_peers}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::atomic$<$unsigned int$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+max\+\_\+out\+\_\+peers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a2da65eb8b6682af67f4417a4fabfd790}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a2da65eb8b6682af67f4417a4fabfd790}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_no\_sync@{m\_no\_sync}}
+\index{m\_no\_sync@{m\_no\_sync}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_no\_sync}{m\_no\_sync}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+no\+\_\+sync\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a70652d116c7dd7bdbab0a09145abdee7}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a70652d116c7dd7bdbab0a09145abdee7}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_p2p@{m\_p2p}}
+\index{m\_p2p@{m\_p2p}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_p2p}{m\_p2p}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint}{nodetool\+::i\+\_\+p2p\+\_\+endpoint}}$<$\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}}$>$$\ast$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+p2p\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_abede7eb2b2760ddf8ea945c046d57681}\label{classcryptonote_1_1t__cryptonote__protocol__handler_abede7eb2b2760ddf8ea945c046d57681}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_p2p\_stub@{m\_p2p\_stub}}
+\index{m\_p2p\_stub@{m\_p2p\_stub}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_p2p\_stub}{m\_p2p\_stub}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$\mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler_a5dc16375bce624f24472f98bffc67454}{connection\+\_\+context}}$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+p2p\+\_\+stub\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ae5d0a642ae3b6302759383f0041b54da}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ae5d0a642ae3b6302759383f0041b54da}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_period\_start\_height@{m\_period\_start\_height}}
+\index{m\_period\_start\_height@{m\_period\_start\_height}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_period\_start\_height}{m\_period\_start\_height}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+period\+\_\+start\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab0cafdb21d6409f9514e7ea52388e343}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab0cafdb21d6409f9514e7ea52388e343}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_period\_start\_time@{m\_period\_start\_time}}
+\index{m\_period\_start\_time@{m\_period\_start\_time}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_period\_start\_time}{m\_period\_start\_time}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+period\+\_\+start\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a487ab5af2baa59a6f4a755c09cdc4289}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a487ab5af2baa59a6f4a755c09cdc4289}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_standby\_checker@{m\_standby\_checker}}
+\index{m\_standby\_checker@{m\_standby\_checker}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_standby\_checker}{m\_standby\_checker}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+standby\+\_\+checker \{100ms\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab77a5c6307b790d3c9e20af103a62acf}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab77a5c6307b790d3c9e20af103a62acf}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_stopping@{m\_stopping}}
+\index{m\_stopping@{m\_stopping}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_stopping}{m\_stopping}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+stopping\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ae1e4346afb5d810b6f4489066b10a265}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ae1e4346afb5d810b6f4489066b10a265}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_bad\_spans\_downloaded@{m\_sync\_bad\_spans\_downloaded}}
+\index{m\_sync\_bad\_spans\_downloaded@{m\_sync\_bad\_spans\_downloaded}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_bad\_spans\_downloaded}{m\_sync\_bad\_spans\_downloaded}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+bad\+\_\+spans\+\_\+downloaded\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a26353f490172054cf731396eda6a4966}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a26353f490172054cf731396eda6a4966}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_download\_chain\_size@{m\_sync\_download\_chain\_size}}
+\index{m\_sync\_download\_chain\_size@{m\_sync\_download\_chain\_size}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_download\_chain\_size}{m\_sync\_download\_chain\_size}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+download\+\_\+chain\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a8890542318d065c90413c413074e4a1d}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a8890542318d065c90413c413074e4a1d}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_download\_objects\_size@{m\_sync\_download\_objects\_size}}
+\index{m\_sync\_download\_objects\_size@{m\_sync\_download\_objects\_size}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_download\_objects\_size}{m\_sync\_download\_objects\_size}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+download\+\_\+objects\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a4aafa6bf7bce3fdc783d8bd29f4a0755}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a4aafa6bf7bce3fdc783d8bd29f4a0755}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_lock@{m\_sync\_lock}}
+\index{m\_sync\_lock@{m\_sync\_lock}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_lock}{m\_sync\_lock}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::mutex \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a583b7eb4ac5e628accf8836d7f5ff8cd}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a583b7eb4ac5e628accf8836d7f5ff8cd}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_old\_spans\_downloaded@{m\_sync\_old\_spans\_downloaded}}
+\index{m\_sync\_old\_spans\_downloaded@{m\_sync\_old\_spans\_downloaded}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_old\_spans\_downloaded}{m\_sync\_old\_spans\_downloaded}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+old\+\_\+spans\+\_\+downloaded\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ac8f8a3d346092a6c977c946df5302e82}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ac8f8a3d346092a6c977c946df5302e82}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_search\_checker@{m\_sync\_search\_checker}}
+\index{m\_sync\_search\_checker@{m\_sync\_search\_checker}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_search\_checker}{m\_sync\_search\_checker}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+search\+\_\+checker \{101\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_adcd8e19690a5344d3e2e5fbbef22565a}\label{classcryptonote_1_1t__cryptonote__protocol__handler_adcd8e19690a5344d3e2e5fbbef22565a}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_spans\_downloaded@{m\_sync\_spans\_downloaded}}
+\index{m\_sync\_spans\_downloaded@{m\_sync\_spans\_downloaded}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_spans\_downloaded}{m\_sync\_spans\_downloaded}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+spans\+\_\+downloaded\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_aad83a08ab046f99c1f9815fbdc3e373f}\label{classcryptonote_1_1t__cryptonote__protocol__handler_aad83a08ab046f99c1f9815fbdc3e373f}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_start\_height@{m\_sync\_start\_height}}
+\index{m\_sync\_start\_height@{m\_sync\_start\_height}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_start\_height}{m\_sync\_start\_height}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+start\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_a278f0e4eb8e6ae39d9696f23f531f8c0}\label{classcryptonote_1_1t__cryptonote__protocol__handler_a278f0e4eb8e6ae39d9696f23f531f8c0}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_start\_time@{m\_sync\_start\_time}}
+\index{m\_sync\_start\_time@{m\_sync\_start\_time}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_start\_time}{m\_sync\_start\_time}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+start\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ad17938eba300c4568ba40fe2d432b1f7}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ad17938eba300c4568ba40fe2d432b1f7}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_sync\_timer@{m\_sync\_timer}}
+\index{m\_sync\_timer@{m\_sync\_timer}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_sync\_timer}{m\_sync\_timer}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+sync\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ae900d21e15e9a749156dc8d795755abe}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ae900d21e15e9a749156dc8d795755abe}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_synchronized@{m\_synchronized}}
+\index{m\_synchronized@{m\_synchronized}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_synchronized}{m\_synchronized}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+synchronized\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1t__cryptonote__protocol__handler_ab6111dfcb06a0defaeae7942e0816d09}\label{classcryptonote_1_1t__cryptonote__protocol__handler_ab6111dfcb06a0defaeae7942e0816d09}} 
+\index{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}!m\_syncronized\_connections\_count@{m\_syncronized\_connections\_count}}
+\index{m\_syncronized\_connections\_count@{m\_syncronized\_connections\_count}!cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$@{cryptonote::t\_cryptonote\_protocol\_handler$<$ t\_core $>$}}
+\doxysubsubsection{\texorpdfstring{m\_syncronized\_connections\_count}{m\_syncronized\_connections\_count}}
+{\footnotesize\ttfamily template$<$class t\+\_\+core $>$ \\
+std\+::atomic$<$uint32\+\_\+t$>$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ t\+\_\+core $>$\+::m\+\_\+syncronized\+\_\+connections\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{cryptonote__protocol__handler_8h}{cryptonote\+\_\+protocol\+\_\+handler.\+h}}\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{cryptonote__protocol__handler_8inl}{cryptonote\+\_\+protocol\+\_\+handler.\+inl}}\end{DoxyCompactItemize}

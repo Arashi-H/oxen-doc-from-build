@@ -1,0 +1,134 @@
+\hypertarget{namespacenet_1_1socks}{}\doxysection{net\+::socks Namespace Reference}
+\label{namespacenet_1_1socks}\index{net::socks@{net::socks}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03}{anonymous\+\_\+namespace\{socks.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}}
+\begin{DoxyCompactList}\small\item\em Client support for socks connect and resolve commands. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnet_1_1socks_1_1connect__client}{connect\+\_\+client}}
+\item 
+class \mbox{\hyperlink{classnet_1_1socks_1_1connect__handler}{connect\+\_\+handler}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{version}} \+: std\+::uint8\+\_\+t \{ \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a5ed3a3ff8e5c29979502b9030e8518e0}{version\+::v4}} = 0, 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a4c7eac11075c8f6be7957e95f0d60e5a}{version\+::v4a}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a49b16e17de9764b327318e7f086c45c3}{version\+::v4a\+\_\+tor}}
+ \}
+\begin{DoxyCompactList}\small\item\em Supported socks variants. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{error}} \+: int \{ \newline
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac7537d6d48ecf261749c09a9f284bd45}{error\+::rejected}} = 92, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ae81a66561cff32038738bcf9e7572e2a}{error\+::identd\+\_\+connection}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac54f152f6ce63f4cf23c8fd41363c962}{error\+::identd\+\_\+user}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a4cba57a36205516b4fe80805d64661b9}{error\+::bad\+\_\+read}} = 257, 
+\newline
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a24ec83c5c951060c0d5eef490eb75812}{error\+::bad\+\_\+write}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ad67f2b959d72215af459f61f731cdded}{error\+::unexpected\+\_\+version}}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible errors with socks communication. Defined in \href{https://www.openssh.com/txt/socks4.protocol}{\texttt{ https\+://www.\+openssh.\+com/txt/socks4.\+protocol}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const boost\+::system\+::error\+\_\+category \& \mbox{\hyperlink{namespacenet_1_1socks_a667dc291afc4bf2fe752ff0514df437e}{error\+\_\+category}} () noexcept
+\item 
+boost\+::system\+::error\+\_\+code \mbox{\hyperlink{namespacenet_1_1socks_af10f92a22d42d60bf63c5fbee0e3568b}{make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{error}} value) noexcept
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{client}} $>$ \mbox{\hyperlink{namespacenet_1_1socks_aea1c411c45102ed32259765aec071122}{make\+\_\+connect\+\_\+client}} (client\+::stream\+\_\+type\+::socket \&\&proxy, \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}} ver, Handler handler)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}} 
+\index{net::socks@{net::socks}!error@{error}}
+\index{error@{error}!net::socks@{net::socks}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{net\+::socks\+::error}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Possible errors with socks communication. Defined in \href{https://www.openssh.com/txt/socks4.protocol}{\texttt{ https\+://www.\+openssh.\+com/txt/socks4.\+protocol}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rejected@{rejected}!net::socks@{net::socks}}\index{net::socks@{net::socks}!rejected@{rejected}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac7537d6d48ecf261749c09a9f284bd45}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac7537d6d48ecf261749c09a9f284bd45}} 
+rejected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{identd\_connection@{identd\_connection}!net::socks@{net::socks}}\index{net::socks@{net::socks}!identd\_connection@{identd\_connection}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ae81a66561cff32038738bcf9e7572e2a}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ae81a66561cff32038738bcf9e7572e2a}} 
+identd\+\_\+connection&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{identd\_user@{identd\_user}!net::socks@{net::socks}}\index{net::socks@{net::socks}!identd\_user@{identd\_user}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac54f152f6ce63f4cf23c8fd41363c962}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac54f152f6ce63f4cf23c8fd41363c962}} 
+identd\+\_\+user&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bad\_read@{bad\_read}!net::socks@{net::socks}}\index{net::socks@{net::socks}!bad\_read@{bad\_read}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a4cba57a36205516b4fe80805d64661b9}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a4cba57a36205516b4fe80805d64661b9}} 
+bad\+\_\+read&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bad\_write@{bad\_write}!net::socks@{net::socks}}\index{net::socks@{net::socks}!bad\_write@{bad\_write}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a24ec83c5c951060c0d5eef490eb75812}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a24ec83c5c951060c0d5eef490eb75812}} 
+bad\+\_\+write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unexpected\_version@{unexpected\_version}!net::socks@{net::socks}}\index{net::socks@{net::socks}!unexpected\_version@{unexpected\_version}}}\mbox{\Hypertarget{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ad67f2b959d72215af459f61f731cdded}\label{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ad67f2b959d72215af459f61f731cdded}} 
+unexpected\+\_\+version&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}\label{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}} 
+\index{net::socks@{net::socks}!version@{version}}
+\index{version@{version}!net::socks@{net::socks}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{net\+::socks\+::version}} \+: std\+::uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Supported socks variants. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v4@{v4}!net::socks@{net::socks}}\index{net::socks@{net::socks}!v4@{v4}}}\mbox{\Hypertarget{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a5ed3a3ff8e5c29979502b9030e8518e0}\label{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a5ed3a3ff8e5c29979502b9030e8518e0}} 
+v4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v4a@{v4a}!net::socks@{net::socks}}\index{net::socks@{net::socks}!v4a@{v4a}}}\mbox{\Hypertarget{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a4c7eac11075c8f6be7957e95f0d60e5a}\label{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a4c7eac11075c8f6be7957e95f0d60e5a}} 
+v4a&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{v4a\_tor@{v4a\_tor}!net::socks@{net::socks}}\index{net::socks@{net::socks}!v4a\_tor@{v4a\_tor}}}\mbox{\Hypertarget{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a49b16e17de9764b327318e7f086c45c3}\label{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a49b16e17de9764b327318e7f086c45c3}} 
+v4a\+\_\+tor&Extensions defined in Tor codebase. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenet_1_1socks_a667dc291afc4bf2fe752ff0514df437e}\label{namespacenet_1_1socks_a667dc291afc4bf2fe752ff0514df437e}} 
+\index{net::socks@{net::socks}!error\_category@{error\_category}}
+\index{error\_category@{error\_category}!net::socks@{net::socks}}
+\doxysubsubsection{\texorpdfstring{error\_category()}{error\_category()}}
+{\footnotesize\ttfamily const boost\+::system\+::error\+\_\+category \& net\+::socks\+::error\+\_\+category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+boost\+::system\+::error\+\_\+category for \mbox{\hyperlink{namespacenet_1_1socks}{net\+::socks}} namespace 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenet_1_1socks_aea1c411c45102ed32259765aec071122}\label{namespacenet_1_1socks_aea1c411c45102ed32259765aec071122}} 
+\index{net::socks@{net::socks}!make\_connect\_client@{make\_connect\_client}}
+\index{make\_connect\_client@{make\_connect\_client}!net::socks@{net::socks}}
+\doxysubsubsection{\texorpdfstring{make\_connect\_client()}{make\_connect\_client()}}
+{\footnotesize\ttfamily template$<$typename Handler $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classnet_1_1socks_1_1client}{client}}$>$ net\+::socks\+::make\+\_\+connect\+\_\+client (\begin{DoxyParamCaption}\item[{client\+::stream\+\_\+type\+::socket \&\&}]{proxy,  }\item[{\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{socks\+::version}}}]{ver,  }\item[{Handler}]{handler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacenet_1_1socks_af10f92a22d42d60bf63c5fbee0e3568b}\label{namespacenet_1_1socks_af10f92a22d42d60bf63c5fbee0e3568b}} 
+\index{net::socks@{net::socks}!make\_error\_code@{make\_error\_code}}
+\index{make\_error\_code@{make\_error\_code}!net::socks@{net::socks}}
+\doxysubsubsection{\texorpdfstring{make\_error\_code()}{make\_error\_code()}}
+{\footnotesize\ttfamily boost\+::system\+::error\+\_\+code net\+::socks\+::make\+\_\+error\+\_\+code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{error}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{net\+::socks\+::error}} as a boost\+::system\+::error\+\_\+code. 
+\end{DoxyReturn}

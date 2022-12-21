@@ -1,0 +1,75 @@
+\hypertarget{transaction_8h}{}\doxysection{src/lmdb/transaction.h File Reference}
+\label{transaction_8h}\index{src/lmdb/transaction.h@{src/lmdb/transaction.h}}
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}lmdb/error.\+h\char`\"{}}\newline
+Include dependency graph for transaction.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{transaction_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{transaction_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1abort__txn}{lmdb\+::abort\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1release__read__txn}{lmdb\+::release\+\_\+read\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1abort__write__txn}{lmdb\+::abort\+\_\+write\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1close__cursor}{lmdb\+::close\+\_\+cursor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb}{lmdb}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{transaction_8h_a5780f7aa4fe783e74bc90f622858289c}{M\+O\+N\+E\+R\+O\+\_\+\+C\+U\+R\+S\+OR}}(name)
+\begin{DoxyCompactList}\small\item\em Uses C++ type system to differentiate between cursors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{lmdb\+::suspended\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, abort\+\_\+txn $>$
+\item 
+using \mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{lmdb\+::read\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, release\+\_\+read\+\_\+txn $>$
+\item 
+using \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{lmdb\+::write\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, abort\+\_\+write\+\_\+txn $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename D $>$ }\\\mbox{\hyperlink{classexpect}{expect}}$<$ std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ $>$ \mbox{\hyperlink{namespacelmdb_a8cd2930726c036371e7b98b043e0ec36}{lmdb\+::open\+\_\+cursor}} (M\+D\+B\+\_\+txn \&txn, M\+D\+B\+\_\+dbi tbl) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{transaction_8h_a5780f7aa4fe783e74bc90f622858289c}\label{transaction_8h_a5780f7aa4fe783e74bc90f622858289c}} 
+\index{transaction.h@{transaction.h}!MONERO\_CURSOR@{MONERO\_CURSOR}}
+\index{MONERO\_CURSOR@{MONERO\_CURSOR}!transaction.h@{transaction.h}}
+\doxysubsubsection{\texorpdfstring{MONERO\_CURSOR}{MONERO\_CURSOR}}
+{\footnotesize\ttfamily \#define M\+O\+N\+E\+R\+O\+\_\+\+C\+U\+R\+S\+OR(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keyword}{struct }close\_ \#\# \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}} : \mbox{\hyperlink{structlmdb_1_1close__cursor}{::lmdb::close\_cursor}} \{\};           \(\backslash\)}
+\DoxyCodeLine{    using \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02simplewallet_8cpp_03_ab84787baef2d08dab790bcf6b8aa4fb2}{name}} = std::unique\_ptr< MDB\_cursor, close\_ \#\# name >;}
+
+\end{DoxyCode}
+
+
+Uses C++ type system to differentiate between cursors. 
+

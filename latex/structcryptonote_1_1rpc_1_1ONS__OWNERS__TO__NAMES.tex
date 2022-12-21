@@ -1,0 +1,108 @@
+\hypertarget{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES}{}\doxysection{cryptonote\+::rpc\+::O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+ES Struct Reference}
+\label{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES}\index{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_1_1request__parameters}{request\+\_\+parameters}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_1_1response__entry}{response\+\_\+entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a3f12ada072674033dd426c7bf7515dbd}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_1_1request__parameters}{cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+E\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a4246f3445b4e50f5c324cade640005a7}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_aa271f12ef4c52e3c384374b7ae86bc2a}{M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+N\+T\+R\+I\+ES}} = 256
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get all the name mappings for the queried owner. The owner can be either a ed25519 public key or Monero style public key; by default purchases are owned by the spend public key of the purchasing wallet.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily entries} List of owner\textquotesingle{}s public keys to find all Oxen Name Service entries for.
+\item {\ttfamily include\+\_\+expired} Optional\+: if provided and true, include entries in the results even if they are expired
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} Generic R\+PC error code. \char`\"{}\+O\+K\char`\"{} is the success value.
+\item {\ttfamily entries} List of O\+NS names. Each element is structured as follows\+:
+\begin{DoxyItemize}
+\item {\ttfamily request\+\_\+index} (Deprecated) The index in request\textquotesingle{}s {\ttfamily entries} array that was resolved via Loki Name Service.
+\item {\ttfamily type} The category the Loki Name Service entry belongs to; currently 0 for Session, 1 for \mbox{\hyperlink{namespaceWallet}{Wallet}} and 2 for Lokinet.
+\item {\ttfamily name\+\_\+hash} The hash of the name that the owner purchased via Loki Name Service in base64
+\item {\ttfamily owner} The backup public key specified by the owner that purchased the Loki Name Service entry.
+\item {\ttfamily backup\+\_\+owner} The backup public key specified by the owner that purchased the Loki Name Service entry. Omitted if no backup owner.
+\item {\ttfamily encrypted\+\_\+value} The encrypted value that the name maps to, in hex. This value is encrypted using the name (not the hash) as the secret.
+\item {\ttfamily update\+\_\+height} The last height that this Loki Name Service entry was updated on the \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}}.
+\item {\ttfamily expiration\+\_\+height} For records that expire, this will be set to the expiration block height.
+\item {\ttfamily txid} The txid of the mapping\textquotesingle{}s most recent update or purchase. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a3f12ada072674033dd426c7bf7515dbd}\label{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a3f12ada072674033dd426c7bf7515dbd}} 
+\index{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}!names@{names}}
+\index{names@{names}!cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+E\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_aa271f12ef4c52e3c384374b7ae86bc2a}\label{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_aa271f12ef4c52e3c384374b7ae86bc2a}} 
+\index{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}!MAX\_REQUEST\_ENTRIES@{MAX\_REQUEST\_ENTRIES}}
+\index{MAX\_REQUEST\_ENTRIES@{MAX\_REQUEST\_ENTRIES}!cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}}
+\doxysubsubsection{\texorpdfstring{MAX\_REQUEST\_ENTRIES}{MAX\_REQUEST\_ENTRIES}}
+{\footnotesize\ttfamily constexpr size\+\_\+t cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+E\+S\+::\+M\+A\+X\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+E\+N\+T\+R\+I\+ES = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a4246f3445b4e50f5c324cade640005a7}\label{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_a4246f3445b4e50f5c324cade640005a7}} 
+\index{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}!request@{request}}
+\index{request@{request}!cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES@{cryptonote::rpc::ONS\_OWNERS\_TO\_NAMES}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__OWNERS__TO__NAMES_1_1request__parameters}{cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+E\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+O\+N\+S\+\_\+\+O\+W\+N\+E\+R\+S\+\_\+\+T\+O\+\_\+\+N\+A\+M\+E\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

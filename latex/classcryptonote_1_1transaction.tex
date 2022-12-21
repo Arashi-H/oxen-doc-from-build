@@ -1,0 +1,314 @@
+\hypertarget{classcryptonote_1_1transaction}{}\doxysection{cryptonote\+::transaction Class Reference}
+\label{classcryptonote_1_1transaction}\index{cryptonote::transaction@{cryptonote::transaction}}
+
+
+{\ttfamily \#include $<$cryptonote\+\_\+basic.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classcryptonote_1_1transaction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1transaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_a34727e18ffc2f61b520b6c73bc397750}{transaction}} ()
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_a9e5c2f0d0cea5890bf76b8901ff12894}{transaction}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&t)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \& \mbox{\hyperlink{classcryptonote_1_1transaction_ac4fe3d59a8adc6a18014f2f04e9615cc}{operator=}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&t)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_a30c241e983fe40f2e3a81a9a1bf55221}{set\+\_\+null}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_ad29f68420e37c8b42ac003b7376906dd}{invalidate\+\_\+hashes}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1transaction_a01785a89bcf50b171f9ebde45e27e933}{is\+\_\+hash\+\_\+valid}} () const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_a7d656f6aa2cfe2c75aff9225a7ca147a}{set\+\_\+hash\+\_\+valid}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} v) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1transaction_af145758fc703c5c5cd932715fb036264}{is\+\_\+blob\+\_\+size\+\_\+valid}} () const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_ae05b23292f811c6dd482e1f882ebf96e}{set\+\_\+blob\+\_\+size\+\_\+valid}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} v) const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_a16e5bbff65ef9426572949bd8c6fb8ed}{set\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1transaction_a7937b0409327ab68c4035183e8265e09}{set\+\_\+blob\+\_\+size}} (size\+\_\+t sz)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_af2119b4fbbef4403d32abbdb89b131d9}{if}} (Archive\+::is\+\_\+deserializer)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_a9fbecf03986bda42f25db94f6e10d623}{serialization\+::value}} (ar, static\+\_\+cast$<$ \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \& $>$($\ast$this))
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_ae7118218ade6476fef3490da9281a513}{if}} (\mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}}) \mbox{\hyperlink{classcryptonote_1_1transaction_a635203b4fba93c81270ec922d6a1310c}{prefix\+\_\+size}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_ad079808b049bfa7a420059355502512b}{if}} (\mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a476a0c64c9dff31ec59d0258dfe9c9d0}{version}}==\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a6654c734ccab8f440ff0825eb443dc7f}{txversion\+::v1}})
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classcryptonote_1_1transaction_a4089e8bb23b66781e1030f49a61e19c6}{serialize\+\_\+base}} (Archive \&ar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1transaction_ad16b73e69cbce38fcc2d4e7a4511aa7c}{signatures}}
+\item 
+\mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} \mbox{\hyperlink{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}{rct\+\_\+signatures}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1transaction_aebc35877eacc01aec784ce1bed2cf0ce}{hash}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1transaction_ad41c30f4a38df129c20cc66025c8d2a4}{blob\+\_\+size}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1transaction_a70ac1a31edc0a1e7e8784a44c4774bfa}{pruned}}
+\item 
+std\+::atomic$<$ unsigned int $>$ \mbox{\hyperlink{classcryptonote_1_1transaction_a5079a34f8321eb37f5648324f6ef80af}{unprunable\+\_\+size}}
+\item 
+std\+::atomic$<$ unsigned int $>$ \mbox{\hyperlink{classcryptonote_1_1transaction_a635203b4fba93c81270ec922d6a1310c}{prefix\+\_\+size}}
+\item 
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}} = \mbox{\hyperlink{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}{serialization\+::is\+\_\+binary}}$<$Archive$>$
+\item 
+const unsigned int \mbox{\hyperlink{classcryptonote_1_1transaction_aed5079ab62a00ab55f94f5822f3ad567}{start\+\_\+pos}} = \mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}} ? ar.\+streampos() \+: 0
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction_ad8629a8b85b91c9a624783c784dce9d1}{else}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1transaction_a83366156ca770cc4dc1f4077ab6bc864}{get\+\_\+signature\+\_\+size}} (const \mbox{\hyperlink{namespacecryptonote_a0f1a94719ee72fc091fd7a4c62f50ffc}{txin\+\_\+v}} \&tx\+\_\+in)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1transaction_af409255bbe21817e4ec5548db6caa944}{hash\+\_\+valid}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1transaction_a2648fca862a6bad8b439f7fe133edf67}{blob\+\_\+size\+\_\+valid}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a34727e18ffc2f61b520b6c73bc397750}\label{classcryptonote_1_1transaction_a34727e18ffc2f61b520b6c73bc397750}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!transaction@{transaction}}
+\index{transaction@{transaction}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{transaction()}{transaction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a9e5c2f0d0cea5890bf76b8901ff12894}\label{classcryptonote_1_1transaction_a9e5c2f0d0cea5890bf76b8901ff12894}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!transaction@{transaction}}
+\index{transaction@{transaction}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{transaction()}{transaction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{t }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a83366156ca770cc4dc1f4077ab6bc864}\label{classcryptonote_1_1transaction_a83366156ca770cc4dc1f4077ab6bc864}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!get\_signature\_size@{get\_signature\_size}}
+\index{get\_signature\_size@{get\_signature\_size}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{get\_signature\_size()}{get\_signature\_size()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::transaction\+::get\+\_\+signature\+\_\+size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecryptonote_a0f1a94719ee72fc091fd7a4c62f50ffc}{txin\+\_\+v}} \&}]{tx\+\_\+in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_af2119b4fbbef4403d32abbdb89b131d9}\label{classcryptonote_1_1transaction_af2119b4fbbef4403d32abbdb89b131d9}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!if@{if}}
+\index{if@{if}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::if (\begin{DoxyParamCaption}\item[{Archive\+::is\+\_\+deserializer}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ae7118218ade6476fef3490da9281a513}\label{classcryptonote_1_1transaction_ae7118218ade6476fef3490da9281a513}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!if@{if}}
+\index{if@{if}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ad079808b049bfa7a420059355502512b}\label{classcryptonote_1_1transaction_ad079808b049bfa7a420059355502512b}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!if@{if}}
+\index{if@{if}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a476a0c64c9dff31ec59d0258dfe9c9d0}{version}}}]{ = {\ttfamily =~\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736a6654c734ccab8f440ff0825eb443dc7f}{txversion\+::v1}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ad29f68420e37c8b42ac003b7376906dd}\label{classcryptonote_1_1transaction_ad29f68420e37c8b42ac003b7376906dd}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!invalidate\_hashes@{invalidate\_hashes}}
+\index{invalidate\_hashes@{invalidate\_hashes}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{invalidate\_hashes()}{invalidate\_hashes()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::invalidate\+\_\+hashes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_af145758fc703c5c5cd932715fb036264}\label{classcryptonote_1_1transaction_af145758fc703c5c5cd932715fb036264}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!is\_blob\_size\_valid@{is\_blob\_size\_valid}}
+\index{is\_blob\_size\_valid@{is\_blob\_size\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{is\_blob\_size\_valid()}{is\_blob\_size\_valid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::transaction\+::is\+\_\+blob\+\_\+size\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a01785a89bcf50b171f9ebde45e27e933}\label{classcryptonote_1_1transaction_a01785a89bcf50b171f9ebde45e27e933}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!is\_hash\_valid@{is\_hash\_valid}}
+\index{is\_hash\_valid@{is\_hash\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{is\_hash\_valid()}{is\_hash\_valid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::transaction\+::is\+\_\+hash\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ac4fe3d59a8adc6a18014f2f04e9615cc}\label{classcryptonote_1_1transaction_ac4fe3d59a8adc6a18014f2f04e9615cc}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \& cryptonote\+::transaction\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a9fbecf03986bda42f25db94f6e10d623}\label{classcryptonote_1_1transaction_a9fbecf03986bda42f25db94f6e10d623}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!serialization::value@{serialization::value}}
+\index{serialization::value@{serialization::value}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{serialization::value()}{serialization::value()}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::serialization\+::value (\begin{DoxyParamCaption}\item[{ar}]{,  }\item[{static\+\_\+cast$<$ \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \& $>$ $\ast$}]{this }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a4089e8bb23b66781e1030f49a61e19c6}\label{classcryptonote_1_1transaction_a4089e8bb23b66781e1030f49a61e19c6}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!serialize\_base@{serialize\_base}}
+\index{serialize\_base@{serialize\_base}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{serialize\_base()}{serialize\_base()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void cryptonote\+::transaction\+::serialize\+\_\+base (\begin{DoxyParamCaption}\item[{Archive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a7937b0409327ab68c4035183e8265e09}\label{classcryptonote_1_1transaction_a7937b0409327ab68c4035183e8265e09}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!set\_blob\_size@{set\_blob\_size}}
+\index{set\_blob\_size@{set\_blob\_size}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{set\_blob\_size()}{set\_blob\_size()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::set\+\_\+blob\+\_\+size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ae05b23292f811c6dd482e1f882ebf96e}\label{classcryptonote_1_1transaction_ae05b23292f811c6dd482e1f882ebf96e}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!set\_blob\_size\_valid@{set\_blob\_size\_valid}}
+\index{set\_blob\_size\_valid@{set\_blob\_size\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{set\_blob\_size\_valid()}{set\_blob\_size\_valid()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::set\+\_\+blob\+\_\+size\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a16e5bbff65ef9426572949bd8c6fb8ed}\label{classcryptonote_1_1transaction_a16e5bbff65ef9426572949bd8c6fb8ed}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!set\_hash@{set\_hash}}
+\index{set\_hash@{set\_hash}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{set\_hash()}{set\_hash()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::set\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a7d656f6aa2cfe2c75aff9225a7ca147a}\label{classcryptonote_1_1transaction_a7d656f6aa2cfe2c75aff9225a7ca147a}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!set\_hash\_valid@{set\_hash\_valid}}
+\index{set\_hash\_valid@{set\_hash\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{set\_hash\_valid()}{set\_hash\_valid()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::set\+\_\+hash\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a30c241e983fe40f2e3a81a9a1bf55221}\label{classcryptonote_1_1transaction_a30c241e983fe40f2e3a81a9a1bf55221}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!set\_null@{set\_null}}
+\index{set\_null@{set\_null}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{set\_null()}{set\_null()}}
+{\footnotesize\ttfamily void cryptonote\+::transaction\+::set\+\_\+null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}\label{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!Binary@{Binary}}
+\index{Binary@{Binary}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{Binary}{Binary}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::transaction\+::\+Binary = \mbox{\hyperlink{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}{serialization\+::is\+\_\+binary}}$<$Archive$>$\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ad41c30f4a38df129c20cc66025c8d2a4}\label{classcryptonote_1_1transaction_ad41c30f4a38df129c20cc66025c8d2a4}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!blob\_size@{blob\_size}}
+\index{blob\_size@{blob\_size}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{blob\_size}{blob\_size}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::transaction\+::blob\+\_\+size\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a2648fca862a6bad8b439f7fe133edf67}\label{classcryptonote_1_1transaction_a2648fca862a6bad8b439f7fe133edf67}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!blob\_size\_valid@{blob\_size\_valid}}
+\index{blob\_size\_valid@{blob\_size\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{blob\_size\_valid}{blob\_size\_valid}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ cryptonote\+::transaction\+::blob\+\_\+size\+\_\+valid\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ad8629a8b85b91c9a624783c784dce9d1}\label{classcryptonote_1_1transaction_ad8629a8b85b91c9a624783c784dce9d1}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!else@{else}}
+\index{else@{else}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily cryptonote\+::transaction\+::else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}.empty())}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            ar.tag(\textcolor{stringliteral}{"rct\_signatures"});}
+\DoxyCodeLine{            \textcolor{keyword}{auto} obj = ar.begin\_object();}
+\DoxyCodeLine{            \mbox{\hyperlink{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}{rct\_signatures}}.\mbox{\hyperlink{structrct_1_1rctSigBase_afdbe3bd85934d390c404bbeacf0da5d6}{serialize\_rctsig\_base}}(ar, \mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}.size(), \mbox{\hyperlink{classcryptonote_1_1transaction__prefix_accfd496abf224457b998bd62c558ba7b}{vout}}.size());}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{          \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}})}
+\DoxyCodeLine{            \mbox{\hyperlink{classcryptonote_1_1transaction_a5079a34f8321eb37f5648324f6ef80af}{unprunable\_size}} = ar.streampos() -\/ \mbox{\hyperlink{classcryptonote_1_1transaction_aed5079ab62a00ab55f94f5822f3ad567}{start\_pos}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{          \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcryptonote_1_1transaction_a70ac1a31edc0a1e7e8784a44c4774bfa}{pruned}} \&\& \mbox{\hyperlink{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}{rct\_signatures}}.\mbox{\hyperlink{structrct_1_1rctSigBase_a51fd7ed99c31e1eba051a5bdad91e76a}{type}} != \mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0abbb93ef26e3c101ff11cdd21cab08a94}{rct::RCTType::Null}})}
+\DoxyCodeLine{          \{}
+\DoxyCodeLine{            ar.tag(\textcolor{stringliteral}{"rctsig\_prunable"});}
+\DoxyCodeLine{            \textcolor{keyword}{auto} obj = ar.begin\_object();}
+\DoxyCodeLine{            \mbox{\hyperlink{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}{rct\_signatures}}.\mbox{\hyperlink{structrct_1_1rctSig_a3ed46fa301c42b767ca068feb54049de}{p}}.\mbox{\hyperlink{structrct_1_1rctSigPrunable_a44449ca7f33e2017bb85a42693a22e40}{serialize\_rctsig\_prunable}}(ar, \mbox{\hyperlink{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}{rct\_signatures}}.\mbox{\hyperlink{structrct_1_1rctSigBase_a51fd7ed99c31e1eba051a5bdad91e76a}{type}}, \mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}.size(), \mbox{\hyperlink{classcryptonote_1_1transaction__prefix_accfd496abf224457b998bd62c558ba7b}{vout}}.size(),}
+\DoxyCodeLine{                \mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}.size() > 0 \&\& std::holds\_alternative<txin\_to\_key>(\mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}[0]) ? var::get<txin\_to\_key>(\mbox{\hyperlink{classcryptonote_1_1transaction__prefix_a8476e59f385914b2733e3833f8a56973}{vin}}[0]).key\_offsets.size() -\/ 1 : 0);}
+\DoxyCodeLine{          \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      \textcolor{keywordflow}{if} (Archive::is\_deserializer)}
+\DoxyCodeLine{        \mbox{\hyperlink{classcryptonote_1_1transaction_a70ac1a31edc0a1e7e8784a44c4774bfa}{pruned}} = \textcolor{keyword}{false}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1transaction_aebc35877eacc01aec784ce1bed2cf0ce}\label{classcryptonote_1_1transaction_aebc35877eacc01aec784ce1bed2cf0ce}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!hash@{hash}}
+\index{hash@{hash}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::transaction\+::hash\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_af409255bbe21817e4ec5548db6caa944}\label{classcryptonote_1_1transaction_af409255bbe21817e4ec5548db6caa944}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!hash\_valid@{hash\_valid}}
+\index{hash\_valid@{hash\_valid}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{hash\_valid}{hash\_valid}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ cryptonote\+::transaction\+::hash\+\_\+valid\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a635203b4fba93c81270ec922d6a1310c}\label{classcryptonote_1_1transaction_a635203b4fba93c81270ec922d6a1310c}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!prefix\_size@{prefix\_size}}
+\index{prefix\_size@{prefix\_size}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{prefix\_size}{prefix\_size}}
+{\footnotesize\ttfamily std\+::atomic$<$unsigned int$>$ cryptonote\+::transaction\+::prefix\+\_\+size}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a70ac1a31edc0a1e7e8784a44c4774bfa}\label{classcryptonote_1_1transaction_a70ac1a31edc0a1e7e8784a44c4774bfa}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!pruned@{pruned}}
+\index{pruned@{pruned}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{pruned}{pruned}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::transaction\+::pruned}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}\label{classcryptonote_1_1transaction_a0f40e041d8c96586f48a73038dea059a}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!rct\_signatures@{rct\_signatures}}
+\index{rct\_signatures@{rct\_signatures}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{rct\_signatures}{rct\_signatures}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} cryptonote\+::transaction\+::rct\+\_\+signatures}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_ad16b73e69cbce38fcc2d4e7a4511aa7c}\label{classcryptonote_1_1transaction_ad16b73e69cbce38fcc2d4e7a4511aa7c}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!signatures@{signatures}}
+\index{signatures@{signatures}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{signatures}{signatures}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}}$>$ $>$ cryptonote\+::transaction\+::signatures}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_aed5079ab62a00ab55f94f5822f3ad567}\label{classcryptonote_1_1transaction_aed5079ab62a00ab55f94f5822f3ad567}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!start\_pos@{start\_pos}}
+\index{start\_pos@{start\_pos}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{start\_pos}{start\_pos}}
+{\footnotesize\ttfamily const unsigned int cryptonote\+::transaction\+::start\+\_\+pos = \mbox{\hyperlink{classcryptonote_1_1transaction_a331902175588f10b3b4231fb4cfd12a5}{Binary}} ? ar.\+streampos() \+: 0}
+
+\mbox{\Hypertarget{classcryptonote_1_1transaction_a5079a34f8321eb37f5648324f6ef80af}\label{classcryptonote_1_1transaction_a5079a34f8321eb37f5648324f6ef80af}} 
+\index{cryptonote::transaction@{cryptonote::transaction}!unprunable\_size@{unprunable\_size}}
+\index{unprunable\_size@{unprunable\_size}!cryptonote::transaction@{cryptonote::transaction}}
+\doxysubsubsection{\texorpdfstring{unprunable\_size}{unprunable\_size}}
+{\footnotesize\ttfamily std\+::atomic$<$unsigned int$>$ cryptonote\+::transaction\+::unprunable\+\_\+size}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{cryptonote__basic_8h}{cryptonote\+\_\+basic.\+h}}\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{cryptonote__basic_8cpp}{cryptonote\+\_\+basic.\+cpp}}\end{DoxyCompactItemize}

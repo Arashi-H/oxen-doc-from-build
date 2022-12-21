@@ -1,0 +1,55 @@
+\hypertarget{scoped__message__writer_8h}{}\doxysection{src/common/scoped\+\_\+message\+\_\+writer.h File Reference}
+\label{scoped__message__writer_8h}\index{src/common/scoped\_message\_writer.h@{src/common/scoped\_message\_writer.h}}
+{\ttfamily \#include \char`\"{}epee/readline\+\_\+suspend.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+Include dependency graph for scoped\+\_\+message\+\_\+writer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scoped__message__writer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scoped__message__writer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... T$>$ }\\scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_a862879f83cccaecfce28b9b39a3e92db}{tools\+::msg\+\_\+writer}} (std\+::optional$<$ fmt\+::terminal\+\_\+color $>$ color=std\+::nullopt, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_a8d17e1f4f94d2f7cecf2dbb7efbfaa84}{tools\+::msg\+\_\+writer}} (std\+::string\+\_\+view msg, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename Bool , typename... T, std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ Bool, bool $>$, int $>$  = 0$>$ }\\scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_ab331f75f3d7967417225e9b2fcdfc73a}{tools\+::success\+\_\+msg\+\_\+writer}} (Bool color, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_ab2266fd9d2f3f4da5438bc6823913e37}{tools\+::success\+\_\+msg\+\_\+writer}} ()
+\item 
+{\footnotesize template$<$typename... T$>$ }\\scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_af5806f877857090994a809ded72e8756}{tools\+::success\+\_\+msg\+\_\+writer}} (std\+::string\+\_\+view msg, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\begin{DoxyCompactList}\small\item\em Same as above, but for calling without just a message (with a bool). Color will be true. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... T$>$ }\\scoped\+\_\+message\+\_\+writer \mbox{\hyperlink{namespacetools_a3f6e7dda516e1a66e584021a75589659}{tools\+::fail\+\_\+msg\+\_\+writer}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::optional$<$ fmt\+::terminal\+\_\+color $>$ \mbox{\hyperlink{namespacetools_a4cc3ee1ce396d5275fab84bb2ab6c6e9}{tools\+::success\+\_\+color}} \{fmt\+::terminal\+\_\+color\+::green\}
+\item 
+constexpr std\+::optional$<$ fmt\+::terminal\+\_\+color $>$ \mbox{\hyperlink{namespacetools_a2ac0d2067a9ec5382dea4b25b95ffb56}{tools\+::fail\+\_\+color}} \{fmt\+::terminal\+\_\+color\+::red\}
+\end{DoxyCompactItemize}

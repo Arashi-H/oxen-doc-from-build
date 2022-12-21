@@ -1,0 +1,86 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+UM Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM}\index{cryptonote::rpc::GET\_COINBASE\_TX\_SUM@{cryptonote::rpc::GET\_COINBASE\_TX\_SUM}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+UM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+UM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a16fa63722133fbb5f6df2564de1f4932}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+U\+M\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a11b2d52033264d2f694737034f56726a}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the coinbase amount and the fees amount for n last blocks starting at particular height.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily height} Block height from which getting the amounts.
+\item {\ttfamily count} Number of blocks to include in the sum.
+\end{DoxyItemize}
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily emission\+\_\+amount} Amount of coinbase reward in atomic units.
+\item {\ttfamily fee\+\_\+amount} Amount of fees in atomic units.
+\item {\ttfamily burn\+\_\+amount} Amount of burnt oxen. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a16fa63722133fbb5f6df2564de1f4932}\label{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a16fa63722133fbb5f6df2564de1f4932}} 
+\index{cryptonote::rpc::GET\_COINBASE\_TX\_SUM@{cryptonote::rpc::GET\_COINBASE\_TX\_SUM}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_COINBASE\_TX\_SUM@{cryptonote::rpc::GET\_COINBASE\_TX\_SUM}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+U\+M\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a11b2d52033264d2f694737034f56726a}\label{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_a11b2d52033264d2f694737034f56726a}} 
+\index{cryptonote::rpc::GET\_COINBASE\_TX\_SUM@{cryptonote::rpc::GET\_COINBASE\_TX\_SUM}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_COINBASE\_TX\_SUM@{cryptonote::rpc::GET\_COINBASE\_TX\_SUM}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__COINBASE__TX__SUM_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+U\+M\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+O\+I\+N\+B\+A\+S\+E\+\_\+\+T\+X\+\_\+\+S\+U\+M\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

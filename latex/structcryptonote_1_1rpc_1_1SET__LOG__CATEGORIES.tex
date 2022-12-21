@@ -1,0 +1,89 @@
+\hypertarget{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES}{}\doxysection{cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+ES Struct Reference}
+\label{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES}\index{cryptonote::rpc::SET\_LOG\_CATEGORIES@{cryptonote::rpc::SET\_LOG\_CATEGORIES}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_a5f7ddc98d70eb43c8c7aa1f8760a7ede}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_ab9337e401a533ac11f0695ef584a3cef}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Set the daemon log categories. Categories are represented as a comma separated list of {\ttfamily $<$Category$>$\+:$<$level$>$} (similarly to syslog standard {\ttfamily $<$Facility$>$\+:$<$Severity-\/level$>$}), where\+: Category is one of the following\+: $\ast$ (all facilities), default, net, net.\+http, net.\+p2p, logging, net.\+trottle, blockchain.\+db, blockchain.\+db.\+lmdb, bcutil, checkpoints, net.\+dns, net.\+dl, i18n, perf,stacktrace, updates, account, cn ,difficulty, hardfork, miner, blockchain, txpool, cn.\+block\+\_\+queue, net.\+cn, daemon, debugtools.\+deserialize, debugtools.\+objectsizes, device.\+ledger, wallet.\+gen\+\_\+multisig, multisig, bulletproofs, ringct, daemon.\+rpc, wallet.\+simplewallet, Wallet\+A\+PI, wallet.\+ringdb, wallet.\+wallet2, \mbox{\hyperlink{namespacewallet_1_1rpc}{wallet.\+rpc}}, tests.\+core.
+
+Level is one of the following\+: F\+A\+T\+AL -\/ higher level, E\+R\+R\+OR, W\+A\+R\+N\+I\+NG, I\+N\+FO, D\+E\+B\+UG, T\+R\+A\+CE.
+
+Lower level A level automatically includes higher level. By default, categories are set to\+: {\ttfamily $\ast$\+:W\+A\+R\+N\+I\+NG,net\+:F\+A\+T\+AL,net.\+p2p\+:F\+A\+T\+AL,net.\+cn\+:F\+A\+T\+AL,global\+:I\+N\+FO,verify\+:F\+A\+T\+AL,stacktrace\+:I\+N\+FO,logging\+:I\+N\+FO,msgwriter\+:I\+N\+FO} Setting the categories to \char`\"{}\char`\"{} prevents any log output.
+
+You can append to the current the log level for updating just one or more categories while leaving other log levels unchanged by specifying one or more \char`\"{}$<$category$>$\+:$<$level$>$\char`\"{} pairs preceded by a \char`\"{}+\char`\"{}, for example \char`\"{}+difficulty\+:\+D\+E\+B\+U\+G,net\+:\+W\+A\+R\+N\+I\+N\+G\char`\"{}.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily categories} Optional, daemon log categores to enable
+\end{DoxyItemize}
+
+Output values (requires a restricted/admin R\+PC endpoint)\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily categories} Daemon log enabled categories 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_a5f7ddc98d70eb43c8c7aa1f8760a7ede}\label{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_a5f7ddc98d70eb43c8c7aa1f8760a7ede}} 
+\index{cryptonote::rpc::SET\_LOG\_CATEGORIES@{cryptonote::rpc::SET\_LOG\_CATEGORIES}!names@{names}}
+\index{names@{names}!cryptonote::rpc::SET\_LOG\_CATEGORIES@{cryptonote::rpc::SET\_LOG\_CATEGORIES}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_ab9337e401a533ac11f0695ef584a3cef}\label{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_ab9337e401a533ac11f0695ef584a3cef}} 
+\index{cryptonote::rpc::SET\_LOG\_CATEGORIES@{cryptonote::rpc::SET\_LOG\_CATEGORIES}!request@{request}}
+\index{request@{request}!cryptonote::rpc::SET\_LOG\_CATEGORIES@{cryptonote::rpc::SET\_LOG\_CATEGORIES}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LOG__CATEGORIES_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

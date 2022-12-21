@@ -1,0 +1,160 @@
+\hypertarget{blake256_8h}{}\doxysection{src/crypto/blake256.h File Reference}
+\label{blake256_8h}\index{src/crypto/blake256.h@{src/crypto/blake256.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for blake256.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{blake256_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{blake256_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstate}{state}}
+\item 
+struct \mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{blake256_8h_a41f078b45f8836249fdcea1fb672a946}{blake256\+\_\+init}} (\mbox{\hyperlink{structstate}{state}} $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_a368f40d74376b6b558166b119777dacf}{blake224\+\_\+init}} (\mbox{\hyperlink{structstate}{state}} $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_a097466a344db4d0132dea0999e564491}{blake256\+\_\+update}} (\mbox{\hyperlink{structstate}{state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_a920602c345e4add000cd40e6d30e2cbb}{blake224\+\_\+update}} (\mbox{\hyperlink{structstate}{state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_aa3a6a1357ed447444ee92a6ba9c58fb8}{blake256\+\_\+final}} (\mbox{\hyperlink{structstate}{state}} $\ast$, uint8\+\_\+t $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_a2d4032707087cc039119172e104b28eb}{blake224\+\_\+final}} (\mbox{\hyperlink{structstate}{state}} $\ast$, uint8\+\_\+t $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_adc37c2d3c50922fd029635ea07ae43cc}{blake256\+\_\+hash}} (uint8\+\_\+t $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_aa47cfb6ea30fd7eeee839698b101ad9c}{blake224\+\_\+hash}} (uint8\+\_\+t $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_a3e3b45885545065eb59a084977aeae47}{hmac\+\_\+blake256\+\_\+init}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_a223d221cde5aa80d342b287022ce8539}{hmac\+\_\+blake224\+\_\+init}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_af02465de1a7658e321a8906033f9bb03}{hmac\+\_\+blake256\+\_\+update}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_a56b0fcf21d54f654325c408c83aa0730}{hmac\+\_\+blake224\+\_\+update}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_aa6d6c22e1ffbad59acc9e0a02b35f80f}{hmac\+\_\+blake256\+\_\+final}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, uint8\+\_\+t $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_a1aae742daa3bd6eb7e4667b5bff9468b}{hmac\+\_\+blake224\+\_\+final}} (\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$, uint8\+\_\+t $\ast$)
+\item 
+void \mbox{\hyperlink{blake256_8h_ae6b261791a148d6c9b09a4b92e46854f}{hmac\+\_\+blake256\+\_\+hash}} (uint8\+\_\+t $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\item 
+void \mbox{\hyperlink{blake256_8h_a606782ec45049c007fc3b2380959ffa6}{hmac\+\_\+blake224\+\_\+hash}} (uint8\+\_\+t $\ast$, const uint8\+\_\+t $\ast$, uint64\+\_\+t, const uint8\+\_\+t $\ast$, uint64\+\_\+t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blake256_8h_a2d4032707087cc039119172e104b28eb}\label{blake256_8h_a2d4032707087cc039119172e104b28eb}} 
+\index{blake256.h@{blake256.h}!blake224\_final@{blake224\_final}}
+\index{blake224\_final@{blake224\_final}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake224\_final()}{blake224\_final()}}
+{\footnotesize\ttfamily void blake224\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{,  }\item[{uint8\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_aa47cfb6ea30fd7eeee839698b101ad9c}\label{blake256_8h_aa47cfb6ea30fd7eeee839698b101ad9c}} 
+\index{blake256.h@{blake256.h}!blake224\_hash@{blake224\_hash}}
+\index{blake224\_hash@{blake224\_hash}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake224\_hash()}{blake224\_hash()}}
+{\footnotesize\ttfamily void blake224\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a368f40d74376b6b558166b119777dacf}\label{blake256_8h_a368f40d74376b6b558166b119777dacf}} 
+\index{blake256.h@{blake256.h}!blake224\_init@{blake224\_init}}
+\index{blake224\_init@{blake224\_init}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake224\_init()}{blake224\_init()}}
+{\footnotesize\ttfamily void blake224\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a920602c345e4add000cd40e6d30e2cbb}\label{blake256_8h_a920602c345e4add000cd40e6d30e2cbb}} 
+\index{blake256.h@{blake256.h}!blake224\_update@{blake224\_update}}
+\index{blake224\_update@{blake224\_update}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake224\_update()}{blake224\_update()}}
+{\footnotesize\ttfamily void blake224\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_aa3a6a1357ed447444ee92a6ba9c58fb8}\label{blake256_8h_aa3a6a1357ed447444ee92a6ba9c58fb8}} 
+\index{blake256.h@{blake256.h}!blake256\_final@{blake256\_final}}
+\index{blake256\_final@{blake256\_final}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake256\_final()}{blake256\_final()}}
+{\footnotesize\ttfamily void blake256\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{,  }\item[{uint8\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_adc37c2d3c50922fd029635ea07ae43cc}\label{blake256_8h_adc37c2d3c50922fd029635ea07ae43cc}} 
+\index{blake256.h@{blake256.h}!blake256\_hash@{blake256\_hash}}
+\index{blake256\_hash@{blake256\_hash}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake256\_hash()}{blake256\_hash()}}
+{\footnotesize\ttfamily void blake256\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a41f078b45f8836249fdcea1fb672a946}\label{blake256_8h_a41f078b45f8836249fdcea1fb672a946}} 
+\index{blake256.h@{blake256.h}!blake256\_init@{blake256\_init}}
+\index{blake256\_init@{blake256\_init}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake256\_init()}{blake256\_init()}}
+{\footnotesize\ttfamily void blake256\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a097466a344db4d0132dea0999e564491}\label{blake256_8h_a097466a344db4d0132dea0999e564491}} 
+\index{blake256.h@{blake256.h}!blake256\_update@{blake256\_update}}
+\index{blake256\_update@{blake256\_update}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{blake256\_update()}{blake256\_update()}}
+{\footnotesize\ttfamily void blake256\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstate}{state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a1aae742daa3bd6eb7e4667b5bff9468b}\label{blake256_8h_a1aae742daa3bd6eb7e4667b5bff9468b}} 
+\index{blake256.h@{blake256.h}!hmac\_blake224\_final@{hmac\_blake224\_final}}
+\index{hmac\_blake224\_final@{hmac\_blake224\_final}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake224\_final()}{hmac\_blake224\_final()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake224\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{uint8\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a606782ec45049c007fc3b2380959ffa6}\label{blake256_8h_a606782ec45049c007fc3b2380959ffa6}} 
+\index{blake256.h@{blake256.h}!hmac\_blake224\_hash@{hmac\_blake224\_hash}}
+\index{hmac\_blake224\_hash@{hmac\_blake224\_hash}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake224\_hash()}{hmac\_blake224\_hash()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake224\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a223d221cde5aa80d342b287022ce8539}\label{blake256_8h_a223d221cde5aa80d342b287022ce8539}} 
+\index{blake256.h@{blake256.h}!hmac\_blake224\_init@{hmac\_blake224\_init}}
+\index{hmac\_blake224\_init@{hmac\_blake224\_init}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake224\_init()}{hmac\_blake224\_init()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake224\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a56b0fcf21d54f654325c408c83aa0730}\label{blake256_8h_a56b0fcf21d54f654325c408c83aa0730}} 
+\index{blake256.h@{blake256.h}!hmac\_blake224\_update@{hmac\_blake224\_update}}
+\index{hmac\_blake224\_update@{hmac\_blake224\_update}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake224\_update()}{hmac\_blake224\_update()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake224\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_aa6d6c22e1ffbad59acc9e0a02b35f80f}\label{blake256_8h_aa6d6c22e1ffbad59acc9e0a02b35f80f}} 
+\index{blake256.h@{blake256.h}!hmac\_blake256\_final@{hmac\_blake256\_final}}
+\index{hmac\_blake256\_final@{hmac\_blake256\_final}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake256\_final()}{hmac\_blake256\_final()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake256\+\_\+final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{uint8\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_ae6b261791a148d6c9b09a4b92e46854f}\label{blake256_8h_ae6b261791a148d6c9b09a4b92e46854f}} 
+\index{blake256.h@{blake256.h}!hmac\_blake256\_hash@{hmac\_blake256\_hash}}
+\index{hmac\_blake256\_hash@{hmac\_blake256\_hash}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake256\_hash()}{hmac\_blake256\_hash()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake256\+\_\+hash (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_a3e3b45885545065eb59a084977aeae47}\label{blake256_8h_a3e3b45885545065eb59a084977aeae47}} 
+\index{blake256.h@{blake256.h}!hmac\_blake256\_init@{hmac\_blake256\_init}}
+\index{hmac\_blake256\_init@{hmac\_blake256\_init}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake256\_init()}{hmac\_blake256\_init()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake256\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blake256_8h_af02465de1a7658e321a8906033f9bb03}\label{blake256_8h_af02465de1a7658e321a8906033f9bb03}} 
+\index{blake256.h@{blake256.h}!hmac\_blake256\_update@{hmac\_blake256\_update}}
+\index{hmac\_blake256\_update@{hmac\_blake256\_update}!blake256.h@{blake256.h}}
+\doxysubsubsection{\texorpdfstring{hmac\_blake256\_update()}{hmac\_blake256\_update()}}
+{\footnotesize\ttfamily void hmac\+\_\+blake256\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhmac__state}{hmac\+\_\+state}} $\ast$}]{,  }\item[{const uint8\+\_\+t $\ast$}]{,  }\item[{uint64\+\_\+t}]{ }\end{DoxyParamCaption})}
+

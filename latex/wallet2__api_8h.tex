@@ -1,0 +1,91 @@
+\hypertarget{wallet2__api_8h}{}\doxysection{src/wallet/api/wallet2\+\_\+api.h File Reference}
+\label{wallet2__api_8h}\index{src/wallet/api/wallet2\_api.h@{src/wallet/api/wallet2\_api.h}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+Include dependency graph for wallet2\+\_\+api.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet2__api_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet2__api_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Wallet\+::\+Pending\+Transaction}}
+\begin{DoxyCompactList}\small\item\em Transaction-\/like interface for sending money. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1StakeUnlockResult}{Wallet\+::\+Stake\+Unlock\+Result}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1UnsignedTransaction}{Wallet\+::\+Unsigned\+Transaction}}
+\begin{DoxyCompactList}\small\item\em Transaction-\/like interface for sending money. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Wallet\+::\+Transaction\+Info}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} -\/ interface for displaying transaction information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1TransactionInfo_1_1Transfer}{Wallet\+::\+Transaction\+Info\+::\+Transfer}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1TransactionHistory}{Wallet\+::\+Transaction\+History}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structWallet_1_1TransactionHistory}{Transaction\+History}} -\/ interface for displaying transaction history. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1AddressBookRow}{Wallet\+::\+Address\+Book\+Row}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structWallet_1_1AddressBookRow}{Address\+Book\+Row}} -\/ provides functions to manage address book. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1AddressBook}{Wallet\+::\+Address\+Book}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structWallet_1_1AddressBook}{Address\+Book}} -\/ interface for Book. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1SubaddressRow}{Wallet\+::\+Subaddress\+Row}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1Subaddress}{Wallet\+::\+Subaddress}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1SubaddressAccountRow}{Wallet\+::\+Subaddress\+Account\+Row}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1SubaddressAccount}{Wallet\+::\+Subaddress\+Account}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1MultisigState}{Wallet\+::\+Multisig\+State}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1DeviceProgress}{Wallet\+::\+Device\+Progress}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+::\+Wallet\+Listener}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet\+::\+Wallet}}
+\begin{DoxyCompactList}\small\item\em Interface for wallet operations. T\+O\+DO\+: check if /include/\+I\+Wallet.h is still actual. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1Wallet_1_1stake__info}{Wallet\+::\+Wallet\+::stake\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1WalletManagerBase}{Wallet\+::\+Wallet\+Manager\+Base}}
+\begin{DoxyCompactList}\small\item\em Wallet\+Manager -\/ provides functions to manage wallets. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWallet_1_1WalletManagerFactory}{Wallet\+::\+Wallet\+Manager\+Factory}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceWallet}{Wallet}}
+\item 
+ \mbox{\hyperlink{namespaceWallet_1_1Utils}{Wallet\+::\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Wallet\+::\+Network\+Type}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8da8bb45f028610bd73b679b3d24d76592d}{Wallet\+::\+M\+A\+I\+N\+N\+ET}} = 0, 
+\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8dab1d85ac2030cbb9de8cb8b50209df093}{Wallet\+::\+T\+E\+S\+T\+N\+ET}}, 
+\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8dac67a0bd5682beca5de0f4764663e0cd1}{Wallet\+::\+D\+E\+V\+N\+ET}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceWallet_1_1Utils_a7b54c26884dad674799b7c139315b761}{Wallet\+::\+Utils\+::is\+Address\+Local}} (const std\+::string \&address)
+\item 
+\mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void \mbox{\hyperlink{namespaceWallet_1_1Utils_a05403ef347bc8cd743d496730126e727}{Wallet\+::\+Utils\+::on\+Startup}} ()
+\end{DoxyCompactItemize}

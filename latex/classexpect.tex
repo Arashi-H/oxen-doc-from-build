@@ -1,0 +1,447 @@
+\hypertarget{classexpect}{}\doxysection{expect$<$ T $>$ Class Template Reference}
+\label{classexpect}\index{expect$<$ T $>$@{expect$<$ T $>$}}
+
+
+{\ttfamily \#include $<$expect.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classexpect_a5ad8bb7253a18103e8b48de6f1c9f024}{value\+\_\+type}} = \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}
+\item 
+using \mbox{\hyperlink{classexpect_af3e5efcf7e63f86ebe5c58e85e19c68b}{error\+\_\+type}} = std\+::error\+\_\+code
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexpect_a612e11b958175b306a731c83daaef76a}{expect}} ()=delete
+\item 
+\mbox{\hyperlink{classexpect_afc16674806d263e1ad0c4418ce5c2fa5}{expect}} (std\+::error\+\_\+code const \&code) noexcept
+\item 
+\mbox{\hyperlink{classexpect_abda8caa870712733ba70c289e08d905e}{expect}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} val) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$())
+\begin{DoxyCompactList}\small\item\em Store a value, {\ttfamily val}, in the {\ttfamily expect} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classexpect_aa9c12669ba37b77fc5bad07ef1b2898f}{expect}} (\mbox{\hyperlink{classexpect}{expect}} const \&src) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$())
+\item 
+{\footnotesize template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$is\+\_\+convertible$<$\+U const\&$>$()$>$$>$ }\\\mbox{\hyperlink{classexpect_aa1a3d9388fd7d45cfaa953a15ae20291}{expect}} (\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ const \&src) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, U const \& $>$())
+\begin{DoxyCompactList}\small\item\em Copy conversion from {\ttfamily U} to {\ttfamily T}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classexpect_aced9b5c96c10c0f835f2024dd160985d}{expect}} (\mbox{\hyperlink{classexpect}{expect}} \&\&src) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$())
+\item 
+{\footnotesize template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$is\+\_\+convertible$<$\+U$>$()$>$$>$ }\\\mbox{\hyperlink{classexpect_a439dbd55273b48354bc229dc5daddbc7}{expect}} (\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ \&\&src) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, U $>$())
+\begin{DoxyCompactList}\small\item\em Move conversion from {\ttfamily U} to {\ttfamily T}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classexpect_a5682718c2b5f2ff9af5028f516a72d7f}{$\sim$expect}} () noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}} \& \mbox{\hyperlink{classexpect_aa7e571ae2559712f4890c9092143b7c5}{operator=}} (\mbox{\hyperlink{classexpect}{expect}} const \&src) noexcept(std\+::is\+\_\+nothrow\+\_\+copy\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$() \&\&std\+::is\+\_\+nothrow\+\_\+copy\+\_\+assignable$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$())
+\item 
+\mbox{\hyperlink{classexpect}{expect}} \& \mbox{\hyperlink{classexpect_ae5e9a73e1584f451bcd4826d1749f24f}{operator=}} (\mbox{\hyperlink{classexpect}{expect}} \&\&src) noexcept(std\+::is\+\_\+nothrow\+\_\+move\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$() \&\&std\+::is\+\_\+nothrow\+\_\+move\+\_\+assignable$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$())
+\item 
+\mbox{\hyperlink{classexpect_af2a032cd83450ee25081eba74de40ef3}{operator bool}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a677fc708b4c806dd5823445a476526c2}{has\+\_\+error}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value}} () const noexcept
+\item 
+std\+::error\+\_\+code \mbox{\hyperlink{classexpect_a90e9349161f16573d8a7c4850b6f4c61}{error}} () const noexcept
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \& \mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value}} () \&
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const  \& \mbox{\hyperlink{classexpect_a4acbb56622ce63793d873ffc973424bb}{value}} () const \&
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\& \mbox{\hyperlink{classexpect_aa4ef35c257859e1d29882f33176b32a0}{value}} () \&\&
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $\ast$ \mbox{\hyperlink{classexpect_a0b5fbb5e5eefa3be6a1d90340d7f18ed}{operator-\/$>$}} () noexcept
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const  $\ast$ \mbox{\hyperlink{classexpect_acc0db8756244c7624a88a9626863ceac}{operator-\/$>$}} () const noexcept
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \& \mbox{\hyperlink{classexpect_a189f1a064c50a6b0be959af1729fdf50}{operator$\ast$}} () noexcept
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const  \& \mbox{\hyperlink{classexpect_a6089bf8c51ee212e18d1608c5b0f2ca1}{operator$\ast$}} () const noexcept
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a9a7377f02d283d60a0ad93f5071f12c9}{equal}} (\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ const \&rhs) const noexcept(noexcept($\ast$std\+::declval$<$ \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$$>$()== $\ast$rhs))
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a120ea9593476becee6619473de1eb7a0}{equal}} (std\+::error\+\_\+code const \&rhs) const noexcept
+\item 
+{\footnotesize template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible\+\_\+v$<$std\+::error\+\_\+code, U$>$$>$$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_acc610a113b741c7c6464832aa73eda27}{equal}} (U const \&rhs) const noexcept(noexcept($\ast$std\+::declval$<$ \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$$>$()==rhs))
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a97fc8f421cb4b28335a2b172db67db5c}{matches}} (std\+::error\+\_\+condition const \&rhs) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \& \mbox{\hyperlink{classexpect_a977254f0512e758dcaaa7fe5d36ccc34}{get}} () noexcept
+\item 
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const  \& \mbox{\hyperlink{classexpect_ae7603f4fbbca19a11a89f349d57a05de}{get}} () const noexcept
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{classexpect_ac60db28a60aeb610815114a6ca50f9bc}{store}} (U \&\&\mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value}}) noexcept(std\+::is\+\_\+nothrow\+\_\+constructible$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, U $>$())
+\item 
+void \mbox{\hyperlink{classexpect_a35d5c5025007afe5bb3536320966c079}{maybe\+\_\+throw}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect_a73cdc03913337f9888fe505750da71f6}{is\+\_\+convertible}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::error\+\_\+code \mbox{\hyperlink{classexpect_aa18deb07927c7d99d913b65fbb9b4428}{code\+\_\+}}
+\item 
+std\+::aligned\+\_\+storage\+\_\+t$<$ sizeof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}), alignof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})$>$ \mbox{\hyperlink{classexpect_a7407043ae2f06e21d6a74efaa9243064}{storage\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class expect$<$ T $>$}
+
+{\ttfamily expect$<$T$>$} is a value or error implementation, similar to Rust std\+::result or various C++ proposals (boost\+::expected, boost\+::outcome). This implementation currently has a strict error type, {\ttfamily std\+::error\+\_\+code}, and a templated value type {\ttfamily T}. {\ttfamily expect$<$T$>$} is implicitly convertible from {\ttfamily T} or {\ttfamily std\+::error\+\_\+code}, and one {\ttfamily expect$<$T$>$} object type is implicitly convertible to another {\ttfamily expect$<$U$>$} object iff the destination value type can be implicitly constructed from the source value type (i.\+e. {\ttfamily struct U \{ ... U(\+T src) \{ ...\} ... \};}).
+
+{\ttfamily operator==} and {\ttfamily operator!=} are the only comparison operators provided; comparison between different value types is allowed provided the two values types have a {\ttfamily operator==} defined between them (i.\+e. {\ttfamily assert(expect$<$int$>$\{100\} == expect$<$short$>$\{100\});}). Comparisons can also be done against {\ttfamily std\+::error\+\_\+code} objects or error code enums directly (i.\+e. {\ttfamily assert(expect$<$int$>$\{make\+\_\+error\+\_\+code(common\+\_\+error\+::k\+Invalid\+Argument)\} == error\+::k\+Invalid\+Argument)}). Comparison of default constructed {\ttfamily std\+::error\+\_\+code} will always fail. \char`\"{}\+Generic\char`\"{} comparisons can be done with {\ttfamily std\+::error\+\_\+condition} via the {\ttfamily matches} method only (i.\+e. {\ttfamily assert(expect$<$int$>$\{make\+\_\+error\+\_\+code\{\mbox{\hyperlink{common_2error_8h_aa7064892449ea8f8d9b9832971915f29ae3220191425298c4c5ec57290132820e}{common\+\_\+error\+::k\+Invalid\+Error\+Code}}\}.matches(std\+::errc\+::invalid\+\_\+argument))}), {\ttfamily operator==} and {\ttfamily operator!=} will not work with {\ttfamily std\+::errc} or {\ttfamily std\+::error\+\_\+condition}. A comparison with {\ttfamily matches} is more expensive because an equivalency between error categories is computed, but is recommended when an error can be one of several categories (this is going to be the case in nearly every situation when calling a function from another C++ struct/class).
+
+{\ttfamily expect$<$void$>$} is a special case with no stored value. It is used by functions that can fail, but otherwise would return {\ttfamily void}. It is useful for consistency; all macros, standalone functions, and comparison operators work with {\ttfamily expect$<$void$>$}.
+
+\begin{DoxyNote}{Note}
+See {\ttfamily \mbox{\hyperlink{common_2error_8h}{src/common/error.\+h}}} for creating a custom error enum. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classexpect_af3e5efcf7e63f86ebe5c58e85e19c68b}\label{classexpect_af3e5efcf7e63f86ebe5c58e85e19c68b}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!error\_type@{error\_type}}
+\index{error\_type@{error\_type}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{error\_type}{error\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect_af3e5efcf7e63f86ebe5c58e85e19c68b}{error\+\_\+type}} =  std\+::error\+\_\+code}
+
+\mbox{\Hypertarget{classexpect_a5ad8bb7253a18103e8b48de6f1c9f024}\label{classexpect_a5ad8bb7253a18103e8b48de6f1c9f024}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect_a5ad8bb7253a18103e8b48de6f1c9f024}{value\+\_\+type}} =  \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classexpect_a612e11b958175b306a731c83daaef76a}\label{classexpect_a612e11b958175b306a731c83daaef76a}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classexpect_afc16674806d263e1ad0c4418ce5c2fa5}\label{classexpect_afc16674806d263e1ad0c4418ce5c2fa5}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{std\+::error\+\_\+code const \&}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Store an error, {\ttfamily code}, in the {\ttfamily expect} object. If {\ttfamily code} creates a {\ttfamily std\+::error\+\_\+code} object whose {\ttfamily .\mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value()}} == 0}, then {\ttfamily \mbox{\hyperlink{classexpect_a90e9349161f16573d8a7c4850b6f4c61}{error()}}} will be set to {\ttfamily \mbox{\hyperlink{common_2error_8h_aa7064892449ea8f8d9b9832971915f29ae3220191425298c4c5ec57290132820e}{common\+\_\+error\+::k\+Invalid\+Error\+Code}}}. \mbox{\Hypertarget{classexpect_abda8caa870712733ba70c289e08d905e}\label{classexpect_abda8caa870712733ba70c289e08d905e}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Store a value, {\ttfamily val}, in the {\ttfamily expect} object. 
+
+\mbox{\Hypertarget{classexpect_aa9c12669ba37b77fc5bad07ef1b2898f}\label{classexpect_aa9c12669ba37b77fc5bad07ef1b2898f}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ const \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_aa1a3d9388fd7d45cfaa953a15ae20291}\label{classexpect_aa1a3d9388fd7d45cfaa953a15ae20291}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$is\+\_\+convertible$<$\+U const\&$>$()$>$$>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ const \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Copy conversion from {\ttfamily U} to {\ttfamily T}. 
+
+\mbox{\Hypertarget{classexpect_aced9b5c96c10c0f835f2024dd160985d}\label{classexpect_aced9b5c96c10c0f835f2024dd160985d}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&\&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_a439dbd55273b48354bc229dc5daddbc7}\label{classexpect_a439dbd55273b48354bc229dc5daddbc7}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!expect@{expect}}
+\index{expect@{expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{expect()}{expect()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$is\+\_\+convertible$<$\+U$>$()$>$$>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ \&\&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move conversion from {\ttfamily U} to {\ttfamily T}. 
+
+\mbox{\Hypertarget{classexpect_a5682718c2b5f2ff9af5028f516a72d7f}\label{classexpect_a5682718c2b5f2ff9af5028f516a72d7f}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!````~expect@{$\sim$expect}}
+\index{````~expect@{$\sim$expect}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$expect()}{~expect()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::$\sim$\mbox{\hyperlink{classexpect}{expect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classexpect_a9a7377f02d283d60a0ad93f5071f12c9}\label{classexpect_a9a7377f02d283d60a0ad93f5071f12c9}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!equal@{equal}}
+\index{equal@{equal}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ U $>$ const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+This function is {\ttfamily noexcept} when {\ttfamily U == T} is {\ttfamily noexcept}. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}} == rhs.\+has\+\_\+value()} and if values or errors are equal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a120ea9593476becee6619473de1eb7a0}\label{classexpect_a120ea9593476becee6619473de1eb7a0}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!equal@{equal}}
+\index{equal@{equal}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::equal (\begin{DoxyParamCaption}\item[{std\+::error\+\_\+code const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+False if {\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}, otherwise {\ttfamily \mbox{\hyperlink{classexpect_a90e9349161f16573d8a7c4850b6f4c61}{error()}} == rhs}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_acc610a113b741c7c6464832aa73eda27}\label{classexpect_acc610a113b741c7c6464832aa73eda27}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!equal@{equal}}
+\index{equal@{equal}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U , typename  = std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+constructible\+\_\+v$<$std\+::error\+\_\+code, U$>$$>$$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::equal (\begin{DoxyParamCaption}\item[{U const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+This function is {\ttfamily noexcept} when {\ttfamily U == T} is {\ttfamily noexcept}. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+False if {\ttfamily \mbox{\hyperlink{classexpect_a677fc708b4c806dd5823445a476526c2}{has\+\_\+error()}}}, otherwise {\ttfamily \mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value()}} == rhs}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a90e9349161f16573d8a7c4850b6f4c61}\label{classexpect_a90e9349161f16573d8a7c4850b6f4c61}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!error@{error}}
+\index{error@{error}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::error\+\_\+code \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Error -\/ always safe to call. Empty when {\ttfamily !has\+\_\+error()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_ae7603f4fbbca19a11a89f349d57a05de}\label{classexpect_ae7603f4fbbca19a11a89f349d57a05de}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!get@{get}}
+\index{get@{get}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_a977254f0512e758dcaaa7fe5d36ccc34}\label{classexpect_a977254f0512e758dcaaa7fe5d36ccc34}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!get@{get}}
+\index{get@{get}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_a677fc708b4c806dd5823445a476526c2}\label{classexpect_a677fc708b4c806dd5823445a476526c2}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!has\_error@{has\_error}}
+\index{has\_error@{has\_error}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{has\_error()}{has\_error()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::has\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily this} is storing an error instead of a value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}\label{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!has\_value@{has\_value}}
+\index{has\_value@{has\_value}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{has\_value()}{has\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::has\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily this} is storing a value instead of an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a73cdc03913337f9888fe505750da71f6}\label{classexpect_a73cdc03913337f9888fe505750da71f6}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!is\_convertible@{is\_convertible}}
+\index{is\_convertible@{is\_convertible}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{is\_convertible()}{is\_convertible()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::is\+\_\+convertible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_a97fc8f421cb4b28335a2b172db67db5c}\label{classexpect_a97fc8f421cb4b28335a2b172db67db5c}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!matches@{matches}}
+\index{matches@{matches}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{matches()}{matches()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::matches (\begin{DoxyParamCaption}\item[{std\+::error\+\_\+condition const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+False if {\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}, otherwise {\ttfamily \mbox{\hyperlink{classexpect_a90e9349161f16573d8a7c4850b6f4c61}{error()}} == rhs}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a35d5c5025007afe5bb3536320966c079}\label{classexpect_a35d5c5025007afe5bb3536320966c079}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!maybe\_throw@{maybe\_throw}}
+\index{maybe\_throw@{maybe\_throw}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{maybe\_throw()}{maybe\_throw()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::maybe\+\_\+throw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classexpect_af2a032cd83450ee25081eba74de40ef3}\label{classexpect_af2a032cd83450ee25081eba74de40ef3}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily this} is storing a value instead of an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classexpect_a6089bf8c51ee212e18d1608c5b0f2ca1}\label{classexpect_a6089bf8c51ee212e18d1608c5b0f2ca1}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Value, 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classexpect_a189f1a064c50a6b0be959af1729fdf50}\label{classexpect_a189f1a064c50a6b0be959af1729fdf50}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Value, 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classexpect_acc0db8756244c7624a88a9626863ceac}\label{classexpect_acc0db8756244c7624a88a9626863ceac}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const$\ast$ \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Value, 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classexpect_a0b5fbb5e5eefa3be6a1d90340d7f18ed}\label{classexpect_a0b5fbb5e5eefa3be6a1d90340d7f18ed}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$\ast$ \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Value, 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}}. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classexpect_ae5e9a73e1584f451bcd4826d1749f24f}\label{classexpect_ae5e9a73e1584f451bcd4826d1749f24f}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&\&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Move {\ttfamily src} into {\ttfamily this}. If {\ttfamily src.\+has\+\_\+value() \&\& addressof(src) != this} then \`{}src.\mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value()}} will be in a \char`\"{}moved from state\char`\"{}. \mbox{\Hypertarget{classexpect_aa7e571ae2559712f4890c9092143b7c5}\label{classexpect_aa7e571ae2559712f4890c9092143b7c5}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ const \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_ac60db28a60aeb610815114a6ca50f9bc}\label{classexpect_ac60db28a60aeb610815114a6ca50f9bc}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!store@{store}}
+\index{store@{store}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::store (\begin{DoxyParamCaption}\item[{U \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classexpect_a87efc667f0c4dcac4f1470a633f121f8}\label{classexpect_a87efc667f0c4dcac4f1470a633f121f8}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!value@{value}}
+\index{value@{value}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Value if {\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}} otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$tt$>$std\+::system\+\_\+error\{error()\}$<$/tt$>$.} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classexpect_aa4ef35c257859e1d29882f33176b32a0}\label{classexpect_aa4ef35c257859e1d29882f33176b32a0}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!value@{value}}
+\index{value@{value}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}\&\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+Same as other overloads, but expressions such as {\ttfamily foo(bar().\mbox{\hyperlink{classexpect_a87efc667f0c4dcac4f1470a633f121f8}{value()}})} will automatically perform moves with no copies. \mbox{\Hypertarget{classexpect_a4acbb56622ce63793d873ffc973424bb}\label{classexpect_a4acbb56622ce63793d873ffc973424bb}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!value@{value}}
+\index{value@{value}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} const\& \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Value if {\ttfamily \mbox{\hyperlink{classexpect_a59f33c46f7d1a9038a8c2c3611b4954c}{has\+\_\+value()}}} otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$tt$>$std\+::system\+\_\+error\{error()\}$<$/tt$>$.} & \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classexpect_aa18deb07927c7d99d913b65fbb9b4428}\label{classexpect_aa18deb07927c7d99d913b65fbb9b4428}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!code\_@{code\_}}
+\index{code\_@{code\_}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{code\_}{code\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::error\+\_\+code \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::code\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classexpect_a7407043ae2f06e21d6a74efaa9243064}\label{classexpect_a7407043ae2f06e21d6a74efaa9243064}} 
+\index{expect$<$ T $>$@{expect$<$ T $>$}!storage\_@{storage\_}}
+\index{storage\_@{storage\_}!expect$<$ T $>$@{expect$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{storage\_}{storage\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::aligned\+\_\+storage\+\_\+t$<$sizeof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}), alignof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})$>$ \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::storage\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{expect_8h}{expect.\+h}}\end{DoxyCompactItemize}

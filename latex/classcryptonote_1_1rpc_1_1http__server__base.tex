@@ -1,0 +1,244 @@
+\hypertarget{classcryptonote_1_1rpc_1_1http__server__base}{}\doxysection{cryptonote\+::rpc\+::http\+\_\+server\+\_\+base Class Reference}
+\label{classcryptonote_1_1rpc_1_1http__server__base}\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+
+
+{\ttfamily \#include $<$http\+\_\+server\+\_\+base.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classcryptonote_1_1rpc_1_1http__server__base__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a97d4d74d6ecdf0a37fdc0ee023f22c2e}{get\+\_\+remote\+\_\+address}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a35d725ac3447090e954cd56b4b9ddeb2}{check\+\_\+auth}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&req, \mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a988d957a0f0842c3a8b124ee9da0a149}{error\+\_\+response}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res, \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} code, std\+::optional$<$ std\+::string\+\_\+view $>$ body=std\+::nullopt) const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a7e715250aaa21bdb658713d86c7cd940}{jsonrpc\+\_\+error\+\_\+response}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res, int code, std\+::string message, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} id) const
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a7fb8a1115bb96ee5e2904edcb4503c52}{loop\+\_\+defer}} (Func \&\&f)
+\item 
+const std\+::string \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a8ac0bfbda3b53529b78febb9e843421e}{server\+\_\+header}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_adf88ba152cd9c2f2f2e41d6bd82da05b}{closing}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_afadc4c573b8a196f2b129efe077790f1}{H\+T\+T\+P\+\_\+\+OK}} \{200, \char`\"{}OK\char`\"{}sv\}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a76adfc5ea32a8d3d1ec30ae7c8b8753b}{H\+T\+T\+P\+\_\+\+B\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}} \{400, \char`\"{}Bad Request\char`\"{}sv\}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a37a9f96563f96cf457dd6ea27679f8eb}{H\+T\+T\+P\+\_\+\+F\+O\+R\+B\+I\+D\+D\+EN}} \{403, \char`\"{}Forbidden\char`\"{}sv\}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a98ba065802cafd336083dce9f7ca6f18}{H\+T\+T\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}} \{404, \char`\"{}Not Found\char`\"{}sv\}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_adac42305cd70678d3f6c4183334e8a3a}{H\+T\+T\+P\+\_\+\+E\+R\+R\+OR}} \{500, \char`\"{}Internal Server Error\char`\"{}sv\}
+\item 
+static constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_ab2a3192881f0e375df85aa2f11c951cd}{H\+T\+T\+P\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}} \{503, \char`\"{}Service Unavailable\char`\"{}sv\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a9933d1b797846f0f817a1d98c5cc3c84}{$\sim$http\+\_\+server\+\_\+base}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a5f0d79da820f8ac2459afe2bd2c28d75}{create\+\_\+rpc\+\_\+endpoints}} (u\+W\+S\+::\+App \&http)=0
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_af827e5f05fcdb4db9c33402397b07785}{handle\+\_\+cors}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&req, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&extra\+\_\+headers)
+\begin{DoxyCompactList}\small\item\em handles cors headers by adding any needed headers to the given vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+u\+W\+S\+::\+Loop $\ast$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a6dd39e2b9fb38a9612b2d07ad51dbe1e}{m\+\_\+loop}} \{nullptr\}
+\item 
+std\+::vector$<$ us\+\_\+listen\+\_\+socket\+\_\+t $\ast$ $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a2dd839eba7d917f66029edbaf25b6576}{m\+\_\+listen\+\_\+socks}}
+\item 
+std\+::thread \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a0ca4ddb63467594993c65823599c4d90}{m\+\_\+rpc\+\_\+thread}}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{tools\+::login}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_ab97112b1632acfbc0b0c159def9090a3}{m\+\_\+login}}
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a951dc9dc78a99c593188e4b7b0c8cb23}{m\+\_\+server\+\_\+header}} = \char`\"{}Loki R\+PC H\+T\+TP/\char`\"{} + std\+::string\{\mbox{\hyperlink{version_8h_ab091446463f0aece50c5cf50e4c6bb2b}{O\+X\+E\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+TR}}\}
+\item 
+std\+::unordered\+\_\+set$<$ std\+::string $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a53b627702f49ef1eb2d616413a6db809}{m\+\_\+cors}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_aa614b38b9a2273e667a31b80a9a6b94a}{m\+\_\+closing}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_aa0a0c35e805de36c3bdb9a7b78f80308}{m\+\_\+cors\+\_\+any}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a9933d1b797846f0f817a1d98c5cc3c84}\label{classcryptonote_1_1rpc_1_1http__server__base_a9933d1b797846f0f817a1d98c5cc3c84}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!````~http\_server\_base@{$\sim$http\_server\_base}}
+\index{````~http\_server\_base@{$\sim$http\_server\_base}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{$\sim$http\_server\_base()}{~http\_server\_base()}}
+{\footnotesize\ttfamily virtual cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::$\sim$http\+\_\+server\+\_\+base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a35d725ac3447090e954cd56b4b9ddeb2}\label{classcryptonote_1_1rpc_1_1http__server__base_a35d725ac3447090e954cd56b4b9ddeb2}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!check\_auth@{check\_auth}}
+\index{check\_auth@{check\_auth}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{check\_auth()}{check\_auth()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::check\+\_\+auth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&}]{req,  }\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res }\end{DoxyParamCaption})}
+
+Checks for required authentication, if enabled. If authentication fails, sets a \char`\"{}failed\char`\"{} response and returns false; if authentication isn\textquotesingle{}t required or passes, returns true (and doesn\textquotesingle{}t touch the response). \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_adf88ba152cd9c2f2f2e41d6bd82da05b}\label{classcryptonote_1_1rpc_1_1http__server__base_adf88ba152cd9c2f2f2e41d6bd82da05b}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!closing@{closing}}
+\index{closing@{closing}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{closing()}{closing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::closing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a5f0d79da820f8ac2459afe2bd2c28d75}\label{classcryptonote_1_1rpc_1_1http__server__base_a5f0d79da820f8ac2459afe2bd2c28d75}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!create\_rpc\_endpoints@{create\_rpc\_endpoints}}
+\index{create\_rpc\_endpoints@{create\_rpc\_endpoints}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{create\_rpc\_endpoints()}{create\_rpc\_endpoints()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::create\+\_\+rpc\+\_\+endpoints (\begin{DoxyParamCaption}\item[{u\+W\+S\+::\+App \&}]{http }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_af1063bba81d0c155ba838464529bbd53}{cryptonote\+::rpc\+::http\+\_\+server}}, and \mbox{\hyperlink{classtools_1_1wallet__rpc__server_af4b752f39b3dde79da0cc03ae747a9f0}{tools\+::wallet\+\_\+rpc\+\_\+server}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a988d957a0f0842c3a8b124ee9da0a149}\label{classcryptonote_1_1rpc_1_1http__server__base_a988d957a0f0842c3a8b124ee9da0a149}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!error\_response@{error\_response}}
+\index{error\_response@{error\_response}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{error\_response()}{error\_response()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::error\+\_\+response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res,  }\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}}}]{code,  }\item[{std\+::optional$<$ std\+::string\+\_\+view $>$}]{body = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a97d4d74d6ecdf0a37fdc0ee023f22c2e}\label{classcryptonote_1_1rpc_1_1http__server__base_a97d4d74d6ecdf0a37fdc0ee023f22c2e}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!get\_remote\_address@{get\_remote\_address}}
+\index{get\_remote\_address@{get\_remote\_address}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{get\_remote\_address()}{get\_remote\_address()}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::get\+\_\+remote\+\_\+address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_af827e5f05fcdb4db9c33402397b07785}\label{classcryptonote_1_1rpc_1_1http__server__base_af827e5f05fcdb4db9c33402397b07785}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!handle\_cors@{handle\_cors}}
+\index{handle\_cors@{handle\_cors}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{handle\_cors()}{handle\_cors()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::handle\+\_\+cors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&}]{req,  }\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{extra\+\_\+headers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+handles cors headers by adding any needed headers to the given vector 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a7e715250aaa21bdb658713d86c7cd940}\label{classcryptonote_1_1rpc_1_1http__server__base_a7e715250aaa21bdb658713d86c7cd940}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!jsonrpc\_error\_response@{jsonrpc\_error\_response}}
+\index{jsonrpc\_error\_response@{jsonrpc\_error\_response}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{jsonrpc\_error\_response()}{jsonrpc\_error\_response()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::jsonrpc\+\_\+error\+\_\+response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res,  }\item[{int}]{code,  }\item[{std\+::string}]{message,  }\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}}}]{id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a7fb8a1115bb96ee5e2904edcb4503c52}\label{classcryptonote_1_1rpc_1_1http__server__base_a7fb8a1115bb96ee5e2904edcb4503c52}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!loop\_defer@{loop\_defer}}
+\index{loop\_defer@{loop\_defer}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{loop\_defer()}{loop\_defer()}}
+{\footnotesize\ttfamily template$<$typename Func $>$ \\
+void cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::loop\+\_\+defer (\begin{DoxyParamCaption}\item[{Func \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a8ac0bfbda3b53529b78febb9e843421e}\label{classcryptonote_1_1rpc_1_1http__server__base_a8ac0bfbda3b53529b78febb9e843421e}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!server\_header@{server\_header}}
+\index{server\_header@{server\_header}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{server\_header()}{server\_header()}}
+{\footnotesize\ttfamily const std\+::string\& cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::server\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a76adfc5ea32a8d3d1ec30ae7c8b8753b}\label{classcryptonote_1_1rpc_1_1http__server__base_a76adfc5ea32a8d3d1ec30ae7c8b8753b}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_BAD\_REQUEST@{HTTP\_BAD\_REQUEST}}
+\index{HTTP\_BAD\_REQUEST@{HTTP\_BAD\_REQUEST}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_BAD\_REQUEST}{HTTP\_BAD\_REQUEST}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+B\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST \{400, \char`\"{}Bad Request\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_adac42305cd70678d3f6c4183334e8a3a}\label{classcryptonote_1_1rpc_1_1http__server__base_adac42305cd70678d3f6c4183334e8a3a}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_ERROR@{HTTP\_ERROR}}
+\index{HTTP\_ERROR@{HTTP\_ERROR}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_ERROR}{HTTP\_ERROR}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+E\+R\+R\+OR \{500, \char`\"{}Internal Server Error\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a37a9f96563f96cf457dd6ea27679f8eb}\label{classcryptonote_1_1rpc_1_1http__server__base_a37a9f96563f96cf457dd6ea27679f8eb}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_FORBIDDEN@{HTTP\_FORBIDDEN}}
+\index{HTTP\_FORBIDDEN@{HTTP\_FORBIDDEN}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_FORBIDDEN}{HTTP\_FORBIDDEN}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+F\+O\+R\+B\+I\+D\+D\+EN \{403, \char`\"{}Forbidden\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a98ba065802cafd336083dce9f7ca6f18}\label{classcryptonote_1_1rpc_1_1http__server__base_a98ba065802cafd336083dce9f7ca6f18}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_NOT\_FOUND@{HTTP\_NOT\_FOUND}}
+\index{HTTP\_NOT\_FOUND@{HTTP\_NOT\_FOUND}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_NOT\_FOUND}{HTTP\_NOT\_FOUND}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND \{404, \char`\"{}Not Found\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_afadc4c573b8a196f2b129efe077790f1}\label{classcryptonote_1_1rpc_1_1http__server__base_afadc4c573b8a196f2b129efe077790f1}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_OK@{HTTP\_OK}}
+\index{HTTP\_OK@{HTTP\_OK}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_OK}{HTTP\_OK}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+OK \{200, \char`\"{}OK\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_ab2a3192881f0e375df85aa2f11c951cd}\label{classcryptonote_1_1rpc_1_1http__server__base_ab2a3192881f0e375df85aa2f11c951cd}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!HTTP\_SERVICE\_UNAVAILABLE@{HTTP\_SERVICE\_UNAVAILABLE}}
+\index{HTTP\_SERVICE\_UNAVAILABLE@{HTTP\_SERVICE\_UNAVAILABLE}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{HTTP\_SERVICE\_UNAVAILABLE}{HTTP\_SERVICE\_UNAVAILABLE}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_1_1rpc_affed5a7703e93ecc976933816bce86fb}{http\+\_\+response\+\_\+code}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::\+H\+T\+T\+P\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE \{503, \char`\"{}Service Unavailable\char`\"{}sv\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_aa614b38b9a2273e667a31b80a9a6b94a}\label{classcryptonote_1_1rpc_1_1http__server__base_aa614b38b9a2273e667a31b80a9a6b94a}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_closing@{m\_closing}}
+\index{m\_closing@{m\_closing}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_closing}{m\_closing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+closing = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a53b627702f49ef1eb2d616413a6db809}\label{classcryptonote_1_1rpc_1_1http__server__base_a53b627702f49ef1eb2d616413a6db809}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_cors@{m\_cors}}
+\index{m\_cors@{m\_cors}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_cors}{m\_cors}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::string$>$ cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+cors\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_aa0a0c35e805de36c3bdb9a7b78f80308}\label{classcryptonote_1_1rpc_1_1http__server__base_aa0a0c35e805de36c3bdb9a7b78f80308}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_cors\_any@{m\_cors\_any}}
+\index{m\_cors\_any@{m\_cors\_any}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_cors\_any}{m\_cors\_any}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+cors\+\_\+any = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a2dd839eba7d917f66029edbaf25b6576}\label{classcryptonote_1_1rpc_1_1http__server__base_a2dd839eba7d917f66029edbaf25b6576}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_listen\_socks@{m\_listen\_socks}}
+\index{m\_listen\_socks@{m\_listen\_socks}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_listen\_socks}{m\_listen\_socks}}
+{\footnotesize\ttfamily std\+::vector$<$us\+\_\+listen\+\_\+socket\+\_\+t$\ast$$>$ cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+listen\+\_\+socks\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_ab97112b1632acfbc0b0c159def9090a3}\label{classcryptonote_1_1rpc_1_1http__server__base_ab97112b1632acfbc0b0c159def9090a3}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_login@{m\_login}}
+\index{m\_login@{m\_login}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_login}{m\_login}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structtools_1_1login}{tools\+::login}}$>$ cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+login\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a6dd39e2b9fb38a9612b2d07ad51dbe1e}\label{classcryptonote_1_1rpc_1_1http__server__base_a6dd39e2b9fb38a9612b2d07ad51dbe1e}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_loop@{m\_loop}}
+\index{m\_loop@{m\_loop}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_loop}{m\_loop}}
+{\footnotesize\ttfamily u\+W\+S\+::\+Loop$\ast$ cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+loop \{nullptr\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a0ca4ddb63467594993c65823599c4d90}\label{classcryptonote_1_1rpc_1_1http__server__base_a0ca4ddb63467594993c65823599c4d90}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_rpc\_thread@{m\_rpc\_thread}}
+\index{m\_rpc\_thread@{m\_rpc\_thread}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_rpc\_thread}{m\_rpc\_thread}}
+{\footnotesize\ttfamily std\+::thread cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+rpc\+\_\+thread\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server__base_a951dc9dc78a99c593188e4b7b0c8cb23}\label{classcryptonote_1_1rpc_1_1http__server__base_a951dc9dc78a99c593188e4b7b0c8cb23}} 
+\index{cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}!m\_server\_header@{m\_server\_header}}
+\index{m\_server\_header@{m\_server\_header}!cryptonote::rpc::http\_server\_base@{cryptonote::rpc::http\_server\_base}}
+\doxysubsubsection{\texorpdfstring{m\_server\_header}{m\_server\_header}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::rpc\+::http\+\_\+server\+\_\+base\+::m\+\_\+server\+\_\+header = \char`\"{}Loki R\+PC H\+T\+TP/\char`\"{} + std\+::string\{\mbox{\hyperlink{version_8h_ab091446463f0aece50c5cf50e4c6bb2b}{O\+X\+E\+N\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+S\+TR}}\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/common/\mbox{\hyperlink{http__server__base_8h}{http\+\_\+server\+\_\+base.\+h}}\item 
+src/rpc/common/\mbox{\hyperlink{http__server__base_8cpp}{http\+\_\+server\+\_\+base.\+cpp}}\end{DoxyCompactItemize}

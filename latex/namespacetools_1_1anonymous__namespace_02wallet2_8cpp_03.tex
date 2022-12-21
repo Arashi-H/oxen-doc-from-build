@@ -1,0 +1,527 @@
+\hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03}{}\doxysection{tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\} Namespace Reference}
+\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03}\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a46d103c9e89b3bc69299b8fe894e2050}{tx\+\_\+weight\+\_\+target}} (uint64\+\_\+t \mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6397362a071d1c5305d56f52b842c29f}{get\+\_\+default\+\_\+ringdb\+\_\+path}} ()
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a719636d8435f893b5df7fcb16459de85}{pack\+\_\+multisignature\+\_\+keys}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&keys, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&signer\+\_\+secret\+\_\+key)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae8a05a1d8f8e4ab8b74cac48c1877fcc}{secret\+\_\+keys\+\_\+to\+\_\+public\+\_\+keys}} (const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&keys)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6b0057dc507c45bee8c964c02d08cdfa}{keys\+\_\+intersect}} (const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&s1, const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&s2)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1e6f9fece8132f74ed9e3c2eefd12ab3}{get\+\_\+text\+\_\+reason}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&res, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const $\ast$tx, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a922164123c0e0791bcca2db5844d044f}{get\+\_\+num\+\_\+outputs}} (const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&dsts, const std\+::vector$<$ \mbox{\hyperlink{classtools_1_1wallet2_aa5a0aa34d09afb50c5ff528b03099604}{tools\+::wallet2\+::transfer\+\_\+details}} $>$ \&transfers, const std\+::vector$<$ size\+\_\+t $>$ \&selected\+\_\+transfers, const \mbox{\hyperlink{structcryptonote_1_1oxen__construct__tx__params}{oxen\+\_\+construct\+\_\+tx\+\_\+params}} \&tx\+\_\+params)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a081564b0f3c564a2280f1a1d1d42660b}{do\+\_\+prepare\+\_\+file\+\_\+names}} (const fs\+::path \&file\+\_\+path, fs\+::path \&keys\+\_\+file, fs\+::path \&wallet\+\_\+file)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1483468b546d7a7f49c3fb7bb2fac1e6}{calculate\+\_\+fee\+\_\+from\+\_\+weight}} (\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t weight, uint64\+\_\+t outputs, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0cc88c6737e248f1488db3cb2f4f39d9}{get\+\_\+weight\+\_\+string}} (size\+\_\+t weight)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87b85e0fbb9493124d6574a83232026f}{get\+\_\+weight\+\_\+string}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, size\+\_\+t blob\+\_\+size)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a898db8e06b563be876e55fcaeb6710d2}{make\+\_\+basic}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unattended, const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae10fc2154419c2cd09e0685606a6a044}{get\+\_\+password}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter, const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} verify)
+\item 
+std\+::pair$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $>$, \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aebcdd5ee6b532e0278d44ac413834dff}{generate\+\_\+from\+\_\+json}} (const fs\+::path \&json\+\_\+file, const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unattended, const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&opts, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&password\+\_\+prompter)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d32bf668d056c126605d251d4799f9a}{emplace\+\_\+or\+\_\+replace}} (std\+::unordered\+\_\+multimap$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} $>$ \&container, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&key, const \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} \&pd)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acd796a63d18417d907e97b94d8cce0fe}{drop\+\_\+from\+\_\+short\+\_\+history}} (std\+::list$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&short\+\_\+chain\+\_\+history, size\+\_\+t N)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7fcffc036b18bebc6c9c41b1371c7a1f}{estimate\+\_\+rct\+\_\+tx\+\_\+size}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad1e775754f5ca33acf44000928f63c18}{estimate\+\_\+tx\+\_\+weight}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca306473b1e3f55517e20734ddf8b94}{estimate\+\_\+fee}} (int n\+\_\+inputs, int mixin, int n\+\_\+outputs, size\+\_\+t extra\+\_\+size, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clsag, \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a83962596575c15c0ebbf81c340f74130}{calculate\+\_\+fee}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, size\+\_\+t blob\+\_\+size, \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}} base\+\_\+fees, uint64\+\_\+t fee\+\_\+percent, uint64\+\_\+t fee\+\_\+fixed, uint64\+\_\+t fee\+\_\+quantization\+\_\+mask)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1f4b4f3fd00b0f5954fbd4df0fed4549}{get\+\_\+short\+\_\+payment\+\_\+id}} (\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&payment\+\_\+id8, const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&ptx, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+\mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1c76b76df4dff79b0398ba1fbca9be06}{get\+\_\+construction\+\_\+data\+\_\+with\+\_\+decrypted\+\_\+short\+\_\+payment\+\_\+id}} (const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&ptx, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad33b27249b93812b10697f3fa39e45e8}{get\+\_\+subaddress\+\_\+clamped\+\_\+sum}} (uint32\+\_\+t idx, uint32\+\_\+t extra)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a324a3f3cce0ce88dd2874859eb43e90b}{setup\+\_\+shim}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{hw\+::wallet\+\_\+shim}} $\ast$shim, \mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $\ast$wallet)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac76c6ee4c2966933f98b8e7cb24c63d4}{get\+\_\+pruned\+\_\+tx}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&entry, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aaed13d28ba9a594ef4a487bed85d57ac}{pop\+\_\+index}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec, size\+\_\+t idx)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a4a472548b907daa915a8132192bb2fda}{pop\+\_\+random\+\_\+value}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae881497ba043f706cd5e61e1d35bb3c6}{pop\+\_\+back}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a756e250cd4d839549abd7f0cd4e009af}{pop\+\_\+if\+\_\+present}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&vec, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a766e93be40bd6573f64467d94ec4b8c8}{logcat}} = log\+::\+Cat(\char`\"{}wallet.\+wallet2\char`\"{})
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aa6c102978d3306193a5e03c2952c2907}{U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki unsigned tx set\textbackslash{}004\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acb88e9bd11dd6eab8863839aaf3cbde5}{S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki signed tx set\textbackslash{}004\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_af5a8db5c07efd78123ad06b78525c05e}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}Loki multisig unsigned tx set\textbackslash{}001\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aafc0f6894b15a5322c1d107bd0a760aa}{U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87e8c04d4f1ac26be7c6a2339ac41c31}{S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7675f88ab1c44c9f8560a5d293f5fddd}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER}} = M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7793b1c576688ba0fcdcab906ae6f44b}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+A\+T\+IO}} = 0.\+5f
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} = 1.\+8f
+\item 
+constexpr time\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6e06a2626cd6dc93bfba82b8b629a8bb}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+Z\+O\+NE}} = \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} $\ast$ 86400
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a70a4ad48003df982cf5b670eb199f813}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+B\+L\+O\+C\+KS}} = \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} $\ast$ B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7edc7d3ec83c9ac0f15ade376aef08cc}{F\+E\+E\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+G\+R\+A\+C\+E\+\_\+\+B\+L\+O\+C\+KS}} = 10
+\item 
+constexpr float \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a343ae5114a1ec93c100e03203bb93fa9}{S\+E\+C\+O\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+E\+L\+A\+T\+E\+D\+N\+E\+S\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 0.\+0f
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3611f93f80c027bbd696d41ae948f185}{K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki key image export\textbackslash{}002\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a8cc4bd0c4dcffa39fe3aba3a870f54a1}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki multisig export\textbackslash{}001\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ace04f62b2e91b7423e6788ff8075c768}{O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Loki output export\textbackslash{}003\char`\"{}sv
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0fecf69ad4fc5d2b519b51c0825c54c8}{S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+H\+E\+I\+G\+HT}} = 99999999
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0441e7e468a0b8b2de5dcc9732ccb0b6}{S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+V\+I\+C\+I\+N\+I\+TY}} = 1500
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a76971f79d6a094f0ce781c6431ae919e}{F\+I\+R\+S\+T\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+G\+R\+A\+N\+U\+L\+A\+R\+I\+TY}} = 1024
+\item 
+constexpr double \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca1eb8fb2f1ad738b931a925a931555}{G\+A\+M\+M\+A\+\_\+\+S\+H\+A\+PE}} = 19.\+28
+\item 
+constexpr double \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_afb25c87c741dafd0593b4974f74d1afd}{G\+A\+M\+M\+A\+\_\+\+S\+C\+A\+LE}} = 1/1.\+61
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac9dfc4fbc80802cf09a91d68c4660911}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+O\+U\+NT}} = 5
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a5b493fd292e37430df34a7ae520572e2}{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+L\+UE}} = 2$\ast$\mbox{\hyperlink{namespaceoxen_adf4713cecce29f873b3c786fd3cd2a01}{oxen\+::\+C\+O\+IN}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aea76f3310c384d1a9f7dd67e8f6a3066}{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+L\+O\+C\+K\+\_\+\+T\+I\+M\+E\+O\+UT}} = 10min
+\item 
+constexpr \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a68f290af61ee0c5e793571c041fa0bc1}{I\+G\+N\+O\+R\+E\+\_\+\+L\+O\+N\+G\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+I\+D\+\_\+\+F\+R\+O\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON}} = hf\+::hf12\+\_\+checkpointing
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a15c19bdb985fee5470725ef196640bbb}{S\+I\+G\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Sig\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d4484831e31c72633edcfc3d9accbdc}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Multisig\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a093b0ec22aa2e765e63ca496b8d6f5bb}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Sig\+Multisig\+Pk\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac837e9c337d29f59559c847b3e626d04}{M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+T\+R\+A\+\_\+\+I\+N\+F\+O\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Multisigx\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_abe1153a8a034b9f3effdf22b5548dbff}{S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Spend\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3125925eed1aa26d615b0b53639ab08f}{O\+U\+T\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Out\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_adf5693a06766ea39911bff27236be3d0}{I\+N\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}In\+Proof\+V1\char`\"{}sv
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3decda22c076a4db98a405f0bdd91aaa}{R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC}} = \char`\"{}Reserve\+Proof\+V1\char`\"{}sv
+\item 
+static const std\+::regex \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a9cd05cc3eba1d87321d4b3b44e191b56}{protocol\+\_\+re}} \{R\char`\"{}($^\wedge$(\mbox{[}a-\/zA-\/Z\mbox{]}\mbox{[}a-\/zA-\/Z0-\/9+.-\/\mbox{]}$\ast$)\+:)\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a83962596575c15c0ebbf81c340f74130}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a83962596575c15c0ebbf81c340f74130}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!calculate\_fee@{calculate\_fee}}
+\index{calculate\_fee@{calculate\_fee}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{calculate\_fee()}{calculate\_fee()}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::calculate\+\_\+fee (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{size\+\_\+t}]{blob\+\_\+size,  }\item[{\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}}}]{base\+\_\+fees,  }\item[{uint64\+\_\+t}]{fee\+\_\+percent,  }\item[{uint64\+\_\+t}]{fee\+\_\+fixed,  }\item[{uint64\+\_\+t}]{fee\+\_\+quantization\+\_\+mask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1483468b546d7a7f49c3fb7bb2fac1e6}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1483468b546d7a7f49c3fb7bb2fac1e6}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!calculate\_fee\_from\_weight@{calculate\_fee\_from\_weight}}
+\index{calculate\_fee\_from\_weight@{calculate\_fee\_from\_weight}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{calculate\_fee\_from\_weight()}{calculate\_fee\_from\_weight()}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::calculate\+\_\+fee\+\_\+from\+\_\+weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}}}]{base\+\_\+fees,  }\item[{uint64\+\_\+t}]{weight,  }\item[{uint64\+\_\+t}]{outputs,  }\item[{uint64\+\_\+t}]{fee\+\_\+percent,  }\item[{uint64\+\_\+t}]{fee\+\_\+fixed,  }\item[{uint64\+\_\+t}]{fee\+\_\+quantization\+\_\+mask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a081564b0f3c564a2280f1a1d1d42660b}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a081564b0f3c564a2280f1a1d1d42660b}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!do\_prepare\_file\_names@{do\_prepare\_file\_names}}
+\index{do\_prepare\_file\_names@{do\_prepare\_file\_names}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{do\_prepare\_file\_names()}{do\_prepare\_file\_names()}}
+{\footnotesize\ttfamily void tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::do\+\_\+prepare\+\_\+file\+\_\+names (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{file\+\_\+path,  }\item[{fs\+::path \&}]{keys\+\_\+file,  }\item[{fs\+::path \&}]{wallet\+\_\+file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acd796a63d18417d907e97b94d8cce0fe}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acd796a63d18417d907e97b94d8cce0fe}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!drop\_from\_short\_history@{drop\_from\_short\_history}}
+\index{drop\_from\_short\_history@{drop\_from\_short\_history}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{drop\_from\_short\_history()}{drop\_from\_short\_history()}}
+{\footnotesize\ttfamily void tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::drop\+\_\+from\+\_\+short\+\_\+history (\begin{DoxyParamCaption}\item[{std\+::list$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{short\+\_\+chain\+\_\+history,  }\item[{size\+\_\+t}]{N }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d32bf668d056c126605d251d4799f9a}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d32bf668d056c126605d251d4799f9a}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!emplace\_or\_replace@{emplace\_or\_replace}}
+\index{emplace\_or\_replace@{emplace\_or\_replace}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{emplace\_or\_replace()}{emplace\_or\_replace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::emplace\+\_\+or\+\_\+replace (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+multimap$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} $>$ \&}]{container,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{key,  }\item[{const \mbox{\hyperlink{structtools_1_1wallet2_1_1pool__payment__details}{tools\+::wallet2\+::pool\+\_\+payment\+\_\+details}} \&}]{pd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca306473b1e3f55517e20734ddf8b94}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca306473b1e3f55517e20734ddf8b94}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!estimate\_fee@{estimate\_fee}}
+\index{estimate\_fee@{estimate\_fee}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{estimate\_fee()}{estimate\_fee()}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+fee (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+inputs,  }\item[{int}]{mixin,  }\item[{int}]{n\+\_\+outputs,  }\item[{size\+\_\+t}]{extra\+\_\+size,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{clsag,  }\item[{\mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{byte\+\_\+and\+\_\+output\+\_\+fees}}}]{base\+\_\+fees,  }\item[{uint64\+\_\+t}]{fee\+\_\+percent,  }\item[{uint64\+\_\+t}]{fee\+\_\+fixed,  }\item[{uint64\+\_\+t}]{fee\+\_\+quantization\+\_\+mask }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7fcffc036b18bebc6c9c41b1371c7a1f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7fcffc036b18bebc6c9c41b1371c7a1f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!estimate\_rct\_tx\_size@{estimate\_rct\_tx\_size}}
+\index{estimate\_rct\_tx\_size@{estimate\_rct\_tx\_size}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{estimate\_rct\_tx\_size()}{estimate\_rct\_tx\_size()}}
+{\footnotesize\ttfamily size\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+rct\+\_\+tx\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+inputs,  }\item[{int}]{mixin,  }\item[{int}]{n\+\_\+outputs,  }\item[{size\+\_\+t}]{extra\+\_\+size,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{clsag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad1e775754f5ca33acf44000928f63c18}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad1e775754f5ca33acf44000928f63c18}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!estimate\_tx\_weight@{estimate\_tx\_weight}}
+\index{estimate\_tx\_weight@{estimate\_tx\_weight}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{estimate\_tx\_weight()}{estimate\_tx\_weight()}}
+{\footnotesize\ttfamily uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::estimate\+\_\+tx\+\_\+weight (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+inputs,  }\item[{int}]{mixin,  }\item[{int}]{n\+\_\+outputs,  }\item[{size\+\_\+t}]{extra\+\_\+size,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{clsag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aebcdd5ee6b532e0278d44ac413834dff}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aebcdd5ee6b532e0278d44ac413834dff}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!generate\_from\_json@{generate\_from\_json}}
+\index{generate\_from\_json@{generate\_from\_json}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{generate\_from\_json()}{generate\_from\_json()}}
+{\footnotesize\ttfamily std\+::pair$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}}$>$, \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}}$>$ tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::generate\+\_\+from\+\_\+json (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{json\+\_\+file,  }\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{unattended,  }\item[{const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&}]{opts,  }\item[{const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&}]{password\+\_\+prompter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1c76b76df4dff79b0398ba1fbca9be06}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1c76b76df4dff79b0398ba1fbca9be06}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_construction\_data\_with\_decrypted\_short\_payment\_id@{get\_construction\_data\_with\_decrypted\_short\_payment\_id}}
+\index{get\_construction\_data\_with\_decrypted\_short\_payment\_id@{get\_construction\_data\_with\_decrypted\_short\_payment\_id}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_construction\_data\_with\_decrypted\_short\_payment\_id()}{get\_construction\_data\_with\_decrypted\_short\_payment\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+construction\+\_\+data\+\_\+with\+\_\+decrypted\+\_\+short\+\_\+payment\+\_\+id (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&}]{ptx,  }\item[{\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&}]{hwdev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6397362a071d1c5305d56f52b842c29f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6397362a071d1c5305d56f52b842c29f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_default\_ringdb\_path@{get\_default\_ringdb\_path}}
+\index{get\_default\_ringdb\_path@{get\_default\_ringdb\_path}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_default\_ringdb\_path()}{get\_default\_ringdb\_path()}}
+{\footnotesize\ttfamily std\+::string tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+default\+\_\+ringdb\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a922164123c0e0791bcca2db5844d044f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a922164123c0e0791bcca2db5844d044f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_num\_outputs@{get\_num\_outputs}}
+\index{get\_num\_outputs@{get\_num\_outputs}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_num\_outputs()}{get\_num\_outputs()}}
+{\footnotesize\ttfamily size\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+num\+\_\+outputs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&}]{dsts,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classtools_1_1wallet2_aa5a0aa34d09afb50c5ff528b03099604}{tools\+::wallet2\+::transfer\+\_\+details}} $>$ \&}]{transfers,  }\item[{const std\+::vector$<$ size\+\_\+t $>$ \&}]{selected\+\_\+transfers,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1oxen__construct__tx__params}{oxen\+\_\+construct\+\_\+tx\+\_\+params}} \&}]{tx\+\_\+params }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae10fc2154419c2cd09e0685606a6a044}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae10fc2154419c2cd09e0685606a6a044}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_password@{get\_password}}
+\index{get\_password@{get\_password}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_password()}{get\_password()}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}}$>$ tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+password (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm,  }\item[{const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&}]{opts,  }\item[{const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&}]{password\+\_\+prompter,  }\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{verify }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac76c6ee4c2966933f98b8e7cb24c63d4}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac76c6ee4c2966933f98b8e7cb24c63d4}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_pruned\_tx@{get\_pruned\_tx}}
+\index{get\_pruned\_tx@{get\_pruned\_tx}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_pruned\_tx()}{get\_pruned\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+pruned\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&}]{entry,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1f4b4f3fd00b0f5954fbd4df0fed4549}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1f4b4f3fd00b0f5954fbd4df0fed4549}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_short\_payment\_id@{get\_short\_payment\_id}}
+\index{get\_short\_payment\_id@{get\_short\_payment\_id}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_short\_payment\_id()}{get\_short\_payment\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+short\+\_\+payment\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&}]{payment\+\_\+id8,  }\item[{const \mbox{\hyperlink{classtools_1_1wallet2_abb47f9fb6f6f57be4f2a7be685514d0d}{tools\+::wallet2\+::pending\+\_\+tx}} \&}]{ptx,  }\item[{\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&}]{hwdev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad33b27249b93812b10697f3fa39e45e8}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ad33b27249b93812b10697f3fa39e45e8}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_subaddress\_clamped\_sum@{get\_subaddress\_clamped\_sum}}
+\index{get\_subaddress\_clamped\_sum@{get\_subaddress\_clamped\_sum}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_subaddress\_clamped\_sum()}{get\_subaddress\_clamped\_sum()}}
+{\footnotesize\ttfamily uint32\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+subaddress\+\_\+clamped\+\_\+sum (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx,  }\item[{uint32\+\_\+t}]{extra }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1e6f9fece8132f74ed9e3c2eefd12ab3}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a1e6f9fece8132f74ed9e3c2eefd12ab3}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_text\_reason@{get\_text\_reason}}
+\index{get\_text\_reason@{get\_text\_reason}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_text\_reason()}{get\_text\_reason()}}
+{\footnotesize\ttfamily std\+::string tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+text\+\_\+reason (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&}]{res,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const $\ast$}]{tx,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{blink }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87b85e0fbb9493124d6574a83232026f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87b85e0fbb9493124d6574a83232026f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_weight\_string@{get\_weight\_string}}
+\index{get\_weight\_string@{get\_weight\_string}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_weight\_string()}{get\_weight\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+weight\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx,  }\item[{size\+\_\+t}]{blob\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0cc88c6737e248f1488db3cb2f4f39d9}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0cc88c6737e248f1488db3cb2f4f39d9}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!get\_weight\_string@{get\_weight\_string}}
+\index{get\_weight\_string@{get\_weight\_string}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{get\_weight\_string()}{get\_weight\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::get\+\_\+weight\+\_\+string (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{weight }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6b0057dc507c45bee8c964c02d08cdfa}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6b0057dc507c45bee8c964c02d08cdfa}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!keys\_intersect@{keys\_intersect}}
+\index{keys\_intersect@{keys\_intersect}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{keys\_intersect()}{keys\_intersect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::keys\+\_\+intersect (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{s1,  }\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{s2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a898db8e06b563be876e55fcaeb6710d2}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a898db8e06b563be876e55fcaeb6710d2}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!make\_basic@{make\_basic}}
+\index{make\_basic@{make\_basic}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{make\_basic()}{make\_basic()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}}$>$ tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::make\+\_\+basic (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{unattended,  }\item[{const \mbox{\hyperlink{structtools_1_1anonymous__namespace_02wallet2_8cpp_03_1_1options}{options}} \&}]{opts,  }\item[{const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$(const char $\ast$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&}]{password\+\_\+prompter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a719636d8435f893b5df7fcb16459de85}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a719636d8435f893b5df7fcb16459de85}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!pack\_multisignature\_keys@{pack\_multisignature\_keys}}
+\index{pack\_multisignature\_keys@{pack\_multisignature\_keys}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pack\_multisignature\_keys()}{pack\_multisignature\_keys()}}
+{\footnotesize\ttfamily std\+::string tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pack\+\_\+multisignature\+\_\+keys (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{keys,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{signer\+\_\+secret\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae881497ba043f706cd5e61e1d35bb3c6}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae881497ba043f706cd5e61e1d35bb3c6}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+back (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a756e250cd4d839549abd7f0cd4e009af}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a756e250cd4d839549abd7f0cd4e009af}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!pop\_if\_present@{pop\_if\_present}}
+\index{pop\_if\_present@{pop\_if\_present}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pop\_if\_present()}{pop\_if\_present()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+if\+\_\+present (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{vec,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aaed13d28ba9a594ef4a487bed85d57ac}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aaed13d28ba9a594ef4a487bed85d57ac}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!pop\_index@{pop\_index}}
+\index{pop\_index@{pop\_index}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pop\_index()}{pop\_index()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+index (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{vec,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a4a472548b907daa915a8132192bb2fda}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a4a472548b907daa915a8132192bb2fda}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!pop\_random\_value@{pop\_random\_value}}
+\index{pop\_random\_value@{pop\_random\_value}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pop\_random\_value()}{pop\_random\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::pop\+\_\+random\+\_\+value (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae8a05a1d8f8e4ab8b74cac48c1877fcc}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ae8a05a1d8f8e4ab8b74cac48c1877fcc}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!secret\_keys\_to\_public\_keys@{secret\_keys\_to\_public\_keys}}
+\index{secret\_keys\_to\_public\_keys@{secret\_keys\_to\_public\_keys}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{secret\_keys\_to\_public\_keys()}{secret\_keys\_to\_public\_keys()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$ tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::secret\+\_\+keys\+\_\+to\+\_\+public\+\_\+keys (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&}]{keys }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a324a3f3cce0ce88dd2874859eb43e90b}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a324a3f3cce0ce88dd2874859eb43e90b}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!setup\_shim@{setup\_shim}}
+\index{setup\_shim@{setup\_shim}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{setup\_shim()}{setup\_shim()}}
+{\footnotesize\ttfamily void tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::setup\+\_\+shim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1wallet__shim}{hw\+::wallet\+\_\+shim}} $\ast$}]{shim,  }\item[{\mbox{\hyperlink{classtools_1_1wallet2}{tools\+::wallet2}} $\ast$}]{wallet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a46d103c9e89b3bc69299b8fe894e2050}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a46d103c9e89b3bc69299b8fe894e2050}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!tx\_weight\_target@{tx\_weight\_target}}
+\index{tx\_weight\_target@{tx\_weight\_target}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{tx\_weight\_target()}{tx\_weight\_target()}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::tx\+\_\+weight\+\_\+target (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aea76f3310c384d1a9f7dd67e8f6a3066}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aea76f3310c384d1a9f7dd67e8f6a3066}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT@{DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT}}
+\index{DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT@{DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT}{DEFAULT\_INACTIVITY\_LOCK\_TIMEOUT}}
+{\footnotesize\ttfamily constexpr auto tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+L\+O\+C\+K\+\_\+\+T\+I\+M\+E\+O\+UT = 10min\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac9dfc4fbc80802cf09a91d68c4660911}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac9dfc4fbc80802cf09a91d68c4660911}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!DEFAULT\_MIN\_OUTPUT\_COUNT@{DEFAULT\_MIN\_OUTPUT\_COUNT}}
+\index{DEFAULT\_MIN\_OUTPUT\_COUNT@{DEFAULT\_MIN\_OUTPUT\_COUNT}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_MIN\_OUTPUT\_COUNT}{DEFAULT\_MIN\_OUTPUT\_COUNT}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+O\+U\+NT = 5\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a5b493fd292e37430df34a7ae520572e2}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a5b493fd292e37430df34a7ae520572e2}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!DEFAULT\_MIN\_OUTPUT\_VALUE@{DEFAULT\_MIN\_OUTPUT\_VALUE}}
+\index{DEFAULT\_MIN\_OUTPUT\_VALUE@{DEFAULT\_MIN\_OUTPUT\_VALUE}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_MIN\_OUTPUT\_VALUE}{DEFAULT\_MIN\_OUTPUT\_VALUE}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+I\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+L\+UE = 2$\ast$\mbox{\hyperlink{namespaceoxen_adf4713cecce29f873b3c786fd3cd2a01}{oxen\+::\+C\+O\+IN}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7edc7d3ec83c9ac0f15ade376aef08cc}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7edc7d3ec83c9ac0f15ade376aef08cc}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!FEE\_ESTIMATE\_GRACE\_BLOCKS@{FEE\_ESTIMATE\_GRACE\_BLOCKS}}
+\index{FEE\_ESTIMATE\_GRACE\_BLOCKS@{FEE\_ESTIMATE\_GRACE\_BLOCKS}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{FEE\_ESTIMATE\_GRACE\_BLOCKS}{FEE\_ESTIMATE\_GRACE\_BLOCKS}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::F\+E\+E\+\_\+\+E\+S\+T\+I\+M\+A\+T\+E\+\_\+\+G\+R\+A\+C\+E\+\_\+\+B\+L\+O\+C\+KS = 10\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a76971f79d6a094f0ce781c6431ae919e}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a76971f79d6a094f0ce781c6431ae919e}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!FIRST\_REFRESH\_GRANULARITY@{FIRST\_REFRESH\_GRANULARITY}}
+\index{FIRST\_REFRESH\_GRANULARITY@{FIRST\_REFRESH\_GRANULARITY}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{FIRST\_REFRESH\_GRANULARITY}{FIRST\_REFRESH\_GRANULARITY}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::F\+I\+R\+S\+T\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+G\+R\+A\+N\+U\+L\+A\+R\+I\+TY = 1024\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_afb25c87c741dafd0593b4974f74d1afd}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_afb25c87c741dafd0593b4974f74d1afd}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!GAMMA\_SCALE@{GAMMA\_SCALE}}
+\index{GAMMA\_SCALE@{GAMMA\_SCALE}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{GAMMA\_SCALE}{GAMMA\_SCALE}}
+{\footnotesize\ttfamily constexpr double tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::G\+A\+M\+M\+A\+\_\+\+S\+C\+A\+LE = 1/1.\+61\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca1eb8fb2f1ad738b931a925a931555}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acca1eb8fb2f1ad738b931a925a931555}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!GAMMA\_SHAPE@{GAMMA\_SHAPE}}
+\index{GAMMA\_SHAPE@{GAMMA\_SHAPE}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{GAMMA\_SHAPE}{GAMMA\_SHAPE}}
+{\footnotesize\ttfamily constexpr double tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::G\+A\+M\+M\+A\+\_\+\+S\+H\+A\+PE = 19.\+28\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a68f290af61ee0c5e793571c041fa0bc1}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a68f290af61ee0c5e793571c041fa0bc1}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION@{IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION}}
+\index{IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION@{IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION}{IGNORE\_LONG\_PAYMENT\_ID\_FROM\_BLOCK\_VERSION}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::I\+G\+N\+O\+R\+E\+\_\+\+L\+O\+N\+G\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+I\+D\+\_\+\+F\+R\+O\+M\+\_\+\+B\+L\+O\+C\+K\+\_\+\+V\+E\+R\+S\+I\+ON = hf\+::hf12\+\_\+checkpointing\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_adf5693a06766ea39911bff27236be3d0}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_adf5693a06766ea39911bff27236be3d0}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!INBOUND\_PROOF\_MAGIC@{INBOUND\_PROOF\_MAGIC}}
+\index{INBOUND\_PROOF\_MAGIC@{INBOUND\_PROOF\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{INBOUND\_PROOF\_MAGIC}{INBOUND\_PROOF\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::I\+N\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC = \char`\"{}In\+Proof\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3611f93f80c027bbd696d41ae948f185}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3611f93f80c027bbd696d41ae948f185}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!KEY\_IMAGE\_EXPORT\_FILE\_MAGIC@{KEY\_IMAGE\_EXPORT\_FILE\_MAGIC}}
+\index{KEY\_IMAGE\_EXPORT\_FILE\_MAGIC@{KEY\_IMAGE\_EXPORT\_FILE\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{KEY\_IMAGE\_EXPORT\_FILE\_MAGIC}{KEY\_IMAGE\_EXPORT\_FILE\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC = \char`\"{}Loki key image export\textbackslash{}002\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a766e93be40bd6573f64467d94ec4b8c8}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a766e93be40bd6573f64467d94ec4b8c8}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!logcat@{logcat}}
+\index{logcat@{logcat}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::logcat = log\+::\+Cat(\char`\"{}wallet.\+wallet2\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a8cc4bd0c4dcffa39fe3aba3a870f54a1}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a8cc4bd0c4dcffa39fe3aba3a870f54a1}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_EXPORT\_FILE\_MAGIC@{MULTISIG\_EXPORT\_FILE\_MAGIC}}
+\index{MULTISIG\_EXPORT\_FILE\_MAGIC@{MULTISIG\_EXPORT\_FILE\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_EXPORT\_FILE\_MAGIC}{MULTISIG\_EXPORT\_FILE\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC = \char`\"{}Loki multisig export\textbackslash{}001\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac837e9c337d29f59559c847b3e626d04}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ac837e9c337d29f59559c847b3e626d04}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_EXTRA\_INFO\_MAGIC@{MULTISIG\_EXTRA\_INFO\_MAGIC}}
+\index{MULTISIG\_EXTRA\_INFO\_MAGIC@{MULTISIG\_EXTRA\_INFO\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_EXTRA\_INFO\_MAGIC}{MULTISIG\_EXTRA\_INFO\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+E\+X\+T\+R\+A\+\_\+\+I\+N\+F\+O\+\_\+\+M\+A\+G\+IC = \char`\"{}Multisigx\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d4484831e31c72633edcfc3d9accbdc}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7d4484831e31c72633edcfc3d9accbdc}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_MAGIC@{MULTISIG\_MAGIC}}
+\index{MULTISIG\_MAGIC@{MULTISIG\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_MAGIC}{MULTISIG\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+M\+A\+G\+IC = \char`\"{}Multisig\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a093b0ec22aa2e765e63ca496b8d6f5bb}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a093b0ec22aa2e765e63ca496b8d6f5bb}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_SIGNATURE\_MAGIC@{MULTISIG\_SIGNATURE\_MAGIC}}
+\index{MULTISIG\_SIGNATURE\_MAGIC@{MULTISIG\_SIGNATURE\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_SIGNATURE\_MAGIC}{MULTISIG\_SIGNATURE\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+\_\+\+M\+A\+G\+IC = \char`\"{}Sig\+Multisig\+Pk\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_af5a8db5c07efd78123ad06b78525c05e}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_af5a8db5c07efd78123ad06b78525c05e}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_UNSIGNED\_TX\_PREFIX@{MULTISIG\_UNSIGNED\_TX\_PREFIX}}
+\index{MULTISIG\_UNSIGNED\_TX\_PREFIX@{MULTISIG\_UNSIGNED\_TX\_PREFIX}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_UNSIGNED\_TX\_PREFIX}{MULTISIG\_UNSIGNED\_TX\_PREFIX}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX = \char`\"{}Loki multisig unsigned tx set\textbackslash{}001\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7675f88ab1c44c9f8560a5d293f5fddd}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7675f88ab1c44c9f8560a5d293f5fddd}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER@{MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER}}
+\index{MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER@{MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER}{MULTISIG\_UNSIGNED\_TX\_PREFIX\_NOVER}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER = M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3125925eed1aa26d615b0b53639ab08f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3125925eed1aa26d615b0b53639ab08f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!OUTBOUND\_PROOF\_MAGIC@{OUTBOUND\_PROOF\_MAGIC}}
+\index{OUTBOUND\_PROOF\_MAGIC@{OUTBOUND\_PROOF\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{OUTBOUND\_PROOF\_MAGIC}{OUTBOUND\_PROOF\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::O\+U\+T\+B\+O\+U\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC = \char`\"{}Out\+Proof\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ace04f62b2e91b7423e6788ff8075c768}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_ace04f62b2e91b7423e6788ff8075c768}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!OUTPUT\_EXPORT\_FILE\_MAGIC@{OUTPUT\_EXPORT\_FILE\_MAGIC}}
+\index{OUTPUT\_EXPORT\_FILE\_MAGIC@{OUTPUT\_EXPORT\_FILE\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_EXPORT\_FILE\_MAGIC}{OUTPUT\_EXPORT\_FILE\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+F\+I\+L\+E\+\_\+\+M\+A\+G\+IC = \char`\"{}Loki output export\textbackslash{}003\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a9cd05cc3eba1d87321d4b3b44e191b56}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a9cd05cc3eba1d87321d4b3b44e191b56}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!protocol\_re@{protocol\_re}}
+\index{protocol\_re@{protocol\_re}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{protocol\_re}{protocol\_re}}
+{\footnotesize\ttfamily const std\+::regex tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::protocol\+\_\+re \{R\char`\"{}($^\wedge$(\mbox{[}a-\/zA-\/Z\mbox{]}\mbox{[}a-\/zA-\/Z0-\/9+.-\/\mbox{]}$\ast$)\+:)\char`\"{}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a70a4ad48003df982cf5b670eb199f813}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a70a4ad48003df982cf5b670eb199f813}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!RECENT\_OUTPUT\_BLOCKS@{RECENT\_OUTPUT\_BLOCKS}}
+\index{RECENT\_OUTPUT\_BLOCKS@{RECENT\_OUTPUT\_BLOCKS}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{RECENT\_OUTPUT\_BLOCKS}{RECENT\_OUTPUT\_BLOCKS}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+B\+L\+O\+C\+KS = \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} $\ast$ B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!RECENT\_OUTPUT\_DAYS@{RECENT\_OUTPUT\_DAYS}}
+\index{RECENT\_OUTPUT\_DAYS@{RECENT\_OUTPUT\_DAYS}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{RECENT\_OUTPUT\_DAYS}{RECENT\_OUTPUT\_DAYS}}
+{\footnotesize\ttfamily constexpr float tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS = 1.\+8f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7793b1c576688ba0fcdcab906ae6f44b}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a7793b1c576688ba0fcdcab906ae6f44b}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!RECENT\_OUTPUT\_RATIO@{RECENT\_OUTPUT\_RATIO}}
+\index{RECENT\_OUTPUT\_RATIO@{RECENT\_OUTPUT\_RATIO}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{RECENT\_OUTPUT\_RATIO}{RECENT\_OUTPUT\_RATIO}}
+{\footnotesize\ttfamily constexpr float tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+A\+T\+IO = 0.\+5f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6e06a2626cd6dc93bfba82b8b629a8bb}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a6e06a2626cd6dc93bfba82b8b629a8bb}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!RECENT\_OUTPUT\_ZONE@{RECENT\_OUTPUT\_ZONE}}
+\index{RECENT\_OUTPUT\_ZONE@{RECENT\_OUTPUT\_ZONE}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{RECENT\_OUTPUT\_ZONE}{RECENT\_OUTPUT\_ZONE}}
+{\footnotesize\ttfamily constexpr time\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+Z\+O\+NE = \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a874515e44779cbbd14c20b4ac052af3f}{R\+E\+C\+E\+N\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+A\+YS}} $\ast$ 86400\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3decda22c076a4db98a405f0bdd91aaa}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a3decda22c076a4db98a405f0bdd91aaa}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!RESERVE\_PROOF\_MAGIC@{RESERVE\_PROOF\_MAGIC}}
+\index{RESERVE\_PROOF\_MAGIC@{RESERVE\_PROOF\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{RESERVE\_PROOF\_MAGIC}{RESERVE\_PROOF\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC = \char`\"{}Reserve\+Proof\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a343ae5114a1ec93c100e03203bb93fa9}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a343ae5114a1ec93c100e03203bb93fa9}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD@{SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD}}
+\index{SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD@{SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD}{SECOND\_OUTPUT\_RELATEDNESS\_THRESHOLD}}
+{\footnotesize\ttfamily constexpr float tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+E\+C\+O\+N\+D\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+R\+E\+L\+A\+T\+E\+D\+N\+E\+S\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD = 0.\+0f\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0fecf69ad4fc5d2b519b51c0825c54c8}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0fecf69ad4fc5d2b519b51c0825c54c8}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SEGREGATION\_FORK\_HEIGHT@{SEGREGATION\_FORK\_HEIGHT}}
+\index{SEGREGATION\_FORK\_HEIGHT@{SEGREGATION\_FORK\_HEIGHT}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SEGREGATION\_FORK\_HEIGHT}{SEGREGATION\_FORK\_HEIGHT}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+H\+E\+I\+G\+HT = 99999999\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0441e7e468a0b8b2de5dcc9732ccb0b6}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a0441e7e468a0b8b2de5dcc9732ccb0b6}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SEGREGATION\_FORK\_VICINITY@{SEGREGATION\_FORK\_VICINITY}}
+\index{SEGREGATION\_FORK\_VICINITY@{SEGREGATION\_FORK\_VICINITY}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SEGREGATION\_FORK\_VICINITY}{SEGREGATION\_FORK\_VICINITY}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+E\+G\+R\+E\+G\+A\+T\+I\+O\+N\+\_\+\+F\+O\+R\+K\+\_\+\+V\+I\+C\+I\+N\+I\+TY = 1500\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a15c19bdb985fee5470725ef196640bbb}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a15c19bdb985fee5470725ef196640bbb}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SIG\_MAGIC@{SIG\_MAGIC}}
+\index{SIG\_MAGIC@{SIG\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SIG\_MAGIC}{SIG\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+I\+G\+\_\+\+M\+A\+G\+IC = \char`\"{}Sig\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acb88e9bd11dd6eab8863839aaf3cbde5}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_acb88e9bd11dd6eab8863839aaf3cbde5}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SIGNED\_TX\_PREFIX@{SIGNED\_TX\_PREFIX}}
+\index{SIGNED\_TX\_PREFIX@{SIGNED\_TX\_PREFIX}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SIGNED\_TX\_PREFIX}{SIGNED\_TX\_PREFIX}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX = \char`\"{}Loki signed tx set\textbackslash{}004\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87e8c04d4f1ac26be7c6a2339ac41c31}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_a87e8c04d4f1ac26be7c6a2339ac41c31}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SIGNED\_TX\_PREFIX\_NOVER@{SIGNED\_TX\_PREFIX\_NOVER}}
+\index{SIGNED\_TX\_PREFIX\_NOVER@{SIGNED\_TX\_PREFIX\_NOVER}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SIGNED\_TX\_PREFIX\_NOVER}{SIGNED\_TX\_PREFIX\_NOVER}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER = S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_abe1153a8a034b9f3effdf22b5548dbff}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_abe1153a8a034b9f3effdf22b5548dbff}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!SPEND\_PROOF\_MAGIC@{SPEND\_PROOF\_MAGIC}}
+\index{SPEND\_PROOF\_MAGIC@{SPEND\_PROOF\_MAGIC}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{SPEND\_PROOF\_MAGIC}{SPEND\_PROOF\_MAGIC}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+\_\+\+M\+A\+G\+IC = \char`\"{}Spend\+Proof\+V1\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aa6c102978d3306193a5e03c2952c2907}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aa6c102978d3306193a5e03c2952c2907}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!UNSIGNED\_TX\_PREFIX@{UNSIGNED\_TX\_PREFIX}}
+\index{UNSIGNED\_TX\_PREFIX@{UNSIGNED\_TX\_PREFIX}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{UNSIGNED\_TX\_PREFIX}{UNSIGNED\_TX\_PREFIX}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+IX = \char`\"{}Loki unsigned tx set\textbackslash{}004\char`\"{}sv\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aafc0f6894b15a5322c1d107bd0a760aa}\label{namespacetools_1_1anonymous__namespace_02wallet2_8cpp_03_aafc0f6894b15a5322c1d107bd0a760aa}} 
+\index{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}!UNSIGNED\_TX\_PREFIX\_NOVER@{UNSIGNED\_TX\_PREFIX\_NOVER}}
+\index{UNSIGNED\_TX\_PREFIX\_NOVER@{UNSIGNED\_TX\_PREFIX\_NOVER}!tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}@{tools::anonymous\_namespace\lcurly{}wallet2.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{UNSIGNED\_TX\_PREFIX\_NOVER}{UNSIGNED\_TX\_PREFIX\_NOVER}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view tools\+::anonymous\+\_\+namespace\{wallet2.\+cpp\}\+::U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X\+\_\+\+N\+O\+V\+ER = U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+substr(0, U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+T\+X\+\_\+\+P\+R\+E\+F\+I\+X.\+size()-\/1)\hspace{0.3cm}{\ttfamily [constexpr]}}
+

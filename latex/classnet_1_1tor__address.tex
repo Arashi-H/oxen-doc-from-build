@@ -1,0 +1,287 @@
+\hypertarget{classnet_1_1tor__address}{}\doxysection{net\+::tor\+\_\+address Class Reference}
+\label{classnet_1_1tor__address}\index{net::tor\_address@{net::tor\_address}}
+
+
+Tor onion address; internal format not condensed/decoded.  
+
+
+
+
+{\ttfamily \#include $<$tor\+\_\+address.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnet_1_1tor__address_ab1f7794a31a19b9b352c5d4b84b016eb}{tor\+\_\+address}} () noexcept
+\begin{DoxyCompactList}\small\item\em An object with {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}{port()}} == 0} and {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_af88cbedc656b78bbe716355f62ce05bf}{host\+\_\+str()}} == \mbox{\hyperlink{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}{unknown\+\_\+str()}}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a18a2649df20f6fab1988646c027a9f0f}{\+\_\+load}} (epee\+::serialization\+::portable\+\_\+storage \&src, epee\+::serialization\+::section $\ast$hparent)
+\begin{DoxyCompactList}\small\item\em Load from epee p2p format, and. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a74ef87e5e199b09f7f274362c46e6f9a}{store}} (epee\+::serialization\+::portable\+\_\+storage \&dest, epee\+::serialization\+::section $\ast$hparent) const
+\begin{DoxyCompactList}\small\item\em Store in epee p2p format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnet_1_1tor__address_af8ae45ba353a8a8776c88e40d5137609}{tor\+\_\+address}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{classnet_1_1tor__address_a0cb6f54857b2a553206c61e8b2a640e6}{$\sim$tor\+\_\+address}} ()=default
+\item 
+\mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \& \mbox{\hyperlink{classnet_1_1tor__address_a93e94574a5f9e4b27708a442a36748bd}{operator=}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_aa1c7121ff8b333728d88eab19d0b0182}{is\+\_\+unknown}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a3ade56547b01e638f9a2f302f19426a5}{equal}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a356fa477faca6acced5b5e835ed37bfe}{less}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_aefa9695651f9dc4baf0506d510f9bd96}{is\+\_\+same\+\_\+host}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) const noexcept
+\item 
+std\+::string \mbox{\hyperlink{classnet_1_1tor__address_a4fae6cdab2bac17b4de380eb5a180721}{str}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classnet_1_1tor__address_af88cbedc656b78bbe716355f62ce05bf}{host\+\_\+str}} () const noexcept
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}{port}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_ae431266c33b152c53a63b150c3184a30}{is\+\_\+blockable}} () const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::size\+\_\+t \mbox{\hyperlink{classnet_1_1tor__address_a1d8423efe9f534c332f0ede136563797}{buffer\+\_\+size}} () noexcept
+\item 
+static const char $\ast$ \mbox{\hyperlink{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}{unknown\+\_\+str}} () noexcept
+\item 
+static \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \mbox{\hyperlink{classnet_1_1tor__address_aedd79b22e4e085bade4060dcd4b96b4c}{unknown}} () noexcept
+\item 
+static \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} $>$ \mbox{\hyperlink{classnet_1_1tor__address_ab8381768e4f60d0506c7de8d8e04ec9d}{make}} (std\+::string\+\_\+view address, std\+::uint16\+\_\+t default\+\_\+port=0)
+\item 
+static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a74a6f3638838b2fd699bf353fbfe2a14}{is\+\_\+loopback}} () noexcept
+\item 
+static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnet_1_1tor__address_a2e453103324d9aa891a0c3e1eccd7fbd}{is\+\_\+local}} () noexcept
+\item 
+static constexpr epee\+::net\+\_\+utils\+::address\+\_\+type \mbox{\hyperlink{classnet_1_1tor__address_a601de3eb4577f33790ec615b8be1edac}{get\+\_\+type\+\_\+id}} () noexcept
+\item 
+static constexpr epee\+::net\+\_\+utils\+::zone \mbox{\hyperlink{classnet_1_1tor__address_a522c28c045f7463adef797c01c1f34dc}{get\+\_\+zone}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnet_1_1tor__address_a073770f4718cbaa99a05ea672ef3ca62}{tor\+\_\+address}} (std\+::string\+\_\+view host, std\+::uint16\+\_\+t \mbox{\hyperlink{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}{port}}) noexcept
+\begin{DoxyCompactList}\small\item\em Keep in private, {\ttfamily host.\+size()} has no runtime check. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::uint16\+\_\+t \mbox{\hyperlink{classnet_1_1tor__address_a6b33f11a9c0ca1b75fd385664572865e}{port\+\_\+}}
+\item 
+char \mbox{\hyperlink{classnet_1_1tor__address_a638dc23fc8f17aa9a4c6473382ed6e52}{host\+\_\+}} \mbox{[}63\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tor onion address; internal format not condensed/decoded. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnet_1_1tor__address_a073770f4718cbaa99a05ea672ef3ca62}\label{classnet_1_1tor__address_a073770f4718cbaa99a05ea672ef3ca62}} 
+\index{net::tor\_address@{net::tor\_address}!tor\_address@{tor\_address}}
+\index{tor\_address@{tor\_address}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{tor\_address()}{tor\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily net\+::tor\+\_\+address\+::tor\+\_\+address (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{host,  }\item[{std\+::uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+
+
+Keep in private, {\ttfamily host.\+size()} has no runtime check. 
+
+\mbox{\Hypertarget{classnet_1_1tor__address_ab1f7794a31a19b9b352c5d4b84b016eb}\label{classnet_1_1tor__address_ab1f7794a31a19b9b352c5d4b84b016eb}} 
+\index{net::tor\_address@{net::tor\_address}!tor\_address@{tor\_address}}
+\index{tor\_address@{tor\_address}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{tor\_address()}{tor\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily net\+::tor\+\_\+address\+::tor\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+An object with {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}{port()}} == 0} and {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_af88cbedc656b78bbe716355f62ce05bf}{host\+\_\+str()}} == \mbox{\hyperlink{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}{unknown\+\_\+str()}}}. 
+
+\mbox{\Hypertarget{classnet_1_1tor__address_af8ae45ba353a8a8776c88e40d5137609}\label{classnet_1_1tor__address_af8ae45ba353a8a8776c88e40d5137609}} 
+\index{net::tor\_address@{net::tor\_address}!tor\_address@{tor\_address}}
+\index{tor\_address@{tor\_address}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{tor\_address()}{tor\_address()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily net\+::tor\+\_\+address\+::tor\+\_\+address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a0cb6f54857b2a553206c61e8b2a640e6}\label{classnet_1_1tor__address_a0cb6f54857b2a553206c61e8b2a640e6}} 
+\index{net::tor\_address@{net::tor\_address}!````~tor\_address@{$\sim$tor\_address}}
+\index{````~tor\_address@{$\sim$tor\_address}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{$\sim$tor\_address()}{~tor\_address()}}
+{\footnotesize\ttfamily net\+::tor\+\_\+address\+::$\sim$tor\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnet_1_1tor__address_a18a2649df20f6fab1988646c027a9f0f}\label{classnet_1_1tor__address_a18a2649df20f6fab1988646c027a9f0f}} 
+\index{net::tor\_address@{net::tor\_address}!\_load@{\_load}}
+\index{\_load@{\_load}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{\_load()}{\_load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::\+\_\+load (\begin{DoxyParamCaption}\item[{epee\+::serialization\+::portable\+\_\+storage \&}]{src,  }\item[{epee\+::serialization\+::section $\ast$}]{hparent }\end{DoxyParamCaption})}
+
+
+
+Load from epee p2p format, and. 
+
+\begin{DoxyReturn}{Returns}
+false if not valid tor address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a1d8423efe9f534c332f0ede136563797}\label{classnet_1_1tor__address_a1d8423efe9f534c332f0ede136563797}} 
+\index{net::tor\_address@{net::tor\_address}!buffer\_size@{buffer\_size}}
+\index{buffer\_size@{buffer\_size}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{buffer\_size()}{buffer\_size()}}
+{\footnotesize\ttfamily static constexpr std\+::size\+\_\+t net\+::tor\+\_\+address\+::buffer\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Size of internal buffer for host. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a3ade56547b01e638f9a2f302f19426a5}\label{classnet_1_1tor__address_a3ade56547b01e638f9a2f302f19426a5}} 
+\index{net::tor\_address@{net::tor\_address}!equal@{equal}}
+\index{equal@{equal}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a601de3eb4577f33790ec615b8be1edac}\label{classnet_1_1tor__address_a601de3eb4577f33790ec615b8be1edac}} 
+\index{net::tor\_address@{net::tor\_address}!get\_type\_id@{get\_type\_id}}
+\index{get\_type\_id@{get\_type\_id}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{get\_type\_id()}{get\_type\_id()}}
+{\footnotesize\ttfamily static constexpr epee\+::net\+\_\+utils\+::address\+\_\+type net\+::tor\+\_\+address\+::get\+\_\+type\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a522c28c045f7463adef797c01c1f34dc}\label{classnet_1_1tor__address_a522c28c045f7463adef797c01c1f34dc}} 
+\index{net::tor\_address@{net::tor\_address}!get\_zone@{get\_zone}}
+\index{get\_zone@{get\_zone}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{get\_zone()}{get\_zone()}}
+{\footnotesize\ttfamily static constexpr epee\+::net\+\_\+utils\+::zone net\+::tor\+\_\+address\+::get\+\_\+zone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_af88cbedc656b78bbe716355f62ce05bf}\label{classnet_1_1tor__address_af88cbedc656b78bbe716355f62ce05bf}} 
+\index{net::tor\_address@{net::tor\_address}!host\_str@{host\_str}}
+\index{host\_str@{host\_str}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{host\_str()}{host\_str()}}
+{\footnotesize\ttfamily const char$\ast$ net\+::tor\+\_\+address\+::host\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Null-\/terminated {\ttfamily x.\+onion} value or {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}{unknown\+\_\+str()}}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_ae431266c33b152c53a63b150c3184a30}\label{classnet_1_1tor__address_ae431266c33b152c53a63b150c3184a30}} 
+\index{net::tor\_address@{net::tor\_address}!is\_blockable@{is\_blockable}}
+\index{is\_blockable@{is\_blockable}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{is\_blockable()}{is\_blockable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::is\+\_\+blockable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily !is\+\_\+unknown()}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a2e453103324d9aa891a0c3e1eccd7fbd}\label{classnet_1_1tor__address_a2e453103324d9aa891a0c3e1eccd7fbd}} 
+\index{net::tor\_address@{net::tor\_address}!is\_local@{is\_local}}
+\index{is\_local@{is\_local}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{is\_local()}{is\_local()}}
+{\footnotesize\ttfamily static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::is\+\_\+local (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a74a6f3638838b2fd699bf353fbfe2a14}\label{classnet_1_1tor__address_a74a6f3638838b2fd699bf353fbfe2a14}} 
+\index{net::tor\_address@{net::tor\_address}!is\_loopback@{is\_loopback}}
+\index{is\_loopback@{is\_loopback}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{is\_loopback()}{is\_loopback()}}
+{\footnotesize\ttfamily static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::is\+\_\+loopback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_aefa9695651f9dc4baf0506d510f9bd96}\label{classnet_1_1tor__address_aefa9695651f9dc4baf0506d510f9bd96}} 
+\index{net::tor\_address@{net::tor\_address}!is\_same\_host@{is\_same\_host}}
+\index{is\_same\_host@{is\_same\_host}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{is\_same\_host()}{is\_same\_host()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::is\+\_\+same\+\_\+host (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if onion addresses are identical. 
+\end{DoxyReturn}
+\textbackslash{}\+T\+O\+DO v2 and v3 should be comparable -\/ requires base32\mbox{\Hypertarget{classnet_1_1tor__address_aa1c7121ff8b333728d88eab19d0b0182}\label{classnet_1_1tor__address_aa1c7121ff8b333728d88eab19d0b0182}} 
+\index{net::tor\_address@{net::tor\_address}!is\_unknown@{is\_unknown}}
+\index{is\_unknown@{is\_unknown}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{is\_unknown()}{is\_unknown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::is\+\_\+unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if default constructed or via {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_aedd79b22e4e085bade4060dcd4b96b4c}{unknown()}}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a356fa477faca6acced5b5e835ed37bfe}\label{classnet_1_1tor__address_a356fa477faca6acced5b5e835ed37bfe}} 
+\index{net::tor\_address@{net::tor\_address}!less@{less}}
+\index{less@{less}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{less()}{less()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::less (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_ab8381768e4f60d0506c7de8d8e04ec9d}\label{classnet_1_1tor__address_ab8381768e4f60d0506c7de8d8e04ec9d}} 
+\index{net::tor\_address@{net::tor\_address}!make@{make}}
+\index{make@{make}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} $>$ net\+::tor\+\_\+address\+::make (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address,  }\item[{std\+::uint16\+\_\+t}]{default\+\_\+port = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parse {\ttfamily address} in onion v2 or v3 format with (i.\+e. x.\+onion\+:80) with {\ttfamily default\+\_\+port} being used iff port is not specified in {\ttfamily address}. \mbox{\Hypertarget{classnet_1_1tor__address_a93e94574a5f9e4b27708a442a36748bd}\label{classnet_1_1tor__address_a93e94574a5f9e4b27708a442a36748bd}} 
+\index{net::tor\_address@{net::tor\_address}!operator=@{operator=}}
+\index{operator=@{operator=}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \& net\+::tor\+\_\+address\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}\label{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}} 
+\index{net::tor\_address@{net::tor\_address}!port@{port}}
+\index{port@{port}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{port()}{port()}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t net\+::tor\+\_\+address\+::port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Port value or {\ttfamily 0} if unspecified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a74ef87e5e199b09f7f274362c46e6f9a}\label{classnet_1_1tor__address_a74ef87e5e199b09f7f274362c46e6f9a}} 
+\index{net::tor\_address@{net::tor\_address}!store@{store}}
+\index{store@{store}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::tor\+\_\+address\+::store (\begin{DoxyParamCaption}\item[{epee\+::serialization\+::portable\+\_\+storage \&}]{dest,  }\item[{epee\+::serialization\+::section $\ast$}]{hparent }\end{DoxyParamCaption}) const}
+
+
+
+Store in epee p2p format. 
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a4fae6cdab2bac17b4de380eb5a180721}\label{classnet_1_1tor__address_a4fae6cdab2bac17b4de380eb5a180721}} 
+\index{net::tor\_address@{net::tor\_address}!str@{str}}
+\index{str@{str}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}}
+{\footnotesize\ttfamily std\+::string net\+::tor\+\_\+address\+::str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily x.\+onion} or {\ttfamily x.\+onion\+:z} if {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address_aa7d7b93ca5198c0bfe489dc6e25b6cea}{port()}} != 0}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_aedd79b22e4e085bade4060dcd4b96b4c}\label{classnet_1_1tor__address_aedd79b22e4e085bade4060dcd4b96b4c}} 
+\index{net::tor\_address@{net::tor\_address}!unknown@{unknown}}
+\index{unknown@{unknown}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{unknown()}{unknown()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} net\+::tor\+\_\+address\+::unknown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+A default constructed {\ttfamily \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}\label{classnet_1_1tor__address_a3a44fd03788d8371690f3dfc28c58062}} 
+\index{net::tor\_address@{net::tor\_address}!unknown\_str@{unknown\_str}}
+\index{unknown\_str@{unknown\_str}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{unknown\_str()}{unknown\_str()}}
+{\footnotesize\ttfamily const char $\ast$ net\+::tor\+\_\+address\+::unknown\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily $<$unknown tor host$>$}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnet_1_1tor__address_a638dc23fc8f17aa9a4c6473382ed6e52}\label{classnet_1_1tor__address_a638dc23fc8f17aa9a4c6473382ed6e52}} 
+\index{net::tor\_address@{net::tor\_address}!host\_@{host\_}}
+\index{host\_@{host\_}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{host\_}{host\_}}
+{\footnotesize\ttfamily char net\+::tor\+\_\+address\+::host\+\_\+\mbox{[}63\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnet_1_1tor__address_a6b33f11a9c0ca1b75fd385664572865e}\label{classnet_1_1tor__address_a6b33f11a9c0ca1b75fd385664572865e}} 
+\index{net::tor\_address@{net::tor\_address}!port\_@{port\_}}
+\index{port\_@{port\_}!net::tor\_address@{net::tor\_address}}
+\doxysubsubsection{\texorpdfstring{port\_}{port\_}}
+{\footnotesize\ttfamily std\+::uint16\+\_\+t net\+::tor\+\_\+address\+::port\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/net/\mbox{\hyperlink{tor__address_8h}{tor\+\_\+address.\+h}}\item 
+src/net/\mbox{\hyperlink{tor__address_8cpp}{tor\+\_\+address.\+cpp}}\end{DoxyCompactItemize}

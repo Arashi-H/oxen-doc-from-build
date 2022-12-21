@@ -1,0 +1,55 @@
+\hypertarget{crypto_2base_8h}{}\doxysection{src/crypto/base.h File Reference}
+\label{crypto_2base_8h}\index{src/crypto/base.h@{src/crypto/base.h}}
+{\ttfamily \#include \char`\"{}common/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/formattable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for base.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{crypto_2base_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{crypto_2base_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1bytes}{crypto\+::bytes$<$ Bytes, Memcmp\+Hash\+Hex $>$}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1raw__hasher}{crypto\+::raw\+\_\+hasher$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a15166b48315ec1b2f3c758692e192806}{crypto\+::operator==}} (const \mbox{\hyperlink{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_ab367f36d15085cd90429f32c8643b2f8}{crypto\+::operator!=}} (const \mbox{\hyperlink{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a59deaa47be9b0c7639a8e063413930e1}{crypto\+::operator$<$}} (const \mbox{\hyperlink{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$has\+\_\+compare\+\_\+hash\+\_\+hex$<$\+T$>$$>$$>$ }\\std\+::string \mbox{\hyperlink{namespacecrypto_afe3d9380c5aebaf594113d2ffd7576e6}{crypto\+::to\+\_\+hex\+\_\+string}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+standard\+\_\+layout\+\_\+v$<$\+T$>$ \&\& std\+::is\+\_\+default\+\_\+constructible\+\_\+v$<$\+T$>$$>$$>$ }\\constexpr \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}} \{\}
+\begin{DoxyCompactList}\small\item\em constexpr null (all-\/0) value for various crypto types; use as {\ttfamily \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$crypto\+::whatever$>$}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a168c57159a74ea270aca5f6528832a4d}{crypto\+::has\+\_\+compare\+\_\+hash\+\_\+hex}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename Left , typename Right , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_aff0d1f2881c0e68844dc1c9b470c7948}{crypto\+::are\+\_\+comparable\+\_\+v}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}

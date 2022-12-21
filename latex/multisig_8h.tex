@@ -1,0 +1,56 @@
+\hypertarget{multisig_8h}{}\doxysection{src/multisig/multisig.h File Reference}
+\label{multisig_8h}\index{src/multisig/multisig.h@{src/multisig/multisig.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for multisig.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{multisig_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{multisig_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{namespacecryptonote_a493dd2b139064752947bc64be02b9dfe}{cryptonote\+::get\+\_\+multisig\+\_\+blinded\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&key)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_acf75c159064f9f09ccb07b8d8c645fbb}{cryptonote\+::generate\+\_\+multisig\+\_\+\+N\+\_\+N}} (const account\+\_\+keys \&keys, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&spend\+\_\+keys, std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&multisig\+\_\+keys, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&spend\+\_\+skey, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&spend\+\_\+pkey)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_aab80bfcfa7d348964cecb4a800b7b34d}{cryptonote\+::generate\+\_\+multisig\+\_\+\+N1\+\_\+N}} (const account\+\_\+keys \&keys, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&spend\+\_\+keys, std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&multisig\+\_\+keys, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&spend\+\_\+skey, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&spend\+\_\+pkey)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{namespacecryptonote_abe0df1b7866c9e552d02596033ea1701}{cryptonote\+::generate\+\_\+multisig\+\_\+derivations}} (const account\+\_\+keys \&keys, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&derivations)
+\begin{DoxyCompactList}\small\item\em generate\+\_\+multisig\+\_\+derivations performs common DH key derivation. Each middle round in M/N scheme is DH exchange of public multisig keys of other participants multiplied by secret spend key of current participant. this functions does the following\+: new multisig key = secret spend $\ast$ public multisig key \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{namespacecryptonote_a023c5d700f7662018f7b5de425fe4bed}{cryptonote\+::calculate\+\_\+multisig\+\_\+signer\+\_\+key}} (const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&multisig\+\_\+keys)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \mbox{\hyperlink{namespacecryptonote_ad418ca08b198fd125f49d6eba725b6e9}{cryptonote\+::calculate\+\_\+multisig\+\_\+keys}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&derivations)
+\begin{DoxyCompactList}\small\item\em calculate\+\_\+multisig\+\_\+keys. Calculates secret multisig keys from others\textquotesingle{} participants ones as follows\+: mi = H(\+Mi) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{namespacecryptonote_af4100b034dccf01043fc9e35563cc1aa}{cryptonote\+::generate\+\_\+multisig\+\_\+view\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&skey, const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&skeys)
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{namespacecryptonote_a0f229600da463b515ea405ad145e06f0}{cryptonote\+::generate\+\_\+multisig\+\_\+\+M\+\_\+\+N\+\_\+spend\+\_\+public\+\_\+key}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&pkeys)
+\begin{DoxyCompactList}\small\item\em generate\+\_\+multisig\+\_\+\+M\+\_\+\+N\+\_\+spend\+\_\+public\+\_\+key calculates multisig wallet\textquotesingle{}s spend public key by summing all of public multisig keys \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a68169276fdf2584c819ead8e2134c339}{cryptonote\+::generate\+\_\+multisig\+\_\+key\+\_\+image}} (const account\+\_\+keys \&keys, size\+\_\+t multisig\+\_\+key\+\_\+index, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+key, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_abc3a4f104485d2e23da67f1ddded181d}{cryptonote\+::generate\+\_\+multisig\+\_\+\+LR}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} pkey, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&k, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&\mbox{\hyperlink{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}{L}}, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&R)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_abe19e7a69da91688ec82e8aafed35784}{cryptonote\+::generate\+\_\+multisig\+\_\+composite\+\_\+key\+\_\+image}} (const account\+\_\+keys \&keys, const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} $>$ \&subaddresses, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&tx\+\_\+public\+\_\+key, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+public\+\_\+keys, size\+\_\+t real\+\_\+output\+\_\+index, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&pkis, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_a25ea791b7a9ec46d7db3e9110c4331a3}{cryptonote\+::multisig\+\_\+rounds\+\_\+required}} (uint32\+\_\+t participants, uint32\+\_\+t threshold)
+\end{DoxyCompactItemize}

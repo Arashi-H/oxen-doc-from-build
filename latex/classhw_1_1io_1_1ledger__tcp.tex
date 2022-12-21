@@ -1,0 +1,190 @@
+\hypertarget{classhw_1_1io_1_1ledger__tcp}{}\doxysection{hw\+::io\+::ledger\+\_\+tcp Class Reference}
+\label{classhw_1_1io_1_1ledger__tcp}\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+
+
+{\ttfamily \#include $<$io\+\_\+ledger\+\_\+tcp.\+hpp$>$}
+
+
+
+Inheritance diagram for hw\+::io\+::ledger\+\_\+tcp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classhw_1_1io_1_1ledger__tcp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hw\+::io\+::ledger\+\_\+tcp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classhw_1_1io_1_1ledger__tcp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a7e896c981f0d885bd0bb30cf3263bc67}{ledger\+\_\+tcp}} ()=default
+\item 
+\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ad365b353ff47cf707d40f034d960eced}{$\sim$ledger\+\_\+tcp}} () override
+\item 
+\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a8a287f519db6a9055e870ef96470c5bd}{ledger\+\_\+tcp}} (\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}} \&\&)=default
+\item 
+\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}} \& \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a335777d90a4a4c38e09e68e3204cf022}{operator=}} (\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}} \&\&)=default
+\item 
+void \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ad8377a9fd4abf6308106e3332d8820ec}{init}} () override
+\item 
+void \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_aff657afd1f62c038f79193355520178b}{release}} () override
+\item 
+void \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_aa07479f88cd90433484937e27b7edba5}{connect}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a5553c9a88fc138ee8dfdefe14815bb39}{connected}} () const override
+\item 
+int \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ab88a0622681951ba55bb756012f3808f}{exchange}} (const unsigned char $\ast$command, unsigned int cmd\+\_\+len, unsigned char $\ast$response, unsigned int max\+\_\+resp\+\_\+len, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} user\+\_\+input) override
+\item 
+void \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a5e85ccf30a43d7acb63b255a0600add6}{disconnect}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_ae4ba4166cb636891f0fd264369404067}{host}} = \char`\"{}localhost\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_af1ba0e9a73109fbcb399aa393ba120fd}{port}} = \char`\"{}9999\char`\"{}
+\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_a5a037d313acbef79614a91b5d11daf2b}{connect\+\_\+timeout}} = 10s
+\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_af412940a66995c8ad27381bc2c8d1d27}{exchange\+\_\+timeout}} = 120s
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ int $>$ \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp_aaaf24027e9e1852cc3acb1f9a465de53}{sockfd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a7e896c981f0d885bd0bb30cf3263bc67}\label{classhw_1_1io_1_1ledger__tcp_a7e896c981f0d885bd0bb30cf3263bc67}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!ledger\_tcp@{ledger\_tcp}}
+\index{ledger\_tcp@{ledger\_tcp}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{ledger\_tcp()}{ledger\_tcp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily hw\+::io\+::ledger\+\_\+tcp\+::ledger\+\_\+tcp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_ad365b353ff47cf707d40f034d960eced}\label{classhw_1_1io_1_1ledger__tcp_ad365b353ff47cf707d40f034d960eced}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!````~ledger\_tcp@{$\sim$ledger\_tcp}}
+\index{````~ledger\_tcp@{$\sim$ledger\_tcp}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{$\sim$ledger\_tcp()}{~ledger\_tcp()}}
+{\footnotesize\ttfamily hw\+::io\+::ledger\+\_\+tcp\+::$\sim$ledger\+\_\+tcp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a8a287f519db6a9055e870ef96470c5bd}\label{classhw_1_1io_1_1ledger__tcp_a8a287f519db6a9055e870ef96470c5bd}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!ledger\_tcp@{ledger\_tcp}}
+\index{ledger\_tcp@{ledger\_tcp}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{ledger\_tcp()}{ledger\_tcp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily hw\+::io\+::ledger\+\_\+tcp\+::ledger\+\_\+tcp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_aa07479f88cd90433484937e27b7edba5}\label{classhw_1_1io_1_1ledger__tcp_aa07479f88cd90433484937e27b7edba5}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!connect@{connect}}
+\index{connect@{connect}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void hw\+::io\+::ledger\+\_\+tcp\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a5553c9a88fc138ee8dfdefe14815bb39}\label{classhw_1_1io_1_1ledger__tcp_a5553c9a88fc138ee8dfdefe14815bb39}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!connected@{connected}}
+\index{connected@{connected}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::io\+::ledger\+\_\+tcp\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1io_1_1device_a711d19effaa0a6ecf62ad84a8c44245b}{hw\+::io\+::device}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a5e85ccf30a43d7acb63b255a0600add6}\label{classhw_1_1io_1_1ledger__tcp_a5e85ccf30a43d7acb63b255a0600add6}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void hw\+::io\+::ledger\+\_\+tcp\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1io_1_1device_ac8132bfc5d0b35d3465c261a088941f3}{hw\+::io\+::device}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_ab88a0622681951ba55bb756012f3808f}\label{classhw_1_1io_1_1ledger__tcp_ab88a0622681951ba55bb756012f3808f}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!exchange@{exchange}}
+\index{exchange@{exchange}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{exchange()}{exchange()}}
+{\footnotesize\ttfamily int hw\+::io\+::ledger\+\_\+tcp\+::exchange (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{command,  }\item[{unsigned int}]{cmd\+\_\+len,  }\item[{unsigned char $\ast$}]{response,  }\item[{unsigned int}]{max\+\_\+resp\+\_\+len,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{user\+\_\+input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1io_1_1device_ae048b19421546ebaaf816916cc3ee70d}{hw\+::io\+::device}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_ad8377a9fd4abf6308106e3332d8820ec}\label{classhw_1_1io_1_1ledger__tcp_ad8377a9fd4abf6308106e3332d8820ec}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!init@{init}}
+\index{init@{init}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void hw\+::io\+::ledger\+\_\+tcp\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1io_1_1device_adef1a03a156442d30dd77b51122caa9e}{hw\+::io\+::device}}.
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a335777d90a4a4c38e09e68e3204cf022}\label{classhw_1_1io_1_1ledger__tcp_a335777d90a4a4c38e09e68e3204cf022}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!operator=@{operator=}}
+\index{operator=@{operator=}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}}\& hw\+::io\+::ledger\+\_\+tcp\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1io_1_1ledger__tcp}{ledger\+\_\+tcp}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_aff657afd1f62c038f79193355520178b}\label{classhw_1_1io_1_1ledger__tcp_aff657afd1f62c038f79193355520178b}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!release@{release}}
+\index{release@{release}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void hw\+::io\+::ledger\+\_\+tcp\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1io_1_1device_a8164538cd62a5cdb13f12fcf820b47aa}{hw\+::io\+::device}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_a5a037d313acbef79614a91b5d11daf2b}\label{classhw_1_1io_1_1ledger__tcp_a5a037d313acbef79614a91b5d11daf2b}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!connect\_timeout@{connect\_timeout}}
+\index{connect\_timeout@{connect\_timeout}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{connect\_timeout}{connect\_timeout}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds hw\+::io\+::ledger\+\_\+tcp\+::connect\+\_\+timeout = 10s}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_af412940a66995c8ad27381bc2c8d1d27}\label{classhw_1_1io_1_1ledger__tcp_af412940a66995c8ad27381bc2c8d1d27}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!exchange\_timeout@{exchange\_timeout}}
+\index{exchange\_timeout@{exchange\_timeout}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{exchange\_timeout}{exchange\_timeout}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds hw\+::io\+::ledger\+\_\+tcp\+::exchange\+\_\+timeout = 120s}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_ae4ba4166cb636891f0fd264369404067}\label{classhw_1_1io_1_1ledger__tcp_ae4ba4166cb636891f0fd264369404067}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!host@{host}}
+\index{host@{host}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily std\+::string hw\+::io\+::ledger\+\_\+tcp\+::host = \char`\"{}localhost\char`\"{}}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_af1ba0e9a73109fbcb399aa393ba120fd}\label{classhw_1_1io_1_1ledger__tcp_af1ba0e9a73109fbcb399aa393ba120fd}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!port@{port}}
+\index{port@{port}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily std\+::string hw\+::io\+::ledger\+\_\+tcp\+::port = \char`\"{}9999\char`\"{}}
+
+\mbox{\Hypertarget{classhw_1_1io_1_1ledger__tcp_aaaf24027e9e1852cc3acb1f9a465de53}\label{classhw_1_1io_1_1ledger__tcp_aaaf24027e9e1852cc3acb1f9a465de53}} 
+\index{hw::io::ledger\_tcp@{hw::io::ledger\_tcp}!sockfd@{sockfd}}
+\index{sockfd@{sockfd}!hw::io::ledger\_tcp@{hw::io::ledger\_tcp}}
+\doxysubsubsection{\texorpdfstring{sockfd}{sockfd}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$int$>$ hw\+::io\+::ledger\+\_\+tcp\+::sockfd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/device/\mbox{\hyperlink{io__ledger__tcp_8hpp}{io\+\_\+ledger\+\_\+tcp.\+hpp}}\item 
+src/device/\mbox{\hyperlink{io__ledger__tcp_8cpp}{io\+\_\+ledger\+\_\+tcp.\+cpp}}\end{DoxyCompactItemize}

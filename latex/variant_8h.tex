@@ -1,0 +1,109 @@
+\hypertarget{variant_8h}{}\doxysection{src/serialization/variant.h File Reference}
+\label{variant_8h}\index{src/serialization/variant.h@{src/serialization/variant.h}}
+
+
+for dealing with variants  
+
+
+{\ttfamily \#include $<$oxenc/variant.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/meta.\+h\char`\"{}}\newline
+Include dependency graph for variant.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{variant_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{variant_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserialization}{serialization}}
+\item 
+ \mbox{\hyperlink{namespaceserialization_1_1detail}{serialization\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{variant_8h_a044f1082c000649508711a708487c32c}{B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}}(Type,  Binary\+Tag)~namespace serialization \{ template$<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr uint8\+\_\+t variant\+\_\+serialization\+\_\+tag$<$Type, uint8\+\_\+t$>$\{Binary\+Tag\}; \}
+\begin{DoxyCompactList}\small\item\em Registers a uint8\+\_\+t variant tag for binary variant serialization. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{variant_8h_ae32e7bd2853d2f10a4e3c0d36c2ef74d}{J\+S\+O\+N\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}}(Type,  J\+S\+O\+N\+Tag)~namespace serialization \{ template$<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr std\+::string\+\_\+view variant\+\_\+serialization\+\_\+tag$<$Type, std\+::string\+\_\+view$>$\{J\+S\+O\+N\+Tag\}; \}
+\begin{DoxyCompactList}\small\item\em Registers a string\+\_\+view variant tag for json variant serialization. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{variant_8h_a85b4e60c04a2f8dc3bcd7112aa4e6efd}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}}(Type,  J\+S\+O\+N\+Tag,  Binary\+Tag)
+\begin{DoxyCompactList}\small\item\em Registers a variant type using the given json (string view) and binary (uint8\+\_\+t) tags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename Tag\+Type $>$ }\\constexpr Tag\+Type \mbox{\hyperlink{namespaceserialization_aacda07b7a4969c3b0bc9abe3c30bc523}{serialization\+::variant\+\_\+not\+\_\+registered}} ()
+\item 
+{\footnotesize template$<$size\+\_\+t I, class Archive , typename Variant , typename Tag $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a49d222b90a3b3b3a7529af0deb9e086d}{serialization\+::detail\+::read\+\_\+variant\+\_\+impl\+\_\+one}} (Archive \&ar, Variant \&v, const Tag \&tag)
+\item 
+{\footnotesize template$<$class Archive , typename... T, size\+\_\+t... I$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_aaf90dc5d12514b36d17fa9fd73b0cb05}{serialization\+::detail\+::read\+\_\+variant\+\_\+impl}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v, std\+::index\+\_\+sequence$<$ I... $>$)
+\item 
+{\footnotesize template$<$class Archive , typename... T, typename Indices  = std\+::make\+\_\+index\+\_\+sequence$<$sizeof...(\+T)$>$$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_aa0bb6e6e2a703dc5cc4c8f733539101e}{serialization\+::detail\+::read\+\_\+variant}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\item 
+{\footnotesize template$<$class Archive , typename... T$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_adc5dc9fd4f6ceefff5d2aa83638cd7e2}{serialization\+::detail\+::write\+\_\+variant}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Writes a variant. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Archive , typename... T$>$ }\\void \mbox{\hyperlink{namespaceserialization_a888241447b0c0107baf03f431458cd90}{serialization\+::serialize\+\_\+value}} (Archive \&ar, std\+::variant$<$ T... $>$ \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename Tag $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_af1051578d104f346bc6d974105779d94}{serialization\+::\+V\+A\+R\+I\+A\+N\+T\+\_\+\+N\+O\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+ED}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$class T , class Tag\+Type $>$ }\\constexpr auto \mbox{\hyperlink{namespaceserialization_ac399e4f60b62450737d4010c520ce449}{serialization\+::variant\+\_\+serialization\+\_\+tag}} = variant\+\_\+not\+\_\+registered$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, Tag\+Type$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+for dealing with variants 
+
+\textbackslash{}detailed Variant\+: O\+OP Union 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{variant_8h_a044f1082c000649508711a708487c32c}\label{variant_8h_a044f1082c000649508711a708487c32c}} 
+\index{variant.h@{variant.h}!BINARY\_VARIANT\_TAG@{BINARY\_VARIANT\_TAG}}
+\index{BINARY\_VARIANT\_TAG@{BINARY\_VARIANT\_TAG}!variant.h@{variant.h}}
+\doxysubsubsection{\texorpdfstring{BINARY\_VARIANT\_TAG}{BINARY\_VARIANT\_TAG}}
+{\footnotesize\ttfamily \#define B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{Binary\+Tag }\end{DoxyParamCaption})~namespace serialization \{ template$<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr uint8\+\_\+t variant\+\_\+serialization\+\_\+tag$<$Type, uint8\+\_\+t$>$\{Binary\+Tag\}; \}}
+
+
+
+Registers a uint8\+\_\+t variant tag for binary variant serialization. 
+
+\textbackslash{}macro B\+I\+N\+A\+R\+Y\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG \mbox{\Hypertarget{variant_8h_ae32e7bd2853d2f10a4e3c0d36c2ef74d}\label{variant_8h_ae32e7bd2853d2f10a4e3c0d36c2ef74d}} 
+\index{variant.h@{variant.h}!JSON\_VARIANT\_TAG@{JSON\_VARIANT\_TAG}}
+\index{JSON\_VARIANT\_TAG@{JSON\_VARIANT\_TAG}!variant.h@{variant.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_VARIANT\_TAG}{JSON\_VARIANT\_TAG}}
+{\footnotesize\ttfamily \#define J\+S\+O\+N\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{J\+S\+O\+N\+Tag }\end{DoxyParamCaption})~namespace serialization \{ template$<$$>$ \mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}} constexpr std\+::string\+\_\+view variant\+\_\+serialization\+\_\+tag$<$Type, std\+::string\+\_\+view$>$\{J\+S\+O\+N\+Tag\}; \}}
+
+
+
+Registers a string\+\_\+view variant tag for json variant serialization. 
+
+\textbackslash{}macro J\+S\+O\+N\+\_\+\+V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG \mbox{\Hypertarget{variant_8h_a85b4e60c04a2f8dc3bcd7112aa4e6efd}\label{variant_8h_a85b4e60c04a2f8dc3bcd7112aa4e6efd}} 
+\index{variant.h@{variant.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!variant.h@{variant.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG}{VARIANT\_TAG}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{J\+S\+O\+N\+Tag,  }\item[{}]{Binary\+Tag }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{variant_8h_ae32e7bd2853d2f10a4e3c0d36c2ef74d}{JSON\_VARIANT\_TAG}}(Type, JSONTag) \(\backslash\)}
+\DoxyCodeLine{  BINARY\_VARIANT\_TAG(Type, BinaryTag)}
+
+\end{DoxyCode}
+
+
+Registers a variant type using the given json (string view) and binary (uint8\+\_\+t) tags. 
+
+\textbackslash{}macro V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG 

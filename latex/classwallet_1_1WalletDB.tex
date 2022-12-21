@@ -1,0 +1,178 @@
+\hypertarget{classwallet_1_1WalletDB}{}\doxysection{wallet\+::Wallet\+DB Class Reference}
+\label{classwallet_1_1WalletDB}\index{wallet::WalletDB@{wallet::WalletDB}}
+
+
+{\ttfamily \#include $<$db\+\_\+schema.\+hpp$>$}
+
+
+
+Inheritance diagram for wallet\+::Wallet\+DB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classwallet_1_1WalletDB__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::Wallet\+DB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classwallet_1_1WalletDB__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwallet_1_1WalletDB_ace8b45374f39d38f8a213fe3cca096b7}{$\sim$\+Wallet\+DB}} ()
+\item 
+S\+Q\+Lite\+::\+Transaction \mbox{\hyperlink{classwallet_1_1WalletDB_a4813e6c7f42fbc301e2aeb5b37610276}{db\+\_\+transaction}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_af154af9c5c9a2e292f2b5612d1b3d93e}{create\+\_\+schema}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype=\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}})
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{classwallet_1_1WalletDB_a815ec8132aa3ba904262799ddeb5d9cd}{network\+\_\+type}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_a0aebb8e23f30c526765647017a079435}{add\+\_\+address}} (int32\+\_\+t major\+\_\+index, int32\+\_\+t minor\+\_\+index, const std\+::string \&\mbox{\hyperlink{classwallet_1_1address}{address}})
+\item 
+std\+::string \mbox{\hyperlink{classwallet_1_1WalletDB_afa66edf17f5d0c3161021f275105aed6}{get\+\_\+address}} (int32\+\_\+t major\+\_\+index, int32\+\_\+t minor\+\_\+index)
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_ac7e12d3e70ad82acba8776327ddfb251}{store\+\_\+block}} (const \mbox{\hyperlink{structwallet_1_1Block}{Block}} \&block)
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_a63143f91d4787d257db8ea5643414586}{pop\+\_\+block}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_a93136a238aaee3f27debda5b3d239820}{store\+\_\+transaction}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, const int64\+\_\+t height, const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ \&outputs)
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_a386036ab1099e512dc88b09db7083308}{store\+\_\+spends}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, const int64\+\_\+t height, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&spends)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1WalletDB_a3fd82e25a6bd74f8f882123ac6b1f0fd}{last\+\_\+scan\+\_\+height}} ()
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1WalletDB_a778c8a13d4cbd9eae83dd007b0690fa7}{scan\+\_\+target\+\_\+height}} ()
+\item 
+void \mbox{\hyperlink{classwallet_1_1WalletDB_ab5555650ab3ed43eb159783c70f2073d}{update\+\_\+top\+\_\+block\+\_\+info}} (int64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1WalletDB_aaafda5e569c4fdc2108091e61a1e9ded}{overall\+\_\+balance}} ()
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1WalletDB_aa98cb96bc3c542eaa3a991b2d80cab30}{available\+\_\+balance}} (std\+::optional$<$ int64\+\_\+t $>$ min\+\_\+amount)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ \mbox{\hyperlink{classwallet_1_1WalletDB_ac441f3a06ac760ac1873724129b3a06a}{available\+\_\+outputs}} (std\+::optional$<$ int64\+\_\+t $>$ min\+\_\+amount)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classwallet_1_1WalletDB_a7995b975d485d3b875d51d3e2a4e1a29}{chain\+\_\+output\+\_\+count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwallet_1_1WalletDB_ace8b45374f39d38f8a213fe3cca096b7}\label{classwallet_1_1WalletDB_ace8b45374f39d38f8a213fe3cca096b7}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!````~WalletDB@{$\sim$WalletDB}}
+\index{````~WalletDB@{$\sim$WalletDB}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{$\sim$WalletDB()}{~WalletDB()}}
+{\footnotesize\ttfamily wallet\+::\+Wallet\+D\+B\+::$\sim$\+Wallet\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a0aebb8e23f30c526765647017a079435}\label{classwallet_1_1WalletDB_a0aebb8e23f30c526765647017a079435}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!add\_address@{add\_address}}
+\index{add\_address@{add\_address}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{add\_address()}{add\_address()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::add\+\_\+address (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{major\+\_\+index,  }\item[{int32\+\_\+t}]{minor\+\_\+index,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_aa98cb96bc3c542eaa3a991b2d80cab30}\label{classwallet_1_1WalletDB_aa98cb96bc3c542eaa3a991b2d80cab30}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!available\_balance@{available\_balance}}
+\index{available\_balance@{available\_balance}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{available\_balance()}{available\_balance()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+D\+B\+::available\+\_\+balance (\begin{DoxyParamCaption}\item[{std\+::optional$<$ int64\+\_\+t $>$}]{min\+\_\+amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_ac441f3a06ac760ac1873724129b3a06a}\label{classwallet_1_1WalletDB_ac441f3a06ac760ac1873724129b3a06a}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!available\_outputs@{available\_outputs}}
+\index{available\_outputs@{available\_outputs}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{available\_outputs()}{available\_outputs()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ wallet\+::\+Wallet\+D\+B\+::available\+\_\+outputs (\begin{DoxyParamCaption}\item[{std\+::optional$<$ int64\+\_\+t $>$}]{min\+\_\+amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a7995b975d485d3b875d51d3e2a4e1a29}\label{classwallet_1_1WalletDB_a7995b975d485d3b875d51d3e2a4e1a29}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!chain\_output\_count@{chain\_output\_count}}
+\index{chain\_output\_count@{chain\_output\_count}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{chain\_output\_count()}{chain\_output\_count()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+D\+B\+::chain\+\_\+output\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_af154af9c5c9a2e292f2b5612d1b3d93e}\label{classwallet_1_1WalletDB_af154af9c5c9a2e292f2b5612d1b3d93e}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!create\_schema@{create\_schema}}
+\index{create\_schema@{create\_schema}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{create\_schema()}{create\_schema()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::create\+\_\+schema (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype = {\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a4813e6c7f42fbc301e2aeb5b37610276}\label{classwallet_1_1WalletDB_a4813e6c7f42fbc301e2aeb5b37610276}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!db\_transaction@{db\_transaction}}
+\index{db\_transaction@{db\_transaction}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{db\_transaction()}{db\_transaction()}}
+{\footnotesize\ttfamily S\+Q\+Lite\+::\+Transaction wallet\+::\+Wallet\+D\+B\+::db\+\_\+transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_afa66edf17f5d0c3161021f275105aed6}\label{classwallet_1_1WalletDB_afa66edf17f5d0c3161021f275105aed6}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!get\_address@{get\_address}}
+\index{get\_address@{get\_address}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{get\_address()}{get\_address()}}
+{\footnotesize\ttfamily std\+::string wallet\+::\+Wallet\+D\+B\+::get\+\_\+address (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{major\+\_\+index,  }\item[{int32\+\_\+t}]{minor\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a3fd82e25a6bd74f8f882123ac6b1f0fd}\label{classwallet_1_1WalletDB_a3fd82e25a6bd74f8f882123ac6b1f0fd}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!last\_scan\_height@{last\_scan\_height}}
+\index{last\_scan\_height@{last\_scan\_height}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{last\_scan\_height()}{last\_scan\_height()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+D\+B\+::last\+\_\+scan\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a815ec8132aa3ba904262799ddeb5d9cd}\label{classwallet_1_1WalletDB_a815ec8132aa3ba904262799ddeb5d9cd}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!network\_type@{network\_type}}
+\index{network\_type@{network\_type}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{network\_type()}{network\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} wallet\+::\+Wallet\+D\+B\+::network\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_aaafda5e569c4fdc2108091e61a1e9ded}\label{classwallet_1_1WalletDB_aaafda5e569c4fdc2108091e61a1e9ded}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!overall\_balance@{overall\_balance}}
+\index{overall\_balance@{overall\_balance}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{overall\_balance()}{overall\_balance()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+D\+B\+::overall\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a63143f91d4787d257db8ea5643414586}\label{classwallet_1_1WalletDB_a63143f91d4787d257db8ea5643414586}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!pop\_block@{pop\_block}}
+\index{pop\_block@{pop\_block}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{pop\_block()}{pop\_block()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::pop\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a778c8a13d4cbd9eae83dd007b0690fa7}\label{classwallet_1_1WalletDB_a778c8a13d4cbd9eae83dd007b0690fa7}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!scan\_target\_height@{scan\_target\_height}}
+\index{scan\_target\_height@{scan\_target\_height}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{scan\_target\_height()}{scan\_target\_height()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Wallet\+D\+B\+::scan\+\_\+target\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_ac7e12d3e70ad82acba8776327ddfb251}\label{classwallet_1_1WalletDB_ac7e12d3e70ad82acba8776327ddfb251}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!store\_block@{store\_block}}
+\index{store\_block@{store\_block}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{store\_block()}{store\_block()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::store\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structwallet_1_1Block}{Block}} \&}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a386036ab1099e512dc88b09db7083308}\label{classwallet_1_1WalletDB_a386036ab1099e512dc88b09db7083308}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!store\_spends@{store\_spends}}
+\index{store\_spends@{store\_spends}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{store\_spends()}{store\_spends()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::store\+\_\+spends (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{const int64\+\_\+t}]{height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&}]{spends }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_a93136a238aaee3f27debda5b3d239820}\label{classwallet_1_1WalletDB_a93136a238aaee3f27debda5b3d239820}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!store\_transaction@{store\_transaction}}
+\index{store\_transaction@{store\_transaction}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{store\_transaction()}{store\_transaction()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::store\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{const int64\+\_\+t}]{height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ \&}]{outputs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1WalletDB_ab5555650ab3ed43eb159783c70f2073d}\label{classwallet_1_1WalletDB_ab5555650ab3ed43eb159783c70f2073d}} 
+\index{wallet::WalletDB@{wallet::WalletDB}!update\_top\_block\_info@{update\_top\_block\_info}}
+\index{update\_top\_block\_info@{update\_top\_block\_info}!wallet::WalletDB@{wallet::WalletDB}}
+\doxysubsubsection{\texorpdfstring{update\_top\_block\_info()}{update\_top\_block\_info()}}
+{\footnotesize\ttfamily void wallet\+::\+Wallet\+D\+B\+::update\+\_\+top\+\_\+block\+\_\+info (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{db__schema_8hpp}{db\+\_\+schema.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{db__schema_8cpp}{db\+\_\+schema.\+cpp}}\end{DoxyCompactItemize}

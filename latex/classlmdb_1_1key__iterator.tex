@@ -1,0 +1,274 @@
+\hypertarget{classlmdb_1_1key__iterator}{}\doxysection{lmdb\+::key\+\_\+iterator$<$ K, V $>$ Class Template Reference}
+\label{classlmdb_1_1key__iterator}\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+
+
+{\ttfamily \#include $<$key\+\_\+stream.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}} = std\+::pair$<$ K, boost\+::iterator\+\_\+range$<$ \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ V $>$ $>$$>$
+\item 
+using \mbox{\hyperlink{classlmdb_1_1key__iterator_a94b8b7a98cf8000dbef187a38d20bad2}{reference}} = \mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}}
+\item 
+using \mbox{\hyperlink{classlmdb_1_1key__iterator_a09bf7a36af7f6434deb46301882ac317}{pointer}} = void
+\item 
+using \mbox{\hyperlink{classlmdb_1_1key__iterator_adb52ff5ec6276f0d8d8d4ae97b2a71ca}{difference\+\_\+type}} = std\+::size\+\_\+t
+\item 
+using \mbox{\hyperlink{classlmdb_1_1key__iterator_a81a52c1c0ee96673d3cf806e90decfed}{iterator\+\_\+category}} = std\+::input\+\_\+iterator\+\_\+tag
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlmdb_1_1key__iterator_a46d24ac11ae7c4b18bb2ff6e8af2433e}{key\+\_\+iterator}} () noexcept
+\begin{DoxyCompactList}\small\item\em Construct an \char`\"{}end\char`\"{} iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlmdb_1_1key__iterator_a85896b1cf27b242b381c1a2f88408d02}{key\+\_\+iterator}} (M\+D\+B\+\_\+cursor $\ast$\mbox{\hyperlink{classlmdb_1_1key__iterator_af7671e3193c3ee71bcad019ce4c52e3a}{cur}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classlmdb_1_1key__iterator_a726404c069f16a62867c45d92de631f4}{is\+\_\+end}} () const noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classlmdb_1_1key__iterator_a939260b751bab7e85301dc36e97dfb47}{equal}} (\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} const \&rhs) const noexcept
+\item 
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} \& \mbox{\hyperlink{classlmdb_1_1key__iterator_a7d5355656fa7354e3a1a7dc1bf65b1c9}{operator++}} ()
+\item 
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} \mbox{\hyperlink{classlmdb_1_1key__iterator_a85df0c7655c3de938d63377938b0817b}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}} \mbox{\hyperlink{classlmdb_1_1key__iterator_afd1816c4e5d21ce19a3b777a40992abe}{operator$\ast$}} () const
+\item 
+K \mbox{\hyperlink{classlmdb_1_1key__iterator_a7bf784269c25f78cf3f03a8ff248e851}{get\+\_\+key}} () const noexcept
+\item 
+{\footnotesize template$<$typename T  = V, typename F  = T, std\+::size\+\_\+t offset = 0$>$ }\\\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ \mbox{\hyperlink{classlmdb_1_1key__iterator_ad912270a1dbace9727f8011117ac3975}{make\+\_\+value\+\_\+iterator}} () const
+\item 
+{\footnotesize template$<$typename T  = V, typename F  = T, std\+::size\+\_\+t offset = 0$>$ }\\boost\+::iterator\+\_\+range$<$ \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ $>$ \mbox{\hyperlink{classlmdb_1_1key__iterator_a26fad03dcb16c641be42ac50521eb0d8}{make\+\_\+value\+\_\+range}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlmdb_1_1key__iterator_a4574243e9e8dc37c075aaaaf7f5f5053}{increment}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+M\+D\+B\+\_\+cursor $\ast$ \mbox{\hyperlink{classlmdb_1_1key__iterator_af7671e3193c3ee71bcad019ce4c52e3a}{cur}}
+\item 
+epee\+::span$<$ const std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{classlmdb_1_1key__iterator_a8e575b2d26c033c44f2ee3dba1912c21}{key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V$>$\newline
+class lmdb\+::key\+\_\+iterator$<$ K, V $>$}
+
+An Input\+Iterator for a fixed-\/sized L\+M\+DB key and value. {\ttfamily operator++} iterates over keys.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & Key type in database records. \\
+\hline
+{\em V} & Value type in database records.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+This meets requirements for an Input\+Iterator only. The iterator can only be incremented and dereferenced. All copies of an iterator share the same L\+M\+DB cursor, and therefore incrementing any copy will change the cursor state for all (incrementing an iterator will invalidate all prior copies of the iterator). Usage is identical to {\ttfamily std\+::istream\+\_\+iterator}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_adb52ff5ec6276f0d8d8d4ae97b2a71ca}\label{classlmdb_1_1key__iterator_adb52ff5ec6276f0d8d8d4ae97b2a71ca}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator_adb52ff5ec6276f0d8d8d4ae97b2a71ca}{difference\+\_\+type}} =  std\+::size\+\_\+t}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a81a52c1c0ee96673d3cf806e90decfed}\label{classlmdb_1_1key__iterator_a81a52c1c0ee96673d3cf806e90decfed}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator_a81a52c1c0ee96673d3cf806e90decfed}{iterator\+\_\+category}} =  std\+::input\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a09bf7a36af7f6434deb46301882ac317}\label{classlmdb_1_1key__iterator_a09bf7a36af7f6434deb46301882ac317}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator_a09bf7a36af7f6434deb46301882ac317}{pointer}} =  void}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a94b8b7a98cf8000dbef187a38d20bad2}\label{classlmdb_1_1key__iterator_a94b8b7a98cf8000dbef187a38d20bad2}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!reference@{reference}}
+\index{reference@{reference}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator_a94b8b7a98cf8000dbef187a38d20bad2}{reference}} =  \mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}}}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}\label{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}} =  std\+::pair$<$K, boost\+::iterator\+\_\+range$<$\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$V$>$ $>$$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a46d24ac11ae7c4b18bb2ff6e8af2433e}\label{classlmdb_1_1key__iterator_a46d24ac11ae7c4b18bb2ff6e8af2433e}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!key\_iterator@{key\_iterator}}
+\index{key\_iterator@{key\_iterator}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{key\_iterator()}{key\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an \char`\"{}end\char`\"{} iterator. 
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a85896b1cf27b242b381c1a2f88408d02}\label{classlmdb_1_1key__iterator_a85896b1cf27b242b381c1a2f88408d02}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!key\_iterator@{key\_iterator}}
+\index{key\_iterator@{key\_iterator}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{key\_iterator()}{key\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & Iterate over keys starting at this cursor position. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if unexpected L\+M\+DB error. This can happen if {\ttfamily cur} is invalid. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a939260b751bab7e85301dc36e97dfb47}\label{classlmdb_1_1key__iterator_a939260b751bab7e85301dc36e97dfb47}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!equal@{equal}}
+\index{equal@{equal}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True iff {\ttfamily rhs} is referencing {\ttfamily this} key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a7bf784269c25f78cf3f03a8ff248e851}\label{classlmdb_1_1key__iterator_a7bf784269c25f78cf3f03a8ff248e851}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!get\_key@{get\_key}}
+\index{get\_key@{get\_key}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get\_key()}{get\_key()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+K \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::get\+\_\+key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily !is\+\_\+end()} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+Current key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a4574243e9e8dc37c075aaaaf7f5f5053}\label{classlmdb_1_1key__iterator_a4574243e9e8dc37c075aaaaf7f5f5053}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!increment@{increment}}
+\index{increment@{increment}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+void \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a726404c069f16a62867c45d92de631f4}\label{classlmdb_1_1key__iterator_a726404c069f16a62867c45d92de631f4}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!is\_end@{is\_end}}
+\index{is\_end@{is\_end}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{is\_end()}{is\_end()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::is\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily this} is one-\/past the last key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_ad912270a1dbace9727f8011117ac3975}\label{classlmdb_1_1key__iterator_ad912270a1dbace9727f8011117ac3975}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!make\_value\_iterator@{make\_value\_iterator}}
+\index{make\_value\_iterator@{make\_value\_iterator}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{make\_value\_iterator()}{make\_value\_iterator()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+template$<$typename T  = V, typename F  = T, std\+::size\+\_\+t offset = 0$>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset$>$ \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::make\+\_\+value\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a C++ iterator over database values from current cursor position that will reach {\ttfamily .\mbox{\hyperlink{classlmdb_1_1key__iterator_a726404c069f16a62867c45d92de631f4}{is\+\_\+end()}}} after the last duplicate key record. Calling {\ttfamily make\+\_\+iterator()} will return an iterator whose {\ttfamily operator$\ast$} will return an entire value ({\ttfamily V}). {\ttfamily make\+\_\+iterator$<$\mbox{\hyperlink{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}{M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+L\+D(account, id)}}$>$()} will return an iterator whose {\ttfamily operator$\ast$} will return a {\ttfamily decltype(account.\+id)} object -\/ the other fields in the struct {\ttfamily account} are never copied from the database.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if L\+M\+DB has unexpected errors. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+C++ iterator starting at current cursor position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a26fad03dcb16c641be42ac50521eb0d8}\label{classlmdb_1_1key__iterator_a26fad03dcb16c641be42ac50521eb0d8}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!make\_value\_range@{make\_value\_range}}
+\index{make\_value\_range@{make\_value\_range}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{make\_value\_range()}{make\_value\_range()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+template$<$typename T  = V, typename F  = T, std\+::size\+\_\+t offset = 0$>$ \\
+boost\+::iterator\+\_\+range$<$\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset$>$ $>$ \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::make\+\_\+value\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a range from current cursor position until last duplicate key record. Useful in for-\/each range loops or in templated code expecting a range of elements. Calling {\ttfamily make\+\_\+range()} will return a range of {\ttfamily T} objects. {\ttfamily make\+\_\+range$<$\mbox{\hyperlink{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}{M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+L\+D(account, id)}}$>$()} will return a range of {\ttfamily decltype(account.\+id)} objects -\/ the other fields in the struct {\ttfamily account} are never copied from the database.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if L\+M\+DB has unexpected errors. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+An Input\+Iterator range over values at cursor position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_afd1816c4e5d21ce19a3b777a40992abe}\label{classlmdb_1_1key__iterator_afd1816c4e5d21ce19a3b777a40992abe}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{classlmdb_1_1key__iterator_a9ce1c621b4c74448ab82923cf79a008f}{value\+\_\+type}} \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily !is\+\_\+end()} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+\{current key, current value range\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a7d5355656fa7354e3a1a7dc1bf65b1c9}\label{classlmdb_1_1key__iterator_a7d5355656fa7354e3a1a7dc1bf65b1c9}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}\& \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves iterator to next key or end. Invalidates all prior copies of the iterator. \mbox{\Hypertarget{classlmdb_1_1key__iterator_a85df0c7655c3de938d63377938b0817b}\label{classlmdb_1_1key__iterator_a85df0c7655c3de938d63377938b0817b}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}} \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves iterator to next key or end.
+
+\begin{DoxyReturn}{Returns}
+A copy that is already invalidated, ignore 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_af7671e3193c3ee71bcad019ce4c52e3a}\label{classlmdb_1_1key__iterator_af7671e3193c3ee71bcad019ce4c52e3a}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!cur@{cur}}
+\index{cur@{cur}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+M\+D\+B\+\_\+cursor$\ast$ \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::cur\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlmdb_1_1key__iterator_a8e575b2d26c033c44f2ee3dba1912c21}\label{classlmdb_1_1key__iterator_a8e575b2d26c033c44f2ee3dba1912c21}} 
+\index{lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}!key@{key}}
+\index{key@{key}!lmdb::key\_iterator$<$ K, V $>$@{lmdb::key\_iterator$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+epee\+::span$<$const std\+::uint8\+\_\+t$>$ \mbox{\hyperlink{classlmdb_1_1key__iterator}{lmdb\+::key\+\_\+iterator}}$<$ K, V $>$\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lmdb/\mbox{\hyperlink{key__stream_8h}{key\+\_\+stream.\+h}}\end{DoxyCompactItemize}

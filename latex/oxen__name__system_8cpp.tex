@@ -1,0 +1,251 @@
+\hypertarget{oxen__name__system_8cpp}{}\doxysection{src/cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.cpp File Reference}
+\label{oxen__name__system_8cpp}\index{src/cryptonote\_core/oxen\_name\_system.cpp@{src/cryptonote\_core/oxen\_name\_system.cpp}}
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+name\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/base32z.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/base64.\+h$>$}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+generichash.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+generichash\+\_\+blake2b.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+pwhash.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+secretbox.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+aead\+\_\+xchacha20poly1305.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+sign.\+h$>$}\newline
+{\ttfamily \#include $<$sodium/randombytes.\+h$>$}\newline
+Include dependency graph for oxen\+\_\+name\+\_\+system.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__name__system_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1blob__view}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::blob\+\_\+view}}
+\item 
+struct \mbox{\hyperlink{structons_1_1secretbox__secret__key}{ons\+::secretbox\+\_\+secret\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_1_1scoped__db__transaction}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::scoped\+\_\+db\+\_\+transaction}}
+\item 
+struct \mbox{\hyperlink{structons_1_1ons__update__history}{ons\+::ons\+\_\+update\+\_\+history}}
+\item 
+struct \mbox{\hyperlink{structons_1_1replay__ons__tx}{ons\+::replay\+\_\+ons\+\_\+tx}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceons}{ons}}
+\item 
+ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a9121b60893dd7557263ff2f9cb2c9727}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::update\+\_\+variant}} = std\+::variant$<$ uint16\+\_\+t, int64\+\_\+t, uint64\+\_\+t, blob\+\_\+view, std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875f}{ons\+::ons\+\_\+sql\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875faa39e8a0a61b23b46acf13f737d4e92ac}{ons\+::ons\+\_\+sql\+\_\+type\+::save\+\_\+owner}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa1c4c01e6992f53a0be41dee474ccd5b2}{ons\+::ons\+\_\+sql\+\_\+type\+::save\+\_\+setting}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa96405c71c65c734e1ad728ab6aa011af}{ons\+::ons\+\_\+sql\+\_\+type\+::save\+\_\+mapping}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa6e4e50e38fdf94b800891c532bf2f5e7}{ons\+::ons\+\_\+sql\+\_\+type\+::pruning}}, 
+\newline
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fad0a92d3e2d06e8142f3afd7bbf344ef2}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+sentinel\+\_\+start}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875faf5cd6e7a2f4fcf1d533633dd4ed57f25}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+mapping}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fac556c4ffbb919ae837bd388807ad80fa}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+mappings}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa832a2d0d2dacf9747cb431181637fceb}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+mappings\+\_\+by\+\_\+owner}}, 
+\newline
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa7819a719d2dac688ee2b3d5060633c7b}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+mappings\+\_\+by\+\_\+owners}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fac05a84debdf766d26b4d6e49ad927fd6}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+mapping\+\_\+counts}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa472d9aac3c743d0af2a67ae3feccf053}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+owner}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa6a078a193e873655ee215a53d776eb72}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+setting}}, 
+\newline
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa1f93a1123ba5e4d2642b904e93843615}{ons\+::ons\+\_\+sql\+\_\+type\+::get\+\_\+sentinel\+\_\+end}}, 
+\mbox{\hyperlink{namespaceons_af134dd699adb40e4e35b16a98cf6875fa7925ea2aff689056d4da1db938141087}{ons\+::ons\+\_\+sql\+\_\+type\+::internal\+\_\+cmd}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceons_a49af0b2d45e26b48e5be30c3ed0f6581}{ons\+::ons\+\_\+db\+\_\+setting\+\_\+column}} \{ \mbox{\hyperlink{namespaceons_a49af0b2d45e26b48e5be30c3ed0f6581ab80bb7740288fda1f201890375a60c8f}{ons\+::ons\+\_\+db\+\_\+setting\+\_\+column\+::id}}, 
+\mbox{\hyperlink{namespaceons_a49af0b2d45e26b48e5be30c3ed0f6581a9f43c5a4083f7f3b0e90bf91572d1833}{ons\+::ons\+\_\+db\+\_\+setting\+\_\+column\+::top\+\_\+height}}, 
+\mbox{\hyperlink{namespaceons_a49af0b2d45e26b48e5be30c3ed0f6581abac34cca0b43eb0efc8ea0ab3d26eb81}{ons\+::ons\+\_\+db\+\_\+setting\+\_\+column\+::top\+\_\+hash}}, 
+\mbox{\hyperlink{namespaceons_a49af0b2d45e26b48e5be30c3ed0f6581a2af72f100c356273d46284f6fd1dfc08}{ons\+::ons\+\_\+db\+\_\+setting\+\_\+column\+::version}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceons_a3ec7f0a6bdd35207da5b4b16f784a78d}{ons\+::owner\+\_\+record\+\_\+column}} \{ \mbox{\hyperlink{namespaceons_a3ec7f0a6bdd35207da5b4b16f784a78dab80bb7740288fda1f201890375a60c8f}{ons\+::owner\+\_\+record\+\_\+column\+::id}}, 
+\mbox{\hyperlink{namespaceons_a3ec7f0a6bdd35207da5b4b16f784a78da884d9804999fc47a3c2694e49ad2536a}{ons\+::owner\+\_\+record\+\_\+column\+::address}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198}{ons\+::mapping\+\_\+record\+\_\+column}} \{ \newline
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198ab80bb7740288fda1f201890375a60c8f}{ons\+::mapping\+\_\+record\+\_\+column\+::id}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198a599dcce2998a6b40b1e38e8c6006cb0a}{ons\+::mapping\+\_\+record\+\_\+column\+::type}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198ae1022827ac197e6f561d1836d2d69199}{ons\+::mapping\+\_\+record\+\_\+column\+::name\+\_\+hash}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198a342301320257a2631bd4048aab01b241}{ons\+::mapping\+\_\+record\+\_\+column\+::encrypted\+\_\+value}}, 
+\newline
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198a9b969084f7ec867ea9bfad11fbb4d3f8}{ons\+::mapping\+\_\+record\+\_\+column\+::txid}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198a5e7b19364b8de2dedd3aa48cf62706e3}{ons\+::mapping\+\_\+record\+\_\+column\+::owner\+\_\+id}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198a6a22558f2dbebab26da9be9e85c76131}{ons\+::mapping\+\_\+record\+\_\+column\+::backup\+\_\+owner\+\_\+id}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198ae668763cd829611ec8f0157be62250c4}{ons\+::mapping\+\_\+record\+\_\+column\+::update\+\_\+height}}, 
+\newline
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198adba237f346a929f2c5eaa94fa040591c}{ons\+::mapping\+\_\+record\+\_\+column\+::expiration\+\_\+height}}, 
+\mbox{\hyperlink{namespaceons_a25ed3cf590b8c2db8b59364d9adb5198ad69186af02738a9b3ced1bc5b652ba55}{ons\+::mapping\+\_\+record\+\_\+column\+::\+\_\+count}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::db\+\_\+version}} \{ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a9abcde3c584628a02620bf796dee1204}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::db\+\_\+version\+::v0}}, 
+\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a6d8d1cba59eff73e8be213a3d74623ea}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::db\+\_\+version\+::v1\+\_\+track\+\_\+updates}}, 
+\mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad0b9568ed32d575ffc026809475e89d0a990e3cc7c5ecd2903ce83815a5fedc7b}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::db\+\_\+version\+::v2\+\_\+full\+\_\+rows}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab52b69539b9d431fd7c1d419fb2fd2cf}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::ons\+\_\+extra\+\_\+string}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a726d72311eedbe7944c15da4b1d749cd}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::clear\+\_\+bindings}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Clears any existing bindings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ad27e2a1e5a08f1f2cefa29916c39671d}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::reset}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Resets. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a225a9d178dab0b8aca2a99db05e98e56}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::step}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=4), int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3b6f29d512d3717d189726af74303dc8}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a4fae061257a019a9ba333133fc694cd1}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, std\+::nullptr\+\_\+t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c26a0ade7cd0003f070d7665d096af0}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const std\+::optional$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&val)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a12eba601cd83047309d28d21b1e350ea}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, std\+::string\+\_\+view text)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af8a3ebf9fc5b2dc8401c5cc4cafdf76b}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, blob\+\_\+view blob)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_aa1f451f7615af64a1b8bc9ad6a0ec46f}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index, const std\+::variant$<$ T... $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a000b775ac105a8e1fd01fbe529c9d21e}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+int\+\_\+enum\+\_\+impl}} ()
+\item 
+{\footnotesize template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3df468883abfca74d678d5db3cfca737}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&val)
+\item 
+{\footnotesize template$<$int... I, typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8e5a220fb3753d45176bada793b38544}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+all\+\_\+impl}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, std\+::integer\+\_\+sequence$<$ int, I... $>$, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab0d1d7abb40e6d46a664083838a2e435}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+all}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a515a076974d13a58304980608b01ccae}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+container}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, const Container \&c)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&(sizeof(\+T)$<$=32), int $>$  = 0$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c8a14d36eee0d6b6caae490124afe65}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\begin{DoxyCompactList}\small\item\em Retrieve a type from an executed statement. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string\+\_\+view $>$, int $>$  = 0$>$ }\\std\+::string\+\_\+view \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a11dff3d5b6347d25dd0590021e96bb1d}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string $>$, int $>$  = 0$>$ }\\std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a49474a71a1c434c4ecb2cd3f3469a6e4}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, blob\+\_\+view $>$, int $>$  = 0$>$ }\\blob\+\_\+view \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a6c0658392342fdfab5223c3071c433f9}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, int index)
+\item 
+{\footnotesize template$<$typename T , typename I , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+int\+\_\+enum$<$ I $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a8f7a8804987570e2c48cfa3b4b9cb6bd}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index)
+\item 
+{\footnotesize template$<$typename T , typename I $>$ }\\void \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a246f331aedaf06d98cac661b43601951}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::get}} (sql\+\_\+compiled\+\_\+statement \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, I index, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename I $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_add0008493435b479a7c00d66ae0f5b2a}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+copy\+\_\+blob}} (sql\+\_\+compiled\+\_\+statement \&statement, I column, void $\ast$dest, size\+\_\+t dest\+\_\+size)
+\item 
+mapping\+\_\+record \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a728cc7c5fa8131a0b58ad5d7b32936ba}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+get\+\_\+mapping\+\_\+from\+\_\+statement}} (sql\+\_\+compiled\+\_\+statement \&statement)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afdc174127e34c7b92ce63c841b096dc9}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+run\+\_\+statement}} (ons\+\_\+sql\+\_\+type type, sql\+\_\+compiled\+\_\+statement \&statement, void $\ast$context)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a3da95bd4a68e03008f5b2d8c94846d40}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::bind\+\_\+and\+\_\+run}} (ons\+\_\+sql\+\_\+type type, sql\+\_\+compiled\+\_\+statement \&statement, void $\ast$context, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... bind\+\_\+args)
+\item 
+sqlite3 $\ast$ \mbox{\hyperlink{namespaceons_ae450f35e1f708d5b8f9f854776ac5345}{ons\+::init\+\_\+oxen\+\_\+name\+\_\+system}} (const fs\+::path \&file\+\_\+path, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} read\+\_\+only)
+\item 
+std\+::vector$<$ mapping\+\_\+type $>$ \mbox{\hyperlink{namespaceons_a728fd67fbf1fef8f0c4b0774ffbb60d0}{ons\+::all\+\_\+mapping\+\_\+types}} (hf hf\+\_\+version)
+\item 
+std\+::optional$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{namespaceons_ac75415847a1185189cbafb64b29fff41}{ons\+::expiry\+\_\+blocks}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, mapping\+\_\+type type)
+\item 
+static void \mbox{\hyperlink{namespaceons_ad0da404c7dba19e4c1c7e5337b5a3676}{ons\+::append\+\_\+owner}} (std\+::string \&buffer, const \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} $\ast$owner)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_afa04817974e51ad4e41abb679877b2ff}{ons\+::tx\+\_\+extra\+\_\+signature}} (std\+::string\+\_\+view value, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const $\ast$owner, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const $\ast$backup\+\_\+owner, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&prev\+\_\+txid)
+\item 
+\mbox{\hyperlink{structons_1_1generic__signature}{ons\+::generic\+\_\+signature}} \mbox{\hyperlink{namespaceons_a86725b235150e0f6d85b8c93a115bf03}{ons\+::make\+\_\+ed25519\+\_\+signature}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&hash, \mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{crypto\+::ed25519\+\_\+secret\+\_\+key}} const \&skey)
+\item 
+\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} \mbox{\hyperlink{namespaceons_a9efe9b6629c76827de5b2eaab2219afc}{ons\+::make\+\_\+monero\+\_\+owner}} (\mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} const \&owner, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+subaddress)
+\item 
+\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} \mbox{\hyperlink{namespaceons_a93501e0ded065d327487c5db25ff7dd2}{ons\+::make\+\_\+ed25519\+\_\+owner}} (\mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} const \&pkey)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_ad608997cae6fc1e3786ecb64189f1148}{ons\+::parse\+\_\+owner\+\_\+to\+\_\+generic\+\_\+owner}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, std\+::string\+\_\+view owner, generic\+\_\+owner \&result, std\+::string $\ast$reason)
+\item 
+{\footnotesize template$<$char... Extra$>$ }\\static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_a70523248e2dae54c5299ef8c37d296f7}{ons\+::char\+\_\+is\+\_\+alphanum\+\_\+or}} (char c)
+\item 
+static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_a6d7886d720e34bbca8027c2806d0803f}{ons\+::char\+\_\+is\+\_\+alphanum}} (char c)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_ae983dd54873b721fb0bbdc7deb7bda28}{ons\+::check\+\_\+condition}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} condition, std\+::string $\ast$reason, std\+::string\+\_\+view format, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&... args)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_aed4be8981d98b0577eca75418fb41eed}{ons\+::validate\+\_\+ons\+\_\+name}} (mapping\+\_\+type type, std\+::string name, std\+::string $\ast$reason)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} $>$ \mbox{\hyperlink{namespaceons_a454f3595df7c0a1a14f37b939329cd39}{ons\+::encrypted\+\_\+wallet\+\_\+value\+\_\+to\+\_\+info}} (std\+::string name, std\+::string encrypted\+\_\+value, std\+::string nonce)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_aa792f870f4febbe619c6595acb1ce158}{ons\+::check\+\_\+lengths}} (mapping\+\_\+type type, std\+::string\+\_\+view value, size\+\_\+t max, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} binary\+\_\+val, std\+::string $\ast$reason)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_afaf712021644e21862dc99657dfb727a}{ons\+::name\+\_\+hash\+\_\+bytes\+\_\+to\+\_\+base64}} (std\+::string\+\_\+view bytes)
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{namespaceons_aa6316b06d749f836540199855e0c2ee3}{ons\+::name\+\_\+hash\+\_\+input\+\_\+to\+\_\+base64}} (std\+::string\+\_\+view input)
+\item 
+static std\+::string \mbox{\hyperlink{namespaceons_ac45cfd3c8d402dad18a2a83c00af7f08}{ons\+::hash\+\_\+to\+\_\+base64}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&hash)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_ad788e14b3b291a2abfbdaf020d5ad515}{ons\+::verify\+\_\+ons\+\_\+signature}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&hash, \mbox{\hyperlink{structons_1_1generic__signature}{ons\+::generic\+\_\+signature}} const \&signature, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&owner)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_ae5aa5f4eab5672a642afd3295378bb57}{ons\+::validate\+\_\+against\+\_\+previous\+\_\+mapping}} (\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&ons\+\_\+db, uint64\+\_\+t blockchain\+\_\+height, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const \&tx, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&ons\+\_\+extra, std\+::string $\ast$reason)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_a88020d7d89529e10e19b84f3770a0a0f}{ons\+::validate\+\_\+mapping\+\_\+type}} (std\+::string\+\_\+view mapping\+\_\+type\+\_\+str, hf hf\+\_\+version, ons\+\_\+tx\+\_\+type txtype, \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{ons\+::mapping\+\_\+type}} $\ast$mapping\+\_\+type, std\+::string $\ast$reason)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceons_a333a47bb814504a3fbe576e3e2254b9c}{ons\+::name\+\_\+to\+\_\+hash}} (std\+::string\+\_\+view name, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&key)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_a67d0014e0fe6296f8ff6d755925009c2}{ons\+::name\+\_\+to\+\_\+base64\+\_\+hash}} (std\+::string\+\_\+view name)
+\item 
+static void \mbox{\hyperlink{namespaceons_a4b09a40d62f942310bdb04c254469896}{ons\+::name\+\_\+to\+\_\+encryption\+\_\+key}} (std\+::string\+\_\+view name, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$name\+\_\+hash, secretbox\+\_\+secret\+\_\+key \&out)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_abf1354319beceba0a64975549a1fcca4}{ons\+::name\+\_\+to\+\_\+encryption\+\_\+key\+\_\+argon2}} (std\+::string\+\_\+view name, secretbox\+\_\+secret\+\_\+key \&out)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a42e24bd2ff7952716bf9784f82165db9}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::build\+\_\+default\+\_\+tables}} (name\+\_\+system\+\_\+db \&ons\+\_\+db)
+\item 
+std\+::optional$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac089e59e81303aff588873dc7433900f}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::add\+\_\+or\+\_\+get\+\_\+owner\+\_\+id}} (\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&ons\+\_\+db, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&tx\+\_\+hash, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&entry, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&key)
+\item 
+std\+::pair$<$ std\+::string, std\+::vector$<$ update\+\_\+variant $>$ $>$ \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_afee54c6e455dcecf4eb8a1c0a5f3e228}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::update\+\_\+record\+\_\+query}} (name\+\_\+system\+\_\+db \&ons\+\_\+db, uint64\+\_\+t height, const \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} \&entry, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a709b38d72367f4f4af84c7876dbdb2ed}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::add\+\_\+ons\+\_\+entry}} (\mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}} \&ons\+\_\+db, uint64\+\_\+t height, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&entry, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&tx\+\_\+hash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceons_a0aa721cb55a077cf6aa4061b13390944}{ons\+::logcat}} = log\+::\+Cat(\char`\"{}ons\char`\"{})
+\item 
+static constexpr unsigned char \mbox{\hyperlink{namespaceons_af95bf8895d81b333a971cc139f3ace81}{ons\+::\+O\+L\+D\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+N\+O\+N\+CE}} \mbox{[}crypto\+\_\+secretbox\+\_\+\+N\+O\+N\+C\+E\+B\+Y\+T\+ES\mbox{]} = \{\}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ac22952c590469a6bbfd50a0d28787b12}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+int\+\_\+enum}} = is\+\_\+int\+\_\+enum\+\_\+impl$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$()
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a892da3fcf452e7423d3be445f03bda71}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::is\+\_\+optional}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceons_af05f8cbc43aa858ff75a43e16c39c8e3}{ons\+::null\+\_\+name\+\_\+hash}} = name\+\_\+to\+\_\+hash(\char`\"{}\char`\"{})
+\item 
+static constexpr unsigned char \mbox{\hyperlink{namespaceons_ad85965d258f5830d6be3333ec35e0f78}{ons\+::\+O\+L\+D\+\_\+\+E\+N\+C\+\_\+\+S\+A\+LT}} \mbox{[}crypto\+\_\+pwhash\+\_\+\+S\+A\+L\+T\+B\+Y\+T\+ES\mbox{]} = \{\}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a559cdf74ca89f9fc2afa1ded86e8606f}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+prefix}}
+\item 
+const std\+::string \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_a1c02b587b8328c5d5d916032e53ac951}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::sql\+\_\+select\+\_\+mappings\+\_\+and\+\_\+owners\+\_\+suffix}} = \char`\"{} G\+R\+O\+UP BY name\+\_\+hash, type\char`\"{}
+\item 
+constexpr auto \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_ab39484d7fe6acc71549d16c449d158dd}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::\+D\+B\+\_\+\+V\+E\+R\+S\+I\+ON}} = db\+\_\+version\+::v2\+\_\+full\+\_\+rows
+\item 
+constexpr auto \mbox{\hyperlink{namespaceons_1_1anonymous__namespace_02oxen__name__system_8cpp_03_af964ec92a0f7907fd8e224921826f656}{ons\+::anonymous\+\_\+namespace\{oxen\+\_\+name\+\_\+system.\+cpp\}\+::\+E\+X\+P\+I\+R\+A\+T\+I\+ON}} = \char`\"{} (expiration\+\_\+height IS N\+U\+LL OR expiration\+\_\+height $>$= ?) \char`\"{}sv
+\end{DoxyCompactItemize}

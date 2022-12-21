@@ -1,0 +1,47 @@
+\hypertarget{oxen__logger_8cpp}{}\doxysection{src/logging/oxen\+\_\+logger.cpp File Reference}
+\label{oxen__logger_8cpp}\index{src/logging/oxen\_logger.cpp@{src/logging/oxen\_logger.cpp}}
+{\ttfamily \#include \char`\"{}oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxen/log.\+hpp$>$}\newline
+{\ttfamily \#include $<$spdlog/sinks/rotating\+\_\+file\+\_\+sink.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+Include dependency graph for oxen\+\_\+logger.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__logger_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceoxen}{oxen}}
+\item 
+ \mbox{\hyperlink{namespaceoxen_1_1logging}{oxen\+::logging}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_a3a6ce4bbf7d8040c021cbc3555a01e0f}{oxen\+::logging\+::set\+\_\+additional\+\_\+log\+\_\+categories}} (log\+::\+Level \&log\+\_\+level)
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_a5d17a25dc1793e5e2be0fef7f652b949}{oxen\+::logging\+::process\+\_\+categories\+\_\+string}} (const std\+::string \&categories)
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_afcb7ca14f4c05098b45d0cc3ac4e28da}{oxen\+::logging\+::init}} (const std\+::string \&log\+\_\+location, log\+::\+Level log\+\_\+level)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_acd7af5fc5c47162e2ee33e93c4713ebb}{oxen\+::logging\+::parse\+\_\+level}} (std\+::string\+\_\+view input)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_a2a3d59eace3406fbcff95923778a9c8a}{oxen\+::logging\+::parse\+\_\+level}} (uint8\+\_\+t input)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_acf23865705b7988cfaba29422255381c}{oxen\+::logging\+::parse\+\_\+level}} (oxenmq\+::\+Log\+Level input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceoxen_1_1logging_ae2e1f43ca7c465e1fb7a19cfcd5d201f}{oxen\+::logging\+::logcat}} = log\+::\+Cat(\char`\"{}logging\char`\"{})
+\item 
+static constexpr std\+::array$<$ std\+::pair$<$ std\+::string\+\_\+view, log\+::\+Level $>$, 12 $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_a453e693d3d5b163369c17369659ecca4}{oxen\+::logging\+::log\+Levels}}
+\item 
+static constexpr std\+::array$<$ std\+::pair$<$ uint8\+\_\+t, log\+::\+Level $>$, 5 $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_a8fb1b47a7616ba2857594cc918e39172}{oxen\+::logging\+::int\+Log\+Levels}}
+\item 
+static constexpr std\+::array$<$ std\+::pair$<$ oxenmq\+::\+Log\+Level, log\+::\+Level $>$, 6 $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_af22d3dad26307b7d849925f4dccb5cc2}{oxen\+::logging\+::omq\+Log\+Levels}}
+\end{DoxyCompactItemize}

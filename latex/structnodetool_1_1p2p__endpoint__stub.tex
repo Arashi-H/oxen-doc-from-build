@@ -1,0 +1,258 @@
+\hypertarget{structnodetool_1_1p2p__endpoint__stub}{}\doxysection{nodetool\+::p2p\+\_\+endpoint\+\_\+stub$<$ t\+\_\+connection\+\_\+context $>$ Struct Template Reference}
+\label{structnodetool_1_1p2p__endpoint__stub}\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+
+
+{\ttfamily \#include $<$net\+\_\+node\+\_\+common.\+h$>$}
+
+
+
+Inheritance diagram for nodetool\+::p2p\+\_\+endpoint\+\_\+stub$<$ t\+\_\+connection\+\_\+context $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{structnodetool_1_1p2p__endpoint__stub__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for nodetool\+::p2p\+\_\+endpoint\+\_\+stub$<$ t\+\_\+connection\+\_\+context $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{structnodetool_1_1p2p__endpoint__stub__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aed78639adfb390a3cbe94fc887628ff2}{relay\+\_\+notify\+\_\+to\+\_\+list}} (int command, const epee\+::span$<$ const uint8\+\_\+t $>$ data\+\_\+buff, std\+::vector$<$ std\+::pair$<$ epee\+::net\+\_\+utils\+::zone, boost\+::uuids\+::uuid $>$$>$ connections)
+\item 
+virtual epee\+::net\+\_\+utils\+::zone \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a64a363712a8578b1a9905a3bcfded7fc}{send\+\_\+txs}} (std\+::vector$<$ std\+::string $>$ txs, const epee\+::net\+\_\+utils\+::zone origin, const boost\+::uuids\+::uuid \&source, const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pad\+\_\+txs)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a0d43f7267dfbe9ecc68fb2b635b43bce}{invoke\+\_\+command\+\_\+to\+\_\+peer}} (int command, const epee\+::span$<$ const uint8\+\_\+t $>$ req\+\_\+buff, std\+::string \&resp\+\_\+buff, const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a287bb3fdeeb5905e533d2484e61f45f9}{invoke\+\_\+notify\+\_\+to\+\_\+peer}} (int command, const epee\+::span$<$ const uint8\+\_\+t $>$ req\+\_\+buff, const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&context)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_af1fc226e289253f48d7abba51850c4a9}{drop\+\_\+connection}} (const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&context)
+\item 
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_ae84b55301c050aba885f3ef3420e9a20}{request\+\_\+callback}} (const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&context)
+\item 
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aca1f2002f63428c84a76de3f11970694}{for\+\_\+each\+\_\+connection}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(t\+\_\+connection\+\_\+context \&, \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}})$>$ f)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aae36c3d42d928e0fc6ce2685a7d4ed7e}{for\+\_\+connection}} (const boost\+::uuids\+::uuid \&, std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(t\+\_\+connection\+\_\+context \&, \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}})$>$ f)
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aa2c4e8311a2325f9505bde86a65dd181}{get\+\_\+public\+\_\+connections\+\_\+count}} ()
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a9cd5dd472218ceca42cdc25473a25bbf}{block\+\_\+host}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address, time\+\_\+t seconds)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a53e7bc5450e6cec4ad6984b0e6422072}{unblock\+\_\+host}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address)
+\item 
+virtual std\+::map$<$ std\+::string, time\+\_\+t $>$ \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a335934a938d98760fe587f44f710aa74}{get\+\_\+blocked\+\_\+hosts}} ()
+\item 
+virtual std\+::map$<$ epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+subnet, time\+\_\+t $>$ \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_a6d1e2d7b317f19c00520cfb7c2114c4f}{get\+\_\+blocked\+\_\+subnets}} ()
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_ac068e9ce4cc7011651642ca2f7a56a26}{add\+\_\+host\+\_\+fail}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address)
+\item 
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_ab091686d5168e39aee4b77a7bb0d3b46}{add\+\_\+used\+\_\+stripe\+\_\+peer}} (const t\+\_\+connection\+\_\+context \&context)
+\item 
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aaa00b545e7eb9eedc874720ceb020766}{remove\+\_\+used\+\_\+stripe\+\_\+peer}} (const t\+\_\+connection\+\_\+context \&context)
+\item 
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub_aba4a0e34cdca01e909904bb070fec2b0}{clear\+\_\+used\+\_\+stripe\+\_\+peers}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_ac068e9ce4cc7011651642ca2f7a56a26}\label{structnodetool_1_1p2p__endpoint__stub_ac068e9ce4cc7011651642ca2f7a56a26}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!add\_host\_fail@{add\_host\_fail}}
+\index{add\_host\_fail@{add\_host\_fail}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{add\_host\_fail()}{add\_host\_fail()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::add\+\_\+host\+\_\+fail (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a5e0451fb4908a24071cca815eaafdad0}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_ab091686d5168e39aee4b77a7bb0d3b46}\label{structnodetool_1_1p2p__endpoint__stub_ab091686d5168e39aee4b77a7bb0d3b46}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!add\_used\_stripe\_peer@{add\_used\_stripe\_peer}}
+\index{add\_used\_stripe\_peer@{add\_used\_stripe\_peer}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{add\_used\_stripe\_peer()}{add\_used\_stripe\_peer()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::add\+\_\+used\+\_\+stripe\+\_\+peer (\begin{DoxyParamCaption}\item[{const t\+\_\+connection\+\_\+context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a8b5ee9c5f6115c7850ac9e40028d6abb}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a9cd5dd472218ceca42cdc25473a25bbf}\label{structnodetool_1_1p2p__endpoint__stub_a9cd5dd472218ceca42cdc25473a25bbf}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!block\_host@{block\_host}}
+\index{block\_host@{block\_host}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{block\_host()}{block\_host()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::block\+\_\+host (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{address,  }\item[{time\+\_\+t}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_ad30eadcd024ea8a7748c24379f33112c}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aba4a0e34cdca01e909904bb070fec2b0}\label{structnodetool_1_1p2p__endpoint__stub_aba4a0e34cdca01e909904bb070fec2b0}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!clear\_used\_stripe\_peers@{clear\_used\_stripe\_peers}}
+\index{clear\_used\_stripe\_peers@{clear\_used\_stripe\_peers}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{clear\_used\_stripe\_peers()}{clear\_used\_stripe\_peers()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::clear\+\_\+used\+\_\+stripe\+\_\+peers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a8dc94bfc315d68bb3974a5998d9d9808}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_af1fc226e289253f48d7abba51850c4a9}\label{structnodetool_1_1p2p__endpoint__stub_af1fc226e289253f48d7abba51850c4a9}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!drop\_connection@{drop\_connection}}
+\index{drop\_connection@{drop\_connection}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{drop\_connection()}{drop\_connection()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::drop\+\_\+connection (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a153e005c20c807fd8869fac32c7211ee}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aae36c3d42d928e0fc6ce2685a7d4ed7e}\label{structnodetool_1_1p2p__endpoint__stub_aae36c3d42d928e0fc6ce2685a7d4ed7e}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!for\_connection@{for\_connection}}
+\index{for\_connection@{for\_connection}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{for\_connection()}{for\_connection()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::for\+\_\+connection (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{,  }\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(t\+\_\+connection\+\_\+context \&, \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}})$>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_ac8c2ca6338e949a801928f5b04151492}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aca1f2002f63428c84a76de3f11970694}\label{structnodetool_1_1p2p__endpoint__stub_aca1f2002f63428c84a76de3f11970694}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!for\_each\_connection@{for\_each\_connection}}
+\index{for\_each\_connection@{for\_each\_connection}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{for\_each\_connection()}{for\_each\_connection()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::for\+\_\+each\+\_\+connection (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(t\+\_\+connection\+\_\+context \&, \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}})$>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a12cfeefcd674ce978d6318ef95306d99}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a335934a938d98760fe587f44f710aa74}\label{structnodetool_1_1p2p__endpoint__stub_a335934a938d98760fe587f44f710aa74}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!get\_blocked\_hosts@{get\_blocked\_hosts}}
+\index{get\_blocked\_hosts@{get\_blocked\_hosts}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{get\_blocked\_hosts()}{get\_blocked\_hosts()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual std\+::map$<$std\+::string, time\+\_\+t$>$ \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::get\+\_\+blocked\+\_\+hosts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a874db551b1ac296d83fbf696a9408a5c}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a6d1e2d7b317f19c00520cfb7c2114c4f}\label{structnodetool_1_1p2p__endpoint__stub_a6d1e2d7b317f19c00520cfb7c2114c4f}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!get\_blocked\_subnets@{get\_blocked\_subnets}}
+\index{get\_blocked\_subnets@{get\_blocked\_subnets}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{get\_blocked\_subnets()}{get\_blocked\_subnets()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual std\+::map$<$epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+subnet, time\+\_\+t$>$ \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::get\+\_\+blocked\+\_\+subnets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a21ccf2c66ab027692e49d8e698fe4a2d}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aa2c4e8311a2325f9505bde86a65dd181}\label{structnodetool_1_1p2p__endpoint__stub_aa2c4e8311a2325f9505bde86a65dd181}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!get\_public\_connections\_count@{get\_public\_connections\_count}}
+\index{get\_public\_connections\_count@{get\_public\_connections\_count}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{get\_public\_connections\_count()}{get\_public\_connections\_count()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual uint64\+\_\+t \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::get\+\_\+public\+\_\+connections\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a1a5139d2086413a76b034b263b3d9cbd}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a0d43f7267dfbe9ecc68fb2b635b43bce}\label{structnodetool_1_1p2p__endpoint__stub_a0d43f7267dfbe9ecc68fb2b635b43bce}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!invoke\_command\_to\_peer@{invoke\_command\_to\_peer}}
+\index{invoke\_command\_to\_peer@{invoke\_command\_to\_peer}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{invoke\_command\_to\_peer()}{invoke\_command\_to\_peer()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::invoke\+\_\+command\+\_\+to\+\_\+peer (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{const epee\+::span$<$ const uint8\+\_\+t $>$}]{req\+\_\+buff,  }\item[{std\+::string \&}]{resp\+\_\+buff,  }\item[{const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a6705ee9381892b934f082363ca88daf7}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a287bb3fdeeb5905e533d2484e61f45f9}\label{structnodetool_1_1p2p__endpoint__stub_a287bb3fdeeb5905e533d2484e61f45f9}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!invoke\_notify\_to\_peer@{invoke\_notify\_to\_peer}}
+\index{invoke\_notify\_to\_peer@{invoke\_notify\_to\_peer}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{invoke\_notify\_to\_peer()}{invoke\_notify\_to\_peer()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::invoke\+\_\+notify\+\_\+to\+\_\+peer (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{const epee\+::span$<$ const uint8\+\_\+t $>$}]{req\+\_\+buff,  }\item[{const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a229ca4885966efa7ebcd466d13b14128}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aed78639adfb390a3cbe94fc887628ff2}\label{structnodetool_1_1p2p__endpoint__stub_aed78639adfb390a3cbe94fc887628ff2}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!relay\_notify\_to\_list@{relay\_notify\_to\_list}}
+\index{relay\_notify\_to\_list@{relay\_notify\_to\_list}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{relay\_notify\_to\_list()}{relay\_notify\_to\_list()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::relay\+\_\+notify\+\_\+to\+\_\+list (\begin{DoxyParamCaption}\item[{int}]{command,  }\item[{const epee\+::span$<$ const uint8\+\_\+t $>$}]{data\+\_\+buff,  }\item[{std\+::vector$<$ std\+::pair$<$ epee\+::net\+\_\+utils\+::zone, boost\+::uuids\+::uuid $>$$>$}]{connections }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_afcac21b7321305198db24c13c810a1de}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_aaa00b545e7eb9eedc874720ceb020766}\label{structnodetool_1_1p2p__endpoint__stub_aaa00b545e7eb9eedc874720ceb020766}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!remove\_used\_stripe\_peer@{remove\_used\_stripe\_peer}}
+\index{remove\_used\_stripe\_peer@{remove\_used\_stripe\_peer}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_used\_stripe\_peer()}{remove\_used\_stripe\_peer()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::remove\+\_\+used\+\_\+stripe\+\_\+peer (\begin{DoxyParamCaption}\item[{const t\+\_\+connection\+\_\+context \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a92ff5d06ee5372a498000403b8889313}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_ae84b55301c050aba885f3ef3420e9a20}\label{structnodetool_1_1p2p__endpoint__stub_ae84b55301c050aba885f3ef3420e9a20}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!request\_callback@{request\_callback}}
+\index{request\_callback@{request\_callback}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{request\_callback()}{request\_callback()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual void \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::request\+\_\+callback (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::connection\+\_\+context\+\_\+base \&}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a0ff3ccd1fd443ba2d1ec93c3396881bf}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a64a363712a8578b1a9905a3bcfded7fc}\label{structnodetool_1_1p2p__endpoint__stub_a64a363712a8578b1a9905a3bcfded7fc}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!send\_txs@{send\_txs}}
+\index{send\_txs@{send\_txs}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{send\_txs()}{send\_txs()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual epee\+::net\+\_\+utils\+::zone \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::send\+\_\+txs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{txs,  }\item[{const epee\+::net\+\_\+utils\+::zone}]{origin,  }\item[{const boost\+::uuids\+::uuid \&}]{source,  }\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{pad\+\_\+txs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_a36e4ccacb3b503c1a6bbe501180c2310}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+\mbox{\Hypertarget{structnodetool_1_1p2p__endpoint__stub_a53e7bc5450e6cec4ad6984b0e6422072}\label{structnodetool_1_1p2p__endpoint__stub_a53e7bc5450e6cec4ad6984b0e6422072}} 
+\index{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}!unblock\_host@{unblock\_host}}
+\index{unblock\_host@{unblock\_host}!nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$@{nodetool::p2p\_endpoint\_stub$<$ t\_connection\_context $>$}}
+\doxysubsubsection{\texorpdfstring{unblock\_host()}{unblock\_host()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+connection\+\_\+context $>$ \\
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{nodetool\+::p2p\+\_\+endpoint\+\_\+stub}}$<$ t\+\_\+connection\+\_\+context $>$\+::unblock\+\_\+host (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint_afddcebc7b123e6ac6071407473e05b5d}{nodetool\+::i\+\_\+p2p\+\_\+endpoint$<$ t\+\_\+connection\+\_\+context $>$}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/p2p/\mbox{\hyperlink{net__node__common_8h}{net\+\_\+node\+\_\+common.\+h}}\end{DoxyCompactItemize}

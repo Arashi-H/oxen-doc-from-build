@@ -1,0 +1,2505 @@
+\hypertarget{structWallet_1_1Wallet}{}\doxysection{Wallet\+::Wallet Struct Reference}
+\label{structWallet_1_1Wallet}\index{Wallet::Wallet@{Wallet::Wallet}}
+
+
+Interface for wallet operations. T\+O\+DO\+: check if /include/\+I\+Wallet.h is still actual.  
+
+
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Wallet\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{structWallet_1_1Wallet__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1Wallet_1_1stake__info}{stake\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Device}} \{ \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa0dd703bc51da7227ca78e373c955e765}{Device\+\_\+\+Software}} = 0, 
+\mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fae77cc099fd33b7eaa1becf1231056b2e}{Device\+\_\+\+Ledger}} = 1, 
+\mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa7a1d4a4afb6ee4c7196ff24207481aff}{Device\+\_\+\+Trezor}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267a}{Status}} \{ \mbox{\hyperlink{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa35c7c6f5ccc42d6b31e2c691a0744392}{Status\+\_\+\+Ok}}, 
+\mbox{\hyperlink{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aabb4ce526864faa357fda9bdac221e477}{Status\+\_\+\+Error}}, 
+\mbox{\hyperlink{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa541d421cb1b6645c7628e4f7a188305b}{Status\+\_\+\+Critical}}
+ \}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}{Connection\+Status}} \{ \mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48a49f2810386c71ebd38993cbc833eb962}{Connection\+Status\+\_\+\+Disconnected}}, 
+\mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48ad43cd313b80efd38427764a709ac8a45}{Connection\+Status\+\_\+\+Connected}}, 
+\mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48aa39ca621b8a94b45720c7d205161f6d3}{Connection\+Status\+\_\+\+Wrong\+Version}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet_a838f091bea6e73fcca6e4fabb0cc293a}{$\sim$\+Wallet}} ()=0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aa92da85a8bd132dc86c1871aafa31516}{seed}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a441bacf1a5efdadeab8cbbdd614d7336}{get\+Seed\+Language}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_ade00aaad4edbd705fd1b5b456486fb8f}{set\+Seed\+Language}} (const std\+::string \&arg)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}{good}} () const =0
+\item 
+virtual std\+::pair$<$ int, std\+::string $>$ \mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{status}} () const =0
+\begin{DoxyCompactList}\small\item\em returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac28194fcb9df99668db537581a2086b9}{set\+Password}} (const std\+::string \&password)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a1db19b1b382c90d57d18ff7d1db66905}{set\+Device\+Pin}} (const std\+::string \&pin)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_af804de3ef3181813d4159e9e9061d806}{set\+Device\+Passphrase}} (const std\+::string \&passphrase)
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}} (uint32\+\_\+t account\+Index=0, uint32\+\_\+t address\+Index=0) const =0
+\item 
+std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a2fd7eaa45d862ce0c80214414ce055ba}{main\+Address}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a0a092c754c6690dca27724643b1ec0d4}{path}} () const =0
+\item 
+virtual \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} \mbox{\hyperlink{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}{nettype}} () const =0
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_adeb592bb069a0e97ffd29fd6fe202c8a}{mainnet}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ad6fbd663d3fe9bca7b701dc8f401a1c5}{testnet}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_afd4f9d34e124a19bcffd2290b1e0970d}{devnet}} () const
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_ac8806413db5357863c95fbb453f3a336}{hard\+Fork\+Info}} (uint8\+\_\+t \&version, uint64\+\_\+t \&earliest\+\_\+height) const =0
+\begin{DoxyCompactList}\small\item\em returns current hard fork info \end{DoxyCompactList}\item 
+virtual std\+::optional$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{structWallet_1_1Wallet_ac868f0580b874089578b243c1f20520b}{hard\+Fork\+Version}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac6367d335761cf051472ffd291ac4777}{use\+Fork\+Rules}} (uint8\+\_\+t version, int64\+\_\+t early\+\_\+blocks) const =0
+\begin{DoxyCompactList}\small\item\em check if hard fork rules should be used \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a3e9bd76df1319765faf4a7a68828208b}{integrated\+Address}} (const std\+::string \&payment\+\_\+id) const =0
+\begin{DoxyCompactList}\small\item\em integrated\+Address -\/ returns integrated address for current wallet address and given payment\+\_\+id. if passed \char`\"{}payment\+\_\+id\char`\"{} param is an empty string or not-\/valid payment id string (16 characters hexadecimal string) -\/ random payment\+\_\+id will be generated \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a9a0445ab4e1c7f3f1eb48ca71be91f2f}{secret\+View\+Key}} () const =0
+\begin{DoxyCompactList}\small\item\em secret\+View\+Key -\/ returns secret view key \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a35af701758c81872c06c571ab30a63ef}{public\+View\+Key}} () const =0
+\begin{DoxyCompactList}\small\item\em public\+View\+Key -\/ returns public view key \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aa4d128254729acd9c760b55b18b25f5d}{secret\+Spend\+Key}} () const =0
+\begin{DoxyCompactList}\small\item\em secret\+Spend\+Key -\/ returns secret spend key \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a6fa09c2b40162bf841c1741c90492e0a}{public\+Spend\+Key}} () const =0
+\begin{DoxyCompactList}\small\item\em public\+Spend\+Key -\/ returns public spend key \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a1b232c6e25e100a8ebc29dd85e603bd1}{public\+Multisig\+Signer\+Key}} () const =0
+\begin{DoxyCompactList}\small\item\em public\+Multisig\+Signer\+Key -\/ returns public signer key \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a693e3e697f7eb1e6f3240fec477031bd}{store}} (std\+::string\+\_\+view \mbox{\hyperlink{structWallet_1_1Wallet_a0a092c754c6690dca27724643b1ec0d4}{path}})=0
+\begin{DoxyCompactList}\small\item\em store -\/ stores wallet to file. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}{filename}} () const =0
+\begin{DoxyCompactList}\small\item\em filename -\/ returns wallet filename \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_afa995038d15923d2c0a9e4fe41df9400}{keys\+Filename}} () const =0
+\begin{DoxyCompactList}\small\item\em keys\+Filename -\/ returns keys filename. usually this formed as \char`\"{}wallet\+\_\+filename\char`\"{}.keys \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a966174450520cd4ac0a031c05fef9ef1}{init}} (const std\+::string \&daemon\+\_\+address, uint64\+\_\+t upper\+\_\+transaction\+\_\+size\+\_\+limit=0, const std\+::string \&daemon\+\_\+username=\char`\"{}\char`\"{}, const std\+::string \&daemon\+\_\+password=\char`\"{}\char`\"{}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} use\+\_\+ssl=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})=0
+\begin{DoxyCompactList}\small\item\em init -\/ initializes wallet with daemon connection params. if daemon\+\_\+address is local address, \char`\"{}trusted daemon\char`\"{} will be set to true forcibly \mbox{\hyperlink{structWallet_1_1Wallet_a2f4304f7406c6623e6c252f60616b43b}{start\+Refresh()}} should be called when wallet is initialized. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a9c35ae81cde91104b099ae0d9d0973e5}{create\+Watch\+Only}} (std\+::string\+\_\+view \mbox{\hyperlink{structWallet_1_1Wallet_a0a092c754c6690dca27724643b1ec0d4}{path}}, const std\+::string \&password, const std\+::string \&language) const =0
+\begin{DoxyCompactList}\small\item\em create\+Watch\+Only -\/ Creates a watch only wallet \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_acb1239ebaea4cc30b87a7a962475be58}{set\+Refresh\+From\+Block\+Height}} (uint64\+\_\+t refresh\+\_\+from\+\_\+block\+\_\+height)=0
+\begin{DoxyCompactList}\small\item\em set\+Refresh\+From\+Block\+Height -\/ start refresh from block height on recover \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a9a6dd409de30d6034e61ea8c9757cb63}{get\+Refresh\+From\+Block\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Restore\+Height -\/ get wallet creation height \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a818a8f32e2ec20dd49082997d603c7c1}{set\+Recovering\+From\+Seed}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} recovering\+From\+Seed)=0
+\begin{DoxyCompactList}\small\item\em set\+Recovering\+From\+Seed -\/ set state recover form seed \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a067648906365a5ceb3dbaad314054fba}{set\+Recovering\+From\+Device}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} recovering\+From\+Device)=0
+\begin{DoxyCompactList}\small\item\em set\+Recovering\+From\+Device -\/ set state to recovering from device \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a2a8acdbaab8073e48edf8be150f13c08}{set\+Subaddress\+Lookahead}} (uint32\+\_\+t major, uint32\+\_\+t minor)=0
+\begin{DoxyCompactList}\small\item\em set\+Subaddress\+Lookahead -\/ set size of subaddress lookahead \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_afd347f812f9c8776039f008051c4ddd8}{connect\+To\+Daemon}} ()=0
+\begin{DoxyCompactList}\small\item\em connect\+To\+Daemon -\/ connects to the daemon. T\+O\+DO\+: check if it can be removed \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}{Connection\+Status}} \mbox{\hyperlink{structWallet_1_1Wallet_a44d1d3c42f404c7bba9fd8d838b7aa40}{connected}} () const =0
+\begin{DoxyCompactList}\small\item\em connected -\/ checks if the wallet connected to the daemon \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a7c7289449efd6ed7f33d610e6a07c5bf}{set\+Trusted\+Daemon}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} arg)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a68ab4593aa7a468b9593066fd43ada04}{trusted\+Daemon}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a8376b646741918efa495d58fdf574fee}{balance}} (uint32\+\_\+t account\+Index=0) const =0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a16a6c4551680960fbe6f83d82b957c16}{balance\+All}} () const
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a74c77ec2a0a38a9822c3a98b442b626f}{unlocked\+Balance}} (uint32\+\_\+t account\+Index=0) const =0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a1c6dec0a60b1e1fe8ed5403c9eb4b6ce}{unlocked\+Balance\+All}} () const
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a3432000d2e6f92ffbe509ce5259cb576}{accrued\+Balance}} (std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}=std\+::nullopt) const =0
+\begin{DoxyCompactList}\small\item\em accrued\+Balance -\/ returns the accounts balance that has been batched and yet to be paid. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_ae0c0aa1139b295fd6acca7d0ebbea387}{next\+Accrued\+Payment\+Height}} (std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}=std\+::nullopt) const =0
+\begin{DoxyCompactList}\small\item\em next\+Batch\+Payout -\/ returns the height at which this wallet is next eligible to receive an accrued balance payment. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1Wallet_1_1stake__info}{stake\+\_\+info}} $>$ $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_ae092c3b9e0e0c434afd505a7b0aa27cb}{list\+Current\+Stakes}} () const =0
+\begin{DoxyCompactList}\small\item\em list\+Current\+Stakes -\/ returns a list of the wallets locked stake info (see above). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_af948e3a2072a8872b22ed3311929ab30}{watch\+Only}} () const =0
+\begin{DoxyCompactList}\small\item\em watch\+Only -\/ checks if wallet is watch only \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_af5b882cdcb4cfcd687a3eed230a2d4f7}{block\+Chain\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em block\+Chain\+Height -\/ returns current blockchain height. This is thread-\/safe and will not block if called from different threads. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_ae6800ae85772f6650d506d9f96497c15}{approximate\+Block\+Chain\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em approximate\+Block\+Chain\+Height -\/ returns approximate blockchain height calculated from date/time \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_ae165be0e6d770fe518a7b8a5dcda3f50}{estimate\+Block\+Chain\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em estimate\+Block\+Chain\+Height -\/ returns estimate blockchain height. More accurate than approximate\+Block\+Chain\+Height, uses daemon height and falls back to calculation from date/time \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a576ad4f68df2f21dd8bf0abd5df4e2c7}{daemon\+Block\+Chain\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em daemon\+Block\+Chain\+Height -\/ returns daemon blockchain height; thread-\/safe. \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a8056106563b7571029810b2351e4cc3f}{daemon\+Block\+Chain\+Target\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em daemon\+Block\+Chain\+Target\+Height -\/ returns daemon blockchain target height \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a1db67774ad093724e166b16d0b22119f}{synchronized}} () const =0
+\begin{DoxyCompactList}\small\item\em synchronized -\/ checks if wallet was ever synchronized \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a2f4304f7406c6623e6c252f60616b43b}{start\+Refresh}} ()=0
+\begin{DoxyCompactList}\small\item\em Start\+Refresh -\/ Start/resume refresh thread (refresh every 10 seconds) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_ab3fd0be17164035f839030022835f710}{pause\+Refresh}} ()=0
+\begin{DoxyCompactList}\small\item\em pause\+Refresh -\/ pause refresh thread \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_aec44d519503409ba865b7947daf27ea1}{refresh}} ()=0
+\begin{DoxyCompactList}\small\item\em refresh -\/ refreshes the wallet, updating transactions from daemon \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a60a6c62cb9f451d89777f064650cbe6e}{refresh\+Async}} ()=0
+\begin{DoxyCompactList}\small\item\em refresh\+Async -\/ refreshes wallet asynchronously. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a3f628fae6771bdfabf358018eecede9a}{is\+Refreshing}} (std\+::chrono\+::milliseconds max\+\_\+wait=std\+::chrono\+::milliseconds\{50\})=0
+\begin{DoxyCompactList}\small\item\em refreshing -\/ returns true if a refresh is currently underway; this is done {\itshape without} requiring a lock, unlike most other wallet-\/interacting functions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac978271ddd53f9543ddba775b490f088}{rescan\+Blockchain}} ()=0
+\begin{DoxyCompactList}\small\item\em rescan\+Blockchain -\/ rescans the wallet, updating transactions from daemon \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a76ed268c2c5b9a705574c344aef901dc}{rescan\+Blockchain\+Async}} ()=0
+\begin{DoxyCompactList}\small\item\em rescan\+Blockchain\+Async -\/ rescans wallet asynchronously, starting from genesys \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a7056850435a4aac2848fc044ac5d864a}{set\+Auto\+Refresh\+Interval}} (int millis)=0
+\begin{DoxyCompactList}\small\item\em set\+Auto\+Refresh\+Interval -\/ setup interval for automatic refresh. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{structWallet_1_1Wallet_a81988df5f096f06dae8800736e2b8d93}{auto\+Refresh\+Interval}} () const =0
+\begin{DoxyCompactList}\small\item\em auto\+Refresh\+Interval -\/ returns automatic refresh interval in millis \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a6dc88c0322e7399f78a6847e789e2b7c}{add\+Subaddress\+Account}} (const std\+::string \&label)=0
+\begin{DoxyCompactList}\small\item\em add\+Subaddress\+Account -\/ appends a new subaddress account at the end of the last major index of existing subaddress accounts \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_aba75ddf0121ea0a2dbbf319666328ff5}{num\+Subaddress\+Accounts}} () const =0
+\begin{DoxyCompactList}\small\item\em num\+Subaddress\+Accounts -\/ returns the number of existing subaddress accounts \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a95eb061828166f941e41e35f4701ef83}{num\+Subaddresses}} (uint32\+\_\+t account\+Index) const =0
+\begin{DoxyCompactList}\small\item\em num\+Subaddresses -\/ returns the number of existing subaddresses associated with the specified subaddress account \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_ad72e5a8a7b86c78acf53e1f4b2ea9bfb}{add\+Subaddress}} (uint32\+\_\+t account\+Index, const std\+::string \&label)=0
+\begin{DoxyCompactList}\small\item\em add\+Subaddress -\/ appends a new subaddress at the end of the last minor index of the specified subaddress account \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a7f62e60d49a437732e8ae007bbad76c3}{get\+Subaddress\+Label}} (uint32\+\_\+t account\+Index, uint32\+\_\+t address\+Index) const =0
+\begin{DoxyCompactList}\small\item\em get\+Subaddress\+Label -\/ gets the label of the specified subaddress \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a59322361a7a9528c3968f78292d8c695}{set\+Subaddress\+Label}} (uint32\+\_\+t account\+Index, uint32\+\_\+t address\+Index, const std\+::string \&label)=0
+\begin{DoxyCompactList}\small\item\em set\+Subaddress\+Label -\/ sets the label of the specified subaddress \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1MultisigState}{Multisig\+State}} \mbox{\hyperlink{structWallet_1_1Wallet_a2756d9ae2c6cbbe71acd8e2e4b10ea32}{multisig}} () const =0
+\begin{DoxyCompactList}\small\item\em multisig -\/ returns current state of multisig wallet creation process \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a9da8c623bc6464e581c5cde1f1670bb4}{get\+Multisig\+Info}} () const =0
+\begin{DoxyCompactList}\small\item\em get\+Multisig\+Info \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a3292b2f8e9b2cee52d779cfc346b45da}{make\+Multisig}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{structWallet_1_1Wallet_af3023d01f057e1cf6c7d14ed90076b69}{info}}, uint32\+\_\+t threshold)=0
+\begin{DoxyCompactList}\small\item\em make\+Multisig -\/ switches wallet in multisig state. The one and only creation phase for N / N wallets \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aff07b6278f27d7af19608d6facb191e1}{exchange\+Multisig\+Keys}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{structWallet_1_1Wallet_af3023d01f057e1cf6c7d14ed90076b69}{info}})=0
+\begin{DoxyCompactList}\small\item\em exchange\+\_\+multisig\+\_\+keys -\/ provides additional key exchange round for arbitrary multisig schemes (like N-\/1/N, M/N) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_af9d350266dd997bd0be80206aabf7340}{finalize\+Multisig}} (const std\+::vector$<$ std\+::string $>$ \&extra\+Multisig\+Info)=0
+\begin{DoxyCompactList}\small\item\em finalize\+Multisig -\/ finalizes N -\/ 1 / N multisig wallets creation \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a4d2925fd1a662ed46db9d1680fb44091}{export\+Multisig\+Images}} (std\+::string \&images)=0
+\begin{DoxyCompactList}\small\item\em export\+Multisig\+Images -\/ exports transfers\textquotesingle{} key images \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a1833b6b2810f3b43becc11d2382087e4}{import\+Multisig\+Images}} (const std\+::vector$<$ std\+::string $>$ \&images)=0
+\begin{DoxyCompactList}\small\item\em import\+Multisig\+Images -\/ imports other participants\textquotesingle{} multisig images \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a9e3a98e0a9ea7008b7ad7bb3bb833b97}{has\+Multisig\+Partial\+Key\+Images}} () const =0
+\begin{DoxyCompactList}\small\item\em has\+Multisig\+Partial\+Key\+Images -\/ checks if wallet needs to import multisig key images from other participants \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a27edcbb36415dc9796aeffcd2ed4a64b}{restore\+Multisig\+Transaction}} (const std\+::string \&sign\+Data)=0
+\begin{DoxyCompactList}\small\item\em restore\+Multisig\+Transaction creates \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} from sign\+Data \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a759428845a689189bae5608607074d50}{create\+Transaction\+Mult\+Dest}} (const std\+::vector$<$ std\+::string $>$ \&dst\+\_\+addr, std\+::optional$<$ std\+::vector$<$ uint64\+\_\+t $>$$>$ amount, uint32\+\_\+t priority=0, uint32\+\_\+t subaddr\+\_\+account=0, std\+::set$<$ uint32\+\_\+t $>$ subaddr\+\_\+indices=\{\})=0
+\begin{DoxyCompactList}\small\item\em create\+Transaction\+Mult\+Dest creates transaction with multiple destinations \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a6d290d9d7b1e86395d4ed893247d9055}{create\+Transaction}} (const std\+::string \&dst\+\_\+addr, std\+::optional$<$ uint64\+\_\+t $>$ amount, uint32\+\_\+t priority=0, uint32\+\_\+t subaddr\+\_\+account=0, std\+::set$<$ uint32\+\_\+t $>$ subaddr\+\_\+indices=\{\})=0
+\begin{DoxyCompactList}\small\item\em create\+Transaction creates transaction \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_af7c2612249169f15e264d9a1af5627c8}{create\+Sweep\+Unmixable\+Transaction}} ()=0
+\begin{DoxyCompactList}\small\item\em create\+Sweep\+Unmixable\+Transaction creates transaction with unmixable outputs. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1UnsignedTransaction}{Unsigned\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_ac2905d9a4919b1d100634c294b5cb384}{load\+Unsigned\+Tx}} (std\+::string\+\_\+view unsigned\+\_\+filename)=0
+\begin{DoxyCompactList}\small\item\em load\+Unsigned\+Tx -\/ creates transaction from unsigned tx file (utf8 filename) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a97842fb96368a22605e433c2be4de9ae}{submit\+Transaction}} (std\+::string\+\_\+view \mbox{\hyperlink{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}{filename}})=0
+\begin{DoxyCompactList}\small\item\em submit\+Transaction -\/ submits transaction in signed tx file (utf8 filename) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_abf0aa83653653cdf840dcceda07a7fc1}{dispose\+Transaction}} (\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$t)=0
+\begin{DoxyCompactList}\small\item\em dispose\+Transaction -\/ destroys transaction object \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a0c292f5368eb29ead2f812aaf9347c03}{estimate\+Transaction\+Fee}} (uint32\+\_\+t priority, uint32\+\_\+t recipients=1) const =0
+\begin{DoxyCompactList}\small\item\em Estimates transaction fee. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a50e6ed19a3dad27d7e2bfa0a1e1815d7}{export\+Key\+Images}} (std\+::string\+\_\+view \mbox{\hyperlink{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}{filename}})=0
+\begin{DoxyCompactList}\small\item\em export\+Key\+Images -\/ exports key images to file \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a746756e88ba170d917a36a44126f1adf}{import\+Key\+Images}} (std\+::string\+\_\+view \mbox{\hyperlink{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}{filename}})=0
+\begin{DoxyCompactList}\small\item\em import\+Key\+Images -\/ imports key images from file \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1TransactionHistory}{Transaction\+History}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a86880f270694ae9aa5092d9536a1366f}{history}} ()=0
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1AddressBook}{Address\+Book}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_af61fcbe616078f87233139cd9740eb64}{address\+Book}} ()=0
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1Subaddress}{Subaddress}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_af2b077811ed08550579270ae5043b185}{subaddress}} ()=0
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1SubaddressAccount}{Subaddress\+Account}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a1a303aeadf509f52b39f95c3e92d109e}{subaddress\+Account}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a21104eac7883636dd6fd0ecd7dd226f0}{set\+Listener}} (\mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_afe84c69f2ad1de81980cb9997107d4a1}{set\+Cache\+Attribute}} (const std\+::string \&key, const std\+::string \&val)=0
+\begin{DoxyCompactList}\small\item\em set\+Cache\+Attribute -\/ attach an arbitrary string to a wallet cache attribute \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aaec8791219b38b6ca5c48e33a661bd3d}{get\+Cache\+Attribute}} (const std\+::string \&key) const =0
+\begin{DoxyCompactList}\small\item\em get\+Cache\+Attribute -\/ return an arbitrary string attached to a wallet cache attribute \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a690e8520d40f387b2cf2748a60089836}{set\+User\+Note}} (const std\+::string \&txid, const std\+::string \&note)=0
+\begin{DoxyCompactList}\small\item\em set\+User\+Note -\/ attach an arbitrary string note to a txid \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_af956f8ca07ae7e82612cfaa9d43aa374}{get\+User\+Note}} (const std\+::string \&txid) const =0
+\begin{DoxyCompactList}\small\item\em get\+User\+Note -\/ return an arbitrary string note attached to a txid \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_af01ba47c1fa440ee37f529a7e2c0a952}{get\+Tx\+Key}} (const std\+::string \&txid) const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a5d2fc4603245d0e87b1a6285beaaa8e3}{check\+Tx\+Key}} (const std\+::string \&txid, std\+::string\+\_\+view tx\+\_\+key, const std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}, uint64\+\_\+t \&received, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&in\+\_\+pool, uint64\+\_\+t \&confirmations)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a7d0eea4ccf07983ebf678e9f4f919339}{get\+Tx\+Proof}} (const std\+::string \&txid, const std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}, const std\+::string \&message) const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ab13ec91c939dee390058952f0281ad98}{check\+Tx\+Proof}} (const std\+::string \&txid, const std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}, const std\+::string \&message, const std\+::string \&signature, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&\mbox{\hyperlink{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}{good}}, uint64\+\_\+t \&received, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&in\+\_\+pool, uint64\+\_\+t \&confirmations)=0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a25831c4880a843a42ab2cdab8358074c}{get\+Spend\+Proof}} (const std\+::string \&txid, const std\+::string \&message) const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a9a206c0f90245b10c31e2c17aad07d24}{check\+Spend\+Proof}} (const std\+::string \&txid, const std\+::string \&message, const std\+::string \&signature, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&\mbox{\hyperlink{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}{good}}) const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a07c0d17096c970209e63f9ba934965a4}{get\+Reserve\+Proof}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} all, uint32\+\_\+t account\+\_\+index, uint64\+\_\+t amount, const std\+::string \&message) const =0
+\begin{DoxyCompactList}\small\item\em get\+Reserve\+Proof -\/ Generates a proof that proves the reserve of unspent funds Parameters {\ttfamily account\+\_\+index} and {\ttfamily amount} are ignored when {\ttfamily all} is true \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_aad690bacf05f66163c18843854502768}{check\+Reserve\+Proof}} (const std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}, const std\+::string \&message, const std\+::string \&signature, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&\mbox{\hyperlink{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}{good}}, uint64\+\_\+t \&total, uint64\+\_\+t \&spent) const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a57a586c30264bca223cf595e202759bb}{sign\+Message}} (const std\+::string \&message)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ae7450ef6b5ac3c9c218c5648d0f529d1}{verify\+Signed\+Message}} (const std\+::string \&message, const std\+::string \&addres, const std\+::string \&signature) const =0
+\begin{DoxyCompactList}\small\item\em verify\+Signed\+Message -\/ verify a signature matches a given message \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aae5feb60251cfa12ab84ee42fd89d3cb}{sign\+Multisig\+Participant}} (const std\+::string \&message) const =0
+\begin{DoxyCompactList}\small\item\em sign\+Multisig\+Participant signs given message with the multisig public signer key \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a4c3ec65bb9a243192704d0e8c73c2c1c}{verify\+Message\+With\+Public\+Key}} (const std\+::string \&message, const std\+::string \&public\+Key, const std\+::string \&signature) const =0
+\begin{DoxyCompactList}\small\item\em verify\+Message\+With\+Public\+Key verifies that message was signed with the given public key \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a613e83284c6673f9f10b877388612328}{parse\+\_\+uri}} (const std\+::string \&uri, std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}{address}}, std\+::string \&payment\+\_\+id, uint64\+\_\+t \&amount, std\+::string \&tx\+\_\+description, std\+::string \&recipient\+\_\+name, std\+::vector$<$ std\+::string $>$ \&unknown\+\_\+parameters, std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_ac3fad40bc20aa068230a67cbef0afb56}{error}})=0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_a57c941ca772c41f76812e2fced2e60aa}{get\+Default\+Data\+Dir}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac500a1f0a8966e2d97643cf54d0f109c}{rescan\+Spent}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a46f288d10224b8106200b296480a52fd}{blackball\+Outputs}} (const std\+::vector$<$ std\+::string $>$ \&outputs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} add)=0
+\begin{DoxyCompactList}\small\item\em blackballs a set of outputs \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac7825a822d4505d62ebf110ba355440f}{blackball\+Output}} (const std\+::string \&amount, const std\+::string \&offset)=0
+\begin{DoxyCompactList}\small\item\em blackballs an output \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a4c1e5264e622688fcf13b7847c3e669c}{unblackball\+Output}} (const std\+::string \&amount, const std\+::string \&offset)=0
+\begin{DoxyCompactList}\small\item\em unblackballs an output \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a95904c90a44d8f9e61cff32a587fdce3}{get\+Ring}} (const std\+::string \&key\+\_\+image, std\+::vector$<$ uint64\+\_\+t $>$ \&ring) const =0
+\begin{DoxyCompactList}\small\item\em gets the ring used for a key image, if any \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ae2ac08ef300e873afa448a63050c6438}{get\+Rings}} (const std\+::string \&txid, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::vector$<$ uint64\+\_\+t $>$$>$$>$ \&rings) const =0
+\begin{DoxyCompactList}\small\item\em gets the rings used for a txid, if any \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a6b9d4cd121b310e22ad2f5f8301267f1}{set\+Ring}} (const std\+::string \&key\+\_\+image, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} relative)=0
+\begin{DoxyCompactList}\small\item\em sets the ring used for a key image \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a6cada900567182bcd2ba03469aa04500}{segregate\+Pre\+Fork\+Outputs}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} segregate)=0
+\begin{DoxyCompactList}\small\item\em sets whether pre-\/fork outs are to be segregated \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a5a46ae3c2b09fffe8caa4523de64be54}{segregation\+Height}} (uint64\+\_\+t height)=0
+\begin{DoxyCompactList}\small\item\em sets the height where segregation should occur \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_a9ee57ebc19ee7c47af42250fd43cf612}{key\+Reuse\+Mitigation2}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mitigation)=0
+\begin{DoxyCompactList}\small\item\em secondary key reuse mitigation \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_afa14550a2353ed4bce69c71d1b228c05}{lock\+Keys\+File}} ()=0
+\begin{DoxyCompactList}\small\item\em locks/unlocks the keys file; returns true on success \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_aa782ad70045e00f3fafa55544eba7a00}{unlock\+Keys\+File}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_afca7204e2543e1d822c89e6ff9698c59}{is\+Keys\+File\+Locked}} ()=0
+\begin{DoxyCompactList}\small\item\em returns true if the keys file is locked \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Device}} \mbox{\hyperlink{structWallet_1_1Wallet_a35fed266e91e2c277c36525c80d303ec}{get\+Device\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Queries backing device for wallet keys. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a2b07045c0e56baab0855be3f150b6d2a}{stake\+Pending}} (const std\+::string \&service\+\_\+node\+\_\+key, const uint64\+\_\+t \&amount)=0
+\begin{DoxyCompactList}\small\item\em Prepare a staking transaction; return nullptr on failure. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1StakeUnlockResult}{Stake\+Unlock\+Result}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a366c01f40b2c2d612eff9a8675b2fa47}{can\+Request\+Stake\+Unlock}} (const std\+::string \&sn\+\_\+key)=0
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1StakeUnlockResult}{Stake\+Unlock\+Result}} $\ast$ \mbox{\hyperlink{structWallet_1_1Wallet_a2100963acee1cee868411fc0a506c72a}{request\+Stake\+Unlock}} (const std\+::string \&sn\+\_\+key)=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a5ec885545bf379e2ab8b7ad6569d2a8a}{cold\+Key\+Image\+Sync}} (uint64\+\_\+t \&spent, uint64\+\_\+t \&unspent)=0
+\begin{DoxyCompactList}\small\item\em cold-\/device protocol key image sync \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1Wallet_afecece955aafde5b2ea67e8786168722}{device\+Show\+Address}} (uint32\+\_\+t account\+Index, uint32\+\_\+t address\+Index, const std\+::string \&payment\+Id)=0
+\begin{DoxyCompactList}\small\item\em shows address on device display \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_ad9175a70bbf53a16540f54d6e8841fd6}{display\+Amount}} (uint64\+\_\+t amount)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a849c05d1e61fd6473ed31bcbfedee9c7}{amount\+From\+String}} (const std\+::string \&amount)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_ab06ea857c95157452ff6b0be6dd95712}{amount\+From\+Double}} (double amount)
+\item 
+static std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aeeab7170f34fd78321b87f7ed2e88cb3}{gen\+Payment\+Id}} ()
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_a636ad4e81602997ce818a5f31bc7c7d2}{payment\+Id\+Valid}} (const std\+::string \&paiment\+\_\+id)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_ac8e06c118039befa9f1872801287a8ab}{service\+Node\+Pubkey\+Valid}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Check if the string represents a valid public key (regardless of whether the service node actually exists or not) \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_af52a85a3defd2d736da632228609fa07}{address\+Valid}} (const std\+::string \&str, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} \mbox{\hyperlink{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}{nettype}})
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1Wallet_aab92a3d0451064d91524434bd7bf295d}{key\+Valid}} (const std\+::string \&secret\+\_\+key\+\_\+string, const std\+::string \&address\+\_\+string, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+View\+Key, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} \mbox{\hyperlink{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}{nettype}}, std\+::string \&\mbox{\hyperlink{structWallet_1_1Wallet_ac3fad40bc20aa068230a67cbef0afb56}{error}})
+\item 
+static std\+::string \mbox{\hyperlink{structWallet_1_1Wallet_aac26f87ab5b8658ff7daf07f48d52d3a}{payment\+Id\+From\+Address}} (const std\+::string \&str, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} \mbox{\hyperlink{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}{nettype}})
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1Wallet_a8cc38b107f880a93c6590d06227c2ee4}{maximum\+Allowed\+Amount}} ()
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_a43214495291e0853275427fd4b844439}{init}} (const char $\ast$argv0, const char $\ast$default\+\_\+log\+\_\+base\+\_\+name)
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_a60d041822979a380da1a539055213182}{init}} (const char $\ast$argv0, const char $\ast$default\+\_\+log\+\_\+base\+\_\+name, const std\+::string \&log\+\_\+path, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} console)
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_a9e27c48456ec13e9c81cd37da03953ef}{debug}} (const std\+::string \&category, const std\+::string \&str)
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_af3023d01f057e1cf6c7d14ed90076b69}{info}} (const std\+::string \&category, const std\+::string \&str)
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_ab4fc1931f06ecfc2cdcb76767d215d97}{warning}} (const std\+::string \&category, const std\+::string \&str)
+\item 
+static void \mbox{\hyperlink{structWallet_1_1Wallet_ac3fad40bc20aa068230a67cbef0afb56}{error}} (const std\+::string \&category, const std\+::string \&str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for wallet operations. T\+O\+DO\+: check if /include/\+I\+Wallet.h is still actual. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}\label{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!ConnectionStatus@{ConnectionStatus}}
+\index{ConnectionStatus@{ConnectionStatus}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{ConnectionStatus}{ConnectionStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}{Wallet\+::\+Wallet\+::\+Connection\+Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConnectionStatus\_Disconnected@{ConnectionStatus\_Disconnected}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!ConnectionStatus\_Disconnected@{ConnectionStatus\_Disconnected}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48a49f2810386c71ebd38993cbc833eb962}\label{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48a49f2810386c71ebd38993cbc833eb962}} 
+Connection\+Status\+\_\+\+Disconnected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConnectionStatus\_Connected@{ConnectionStatus\_Connected}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!ConnectionStatus\_Connected@{ConnectionStatus\_Connected}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48ad43cd313b80efd38427764a709ac8a45}\label{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48ad43cd313b80efd38427764a709ac8a45}} 
+Connection\+Status\+\_\+\+Connected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConnectionStatus\_WrongVersion@{ConnectionStatus\_WrongVersion}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!ConnectionStatus\_WrongVersion@{ConnectionStatus\_WrongVersion}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48aa39ca621b8a94b45720c7d205161f6d3}\label{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48aa39ca621b8a94b45720c7d205161f6d3}} 
+Connection\+Status\+\_\+\+Wrong\+Version&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}\label{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!Device@{Device}}
+\index{Device@{Device}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{Device}{Device}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Wallet\+::\+Wallet\+::\+Device}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Device\_Software@{Device\_Software}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Device\_Software@{Device\_Software}}}\mbox{\Hypertarget{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa0dd703bc51da7227ca78e373c955e765}\label{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa0dd703bc51da7227ca78e373c955e765}} 
+Device\+\_\+\+Software&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Device\_Ledger@{Device\_Ledger}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Device\_Ledger@{Device\_Ledger}}}\mbox{\Hypertarget{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fae77cc099fd33b7eaa1becf1231056b2e}\label{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fae77cc099fd33b7eaa1becf1231056b2e}} 
+Device\+\_\+\+Ledger&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Device\_Trezor@{Device\_Trezor}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Device\_Trezor@{Device\_Trezor}}}\mbox{\Hypertarget{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa7a1d4a4afb6ee4c7196ff24207481aff}\label{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14fa7a1d4a4afb6ee4c7196ff24207481aff}} 
+Device\+\_\+\+Trezor&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267a}\label{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!Status@{Status}}
+\index{Status@{Status}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267a}{Wallet\+::\+Wallet\+::\+Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Ok@{Status\_Ok}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Status\_Ok@{Status\_Ok}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa35c7c6f5ccc42d6b31e2c691a0744392}\label{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa35c7c6f5ccc42d6b31e2c691a0744392}} 
+Status\+\_\+\+Ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Error@{Status\_Error}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Status\_Error@{Status\_Error}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aabb4ce526864faa357fda9bdac221e477}\label{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aabb4ce526864faa357fda9bdac221e477}} 
+Status\+\_\+\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Critical@{Status\_Critical}!Wallet::Wallet@{Wallet::Wallet}}\index{Wallet::Wallet@{Wallet::Wallet}!Status\_Critical@{Status\_Critical}}}\mbox{\Hypertarget{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa541d421cb1b6645c7628e4f7a188305b}\label{structWallet_1_1Wallet_a8be1a4cee5408e6833995f0006c7267aa541d421cb1b6645c7628e4f7a188305b}} 
+Status\+\_\+\+Critical&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structWallet_1_1Wallet_a838f091bea6e73fcca6e4fabb0cc293a}\label{structWallet_1_1Wallet_a838f091bea6e73fcca6e4fabb0cc293a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!````~Wallet@{$\sim$Wallet}}
+\index{````~Wallet@{$\sim$Wallet}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wallet()}{~Wallet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Wallet\+::$\sim$\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1Wallet_a3432000d2e6f92ffbe509ce5259cb576}\label{structWallet_1_1Wallet_a3432000d2e6f92ffbe509ce5259cb576}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!accruedBalance@{accruedBalance}}
+\index{accruedBalance@{accruedBalance}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{accruedBalance()}{accruedBalance()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::accrued\+Balance (\begin{DoxyParamCaption}\item[{std\+::optional$<$ std\+::string $>$}]{address = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+accrued\+Balance -\/ returns the accounts balance that has been batched and yet to be paid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ the address to look up; if omitted, looks up the current primary wallet address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a877983625d8720f53f89b19bfaf26990}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}\label{structWallet_1_1Wallet_af5e2091ed1c1d711650f57230175940b}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!address@{address}}
+\index{address@{address}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{address()}{address()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{address\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5262b7cec065bb9f6f475f8c58e14b8e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af61fcbe616078f87233139cd9740eb64}\label{structWallet_1_1Wallet_af61fcbe616078f87233139cd9740eb64}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!addressBook@{addressBook}}
+\index{addressBook@{addressBook}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{addressBook()}{addressBook()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1AddressBook}{Address\+Book}}$\ast$ Wallet\+::\+Wallet\+::address\+Book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ad1f5629c9bf9ca5ed18e37f1feef871d}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af52a85a3defd2d736da632228609fa07}\label{structWallet_1_1Wallet_af52a85a3defd2d736da632228609fa07}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!addressValid@{addressValid}}
+\index{addressValid@{addressValid}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{addressValid()}{addressValid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::address\+Valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ad72e5a8a7b86c78acf53e1f4b2ea9bfb}\label{structWallet_1_1Wallet_ad72e5a8a7b86c78acf53e1f4b2ea9bfb}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!addSubaddress@{addSubaddress}}
+\index{addSubaddress@{addSubaddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{addSubaddress()}{addSubaddress()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::add\+Subaddress (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{const std\+::string \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add\+Subaddress -\/ appends a new subaddress at the end of the last minor index of the specified subaddress account 
+
+
+\begin{DoxyParams}{Parameters}
+{\em account\+Index} & -\/ the major index specifying the subaddress account \\
+\hline
+{\em label} & -\/ the label for the new subaddress \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a941e28142880b128452ef87cadbfc220}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a6dc88c0322e7399f78a6847e789e2b7c}\label{structWallet_1_1Wallet_a6dc88c0322e7399f78a6847e789e2b7c}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!addSubaddressAccount@{addSubaddressAccount}}
+\index{addSubaddressAccount@{addSubaddressAccount}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{addSubaddressAccount()}{addSubaddressAccount()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::add\+Subaddress\+Account (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+add\+Subaddress\+Account -\/ appends a new subaddress account at the end of the last major index of existing subaddress accounts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & -\/ the label for the new account (which is the as the label of the primary address (account\+Index,0)) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a041af5a579cb1129432284997bf021af}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ab06ea857c95157452ff6b0be6dd95712}\label{structWallet_1_1Wallet_ab06ea857c95157452ff6b0be6dd95712}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!amountFromDouble@{amountFromDouble}}
+\index{amountFromDouble@{amountFromDouble}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{amountFromDouble()}{amountFromDouble()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} uint64\+\_\+t Wallet\+::\+Wallet\+::amount\+From\+Double (\begin{DoxyParamCaption}\item[{double}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a849c05d1e61fd6473ed31bcbfedee9c7}\label{structWallet_1_1Wallet_a849c05d1e61fd6473ed31bcbfedee9c7}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!amountFromString@{amountFromString}}
+\index{amountFromString@{amountFromString}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{amountFromString()}{amountFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} uint64\+\_\+t Wallet\+::\+Wallet\+::amount\+From\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae6800ae85772f6650d506d9f96497c15}\label{structWallet_1_1Wallet_ae6800ae85772f6650d506d9f96497c15}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!approximateBlockChainHeight@{approximateBlockChainHeight}}
+\index{approximateBlockChainHeight@{approximateBlockChainHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{approximateBlockChainHeight()}{approximateBlockChainHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::approximate\+Block\+Chain\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+approximate\+Block\+Chain\+Height -\/ returns approximate blockchain height calculated from date/time 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a9f596b448a2c505abaf484916638b185}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a81988df5f096f06dae8800736e2b8d93}\label{structWallet_1_1Wallet_a81988df5f096f06dae8800736e2b8d93}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!autoRefreshInterval@{autoRefreshInterval}}
+\index{autoRefreshInterval@{autoRefreshInterval}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{autoRefreshInterval()}{autoRefreshInterval()}}
+{\footnotesize\ttfamily virtual int Wallet\+::\+Wallet\+::auto\+Refresh\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+auto\+Refresh\+Interval -\/ returns automatic refresh interval in millis 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3d7460e87fee8b8a933f7eee37f87833}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a8376b646741918efa495d58fdf574fee}\label{structWallet_1_1Wallet_a8376b646741918efa495d58fdf574fee}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!balance@{balance}}
+\index{balance@{balance}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{balance()}{balance()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::balance (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8dcc6f1e969920a88baeb4dc555c32e1}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a16a6c4551680960fbe6f83d82b957c16}\label{structWallet_1_1Wallet_a16a6c4551680960fbe6f83d82b957c16}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!balanceAll@{balanceAll}}
+\index{balanceAll@{balanceAll}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{balanceAll()}{balanceAll()}}
+{\footnotesize\ttfamily uint64\+\_\+t Wallet\+::\+Wallet\+::balance\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac7825a822d4505d62ebf110ba355440f}\label{structWallet_1_1Wallet_ac7825a822d4505d62ebf110ba355440f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!blackballOutput@{blackballOutput}}
+\index{blackballOutput@{blackballOutput}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{blackballOutput()}{blackballOutput()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::blackball\+Output (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{amount,  }\item[{const std\+::string \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+blackballs an output 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a690c9441a890a20818064e36fbb5dbee}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a46f288d10224b8106200b296480a52fd}\label{structWallet_1_1Wallet_a46f288d10224b8106200b296480a52fd}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!blackballOutputs@{blackballOutputs}}
+\index{blackballOutputs@{blackballOutputs}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{blackballOutputs()}{blackballOutputs()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::blackball\+Outputs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{outputs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{add }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+blackballs a set of outputs 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a32faeee68550e858e136d5c8e2b8c444}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af5b882cdcb4cfcd687a3eed230a2d4f7}\label{structWallet_1_1Wallet_af5b882cdcb4cfcd687a3eed230a2d4f7}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!blockChainHeight@{blockChainHeight}}
+\index{blockChainHeight@{blockChainHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{blockChainHeight()}{blockChainHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::block\+Chain\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+block\+Chain\+Height -\/ returns current blockchain height. This is thread-\/safe and will not block if called from different threads. 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aceb52a115ffc87d66d8f7f99e60999cd}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a366c01f40b2c2d612eff9a8675b2fa47}\label{structWallet_1_1Wallet_a366c01f40b2c2d612eff9a8675b2fa47}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!canRequestStakeUnlock@{canRequestStakeUnlock}}
+\index{canRequestStakeUnlock@{canRequestStakeUnlock}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{canRequestStakeUnlock()}{canRequestStakeUnlock()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1StakeUnlockResult}{Stake\+Unlock\+Result}}$\ast$ Wallet\+::\+Wallet\+::can\+Request\+Stake\+Unlock (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sn\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ad2efca5ee7c37296ff29b30b88351db9}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aad690bacf05f66163c18843854502768}\label{structWallet_1_1Wallet_aad690bacf05f66163c18843854502768}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!checkReserveProof@{checkReserveProof}}
+\index{checkReserveProof@{checkReserveProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{checkReserveProof()}{checkReserveProof()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::check\+Reserve\+Proof (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{signature,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{good,  }\item[{uint64\+\_\+t \&}]{total,  }\item[{uint64\+\_\+t \&}]{spent }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a7c3994ff5213544ac1f5eeab9b32f5de}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9a206c0f90245b10c31e2c17aad07d24}\label{structWallet_1_1Wallet_a9a206c0f90245b10c31e2c17aad07d24}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!checkSpendProof@{checkSpendProof}}
+\index{checkSpendProof@{checkSpendProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{checkSpendProof()}{checkSpendProof()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::check\+Spend\+Proof (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{signature,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{good }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a969e9347d986e52794c7252c583498d9}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a5d2fc4603245d0e87b1a6285beaaa8e3}\label{structWallet_1_1Wallet_a5d2fc4603245d0e87b1a6285beaaa8e3}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!checkTxKey@{checkTxKey}}
+\index{checkTxKey@{checkTxKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{checkTxKey()}{checkTxKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::check\+Tx\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{std\+::string\+\_\+view}]{tx\+\_\+key,  }\item[{const std\+::string \&}]{address,  }\item[{uint64\+\_\+t \&}]{received,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{in\+\_\+pool,  }\item[{uint64\+\_\+t \&}]{confirmations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3ee7e90b53ef7116f3386578eba599fd}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ab13ec91c939dee390058952f0281ad98}\label{structWallet_1_1Wallet_ab13ec91c939dee390058952f0281ad98}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!checkTxProof@{checkTxProof}}
+\index{checkTxProof@{checkTxProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{checkTxProof()}{checkTxProof()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::check\+Tx\+Proof (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{const std\+::string \&}]{address,  }\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{signature,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{good,  }\item[{uint64\+\_\+t \&}]{received,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{in\+\_\+pool,  }\item[{uint64\+\_\+t \&}]{confirmations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ae246b12a640877219270091e993b691a}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a5ec885545bf379e2ab8b7ad6569d2a8a}\label{structWallet_1_1Wallet_a5ec885545bf379e2ab8b7ad6569d2a8a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!coldKeyImageSync@{coldKeyImageSync}}
+\index{coldKeyImageSync@{coldKeyImageSync}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{coldKeyImageSync()}{coldKeyImageSync()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::cold\+Key\+Image\+Sync (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{spent,  }\item[{uint64\+\_\+t \&}]{unspent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+cold-\/device protocol key image sync 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a046219b5b561e3767cc66efbacf67725}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a44d1d3c42f404c7bba9fd8d838b7aa40}\label{structWallet_1_1Wallet_a44d1d3c42f404c7bba9fd8d838b7aa40}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!connected@{connected}}
+\index{connected@{connected}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet_a37eb73ab1e2ddf34a901db3f2af68c48}{Connection\+Status}} Wallet\+::\+Wallet\+::connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+connected -\/ checks if the wallet connected to the daemon 
+
+\begin{DoxyReturn}{Returns}
+-\/ true if connected 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a2bedac4030d021ff18046da85c5f2715}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afd347f812f9c8776039f008051c4ddd8}\label{structWallet_1_1Wallet_afd347f812f9c8776039f008051c4ddd8}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!connectToDaemon@{connectToDaemon}}
+\index{connectToDaemon@{connectToDaemon}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{connectToDaemon()}{connectToDaemon()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::connect\+To\+Daemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+connect\+To\+Daemon -\/ connects to the daemon. T\+O\+DO\+: check if it can be removed 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a7894a1fbef5c55f77848509cbbdcf479}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af7c2612249169f15e264d9a1af5627c8}\label{structWallet_1_1Wallet_af7c2612249169f15e264d9a1af5627c8}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!createSweepUnmixableTransaction@{createSweepUnmixableTransaction}}
+\index{createSweepUnmixableTransaction@{createSweepUnmixableTransaction}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{createSweepUnmixableTransaction()}{createSweepUnmixableTransaction()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::create\+Sweep\+Unmixable\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+create\+Sweep\+Unmixable\+Transaction creates transaction with unmixable outputs. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} object. caller is responsible to check \mbox{\hyperlink{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}{Pending\+Transaction\+::status()}} after object returned 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3471f7d77486724fc905db4d69a131f5}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a6d290d9d7b1e86395d4ed893247d9055}\label{structWallet_1_1Wallet_a6d290d9d7b1e86395d4ed893247d9055}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!createTransaction@{createTransaction}}
+\index{createTransaction@{createTransaction}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{createTransaction()}{createTransaction()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::create\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dst\+\_\+addr,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{amount,  }\item[{uint32\+\_\+t}]{priority = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{subaddr\+\_\+account = {\ttfamily 0},  }\item[{std\+::set$<$ uint32\+\_\+t $>$}]{subaddr\+\_\+indices = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+create\+Transaction creates transaction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst\+\_\+addr} & destination address as string \\
+\hline
+{\em amount} & amount \\
+\hline
+{\em subaddr\+\_\+account} & subaddress account from which the input funds are taken \\
+\hline
+{\em subaddr\+\_\+indices} & set of subaddress indices to use for transfer or sweeping. if set empty, all are chosen when sweeping, and one or more are automatically chosen when transferring. after execution, returns the set of actually used indices \\
+\hline
+{\em priority} & set a priority for the transaction. Accepted Values are\+: default (0), or 0-\/5 for\+: default, unimportant, normal, elevated, priority, blink. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} object. caller is responsible to check \mbox{\hyperlink{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}{Pending\+Transaction\+::status()}} after object returned 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aff7c292240d8b61043cad6b0ee2ffbb5}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a759428845a689189bae5608607074d50}\label{structWallet_1_1Wallet_a759428845a689189bae5608607074d50}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!createTransactionMultDest@{createTransactionMultDest}}
+\index{createTransactionMultDest@{createTransactionMultDest}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{createTransactionMultDest()}{createTransactionMultDest()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::create\+Transaction\+Mult\+Dest (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{dst\+\_\+addr,  }\item[{std\+::optional$<$ std\+::vector$<$ uint64\+\_\+t $>$$>$}]{amount,  }\item[{uint32\+\_\+t}]{priority = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{subaddr\+\_\+account = {\ttfamily 0},  }\item[{std\+::set$<$ uint32\+\_\+t $>$}]{subaddr\+\_\+indices = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+create\+Transaction\+Mult\+Dest creates transaction with multiple destinations 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst\+\_\+addr} & vector of destination address as string \\
+\hline
+{\em amount} & vector of amounts \\
+\hline
+{\em subaddr\+\_\+account} & subaddress account from which the input funds are taken \\
+\hline
+{\em subaddr\+\_\+indices} & set of subaddress indices to use for transfer or sweeping. if set empty, all are chosen when sweeping, and one or more are automatically chosen when transferring. after execution, returns the set of actually used indices \\
+\hline
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} object. caller is responsible to check \mbox{\hyperlink{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}{Pending\+Transaction\+::status()}} after object returned 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_acb4ff9d98c3071bc5d29097f0bf1a678}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9c35ae81cde91104b099ae0d9d0973e5}\label{structWallet_1_1Wallet_a9c35ae81cde91104b099ae0d9d0973e5}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!createWatchOnly@{createWatchOnly}}
+\index{createWatchOnly@{createWatchOnly}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{createWatchOnly()}{createWatchOnly()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::create\+Watch\+Only (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{const std\+::string \&}]{language }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+create\+Watch\+Only -\/ Creates a watch only wallet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ where to store the wallet (utf8) \\
+\hline
+{\em password} & \\
+\hline
+{\em language} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true if created successfully 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aa2926c887e19c0e7b49fc6fd05aa445b}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a576ad4f68df2f21dd8bf0abd5df4e2c7}\label{structWallet_1_1Wallet_a576ad4f68df2f21dd8bf0abd5df4e2c7}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!daemonBlockChainHeight@{daemonBlockChainHeight}}
+\index{daemonBlockChainHeight@{daemonBlockChainHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{daemonBlockChainHeight()}{daemonBlockChainHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::daemon\+Block\+Chain\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+daemon\+Block\+Chain\+Height -\/ returns daemon blockchain height; thread-\/safe. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ in case error communicating with the daemon. \mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{status()}} will return Status\+\_\+\+Error and a return verbose error description 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5eb8a394b30a1d79eb67f210bdcd2aa4}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a8056106563b7571029810b2351e4cc3f}\label{structWallet_1_1Wallet_a8056106563b7571029810b2351e4cc3f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!daemonBlockChainTargetHeight@{daemonBlockChainTargetHeight}}
+\index{daemonBlockChainTargetHeight@{daemonBlockChainTargetHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{daemonBlockChainTargetHeight()}{daemonBlockChainTargetHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::daemon\+Block\+Chain\+Target\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+daemon\+Block\+Chain\+Target\+Height -\/ returns daemon blockchain target height 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ in case error communicating with the daemon. \mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{status()}} will return Status\+\_\+\+Error and a verbose error description 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8790c21fb4bc28f23917360f9239658c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9e27c48456ec13e9c81cd37da03953ef}\label{structWallet_1_1Wallet_a9e27c48456ec13e9c81cd37da03953ef}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!debug@{debug}}
+\index{debug@{debug}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Wallet\+::debug (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{category,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afecece955aafde5b2ea67e8786168722}\label{structWallet_1_1Wallet_afecece955aafde5b2ea67e8786168722}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!deviceShowAddress@{deviceShowAddress}}
+\index{deviceShowAddress@{deviceShowAddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{deviceShowAddress()}{deviceShowAddress()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::device\+Show\+Address (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{uint32\+\_\+t}]{address\+Index,  }\item[{const std\+::string \&}]{payment\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+shows address on device display 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3b8f0565c6e69ff8a85c0e57b4aa27e9}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afd4f9d34e124a19bcffd2290b1e0970d}\label{structWallet_1_1Wallet_afd4f9d34e124a19bcffd2290b1e0970d}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!devnet@{devnet}}
+\index{devnet@{devnet}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{devnet()}{devnet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::devnet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ad9175a70bbf53a16540f54d6e8841fd6}\label{structWallet_1_1Wallet_ad9175a70bbf53a16540f54d6e8841fd6}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!displayAmount@{displayAmount}}
+\index{displayAmount@{displayAmount}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{displayAmount()}{displayAmount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::string Wallet\+::\+Wallet\+::display\+Amount (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_abf0aa83653653cdf840dcceda07a7fc1}\label{structWallet_1_1Wallet_abf0aa83653653cdf840dcceda07a7fc1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!disposeTransaction@{disposeTransaction}}
+\index{disposeTransaction@{disposeTransaction}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{disposeTransaction()}{disposeTransaction()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::dispose\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+dispose\+Transaction -\/ destroys transaction object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & -\/ pointer to the \char`\"{}\+Pending\+Transaction\char`\"{} object. Pointer is not valid after function returned; \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a74d7e9db24932223f65070bc46658084}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac3fad40bc20aa068230a67cbef0afb56}\label{structWallet_1_1Wallet_ac3fad40bc20aa068230a67cbef0afb56}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!error@{error}}
+\index{error@{error}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Wallet\+::error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{category,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae165be0e6d770fe518a7b8a5dcda3f50}\label{structWallet_1_1Wallet_ae165be0e6d770fe518a7b8a5dcda3f50}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!estimateBlockChainHeight@{estimateBlockChainHeight}}
+\index{estimateBlockChainHeight@{estimateBlockChainHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{estimateBlockChainHeight()}{estimateBlockChainHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::estimate\+Block\+Chain\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+estimate\+Block\+Chain\+Height -\/ returns estimate blockchain height. More accurate than approximate\+Block\+Chain\+Height, uses daemon height and falls back to calculation from date/time 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8868e644f99cd57861521a48e69abfe7}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a0c292f5368eb29ead2f812aaf9347c03}\label{structWallet_1_1Wallet_a0c292f5368eb29ead2f812aaf9347c03}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!estimateTransactionFee@{estimateTransactionFee}}
+\index{estimateTransactionFee@{estimateTransactionFee}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{estimateTransactionFee()}{estimateTransactionFee()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::estimate\+Transaction\+Fee (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{priority,  }\item[{uint32\+\_\+t}]{recipients = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Estimates transaction fee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & -\/ the tx priority. 1 = low priority, 5 = blink. \\
+\hline
+{\em recipients} & -\/ number of recipients {\itshape not} counting the return address for change. Defaults to 1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estimated fee in atomic units. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a7496fe8a92b834b156b7330fa9217860}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aff07b6278f27d7af19608d6facb191e1}\label{structWallet_1_1Wallet_aff07b6278f27d7af19608d6facb191e1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!exchangeMultisigKeys@{exchangeMultisigKeys}}
+\index{exchangeMultisigKeys@{exchangeMultisigKeys}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{exchangeMultisigKeys()}{exchangeMultisigKeys()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::exchange\+Multisig\+Keys (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+exchange\+\_\+multisig\+\_\+keys -\/ provides additional key exchange round for arbitrary multisig schemes (like N-\/1/N, M/N) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & -\/ base58 encoded key derivations returned by make\+Multisig or exchange\+Multisig\+Keys function call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new info string if more rounds required or an empty string if wallet creation is done 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac3134fc9da17c1050bb0605991ae8e90}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a50e6ed19a3dad27d7e2bfa0a1e1815d7}\label{structWallet_1_1Wallet_a50e6ed19a3dad27d7e2bfa0a1e1815d7}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!exportKeyImages@{exportKeyImages}}
+\index{exportKeyImages@{exportKeyImages}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{exportKeyImages()}{exportKeyImages()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::export\+Key\+Images (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+export\+Key\+Images -\/ exports key images to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ utf8 filename to write to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true on success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a70460275d4bff61f32d993a8c25e5eef}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a4d2925fd1a662ed46db9d1680fb44091}\label{structWallet_1_1Wallet_a4d2925fd1a662ed46db9d1680fb44091}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!exportMultisigImages@{exportMultisigImages}}
+\index{exportMultisigImages@{exportMultisigImages}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{exportMultisigImages()}{exportMultisigImages()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::export\+Multisig\+Images (\begin{DoxyParamCaption}\item[{std\+::string \&}]{images }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+export\+Multisig\+Images -\/ exports transfers\textquotesingle{} key images 
+
+
+\begin{DoxyParams}{Parameters}
+{\em images} & -\/ output paramter for hex encoded array of images \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a587db0e2873ef6b6df1527bf328701ab}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}\label{structWallet_1_1Wallet_ac457948261a641d063569d2e84b81d84}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!filename@{filename}}
+\index{filename@{filename}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{filename()}{filename()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+filename -\/ returns wallet filename 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a35c4d6c439c5899baa28ad6be5d7c32c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af9d350266dd997bd0be80206aabf7340}\label{structWallet_1_1Wallet_af9d350266dd997bd0be80206aabf7340}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!finalizeMultisig@{finalizeMultisig}}
+\index{finalizeMultisig@{finalizeMultisig}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{finalizeMultisig()}{finalizeMultisig()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::finalize\+Multisig (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{extra\+Multisig\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+finalize\+Multisig -\/ finalizes N -\/ 1 / N multisig wallets creation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extra\+Multisig\+Info} & -\/ wallet participants\textquotesingle{} extra multisig info obtained with make\+Multisig call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a003995ca81d54e8c24037f4e67aa3d12}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aeeab7170f34fd78321b87f7ed2e88cb3}\label{structWallet_1_1Wallet_aeeab7170f34fd78321b87f7ed2e88cb3}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!genPaymentId@{genPaymentId}}
+\index{genPaymentId@{genPaymentId}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{genPaymentId()}{genPaymentId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::string Wallet\+::\+Wallet\+::gen\+Payment\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aaec8791219b38b6ca5c48e33a661bd3d}\label{structWallet_1_1Wallet_aaec8791219b38b6ca5c48e33a661bd3d}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getCacheAttribute@{getCacheAttribute}}
+\index{getCacheAttribute@{getCacheAttribute}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getCacheAttribute()}{getCacheAttribute()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Cache\+Attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Cache\+Attribute -\/ return an arbitrary string attached to a wallet cache attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the attached string, or empty string if there is none 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aea22af0b8bbbccdfec2bea38781315f3}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a57c941ca772c41f76812e2fced2e60aa}\label{structWallet_1_1Wallet_a57c941ca772c41f76812e2fced2e60aa}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getDefaultDataDir@{getDefaultDataDir}}
+\index{getDefaultDataDir@{getDefaultDataDir}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getDefaultDataDir()}{getDefaultDataDir()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Default\+Data\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ad9309b4bc8f997ee03d0b299e8623731}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a35fed266e91e2c277c36525c80d303ec}\label{structWallet_1_1Wallet_a35fed266e91e2c277c36525c80d303ec}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Device}} Wallet\+::\+Wallet\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Queries backing device for wallet keys. 
+
+\begin{DoxyReturn}{Returns}
+Device they are on 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a014bf091366a3d140aa3d9c5f4cb2988}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9da8c623bc6464e581c5cde1f1670bb4}\label{structWallet_1_1Wallet_a9da8c623bc6464e581c5cde1f1670bb4}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getMultisigInfo@{getMultisigInfo}}
+\index{getMultisigInfo@{getMultisigInfo}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getMultisigInfo()}{getMultisigInfo()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Multisig\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Multisig\+Info 
+
+\begin{DoxyReturn}{Returns}
+serialized and signed multisig info string 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a1f294adf61fb6e86329593489bc0f37a}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9a6dd409de30d6034e61ea8c9757cb63}\label{structWallet_1_1Wallet_a9a6dd409de30d6034e61ea8c9757cb63}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getRefreshFromBlockHeight@{getRefreshFromBlockHeight}}
+\index{getRefreshFromBlockHeight@{getRefreshFromBlockHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getRefreshFromBlockHeight()}{getRefreshFromBlockHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::get\+Refresh\+From\+Block\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Restore\+Height -\/ get wallet creation height 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a78a698284740a8ef1ef62c08f6682d00}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a07c0d17096c970209e63f9ba934965a4}\label{structWallet_1_1Wallet_a07c0d17096c970209e63f9ba934965a4}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getReserveProof@{getReserveProof}}
+\index{getReserveProof@{getReserveProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getReserveProof()}{getReserveProof()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Reserve\+Proof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{all,  }\item[{uint32\+\_\+t}]{account\+\_\+index,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Reserve\+Proof -\/ Generates a proof that proves the reserve of unspent funds Parameters {\ttfamily account\+\_\+index} and {\ttfamily amount} are ignored when {\ttfamily all} is true 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a923a6aa82d2d8a1be5db0981e06b32b6}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a95904c90a44d8f9e61cff32a587fdce3}\label{structWallet_1_1Wallet_a95904c90a44d8f9e61cff32a587fdce3}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getRing@{getRing}}
+\index{getRing@{getRing}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getRing()}{getRing()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::get\+Ring (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key\+\_\+image,  }\item[{std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+gets the ring used for a key image, if any 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a97cb96f029e155abc0c3ea111b6b9778}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae2ac08ef300e873afa448a63050c6438}\label{structWallet_1_1Wallet_ae2ac08ef300e873afa448a63050c6438}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getRings@{getRings}}
+\index{getRings@{getRings}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getRings()}{getRings()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::get\+Rings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::vector$<$ uint64\+\_\+t $>$$>$$>$ \&}]{rings }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+gets the rings used for a txid, if any 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a6209ecbd685b75384d7babd7d8b81f5e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a441bacf1a5efdadeab8cbbdd614d7336}\label{structWallet_1_1Wallet_a441bacf1a5efdadeab8cbbdd614d7336}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getSeedLanguage@{getSeedLanguage}}
+\index{getSeedLanguage@{getSeedLanguage}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getSeedLanguage()}{getSeedLanguage()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Seed\+Language (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac4a658532e73050e59a13da672676a8c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a25831c4880a843a42ab2cdab8358074c}\label{structWallet_1_1Wallet_a25831c4880a843a42ab2cdab8358074c}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getSpendProof@{getSpendProof}}
+\index{getSpendProof@{getSpendProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getSpendProof()}{getSpendProof()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Spend\+Proof (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3dae228d21a5dae69743b00c1077f9f5}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a7f62e60d49a437732e8ae007bbad76c3}\label{structWallet_1_1Wallet_a7f62e60d49a437732e8ae007bbad76c3}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getSubaddressLabel@{getSubaddressLabel}}
+\index{getSubaddressLabel@{getSubaddressLabel}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getSubaddressLabel()}{getSubaddressLabel()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Subaddress\+Label (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{uint32\+\_\+t}]{address\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+Subaddress\+Label -\/ gets the label of the specified subaddress 
+
+
+\begin{DoxyParams}{Parameters}
+{\em account\+Index} & -\/ the major index specifying the subaddress account \\
+\hline
+{\em address\+Index} & -\/ the minor index specifying the subaddress \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8fa5556d758c79fa9d3a2ce8c019941e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af01ba47c1fa440ee37f529a7e2c0a952}\label{structWallet_1_1Wallet_af01ba47c1fa440ee37f529a7e2c0a952}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getTxKey@{getTxKey}}
+\index{getTxKey@{getTxKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getTxKey()}{getTxKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Tx\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a0345d04ec6708e1080eb1b4ef76f600e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a7d0eea4ccf07983ebf678e9f4f919339}\label{structWallet_1_1Wallet_a7d0eea4ccf07983ebf678e9f4f919339}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getTxProof@{getTxProof}}
+\index{getTxProof@{getTxProof}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getTxProof()}{getTxProof()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+Tx\+Proof (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{const std\+::string \&}]{address,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a6f0cd387a3726c9ef2fe7f91ab609020}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af956f8ca07ae7e82612cfaa9d43aa374}\label{structWallet_1_1Wallet_af956f8ca07ae7e82612cfaa9d43aa374}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!getUserNote@{getUserNote}}
+\index{getUserNote@{getUserNote}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{getUserNote()}{getUserNote()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::get\+User\+Note (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get\+User\+Note -\/ return an arbitrary string note attached to a txid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & -\/ the transaction id to attach the note to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the attached note, or empty string if there is none 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3470fe6b96599abebb8b22eca21716cb}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}\label{structWallet_1_1Wallet_a3090ea765501378bbd61e0e97d6e55d8}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!good@{good}}
+\index{good@{good}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{good()}{good()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+returns true if the wallet status is currently set to Status\+\_\+\+Ok, false otherwise. For more details, call \mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{status()}} instead. 
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a7a087d4386a19d552b4280f17941a6b1}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac8806413db5357863c95fbb453f3a336}\label{structWallet_1_1Wallet_ac8806413db5357863c95fbb453f3a336}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!hardForkInfo@{hardForkInfo}}
+\index{hardForkInfo@{hardForkInfo}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{hardForkInfo()}{hardForkInfo()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::hard\+Fork\+Info (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \&}]{version,  }\item[{uint64\+\_\+t \&}]{earliest\+\_\+height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns current hard fork info 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a290f352ed5792c82d13cb79929343d8f}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac868f0580b874089578b243c1f20520b}\label{structWallet_1_1Wallet_ac868f0580b874089578b243c1f20520b}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!hardForkVersion@{hardForkVersion}}
+\index{hardForkVersion@{hardForkVersion}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{hardForkVersion()}{hardForkVersion()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$uint8\+\_\+t$>$ Wallet\+::\+Wallet\+::hard\+Fork\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac58cb6e13abd9bb1aa55a89b24e9a7f4}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9e3a98e0a9ea7008b7ad7bb3bb833b97}\label{structWallet_1_1Wallet_a9e3a98e0a9ea7008b7ad7bb3bb833b97}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!hasMultisigPartialKeyImages@{hasMultisigPartialKeyImages}}
+\index{hasMultisigPartialKeyImages@{hasMultisigPartialKeyImages}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{hasMultisigPartialKeyImages()}{hasMultisigPartialKeyImages()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::has\+Multisig\+Partial\+Key\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+has\+Multisig\+Partial\+Key\+Images -\/ checks if wallet needs to import multisig key images from other participants 
+
+\begin{DoxyReturn}{Returns}
+true if there are partial key images 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a880cda281ed72df431e400991a154bd6}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a86880f270694ae9aa5092d9536a1366f}\label{structWallet_1_1Wallet_a86880f270694ae9aa5092d9536a1366f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!history@{history}}
+\index{history@{history}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{history()}{history()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1TransactionHistory}{Transaction\+History}}$\ast$ Wallet\+::\+Wallet\+::history (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a7c59d1b80167e76994307f650a6ca620}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a746756e88ba170d917a36a44126f1adf}\label{structWallet_1_1Wallet_a746756e88ba170d917a36a44126f1adf}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!importKeyImages@{importKeyImages}}
+\index{importKeyImages@{importKeyImages}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{importKeyImages()}{importKeyImages()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::import\+Key\+Images (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+import\+Key\+Images -\/ imports key images from file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ utf8 filename to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true on success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8d8cd71c7c3b1e7695135b842df2a870}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1833b6b2810f3b43becc11d2382087e4}\label{structWallet_1_1Wallet_a1833b6b2810f3b43becc11d2382087e4}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!importMultisigImages@{importMultisigImages}}
+\index{importMultisigImages@{importMultisigImages}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{importMultisigImages()}{importMultisigImages()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Wallet\+::\+Wallet\+::import\+Multisig\+Images (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{images }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+import\+Multisig\+Images -\/ imports other participants\textquotesingle{} multisig images 
+
+
+\begin{DoxyParams}{Parameters}
+{\em images} & -\/ array of hex encoded arrays of images obtained with export\+Multisig\+Images \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of imported images 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aa9a9b85c7d7451d0f7970f4dbb07c1ee}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af3023d01f057e1cf6c7d14ed90076b69}\label{structWallet_1_1Wallet_af3023d01f057e1cf6c7d14ed90076b69}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!info@{info}}
+\index{info@{info}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Wallet\+::info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{category,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a43214495291e0853275427fd4b844439}\label{structWallet_1_1Wallet_a43214495291e0853275427fd4b844439}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!init@{init}}
+\index{init@{init}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static void Wallet\+::\+Wallet\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{argv0,  }\item[{const char $\ast$}]{default\+\_\+log\+\_\+base\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a60d041822979a380da1a539055213182}\label{structWallet_1_1Wallet_a60d041822979a380da1a539055213182}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!init@{init}}
+\index{init@{init}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Wallet\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{argv0,  }\item[{const char $\ast$}]{default\+\_\+log\+\_\+base\+\_\+name,  }\item[{const std\+::string \&}]{log\+\_\+path,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{console }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a966174450520cd4ac0a031c05fef9ef1}\label{structWallet_1_1Wallet_a966174450520cd4ac0a031c05fef9ef1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!init@{init}}
+\index{init@{init}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{daemon\+\_\+address,  }\item[{uint64\+\_\+t}]{upper\+\_\+transaction\+\_\+size\+\_\+limit = {\ttfamily 0},  }\item[{const std\+::string \&}]{daemon\+\_\+username = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{daemon\+\_\+password = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{use\+\_\+ssl = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+init -\/ initializes wallet with daemon connection params. if daemon\+\_\+address is local address, \char`\"{}trusted daemon\char`\"{} will be set to true forcibly \mbox{\hyperlink{structWallet_1_1Wallet_a2f4304f7406c6623e6c252f60616b43b}{start\+Refresh()}} should be called when wallet is initialized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em daemon\+\_\+address} & -\/ daemon address in \char`\"{}hostname\+:port\char`\"{} format \\
+\hline
+{\em upper\+\_\+transaction\+\_\+size\+\_\+limit} & \\
+\hline
+{\em daemon\+\_\+username} & \\
+\hline
+{\em daemon\+\_\+password} & \\
+\hline
+{\em light\+Wallet} & -\/ start wallet in light mode, connect to a openmonero compatible server. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true on success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a9a0fa5a1349477c2691bf40f92758542}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a3e9bd76df1319765faf4a7a68828208b}\label{structWallet_1_1Wallet_a3e9bd76df1319765faf4a7a68828208b}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!integratedAddress@{integratedAddress}}
+\index{integratedAddress@{integratedAddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{integratedAddress()}{integratedAddress()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::integrated\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{payment\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+integrated\+Address -\/ returns integrated address for current wallet address and given payment\+\_\+id. if passed \char`\"{}payment\+\_\+id\char`\"{} param is an empty string or not-\/valid payment id string (16 characters hexadecimal string) -\/ random payment\+\_\+id will be generated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em payment\+\_\+id} & -\/ 16 characters hexadecimal string or empty string if new random payment id needs to be generated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 106 characters string representing integrated address 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aa085bbf7043110f929239eca9ed701bc}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afca7204e2543e1d822c89e6ff9698c59}\label{structWallet_1_1Wallet_afca7204e2543e1d822c89e6ff9698c59}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!isKeysFileLocked@{isKeysFileLocked}}
+\index{isKeysFileLocked@{isKeysFileLocked}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{isKeysFileLocked()}{isKeysFileLocked()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::is\+Keys\+File\+Locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns true if the keys file is locked 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8f2d0c3e8cfe35a417ffcf565c8fb54f}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a3f628fae6771bdfabf358018eecede9a}\label{structWallet_1_1Wallet_a3f628fae6771bdfabf358018eecede9a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!isRefreshing@{isRefreshing}}
+\index{isRefreshing@{isRefreshing}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{isRefreshing()}{isRefreshing()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::is\+Refreshing (\begin{DoxyParamCaption}\item[{std\+::chrono\+::milliseconds}]{max\+\_\+wait = {\ttfamily std\+:\+:chrono\+:\+:milliseconds\{50\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+refreshing -\/ returns true if a refresh is currently underway; this is done {\itshape without} requiring a lock, unlike most other wallet-\/interacting functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+wait} & -\/ the maximum time to try to obtain the refresh thread lock. If this time expires without acquiring a lock, we return true, otherwise we return false. Defaults to 50ms; can be set to 0ms to always return immediately.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true if the refresh thread is currently active, false otherwise. If true, very few other methods here will work (i.\+e. they will block until the refresh finishes). The most notably non-\/blocking, thread-\/safe methods that can be used when this returns true are block\+Chain\+Height and daemon\+Block\+Chain\+Height. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a0c6d65be6e8e8957a980380054f63176}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9ee57ebc19ee7c47af42250fd43cf612}\label{structWallet_1_1Wallet_a9ee57ebc19ee7c47af42250fd43cf612}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!keyReuseMitigation2@{keyReuseMitigation2}}
+\index{keyReuseMitigation2@{keyReuseMitigation2}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{keyReuseMitigation2()}{keyReuseMitigation2()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::key\+Reuse\+Mitigation2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{mitigation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+secondary key reuse mitigation 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a0244038af67b92c8dc6111eecedbb286}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afa995038d15923d2c0a9e4fe41df9400}\label{structWallet_1_1Wallet_afa995038d15923d2c0a9e4fe41df9400}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!keysFilename@{keysFilename}}
+\index{keysFilename@{keysFilename}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{keysFilename()}{keysFilename()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::keys\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+keys\+Filename -\/ returns keys filename. usually this formed as \char`\"{}wallet\+\_\+filename\char`\"{}.keys 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ae607ca3fbb6c85ea94d269bb81654fce}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aab92a3d0451064d91524434bd7bf295d}\label{structWallet_1_1Wallet_aab92a3d0451064d91524434bd7bf295d}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!keyValid@{keyValid}}
+\index{keyValid@{keyValid}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{keyValid()}{keyValid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::key\+Valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{secret\+\_\+key\+\_\+string,  }\item[{const std\+::string \&}]{address\+\_\+string,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{is\+View\+Key,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype,  }\item[{std\+::string \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae092c3b9e0e0c434afd505a7b0aa27cb}\label{structWallet_1_1Wallet_ae092c3b9e0e0c434afd505a7b0aa27cb}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!listCurrentStakes@{listCurrentStakes}}
+\index{listCurrentStakes@{listCurrentStakes}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{listCurrentStakes()}{listCurrentStakes()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structWallet_1_1Wallet_1_1stake__info}{stake\+\_\+info}}$>$$\ast$ Wallet\+::\+Wallet\+::list\+Current\+Stakes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+list\+Current\+Stakes -\/ returns a list of the wallets locked stake info (see above). 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a926e288b89d2d388f86083824410f6b3}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac2905d9a4919b1d100634c294b5cb384}\label{structWallet_1_1Wallet_ac2905d9a4919b1d100634c294b5cb384}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!loadUnsignedTx@{loadUnsignedTx}}
+\index{loadUnsignedTx@{loadUnsignedTx}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{loadUnsignedTx()}{loadUnsignedTx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1UnsignedTransaction}{Unsigned\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::load\+Unsigned\+Tx (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{unsigned\+\_\+filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+load\+Unsigned\+Tx -\/ creates transaction from unsigned tx file (utf8 filename) 
+
+\begin{DoxyReturn}{Returns}
+-\/ \mbox{\hyperlink{structWallet_1_1UnsignedTransaction}{Unsigned\+Transaction}} object. caller is responsible to check \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_ac76c741adedbd9d6796179080b7bd0db}{Unsigned\+Transaction\+::status()}} after object returned 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a9bed7397f6912109ef1a5182d8371ecf}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afa14550a2353ed4bce69c71d1b228c05}\label{structWallet_1_1Wallet_afa14550a2353ed4bce69c71d1b228c05}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!lockKeysFile@{lockKeysFile}}
+\index{lockKeysFile@{lockKeysFile}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{lockKeysFile()}{lockKeysFile()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::lock\+Keys\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+locks/unlocks the keys file; returns true on success 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8cc661a0d16c623ca4df4041efc20f3c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2fd7eaa45d862ce0c80214414ce055ba}\label{structWallet_1_1Wallet_a2fd7eaa45d862ce0c80214414ce055ba}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!mainAddress@{mainAddress}}
+\index{mainAddress@{mainAddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{mainAddress()}{mainAddress()}}
+{\footnotesize\ttfamily std\+::string Wallet\+::\+Wallet\+::main\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_adeb592bb069a0e97ffd29fd6fe202c8a}\label{structWallet_1_1Wallet_adeb592bb069a0e97ffd29fd6fe202c8a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!mainnet@{mainnet}}
+\index{mainnet@{mainnet}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{mainnet()}{mainnet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::mainnet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a3292b2f8e9b2cee52d779cfc346b45da}\label{structWallet_1_1Wallet_a3292b2f8e9b2cee52d779cfc346b45da}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!makeMultisig@{makeMultisig}}
+\index{makeMultisig@{makeMultisig}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{makeMultisig()}{makeMultisig()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::make\+Multisig (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{info,  }\item[{uint32\+\_\+t}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+make\+Multisig -\/ switches wallet in multisig state. The one and only creation phase for N / N wallets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & -\/ vector of multisig infos from other participants obtained with get\+Mulitis\+Info call \\
+\hline
+{\em threshold} & -\/ number of required signers to make valid transaction. Must be equal to number of participants (N) or N -\/ 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+in case of N / N wallets returns empty string since no more key exchanges needed. For N -\/ 1 / N wallets returns base58 encoded extra multisig info 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a85c0790c1c976594fcd7e2d54a98271c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a8cc38b107f880a93c6590d06227c2ee4}\label{structWallet_1_1Wallet_a8cc38b107f880a93c6590d06227c2ee4}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!maximumAllowedAmount@{maximumAllowedAmount}}
+\index{maximumAllowedAmount@{maximumAllowedAmount}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{maximumAllowedAmount()}{maximumAllowedAmount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} uint64\+\_\+t Wallet\+::\+Wallet\+::maximum\+Allowed\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2756d9ae2c6cbbe71acd8e2e4b10ea32}\label{structWallet_1_1Wallet_a2756d9ae2c6cbbe71acd8e2e4b10ea32}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!multisig@{multisig}}
+\index{multisig@{multisig}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{multisig()}{multisig()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1MultisigState}{Multisig\+State}} Wallet\+::\+Wallet\+::multisig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+multisig -\/ returns current state of multisig wallet creation process 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1MultisigState}{Multisig\+State}} struct 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a47acadf474939c01bb218bfac5cd4583}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}\label{structWallet_1_1Wallet_a623c0eda1daaeb49428d566550ad3e52}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!nettype@{nettype}}
+\index{nettype@{nettype}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{nettype()}{nettype()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} Wallet\+::\+Wallet\+::nettype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aa0b67ee14c7d1a3cafaa8a81542e9b89}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae0c0aa1139b295fd6acca7d0ebbea387}\label{structWallet_1_1Wallet_ae0c0aa1139b295fd6acca7d0ebbea387}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!nextAccruedPaymentHeight@{nextAccruedPaymentHeight}}
+\index{nextAccruedPaymentHeight@{nextAccruedPaymentHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{nextAccruedPaymentHeight()}{nextAccruedPaymentHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::next\+Accrued\+Payment\+Height (\begin{DoxyParamCaption}\item[{std\+::optional$<$ std\+::string $>$}]{address = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+next\+Batch\+Payout -\/ returns the height at which this wallet is next eligible to receive an accrued balance payment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & -\/ the address to check; if omitted then look up the current primary wallet address. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ab4ae20e386bf924a4c5a316f2707d7f5}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aba75ddf0121ea0a2dbbf319666328ff5}\label{structWallet_1_1Wallet_aba75ddf0121ea0a2dbbf319666328ff5}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!numSubaddressAccounts@{numSubaddressAccounts}}
+\index{numSubaddressAccounts@{numSubaddressAccounts}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{numSubaddressAccounts()}{numSubaddressAccounts()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Wallet\+::\+Wallet\+::num\+Subaddress\+Accounts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+num\+Subaddress\+Accounts -\/ returns the number of existing subaddress accounts 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af8fb32601e2afeb4bc19a8fcf6378c41}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a95eb061828166f941e41e35f4701ef83}\label{structWallet_1_1Wallet_a95eb061828166f941e41e35f4701ef83}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!numSubaddresses@{numSubaddresses}}
+\index{numSubaddresses@{numSubaddresses}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{numSubaddresses()}{numSubaddresses()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Wallet\+::\+Wallet\+::num\+Subaddresses (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+num\+Subaddresses -\/ returns the number of existing subaddresses associated with the specified subaddress account 
+
+
+\begin{DoxyParams}{Parameters}
+{\em account\+Index} & -\/ the major index specifying the subaddress account \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5f71956c25a8283250ceb3cc4b4198f8}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a613e83284c6673f9f10b877388612328}\label{structWallet_1_1Wallet_a613e83284c6673f9f10b877388612328}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!parse\_uri@{parse\_uri}}
+\index{parse\_uri@{parse\_uri}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{parse\_uri()}{parse\_uri()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::parse\+\_\+uri (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri,  }\item[{std\+::string \&}]{address,  }\item[{std\+::string \&}]{payment\+\_\+id,  }\item[{uint64\+\_\+t \&}]{amount,  }\item[{std\+::string \&}]{tx\+\_\+description,  }\item[{std\+::string \&}]{recipient\+\_\+name,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{unknown\+\_\+parameters,  }\item[{std\+::string \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac9b60f30e4a26f48754078319ca26d0c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a0a092c754c6690dca27724643b1ec0d4}\label{structWallet_1_1Wallet_a0a092c754c6690dca27724643b1ec0d4}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!path@{path}}
+\index{path@{path}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a067cd0180f905f5a200fe5e935e9d014}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ab3fd0be17164035f839030022835f710}\label{structWallet_1_1Wallet_ab3fd0be17164035f839030022835f710}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!pauseRefresh@{pauseRefresh}}
+\index{pauseRefresh@{pauseRefresh}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{pauseRefresh()}{pauseRefresh()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::pause\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+pause\+Refresh -\/ pause refresh thread 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a6891107a8bfcbfc77eb05bba10f62aa4}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aac26f87ab5b8658ff7daf07f48d52d3a}\label{structWallet_1_1Wallet_aac26f87ab5b8658ff7daf07f48d52d3a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!paymentIdFromAddress@{paymentIdFromAddress}}
+\index{paymentIdFromAddress@{paymentIdFromAddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{paymentIdFromAddress()}{paymentIdFromAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::string Wallet\+::\+Wallet\+::payment\+Id\+From\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a636ad4e81602997ce818a5f31bc7c7d2}\label{structWallet_1_1Wallet_a636ad4e81602997ce818a5f31bc7c7d2}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!paymentIdValid@{paymentIdValid}}
+\index{paymentIdValid@{paymentIdValid}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{paymentIdValid()}{paymentIdValid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::payment\+Id\+Valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{paiment\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1b232c6e25e100a8ebc29dd85e603bd1}\label{structWallet_1_1Wallet_a1b232c6e25e100a8ebc29dd85e603bd1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!publicMultisigSignerKey@{publicMultisigSignerKey}}
+\index{publicMultisigSignerKey@{publicMultisigSignerKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{publicMultisigSignerKey()}{publicMultisigSignerKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::public\+Multisig\+Signer\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+public\+Multisig\+Signer\+Key -\/ returns public signer key 
+
+\begin{DoxyReturn}{Returns}
+-\/ public multisignature signer key or empty string if wallet is not multisig 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ab8c4921afb24641d743c1ac06d800887}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a6fa09c2b40162bf841c1741c90492e0a}\label{structWallet_1_1Wallet_a6fa09c2b40162bf841c1741c90492e0a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!publicSpendKey@{publicSpendKey}}
+\index{publicSpendKey@{publicSpendKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{publicSpendKey()}{publicSpendKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::public\+Spend\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+public\+Spend\+Key -\/ returns public spend key 
+
+\begin{DoxyReturn}{Returns}
+-\/ public spend key 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a2e8bdbed8cdb7a615ef3f37001262b60}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a35af701758c81872c06c571ab30a63ef}\label{structWallet_1_1Wallet_a35af701758c81872c06c571ab30a63ef}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!publicViewKey@{publicViewKey}}
+\index{publicViewKey@{publicViewKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{publicViewKey()}{publicViewKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::public\+View\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+public\+View\+Key -\/ returns public view key 
+
+\begin{DoxyReturn}{Returns}
+-\/ public view key 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8482b99b5923ba187ad39fecad81529c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aec44d519503409ba865b7947daf27ea1}\label{structWallet_1_1Wallet_aec44d519503409ba865b7947daf27ea1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!refresh@{refresh}}
+\index{refresh@{refresh}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+refresh -\/ refreshes the wallet, updating transactions from daemon 
+
+\begin{DoxyReturn}{Returns}
+-\/ true if refreshed successfully; 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aa96cb813485276a1ec137f600dae977d}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a60a6c62cb9f451d89777f064650cbe6e}\label{structWallet_1_1Wallet_a60a6c62cb9f451d89777f064650cbe6e}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!refreshAsync@{refreshAsync}}
+\index{refreshAsync@{refreshAsync}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{refreshAsync()}{refreshAsync()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::refresh\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+refresh\+Async -\/ refreshes wallet asynchronously. 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a069f958d7c1b0437648ad722c42defa5}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2100963acee1cee868411fc0a506c72a}\label{structWallet_1_1Wallet_a2100963acee1cee868411fc0a506c72a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!requestStakeUnlock@{requestStakeUnlock}}
+\index{requestStakeUnlock@{requestStakeUnlock}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{requestStakeUnlock()}{requestStakeUnlock()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1StakeUnlockResult}{Stake\+Unlock\+Result}}$\ast$ Wallet\+::\+Wallet\+::request\+Stake\+Unlock (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sn\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac5fdb3bb54ffb41e283b0d323527bf81}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac978271ddd53f9543ddba775b490f088}\label{structWallet_1_1Wallet_ac978271ddd53f9543ddba775b490f088}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!rescanBlockchain@{rescanBlockchain}}
+\index{rescanBlockchain@{rescanBlockchain}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{rescanBlockchain()}{rescanBlockchain()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::rescan\+Blockchain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+rescan\+Blockchain -\/ rescans the wallet, updating transactions from daemon 
+
+\begin{DoxyReturn}{Returns}
+-\/ true if refreshed successfully; 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a55493b78ee8f83030317f91075d91530}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a76ed268c2c5b9a705574c344aef901dc}\label{structWallet_1_1Wallet_a76ed268c2c5b9a705574c344aef901dc}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!rescanBlockchainAsync@{rescanBlockchainAsync}}
+\index{rescanBlockchainAsync@{rescanBlockchainAsync}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{rescanBlockchainAsync()}{rescanBlockchainAsync()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::rescan\+Blockchain\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+rescan\+Blockchain\+Async -\/ rescans wallet asynchronously, starting from genesys 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a8c020ad2ec8698e79a521a27ba44b4d2}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac500a1f0a8966e2d97643cf54d0f109c}\label{structWallet_1_1Wallet_ac500a1f0a8966e2d97643cf54d0f109c}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!rescanSpent@{rescanSpent}}
+\index{rescanSpent@{rescanSpent}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{rescanSpent()}{rescanSpent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::rescan\+Spent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a39f73ff8acd44fd943997ddd2f475fab}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a27edcbb36415dc9796aeffcd2ed4a64b}\label{structWallet_1_1Wallet_a27edcbb36415dc9796aeffcd2ed4a64b}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!restoreMultisigTransaction@{restoreMultisigTransaction}}
+\index{restoreMultisigTransaction@{restoreMultisigTransaction}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{restoreMultisigTransaction()}{restoreMultisigTransaction()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::restore\+Multisig\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sign\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+restore\+Multisig\+Transaction creates \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} from sign\+Data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sign\+Data} & encrypted unsigned transaction. Obtained with \mbox{\hyperlink{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}{Pending\+Transaction\+::multisig\+Sign\+Data}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac6b0161ee6fe3667e1cdd8b12c94be61}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aa4d128254729acd9c760b55b18b25f5d}\label{structWallet_1_1Wallet_aa4d128254729acd9c760b55b18b25f5d}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!secretSpendKey@{secretSpendKey}}
+\index{secretSpendKey@{secretSpendKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{secretSpendKey()}{secretSpendKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::secret\+Spend\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+secret\+Spend\+Key -\/ returns secret spend key 
+
+\begin{DoxyReturn}{Returns}
+-\/ secret spend key 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_aac44a311734cd912273f66419176c66f}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a9a0445ab4e1c7f3f1eb48ca71be91f2f}\label{structWallet_1_1Wallet_a9a0445ab4e1c7f3f1eb48ca71be91f2f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!secretViewKey@{secretViewKey}}
+\index{secretViewKey@{secretViewKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{secretViewKey()}{secretViewKey()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::secret\+View\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+secret\+View\+Key -\/ returns secret view key 
+
+\begin{DoxyReturn}{Returns}
+-\/ secret view key 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ad0c31fafdf584a0a50ee22bc411ac9c0}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aa92da85a8bd132dc86c1871aafa31516}\label{structWallet_1_1Wallet_aa92da85a8bd132dc86c1871aafa31516}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!seed@{seed}}
+\index{seed@{seed}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{seed()}{seed()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ac53108ac6cdf8ee9f5098b939aa37f55}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a6cada900567182bcd2ba03469aa04500}\label{structWallet_1_1Wallet_a6cada900567182bcd2ba03469aa04500}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!segregatePreForkOutputs@{segregatePreForkOutputs}}
+\index{segregatePreForkOutputs@{segregatePreForkOutputs}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{segregatePreForkOutputs()}{segregatePreForkOutputs()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::segregate\+Pre\+Fork\+Outputs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{segregate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sets whether pre-\/fork outs are to be segregated 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a1cd8804720b16bd7281b8280fdb41c3e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a5a46ae3c2b09fffe8caa4523de64be54}\label{structWallet_1_1Wallet_a5a46ae3c2b09fffe8caa4523de64be54}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!segregationHeight@{segregationHeight}}
+\index{segregationHeight@{segregationHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{segregationHeight()}{segregationHeight()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::segregation\+Height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sets the height where segregation should occur 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a670c247aad0a9babbcd604b821954b55}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac8e06c118039befa9f1872801287a8ab}\label{structWallet_1_1Wallet_ac8e06c118039befa9f1872801287a8ab}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!serviceNodePubkeyValid@{serviceNodePubkeyValid}}
+\index{serviceNodePubkeyValid@{serviceNodePubkeyValid}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{serviceNodePubkeyValid()}{serviceNodePubkeyValid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::service\+Node\+Pubkey\+Valid (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Check if the string represents a valid public key (regardless of whether the service node actually exists or not) 
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a7056850435a4aac2848fc044ac5d864a}\label{structWallet_1_1Wallet_a7056850435a4aac2848fc044ac5d864a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setAutoRefreshInterval@{setAutoRefreshInterval}}
+\index{setAutoRefreshInterval@{setAutoRefreshInterval}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setAutoRefreshInterval()}{setAutoRefreshInterval()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Auto\+Refresh\+Interval (\begin{DoxyParamCaption}\item[{int}]{millis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Auto\+Refresh\+Interval -\/ setup interval for automatic refresh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & -\/ interval in millis. if zero or less than zero -\/ automatic refresh disabled; \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a381a1ee20bdda4638d4aaf40809689f7}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_afe84c69f2ad1de81980cb9997107d4a1}\label{structWallet_1_1Wallet_afe84c69f2ad1de81980cb9997107d4a1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setCacheAttribute@{setCacheAttribute}}
+\index{setCacheAttribute@{setCacheAttribute}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setCacheAttribute()}{setCacheAttribute()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+Cache\+Attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{const std\+::string \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Cache\+Attribute -\/ attach an arbitrary string to a wallet cache attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ the key \\
+\hline
+{\em val} & -\/ the value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ae8f30afdb20bd47c09c8b100dab46022}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af804de3ef3181813d4159e9e9061d806}\label{structWallet_1_1Wallet_af804de3ef3181813d4159e9e9061d806}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setDevicePassphrase@{setDevicePassphrase}}
+\index{setDevicePassphrase@{setDevicePassphrase}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setDevicePassphrase()}{setDevicePassphrase()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+Device\+Passphrase (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{passphrase }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a2e49878af5ba1091794d874e726c8c8f}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1db19b1b382c90d57d18ff7d1db66905}\label{structWallet_1_1Wallet_a1db19b1b382c90d57d18ff7d1db66905}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setDevicePin@{setDevicePin}}
+\index{setDevicePin@{setDevicePin}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setDevicePin()}{setDevicePin()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+Device\+Pin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a1fbf4e264b6bec0f2524eb3542ce14b1}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a21104eac7883636dd6fd0ecd7dd226f0}\label{structWallet_1_1Wallet_a21104eac7883636dd6fd0ecd7dd226f0}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setListener@{setListener}}
+\index{setListener@{setListener}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setListener()}{setListener()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Listener (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a1d6552f04bac229bcdb5d5e31f4e6ba4}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac28194fcb9df99668db537581a2086b9}\label{structWallet_1_1Wallet_ac28194fcb9df99668db537581a2086b9}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ab1aa3281cd87ce4a7ab195128210dc37}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a067648906365a5ceb3dbaad314054fba}\label{structWallet_1_1Wallet_a067648906365a5ceb3dbaad314054fba}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setRecoveringFromDevice@{setRecoveringFromDevice}}
+\index{setRecoveringFromDevice@{setRecoveringFromDevice}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setRecoveringFromDevice()}{setRecoveringFromDevice()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Recovering\+From\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{recovering\+From\+Device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Recovering\+From\+Device -\/ set state to recovering from device 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recovering\+From\+Device} & -\/ true/false \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af30379f5bbe742f909b607dc0f83458f}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a818a8f32e2ec20dd49082997d603c7c1}\label{structWallet_1_1Wallet_a818a8f32e2ec20dd49082997d603c7c1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setRecoveringFromSeed@{setRecoveringFromSeed}}
+\index{setRecoveringFromSeed@{setRecoveringFromSeed}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setRecoveringFromSeed()}{setRecoveringFromSeed()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Recovering\+From\+Seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{recovering\+From\+Seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Recovering\+From\+Seed -\/ set state recover form seed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em recovering\+From\+Seed} & -\/ true/false \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a749d8412d24463c763e640f4e0dd3df4}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_acb1239ebaea4cc30b87a7a962475be58}\label{structWallet_1_1Wallet_acb1239ebaea4cc30b87a7a962475be58}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setRefreshFromBlockHeight@{setRefreshFromBlockHeight}}
+\index{setRefreshFromBlockHeight@{setRefreshFromBlockHeight}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setRefreshFromBlockHeight()}{setRefreshFromBlockHeight()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Refresh\+From\+Block\+Height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{refresh\+\_\+from\+\_\+block\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Refresh\+From\+Block\+Height -\/ start refresh from block height on recover 
+
+
+\begin{DoxyParams}{Parameters}
+{\em refresh\+\_\+from\+\_\+block\+\_\+height} & -\/ blockchain start height \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a58b4312a42b24c0b6a7b1f119b45db3b}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a6b9d4cd121b310e22ad2f5f8301267f1}\label{structWallet_1_1Wallet_a6b9d4cd121b310e22ad2f5f8301267f1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setRing@{setRing}}
+\index{setRing@{setRing}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setRing()}{setRing()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+Ring (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key\+\_\+image,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{relative }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sets the ring used for a key image 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_ab7ae97bd50da51978945de75c00407c1}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ade00aaad4edbd705fd1b5b456486fb8f}\label{structWallet_1_1Wallet_ade00aaad4edbd705fd1b5b456486fb8f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setSeedLanguage@{setSeedLanguage}}
+\index{setSeedLanguage@{setSeedLanguage}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setSeedLanguage()}{setSeedLanguage()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Seed\+Language (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_abe24927d8950d40c0d858262b3adfae7}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a59322361a7a9528c3968f78292d8c695}\label{structWallet_1_1Wallet_a59322361a7a9528c3968f78292d8c695}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setSubaddressLabel@{setSubaddressLabel}}
+\index{setSubaddressLabel@{setSubaddressLabel}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setSubaddressLabel()}{setSubaddressLabel()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Subaddress\+Label (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index,  }\item[{uint32\+\_\+t}]{address\+Index,  }\item[{const std\+::string \&}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Subaddress\+Label -\/ sets the label of the specified subaddress 
+
+
+\begin{DoxyParams}{Parameters}
+{\em account\+Index} & -\/ the major index specifying the subaddress account \\
+\hline
+{\em address\+Index} & -\/ the minor index specifying the subaddress \\
+\hline
+{\em label} & -\/ the new label for the specified subaddress \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a2450bf9c65ba5382af4c1bcfc14b5177}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2a8acdbaab8073e48edf8be150f13c08}\label{structWallet_1_1Wallet_a2a8acdbaab8073e48edf8be150f13c08}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setSubaddressLookahead@{setSubaddressLookahead}}
+\index{setSubaddressLookahead@{setSubaddressLookahead}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setSubaddressLookahead()}{setSubaddressLookahead()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Subaddress\+Lookahead (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{major,  }\item[{uint32\+\_\+t}]{minor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+Subaddress\+Lookahead -\/ set size of subaddress lookahead 
+
+
+\begin{DoxyParams}{Parameters}
+{\em major} & -\/ size fot the major index \\
+\hline
+{\em minor} & -\/ size fot the minor index \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a36a47847ef91f1d09504e33f31b5d5f8}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a7c7289449efd6ed7f33d610e6a07c5bf}\label{structWallet_1_1Wallet_a7c7289449efd6ed7f33d610e6a07c5bf}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setTrustedDaemon@{setTrustedDaemon}}
+\index{setTrustedDaemon@{setTrustedDaemon}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setTrustedDaemon()}{setTrustedDaemon()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::set\+Trusted\+Daemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af4c6171090f93f61fb030f65c1439ab3}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a690e8520d40f387b2cf2748a60089836}\label{structWallet_1_1Wallet_a690e8520d40f387b2cf2748a60089836}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!setUserNote@{setUserNote}}
+\index{setUserNote@{setUserNote}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{setUserNote()}{setUserNote()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::set\+User\+Note (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{txid,  }\item[{const std\+::string \&}]{note }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set\+User\+Note -\/ attach an arbitrary string note to a txid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & -\/ the transaction id to attach the note to \\
+\hline
+{\em note} & -\/ the note \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a4c495adc935121afdf2b9f55d6be9428}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a57a586c30264bca223cf595e202759bb}\label{structWallet_1_1Wallet_a57a586c30264bca223cf595e202759bb}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!signMessage@{signMessage}}
+\index{signMessage@{signMessage}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{signMessage()}{signMessage()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::sign\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_adf23cb84e4592897406402c99228c7d6}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aae5feb60251cfa12ab84ee42fd89d3cb}\label{structWallet_1_1Wallet_aae5feb60251cfa12ab84ee42fd89d3cb}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!signMultisigParticipant@{signMultisigParticipant}}
+\index{signMultisigParticipant@{signMultisigParticipant}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{signMultisigParticipant()}{signMultisigParticipant()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+::sign\+Multisig\+Participant (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sign\+Multisig\+Participant signs given message with the multisig public signer key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to sign \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signature in case of success. Sets status to Error and return empty string in case of error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a544c716432e502f9509ba2774618e24a}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2b07045c0e56baab0855be3f150b6d2a}\label{structWallet_1_1Wallet_a2b07045c0e56baab0855be3f150b6d2a}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!stakePending@{stakePending}}
+\index{stakePending@{stakePending}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{stakePending()}{stakePending()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction}{Pending\+Transaction}}$\ast$ Wallet\+::\+Wallet\+::stake\+Pending (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{service\+\_\+node\+\_\+key,  }\item[{const uint64\+\_\+t \&}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Prepare a staking transaction; return nullptr on failure. 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a4f9e4ec9ff170a7e23c6501eccc06811}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a2f4304f7406c6623e6c252f60616b43b}\label{structWallet_1_1Wallet_a2f4304f7406c6623e6c252f60616b43b}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!startRefresh@{startRefresh}}
+\index{startRefresh@{startRefresh}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{startRefresh()}{startRefresh()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+::start\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Start\+Refresh -\/ Start/resume refresh thread (refresh every 10 seconds) 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a0ce14128e92816d22ca871a276d2fd6b}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}\label{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!status@{status}}
+\index{status@{status}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$int, std\+::string$>$ Wallet\+::\+Wallet\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a902e18290ca7b6e6246446b3dd3bd38e}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a693e3e697f7eb1e6f3240fec477031bd}\label{structWallet_1_1Wallet_a693e3e697f7eb1e6f3240fec477031bd}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!store@{store}}
+\index{store@{store}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::store (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+store -\/ stores wallet to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ main filename to store wallet to. additionally stores address file and keys file. to store to the same file -\/ just pass empty string; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a19bf5f1f2db8f9ce0a7b7b261758eb2b}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af2b077811ed08550579270ae5043b185}\label{structWallet_1_1Wallet_af2b077811ed08550579270ae5043b185}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!subaddress@{subaddress}}
+\index{subaddress@{subaddress}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{subaddress()}{subaddress()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Subaddress}{Subaddress}}$\ast$ Wallet\+::\+Wallet\+::subaddress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af52a812625eaafaa374c199f83cd9dcf}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1a303aeadf509f52b39f95c3e92d109e}\label{structWallet_1_1Wallet_a1a303aeadf509f52b39f95c3e92d109e}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!subaddressAccount@{subaddressAccount}}
+\index{subaddressAccount@{subaddressAccount}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{subaddressAccount()}{subaddressAccount()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1SubaddressAccount}{Subaddress\+Account}}$\ast$ Wallet\+::\+Wallet\+::subaddress\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5ad70a376a060558a86a600383d281e0}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a97842fb96368a22605e433c2be4de9ae}\label{structWallet_1_1Wallet_a97842fb96368a22605e433c2be4de9ae}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!submitTransaction@{submitTransaction}}
+\index{submitTransaction@{submitTransaction}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{submitTransaction()}{submitTransaction()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::submit\+Transaction (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+submit\+Transaction -\/ submits transaction in signed tx file (utf8 filename) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ utf8 filename to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true on success 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af421bc6c5ac441f1ca0962c3644d2f6b}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1db67774ad093724e166b16d0b22119f}\label{structWallet_1_1Wallet_a1db67774ad093724e166b16d0b22119f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!synchronized@{synchronized}}
+\index{synchronized@{synchronized}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{synchronized()}{synchronized()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::synchronized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+synchronized -\/ checks if wallet was ever synchronized 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5c7a2a930298813c4d7eb14dfc2f94d8}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ad6fbd663d3fe9bca7b701dc8f401a1c5}\label{structWallet_1_1Wallet_ad6fbd663d3fe9bca7b701dc8f401a1c5}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!testnet@{testnet}}
+\index{testnet@{testnet}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{testnet()}{testnet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::testnet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a68ab4593aa7a468b9593066fd43ada04}\label{structWallet_1_1Wallet_a68ab4593aa7a468b9593066fd43ada04}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!trustedDaemon@{trustedDaemon}}
+\index{trustedDaemon@{trustedDaemon}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{trustedDaemon()}{trustedDaemon()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::trusted\+Daemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af9c74475e7e2822c23e0d516ca8e89e1}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a4c1e5264e622688fcf13b7847c3e669c}\label{structWallet_1_1Wallet_a4c1e5264e622688fcf13b7847c3e669c}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!unblackballOutput@{unblackballOutput}}
+\index{unblackballOutput@{unblackballOutput}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{unblackballOutput()}{unblackballOutput()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::unblackball\+Output (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{amount,  }\item[{const std\+::string \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+unblackballs an output 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a332ab044d7ffa6abab5ffece85deb3f7}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a74c77ec2a0a38a9822c3a98b442b626f}\label{structWallet_1_1Wallet_a74c77ec2a0a38a9822c3a98b442b626f}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!unlockedBalance@{unlockedBalance}}
+\index{unlockedBalance@{unlockedBalance}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{unlockedBalance()}{unlockedBalance()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+::unlocked\+Balance (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{account\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a3c5b2f0ea4a3aeb4d7f7ebd2d30bd768}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a1c6dec0a60b1e1fe8ed5403c9eb4b6ce}\label{structWallet_1_1Wallet_a1c6dec0a60b1e1fe8ed5403c9eb4b6ce}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!unlockedBalanceAll@{unlockedBalanceAll}}
+\index{unlockedBalanceAll@{unlockedBalanceAll}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{unlockedBalanceAll()}{unlockedBalanceAll()}}
+{\footnotesize\ttfamily uint64\+\_\+t Wallet\+::\+Wallet\+::unlocked\+Balance\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_aa782ad70045e00f3fafa55544eba7a00}\label{structWallet_1_1Wallet_aa782ad70045e00f3fafa55544eba7a00}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!unlockKeysFile@{unlockKeysFile}}
+\index{unlockKeysFile@{unlockKeysFile}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{unlockKeysFile()}{unlockKeysFile()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::unlock\+Keys\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a711d3768635b80f08afd47c7e0ac0821}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ac6367d335761cf051472ffd291ac4777}\label{structWallet_1_1Wallet_ac6367d335761cf051472ffd291ac4777}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!useForkRules@{useForkRules}}
+\index{useForkRules@{useForkRules}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{useForkRules()}{useForkRules()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::use\+Fork\+Rules (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{version,  }\item[{int64\+\_\+t}]{early\+\_\+blocks }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+check if hard fork rules should be used 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_af4334c33f48b133a8e6122ad6e1fab51}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_a4c3ec65bb9a243192704d0e8c73c2c1c}\label{structWallet_1_1Wallet_a4c3ec65bb9a243192704d0e8c73c2c1c}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!verifyMessageWithPublicKey@{verifyMessageWithPublicKey}}
+\index{verifyMessageWithPublicKey@{verifyMessageWithPublicKey}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{verifyMessageWithPublicKey()}{verifyMessageWithPublicKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::verify\+Message\+With\+Public\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{public\+Key,  }\item[{const std\+::string \&}]{signature }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+verify\+Message\+With\+Public\+Key verifies that message was signed with the given public key 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message \\
+\hline
+{\em public\+Key} & hex encoded public key \\
+\hline
+{\em signature} & signature of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature is correct. false and sets error state in case of error 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a40e7fa7e2627850665e9e03893c92591}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ae7450ef6b5ac3c9c218c5648d0f529d1}\label{structWallet_1_1Wallet_ae7450ef6b5ac3c9c218c5648d0f529d1}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!verifySignedMessage@{verifySignedMessage}}
+\index{verifySignedMessage@{verifySignedMessage}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{verifySignedMessage()}{verifySignedMessage()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::verify\+Signed\+Message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{const std\+::string \&}]{addres,  }\item[{const std\+::string \&}]{signature }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+verify\+Signed\+Message -\/ verify a signature matches a given message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & -\/ the message (arbitrary byte data) \\
+\hline
+{\em address} & -\/ the address the signature claims to be made with \\
+\hline
+{\em signature} & -\/ the signature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the signature verified, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a0272f779153504e8545f5b6a42a3d64c}{Wallet\+::\+Wallet\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_ab4fc1931f06ecfc2cdcb76767d215d97}\label{structWallet_1_1Wallet_ab4fc1931f06ecfc2cdcb76767d215d97}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!warning@{warning}}
+\index{warning@{warning}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Wallet\+::warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{category,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structWallet_1_1Wallet_af948e3a2072a8872b22ed3311929ab30}\label{structWallet_1_1Wallet_af948e3a2072a8872b22ed3311929ab30}} 
+\index{Wallet::Wallet@{Wallet::Wallet}!watchOnly@{watchOnly}}
+\index{watchOnly@{watchOnly}!Wallet::Wallet@{Wallet::Wallet}}
+\doxysubsubsection{\texorpdfstring{watchOnly()}{watchOnly()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+::watch\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+watch\+Only -\/ checks if wallet is watch only 
+
+\begin{DoxyReturn}{Returns}
+-\/ true if watch only 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletImpl_a5de959bc171b2420001701df403c678d}{Wallet\+::\+Wallet\+Impl}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{api_2wallet_8cpp}{wallet.\+cpp}}\end{DoxyCompactItemize}

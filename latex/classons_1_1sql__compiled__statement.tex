@@ -1,0 +1,141 @@
+\hypertarget{classons_1_1sql__compiled__statement}{}\doxysection{ons\+::sql\+\_\+compiled\+\_\+statement Class Reference}
+\label{classons_1_1sql__compiled__statement}\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+
+
+{\ttfamily \#include $<$oxen\+\_\+name\+\_\+system.\+h$>$}
+
+
+
+Collaboration diagram for ons\+::sql\+\_\+compiled\+\_\+statement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classons_1_1sql__compiled__statement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement_a638b34d6476a2f52169ba58cadea9a95}{sql\+\_\+compiled\+\_\+statement}} (\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&\mbox{\hyperlink{classons_1_1sql__compiled__statement_a2613cabfac4f27b98a2ddf2c45fff916}{nsdb}})
+\begin{DoxyCompactList}\small\item\em Constructor; takes a reference to the \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement_a54e108fb8aac288d7b2998a8a390cdb9}{sql\+\_\+compiled\+\_\+statement}} (const \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Non-\/copyable (because we own an internal sqlite3 statement handle) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \& \mbox{\hyperlink{classons_1_1sql__compiled__statement_a5ef02222ce61bcbaf097835d27ef5da3}{operator=}} (const \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&)=delete
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement_a4a9d4149bacf71c5d17e6e9886c41451}{sql\+\_\+compiled\+\_\+statement}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\&from)
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \& \mbox{\hyperlink{classons_1_1sql__compiled__statement_a016070c2192643ce938ac2f626be5aae}{operator=}} (\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\&from)
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement_ae29f9256d18259574055f2786b39518f}{$\sim$sql\+\_\+compiled\+\_\+statement}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the internal sqlite3 statement on destruction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classons_1_1sql__compiled__statement_a1f70eb3624bd5802ba53b472f9c27730}{compile}} (std\+::string\+\_\+view query, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} optimise\+\_\+for\+\_\+multiple\+\_\+usage=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement_ac0a7dad73e281ac6fc83748209dd20da}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the object owns a prepared statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \& \mbox{\hyperlink{classons_1_1sql__compiled__statement_a2613cabfac4f27b98a2ddf2c45fff916}{nsdb}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} upon which this object operates. \end{DoxyCompactList}\item 
+sqlite3\+\_\+stmt $\ast$ \mbox{\hyperlink{classons_1_1sql__compiled__statement_a5fe15970411a12233db16b67d30afc29}{statement}} = nullptr
+\begin{DoxyCompactList}\small\item\em The stored, owned statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a638b34d6476a2f52169ba58cadea9a95}\label{classons_1_1sql__compiled__statement_a638b34d6476a2f52169ba58cadea9a95}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!sql\_compiled\_statement@{sql\_compiled\_statement}}
+\index{sql\_compiled\_statement@{sql\_compiled\_statement}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{sql\_compiled\_statement()}{sql\_compiled\_statement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ons\+::sql\+\_\+compiled\+\_\+statement\+::sql\+\_\+compiled\+\_\+statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} \&}]{nsdb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor; takes a reference to the \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}}. 
+
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a54e108fb8aac288d7b2998a8a390cdb9}\label{classons_1_1sql__compiled__statement_a54e108fb8aac288d7b2998a8a390cdb9}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!sql\_compiled\_statement@{sql\_compiled\_statement}}
+\index{sql\_compiled\_statement@{sql\_compiled\_statement}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{sql\_compiled\_statement()}{sql\_compiled\_statement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ons\+::sql\+\_\+compiled\+\_\+statement\+::sql\+\_\+compiled\+\_\+statement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Non-\/copyable (because we own an internal sqlite3 statement handle) 
+
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a4a9d4149bacf71c5d17e6e9886c41451}\label{classons_1_1sql__compiled__statement_a4a9d4149bacf71c5d17e6e9886c41451}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!sql\_compiled\_statement@{sql\_compiled\_statement}}
+\index{sql\_compiled\_statement@{sql\_compiled\_statement}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{sql\_compiled\_statement()}{sql\_compiled\_statement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ons\+::sql\+\_\+compiled\+\_\+statement\+::sql\+\_\+compiled\+\_\+statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Move construction; ownership of the internal statement handle, if present, is transferred to the new object. \mbox{\Hypertarget{classons_1_1sql__compiled__statement_ae29f9256d18259574055f2786b39518f}\label{classons_1_1sql__compiled__statement_ae29f9256d18259574055f2786b39518f}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!````~sql\_compiled\_statement@{$\sim$sql\_compiled\_statement}}
+\index{````~sql\_compiled\_statement@{$\sim$sql\_compiled\_statement}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{$\sim$sql\_compiled\_statement()}{~sql\_compiled\_statement()}}
+{\footnotesize\ttfamily ons\+::sql\+\_\+compiled\+\_\+statement\+::$\sim$sql\+\_\+compiled\+\_\+statement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the internal sqlite3 statement on destruction. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a1f70eb3624bd5802ba53b472f9c27730}\label{classons_1_1sql__compiled__statement_a1f70eb3624bd5802ba53b472f9c27730}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!compile@{compile}}
+\index{compile@{compile}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::sql\+\_\+compiled\+\_\+statement\+::compile (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{query,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{optimise\+\_\+for\+\_\+multiple\+\_\+usage = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})}
+
+Attempts to prepare the given statement. M\+E\+R\+R\+O\+Rs and returns false on failure. If the object already has a prepare statement then it is finalized first. \mbox{\Hypertarget{classons_1_1sql__compiled__statement_ac0a7dad73e281ac6fc83748209dd20da}\label{classons_1_1sql__compiled__statement_ac0a7dad73e281ac6fc83748209dd20da}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily ons\+::sql\+\_\+compiled\+\_\+statement\+::operator \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Returns true if the object owns a prepared statement. 
+
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a5ef02222ce61bcbaf097835d27ef5da3}\label{classons_1_1sql__compiled__statement_a5ef02222ce61bcbaf097835d27ef5da3}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!operator=@{operator=}}
+\index{operator=@{operator=}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}}\& ons\+::sql\+\_\+compiled\+\_\+statement\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a016070c2192643ce938ac2f626be5aae}\label{classons_1_1sql__compiled__statement_a016070c2192643ce938ac2f626be5aae}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!operator=@{operator=}}
+\index{operator=@{operator=}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \& ons\+::sql\+\_\+compiled\+\_\+statement\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \&\&}]{from }\end{DoxyParamCaption})}
+
+Move copying. The referenced \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} must be the same. Ownership of the internal statement handle is transferred. If the target already has a statement handle then it is destroyed. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a2613cabfac4f27b98a2ddf2c45fff916}\label{classons_1_1sql__compiled__statement_a2613cabfac4f27b98a2ddf2c45fff916}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!nsdb@{nsdb}}
+\index{nsdb@{nsdb}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{nsdb}{nsdb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}}\& ons\+::sql\+\_\+compiled\+\_\+statement\+::nsdb}
+
+
+
+The \mbox{\hyperlink{structons_1_1name__system__db}{name\+\_\+system\+\_\+db}} upon which this object operates. 
+
+\mbox{\Hypertarget{classons_1_1sql__compiled__statement_a5fe15970411a12233db16b67d30afc29}\label{classons_1_1sql__compiled__statement_a5fe15970411a12233db16b67d30afc29}} 
+\index{ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}!statement@{statement}}
+\index{statement@{statement}!ons::sql\_compiled\_statement@{ons::sql\_compiled\_statement}}
+\doxysubsubsection{\texorpdfstring{statement}{statement}}
+{\footnotesize\ttfamily sqlite3\+\_\+stmt$\ast$ ons\+::sql\+\_\+compiled\+\_\+statement\+::statement = nullptr}
+
+
+
+The stored, owned statement. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8h}{oxen\+\_\+name\+\_\+system.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8cpp}{oxen\+\_\+name\+\_\+system.\+cpp}}\end{DoxyCompactItemize}

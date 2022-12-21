@@ -1,0 +1,280 @@
+\hypertarget{structWallet_1_1PendingTransaction}{}\doxysection{Wallet\+::Pending\+Transaction Struct Reference}
+\label{structWallet_1_1PendingTransaction}\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+
+
+Transaction-\/like interface for sending money.  
+
+
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Pending\+Transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{structWallet_1_1PendingTransaction__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dc}{Status}} \{ \mbox{\hyperlink{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca298b19cae705626b5cead1272e7cf0a5}{Status\+\_\+\+Ok}}, 
+\mbox{\hyperlink{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca180d44352ea13069fbf88bf11f183195}{Status\+\_\+\+Error}}, 
+\mbox{\hyperlink{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dcaec92fee0b112c6a3c57e217221776134}{Status\+\_\+\+Critical}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1PendingTransaction_aab800bc144ba95c2c47728c014c3ce19}{$\sim$\+Pending\+Transaction}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1PendingTransaction_ace3b477cc704e916b1f25d8f1c4558f9}{good}} () const =0
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1PendingTransaction_abb1171ad513832d969e323288697cc94}{set\+Error}} (std\+::string error\+\_\+msg)=0
+\begin{DoxyCompactList}\small\item\em sets error status to true with reason \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ int, std\+::string $>$ \mbox{\hyperlink{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}{status}} () const =0
+\begin{DoxyCompactList}\small\item\em returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1PendingTransaction_aa462b7cf948f32e3dfafe64cdde36d00}{commit}} (std\+::string\+\_\+view filename=\char`\"{}\char`\"{}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} overwrite=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} blink=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})=0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1PendingTransaction_a354dfe55bacd6cd602e617e6e998b3ee}{amount}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1PendingTransaction_a053d5d9391ff7b05112ea45441fc91d4}{dust}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1PendingTransaction_a8f04303c7fa625cbe5a67363aad525d7}{fee}} () const =0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1PendingTransaction_a7b5c5ba367dcd17e416bc121016c1a6f}{txid}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1PendingTransaction_acad0baeca17b8ea62cd3794c9f170b36}{tx\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em tx\+Count -\/ number of transactions current transaction will be splitted to \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structWallet_1_1PendingTransaction_afaf770fec96f0246b09a4c205136307f}{subaddr\+Account}} () const =0
+\item 
+virtual std\+::vector$<$ std\+::set$<$ uint32\+\_\+t $>$ $>$ \mbox{\hyperlink{structWallet_1_1PendingTransaction_aeaa21d96d54722af320dfca17dc72cd3}{subaddr\+Indices}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}{multisig\+Sign\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em multisig\+Sign\+Data \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1PendingTransaction_a9cc713831cad7717841e7a8145041ee3}{sign\+Multisig\+Tx}} ()=0
+\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1PendingTransaction_ae5a0af63d28b7632c140150a166880f4}{signers\+Keys}} () const =0
+\begin{DoxyCompactList}\small\item\em signers\+Keys \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transaction-\/like interface for sending money. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dc}\label{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dc}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!Status@{Status}}
+\index{Status@{Status}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dc}{Wallet\+::\+Pending\+Transaction\+::\+Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Ok@{Status\_Ok}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!Status\_Ok@{Status\_Ok}}}\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca298b19cae705626b5cead1272e7cf0a5}\label{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca298b19cae705626b5cead1272e7cf0a5}} 
+Status\+\_\+\+Ok&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Error@{Status\_Error}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!Status\_Error@{Status\_Error}}}\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca180d44352ea13069fbf88bf11f183195}\label{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dca180d44352ea13069fbf88bf11f183195}} 
+Status\+\_\+\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Status\_Critical@{Status\_Critical}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!Status\_Critical@{Status\_Critical}}}\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dcaec92fee0b112c6a3c57e217221776134}\label{structWallet_1_1PendingTransaction_ac6171fe10577ead7956594e28bab02dcaec92fee0b112c6a3c57e217221776134}} 
+Status\+\_\+\+Critical&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_aab800bc144ba95c2c47728c014c3ce19}\label{structWallet_1_1PendingTransaction_aab800bc144ba95c2c47728c014c3ce19}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!````~PendingTransaction@{$\sim$PendingTransaction}}
+\index{````~PendingTransaction@{$\sim$PendingTransaction}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{$\sim$PendingTransaction()}{~PendingTransaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Pending\+Transaction\+::$\sim$\+Pending\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a354dfe55bacd6cd602e617e6e998b3ee}\label{structWallet_1_1PendingTransaction_a354dfe55bacd6cd602e617e6e998b3ee}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!amount@{amount}}
+\index{amount@{amount}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{amount()}{amount()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Pending\+Transaction\+::amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_aa4d53661b6fad3845368c379c854dd63}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_aa462b7cf948f32e3dfafe64cdde36d00}\label{structWallet_1_1PendingTransaction_aa462b7cf948f32e3dfafe64cdde36d00}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!commit@{commit}}
+\index{commit@{commit}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Pending\+Transaction\+::commit (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{filename = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{overwrite = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{blink = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a9cb89b2a9b112ab4259d07fb808607dc}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a053d5d9391ff7b05112ea45441fc91d4}\label{structWallet_1_1PendingTransaction_a053d5d9391ff7b05112ea45441fc91d4}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!dust@{dust}}
+\index{dust@{dust}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{dust()}{dust()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Pending\+Transaction\+::dust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a8658099402092c4d5bef144f2a36c33d}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a8f04303c7fa625cbe5a67363aad525d7}\label{structWallet_1_1PendingTransaction_a8f04303c7fa625cbe5a67363aad525d7}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!fee@{fee}}
+\index{fee@{fee}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{fee()}{fee()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Pending\+Transaction\+::fee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a6004402c59711a52d408c00d05372820}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ace3b477cc704e916b1f25d8f1c4558f9}\label{structWallet_1_1PendingTransaction_ace3b477cc704e916b1f25d8f1c4558f9}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!good@{good}}
+\index{good@{good}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{good()}{good()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Pending\+Transaction\+::good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+returns true if the status is currently set to Status\+\_\+\+Ok, false otherwise. For more details, call \mbox{\hyperlink{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}{status()}} instead. 
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_acb634a30fbf2494c650b9b1f86533b59}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}\label{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!multisigSignData@{multisigSignData}}
+\index{multisigSignData@{multisigSignData}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{multisigSignData()}{multisigSignData()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Pending\+Transaction\+::multisig\+Sign\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+multisig\+Sign\+Data 
+
+\begin{DoxyReturn}{Returns}
+encoded multisig transaction with signers\textquotesingle{} keys. Transfer this data to another wallet participant to sign it. Assumed use case is\+:
+\begin{DoxyEnumerate}
+\item Initiator\+: auto data = pending\+Transaction-\/$>$\mbox{\hyperlink{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}{multisig\+Sign\+Data()}};
+\item Signer1\+: pending\+Transaction = wallet-\/$>$restore\+Multisig\+Transaction(data); pending\+Transaction-\/$>$\mbox{\hyperlink{structWallet_1_1PendingTransaction_a9cc713831cad7717841e7a8145041ee3}{sign\+Multisig\+Tx()}}; auto signed = pending\+Transaction-\/$>$\mbox{\hyperlink{structWallet_1_1PendingTransaction_a12ab059963648d54ced48def38cb15bf}{multisig\+Sign\+Data()}};
+\item Signer2\+: pending\+Transaction = wallet-\/$>$restore\+Multisig\+Transaction(signed); pending\+Transaction-\/$>$\mbox{\hyperlink{structWallet_1_1PendingTransaction_a9cc713831cad7717841e7a8145041ee3}{sign\+Multisig\+Tx()}}; pending\+Transaction-\/$>$\mbox{\hyperlink{structWallet_1_1PendingTransaction_aa462b7cf948f32e3dfafe64cdde36d00}{commit()}}; 
+\end{DoxyEnumerate}
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a1556e8cb1ad8a8df0b54706a262067fc}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_abb1171ad513832d969e323288697cc94}\label{structWallet_1_1PendingTransaction_abb1171ad513832d969e323288697cc94}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!setError@{setError}}
+\index{setError@{setError}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{setError()}{setError()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Pending\+Transaction\+::set\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{error\+\_\+msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+sets error status to true with reason 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a770a7ead797186cc0cf7b4d45aabd020}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_ae5a0af63d28b7632c140150a166880f4}\label{structWallet_1_1PendingTransaction_ae5a0af63d28b7632c140150a166880f4}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!signersKeys@{signersKeys}}
+\index{signersKeys@{signersKeys}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{signersKeys()}{signersKeys()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wallet\+::\+Pending\+Transaction\+::signers\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+signers\+Keys 
+
+\begin{DoxyReturn}{Returns}
+vector of base58-\/encoded signers\textquotesingle{} public keys 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_af63f6358cf94e59ab74b49700fb170b5}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a9cc713831cad7717841e7a8145041ee3}\label{structWallet_1_1PendingTransaction_a9cc713831cad7717841e7a8145041ee3}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!signMultisigTx@{signMultisigTx}}
+\index{signMultisigTx@{signMultisigTx}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{signMultisigTx()}{signMultisigTx()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Pending\+Transaction\+::sign\+Multisig\+Tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_ab0beb79ea088e626cc90db8982943c95}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}\label{structWallet_1_1PendingTransaction_abbfd13cc6b9ba73912f9743a0f1877c1}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!status@{status}}
+\index{status@{status}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$int, std\+::string$>$ Wallet\+::\+Pending\+Transaction\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_af44548d46da759a38d9ee2e24e570c90}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_afaf770fec96f0246b09a4c205136307f}\label{structWallet_1_1PendingTransaction_afaf770fec96f0246b09a4c205136307f}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!subaddrAccount@{subaddrAccount}}
+\index{subaddrAccount@{subaddrAccount}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{subaddrAccount()}{subaddrAccount()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$uint32\+\_\+t$>$ Wallet\+::\+Pending\+Transaction\+::subaddr\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_ad9bf565cec5ae5fadcfffa64db0d632f}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_aeaa21d96d54722af320dfca17dc72cd3}\label{structWallet_1_1PendingTransaction_aeaa21d96d54722af320dfca17dc72cd3}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!subaddrIndices@{subaddrIndices}}
+\index{subaddrIndices@{subaddrIndices}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{subaddrIndices()}{subaddrIndices()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::set$<$uint32\+\_\+t$>$ $>$ Wallet\+::\+Pending\+Transaction\+::subaddr\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a2eda119c701a1a40110afa6c1f6ca59b}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_acad0baeca17b8ea62cd3794c9f170b36}\label{structWallet_1_1PendingTransaction_acad0baeca17b8ea62cd3794c9f170b36}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!txCount@{txCount}}
+\index{txCount@{txCount}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{txCount()}{txCount()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Pending\+Transaction\+::tx\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+tx\+Count -\/ number of transactions current transaction will be splitted to 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a1cee5c27010785206413828eb86d5dd1}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1PendingTransaction_a7b5c5ba367dcd17e416bc121016c1a6f}\label{structWallet_1_1PendingTransaction_a7b5c5ba367dcd17e416bc121016c1a6f}} 
+\index{Wallet::PendingTransaction@{Wallet::PendingTransaction}!txid@{txid}}
+\index{txid@{txid}!Wallet::PendingTransaction@{Wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{txid()}{txid()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wallet\+::\+Pending\+Transaction\+::txid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1PendingTransactionImpl_a8507bafe081209f2cc4eb293cd449ca9}{Wallet\+::\+Pending\+Transaction\+Impl}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{api_2pending__transaction_8cpp}{pending\+\_\+transaction.\+cpp}}\end{DoxyCompactItemize}

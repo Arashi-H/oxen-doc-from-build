@@ -1,0 +1,82 @@
+\hypertarget{socks_8h}{}\doxysection{src/net/socks.h File Reference}
+\label{socks_8h}\index{src/net/socks.h@{src/net/socks.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/io\+\_\+service.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/strand.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/system/error\+\_\+code.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/type\+\_\+traits/integral\+\_\+constant.\+hpp$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}net/fwd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for socks.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{socks_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{socks_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnet_1_1socks_1_1client}{net\+::socks\+::client}}
+\begin{DoxyCompactList}\small\item\em Client support for socks connect and resolve commands. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1async__close}{net\+::socks\+::client\+::async\+\_\+close}}
+\item 
+class \mbox{\hyperlink{classnet_1_1socks_1_1connect__client}{net\+::socks\+::connect\+\_\+client$<$ Handler $>$}}
+\item 
+struct \mbox{\hyperlink{structboost_1_1system_1_1is__error__code__enum_3_01net_1_1socks_1_1error_01_4}{boost\+::system\+::is\+\_\+error\+\_\+code\+\_\+enum$<$ net\+::socks\+::error $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceepee}{epee}}
+\item 
+ \mbox{\hyperlink{namespaceepee_1_1net__utils}{epee\+::net\+\_\+utils}}
+\item 
+ \mbox{\hyperlink{namespacenet}{net}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1socks}{net\+::socks}}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1system}{boost\+::system}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774}{net\+::socks\+::version}} \+: std\+::uint8\+\_\+t \{ \mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a5ed3a3ff8e5c29979502b9030e8518e0}{net\+::socks\+::version\+::v4}} = 0, 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a4c7eac11075c8f6be7957e95f0d60e5a}{net\+::socks\+::version\+::v4a}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_abcf7f921f2267dadcaf754ef9d2fb774a49b16e17de9764b327318e7f086c45c3}{net\+::socks\+::version\+::v4a\+\_\+tor}}
+ \}
+\begin{DoxyCompactList}\small\item\em Supported socks variants. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35}{net\+::socks\+::error}} \+: int \{ \newline
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac7537d6d48ecf261749c09a9f284bd45}{net\+::socks\+::error\+::rejected}} = 92, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ae81a66561cff32038738bcf9e7572e2a}{net\+::socks\+::error\+::identd\+\_\+connection}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ac54f152f6ce63f4cf23c8fd41363c962}{net\+::socks\+::error\+::identd\+\_\+user}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a4cba57a36205516b4fe80805d64661b9}{net\+::socks\+::error\+::bad\+\_\+read}} = 257, 
+\newline
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35a24ec83c5c951060c0d5eef490eb75812}{net\+::socks\+::error\+::bad\+\_\+write}}, 
+\mbox{\hyperlink{namespacenet_1_1socks_a7f4ed1eea9983e65137407391e307c35ad67f2b959d72215af459f61f731cdded}{net\+::socks\+::error\+::unexpected\+\_\+version}}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible errors with socks communication. Defined in \href{https://www.openssh.com/txt/socks4.protocol}{\texttt{ https\+://www.\+openssh.\+com/txt/socks4.\+protocol}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const boost\+::system\+::error\+\_\+category \& \mbox{\hyperlink{namespacenet_1_1socks_a667dc291afc4bf2fe752ff0514df437e}{net\+::socks\+::error\+\_\+category}} () noexcept
+\item 
+boost\+::system\+::error\+\_\+code \mbox{\hyperlink{namespacenet_1_1socks_af10f92a22d42d60bf63c5fbee0e3568b}{net\+::socks\+::make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}} value) noexcept
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\std\+::shared\+\_\+ptr$<$ client $>$ \mbox{\hyperlink{namespacenet_1_1socks_aea1c411c45102ed32259765aec071122}{net\+::socks\+::make\+\_\+connect\+\_\+client}} (client\+::stream\+\_\+type\+::socket \&\&proxy, socks\+::version ver, Handler handler)
+\end{DoxyCompactItemize}

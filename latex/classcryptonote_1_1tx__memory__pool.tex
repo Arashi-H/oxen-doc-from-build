@@ -1,0 +1,1280 @@
+\hypertarget{classcryptonote_1_1tx__memory__pool}{}\doxysection{cryptonote\+::tx\+\_\+memory\+\_\+pool Class Reference}
+\label{classcryptonote_1_1tx__memory__pool}\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+
+
+Transaction pool, handles transactions which are not part of a block.  
+
+
+
+
+{\ttfamily \#include $<$tx\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::tx\+\_\+memory\+\_\+pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1tx__memory__pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats}{tx\+\_\+stats}}
+\begin{DoxyCompactList}\small\item\em Return type of \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}{get\+\_\+transaction\+\_\+stats()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{key\+\_\+images\+\_\+container}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $>$
+\begin{DoxyCompactList}\small\item\em map key images to transactions which spent them \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a992c709afc7268d0d9cf23485095d98f}{tx\+\_\+memory\+\_\+pool}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} \&bchs)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ae3a78c369e288d5d5ff853cc5f42325e}{tx\+\_\+memory\+\_\+pool}} (const \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} \&)=delete
+\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} \& \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a48b0ca004bbdd657127cb3e85d986619}{operator=}} (const \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} \&)=delete
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ad5946446c0e38b9e05b10bc658f949c9}{add\+\_\+tx}} (\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id, const std\+::string \&blob, size\+\_\+t tx\+\_\+weight, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&tvc, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&opts, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} hf\+\_\+version, uint64\+\_\+t $\ast$blink\+\_\+rollback\+\_\+height=nullptr)
+\begin{DoxyCompactList}\small\item\em add a transaction to the transaction pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_aaa7005556ce18cb58faf0d6045b0dd22}{add\+\_\+tx}} (\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&tvc, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&opts, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} hf\+\_\+version)
+\begin{DoxyCompactList}\small\item\em add a transaction to the transaction pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a013deee6f30a649f65430ab8f27aa1ea}{add\+\_\+new\+\_\+blink}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$ \&blink, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&tvc, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&blink\+\_\+exists)
+\begin{DoxyCompactList}\small\item\em attempts to add a blink transaction to the transaction pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ab3d69f56ad1b8807de5d3ff108543433}{add\+\_\+existing\+\_\+blink}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$ blink)
+\begin{DoxyCompactList}\small\item\em attempts to add blink transaction information about an existing blink transaction \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a4e9a263a86f5966b6b49421aaed989ec}{get\+\_\+blink}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash) const
+\begin{DoxyCompactList}\small\item\em accesses blink tx details if the given tx hash is a known, approved blink tx, nullptr otherwise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_aa99a39234919dfe66897951fa0bb5241}{has\+\_\+blink}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash) const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a60742c292f673da41e8906e1ce18b59c}{keep\+\_\+missing\+\_\+blinks}} (std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&tx\+\_\+hashes) const
+\begin{DoxyCompactList}\small\item\em modifies a vector of tx hashes to remove any that have known valid blink signatures \end{DoxyCompactList}\item 
+std\+::map$<$ uint64\+\_\+t, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ab424e94187ab40930a39b273ac6f31d7}{get\+\_\+blink\+\_\+checksums}} () const
+\begin{DoxyCompactList}\small\item\em returns checksums of blink txes included in recently mined blocks and in the mempool \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a9a1b40549be4e5ce2575db5736f591ce}{get\+\_\+mined\+\_\+blinks}} (const std\+::set$<$ uint64\+\_\+t $>$ \&heights) const
+\begin{DoxyCompactList}\small\item\em returns the hashes of any non-\/immutable blink transactions mined in the given heights. A height of 0 is allowed\+: it indicates blinks in the mempool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af2bba96b565d97b87f2a90fef343eba0}{take\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id, \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, std\+::string \&txblob, size\+\_\+t \&tx\+\_\+weight, uint64\+\_\+t \&fee, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&relayed, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&do\+\_\+not\+\_\+relay, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&double\+\_\+spend\+\_\+seen)
+\begin{DoxyCompactList}\small\item\em takes a transaction with the given hash from the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a54c005079be92dc34c487216278086e4}{have\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id) const
+\begin{DoxyCompactList}\small\item\em checks if the pool has a transaction with the given hash \end{DoxyCompactList}\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ae6710a00d13e4ddc0a1974b391ae85aa}{have\+\_\+txs}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&hashes) const
+\begin{DoxyCompactList}\small\item\em determines whether the given tx hashes are in the mempool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a5d217ba322d9d2e06500411fffe07d67}{on\+\_\+blockchain\+\_\+inc}} (\mbox{\hyperlink{structcryptonote_1_1block}{block}} const \&blk)
+\begin{DoxyCompactList}\small\item\em action to take when notified of a block added to the blockchain \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ae6da06ddc8334f31dd69aecffdcf948e}{on\+\_\+blockchain\+\_\+dec}} ()
+\begin{DoxyCompactList}\small\item\em action to take when notified of a block removed from the blockchain \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a1b272997a403b2f451820e890ba628b0}{on\+\_\+idle}} ()
+\begin{DoxyCompactList}\small\item\em action to take periodically \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ae7fe5dc73d036d7ea07ac632317b6113}{add\+\_\+notify}} (std\+::function$<$ void(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&, const std\+::string \&blob, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&)$>$ notify)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a0e718457416f64580f4dfdc4e9926cbd}{lock}} () const
+\begin{DoxyCompactList}\small\item\em locks the transaction pool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a011855e34b5f72c21770d3718313ef40}{unlock}} () const
+\begin{DoxyCompactList}\small\item\em unlocks the transaction pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a65b8179f3f72c219b0afe760d6df55ee}{try\+\_\+lock}} () const
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}{blink\+\_\+unique\+\_\+lock}} (Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em obtains a unique lock on the approved blink tx pool \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af13906ba925503f7de4bacfca1f1497c}{blink\+\_\+shared\+\_\+lock}} (Args \&\&...args) const
+\begin{DoxyCompactList}\small\item\em obtains a shared lock on the approved blink tx pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a82ef1c5e089c16db7f09595a092d1825}{init}} (size\+\_\+t max\+\_\+txpool\+\_\+weight=0)
+\begin{DoxyCompactList}\small\item\em loads pool state (if any) from disk, and initializes pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afea956b17732998b8143d6d3d8e0ba7b}{deinit}} ()
+\begin{DoxyCompactList}\small\item\em attempts to save the transaction pool state to disk \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a1211f3aefd5033931d168da4e78fd80a}{fill\+\_\+block\+\_\+template}} (\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&bl, size\+\_\+t median\+\_\+weight, uint64\+\_\+t already\+\_\+generated\+\_\+coins, size\+\_\+t \&total\+\_\+weight, uint64\+\_\+t \&raw\+\_\+fee, uint64\+\_\+t \&expected\+\_\+reward, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} version, uint64\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Chooses transactions for a block to include. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a781505a42371a8461edb4047bf6c2046}{get\+\_\+transactions}} (std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} $>$ \&txs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const
+\begin{DoxyCompactList}\small\item\em get a list of all transactions in the pool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a3d0b85b526e1d7cf27a58b076270c52b}{get\+\_\+transaction\+\_\+hashes}} (std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&txs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+only\+\_\+blinked=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}) const
+\begin{DoxyCompactList}\small\item\em get a list of all transaction hashes in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats}{tx\+\_\+stats}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}{get\+\_\+transaction\+\_\+stats}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const
+\begin{DoxyCompactList}\small\item\em get a summary statistics of all transaction hashes in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_aec13cc81f2955d9f39bf3273791a3e21}{check\+\_\+for\+\_\+key\+\_\+images}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&key\+\_\+images, std\+::vector$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&spent) const
+\begin{DoxyCompactList}\small\item\em check for presence of key images in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a8afa235429f2aad604d7a01bf8117c55}{get\+\_\+transaction}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, std\+::string \&txblob) const
+\begin{DoxyCompactList}\small\item\em get a specific transaction from the pool \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a9946ac23813b0846275575e79b37bcc8}{find\+\_\+transactions}} (const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&tx\+\_\+hashes, std\+::vector$<$ std\+::string $>$ \&txblobs) const
+\begin{DoxyCompactList}\small\item\em get specific transactions from the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ada0bbc05821f25c43f87818dd048e2be}{get\+\_\+relayable\+\_\+transactions}} (std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::string $>$$>$ \&txs) const
+\begin{DoxyCompactList}\small\item\em get a list of all relayable transactions and their hashes \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a2a0cf4b37f2feb1653ac96a83945cca3}{set\+\_\+relayable}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&tx\+\_\+hashes)
+\begin{DoxyCompactList}\small\item\em clear transactions\textquotesingle{} {\ttfamily do\+\_\+not\+\_\+relay} flags (if set) so that they can start being relayed. (Note that it still must satisfy the other conditions of {\ttfamily get\+\_\+relayable\+\_\+transactions} to actually be relayable). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_acec0c2d4cc416d504e4ceabbb175edc2}{set\+\_\+relayed}} (const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::string $>$$>$ \&txs)
+\begin{DoxyCompactList}\small\item\em tell the pool that certain transactions were just relayed \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac819deab6187cd28a7a1233114b287d5}{get\+\_\+transactions\+\_\+count}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const
+\begin{DoxyCompactList}\small\item\em get the total number of transactions in the pool \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac338181c8cdba5f77b645c530de1de7a}{validate}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} version)
+\begin{DoxyCompactList}\small\item\em remove transactions from the pool which are no longer valid \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a7126ff436715b0012c73a78cc83ca0b1}{cookie}} () const
+\begin{DoxyCompactList}\small\item\em return the cookie \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ab572c0afc555ae393a8df2dcc0f00673}{get\+\_\+txpool\+\_\+weight}} () const
+\begin{DoxyCompactList}\small\item\em get the cumulative txpool weight in bytes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a76b8b8aba76dc6dac3ef345367574f69}{set\+\_\+txpool\+\_\+max\+\_\+weight}} (size\+\_\+t bytes)
+\begin{DoxyCompactList}\small\item\em set the max cumulative txpool weight in bytes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{key\+\_\+images\+\_\+container}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a3c5681132864da1374850641c1e35f2e}{get\+\_\+spent\+\_\+key\+\_\+images}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} already\+\_\+locked=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ad93aa45381a8ba23afbba87e50aa6e4b}{insert\+\_\+key\+\_\+images}} (const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \&tx, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} kept\+\_\+by\+\_\+block)
+\begin{DoxyCompactList}\small\item\em insert key images into m\+\_\+spent\+\_\+key\+\_\+images \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_aad00ed4cce2351c261925dfbde1b0a1e}{remove\+\_\+stuck\+\_\+transactions}} ()
+\begin{DoxyCompactList}\small\item\em remove old transactions from the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_adc095de20f5654b4642f947a08d5e6ec}{have\+\_\+tx\+\_\+keyimg\+\_\+as\+\_\+spent}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&key\+\_\+im) const
+\begin{DoxyCompactList}\small\item\em check if a transaction in the pool has a given spent key image \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac624b3e7995eaecac7bd77d28b21836d}{have\+\_\+duplicated\+\_\+non\+\_\+standard\+\_\+tx}} (\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} const \&tx, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} version) const
+\begin{DoxyCompactList}\small\item\em check if a tx that does not have a key-\/image component has a duplicate in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a9360c129a0323bf11804be1764102f55}{have\+\_\+tx\+\_\+keyimges\+\_\+as\+\_\+spent}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $\ast$conflicting=nullptr) const
+\begin{DoxyCompactList}\small\item\em check if any spent key image in a transaction is in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a3fea8a79996be4896421a1d492414098}{remove\+\_\+transaction\+\_\+keyimages}} (const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \&tx, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid)
+\begin{DoxyCompactList}\small\item\em forget a transaction\textquotesingle{}s spent key images \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a223200675e9cb2dc9c748163664fc7e0}{is\+\_\+transaction\+\_\+ready\+\_\+to\+\_\+go}} (\mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&txd, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const std\+::string \&txblob, \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx) const
+\begin{DoxyCompactList}\small\item\em check if a transaction is a valid candidate for inclusion in a block \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ab421ff4baa8437324f4e3a6b2fb4e138}{mark\+\_\+double\+\_\+spend}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx)
+\begin{DoxyCompactList}\small\item\em mark all transactions double spending the one passed \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a2371b71c2f9d0307a28fc2f9638c00f3}{remove\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{txpool\+\_\+tx\+\_\+meta\+\_\+t}} $\ast$meta=nullptr, const sorted\+\_\+tx\+\_\+container\+::iterator $\ast$stc\+\_\+it=nullptr)
+\begin{DoxyCompactList}\small\item\em remove a transaction from the mempool \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ace60037187690f98fe07f18c3daf32f4}{prune}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&skip)
+\begin{DoxyCompactList}\small\item\em prune lowest fee/byte txes till we\textquotesingle{}re not above bytes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_adfb2c77087275ab6ff7759b773f8de15}{remove\+\_\+blink\+\_\+conflicts}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&conflict\+\_\+txs, uint64\+\_\+t $\ast$blink\+\_\+rollback\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Attempt to add a blink tx \char`\"{}by force\char`\"{}, removing conflicting non-\/blink txs. \end{DoxyCompactList}\item 
+sorted\+\_\+tx\+\_\+container\+::iterator \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a0a84ffb957eeda11ec3ef752bb9cb2fc}{find\+\_\+tx\+\_\+in\+\_\+sorted\+\_\+container}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id) const
+\begin{DoxyCompactList}\small\item\em get an iterator to a transaction in the sorted container \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ae6d30e317c1b946903d0ed3170bdc109}{check\+\_\+tx\+\_\+inputs}} (const std\+::function$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&()$>$ \&get\+\_\+tx, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, uint64\+\_\+t \&max\+\_\+used\+\_\+block\+\_\+height, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&max\+\_\+used\+\_\+block\+\_\+id, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&tvc, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} kept\+\_\+by\+\_\+block=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, uint64\+\_\+t $\ast$blink\+\_\+rollback\+\_\+height=nullptr) const
+\begin{DoxyCompactList}\small\item\em cache/call \mbox{\hyperlink{classcryptonote_1_1Blockchain_afcca64964ff6585f4f70af9680557839}{Blockchain\+::check\+\_\+tx\+\_\+inputs}} results \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$, std\+::vector$<$ uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a93308b7d5cfc2d4285f2bb83b0e0ad7d}{get\+\_\+blink\+\_\+hashes\+\_\+and\+\_\+mined\+\_\+heights}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af6636b9a2711cc5e296bcd7f526983a9}{m\+\_\+transactions\+\_\+lock}}
+\begin{DoxyCompactList}\small\item\em mutex for the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{key\+\_\+images\+\_\+container}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a6a2c458ea137674784b35e9d146ece8e}{m\+\_\+spent\+\_\+key\+\_\+images}}
+\begin{DoxyCompactList}\small\item\em container for spent key images from the transactions in the pool \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af2c18bba98acf9ed2cdd03c891ecea91}{m\+\_\+remove\+\_\+stuck\+\_\+tx\+\_\+interval}} \{30s\}
+\begin{DoxyCompactList}\small\item\em interval on which to check for stale/\char`\"{}stuck\char`\"{} transactions \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecryptonote_a519318e9f47111feb31d73d79a8003de}{sorted\+\_\+tx\+\_\+container}} \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a92d8773b05f8415e5fb5d031bc57fff1}{m\+\_\+txs\+\_\+by\+\_\+fee\+\_\+and\+\_\+receive\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em $<$ container for transactions organized by fee per size and receive time \end{DoxyCompactList}\item 
+std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_acfcbd1baa408b2f7484b18bd848bd6a6}{m\+\_\+cookie}}
+\begin{DoxyCompactList}\small\item\em incremented at each change \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::function$<$ void(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&, const std\+::string \&blob, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&)$>$ $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a9b641ee33f547d5603e14b9514a47aec}{m\+\_\+tx\+\_\+notify}}
+\begin{DoxyCompactList}\small\item\em Callbacks for new tx notifications. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a6b44eef259469c4cbbf2760fd9804933}{m\+\_\+timed\+\_\+out\+\_\+transactions}}
+\begin{DoxyCompactList}\small\item\em transactions which are unlikely to be included in blocks \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} \& \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a972c861f927a7127042c87a9fadbbed0}{m\+\_\+blockchain}}
+\begin{DoxyCompactList}\small\item\em reference to the \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} object \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a4e5925b0e9f166ba16947525b278601a}{m\+\_\+txpool\+\_\+max\+\_\+weight}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ade870150c431217bb94718b4de61b669}{m\+\_\+txpool\+\_\+weight}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::tuple$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}}, uint64\+\_\+t, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_abec31bcfbd9fcdb603103a8b18e4ba1a}{m\+\_\+input\+\_\+cache}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ad386ffa8ca0ccb68c7bbc95031a05926}{m\+\_\+parsed\+\_\+tx\+\_\+cache}}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a0e1f7a8e08fea6ffe32904af0a99935c}{m\+\_\+blinks\+\_\+mutex}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{cryptonote\+::blink\+\_\+tx}} $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a1079cd70f9107447f221095781d78639}{m\+\_\+blinks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transaction pool, handles transactions which are not part of a block. 
+
+This class handles all transactions which have been received, but not as part of a block.
+
+This handling includes\+: storing the transactions organizing the transactions by fee per weight unit taking/giving transactions to and from various other components saving the transactions to disk on shutdown helping create a new block template by choosing transactions for it 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}\label{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!key\_images\_container@{key\_images\_container}}
+\index{key\_images\_container@{key\_images\_container}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{key\_images\_container}{key\_images\_container}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{cryptonote\+::tx\+\_\+memory\+\_\+pool\+::key\+\_\+images\+\_\+container}} =  std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ $>$}
+
+
+
+map key images to transactions which spent them 
+
+this seems odd, but it seems that multiple transactions can exist in the pool which both have the same spent key. This would happen in the event of a reorg where someone creates a new/different transaction on the assumption that the original will not be in a block again. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a992c709afc7268d0d9cf23485095d98f}\label{classcryptonote_1_1tx__memory__pool_a992c709afc7268d0d9cf23485095d98f}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!tx\_memory\_pool@{tx\_memory\_pool}}
+\index{tx\_memory\_pool@{tx\_memory\_pool}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{tx\_memory\_pool()}{tx\_memory\_pool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+memory\+\_\+pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} \&}]{bchs }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bchs} & a \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} class instance, for getting chain info \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ae3a78c369e288d5d5ff853cc5f42325e}\label{classcryptonote_1_1tx__memory__pool_ae3a78c369e288d5d5ff853cc5f42325e}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!tx\_memory\_pool@{tx\_memory\_pool}}
+\index{tx\_memory\_pool@{tx\_memory\_pool}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{tx\_memory\_pool()}{tx\_memory\_pool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily cryptonote\+::tx\+\_\+memory\+\_\+pool\+::tx\+\_\+memory\+\_\+pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ab3d69f56ad1b8807de5d3ff108543433}\label{classcryptonote_1_1tx__memory__pool_ab3d69f56ad1b8807de5d3ff108543433}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!add\_existing\_blink@{add\_existing\_blink}}
+\index{add\_existing\_blink@{add\_existing\_blink}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_existing\_blink()}{add\_existing\_blink()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::add\+\_\+existing\+\_\+blink (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$}]{blink }\end{DoxyParamCaption})}
+
+
+
+attempts to add blink transaction information about an existing blink transaction 
+
+You {\itshape must} already hold a \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}{blink\+\_\+unique\+\_\+lock()}}.
+
+This method takes an approved \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} and records it in the known blinks data. No check is done that the transaction actually exists on the blockchain or mempool. It is assumed that the given shared\+\_\+ptr is a new blink that is not yet shared between threads (and thus doesn\textquotesingle{}t need locking)\+: sharing is expected only after it is added to the blinks via this method.
+
+NB\+: this function assumes that the given blink tx is valid and approved (signed) but does {\itshape not} check it (except as an assert when compiling in debug mode).
+
+
+\begin{DoxyParams}{Parameters}
+{\em blink} & the \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} shared\+\_\+ptr\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the blink data was recorded, false if the given blink was already known. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a013deee6f30a649f65430ab8f27aa1ea}\label{classcryptonote_1_1tx__memory__pool_a013deee6f30a649f65430ab8f27aa1ea}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!add\_new\_blink@{add\_new\_blink}}
+\index{add\_new\_blink@{add\_new\_blink}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_new\_blink()}{add\_new\_blink()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::add\+\_\+new\+\_\+blink (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$ \&}]{blink,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&}]{tvc,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{blink\+\_\+exists }\end{DoxyParamCaption})}
+
+
+
+attempts to add a blink transaction to the transaction pool. 
+
+This method must be called without a held blink lock.
+
+This is only for use for new transactions that should not exist yet on the chain or mempool (and will fail if already does). See {\ttfamily add\+\_\+existing\+\_\+blink} instead to add blink data about a transaction that already exists. This is only meant to be called during the SN blink signing phase (and requires that the {\ttfamily tx} transaction be properly set to a full transaction); ordinary nodes receiving a blink tx from the network should be going through core.\+handle\+\_\+incoming\+\_\+blinks instead.
+
+Whether or not the transaction is added to the known blinks or marked for relaying depends on whether the passed-\/in transaction has an {\ttfamily .approved()} status\+: if it does, the transaction is set for relaying and added to the active blinks immediately; otherwise it is not added to the known blinks and will not be relayed.
+
+The transaction is {\itshape not} added to the known blinks or marked for relaying unless it is passed in with an {\ttfamily .approved()} status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em blink} & -\/ a shared\+\_\+ptr to the blink details \\
+\hline
+{\em tvc} & -\/ the verification results \\
+\hline
+{\em blink\+\_\+exists} & -\/ will be set to true if the addition fails because the blink tx already exists\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tx passes validations and has been added to the tx pool. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ae7fe5dc73d036d7ea07ac632317b6113}\label{classcryptonote_1_1tx__memory__pool_ae7fe5dc73d036d7ea07ac632317b6113}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!add\_notify@{add\_notify}}
+\index{add\_notify@{add\_notify}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_notify()}{add\_notify()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::add\+\_\+notify (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&, const std\+::string \&blob, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&)$>$}]{notify }\end{DoxyParamCaption})}
+
+Specifies a callback to invoke when one or more transactions is added to the mempool. Note that, because incoming blocks have their transactions added to the mempool, this {\itshape does} trigger for txes that arrive in new blocks.
+
+It does not, however, trigger for transactions that fail verification, that are flagged do-\/not-\/relay, or that are returned to the pool from a block (i.\+e. when doing a reorg). \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ad5946446c0e38b9e05b10bc658f949c9}\label{classcryptonote_1_1tx__memory__pool_ad5946446c0e38b9e05b10bc658f949c9}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!add\_tx@{add\_tx}}
+\index{add\_tx@{add\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_tx()}{add\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::add\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id,  }\item[{const std\+::string \&}]{blob,  }\item[{size\+\_\+t}]{tx\+\_\+weight,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&}]{tvc,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&}]{opts,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{hf\+\_\+version,  }\item[{uint64\+\_\+t $\ast$}]{blink\+\_\+rollback\+\_\+height = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+add a transaction to the transaction pool 
+
+Most likely the transaction will come from the network, but it is also possible for transactions to come from popped blocks during a reorg, or from local clients creating a transaction and submitting it to the network
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & the transaction to be added \\
+\hline
+{\em tvc} & return-\/by-\/reference status about the transaction verification \\
+\hline
+{\em opts} & the options controlling how this tx will be accepted/added \\
+\hline
+{\em hf\+\_\+version} & the hard fork version used to create the transaction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction passes validations, otherwise false
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the transaction\textquotesingle{}s hash \\
+\hline
+{\em tx\+\_\+weight} & the transaction\textquotesingle{}s weight \\
+\hline
+{\em blink\+\_\+rollback\+\_\+height} & if tx is a blink that conflicts with a recent (non-\/immutable) block tx then set this pointer to the required new height\+: that is, all blocks with height {\ttfamily block\+\_\+rollback\+\_\+height} and above must be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_aaa7005556ce18cb58faf0d6045b0dd22}\label{classcryptonote_1_1tx__memory__pool_aaa7005556ce18cb58faf0d6045b0dd22}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!add\_tx@{add\_tx}}
+\index{add\_tx@{add\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{add\_tx()}{add\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::add\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&}]{tvc,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&}]{opts,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{hf\+\_\+version }\end{DoxyParamCaption})}
+
+
+
+add a transaction to the transaction pool 
+
+Most likely the transaction will come from the network, but it is also possible for transactions to come from popped blocks during a reorg, or from local clients creating a transaction and submitting it to the network
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & the transaction to be added \\
+\hline
+{\em tvc} & return-\/by-\/reference status about the transaction verification \\
+\hline
+{\em opts} & the options controlling how this tx will be accepted/added \\
+\hline
+{\em hf\+\_\+version} & the hard fork version used to create the transaction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction passes validations, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_af13906ba925503f7de4bacfca1f1497c}\label{classcryptonote_1_1tx__memory__pool_af13906ba925503f7de4bacfca1f1497c}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!blink\_shared\_lock@{blink\_shared\_lock}}
+\index{blink\_shared\_lock@{blink\_shared\_lock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{blink\_shared\_lock()}{blink\_shared\_lock()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto cryptonote\+::tx\+\_\+memory\+\_\+pool\+::blink\+\_\+shared\+\_\+lock (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+obtains a shared lock on the approved blink tx pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}\label{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!blink\_unique\_lock@{blink\_unique\_lock}}
+\index{blink\_unique\_lock@{blink\_unique\_lock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{blink\_unique\_lock()}{blink\_unique\_lock()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto cryptonote\+::tx\+\_\+memory\+\_\+pool\+::blink\+\_\+unique\+\_\+lock (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+obtains a unique lock on the approved blink tx pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_aec13cc81f2955d9f39bf3273791a3e21}\label{classcryptonote_1_1tx__memory__pool_aec13cc81f2955d9f39bf3273791a3e21}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!check\_for\_key\_images@{check\_for\_key\_images}}
+\index{check\_for\_key\_images@{check\_for\_key\_images}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{check\_for\_key\_images()}{check\_for\_key\_images()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::check\+\_\+for\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&}]{key\+\_\+images,  }\item[{std\+::vector$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&}]{spent }\end{DoxyParamCaption}) const}
+
+
+
+check for presence of key images in the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+images} & \mbox{[}in\mbox{]} vector of key images to check \\
+\hline
+{\em spent} & \mbox{[}out\mbox{]} vector of bool to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ae6d30e317c1b946903d0ed3170bdc109}\label{classcryptonote_1_1tx__memory__pool_ae6d30e317c1b946903d0ed3170bdc109}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!check\_tx\_inputs@{check\_tx\_inputs}}
+\index{check\_tx\_inputs@{check\_tx\_inputs}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{check\_tx\_inputs()}{check\_tx\_inputs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::check\+\_\+tx\+\_\+inputs (\begin{DoxyParamCaption}\item[{const std\+::function$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&()$>$ \&}]{get\+\_\+tx,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{uint64\+\_\+t \&}]{max\+\_\+used\+\_\+block\+\_\+height,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{max\+\_\+used\+\_\+block\+\_\+id,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}} \&}]{tvc,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{kept\+\_\+by\+\_\+block = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{uint64\+\_\+t $\ast$}]{blink\+\_\+rollback\+\_\+height = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+cache/call \mbox{\hyperlink{classcryptonote_1_1Blockchain_afcca64964ff6585f4f70af9680557839}{Blockchain\+::check\+\_\+tx\+\_\+inputs}} results 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a7126ff436715b0012c73a78cc83ca0b1}\label{classcryptonote_1_1tx__memory__pool_a7126ff436715b0012c73a78cc83ca0b1}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!cookie@{cookie}}
+\index{cookie@{cookie}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{cookie()}{cookie()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::cookie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the cookie 
+
+\begin{DoxyReturn}{Returns}
+the cookie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_afea956b17732998b8143d6d3d8e0ba7b}\label{classcryptonote_1_1tx__memory__pool_afea956b17732998b8143d6d3d8e0ba7b}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!deinit@{deinit}}
+\index{deinit@{deinit}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::deinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+attempts to save the transaction pool state to disk 
+
+Currently fails (returns false) if the data directory from \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a82ef1c5e089c16db7f09595a092d1825}{init()}} does not exist and cannot be created, but returns true even if saving to disk is unsuccessful.
+
+\begin{DoxyReturn}{Returns}
+true in most cases (see above) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a1211f3aefd5033931d168da4e78fd80a}\label{classcryptonote_1_1tx__memory__pool_a1211f3aefd5033931d168da4e78fd80a}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!fill\_block\_template@{fill\_block\_template}}
+\index{fill\_block\_template@{fill\_block\_template}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{fill\_block\_template()}{fill\_block\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::fill\+\_\+block\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{bl,  }\item[{size\+\_\+t}]{median\+\_\+weight,  }\item[{uint64\+\_\+t}]{already\+\_\+generated\+\_\+coins,  }\item[{size\+\_\+t \&}]{total\+\_\+weight,  }\item[{uint64\+\_\+t \&}]{raw\+\_\+fee,  }\item[{uint64\+\_\+t \&}]{expected\+\_\+reward,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{version,  }\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Chooses transactions for a block to include. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bl} & return-\/by-\/reference the block to fill in with transactions \\
+\hline
+{\em median\+\_\+weight} & the current median block weight \\
+\hline
+{\em already\+\_\+generated\+\_\+coins} & the current total number of coins \char`\"{}minted\char`\"{} \\
+\hline
+{\em total\+\_\+weight} & return-\/by-\/reference the total weight of the new block \\
+\hline
+{\em raw\+\_\+fee} & return-\/by-\/reference the total of fees from the included transactions. Note that this does not subtract any large block penalty fees; this is just the raw sum of fees of included txes. \\
+\hline
+{\em expected\+\_\+reward} & return-\/by-\/reference the total reward awarded to the block producer finding this block, including transaction fees and, if applicable, a large block reward penalty. \\
+\hline
+{\em version} & hard fork version to use for consensus rules\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a9946ac23813b0846275575e79b37bcc8}\label{classcryptonote_1_1tx__memory__pool_a9946ac23813b0846275575e79b37bcc8}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!find\_transactions@{find\_transactions}}
+\index{find\_transactions@{find\_transactions}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{find\_transactions()}{find\_transactions()}}
+{\footnotesize\ttfamily int cryptonote\+::tx\+\_\+memory\+\_\+pool\+::find\+\_\+transactions (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{tx\+\_\+hashes,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{txblobs }\end{DoxyParamCaption}) const}
+
+
+
+get specific transactions from the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hashes} & -\/ tx hashes of desired transactions \\
+\hline
+{\em txblobs} & -\/ vector of std\+::string (i.\+e. std\+::strings) to which found blobs should be appended. The vector is {\itshape not} cleared of existing values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of transactions added to txblobs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a0a84ffb957eeda11ec3ef752bb9cb2fc}\label{classcryptonote_1_1tx__memory__pool_a0a84ffb957eeda11ec3ef752bb9cb2fc}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!find\_tx\_in\_sorted\_container@{find\_tx\_in\_sorted\_container}}
+\index{find\_tx\_in\_sorted\_container@{find\_tx\_in\_sorted\_container}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{find\_tx\_in\_sorted\_container()}{find\_tx\_in\_sorted\_container()}}
+{\footnotesize\ttfamily sorted\+\_\+tx\+\_\+container\+::iterator cryptonote\+::tx\+\_\+memory\+\_\+pool\+::find\+\_\+tx\+\_\+in\+\_\+sorted\+\_\+container (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get an iterator to a transaction in the sorted container 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the hash of the transaction to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an iterator, possibly to the end of the container if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a4e9a263a86f5966b6b49421aaed989ec}\label{classcryptonote_1_1tx__memory__pool_a4e9a263a86f5966b6b49421aaed989ec}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_blink@{get\_blink}}
+\index{get\_blink@{get\_blink}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_blink()}{get\_blink()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+blink (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash }\end{DoxyParamCaption}) const}
+
+
+
+accesses blink tx details if the given tx hash is a known, approved blink tx, nullptr otherwise. 
+
+You {\itshape must} already hold a \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af13906ba925503f7de4bacfca1f1497c}{blink\+\_\+shared\+\_\+lock()}} or \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}{blink\+\_\+unique\+\_\+lock()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+hash} & the hash of the tx to access \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ab424e94187ab40930a39b273ac6f31d7}\label{classcryptonote_1_1tx__memory__pool_ab424e94187ab40930a39b273ac6f31d7}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_blink\_checksums@{get\_blink\_checksums}}
+\index{get\_blink\_checksums@{get\_blink\_checksums}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_blink\_checksums()}{get\_blink\_checksums()}}
+{\footnotesize\ttfamily std\+::map$<$ uint64\+\_\+t, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+blink\+\_\+checksums (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns checksums of blink txes included in recently mined blocks and in the mempool 
+
+Must not currently hold a blink lock.
+
+The returned map consists of height =$>$ hashsum pairs where the height is the height in which the blink transactions were mined and the hashsum is a checksum of all the blink txes mined at that height. Unmined mempool blink txes are included at a height of 0. Only heights since the immutable checkpoint block are included. Any block height (including the special \char`\"{}0\char`\"{} height) that has no blink tx in it is not included. \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a93308b7d5cfc2d4285f2bb83b0e0ad7d}\label{classcryptonote_1_1tx__memory__pool_a93308b7d5cfc2d4285f2bb83b0e0ad7d}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_blink\_hashes\_and\_mined\_heights@{get\_blink\_hashes\_and\_mined\_heights}}
+\index{get\_blink\_hashes\_and\_mined\_heights@{get\_blink\_hashes\_and\_mined\_heights}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_blink\_hashes\_and\_mined\_heights()}{get\_blink\_hashes\_and\_mined\_heights()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$, std\+::vector$<$ uint64\+\_\+t $>$ $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+blink\+\_\+hashes\+\_\+and\+\_\+mined\+\_\+heights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a9a1b40549be4e5ce2575db5736f591ce}\label{classcryptonote_1_1tx__memory__pool_a9a1b40549be4e5ce2575db5736f591ce}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_mined\_blinks@{get\_mined\_blinks}}
+\index{get\_mined\_blinks@{get\_mined\_blinks}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_mined\_blinks()}{get\_mined\_blinks()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+mined\+\_\+blinks (\begin{DoxyParamCaption}\item[{const std\+::set$<$ uint64\+\_\+t $>$ \&}]{heights }\end{DoxyParamCaption}) const}
+
+
+
+returns the hashes of any non-\/immutable blink transactions mined in the given heights. A height of 0 is allowed\+: it indicates blinks in the mempool. 
+
+Must not currently hold a blink lock.
+
+Note that this returned hashes by M\+I\+N\+ED H\+E\+I\+G\+H\+TS, not B\+L\+I\+NK H\+E\+I\+G\+H\+TS where are a different concept.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & of heights\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of hashes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ada0bbc05821f25c43f87818dd048e2be}\label{classcryptonote_1_1tx__memory__pool_ada0bbc05821f25c43f87818dd048e2be}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_relayable\_transactions@{get\_relayable\_transactions}}
+\index{get\_relayable\_transactions@{get\_relayable\_transactions}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_relayable\_transactions()}{get\_relayable\_transactions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+relayable\+\_\+transactions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::string $>$$>$ \&}]{txs }\end{DoxyParamCaption}) const}
+
+
+
+get a list of all relayable transactions and their hashes 
+
+\char`\"{}relayable\char`\"{} in this case means\+: nonzero fee -\/or-\/ a zero-\/fee SN state change tx hasn\textquotesingle{}t been relayed too recently isn\textquotesingle{}t old enough that relaying it is considered harmful doesn\textquotesingle{}t have do\+\_\+not\+\_\+relay set
+
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & return-\/by-\/reference the transactions and their hashes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a3c5681132864da1374850641c1e35f2e}\label{classcryptonote_1_1tx__memory__pool_a3c5681132864da1374850641c1e35f2e}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_spent\_key\_images@{get\_spent\_key\_images}}
+\index{get\_spent\_key\_images@{get\_spent\_key\_images}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_spent\_key\_images()}{get\_spent\_key\_images()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{tx\+\_\+memory\+\_\+pool\+::key\+\_\+images\+\_\+container}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+spent\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{already\+\_\+locked = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Returns a copy of the map of key images -\/$>$ set of transactions which spent them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em already\+\_\+locked} & can be passed as true if the caller already has a lock on the blockchain and mempool objects; otherwise a new lock will be obtained by the call. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a8afa235429f2aad604d7a01bf8117c55}\label{classcryptonote_1_1tx__memory__pool_a8afa235429f2aad604d7a01bf8117c55}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_transaction@{get\_transaction}}
+\index{get\_transaction@{get\_transaction}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_transaction()}{get\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{std\+::string \&}]{txblob }\end{DoxyParamCaption}) const}
+
+
+
+get a specific transaction from the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash of the transaction to get \\
+\hline
+{\em tx} & return-\/by-\/reference the transaction blob requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction is found, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a3d0b85b526e1d7cf27a58b076270c52b}\label{classcryptonote_1_1tx__memory__pool_a3d0b85b526e1d7cf27a58b076270c52b}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_transaction\_hashes@{get\_transaction\_hashes}}
+\index{get\_transaction\_hashes@{get\_transaction\_hashes}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_hashes()}{get\_transaction\_hashes()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+transaction\+\_\+hashes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{txs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+only\+\_\+blinked = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption}) const}
+
+
+
+get a list of all transaction hashes in the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & return-\/by-\/reference the list of transactions \\
+\hline
+{\em include\+\_\+unrelayed\+\_\+txes} & include unrelayed txes in the result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}\label{classcryptonote_1_1tx__memory__pool_afc6a4f1b878b42f63e3fbf99643c591c}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_transaction\_stats@{get\_transaction\_stats}}
+\index{get\_transaction\_stats@{get\_transaction\_stats}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_stats()}{get\_transaction\_stats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1tx__memory__pool_1_1tx__stats}{tx\+\_\+memory\+\_\+pool\+::tx\+\_\+stats}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+transaction\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const}
+
+
+
+get a summary statistics of all transaction hashes in the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em include\+\_\+unrelayed\+\_\+txes} & include unrelayed txes in the result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+txpool\+\_\+stats struct of pool statistics 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a781505a42371a8461edb4047bf6c2046}\label{classcryptonote_1_1tx__memory__pool_a781505a42371a8461edb4047bf6c2046}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_transactions@{get\_transactions}}
+\index{get\_transactions@{get\_transactions}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_transactions()}{get\_transactions()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+transactions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} $>$ \&}]{txs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const}
+
+
+
+get a list of all transactions in the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & return-\/by-\/reference the list of transactions \\
+\hline
+{\em include\+\_\+unrelayed\+\_\+txes} & include unrelayed txes in the result \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ac819deab6187cd28a7a1233114b287d5}\label{classcryptonote_1_1tx__memory__pool_ac819deab6187cd28a7a1233114b287d5}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_transactions\_count@{get\_transactions\_count}}
+\index{get\_transactions\_count@{get\_transactions\_count}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_transactions\_count()}{get\_transactions\_count()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+transactions\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const}
+
+
+
+get the total number of transactions in the pool 
+
+\begin{DoxyReturn}{Returns}
+the number of transactions in the pool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ab572c0afc555ae393a8df2dcc0f00673}\label{classcryptonote_1_1tx__memory__pool_ab572c0afc555ae393a8df2dcc0f00673}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!get\_txpool\_weight@{get\_txpool\_weight}}
+\index{get\_txpool\_weight@{get\_txpool\_weight}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{get\_txpool\_weight()}{get\_txpool\_weight()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::get\+\_\+txpool\+\_\+weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the cumulative txpool weight in bytes 
+
+\begin{DoxyReturn}{Returns}
+the cumulative txpool weight in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_aa99a39234919dfe66897951fa0bb5241}\label{classcryptonote_1_1tx__memory__pool_aa99a39234919dfe66897951fa0bb5241}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!has\_blink@{has\_blink}}
+\index{has\_blink@{has\_blink}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{has\_blink()}{has\_blink()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::has\+\_\+blink (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash }\end{DoxyParamCaption}) const}
+
+Equivalent to {\ttfamily (bool) get\+\_\+blink(...)}, but slightly more efficient when the blink information isn\textquotesingle{}t actually needed beyond an existance test (as it avoids copying the shared\+\_\+ptr).
+
+You {\itshape must} already hold a \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_af13906ba925503f7de4bacfca1f1497c}{blink\+\_\+shared\+\_\+lock()}} or \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_a010a25d6e7eb662d6c29c732da0ee1c2}{blink\+\_\+unique\+\_\+lock()}}. \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ac624b3e7995eaecac7bd77d28b21836d}\label{classcryptonote_1_1tx__memory__pool_ac624b3e7995eaecac7bd77d28b21836d}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!have\_duplicated\_non\_standard\_tx@{have\_duplicated\_non\_standard\_tx}}
+\index{have\_duplicated\_non\_standard\_tx@{have\_duplicated\_non\_standard\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{have\_duplicated\_non\_standard\_tx()}{have\_duplicated\_non\_standard\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::have\+\_\+duplicated\+\_\+non\+\_\+standard\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} const \&}]{tx,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{version }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if a tx that does not have a key-\/image component has a duplicate in the pool 
+
+\begin{DoxyReturn}{Returns}
+true if it already exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a54c005079be92dc34c487216278086e4}\label{classcryptonote_1_1tx__memory__pool_a54c005079be92dc34c487216278086e4}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!have\_tx@{have\_tx}}
+\index{have\_tx@{have\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{have\_tx()}{have\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::have\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+checks if the pool has a transaction with the given hash 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction is in the pool, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_adc095de20f5654b4642f947a08d5e6ec}\label{classcryptonote_1_1tx__memory__pool_adc095de20f5654b4642f947a08d5e6ec}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!have\_tx\_keyimg\_as\_spent@{have\_tx\_keyimg\_as\_spent}}
+\index{have\_tx\_keyimg\_as\_spent@{have\_tx\_keyimg\_as\_spent}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{have\_tx\_keyimg\_as\_spent()}{have\_tx\_keyimg\_as\_spent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::have\+\_\+tx\+\_\+keyimg\+\_\+as\+\_\+spent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{key\+\_\+im }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if a transaction in the pool has a given spent key image 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+\_\+im} & the spent key image to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the spent key image is present, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a9360c129a0323bf11804be1764102f55}\label{classcryptonote_1_1tx__memory__pool_a9360c129a0323bf11804be1764102f55}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!have\_tx\_keyimges\_as\_spent@{have\_tx\_keyimges\_as\_spent}}
+\index{have\_tx\_keyimges\_as\_spent@{have\_tx\_keyimges\_as\_spent}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{have\_tx\_keyimges\_as\_spent()}{have\_tx\_keyimges\_as\_spent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::have\+\_\+tx\+\_\+keyimges\+\_\+as\+\_\+spent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $\ast$}]{conflicting = {\ttfamily nullptr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if any spent key image in a transaction is in the pool 
+
+Checks if any of the spent key images in a given transaction are present in any of the transactions in the transaction pool.
+
+\begin{DoxyNote}{Note}
+see tx\+\_\+pool\+::have\+\_\+tx\+\_\+keyimg\+\_\+as\+\_\+spent
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & the transaction to check spent key images of \\
+\hline
+{\em found} & if specified, append the hashes of all conflicting mempool txes here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any spent key images are present in the pool, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ae6710a00d13e4ddc0a1974b391ae85aa}\label{classcryptonote_1_1tx__memory__pool_ae6710a00d13e4ddc0a1974b391ae85aa}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!have\_txs@{have\_txs}}
+\index{have\_txs@{have\_txs}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{have\_txs()}{have\_txs()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint8\+\_\+t $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::have\+\_\+txs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{hashes }\end{DoxyParamCaption}) const}
+
+
+
+determines whether the given tx hashes are in the mempool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hashes} & vector of tx hashes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of the same size as {\ttfamily hashes} of true (1) or false (0) values. (Not using std\+::vector$<$bool$>$ because it is broken by design). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a82ef1c5e089c16db7f09595a092d1825}\label{classcryptonote_1_1tx__memory__pool_a82ef1c5e089c16db7f09595a092d1825}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!init@{init}}
+\index{init@{init}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::init (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{max\+\_\+txpool\+\_\+weight = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+loads pool state (if any) from disk, and initializes pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+txpool\+\_\+weight} & the max weight in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ad93aa45381a8ba23afbba87e50aa6e4b}\label{classcryptonote_1_1tx__memory__pool_ad93aa45381a8ba23afbba87e50aa6e4b}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!insert\_key\_images@{insert\_key\_images}}
+\index{insert\_key\_images@{insert\_key\_images}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{insert\_key\_images()}{insert\_key\_images()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::insert\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \&}]{tx,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{kept\+\_\+by\+\_\+block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+insert key images into m\+\_\+spent\+\_\+key\+\_\+images 
+
+\begin{DoxyReturn}{Returns}
+true on success, false on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a223200675e9cb2dc9c748163664fc7e0}\label{classcryptonote_1_1tx__memory__pool_a223200675e9cb2dc9c748163664fc7e0}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!is\_transaction\_ready\_to\_go@{is\_transaction\_ready\_to\_go}}
+\index{is\_transaction\_ready\_to\_go@{is\_transaction\_ready\_to\_go}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{is\_transaction\_ready\_to\_go()}{is\_transaction\_ready\_to\_go()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::is\+\_\+transaction\+\_\+ready\+\_\+to\+\_\+go (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&}]{txd,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const std\+::string \&}]{txblob,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if a transaction is a valid candidate for inclusion in a block 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txd} & the transaction to check (and info about it) \\
+\hline
+{\em txid} & the txid of the transaction to check \\
+\hline
+{\em txblob} & the transaction blob to check \\
+\hline
+{\em tx} & the parsed transaction, if successful\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction is good to go, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a60742c292f673da41e8906e1ce18b59c}\label{classcryptonote_1_1tx__memory__pool_a60742c292f673da41e8906e1ce18b59c}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!keep\_missing\_blinks@{keep\_missing\_blinks}}
+\index{keep\_missing\_blinks@{keep\_missing\_blinks}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{keep\_missing\_blinks()}{keep\_missing\_blinks()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::keep\+\_\+missing\+\_\+blinks (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{tx\+\_\+hashes }\end{DoxyParamCaption}) const}
+
+
+
+modifies a vector of tx hashes to remove any that have known valid blink signatures 
+
+Must not currently hold a blink lock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & the tx hashes to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a0e718457416f64580f4dfdc4e9926cbd}\label{classcryptonote_1_1tx__memory__pool_a0e718457416f64580f4dfdc4e9926cbd}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!lock@{lock}}
+\index{lock@{lock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+locks the transaction pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ab421ff4baa8437324f4e3a6b2fb4e138}\label{classcryptonote_1_1tx__memory__pool_ab421ff4baa8437324f4e3a6b2fb4e138}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!mark\_double\_spend@{mark\_double\_spend}}
+\index{mark\_double\_spend@{mark\_double\_spend}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{mark\_double\_spend()}{mark\_double\_spend()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::mark\+\_\+double\+\_\+spend (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+mark all transactions double spending the one passed 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ae6da06ddc8334f31dd69aecffdcf948e}\label{classcryptonote_1_1tx__memory__pool_ae6da06ddc8334f31dd69aecffdcf948e}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!on\_blockchain\_dec@{on\_blockchain\_dec}}
+\index{on\_blockchain\_dec@{on\_blockchain\_dec}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{on\_blockchain\_dec()}{on\_blockchain\_dec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::on\+\_\+blockchain\+\_\+dec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+action to take when notified of a block removed from the blockchain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+block\+\_\+height} & the height of the blockchain after the change \\
+\hline
+{\em top\+\_\+block\+\_\+id} & the hash of the new top block\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a5d217ba322d9d2e06500411fffe07d67}\label{classcryptonote_1_1tx__memory__pool_a5d217ba322d9d2e06500411fffe07d67}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!on\_blockchain\_inc@{on\_blockchain\_inc}}
+\index{on\_blockchain\_inc@{on\_blockchain\_inc}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{on\_blockchain\_inc()}{on\_blockchain\_inc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::on\+\_\+blockchain\+\_\+inc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} const \&}]{blk }\end{DoxyParamCaption})}
+
+
+
+action to take when notified of a block added to the blockchain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+block\+\_\+height} & the height of the blockchain after the change \\
+\hline
+{\em top\+\_\+block\+\_\+id} & the hash of the new top block\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a1b272997a403b2f451820e890ba628b0}\label{classcryptonote_1_1tx__memory__pool_a1b272997a403b2f451820e890ba628b0}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!on\_idle@{on\_idle}}
+\index{on\_idle@{on\_idle}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{on\_idle()}{on\_idle()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::on\+\_\+idle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+action to take periodically 
+
+Currently checks transaction pool for stale (\char`\"{}stuck\char`\"{}) transactions \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a48b0ca004bbdd657127cb3e85d986619}\label{classcryptonote_1_1tx__memory__pool_a48b0ca004bbdd657127cb3e85d986619}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}}\& cryptonote\+::tx\+\_\+memory\+\_\+pool\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ace60037187690f98fe07f18c3daf32f4}\label{classcryptonote_1_1tx__memory__pool_ace60037187690f98fe07f18c3daf32f4}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!prune@{prune}}
+\index{prune@{prune}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{prune()}{prune()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::prune (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{skip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+prune lowest fee/byte txes till we\textquotesingle{}re not above bytes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em skip} & don\textquotesingle{}t prune the given ID this time (because it was just added) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_adfb2c77087275ab6ff7759b773f8de15}\label{classcryptonote_1_1tx__memory__pool_adfb2c77087275ab6ff7759b773f8de15}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!remove\_blink\_conflicts@{remove\_blink\_conflicts}}
+\index{remove\_blink\_conflicts@{remove\_blink\_conflicts}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_blink\_conflicts()}{remove\_blink\_conflicts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::remove\+\_\+blink\+\_\+conflicts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{conflict\+\_\+txs,  }\item[{uint64\+\_\+t $\ast$}]{blink\+\_\+rollback\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Attempt to add a blink tx \char`\"{}by force\char`\"{}, removing conflicting non-\/blink txs. 
+
+The given transactions are removed from the mempool, if possible, to make way for this blink transactions. In order for any removal to happen, all the conflicting txes must be non-\/blink transactions, and must either\+:
+\begin{DoxyItemize}
+\item be a mempool transaction
+\item be a mined, non-\/blink transaction in the recent (mutable) section of the chain
+\end{DoxyItemize}
+
+If all conflicting txs satisfy the above then conflicting mempool txs are removed and the blink\+\_\+rollback\+\_\+height pointer is updated to the required rollback height to eject any mined txs (if not already at that height or lower). True is returned.
+
+If any txs are found that do not satisfy the above then nothing is removed and false is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & id of the incoming blink tx \\
+\hline
+{\em conflict\+\_\+txs} & vector of conflicting transaction hashes that are preventing the blink tx \\
+\hline
+{\em blink\+\_\+rollback\+\_\+height} & a pointer to update to the new required height if a chain rollback is needed for the blink tx. (That is, all blocks with height $>$= blink\+\_\+rollback\+\_\+height need to be popped).\\
+\hline
+\end{DoxyParams}
+This method is {\itshape not} called with a blink lock held.
+
+\begin{DoxyReturn}{Returns}
+true if the conflicting transactions have been removed (and/or the rollback height set), false if tx removal and/or rollback are insufficient to eliminate conflicting txes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_aad00ed4cce2351c261925dfbde1b0a1e}\label{classcryptonote_1_1tx__memory__pool_aad00ed4cce2351c261925dfbde1b0a1e}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!remove\_stuck\_transactions@{remove\_stuck\_transactions}}
+\index{remove\_stuck\_transactions@{remove\_stuck\_transactions}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_stuck\_transactions()}{remove\_stuck\_transactions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::remove\+\_\+stuck\+\_\+transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+remove old transactions from the pool 
+
+After a certain time, it is assumed that a transaction which has not yet been mined will likely not be mined. These transactions are removed from the pool to avoid buildup.
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a3fea8a79996be4896421a1d492414098}\label{classcryptonote_1_1tx__memory__pool_a3fea8a79996be4896421a1d492414098}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!remove\_transaction\_keyimages@{remove\_transaction\_keyimages}}
+\index{remove\_transaction\_keyimages@{remove\_transaction\_keyimages}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_transaction\_keyimages()}{remove\_transaction\_keyimages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::remove\+\_\+transaction\+\_\+keyimages (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{transaction\+\_\+prefix}} \&}]{tx,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+forget a transaction\textquotesingle{}s spent key images 
+
+Spent key images are stored separately from transactions for convenience/speed, so this is part of the process of removing a transaction from the pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & the transaction \\
+\hline
+{\em txid} & the transaction\textquotesingle{}s hash\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if any key images to be removed cannot be found, otherwise true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a2371b71c2f9d0307a28fc2f9638c00f3}\label{classcryptonote_1_1tx__memory__pool_a2371b71c2f9d0307a28fc2f9638c00f3}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!remove\_tx@{remove\_tx}}
+\index{remove\_tx@{remove\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{remove\_tx()}{remove\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::remove\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{txpool\+\_\+tx\+\_\+meta\+\_\+t}} $\ast$}]{meta = {\ttfamily nullptr},  }\item[{const sorted\+\_\+tx\+\_\+container\+::iterator $\ast$}]{stc\+\_\+it = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+remove a transaction from the mempool 
+
+This is called when pruning the mempool to reduce its size, and when deleting transactions from the mempool because of a conflicting blink transaction arriving. Transactions lock and blockchain lock must be held by the caller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the transaction id to remove \\
+\hline
+{\em meta} & optional pointer to \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{txpool\+\_\+tx\+\_\+meta\+\_\+t}}; will be looked up if omitted \\
+\hline
+{\em stc\+\_\+it} & an optional iterator to the tx\textquotesingle{}s entry in m\+\_\+txs\+\_\+by\+\_\+fee\+\_\+and\+\_\+receive\+\_\+time to save a (linear) scan to find it when already available. The given iterator will be invalidated if removed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction was removed, false on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a2a0cf4b37f2feb1653ac96a83945cca3}\label{classcryptonote_1_1tx__memory__pool_a2a0cf4b37f2feb1653ac96a83945cca3}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!set\_relayable@{set\_relayable}}
+\index{set\_relayable@{set\_relayable}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{set\_relayable()}{set\_relayable()}}
+{\footnotesize\ttfamily int cryptonote\+::tx\+\_\+memory\+\_\+pool\+::set\+\_\+relayable (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{tx\+\_\+hashes }\end{DoxyParamCaption})}
+
+
+
+clear transactions\textquotesingle{} {\ttfamily do\+\_\+not\+\_\+relay} flags (if set) so that they can start being relayed. (Note that it still must satisfy the other conditions of {\ttfamily get\+\_\+relayable\+\_\+transactions} to actually be relayable). 
+
+\begin{DoxyReturn}{Returns}
+the number of txes that were found with an active {\ttfamily do\+\_\+not\+\_\+relay} flag that was cleared. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_acec0c2d4cc416d504e4ceabbb175edc2}\label{classcryptonote_1_1tx__memory__pool_acec0c2d4cc416d504e4ceabbb175edc2}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!set\_relayed@{set\_relayed}}
+\index{set\_relayed@{set\_relayed}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{set\_relayed()}{set\_relayed()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::set\+\_\+relayed (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::string $>$$>$ \&}]{txs }\end{DoxyParamCaption})}
+
+
+
+tell the pool that certain transactions were just relayed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & the list of transactions (and their hashes) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a76b8b8aba76dc6dac3ef345367574f69}\label{classcryptonote_1_1tx__memory__pool_a76b8b8aba76dc6dac3ef345367574f69}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!set\_txpool\_max\_weight@{set\_txpool\_max\_weight}}
+\index{set\_txpool\_max\_weight@{set\_txpool\_max\_weight}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{set\_txpool\_max\_weight()}{set\_txpool\_max\_weight()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::set\+\_\+txpool\+\_\+max\+\_\+weight (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+set the max cumulative txpool weight in bytes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & the max cumulative txpool weight in bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_af2bba96b565d97b87f2a90fef343eba0}\label{classcryptonote_1_1tx__memory__pool_af2bba96b565d97b87f2a90fef343eba0}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!take\_tx@{take\_tx}}
+\index{take\_tx@{take\_tx}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{take\_tx()}{take\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::take\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{std\+::string \&}]{txblob,  }\item[{size\+\_\+t \&}]{tx\+\_\+weight,  }\item[{uint64\+\_\+t \&}]{fee,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{relayed,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{do\+\_\+not\+\_\+relay,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{double\+\_\+spend\+\_\+seen }\end{DoxyParamCaption})}
+
+
+
+takes a transaction with the given hash from the pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the hash of the transaction \\
+\hline
+{\em tx} & return-\/by-\/reference the transaction taken \\
+\hline
+{\em txblob} & return-\/by-\/reference the transaction as a blob \\
+\hline
+{\em tx\+\_\+weight} & return-\/by-\/reference the transaction\textquotesingle{}s weight \\
+\hline
+{\em fee} & the transaction fee \\
+\hline
+{\em relayed} & return-\/by-\/reference was transaction relayed to us by the network? \\
+\hline
+{\em do\+\_\+not\+\_\+relay} & return-\/by-\/reference is transaction not to be relayed to the network? \\
+\hline
+{\em double\+\_\+spend\+\_\+seen} & return-\/by-\/reference was a double spend seen for that transaction?\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true unless the transaction cannot be found in the pool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a65b8179f3f72c219b0afe760d6df55ee}\label{classcryptonote_1_1tx__memory__pool_a65b8179f3f72c219b0afe760d6df55ee}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!try\_lock@{try\_lock}}
+\index{try\_lock@{try\_lock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{try\_lock()}{try\_lock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::try\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+@briefs does a non-\/blocking attempt to lock the transaction pool \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a011855e34b5f72c21770d3718313ef40}\label{classcryptonote_1_1tx__memory__pool_a011855e34b5f72c21770d3718313ef40}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!unlock@{unlock}}
+\index{unlock@{unlock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void cryptonote\+::tx\+\_\+memory\+\_\+pool\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+unlocks the transaction pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ac338181c8cdba5f77b645c530de1de7a}\label{classcryptonote_1_1tx__memory__pool_ac338181c8cdba5f77b645c530de1de7a}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!validate@{validate}}
+\index{validate@{validate}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{version }\end{DoxyParamCaption})}
+
+
+
+remove transactions from the pool which are no longer valid 
+
+With new versions of the currency, what conditions render a transaction invalid may change. This function clears those which were received before a version change and no longer conform to requirements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & the version the transactions must conform to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of transactions removed 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a1079cd70f9107447f221095781d78639}\label{classcryptonote_1_1tx__memory__pool_a1079cd70f9107447f221095781d78639}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_blinks@{m\_blinks}}
+\index{m\_blinks@{m\_blinks}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_blinks}{m\_blinks}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classcryptonote_1_1blink__tx}{cryptonote\+::blink\+\_\+tx}}$>$ $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+blinks\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a0e1f7a8e08fea6ffe32904af0a99935c}\label{classcryptonote_1_1tx__memory__pool_a0e1f7a8e08fea6ffe32904af0a99935c}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_blinks\_mutex@{m\_blinks\_mutex}}
+\index{m\_blinks\_mutex@{m\_blinks\_mutex}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_blinks\_mutex}{m\_blinks\_mutex}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+blinks\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a972c861f927a7127042c87a9fadbbed0}\label{classcryptonote_1_1tx__memory__pool_a972c861f927a7127042c87a9fadbbed0}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_blockchain@{m\_blockchain}}
+\index{m\_blockchain@{m\_blockchain}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_blockchain}{m\_blockchain}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}}\& cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+blockchain\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+reference to the \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} object 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_acfcbd1baa408b2f7484b18bd848bd6a6}\label{classcryptonote_1_1tx__memory__pool_acfcbd1baa408b2f7484b18bd848bd6a6}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_cookie@{m\_cookie}}
+\index{m\_cookie@{m\_cookie}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_cookie}{m\_cookie}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+cookie\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+incremented at each change 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_abec31bcfbd9fcdb603103a8b18e4ba1a}\label{classcryptonote_1_1tx__memory__pool_abec31bcfbd9fcdb603103a8b18e4ba1a}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_input\_cache@{m\_input\_cache}}
+\index{m\_input\_cache@{m\_input\_cache}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_input\_cache}{m\_input\_cache}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, std\+::tuple$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{tx\+\_\+verification\+\_\+context}}, uint64\+\_\+t, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+input\+\_\+cache\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ad386ffa8ca0ccb68c7bbc95031a05926}\label{classcryptonote_1_1tx__memory__pool_ad386ffa8ca0ccb68c7bbc95031a05926}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_parsed\_tx\_cache@{m\_parsed\_tx\_cache}}
+\index{m\_parsed\_tx\_cache@{m\_parsed\_tx\_cache}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_parsed\_tx\_cache}{m\_parsed\_tx\_cache}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}}$>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+parsed\+\_\+tx\+\_\+cache\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_af2c18bba98acf9ed2cdd03c891ecea91}\label{classcryptonote_1_1tx__memory__pool_af2c18bba98acf9ed2cdd03c891ecea91}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_remove\_stuck\_tx\_interval@{m\_remove\_stuck\_tx\_interval}}
+\index{m\_remove\_stuck\_tx\_interval@{m\_remove\_stuck\_tx\_interval}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_remove\_stuck\_tx\_interval}{m\_remove\_stuck\_tx\_interval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1periodic__task}{tools\+::periodic\+\_\+task}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+remove\+\_\+stuck\+\_\+tx\+\_\+interval \{30s\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+interval on which to check for stale/\char`\"{}stuck\char`\"{} transactions 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a6a2c458ea137674784b35e9d146ece8e}\label{classcryptonote_1_1tx__memory__pool_a6a2c458ea137674784b35e9d146ece8e}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_spent\_key\_images@{m\_spent\_key\_images}}
+\index{m\_spent\_key\_images@{m\_spent\_key\_images}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_spent\_key\_images}{m\_spent\_key\_images}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool_ac8db608d610e9b31288681ab018ae2e9}{key\+\_\+images\+\_\+container}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+spent\+\_\+key\+\_\+images\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+container for spent key images from the transactions in the pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a6b44eef259469c4cbbf2760fd9804933}\label{classcryptonote_1_1tx__memory__pool_a6b44eef259469c4cbbf2760fd9804933}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_timed\_out\_transactions@{m\_timed\_out\_transactions}}
+\index{m\_timed\_out\_transactions@{m\_timed\_out\_transactions}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_timed\_out\_transactions}{m\_timed\_out\_transactions}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+timed\+\_\+out\+\_\+transactions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+transactions which are unlikely to be included in blocks 
+
+These transactions are kept in R\+AM in case they {\itshape are} included in a block eventually, but this container is not saved to disk. \mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_af6636b9a2711cc5e296bcd7f526983a9}\label{classcryptonote_1_1tx__memory__pool_af6636b9a2711cc5e296bcd7f526983a9}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_transactions\_lock@{m\_transactions\_lock}}
+\index{m\_transactions\_lock@{m\_transactions\_lock}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_transactions\_lock}{m\_transactions\_lock}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+transactions\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+mutex for the pool 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a9b641ee33f547d5603e14b9514a47aec}\label{classcryptonote_1_1tx__memory__pool_a9b641ee33f547d5603e14b9514a47aec}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_tx\_notify@{m\_tx\_notify}}
+\index{m\_tx\_notify@{m\_tx\_notify}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_tx\_notify}{m\_tx\_notify}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::function$<$void(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}\&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}}\&, const std\+::string\& blob, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}}\&)$>$ $>$ cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+tx\+\_\+notify\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Callbacks for new tx notifications. 
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a4e5925b0e9f166ba16947525b278601a}\label{classcryptonote_1_1tx__memory__pool_a4e5925b0e9f166ba16947525b278601a}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_txpool\_max\_weight@{m\_txpool\_max\_weight}}
+\index{m\_txpool\_max\_weight@{m\_txpool\_max\_weight}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_txpool\_max\_weight}{m\_txpool\_max\_weight}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+txpool\+\_\+max\+\_\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_ade870150c431217bb94718b4de61b669}\label{classcryptonote_1_1tx__memory__pool_ade870150c431217bb94718b4de61b669}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_txpool\_weight@{m\_txpool\_weight}}
+\index{m\_txpool\_weight@{m\_txpool\_weight}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_txpool\_weight}{m\_txpool\_weight}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+txpool\+\_\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1tx__memory__pool_a92d8773b05f8415e5fb5d031bc57fff1}\label{classcryptonote_1_1tx__memory__pool_a92d8773b05f8415e5fb5d031bc57fff1}} 
+\index{cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}!m\_txs\_by\_fee\_and\_receive\_time@{m\_txs\_by\_fee\_and\_receive\_time}}
+\index{m\_txs\_by\_fee\_and\_receive\_time@{m\_txs\_by\_fee\_and\_receive\_time}!cryptonote::tx\_memory\_pool@{cryptonote::tx\_memory\_pool}}
+\doxysubsubsection{\texorpdfstring{m\_txs\_by\_fee\_and\_receive\_time}{m\_txs\_by\_fee\_and\_receive\_time}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a519318e9f47111feb31d73d79a8003de}{sorted\+\_\+tx\+\_\+container}} cryptonote\+::tx\+\_\+memory\+\_\+pool\+::m\+\_\+txs\+\_\+by\+\_\+fee\+\_\+and\+\_\+receive\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+$<$ container for transactions organized by fee per size and receive time 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__pool_8h}{tx\+\_\+pool.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__pool_8cpp}{tx\+\_\+pool.\+cpp}}\end{DoxyCompactItemize}

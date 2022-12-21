@@ -1,0 +1,41 @@
+\hypertarget{checkpoints_8cpp}{}\doxysection{src/checkpoints/checkpoints.cpp File Reference}
+\label{checkpoints_8cpp}\index{src/checkpoints/checkpoints.cpp@{src/checkpoints/checkpoints.cpp}}
+{\ttfamily \#include \char`\"{}checkpoints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/portable\+\_\+storage\+\_\+template\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/serialization/keyvalue\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+Include dependency graph for checkpoints.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{checkpoints_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacecryptonote_a1fb4b58348932e501a3c98af16d8b81b}{cryptonote\+::get\+\_\+newest\+\_\+hardcoded\+\_\+checkpoint}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t $\ast$height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_aa0671e2eaebcbdadaf77737ef7568ad6}{cryptonote\+::load\+\_\+checkpoints\+\_\+from\+\_\+json}} (const fs\+::path \&json\+\_\+hashfile\+\_\+fullpath, std\+::vector$<$ height\+\_\+to\+\_\+hash $>$ \&checkpoint\+\_\+hashes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}checkpoints\char`\"{})
+\item 
+const height\+\_\+to\+\_\+hash \mbox{\hyperlink{namespacecryptonote_aa72dda6ca5a833bbd3d3d957f4351e8f}{cryptonote\+::\+H\+A\+R\+D\+C\+O\+D\+E\+D\+\_\+\+M\+A\+I\+N\+N\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}

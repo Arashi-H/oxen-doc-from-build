@@ -1,0 +1,177 @@
+\hypertarget{structcryptonote_1_1cryptonote__connection__context}{}\doxysection{cryptonote\+::cryptonote\+\_\+connection\+\_\+context Struct Reference}
+\label{structcryptonote_1_1cryptonote__connection__context}\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+
+
+{\ttfamily \#include $<$connection\+\_\+context.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{structcryptonote_1_1cryptonote__connection__context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1cryptonote__connection__context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}{state}} \{ \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a4a595102904aa3744a00724e050e49ab}{state\+\_\+before\+\_\+handshake}} = 0, 
+\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a9b268ff2877c5e25ad9f2b5565f6abf5}{state\+\_\+synchronizing}}, 
+\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a856b006cc8205a879a498bf251c0cf25}{state\+\_\+standby}}, 
+\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a59331d1745ea96bbf1762e1c98037140}{state\+\_\+normal}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}{state}} \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_af39ce5c8b0cab8bbe9f585b3395284e7}{m\+\_\+state}} \{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a4a595102904aa3744a00724e050e49ab}{state\+\_\+before\+\_\+handshake}}\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a496bed4da2ce9d142d07134cf15812e8}{m\+\_\+needed\+\_\+objects}}
+\item 
+std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a2d37be5130f6a6513017f5c5dc3d874d}{m\+\_\+requested\+\_\+objects}}
+\item 
+std\+::map$<$ uint64\+\_\+t, std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ $>$ \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_aee786dfff7fc15f53426de559eece4a8}{m\+\_\+blink\+\_\+state}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_abddd754c2d67787a8db295ae2c227541}{m\+\_\+need\+\_\+blink\+\_\+sync}} \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a26e38b0f62e67280a77d9b1a586f8924}{m\+\_\+drop\+\_\+count}} \{0\}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_acea05f6d267b0d2f024e4b03c5f72adb}{m\+\_\+remote\+\_\+blockchain\+\_\+height}} \{0\}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a5de93b16dda0137241eb7474f5c1d547}{m\+\_\+last\+\_\+response\+\_\+height}} \{0\}
+\item 
+std\+::optional$<$ std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point $>$ \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_aeff24ab72a37fa5fcd7bb6823bbd3e2e}{m\+\_\+last\+\_\+request\+\_\+time}}
+\item 
+epee\+::copyable\+\_\+atomic \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_afa874c6b7681e2bb3460c69573e66687}{m\+\_\+callback\+\_\+request\+\_\+count}} \{0\}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a78d7674df95179209c99e76e57752c75}{m\+\_\+last\+\_\+known\+\_\+hash}} \{\}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_acf5f52f0d3b0480d04ea0503d76007ee}{m\+\_\+pruning\+\_\+seed}} \{0\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_af645b09247cb1e247d293b8539166757}{m\+\_\+anchor}} \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}\label{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!state@{state}}
+\index{state@{state}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}{cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{state\_before\_handshake@{state\_before\_handshake}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!state\_before\_handshake@{state\_before\_handshake}}}\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a4a595102904aa3744a00724e050e49ab}\label{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a4a595102904aa3744a00724e050e49ab}} 
+state\+\_\+before\+\_\+handshake&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{state\_synchronizing@{state\_synchronizing}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!state\_synchronizing@{state\_synchronizing}}}\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a9b268ff2877c5e25ad9f2b5565f6abf5}\label{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a9b268ff2877c5e25ad9f2b5565f6abf5}} 
+state\+\_\+synchronizing&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{state\_standby@{state\_standby}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!state\_standby@{state\_standby}}}\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a856b006cc8205a879a498bf251c0cf25}\label{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a856b006cc8205a879a498bf251c0cf25}} 
+state\+\_\+standby&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{state\_normal@{state\_normal}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!state\_normal@{state\_normal}}}\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a59331d1745ea96bbf1762e1c98037140}\label{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a59331d1745ea96bbf1762e1c98037140}} 
+state\+\_\+normal&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_af645b09247cb1e247d293b8539166757}\label{structcryptonote_1_1cryptonote__connection__context_af645b09247cb1e247d293b8539166757}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_anchor@{m\_anchor}}
+\index{m\_anchor@{m\_anchor}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_anchor}{m\_anchor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+anchor \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_aee786dfff7fc15f53426de559eece4a8}\label{structcryptonote_1_1cryptonote__connection__context_aee786dfff7fc15f53426de559eece4a8}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_blink\_state@{m\_blink\_state}}
+\index{m\_blink\_state@{m\_blink\_state}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_blink\_state}{m\_blink\_state}}
+{\footnotesize\ttfamily std\+::map$<$uint64\+\_\+t, std\+::pair$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ $>$ cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+blink\+\_\+state}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_afa874c6b7681e2bb3460c69573e66687}\label{structcryptonote_1_1cryptonote__connection__context_afa874c6b7681e2bb3460c69573e66687}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_callback\_request\_count@{m\_callback\_request\_count}}
+\index{m\_callback\_request\_count@{m\_callback\_request\_count}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_callback\_request\_count}{m\_callback\_request\_count}}
+{\footnotesize\ttfamily epee\+::copyable\+\_\+atomic cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+callback\+\_\+request\+\_\+count \{0\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a26e38b0f62e67280a77d9b1a586f8924}\label{structcryptonote_1_1cryptonote__connection__context_a26e38b0f62e67280a77d9b1a586f8924}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_drop\_count@{m\_drop\_count}}
+\index{m\_drop\_count@{m\_drop\_count}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_drop\_count}{m\_drop\_count}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+drop\+\_\+count \{0\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a78d7674df95179209c99e76e57752c75}\label{structcryptonote_1_1cryptonote__connection__context_a78d7674df95179209c99e76e57752c75}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_last\_known\_hash@{m\_last\_known\_hash}}
+\index{m\_last\_known\_hash@{m\_last\_known\_hash}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_last\_known\_hash}{m\_last\_known\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+last\+\_\+known\+\_\+hash \{\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_aeff24ab72a37fa5fcd7bb6823bbd3e2e}\label{structcryptonote_1_1cryptonote__connection__context_aeff24ab72a37fa5fcd7bb6823bbd3e2e}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_last\_request\_time@{m\_last\_request\_time}}
+\index{m\_last\_request\_time@{m\_last\_request\_time}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_last\_request\_time}{m\_last\_request\_time}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point$>$ cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+last\+\_\+request\+\_\+time}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a5de93b16dda0137241eb7474f5c1d547}\label{structcryptonote_1_1cryptonote__connection__context_a5de93b16dda0137241eb7474f5c1d547}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_last\_response\_height@{m\_last\_response\_height}}
+\index{m\_last\_response\_height@{m\_last\_response\_height}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_last\_response\_height}{m\_last\_response\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+last\+\_\+response\+\_\+height \{0\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_abddd754c2d67787a8db295ae2c227541}\label{structcryptonote_1_1cryptonote__connection__context_abddd754c2d67787a8db295ae2c227541}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_need\_blink\_sync@{m\_need\_blink\_sync}}
+\index{m\_need\_blink\_sync@{m\_need\_blink\_sync}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_need\_blink\_sync}{m\_need\_blink\_sync}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+need\+\_\+blink\+\_\+sync \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a496bed4da2ce9d142d07134cf15812e8}\label{structcryptonote_1_1cryptonote__connection__context_a496bed4da2ce9d142d07134cf15812e8}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_needed\_objects@{m\_needed\_objects}}
+\index{m\_needed\_objects@{m\_needed\_objects}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_needed\_objects}{m\_needed\_objects}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+needed\+\_\+objects}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_acf5f52f0d3b0480d04ea0503d76007ee}\label{structcryptonote_1_1cryptonote__connection__context_acf5f52f0d3b0480d04ea0503d76007ee}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_pruning\_seed@{m\_pruning\_seed}}
+\index{m\_pruning\_seed@{m\_pruning\_seed}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_pruning\_seed}{m\_pruning\_seed}}
+{\footnotesize\ttfamily uint32\+\_\+t cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+pruning\+\_\+seed \{0\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_acea05f6d267b0d2f024e4b03c5f72adb}\label{structcryptonote_1_1cryptonote__connection__context_acea05f6d267b0d2f024e4b03c5f72adb}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_remote\_blockchain\_height@{m\_remote\_blockchain\_height}}
+\index{m\_remote\_blockchain\_height@{m\_remote\_blockchain\_height}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_remote\_blockchain\_height}{m\_remote\_blockchain\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+remote\+\_\+blockchain\+\_\+height \{0\}}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_a2d37be5130f6a6513017f5c5dc3d874d}\label{structcryptonote_1_1cryptonote__connection__context_a2d37be5130f6a6513017f5c5dc3d874d}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_requested\_objects@{m\_requested\_objects}}
+\index{m\_requested\_objects@{m\_requested\_objects}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_requested\_objects}{m\_requested\_objects}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+requested\+\_\+objects}
+
+\mbox{\Hypertarget{structcryptonote_1_1cryptonote__connection__context_af39ce5c8b0cab8bbe9f585b3395284e7}\label{structcryptonote_1_1cryptonote__connection__context_af39ce5c8b0cab8bbe9f585b3395284e7}} 
+\index{cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!cryptonote::cryptonote\_connection\_context@{cryptonote::cryptonote\_connection\_context}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178}{state}} cryptonote\+::cryptonote\+\_\+connection\+\_\+context\+::m\+\_\+state \{\mbox{\hyperlink{structcryptonote_1_1cryptonote__connection__context_a34733d85d9afe5719f7a7e27065fd178a4a595102904aa3744a00724e050e49ab}{state\+\_\+before\+\_\+handshake}}\}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{connection__context_8h}{connection\+\_\+context.\+h}}\end{DoxyCompactItemize}

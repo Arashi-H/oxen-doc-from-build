@@ -1,0 +1,85 @@
+\hypertarget{net__node_8inl}{}\doxysection{src/p2p/net\+\_\+node.inl File Reference}
+\label{net__node_8inl}\index{src/p2p/net\_node.inl@{src/p2p/net\_node.inl}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$boost/uuid/uuid\+\_\+io.\+hpp$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/time\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/periodic\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/local\+\_\+ip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/levin\+\_\+abstract\+\_\+invoke2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/parse.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+node.\+h\char`\"{}}\newline
+Include dependency graph for net\+\_\+node.\+inl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__node_8inl__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{net__node_8inl__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenodetool}{nodetool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{net__node_8inl_a3f8b4bf71b2ef55cd056096ffa4e4461}{N\+E\+T\+\_\+\+M\+A\+K\+E\+\_\+\+IP}}(b1,  b2,  b3,  b4)~((L\+P\+A\+R\+AM)(((D\+W\+O\+RD)(b1)$<$$<$24)+((D\+W\+O\+RD)(b2)$<$$<$16)+((D\+W\+O\+RD)(b3)$<$$<$8)+((D\+W\+O\+RD)(b4))))
+\item 
+\#define \mbox{\hyperlink{net__node_8inl_a97507bdb1fcde4c6694e7d42a6e73038}{M\+I\+N\+\_\+\+W\+A\+N\+T\+E\+D\+\_\+\+S\+E\+E\+D\+\_\+\+N\+O\+D\+ES}}~6
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_a8a7f3332aeee2d77b19455708946525b}{nodetool\+::append\+\_\+net\+\_\+address}} (std\+::vector$<$ epee\+::net\+\_\+utils\+::network\+\_\+address $>$ \&seed\+\_\+nodes, std\+::string const \&addr, uint16\+\_\+t default\+\_\+port)
+\item 
+static std\+::string \mbox{\hyperlink{namespacenodetool_a2fa8a836747eb38070a3078212cf8861}{nodetool\+::peerid\+\_\+to\+\_\+string}} (peerid\+\_\+type peer\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacenodetool_ac03de3745c273560e26bce6b06bb7310}{nodetool\+::logcat}} = log\+::\+Cat(\char`\"{}net.\+p2p\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{net__node_8inl_a97507bdb1fcde4c6694e7d42a6e73038}\label{net__node_8inl_a97507bdb1fcde4c6694e7d42a6e73038}} 
+\index{net\_node.inl@{net\_node.inl}!MIN\_WANTED\_SEED\_NODES@{MIN\_WANTED\_SEED\_NODES}}
+\index{MIN\_WANTED\_SEED\_NODES@{MIN\_WANTED\_SEED\_NODES}!net\_node.inl@{net\_node.inl}}
+\doxysubsubsection{\texorpdfstring{MIN\_WANTED\_SEED\_NODES}{MIN\_WANTED\_SEED\_NODES}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+W\+A\+N\+T\+E\+D\+\_\+\+S\+E\+E\+D\+\_\+\+N\+O\+D\+ES~6}
+
+\mbox{\Hypertarget{net__node_8inl_a3f8b4bf71b2ef55cd056096ffa4e4461}\label{net__node_8inl_a3f8b4bf71b2ef55cd056096ffa4e4461}} 
+\index{net\_node.inl@{net\_node.inl}!NET\_MAKE\_IP@{NET\_MAKE\_IP}}
+\index{NET\_MAKE\_IP@{NET\_MAKE\_IP}!net\_node.inl@{net\_node.inl}}
+\doxysubsubsection{\texorpdfstring{NET\_MAKE\_IP}{NET\_MAKE\_IP}}
+{\footnotesize\ttfamily \#define N\+E\+T\+\_\+\+M\+A\+K\+E\+\_\+\+IP(\begin{DoxyParamCaption}\item[{}]{b1,  }\item[{}]{b2,  }\item[{}]{b3,  }\item[{}]{b4 }\end{DoxyParamCaption})~((L\+P\+A\+R\+AM)(((D\+W\+O\+RD)(b1)$<$$<$24)+((D\+W\+O\+RD)(b2)$<$$<$16)+((D\+W\+O\+RD)(b3)$<$$<$8)+((D\+W\+O\+RD)(b4))))}
+

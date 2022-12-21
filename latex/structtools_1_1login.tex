@@ -1,0 +1,98 @@
+\hypertarget{structtools_1_1login}{}\doxysection{tools\+::login Struct Reference}
+\label{structtools_1_1login}\index{tools::login@{tools::login}}
+
+
+{\ttfamily \#include $<$password.\+h$>$}
+
+
+
+Collaboration diagram for tools\+::login\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{structtools_1_1login__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtools_1_1login_af707050e30acb7b0164cedce601bba88}{login}} ()=default
+\item 
+\mbox{\hyperlink{structtools_1_1login_a359bb48bf0b3f864aff5385a3075ec9d}{login}} (std\+::string\+\_\+view user, epee\+::wipeable\+\_\+string pass)
+\begin{DoxyCompactList}\small\item\em Constructs a login from a username/password. Does not prompt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{login}} $>$ \mbox{\hyperlink{structtools_1_1login_a39bb581d330e3c37fb6307769686950e}{parse}} (std\+::string \&\&userpass, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} verify, const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{password\+\_\+container}} $>$(\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&prompt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structtools_1_1login_a67bfbf8bf2be601cea1ae1524ecaddd4}{username}}
+\item 
+\mbox{\hyperlink{classtools_1_1password__container}{password\+\_\+container}} \mbox{\hyperlink{structtools_1_1login_a249294f4106abb308f7d9d319e8680c1}{password}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtools_1_1login_af707050e30acb7b0164cedce601bba88}\label{structtools_1_1login_af707050e30acb7b0164cedce601bba88}} 
+\index{tools::login@{tools::login}!login@{login}}
+\index{login@{login}!tools::login@{tools::login}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tools\+::login\+::login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtools_1_1login_a359bb48bf0b3f864aff5385a3075ec9d}\label{structtools_1_1login_a359bb48bf0b3f864aff5385a3075ec9d}} 
+\index{tools::login@{tools::login}!login@{login}}
+\index{login@{login}!tools::login@{tools::login}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tools\+::login\+::login (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{user,  }\item[{epee\+::wipeable\+\_\+string}]{pass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a login from a username/password. Does not prompt. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtools_1_1login_a39bb581d330e3c37fb6307769686950e}\label{structtools_1_1login_a39bb581d330e3c37fb6307769686950e}} 
+\index{tools::login@{tools::login}!parse@{parse}}
+\index{parse@{parse}!tools::login@{tools::login}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{login}} $>$ tools\+::login\+::parse (\begin{DoxyParamCaption}\item[{std\+::string \&\&}]{userpass,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{verify,  }\item[{const std\+::function$<$ std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{password\+\_\+container}} $>$(\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}})$>$ \&}]{prompt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Extracts username and password from the format {\ttfamily username\+:password}. A blank username or password is allowed. If the {\ttfamily \+:} character is not present, {\ttfamily \mbox{\hyperlink{classtools_1_1password__container_ac3076fbb8e7c6b8707e4f2255b633ff1}{password\+\_\+container\+::prompt}}} will be called by forwarding the {\ttfamily verify} and {\ttfamily message} arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em userpass} & Is \char`\"{}consumed\char`\"{}, and the memory contents are wiped. \\
+\hline
+{\em verify} & is passed to {\ttfamily \mbox{\hyperlink{classtools_1_1password__container_ac3076fbb8e7c6b8707e4f2255b633ff1}{password\+\_\+container\+::prompt}}} if necessary. \\
+\hline
+{\em message} & is passed to {\ttfamily \mbox{\hyperlink{classtools_1_1password__container_ac3076fbb8e7c6b8707e4f2255b633ff1}{password\+\_\+container\+::prompt}}} if necessary.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The username and password, or std\+::nullopt if {\ttfamily \mbox{\hyperlink{classtools_1_1password__container_ac3076fbb8e7c6b8707e4f2255b633ff1}{password\+\_\+container\+::prompt}}} fails. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtools_1_1login_a249294f4106abb308f7d9d319e8680c1}\label{structtools_1_1login_a249294f4106abb308f7d9d319e8680c1}} 
+\index{tools::login@{tools::login}!password@{password}}
+\index{password@{password}!tools::login@{tools::login}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1password__container}{password\+\_\+container}} tools\+::login\+::password}
+
+\mbox{\Hypertarget{structtools_1_1login_a67bfbf8bf2be601cea1ae1524ecaddd4}\label{structtools_1_1login_a67bfbf8bf2be601cea1ae1524ecaddd4}} 
+\index{tools::login@{tools::login}!username@{username}}
+\index{username@{username}!tools::login@{tools::login}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily std\+::string tools\+::login\+::username}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{password_8h}{password.\+h}}\item 
+src/common/\mbox{\hyperlink{password_8cpp}{password.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,628 @@
+\hypertarget{classmms_1_1message__store}{}\doxysection{mms\+::message\+\_\+store Class Reference}
+\label{classmms_1_1message__store}\index{mms::message\_store@{mms::message\_store}}
+
+
+{\ttfamily \#include $<$message\+\_\+store.\+h$>$}
+
+
+
+Collaboration diagram for mms\+::message\+\_\+store\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classmms_1_1message__store__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmms_1_1message__store_a304662db17ec070a4ac0cdb2e5529d7a}{message\+\_\+store}} ()
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a01112e45d9ba3465d436b0cd2bda4968}{init}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const std\+::string \&own\+\_\+label, const std\+::string \&own\+\_\+transport\+\_\+address, uint32\+\_\+t num\+\_\+authorized\+\_\+signers, uint32\+\_\+t num\+\_\+required\+\_\+signers)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a10b8d632d57f3182eddd533d655a4715}{set\+\_\+active}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} active)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a915ce5be662ab97bd559373b810cc965}{set\+\_\+auto\+\_\+send}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} auto\+\_\+send)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a6e95b95bed9ae5aa65a004ceb8d33683}{set\+\_\+options}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a3750dbbd6b90f9a97fee3c6497bc6e34}{set\+\_\+options}} (const std\+::string \&bitmessage\+\_\+address, const epee\+::wipeable\+\_\+string \&bitmessage\+\_\+login)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_ac3adee90b0869d8c4ef25514f4db3d05}{get\+\_\+active}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a287bf9e248279be266f8bca6ca5a2a69}{get\+\_\+auto\+\_\+send}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a73a442976cb2127f7adb7edd05f76614}{get\+\_\+num\+\_\+required\+\_\+signers}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_ab034436741bc1e52ccc4cbe591edc406}{get\+\_\+num\+\_\+authorized\+\_\+signers}} () const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a06b1a705bc6d678fac1fec39756b339f}{set\+\_\+signer}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, uint32\+\_\+t index, const std\+::optional$<$ std\+::string $>$ \&label, const std\+::optional$<$ std\+::string $>$ \&transport\+\_\+address, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} $>$ monero\+\_\+address)
+\item 
+const \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} \& \mbox{\hyperlink{classmms_1_1message__store_ac56e533d26efa0a7e0efda5025ef0895}{get\+\_\+signer}} (uint32\+\_\+t index) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_abafd10c9ccb5f4b70d75adf626344458}{get\+\_\+signer\+\_\+index\+\_\+by\+\_\+monero\+\_\+address}} (const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&monero\+\_\+address, uint32\+\_\+t \&index) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a09b0e0e0e6937cdaf25767c3112e741f}{get\+\_\+signer\+\_\+index\+\_\+by\+\_\+label}} (const std\+::string label, uint32\+\_\+t \&index) const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} $>$ \& \mbox{\hyperlink{classmms_1_1message__store_a6e27304766acdab6ebf30407e2d81893}{get\+\_\+all\+\_\+signers}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_ab57a16d5c3035a9af0303fb99298880b}{signer\+\_\+config\+\_\+complete}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a526cdd40fec1cdf32af01053d772506e}{signer\+\_\+labels\+\_\+complete}} () const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a5d19809cc1cd9d27b42820b15bf231b2}{get\+\_\+signer\+\_\+config}} (std\+::string \&signer\+\_\+config)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_adef32bfff890ece5d70bac80818d2e7c}{unpack\+\_\+signer\+\_\+config}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const std\+::string \&signer\+\_\+config, std\+::vector$<$ \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} $>$ \&signers)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a063991abfa9bd339bd3a7f056759d980}{process\+\_\+signer\+\_\+config}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const std\+::string \&signer\+\_\+config)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a91f62b9df65be466c470281b94b22d9a}{start\+\_\+auto\+\_\+config}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a452cbaa6fccf254be69e193fd978cad9}{check\+\_\+auto\+\_\+config\+\_\+token}} (const std\+::string \&raw\+\_\+token, std\+::string \&adjusted\+\_\+token) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a57b07a62023ef2a5dfba717e96447f4a}{add\+\_\+auto\+\_\+config\+\_\+data\+\_\+message}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const std\+::string \&auto\+\_\+config\+\_\+token)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a0c21d3976ada33f4842f531adf3d9e32}{process\+\_\+auto\+\_\+config\+\_\+data\+\_\+message}} (uint32\+\_\+t id)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a5703e5f24cccd7ee2d8a1f9081aa8bed}{stop\+\_\+auto\+\_\+config}} ()
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a6d03d4dc6fe4b0405ab9d56a1c6556c9}{process\+\_\+wallet\+\_\+created\+\_\+data}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}} type, const std\+::string \&content)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a3af5f0651d44d787157ff12c4994a644}{get\+\_\+processable\+\_\+messages}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} force\+\_\+sync, std\+::vector$<$ \mbox{\hyperlink{structmms_1_1processing__data}{processing\+\_\+data}} $>$ \&data\+\_\+list, std\+::string \&wait\+\_\+reason)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_af760eb272707357f8d577c97da46f74b}{set\+\_\+messages\+\_\+processed}} (const \mbox{\hyperlink{structmms_1_1processing__data}{processing\+\_\+data}} \&data)
+\item 
+size\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a502f3957b6d265f73c0b7f6877e700a1}{add\+\_\+message}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, uint32\+\_\+t signer\+\_\+index, \mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}} type, \mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}} direction, const std\+::string \&content)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structmms_1_1message}{message}} $>$ \& \mbox{\hyperlink{classmms_1_1message__store_a32d94dc37127f44a2d928ce592041c30}{get\+\_\+all\+\_\+messages}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_af6960ff88d6a9e039fa57571d220ae23}{get\+\_\+message\+\_\+by\+\_\+id}} (uint32\+\_\+t id, \mbox{\hyperlink{structmms_1_1message}{message}} \&m) const
+\item 
+\mbox{\hyperlink{structmms_1_1message}{message}} \mbox{\hyperlink{classmms_1_1message__store_aaea3f53db87f3b017a10fef6ed6e3aa5}{get\+\_\+message\+\_\+by\+\_\+id}} (uint32\+\_\+t id) const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a5d13e5be29c475222f467857666edbd0}{set\+\_\+message\+\_\+processed\+\_\+or\+\_\+sent}} (uint32\+\_\+t id)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_ad2b7b3fff155f6eb47003188f29db893}{delete\+\_\+message}} (uint32\+\_\+t id)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a50715c7d36cb760cf8d0aaa95397c9f2}{delete\+\_\+all\+\_\+messages}} ()
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_aeaa124915024ef75862aecd06589bddd}{get\+\_\+sanitized\+\_\+message\+\_\+text}} (const \mbox{\hyperlink{structmms_1_1message}{message}} \&m, std\+::string \&sanitized\+\_\+text) const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a4361550e80567d4ba01abab0726cd151}{send\+\_\+message}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, uint32\+\_\+t id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a1a7dde417649d3ee99b2b66786be20bc}{check\+\_\+for\+\_\+messages}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, std\+::vector$<$ \mbox{\hyperlink{structmms_1_1message}{message}} $>$ \&messages)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a4968081df5b1e9718cfb16aa4721e1bf}{stop}} ()
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a88514b2f823464d1ac7170a478008429}{write\+\_\+to\+\_\+file}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const fs\+::path \&filename)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_af2e720508c885c1adf44f8e6e16b94a5}{read\+\_\+from\+\_\+file}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}}, const fs\+::path \&filename)
+\item 
+{\footnotesize template$<$class t\+\_\+archive $>$ }\\void \mbox{\hyperlink{classmms_1_1message__store_af1063a2cb7d5e0602eedfba1a46e1f67}{serialize}} (t\+\_\+archive \&a, const unsigned int ver)
+\item 
+std\+::string \mbox{\hyperlink{classmms_1_1message__store_a5f0fc0294af6bb2b62b999c5d9e35d1d}{signer\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} \&signer, uint32\+\_\+t max\+\_\+width)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classmms_1_1message__store_af1a9b120dbdae1531a2100c9f634f944}{message\+\_\+type\+\_\+to\+\_\+string}} (\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}} type)
+\item 
+static const char $\ast$ \mbox{\hyperlink{classmms_1_1message__store_a3a2c2c8b216b370b92b6727047459574}{message\+\_\+direction\+\_\+to\+\_\+string}} (\mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}} direction)
+\item 
+static const char $\ast$ \mbox{\hyperlink{classmms_1_1message__store_a9e98f5c83dbcf86039092e4515af5703}{message\+\_\+state\+\_\+to\+\_\+string}} (\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}{message\+\_\+state}} \mbox{\hyperlink{structstate}{state}})
+\item 
+static const char $\ast$ \mbox{\hyperlink{classmms_1_1message__store_a50faa2e2cd4ce1f25d26aa7fcb971600}{tr}} (const char $\ast$str)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__store_a8caad8f37eeb5709c976c64ab7d0e9c7}{init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc\+\_\+params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a96b6292612d25dd346f8f1116e2989fa}{get\+\_\+message\+\_\+index\+\_\+by\+\_\+id}} (uint32\+\_\+t id, size\+\_\+t \&index) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_ad67b651a437e9dae43de09ea000f5bec}{get\+\_\+message\+\_\+index\+\_\+by\+\_\+id}} (uint32\+\_\+t id) const
+\item 
+\mbox{\hyperlink{structmms_1_1message}{message}} \& \mbox{\hyperlink{classmms_1_1message__store_a418049d7ff57af7630eabf4426435a33}{get\+\_\+message\+\_\+ref\+\_\+by\+\_\+id}} (uint32\+\_\+t id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_ad910232f809f0b0ddc0c357e76a08cad}{any\+\_\+message\+\_\+of\+\_\+type}} (\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}} type, \mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}} direction) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_ad80b0cd50c8a7745a85fd14e9845be25}{any\+\_\+message\+\_\+with\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_ade17200ae1f543eca5c210f14987f8ab}{get\+\_\+other\+\_\+signers\+\_\+id\+\_\+count}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&ids) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a38c45e7808f50948cc213757836dd7c3}{message\+\_\+ids\+\_\+complete}} (const std\+::vector$<$ uint32\+\_\+t $>$ \&ids) const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a4028dc627f53df1e1e212209707b3cdc}{encrypt}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} public\+\_\+key, const std\+::string \&plaintext, std\+::string \&ciphertext, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&encryption\+\_\+public\+\_\+key, crypto\+::chacha\+\_\+iv \&\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}})
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_ad6c737954db2c0ab7daddb106735af4a}{decrypt}} (const std\+::string \&ciphertext, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&encryption\+\_\+public\+\_\+key, const crypto\+::chacha\+\_\+iv \&\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&view\+\_\+secret\+\_\+key, std\+::string \&plaintext)
+\item 
+std\+::string \mbox{\hyperlink{classmms_1_1message__store_afb7c538e8f0ecbe9415ee07c75c96492}{create\+\_\+auto\+\_\+config\+\_\+token}} ()
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a14af2f25174b2b6698103495c5b2e902}{setup\+\_\+signer\+\_\+for\+\_\+auto\+\_\+config}} (uint32\+\_\+t index, const std\+::string token, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} receiving)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_adc4be82a1f44d243e468dd3886bcb352}{delete\+\_\+transport\+\_\+message}} (uint32\+\_\+t id)
+\item 
+std\+::string \mbox{\hyperlink{classmms_1_1message__store_a613b259de09c2fd15693e8425b91e00c}{account\+\_\+address\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&account\+\_\+address) const
+\item 
+void \mbox{\hyperlink{classmms_1_1message__store_a8a098d491ee75b705ff97f5971d37edc}{save}} (const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&\mbox{\hyperlink{structstate}{state}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_abf87af577acffffea4c396abc8daada3}{m\+\_\+active}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a0656509d2a739f286a1be1be5d365d36}{m\+\_\+num\+\_\+authorized\+\_\+signers}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a6cf04124e9a61f92e270f4bb753b7f8c}{m\+\_\+num\+\_\+required\+\_\+signers}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__store_a8a7ae9ea11ecb579910af5fffc580f8d}{m\+\_\+auto\+\_\+send}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{classmms_1_1message__store_a9e7fec4fe7d35cadcc945fcff625ce3b}{m\+\_\+nettype}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} $>$ \mbox{\hyperlink{classmms_1_1message__store_a023922a0211be5be858e466dd10106fa}{m\+\_\+signers}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmms_1_1message}{message}} $>$ \mbox{\hyperlink{classmms_1_1message__store_af4076e4fba4015b11409a49f8d6ef989}{m\+\_\+messages}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classmms_1_1message__store_a48fb1628e3ca424fee2bfff629edc825}{m\+\_\+next\+\_\+message\+\_\+id}}
+\item 
+fs\+::path \mbox{\hyperlink{classmms_1_1message__store_a3bfb0026e7ff2403c28f98ccad01566b}{m\+\_\+filename}}
+\item 
+\mbox{\hyperlink{classmms_1_1message__transporter}{message\+\_\+transporter}} \mbox{\hyperlink{classmms_1_1message__store_afc944bd770f06e3d82e08f584de3af11}{m\+\_\+transporter}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classmms_1_1message__store_ac98b571b1d2c00dc655d911dd7ff0397}{m\+\_\+run}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmms_1_1message__store_a304662db17ec070a4ac0cdb2e5529d7a}\label{classmms_1_1message__store_a304662db17ec070a4ac0cdb2e5529d7a}} 
+\index{mms::message\_store@{mms::message\_store}!message\_store@{message\_store}}
+\index{message\_store@{message\_store}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{message\_store()}{message\_store()}}
+{\footnotesize\ttfamily mms\+::message\+\_\+store\+::message\+\_\+store (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmms_1_1message__store_a613b259de09c2fd15693e8425b91e00c}\label{classmms_1_1message__store_a613b259de09c2fd15693e8425b91e00c}} 
+\index{mms::message\_store@{mms::message\_store}!account\_address\_to\_string@{account\_address\_to\_string}}
+\index{account\_address\_to\_string@{account\_address\_to\_string}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{account\_address\_to\_string()}{account\_address\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mms\+::message\+\_\+store\+::account\+\_\+address\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&}]{account\+\_\+address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a57b07a62023ef2a5dfba717e96447f4a}\label{classmms_1_1message__store_a57b07a62023ef2a5dfba717e96447f4a}} 
+\index{mms::message\_store@{mms::message\_store}!add\_auto\_config\_data\_message@{add\_auto\_config\_data\_message}}
+\index{add\_auto\_config\_data\_message@{add\_auto\_config\_data\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{add\_auto\_config\_data\_message()}{add\_auto\_config\_data\_message()}}
+{\footnotesize\ttfamily size\+\_\+t mms\+::message\+\_\+store\+::add\+\_\+auto\+\_\+config\+\_\+data\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const std\+::string \&}]{auto\+\_\+config\+\_\+token }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a502f3957b6d265f73c0b7f6877e700a1}\label{classmms_1_1message__store_a502f3957b6d265f73c0b7f6877e700a1}} 
+\index{mms::message\_store@{mms::message\_store}!add\_message@{add\_message}}
+\index{add\_message@{add\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{add\_message()}{add\_message()}}
+{\footnotesize\ttfamily size\+\_\+t mms\+::message\+\_\+store\+::add\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{uint32\+\_\+t}]{signer\+\_\+index,  }\item[{\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}}}]{type,  }\item[{\mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}}}]{direction,  }\item[{const std\+::string \&}]{content }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ad910232f809f0b0ddc0c357e76a08cad}\label{classmms_1_1message__store_ad910232f809f0b0ddc0c357e76a08cad}} 
+\index{mms::message\_store@{mms::message\_store}!any\_message\_of\_type@{any\_message\_of\_type}}
+\index{any\_message\_of\_type@{any\_message\_of\_type}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{any\_message\_of\_type()}{any\_message\_of\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::any\+\_\+message\+\_\+of\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}}}]{type,  }\item[{\mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}}}]{direction }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ad80b0cd50c8a7745a85fd14e9845be25}\label{classmms_1_1message__store_ad80b0cd50c8a7745a85fd14e9845be25}} 
+\index{mms::message\_store@{mms::message\_store}!any\_message\_with\_hash@{any\_message\_with\_hash}}
+\index{any\_message\_with\_hash@{any\_message\_with\_hash}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{any\_message\_with\_hash()}{any\_message\_with\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::any\+\_\+message\+\_\+with\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a452cbaa6fccf254be69e193fd978cad9}\label{classmms_1_1message__store_a452cbaa6fccf254be69e193fd978cad9}} 
+\index{mms::message\_store@{mms::message\_store}!check\_auto\_config\_token@{check\_auto\_config\_token}}
+\index{check\_auto\_config\_token@{check\_auto\_config\_token}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{check\_auto\_config\_token()}{check\_auto\_config\_token()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::check\+\_\+auto\+\_\+config\+\_\+token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{raw\+\_\+token,  }\item[{std\+::string \&}]{adjusted\+\_\+token }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a1a7dde417649d3ee99b2b66786be20bc}\label{classmms_1_1message__store_a1a7dde417649d3ee99b2b66786be20bc}} 
+\index{mms::message\_store@{mms::message\_store}!check\_for\_messages@{check\_for\_messages}}
+\index{check\_for\_messages@{check\_for\_messages}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{check\_for\_messages()}{check\_for\_messages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::check\+\_\+for\+\_\+messages (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmms_1_1message}{message}} $>$ \&}]{messages }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_afb7c538e8f0ecbe9415ee07c75c96492}\label{classmms_1_1message__store_afb7c538e8f0ecbe9415ee07c75c96492}} 
+\index{mms::message\_store@{mms::message\_store}!create\_auto\_config\_token@{create\_auto\_config\_token}}
+\index{create\_auto\_config\_token@{create\_auto\_config\_token}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{create\_auto\_config\_token()}{create\_auto\_config\_token()}}
+{\footnotesize\ttfamily std\+::string mms\+::message\+\_\+store\+::create\+\_\+auto\+\_\+config\+\_\+token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ad6c737954db2c0ab7daddb106735af4a}\label{classmms_1_1message__store_ad6c737954db2c0ab7daddb106735af4a}} 
+\index{mms::message\_store@{mms::message\_store}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ciphertext,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{encryption\+\_\+public\+\_\+key,  }\item[{const crypto\+::chacha\+\_\+iv \&}]{iv,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{view\+\_\+secret\+\_\+key,  }\item[{std\+::string \&}]{plaintext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a50715c7d36cb760cf8d0aaa95397c9f2}\label{classmms_1_1message__store_a50715c7d36cb760cf8d0aaa95397c9f2}} 
+\index{mms::message\_store@{mms::message\_store}!delete\_all\_messages@{delete\_all\_messages}}
+\index{delete\_all\_messages@{delete\_all\_messages}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{delete\_all\_messages()}{delete\_all\_messages()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::delete\+\_\+all\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ad2b7b3fff155f6eb47003188f29db893}\label{classmms_1_1message__store_ad2b7b3fff155f6eb47003188f29db893}} 
+\index{mms::message\_store@{mms::message\_store}!delete\_message@{delete\_message}}
+\index{delete\_message@{delete\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{delete\_message()}{delete\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::delete\+\_\+message (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_adc4be82a1f44d243e468dd3886bcb352}\label{classmms_1_1message__store_adc4be82a1f44d243e468dd3886bcb352}} 
+\index{mms::message\_store@{mms::message\_store}!delete\_transport\_message@{delete\_transport\_message}}
+\index{delete\_transport\_message@{delete\_transport\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{delete\_transport\_message()}{delete\_transport\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::delete\+\_\+transport\+\_\+message (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a4028dc627f53df1e1e212209707b3cdc}\label{classmms_1_1message__store_a4028dc627f53df1e1e212209707b3cdc}} 
+\index{mms::message\_store@{mms::message\_store}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::encrypt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}}]{public\+\_\+key,  }\item[{const std\+::string \&}]{plaintext,  }\item[{std\+::string \&}]{ciphertext,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{encryption\+\_\+public\+\_\+key,  }\item[{crypto\+::chacha\+\_\+iv \&}]{iv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ac3adee90b0869d8c4ef25514f4db3d05}\label{classmms_1_1message__store_ac3adee90b0869d8c4ef25514f4db3d05}} 
+\index{mms::message\_store@{mms::message\_store}!get\_active@{get\_active}}
+\index{get\_active@{get\_active}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_active()}{get\_active()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a32d94dc37127f44a2d928ce592041c30}\label{classmms_1_1message__store_a32d94dc37127f44a2d928ce592041c30}} 
+\index{mms::message\_store@{mms::message\_store}!get\_all\_messages@{get\_all\_messages}}
+\index{get\_all\_messages@{get\_all\_messages}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_all\_messages()}{get\_all\_messages()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structmms_1_1message}{message}}$>$\& mms\+::message\+\_\+store\+::get\+\_\+all\+\_\+messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a6e27304766acdab6ebf30407e2d81893}\label{classmms_1_1message__store_a6e27304766acdab6ebf30407e2d81893}} 
+\index{mms::message\_store@{mms::message\_store}!get\_all\_signers@{get\_all\_signers}}
+\index{get\_all\_signers@{get\_all\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_all\_signers()}{get\_all\_signers()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}}$>$\& mms\+::message\+\_\+store\+::get\+\_\+all\+\_\+signers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a287bf9e248279be266f8bca6ca5a2a69}\label{classmms_1_1message__store_a287bf9e248279be266f8bca6ca5a2a69}} 
+\index{mms::message\_store@{mms::message\_store}!get\_auto\_send@{get\_auto\_send}}
+\index{get\_auto\_send@{get\_auto\_send}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_auto\_send()}{get\_auto\_send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+auto\+\_\+send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_aaea3f53db87f3b017a10fef6ed6e3aa5}\label{classmms_1_1message__store_aaea3f53db87f3b017a10fef6ed6e3aa5}} 
+\index{mms::message\_store@{mms::message\_store}!get\_message\_by\_id@{get\_message\_by\_id}}
+\index{get\_message\_by\_id@{get\_message\_by\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_message\_by\_id()}{get\_message\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmms_1_1message}{message}} mms\+::message\+\_\+store\+::get\+\_\+message\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af6960ff88d6a9e039fa57571d220ae23}\label{classmms_1_1message__store_af6960ff88d6a9e039fa57571d220ae23}} 
+\index{mms::message\_store@{mms::message\_store}!get\_message\_by\_id@{get\_message\_by\_id}}
+\index{get\_message\_by\_id@{get\_message\_by\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_message\_by\_id()}{get\_message\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+message\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{\mbox{\hyperlink{structmms_1_1message}{message}} \&}]{m }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ad67b651a437e9dae43de09ea000f5bec}\label{classmms_1_1message__store_ad67b651a437e9dae43de09ea000f5bec}} 
+\index{mms::message\_store@{mms::message\_store}!get\_message\_index\_by\_id@{get\_message\_index\_by\_id}}
+\index{get\_message\_index\_by\_id@{get\_message\_index\_by\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_message\_index\_by\_id()}{get\_message\_index\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t mms\+::message\+\_\+store\+::get\+\_\+message\+\_\+index\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a96b6292612d25dd346f8f1116e2989fa}\label{classmms_1_1message__store_a96b6292612d25dd346f8f1116e2989fa}} 
+\index{mms::message\_store@{mms::message\_store}!get\_message\_index\_by\_id@{get\_message\_index\_by\_id}}
+\index{get\_message\_index\_by\_id@{get\_message\_index\_by\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_message\_index\_by\_id()}{get\_message\_index\_by\_id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+message\+\_\+index\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{size\+\_\+t \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a418049d7ff57af7630eabf4426435a33}\label{classmms_1_1message__store_a418049d7ff57af7630eabf4426435a33}} 
+\index{mms::message\_store@{mms::message\_store}!get\_message\_ref\_by\_id@{get\_message\_ref\_by\_id}}
+\index{get\_message\_ref\_by\_id@{get\_message\_ref\_by\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_message\_ref\_by\_id()}{get\_message\_ref\_by\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmms_1_1message}{message}} \& mms\+::message\+\_\+store\+::get\+\_\+message\+\_\+ref\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ab034436741bc1e52ccc4cbe591edc406}\label{classmms_1_1message__store_ab034436741bc1e52ccc4cbe591edc406}} 
+\index{mms::message\_store@{mms::message\_store}!get\_num\_authorized\_signers@{get\_num\_authorized\_signers}}
+\index{get\_num\_authorized\_signers@{get\_num\_authorized\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_num\_authorized\_signers()}{get\_num\_authorized\_signers()}}
+{\footnotesize\ttfamily uint32\+\_\+t mms\+::message\+\_\+store\+::get\+\_\+num\+\_\+authorized\+\_\+signers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a73a442976cb2127f7adb7edd05f76614}\label{classmms_1_1message__store_a73a442976cb2127f7adb7edd05f76614}} 
+\index{mms::message\_store@{mms::message\_store}!get\_num\_required\_signers@{get\_num\_required\_signers}}
+\index{get\_num\_required\_signers@{get\_num\_required\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_num\_required\_signers()}{get\_num\_required\_signers()}}
+{\footnotesize\ttfamily uint32\+\_\+t mms\+::message\+\_\+store\+::get\+\_\+num\+\_\+required\+\_\+signers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ade17200ae1f543eca5c210f14987f8ab}\label{classmms_1_1message__store_ade17200ae1f543eca5c210f14987f8ab}} 
+\index{mms::message\_store@{mms::message\_store}!get\_other\_signers\_id\_count@{get\_other\_signers\_id\_count}}
+\index{get\_other\_signers\_id\_count@{get\_other\_signers\_id\_count}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_other\_signers\_id\_count()}{get\_other\_signers\_id\_count()}}
+{\footnotesize\ttfamily size\+\_\+t mms\+::message\+\_\+store\+::get\+\_\+other\+\_\+signers\+\_\+id\+\_\+count (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{ids }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a3af5f0651d44d787157ff12c4994a644}\label{classmms_1_1message__store_a3af5f0651d44d787157ff12c4994a644}} 
+\index{mms::message\_store@{mms::message\_store}!get\_processable\_messages@{get\_processable\_messages}}
+\index{get\_processable\_messages@{get\_processable\_messages}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_processable\_messages()}{get\_processable\_messages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+processable\+\_\+messages (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{force\+\_\+sync,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmms_1_1processing__data}{processing\+\_\+data}} $>$ \&}]{data\+\_\+list,  }\item[{std\+::string \&}]{wait\+\_\+reason }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_aeaa124915024ef75862aecd06589bddd}\label{classmms_1_1message__store_aeaa124915024ef75862aecd06589bddd}} 
+\index{mms::message\_store@{mms::message\_store}!get\_sanitized\_message\_text@{get\_sanitized\_message\_text}}
+\index{get\_sanitized\_message\_text@{get\_sanitized\_message\_text}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_sanitized\_message\_text()}{get\_sanitized\_message\_text()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::get\+\_\+sanitized\+\_\+message\+\_\+text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1message}{message}} \&}]{m,  }\item[{std\+::string \&}]{sanitized\+\_\+text }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ac56e533d26efa0a7e0efda5025ef0895}\label{classmms_1_1message__store_ac56e533d26efa0a7e0efda5025ef0895}} 
+\index{mms::message\_store@{mms::message\_store}!get\_signer@{get\_signer}}
+\index{get\_signer@{get\_signer}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_signer()}{get\_signer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} \& mms\+::message\+\_\+store\+::get\+\_\+signer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a5d19809cc1cd9d27b42820b15bf231b2}\label{classmms_1_1message__store_a5d19809cc1cd9d27b42820b15bf231b2}} 
+\index{mms::message\_store@{mms::message\_store}!get\_signer\_config@{get\_signer\_config}}
+\index{get\_signer\_config@{get\_signer\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_signer\_config()}{get\_signer\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::get\+\_\+signer\+\_\+config (\begin{DoxyParamCaption}\item[{std\+::string \&}]{signer\+\_\+config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a09b0e0e0e6937cdaf25767c3112e741f}\label{classmms_1_1message__store_a09b0e0e0e6937cdaf25767c3112e741f}} 
+\index{mms::message\_store@{mms::message\_store}!get\_signer\_index\_by\_label@{get\_signer\_index\_by\_label}}
+\index{get\_signer\_index\_by\_label@{get\_signer\_index\_by\_label}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_signer\_index\_by\_label()}{get\_signer\_index\_by\_label()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+signer\+\_\+index\+\_\+by\+\_\+label (\begin{DoxyParamCaption}\item[{const std\+::string}]{label,  }\item[{uint32\+\_\+t \&}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_abafd10c9ccb5f4b70d75adf626344458}\label{classmms_1_1message__store_abafd10c9ccb5f4b70d75adf626344458}} 
+\index{mms::message\_store@{mms::message\_store}!get\_signer\_index\_by\_monero\_address@{get\_signer\_index\_by\_monero\_address}}
+\index{get\_signer\_index\_by\_monero\_address@{get\_signer\_index\_by\_monero\_address}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{get\_signer\_index\_by\_monero\_address()}{get\_signer\_index\_by\_monero\_address()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::get\+\_\+signer\+\_\+index\+\_\+by\+\_\+monero\+\_\+address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&}]{monero\+\_\+address,  }\item[{uint32\+\_\+t \&}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a01112e45d9ba3465d436b0cd2bda4968}\label{classmms_1_1message__store_a01112e45d9ba3465d436b0cd2bda4968}} 
+\index{mms::message\_store@{mms::message\_store}!init@{init}}
+\index{init@{init}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const std\+::string \&}]{own\+\_\+label,  }\item[{const std\+::string \&}]{own\+\_\+transport\+\_\+address,  }\item[{uint32\+\_\+t}]{num\+\_\+authorized\+\_\+signers,  }\item[{uint32\+\_\+t}]{num\+\_\+required\+\_\+signers }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a8caad8f37eeb5709c976c64ab7d0e9c7}\label{classmms_1_1message__store_a8caad8f37eeb5709c976c64ab7d0e9c7}} 
+\index{mms::message\_store@{mms::message\_store}!init\_options@{init\_options}}
+\index{init\_options@{init\_options}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{init\_options()}{init\_options()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::init\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{desc\+\_\+params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a3a2c2c8b216b370b92b6727047459574}\label{classmms_1_1message__store_a3a2c2c8b216b370b92b6727047459574}} 
+\index{mms::message\_store@{mms::message\_store}!message\_direction\_to\_string@{message\_direction\_to\_string}}
+\index{message\_direction\_to\_string@{message\_direction\_to\_string}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{message\_direction\_to\_string()}{message\_direction\_to\_string()}}
+{\footnotesize\ttfamily const char $\ast$ mms\+::message\+\_\+store\+::message\+\_\+direction\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a38c45e7808f50948cc213757836dd7c3}\label{classmms_1_1message__store_a38c45e7808f50948cc213757836dd7c3}} 
+\index{mms::message\_store@{mms::message\_store}!message\_ids\_complete@{message\_ids\_complete}}
+\index{message\_ids\_complete@{message\_ids\_complete}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{message\_ids\_complete()}{message\_ids\_complete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::message\+\_\+ids\+\_\+complete (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{ids }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a9e98f5c83dbcf86039092e4515af5703}\label{classmms_1_1message__store_a9e98f5c83dbcf86039092e4515af5703}} 
+\index{mms::message\_store@{mms::message\_store}!message\_state\_to\_string@{message\_state\_to\_string}}
+\index{message\_state\_to\_string@{message\_state\_to\_string}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{message\_state\_to\_string()}{message\_state\_to\_string()}}
+{\footnotesize\ttfamily const char $\ast$ mms\+::message\+\_\+store\+::message\+\_\+state\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}{message\+\_\+state}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af1a9b120dbdae1531a2100c9f634f944}\label{classmms_1_1message__store_af1a9b120dbdae1531a2100c9f634f944}} 
+\index{mms::message\_store@{mms::message\_store}!message\_type\_to\_string@{message\_type\_to\_string}}
+\index{message\_type\_to\_string@{message\_type\_to\_string}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{message\_type\_to\_string()}{message\_type\_to\_string()}}
+{\footnotesize\ttfamily const char $\ast$ mms\+::message\+\_\+store\+::message\+\_\+type\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a0c21d3976ada33f4842f531adf3d9e32}\label{classmms_1_1message__store_a0c21d3976ada33f4842f531adf3d9e32}} 
+\index{mms::message\_store@{mms::message\_store}!process\_auto\_config\_data\_message@{process\_auto\_config\_data\_message}}
+\index{process\_auto\_config\_data\_message@{process\_auto\_config\_data\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{process\_auto\_config\_data\_message()}{process\_auto\_config\_data\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::process\+\_\+auto\+\_\+config\+\_\+data\+\_\+message (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a063991abfa9bd339bd3a7f056759d980}\label{classmms_1_1message__store_a063991abfa9bd339bd3a7f056759d980}} 
+\index{mms::message\_store@{mms::message\_store}!process\_signer\_config@{process\_signer\_config}}
+\index{process\_signer\_config@{process\_signer\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{process\_signer\_config()}{process\_signer\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::process\+\_\+signer\+\_\+config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const std\+::string \&}]{signer\+\_\+config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a6d03d4dc6fe4b0405ab9d56a1c6556c9}\label{classmms_1_1message__store_a6d03d4dc6fe4b0405ab9d56a1c6556c9}} 
+\index{mms::message\_store@{mms::message\_store}!process\_wallet\_created\_data@{process\_wallet\_created\_data}}
+\index{process\_wallet\_created\_data@{process\_wallet\_created\_data}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{process\_wallet\_created\_data()}{process\_wallet\_created\_data()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::process\+\_\+wallet\+\_\+created\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}}}]{type,  }\item[{const std\+::string \&}]{content }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af2e720508c885c1adf44f8e6e16b94a5}\label{classmms_1_1message__store_af2e720508c885c1adf44f8e6e16b94a5}} 
+\index{mms::message\_store@{mms::message\_store}!read\_from\_file@{read\_from\_file}}
+\index{read\_from\_file@{read\_from\_file}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{read\_from\_file()}{read\_from\_file()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::read\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const fs\+::path \&}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a8a098d491ee75b705ff97f5971d37edc}\label{classmms_1_1message__store_a8a098d491ee75b705ff97f5971d37edc}} 
+\index{mms::message\_store@{mms::message\_store}!save@{save}}
+\index{save@{save}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::save (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a4361550e80567d4ba01abab0726cd151}\label{classmms_1_1message__store_a4361550e80567d4ba01abab0726cd151}} 
+\index{mms::message\_store@{mms::message\_store}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af1063a2cb7d5e0602eedfba1a46e1f67}\label{classmms_1_1message__store_af1063a2cb7d5e0602eedfba1a46e1f67}} 
+\index{mms::message\_store@{mms::message\_store}!serialize@{serialize}}
+\index{serialize@{serialize}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class t\+\_\+archive $>$ \\
+void mms\+::message\+\_\+store\+::serialize (\begin{DoxyParamCaption}\item[{t\+\_\+archive \&}]{a,  }\item[{const unsigned int}]{ver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a10b8d632d57f3182eddd533d655a4715}\label{classmms_1_1message__store_a10b8d632d57f3182eddd533d655a4715}} 
+\index{mms::message\_store@{mms::message\_store}!set\_active@{set\_active}}
+\index{set\_active@{set\_active}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_active()}{set\_active()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a915ce5be662ab97bd559373b810cc965}\label{classmms_1_1message__store_a915ce5be662ab97bd559373b810cc965}} 
+\index{mms::message\_store@{mms::message\_store}!set\_auto\_send@{set\_auto\_send}}
+\index{set\_auto\_send@{set\_auto\_send}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_auto\_send()}{set\_auto\_send()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+auto\+\_\+send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{auto\+\_\+send }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a5d13e5be29c475222f467857666edbd0}\label{classmms_1_1message__store_a5d13e5be29c475222f467857666edbd0}} 
+\index{mms::message\_store@{mms::message\_store}!set\_message\_processed\_or\_sent@{set\_message\_processed\_or\_sent}}
+\index{set\_message\_processed\_or\_sent@{set\_message\_processed\_or\_sent}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_message\_processed\_or\_sent()}{set\_message\_processed\_or\_sent()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+message\+\_\+processed\+\_\+or\+\_\+sent (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af760eb272707357f8d577c97da46f74b}\label{classmms_1_1message__store_af760eb272707357f8d577c97da46f74b}} 
+\index{mms::message\_store@{mms::message\_store}!set\_messages\_processed@{set\_messages\_processed}}
+\index{set\_messages\_processed@{set\_messages\_processed}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_messages\_processed()}{set\_messages\_processed()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+messages\+\_\+processed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1processing__data}{processing\+\_\+data}} \&}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a6e95b95bed9ae5aa65a004ceb8d33683}\label{classmms_1_1message__store_a6e95b95bed9ae5aa65a004ceb8d33683}} 
+\index{mms::message\_store@{mms::message\_store}!set\_options@{set\_options}}
+\index{set\_options@{set\_options}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_options()}{set\_options()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+options (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a3750dbbd6b90f9a97fee3c6497bc6e34}\label{classmms_1_1message__store_a3750dbbd6b90f9a97fee3c6497bc6e34}} 
+\index{mms::message\_store@{mms::message\_store}!set\_options@{set\_options}}
+\index{set\_options@{set\_options}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_options()}{set\_options()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+options (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bitmessage\+\_\+address,  }\item[{const epee\+::wipeable\+\_\+string \&}]{bitmessage\+\_\+login }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a06b1a705bc6d678fac1fec39756b339f}\label{classmms_1_1message__store_a06b1a705bc6d678fac1fec39756b339f}} 
+\index{mms::message\_store@{mms::message\_store}!set\_signer@{set\_signer}}
+\index{set\_signer@{set\_signer}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{set\_signer()}{set\_signer()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::set\+\_\+signer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{uint32\+\_\+t}]{index,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{label,  }\item[{const std\+::optional$<$ std\+::string $>$ \&}]{transport\+\_\+address,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} $>$}]{monero\+\_\+address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a14af2f25174b2b6698103495c5b2e902}\label{classmms_1_1message__store_a14af2f25174b2b6698103495c5b2e902}} 
+\index{mms::message\_store@{mms::message\_store}!setup\_signer\_for\_auto\_config@{setup\_signer\_for\_auto\_config}}
+\index{setup\_signer\_for\_auto\_config@{setup\_signer\_for\_auto\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{setup\_signer\_for\_auto\_config()}{setup\_signer\_for\_auto\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::setup\+\_\+signer\+\_\+for\+\_\+auto\+\_\+config (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index,  }\item[{const std\+::string}]{token,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{receiving }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ab57a16d5c3035a9af0303fb99298880b}\label{classmms_1_1message__store_ab57a16d5c3035a9af0303fb99298880b}} 
+\index{mms::message\_store@{mms::message\_store}!signer\_config\_complete@{signer\_config\_complete}}
+\index{signer\_config\_complete@{signer\_config\_complete}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{signer\_config\_complete()}{signer\_config\_complete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::signer\+\_\+config\+\_\+complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a526cdd40fec1cdf32af01053d772506e}\label{classmms_1_1message__store_a526cdd40fec1cdf32af01053d772506e}} 
+\index{mms::message\_store@{mms::message\_store}!signer\_labels\_complete@{signer\_labels\_complete}}
+\index{signer\_labels\_complete@{signer\_labels\_complete}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{signer\_labels\_complete()}{signer\_labels\_complete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::signer\+\_\+labels\+\_\+complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a5f0fc0294af6bb2b62b999c5d9e35d1d}\label{classmms_1_1message__store_a5f0fc0294af6bb2b62b999c5d9e35d1d}} 
+\index{mms::message\_store@{mms::message\_store}!signer\_to\_string@{signer\_to\_string}}
+\index{signer\_to\_string@{signer\_to\_string}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{signer\_to\_string()}{signer\_to\_string()}}
+{\footnotesize\ttfamily std\+::string mms\+::message\+\_\+store\+::signer\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} \&}]{signer,  }\item[{uint32\+\_\+t}]{max\+\_\+width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a91f62b9df65be466c470281b94b22d9a}\label{classmms_1_1message__store_a91f62b9df65be466c470281b94b22d9a}} 
+\index{mms::message\_store@{mms::message\_store}!start\_auto\_config@{start\_auto\_config}}
+\index{start\_auto\_config@{start\_auto\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{start\_auto\_config()}{start\_auto\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::start\+\_\+auto\+\_\+config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a4968081df5b1e9718cfb16aa4721e1bf}\label{classmms_1_1message__store_a4968081df5b1e9718cfb16aa4721e1bf}} 
+\index{mms::message\_store@{mms::message\_store}!stop@{stop}}
+\index{stop@{stop}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a5703e5f24cccd7ee2d8a1f9081aa8bed}\label{classmms_1_1message__store_a5703e5f24cccd7ee2d8a1f9081aa8bed}} 
+\index{mms::message\_store@{mms::message\_store}!stop\_auto\_config@{stop\_auto\_config}}
+\index{stop\_auto\_config@{stop\_auto\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{stop\_auto\_config()}{stop\_auto\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::stop\+\_\+auto\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a50faa2e2cd4ce1f25d26aa7fcb971600}\label{classmms_1_1message__store_a50faa2e2cd4ce1f25d26aa7fcb971600}} 
+\index{mms::message\_store@{mms::message\_store}!tr@{tr}}
+\index{tr@{tr}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{tr()}{tr()}}
+{\footnotesize\ttfamily static const char$\ast$ mms\+::message\+\_\+store\+::tr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_adef32bfff890ece5d70bac80818d2e7c}\label{classmms_1_1message__store_adef32bfff890ece5d70bac80818d2e7c}} 
+\index{mms::message\_store@{mms::message\_store}!unpack\_signer\_config@{unpack\_signer\_config}}
+\index{unpack\_signer\_config@{unpack\_signer\_config}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{unpack\_signer\_config()}{unpack\_signer\_config()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::unpack\+\_\+signer\+\_\+config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const std\+::string \&}]{signer\+\_\+config,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}} $>$ \&}]{signers }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a88514b2f823464d1ac7170a478008429}\label{classmms_1_1message__store_a88514b2f823464d1ac7170a478008429}} 
+\index{mms::message\_store@{mms::message\_store}!write\_to\_file@{write\_to\_file}}
+\index{write\_to\_file@{write\_to\_file}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{write\_to\_file()}{write\_to\_file()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+store\+::write\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}} \&}]{state,  }\item[{const fs\+::path \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmms_1_1message__store_abf87af577acffffea4c396abc8daada3}\label{classmms_1_1message__store_abf87af577acffffea4c396abc8daada3}} 
+\index{mms::message\_store@{mms::message\_store}!m\_active@{m\_active}}
+\index{m\_active@{m\_active}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_active}{m\_active}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::m\+\_\+active\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a8a7ae9ea11ecb579910af5fffc580f8d}\label{classmms_1_1message__store_a8a7ae9ea11ecb579910af5fffc580f8d}} 
+\index{mms::message\_store@{mms::message\_store}!m\_auto\_send@{m\_auto\_send}}
+\index{m\_auto\_send@{m\_auto\_send}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_auto\_send}{m\_auto\_send}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+store\+::m\+\_\+auto\+\_\+send\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a3bfb0026e7ff2403c28f98ccad01566b}\label{classmms_1_1message__store_a3bfb0026e7ff2403c28f98ccad01566b}} 
+\index{mms::message\_store@{mms::message\_store}!m\_filename@{m\_filename}}
+\index{m\_filename@{m\_filename}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_filename}{m\_filename}}
+{\footnotesize\ttfamily fs\+::path mms\+::message\+\_\+store\+::m\+\_\+filename\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_af4076e4fba4015b11409a49f8d6ef989}\label{classmms_1_1message__store_af4076e4fba4015b11409a49f8d6ef989}} 
+\index{mms::message\_store@{mms::message\_store}!m\_messages@{m\_messages}}
+\index{m\_messages@{m\_messages}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_messages}{m\_messages}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmms_1_1message}{message}}$>$ mms\+::message\+\_\+store\+::m\+\_\+messages\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a9e7fec4fe7d35cadcc945fcff625ce3b}\label{classmms_1_1message__store_a9e7fec4fe7d35cadcc945fcff625ce3b}} 
+\index{mms::message\_store@{mms::message\_store}!m\_nettype@{m\_nettype}}
+\index{m\_nettype@{m\_nettype}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_nettype}{m\_nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} mms\+::message\+\_\+store\+::m\+\_\+nettype\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a48fb1628e3ca424fee2bfff629edc825}\label{classmms_1_1message__store_a48fb1628e3ca424fee2bfff629edc825}} 
+\index{mms::message\_store@{mms::message\_store}!m\_next\_message\_id@{m\_next\_message\_id}}
+\index{m\_next\_message\_id@{m\_next\_message\_id}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_next\_message\_id}{m\_next\_message\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t mms\+::message\+\_\+store\+::m\+\_\+next\+\_\+message\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a0656509d2a739f286a1be1be5d365d36}\label{classmms_1_1message__store_a0656509d2a739f286a1be1be5d365d36}} 
+\index{mms::message\_store@{mms::message\_store}!m\_num\_authorized\_signers@{m\_num\_authorized\_signers}}
+\index{m\_num\_authorized\_signers@{m\_num\_authorized\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_num\_authorized\_signers}{m\_num\_authorized\_signers}}
+{\footnotesize\ttfamily uint32\+\_\+t mms\+::message\+\_\+store\+::m\+\_\+num\+\_\+authorized\+\_\+signers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a6cf04124e9a61f92e270f4bb753b7f8c}\label{classmms_1_1message__store_a6cf04124e9a61f92e270f4bb753b7f8c}} 
+\index{mms::message\_store@{mms::message\_store}!m\_num\_required\_signers@{m\_num\_required\_signers}}
+\index{m\_num\_required\_signers@{m\_num\_required\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_num\_required\_signers}{m\_num\_required\_signers}}
+{\footnotesize\ttfamily uint32\+\_\+t mms\+::message\+\_\+store\+::m\+\_\+num\+\_\+required\+\_\+signers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_ac98b571b1d2c00dc655d911dd7ff0397}\label{classmms_1_1message__store_ac98b571b1d2c00dc655d911dd7ff0397}} 
+\index{mms::message\_store@{mms::message\_store}!m\_run@{m\_run}}
+\index{m\_run@{m\_run}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_run}{m\_run}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ mms\+::message\+\_\+store\+::m\+\_\+run\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_a023922a0211be5be858e466dd10106fa}\label{classmms_1_1message__store_a023922a0211be5be858e466dd10106fa}} 
+\index{mms::message\_store@{mms::message\_store}!m\_signers@{m\_signers}}
+\index{m\_signers@{m\_signers}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_signers}{m\_signers}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}}$>$ mms\+::message\+\_\+store\+::m\+\_\+signers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__store_afc944bd770f06e3d82e08f584de3af11}\label{classmms_1_1message__store_afc944bd770f06e3d82e08f584de3af11}} 
+\index{mms::message\_store@{mms::message\_store}!m\_transporter@{m\_transporter}}
+\index{m\_transporter@{m\_transporter}!mms::message\_store@{mms::message\_store}}
+\doxysubsubsection{\texorpdfstring{m\_transporter}{m\_transporter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmms_1_1message__transporter}{message\+\_\+transporter}} mms\+::message\+\_\+store\+::m\+\_\+transporter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{message__store_8h}{message\+\_\+store.\+h}}\item 
+src/wallet/\mbox{\hyperlink{message__store_8cpp}{message\+\_\+store.\+cpp}}\end{DoxyCompactItemize}

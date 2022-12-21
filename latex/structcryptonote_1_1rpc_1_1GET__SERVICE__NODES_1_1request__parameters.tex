@@ -1,0 +1,75 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+ES\+::request\+\_\+parameters Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters}\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+ES\+::request\+\_\+parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+set$<$ std\+::string $>$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ad0e7c533a4962f6f64cf4bdbad4a0daa}{fields}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ae75a7318252c625975e26fd2a8d50de7}{service\+\_\+node\+\_\+pubkeys}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_abdd6fb74efc818702070f44ff606ec99}{active\+\_\+only}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em If true then only return active service nodes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_a1a24d09d9e9df3eccdd0aaf7c52ac9f7}{limit}} = 0
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ac33ed5395012c58fcbe5296f41ad46c5}{poll\+\_\+block\+\_\+hash}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_abdd6fb74efc818702070f44ff606ec99}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_abdd6fb74efc818702070f44ff606ec99}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}!active\_only@{active\_only}}
+\index{active\_only@{active\_only}!cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{active\_only}{active\_only}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters\+::active\+\_\+only = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+If true then only return active service nodes. 
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ad0e7c533a4962f6f64cf4bdbad4a0daa}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ad0e7c533a4962f6f64cf4bdbad4a0daa}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}!fields@{fields}}
+\index{fields@{fields}!cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{fields}{fields}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::string$>$ cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters\+::fields}
+
+Set of fields to return; listed fields apply to both the top level (such as {\ttfamily \char`\"{}height\char`\"{}} or {\ttfamily \char`\"{}block\+\_\+hash\char`\"{}}) and to keys inside {\ttfamily service\+\_\+node\+\_\+states}. Fields should be provided as a list of field names to include. For backwards compatibility when making a json request field names can also be provided as a dictionary of \{\char`\"{}field\+\_\+name\char`\"{}\+: true\} pairs, but this usage is deprecated (and not supported for bt-\/encoded requests).
+
+The special field name \char`\"{}all\char`\"{} can be used to request all available fields; this is the default when no fields key are provided at all. Be careful when requesting all fields\+: the response can be very large.
+
+When providing a list you may prefix a field name with a {\ttfamily -\/} to remove the field from the list; this is mainly useful when following \char`\"{}all\char`\"{} to remove some fields from the returned results. (There is no equivalent mode when using the deprecated dict value). \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_a1a24d09d9e9df3eccdd0aaf7c52ac9f7}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_a1a24d09d9e9df3eccdd0aaf7c52ac9f7}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}!limit@{limit}}
+\index{limit@{limit}!cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{limit}{limit}}
+{\footnotesize\ttfamily int cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters\+::limit = 0}
+
+If specified and non-\/zero then only return a random selection of this number of service nodes (in random order) from the result. If negative then no limiting is performed but the returned result is still shuffled. \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ac33ed5395012c58fcbe5296f41ad46c5}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ac33ed5395012c58fcbe5296f41ad46c5}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}!poll\_block\_hash@{poll\_block\_hash}}
+\index{poll\_block\_hash@{poll\_block\_hash}!cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{poll\_block\_hash}{poll\_block\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters\+::poll\+\_\+block\+\_\+hash \{\}}
+
+If specified then only return results if the current top block hash is different than the hash given here. This is intended to allow quick polling of results without needing to do anything if the block (and thus SN registrations) have not changed since the last request. \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ae75a7318252c625975e26fd2a8d50de7}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODES_1_1request__parameters_ae75a7318252c625975e26fd2a8d50de7}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}!service\_node\_pubkeys@{service\_node\_pubkeys}}
+\index{service\_node\_pubkeys@{service\_node\_pubkeys}!cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters@{cryptonote::rpc::GET\_SERVICE\_NODES::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{service\_node\_pubkeys}{service\_node\_pubkeys}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$ cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+S\+::request\+\_\+parameters\+::service\+\_\+node\+\_\+pubkeys}
+
+Array of public keys of registered service nodes to request information about. Omit to query all service nodes. For a J\+S\+ON request pubkeys must be specified in hex; for a bt-\/encoded request pubkeys can be hex or bytes. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

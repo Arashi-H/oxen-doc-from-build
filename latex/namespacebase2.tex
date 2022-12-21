@@ -1,0 +1,126 @@
+\hypertarget{namespacebase2}{}\doxysection{base2 Namespace Reference}
+\label{namespacebase2}\index{base2@{base2}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacebase2_ac3471254c7892626484e4fc73a9ca6ed}{expmod}} (\mbox{\hyperlink{namespacebase2_a6fa672e449412f39f3a2d6da2aef4e48}{b}}, e, m)
+\item 
+def \mbox{\hyperlink{namespacebase2_adab93d42235042f635bc2d616b816dbd}{inv}} (x)
+\item 
+def \mbox{\hyperlink{namespacebase2_a0add6920774d3c027fa5d52bc750c8f4}{xrecover}} (y)
+\item 
+def \mbox{\hyperlink{namespacebase2_a4206638daf66a520e111b04f6359ee89}{edwards}} (P, Q)
+\item 
+def \mbox{\hyperlink{namespacebase2_a5c916b3a04fb95d86a9c56fd3a196ca6}{radix255}} (x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacebase2_a6fa672e449412f39f3a2d6da2aef4e48}{b}} = 256
+\item 
+int \mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}} = 2$\ast$$\ast$255 -\/ 19
+\item 
+int \mbox{\hyperlink{namespacebase2_ad2a4895276506d8f9d7b0e34cb487d64}{l}} = 2$\ast$$\ast$252 + 27742317777372353535851937790883648493
+\item 
+int \mbox{\hyperlink{namespacebase2_a7610cf2d81088b05cd6f2a8c67057779}{d}} = -\/121665 $\ast$ \mbox{\hyperlink{namespacebase2_adab93d42235042f635bc2d616b816dbd}{inv}}(121666)
+\item 
+def \mbox{\hyperlink{namespacebase2_a7e454164e69a92c786bf73234ff60c47}{I}} = \mbox{\hyperlink{namespacebase2_ac3471254c7892626484e4fc73a9ca6ed}{expmod}}(2,(\mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}}-\/1)/4,\mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}})
+\item 
+int \mbox{\hyperlink{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}{By}} = 4 $\ast$ \mbox{\hyperlink{namespacebase2_adab93d42235042f635bc2d616b816dbd}{inv}}(5)
+\item 
+def \mbox{\hyperlink{namespacebase2_aa29693059ae3c222b414be7d41b2d9d4}{Bx}} = \mbox{\hyperlink{namespacebase2_a0add6920774d3c027fa5d52bc750c8f4}{xrecover}}(\mbox{\hyperlink{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}{By}})
+\item 
+list \mbox{\hyperlink{namespacebase2_ad62f5fee3da42c6d4452f4cbbf7a2b66}{B}} = \mbox{[}\mbox{\hyperlink{namespacebase2_aa29693059ae3c222b414be7d41b2d9d4}{Bx}} \% \mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}},\mbox{\hyperlink{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}{By}} \% \mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}}\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacebase2_af2db0474e270025e42ef51f3746a552f}{Bi}} = \mbox{\hyperlink{namespacebase2_ad62f5fee3da42c6d4452f4cbbf7a2b66}{B}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacebase2_a4206638daf66a520e111b04f6359ee89}\label{namespacebase2_a4206638daf66a520e111b04f6359ee89}} 
+\index{base2@{base2}!edwards@{edwards}}
+\index{edwards@{edwards}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{edwards()}{edwards()}}
+{\footnotesize\ttfamily def base2.\+edwards (\begin{DoxyParamCaption}\item[{}]{P,  }\item[{}]{Q }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebase2_ac3471254c7892626484e4fc73a9ca6ed}\label{namespacebase2_ac3471254c7892626484e4fc73a9ca6ed}} 
+\index{base2@{base2}!expmod@{expmod}}
+\index{expmod@{expmod}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{expmod()}{expmod()}}
+{\footnotesize\ttfamily def base2.\+expmod (\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{e,  }\item[{}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebase2_adab93d42235042f635bc2d616b816dbd}\label{namespacebase2_adab93d42235042f635bc2d616b816dbd}} 
+\index{base2@{base2}!inv@{inv}}
+\index{inv@{inv}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}}
+{\footnotesize\ttfamily def base2.\+inv (\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebase2_a5c916b3a04fb95d86a9c56fd3a196ca6}\label{namespacebase2_a5c916b3a04fb95d86a9c56fd3a196ca6}} 
+\index{base2@{base2}!radix255@{radix255}}
+\index{radix255@{radix255}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{radix255()}{radix255()}}
+{\footnotesize\ttfamily def base2.\+radix255 (\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacebase2_a0add6920774d3c027fa5d52bc750c8f4}\label{namespacebase2_a0add6920774d3c027fa5d52bc750c8f4}} 
+\index{base2@{base2}!xrecover@{xrecover}}
+\index{xrecover@{xrecover}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{xrecover()}{xrecover()}}
+{\footnotesize\ttfamily def base2.\+xrecover (\begin{DoxyParamCaption}\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacebase2_a6fa672e449412f39f3a2d6da2aef4e48}\label{namespacebase2_a6fa672e449412f39f3a2d6da2aef4e48}} 
+\index{base2@{base2}!b@{b}}
+\index{b@{b}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily int base2.\+b = 256}
+
+\mbox{\Hypertarget{namespacebase2_ad62f5fee3da42c6d4452f4cbbf7a2b66}\label{namespacebase2_ad62f5fee3da42c6d4452f4cbbf7a2b66}} 
+\index{base2@{base2}!B@{B}}
+\index{B@{B}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily list base2.\+B = \mbox{[}\mbox{\hyperlink{namespacebase2_aa29693059ae3c222b414be7d41b2d9d4}{Bx}} \% \mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}},\mbox{\hyperlink{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}{By}} \% \mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}}\mbox{]}}
+
+\mbox{\Hypertarget{namespacebase2_af2db0474e270025e42ef51f3746a552f}\label{namespacebase2_af2db0474e270025e42ef51f3746a552f}} 
+\index{base2@{base2}!Bi@{Bi}}
+\index{Bi@{Bi}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{Bi}{Bi}}
+{\footnotesize\ttfamily def base2.\+Bi = \mbox{\hyperlink{namespacebase2_ad62f5fee3da42c6d4452f4cbbf7a2b66}{B}}}
+
+\mbox{\Hypertarget{namespacebase2_aa29693059ae3c222b414be7d41b2d9d4}\label{namespacebase2_aa29693059ae3c222b414be7d41b2d9d4}} 
+\index{base2@{base2}!Bx@{Bx}}
+\index{Bx@{Bx}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{Bx}{Bx}}
+{\footnotesize\ttfamily def base2.\+Bx = \mbox{\hyperlink{namespacebase2_a0add6920774d3c027fa5d52bc750c8f4}{xrecover}}(\mbox{\hyperlink{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}{By}})}
+
+\mbox{\Hypertarget{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}\label{namespacebase2_a4e9c94c07b6e2b227cf439de6ab8ab0a}} 
+\index{base2@{base2}!By@{By}}
+\index{By@{By}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{By}{By}}
+{\footnotesize\ttfamily int base2.\+By = 4 $\ast$ \mbox{\hyperlink{namespacebase2_adab93d42235042f635bc2d616b816dbd}{inv}}(5)}
+
+\mbox{\Hypertarget{namespacebase2_a7610cf2d81088b05cd6f2a8c67057779}\label{namespacebase2_a7610cf2d81088b05cd6f2a8c67057779}} 
+\index{base2@{base2}!d@{d}}
+\index{d@{d}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily int base2.\+d = -\/121665 $\ast$ \mbox{\hyperlink{namespacebase2_adab93d42235042f635bc2d616b816dbd}{inv}}(121666)}
+
+\mbox{\Hypertarget{namespacebase2_a7e454164e69a92c786bf73234ff60c47}\label{namespacebase2_a7e454164e69a92c786bf73234ff60c47}} 
+\index{base2@{base2}!I@{I}}
+\index{I@{I}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{I}{I}}
+{\footnotesize\ttfamily def base2.\+I = \mbox{\hyperlink{namespacebase2_ac3471254c7892626484e4fc73a9ca6ed}{expmod}}(2,(\mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}}-\/1)/4,\mbox{\hyperlink{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}{q}})}
+
+\mbox{\Hypertarget{namespacebase2_ad2a4895276506d8f9d7b0e34cb487d64}\label{namespacebase2_ad2a4895276506d8f9d7b0e34cb487d64}} 
+\index{base2@{base2}!l@{l}}
+\index{l@{l}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily int base2.\+l = 2$\ast$$\ast$252 + 27742317777372353535851937790883648493}
+
+\mbox{\Hypertarget{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}\label{namespacebase2_a9d192e14f3bb2ded6fccd18c209c80c6}} 
+\index{base2@{base2}!q@{q}}
+\index{q@{q}!base2@{base2}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily int base2.\+q = 2$\ast$$\ast$255 -\/ 19}
+

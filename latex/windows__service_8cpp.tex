@@ -1,0 +1,53 @@
+\hypertarget{windows__service_8cpp}{}\doxysection{src/daemonizer/windows\+\_\+service.cpp File Reference}
+\label{windows__service_8cpp}\index{src/daemonizer/windows\_service.cpp@{src/daemonizer/windows\_service.cpp}}
+{\ttfamily \#include \char`\"{}common/scoped\+\_\+message\+\_\+writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemonizer/windows\+\_\+service.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$shellapi.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+Include dependency graph for windows\+\_\+service.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{windows__service_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacewindows}{windows}}
+\item 
+ \mbox{\hyperlink{namespacewindows_1_1anonymous__namespace_02windows__service_8cpp_03}{windows\+::anonymous\+\_\+namespace\{windows\+\_\+service.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ std\+::remove\+\_\+pointer$<$ S\+C\+\_\+\+H\+A\+N\+D\+LE $>$\+::type, decltype(\&\+::Close\+Service\+Handle)$>$ \mbox{\hyperlink{namespacewindows_1_1anonymous__namespace_02windows__service_8cpp_03_af40a53d0ba892994c30e13bb2a09713b}{windows\+::anonymous\+\_\+namespace\{windows\+\_\+service.\+cpp\}\+::service\+\_\+handle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacewindows_1_1anonymous__namespace_02windows__service_8cpp_03_a80d259596b9fda2cfd6d89e7de5b9f5c}{windows\+::anonymous\+\_\+namespace\{windows\+\_\+service.\+cpp\}\+::get\+\_\+last\+\_\+error}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_1_1anonymous__namespace_02windows__service_8cpp_03_adfdea1e178fa10fd52d034444634f921}{windows\+::anonymous\+\_\+namespace\{windows\+\_\+service.\+cpp\}\+::relaunch\+\_\+as\+\_\+admin}} (std\+::string const \&command, std\+::string const \&arguments)
+\item 
+void \mbox{\hyperlink{namespacewindows_1_1anonymous__namespace_02windows__service_8cpp_03_a2b587e8ec45f8e888524a0a709955cbf}{windows\+::anonymous\+\_\+namespace\{windows\+\_\+service.\+cpp\}\+::pause\+\_\+to\+\_\+display\+\_\+admin\+\_\+window\+\_\+messages}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a317e9f3fe90f12e6f491ccbbb569eae6}{windows\+::check\+\_\+admin}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&result)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a7854ecf3c4b7eb1a0594f106fe12ddb3}{windows\+::ensure\+\_\+admin}} (std\+::string const \&arguments)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a89d267fd0115a586cf0c3102f1cc9be8}{windows\+::install\+\_\+service}} (char const $\ast$service\+\_\+name, std\+::string const \&arguments)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a6915cdbd640f3bfcfc291c0560df9ec9}{windows\+::start\+\_\+service}} (char const $\ast$service\+\_\+name)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a7f62a66a10f53a553078a4c1e9f92c49}{windows\+::stop\+\_\+service}} (char const $\ast$service\+\_\+name)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacewindows_a8f577ecedae3e88c67adc26ee70de31f}{windows\+::uninstall\+\_\+service}} (char const $\ast$service\+\_\+name)
+\end{DoxyCompactItemize}

@@ -1,0 +1,179 @@
+\hypertarget{classmms_1_1message__transporter}{}\doxysection{mms\+::message\+\_\+transporter Class Reference}
+\label{classmms_1_1message__transporter}\index{mms::message\_transporter@{mms::message\_transporter}}
+
+
+{\ttfamily \#include $<$message\+\_\+transporter.\+h$>$}
+
+
+
+Collaboration diagram for mms\+::message\+\_\+transporter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classmms_1_1message__transporter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmms_1_1message__transporter_ab2f0a2c6aceab8871754d5c5b6be8e63}{message\+\_\+transporter}} ()=default
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_a24254fd1c0419c41c72e0712a2b0223a}{set\+\_\+options}} (const std\+::string \&bitmessage\+\_\+address, const epee\+::wipeable\+\_\+string \&bitmessage\+\_\+login)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_a05c0e7668d863471f653861de9dfb8ee}{send\+\_\+message}} (const \mbox{\hyperlink{structmms_1_1transport__message}{transport\+\_\+message}} \&\mbox{\hyperlink{structmms_1_1message}{message}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classmms_1_1message__transporter_ab79f4cb7fa5d6c01987d814ef358ec86}{receive\+\_\+messages}} (const std\+::vector$<$ std\+::string $>$ \&destination\+\_\+transport\+\_\+addresses, std\+::vector$<$ \mbox{\hyperlink{structmms_1_1transport__message}{transport\+\_\+message}} $>$ \&messages)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_aefbe426bfd2fc64bd9979467d7150bd5}{delete\+\_\+message}} (const std\+::string \&transport\+\_\+id)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_aa8302616b39d049d5b46fbb69e8d2bbb}{stop}} ()
+\item 
+std\+::string \mbox{\hyperlink{classmms_1_1message__transporter_adc91f14e2cdbf9086510f2401b4d6e5d}{derive\+\_\+transport\+\_\+address}} (const std\+::string \&seed)
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_ab77be872c6bbbaf3144c41eac49aadb8}{delete\+\_\+transport\+\_\+address}} (const std\+::string \&transport\+\_\+address)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmms_1_1message__transporter_a5f69747262c2fea8ccf020a97a3ab791}{post\+\_\+request}} (const std\+::string \&request, std\+::string \&answer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classmms_1_1message__transporter_abbfe67a83c97da8b98c0f93c49b4b8a2}{get\+\_\+str\+\_\+between\+\_\+tags}} (const std\+::string \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, const std\+::string \&start\+\_\+delim, const std\+::string \&stop\+\_\+delim)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__transporter_af1733ef2785662a282e1ee0c462ef743}{start\+\_\+xml\+\_\+rpc\+\_\+cmd}} (std\+::string \&xml, const std\+::string \&method\+\_\+name)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__transporter_acb2dedb39cc2cbdc396641d69f382340}{add\+\_\+xml\+\_\+rpc\+\_\+string\+\_\+param}} (std\+::string \&xml, const std\+::string \&param)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__transporter_aa80bcd9b9cebe92bbb89698d04da636f}{add\+\_\+xml\+\_\+rpc\+\_\+base64\+\_\+param}} (std\+::string \&xml, const std\+::string \&param)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__transporter_af6474bff1d81a3e62d5d6e6e4e2d2ac5}{add\+\_\+xml\+\_\+rpc\+\_\+integer\+\_\+param}} (std\+::string \&xml, const int32\+\_\+t \&param)
+\item 
+static void \mbox{\hyperlink{classmms_1_1message__transporter_a87535910a1a14b0819a18b0416d1f695}{end\+\_\+xml\+\_\+rpc\+\_\+cmd}} (std\+::string \&xml)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}} \mbox{\hyperlink{classmms_1_1message__transporter_a6407816362d67dc3205b336e0e053471}{m\+\_\+http\+\_\+client}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classmms_1_1message__transporter_a295e8b87188c677fab4fb52dac59ff30}{m\+\_\+run}} \{\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmms_1_1message__transporter_ab2f0a2c6aceab8871754d5c5b6be8e63}\label{classmms_1_1message__transporter_ab2f0a2c6aceab8871754d5c5b6be8e63}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!message\_transporter@{message\_transporter}}
+\index{message\_transporter@{message\_transporter}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{message\_transporter()}{message\_transporter()}}
+{\footnotesize\ttfamily mms\+::message\+\_\+transporter\+::message\+\_\+transporter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmms_1_1message__transporter_aa80bcd9b9cebe92bbb89698d04da636f}\label{classmms_1_1message__transporter_aa80bcd9b9cebe92bbb89698d04da636f}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!add\_xml\_rpc\_base64\_param@{add\_xml\_rpc\_base64\_param}}
+\index{add\_xml\_rpc\_base64\_param@{add\_xml\_rpc\_base64\_param}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{add\_xml\_rpc\_base64\_param()}{add\_xml\_rpc\_base64\_param()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::add\+\_\+xml\+\_\+rpc\+\_\+base64\+\_\+param (\begin{DoxyParamCaption}\item[{std\+::string \&}]{xml,  }\item[{const std\+::string \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_af6474bff1d81a3e62d5d6e6e4e2d2ac5}\label{classmms_1_1message__transporter_af6474bff1d81a3e62d5d6e6e4e2d2ac5}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!add\_xml\_rpc\_integer\_param@{add\_xml\_rpc\_integer\_param}}
+\index{add\_xml\_rpc\_integer\_param@{add\_xml\_rpc\_integer\_param}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{add\_xml\_rpc\_integer\_param()}{add\_xml\_rpc\_integer\_param()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::add\+\_\+xml\+\_\+rpc\+\_\+integer\+\_\+param (\begin{DoxyParamCaption}\item[{std\+::string \&}]{xml,  }\item[{const int32\+\_\+t \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_acb2dedb39cc2cbdc396641d69f382340}\label{classmms_1_1message__transporter_acb2dedb39cc2cbdc396641d69f382340}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!add\_xml\_rpc\_string\_param@{add\_xml\_rpc\_string\_param}}
+\index{add\_xml\_rpc\_string\_param@{add\_xml\_rpc\_string\_param}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{add\_xml\_rpc\_string\_param()}{add\_xml\_rpc\_string\_param()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::add\+\_\+xml\+\_\+rpc\+\_\+string\+\_\+param (\begin{DoxyParamCaption}\item[{std\+::string \&}]{xml,  }\item[{const std\+::string \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_aefbe426bfd2fc64bd9979467d7150bd5}\label{classmms_1_1message__transporter_aefbe426bfd2fc64bd9979467d7150bd5}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!delete\_message@{delete\_message}}
+\index{delete\_message@{delete\_message}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{delete\_message()}{delete\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::delete\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{transport\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_ab77be872c6bbbaf3144c41eac49aadb8}\label{classmms_1_1message__transporter_ab77be872c6bbbaf3144c41eac49aadb8}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!delete\_transport\_address@{delete\_transport\_address}}
+\index{delete\_transport\_address@{delete\_transport\_address}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{delete\_transport\_address()}{delete\_transport\_address()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::delete\+\_\+transport\+\_\+address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{transport\+\_\+address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_adc91f14e2cdbf9086510f2401b4d6e5d}\label{classmms_1_1message__transporter_adc91f14e2cdbf9086510f2401b4d6e5d}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!derive\_transport\_address@{derive\_transport\_address}}
+\index{derive\_transport\_address@{derive\_transport\_address}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{derive\_transport\_address()}{derive\_transport\_address()}}
+{\footnotesize\ttfamily std\+::string mms\+::message\+\_\+transporter\+::derive\+\_\+transport\+\_\+address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{seed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_a87535910a1a14b0819a18b0416d1f695}\label{classmms_1_1message__transporter_a87535910a1a14b0819a18b0416d1f695}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!end\_xml\_rpc\_cmd@{end\_xml\_rpc\_cmd}}
+\index{end\_xml\_rpc\_cmd@{end\_xml\_rpc\_cmd}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{end\_xml\_rpc\_cmd()}{end\_xml\_rpc\_cmd()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::end\+\_\+xml\+\_\+rpc\+\_\+cmd (\begin{DoxyParamCaption}\item[{std\+::string \&}]{xml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_abbfe67a83c97da8b98c0f93c49b4b8a2}\label{classmms_1_1message__transporter_abbfe67a83c97da8b98c0f93c49b4b8a2}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!get\_str\_between\_tags@{get\_str\_between\_tags}}
+\index{get\_str\_between\_tags@{get\_str\_between\_tags}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{get\_str\_between\_tags()}{get\_str\_between\_tags()}}
+{\footnotesize\ttfamily std\+::string mms\+::message\+\_\+transporter\+::get\+\_\+str\+\_\+between\+\_\+tags (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{const std\+::string \&}]{start\+\_\+delim,  }\item[{const std\+::string \&}]{stop\+\_\+delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_a5f69747262c2fea8ccf020a97a3ab791}\label{classmms_1_1message__transporter_a5f69747262c2fea8ccf020a97a3ab791}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!post\_request@{post\_request}}
+\index{post\_request@{post\_request}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{post\_request()}{post\_request()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::post\+\_\+request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{request,  }\item[{std\+::string \&}]{answer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_ab79f4cb7fa5d6c01987d814ef358ec86}\label{classmms_1_1message__transporter_ab79f4cb7fa5d6c01987d814ef358ec86}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!receive\_messages@{receive\_messages}}
+\index{receive\_messages@{receive\_messages}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{receive\_messages()}{receive\_messages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} mms\+::message\+\_\+transporter\+::receive\+\_\+messages (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{destination\+\_\+transport\+\_\+addresses,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmms_1_1transport__message}{transport\+\_\+message}} $>$ \&}]{messages }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_a05c0e7668d863471f653861de9dfb8ee}\label{classmms_1_1message__transporter_a05c0e7668d863471f653861de9dfb8ee}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!send\_message@{send\_message}}
+\index{send\_message@{send\_message}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{send\_message()}{send\_message()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::send\+\_\+message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmms_1_1transport__message}{transport\+\_\+message}} \&}]{message }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_a24254fd1c0419c41c72e0712a2b0223a}\label{classmms_1_1message__transporter_a24254fd1c0419c41c72e0712a2b0223a}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!set\_options@{set\_options}}
+\index{set\_options@{set\_options}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{set\_options()}{set\_options()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::set\+\_\+options (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{bitmessage\+\_\+address,  }\item[{const epee\+::wipeable\+\_\+string \&}]{bitmessage\+\_\+login }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_af1733ef2785662a282e1ee0c462ef743}\label{classmms_1_1message__transporter_af1733ef2785662a282e1ee0c462ef743}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!start\_xml\_rpc\_cmd@{start\_xml\_rpc\_cmd}}
+\index{start\_xml\_rpc\_cmd@{start\_xml\_rpc\_cmd}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{start\_xml\_rpc\_cmd()}{start\_xml\_rpc\_cmd()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::start\+\_\+xml\+\_\+rpc\+\_\+cmd (\begin{DoxyParamCaption}\item[{std\+::string \&}]{xml,  }\item[{const std\+::string \&}]{method\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_aa8302616b39d049d5b46fbb69e8d2bbb}\label{classmms_1_1message__transporter_aa8302616b39d049d5b46fbb69e8d2bbb}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!stop@{stop}}
+\index{stop@{stop}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void mms\+::message\+\_\+transporter\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmms_1_1message__transporter_a6407816362d67dc3205b336e0e053471}\label{classmms_1_1message__transporter_a6407816362d67dc3205b336e0e053471}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!m\_http\_client@{m\_http\_client}}
+\index{m\_http\_client@{m\_http\_client}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{m\_http\_client}{m\_http\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__client}{cryptonote\+::rpc\+::http\+\_\+client}} mms\+::message\+\_\+transporter\+::m\+\_\+http\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmms_1_1message__transporter_a295e8b87188c677fab4fb52dac59ff30}\label{classmms_1_1message__transporter_a295e8b87188c677fab4fb52dac59ff30}} 
+\index{mms::message\_transporter@{mms::message\_transporter}!m\_run@{m\_run}}
+\index{m\_run@{m\_run}!mms::message\_transporter@{mms::message\_transporter}}
+\doxysubsubsection{\texorpdfstring{m\_run}{m\_run}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ mms\+::message\+\_\+transporter\+::m\+\_\+run \{\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{message__transporter_8h}{message\+\_\+transporter.\+h}}\item 
+src/wallet/\mbox{\hyperlink{message__transporter_8cpp}{message\+\_\+transporter.\+cpp}}\end{DoxyCompactItemize}

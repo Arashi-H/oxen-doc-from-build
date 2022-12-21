@@ -1,0 +1,59 @@
+\hypertarget{structdetail_1_1expect}{}\doxysection{detail\+::expect Struct Reference}
+\label{structdetail_1_1expect}\index{detail::expect@{detail::expect}}
+
+
+{\ttfamily \#include $<$expect.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structdetail_1_1expect_ad59bb0f7c3e9fabc540e334052cb5ce8}{throw\+\_\+}} (std\+::error\+\_\+code ec, const char $\ast$msg, const char $\ast$file, unsigned line)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{structdetail_1_1expect_a7d7539ba9b0c6f1efaf954b53bfdab1b}{unwrap}} (\+::\mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&\&result, const char $\ast$error\+\_\+msg, const char $\ast$file, unsigned line)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily result.\+has\+\_\+error()} call {\ttfamily throw\+\_\+}. Otherwise,. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structdetail_1_1expect_a2591c5b507318d1897a5c2afda0e883b}{unwrap}} (\+::\mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ void $>$ \&\&result, const char $\ast$error\+\_\+msg, const char $\ast$file, unsigned line)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily result.\+has\+\_\+error()} call {\ttfamily throw\+\_\+}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structdetail_1_1expect_ad59bb0f7c3e9fabc540e334052cb5ce8}\label{structdetail_1_1expect_ad59bb0f7c3e9fabc540e334052cb5ce8}} 
+\index{detail::expect@{detail::expect}!throw\_@{throw\_}}
+\index{throw\_@{throw\_}!detail::expect@{detail::expect}}
+\doxysubsubsection{\texorpdfstring{throw\_()}{throw\_()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::throw\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::error\+\_\+code}]{ec,  }\item[{const char $\ast$}]{msg,  }\item[{const char $\ast$}]{file,  }\item[{unsigned}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & with {\ttfamily ec}, optional {\ttfamily msg} and/or optional {\ttfamily file} + {\ttfamily line}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{structdetail_1_1expect_a7d7539ba9b0c6f1efaf954b53bfdab1b}\label{structdetail_1_1expect_a7d7539ba9b0c6f1efaf954b53bfdab1b}} 
+\index{detail::expect@{detail::expect}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!detail::expect@{detail::expect}}
+\doxysubsubsection{\texorpdfstring{unwrap()}{unwrap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} detail\+::expect\+::unwrap (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&\&}]{result,  }\item[{const char $\ast$}]{error\+\_\+msg,  }\item[{const char $\ast$}]{file,  }\item[{unsigned}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+If {\ttfamily result.\+has\+\_\+error()} call {\ttfamily throw\+\_\+}. Otherwise,. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily $\ast$result} by move. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structdetail_1_1expect_a2591c5b507318d1897a5c2afda0e883b}\label{structdetail_1_1expect_a2591c5b507318d1897a5c2afda0e883b}} 
+\index{detail::expect@{detail::expect}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!detail::expect@{detail::expect}}
+\doxysubsubsection{\texorpdfstring{unwrap()}{unwrap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::unwrap (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{structdetail_1_1expect}{expect}}$<$ void $>$ \&\&}]{result,  }\item[{const char $\ast$}]{error\+\_\+msg,  }\item[{const char $\ast$}]{file,  }\item[{unsigned}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+If {\ttfamily result.\+has\+\_\+error()} call {\ttfamily throw\+\_\+}. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{expect_8h}{expect.\+h}}\item 
+src/common/\mbox{\hyperlink{expect_8cpp}{expect.\+cpp}}\end{DoxyCompactItemize}

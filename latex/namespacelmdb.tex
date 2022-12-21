@@ -1,0 +1,258 @@
+\hypertarget{namespacelmdb}{}\doxysection{lmdb Namespace Reference}
+\label{namespacelmdb}\index{lmdb@{lmdb}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb_1_1anonymous__namespace_02database_8cpp_03}{anonymous\+\_\+namespace\{database.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacelmdb_1_1stream}{stream}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1abort__txn}{abort\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1abort__write__txn}{abort\+\_\+write\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1basic__table}{basic\+\_\+table}}
+\begin{DoxyCompactList}\small\item\em Helper for grouping typical L\+M\+DB D\+BI options when key and value are fixed types. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlmdb_1_1close__cursor}{close\+\_\+cursor}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1close__env}{close\+\_\+env}}
+\begin{DoxyCompactList}\small\item\em Closes L\+M\+DB environment handle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlmdb_1_1context}{context}}
+\begin{DoxyCompactList}\small\item\em Context given to L\+M\+DB. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlmdb_1_1database}{database}}
+\begin{DoxyCompactList}\small\item\em Manages a L\+M\+DB environment for safe memory-\/map resizing. Thread-\/safe. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlmdb_1_1identity}{identity}}
+\begin{DoxyCompactList}\small\item\em Prevent instantiation of {\ttfamily std\+::underlying\+\_\+type$<$T$>$} when {\ttfamily T} is not enum. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classlmdb_1_1key__stream}{key\+\_\+stream}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1release__read__txn}{release\+\_\+read\+\_\+txn}}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1table}{table}}
+\begin{DoxyCompactList}\small\item\em Helper for grouping typical L\+M\+DB D\+BI options. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+env, \mbox{\hyperlink{structlmdb_1_1close__env}{close\+\_\+env}} $>$
+\item 
+using \mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{suspended\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1abort__txn}{abort\+\_\+txn}} $>$
+\item 
+using \mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{read\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1release__read__txn}{release\+\_\+read\+\_\+txn}} $>$
+\item 
+using \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1abort__write__txn}{abort\+\_\+write\+\_\+txn}} $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacelmdb_aeebb53d9dbbf45d588fbe8f45d26dd0a}{native\+\_\+type}} = typename std\+::conditional$<$ std\+::is\+\_\+enum$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value, std\+::underlying\+\_\+type$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$, \mbox{\hyperlink{structlmdb_1_1identity}{identity}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ $>$\+::type\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{error}} \+: int 
+\begin{DoxyCompactList}\small\item\em Tracks L\+M\+DB error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} $>$ \mbox{\hyperlink{namespacelmdb_aa45f863ca9e86bb56dfbab7548c267f2}{open\+\_\+environment}} (const char $\ast$path, M\+D\+B\+\_\+dbi max\+\_\+dbs) noexcept
+\item 
+std\+::error\+\_\+category const  \& \mbox{\hyperlink{namespacelmdb_a7f0a0964a6cfa3460ef0ddbd9d1a44f4}{error\+\_\+category}} () noexcept
+\item 
+std\+::error\+\_\+code \mbox{\hyperlink{namespacelmdb_af937991cd24a23bfb48d5bc6a1c6bb4c}{make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{error}} value) noexcept
+\item 
+{\footnotesize template$<$typename K , typename V $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_a119c8ada8f0c8a820074d6e861620e9b}{operator==}} (\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&lhs, \mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename K , typename V $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_a464a6e57e1818bf2a724a9b2c4684a84}{operator!=}} (\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&lhs, \mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename D $>$ }\\\mbox{\hyperlink{classexpect}{expect}}$<$ std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ $>$ \mbox{\hyperlink{namespacelmdb_a8cd2930726c036371e7b98b043e0ec36}{open\+\_\+cursor}} (M\+D\+B\+\_\+txn \&txn, M\+D\+B\+\_\+dbi tbl) noexcept
+\item 
+{\footnotesize template$<$typename T , typename U  = typename std\+::underlying\+\_\+type$<$\+T$>$\+::type$>$ }\\constexpr U \mbox{\hyperlink{namespacelmdb_a5eb88648d6b1060407f7a0928e5aa838}{to\+\_\+native}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} value) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\M\+D\+B\+\_\+val \mbox{\hyperlink{namespacelmdb_a656cf7fc6437627278337f1a81e3588b}{to\+\_\+val}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&value) noexcept
+\item 
+constexpr epee\+::span$<$ const std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacelmdb_a87ced9b8ad026a4831fc1b7b590e5b5f}{to\+\_\+byte\+\_\+span}} (M\+D\+B\+\_\+val value) noexcept
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t offset = 0$>$ }\\int \mbox{\hyperlink{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}{less}} (M\+D\+B\+\_\+val const $\ast$left, M\+D\+B\+\_\+val const $\ast$right) noexcept
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t offset = 0$>$ }\\int \mbox{\hyperlink{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}{compare}} (M\+D\+B\+\_\+val const $\ast$left, M\+D\+B\+\_\+val const $\ast$right) noexcept
+\item 
+{\footnotesize template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_ae3ae732a4b8734eb1677a830eabaa263}{operator==}} (\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&lhs, \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacelmdb_a43b7a3960adeeea03195710ea48d667c}{operator!=}} (\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&lhs, \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&rhs) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}\label{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}} 
+\index{lmdb@{lmdb}!environment@{environment}}
+\index{environment@{environment}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{environment}{environment}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{lmdb\+::environment}} = typedef std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+env, \mbox{\hyperlink{structlmdb_1_1close__env}{close\+\_\+env}}$>$}
+
+\mbox{\Hypertarget{namespacelmdb_aeebb53d9dbbf45d588fbe8f45d26dd0a}\label{namespacelmdb_aeebb53d9dbbf45d588fbe8f45d26dd0a}} 
+\index{lmdb@{lmdb}!native\_type@{native\_type}}
+\index{native\_type@{native\_type}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{native\_type}{native\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacelmdb_aeebb53d9dbbf45d588fbe8f45d26dd0a}{lmdb\+::native\+\_\+type}} = typedef typename std\+::conditional$<$ std\+::is\+\_\+enum$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::value, std\+::underlying\+\_\+type$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$, \mbox{\hyperlink{structlmdb_1_1identity}{identity}}$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$ $>$\+::type\+::type}
+
+Get the native type for enums, or return {\ttfamily T} unchanged. Useful for merging generated machine code for templated functions that use enums with identical size-\/widths without relying on aggressive identical comdat folding (I\+CF) support in linker. So with enum defintion {\ttfamily enum class enum\+\_\+foo \+: unsigned long \{\};} will always yield {\ttfamily assert(\&func\+\_\+foo$<$unsigned long$>$ == \&func\+\_\+foo$<$native\+\_\+type$<$enum\+\_\+foo$>$$>$)}. \mbox{\Hypertarget{namespacelmdb_a5fbe291efd492943925b337373b8780c}\label{namespacelmdb_a5fbe291efd492943925b337373b8780c}} 
+\index{lmdb@{lmdb}!read\_txn@{read\_txn}}
+\index{read\_txn@{read\_txn}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{read\_txn}{read\_txn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{lmdb\+::read\+\_\+txn}} = typedef std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1release__read__txn}{release\+\_\+read\+\_\+txn}}$>$}
+
+\mbox{\Hypertarget{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}\label{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}} 
+\index{lmdb@{lmdb}!suspended\_txn@{suspended\_txn}}
+\index{suspended\_txn@{suspended\_txn}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{suspended\_txn}{suspended\_txn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{lmdb\+::suspended\+\_\+txn}} = typedef std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1abort__txn}{abort\+\_\+txn}}$>$}
+
+\mbox{\Hypertarget{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}\label{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}} 
+\index{lmdb@{lmdb}!write\_txn@{write\_txn}}
+\index{write\_txn@{write\_txn}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{write\_txn}{write\_txn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{lmdb\+::write\+\_\+txn}} = typedef std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+txn, \mbox{\hyperlink{structlmdb_1_1abort__write__txn}{abort\+\_\+write\+\_\+txn}}$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}\label{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}} 
+\index{lmdb@{lmdb}!error@{error}}
+\index{error@{error}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{lmdb\+::error}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Tracks L\+M\+DB error codes. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}\label{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}} 
+\index{lmdb@{lmdb}!compare@{compare}}
+\index{compare@{compare}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t offset = 0$>$ \\
+int lmdb\+::compare (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+val const $\ast$}]{left,  }\item[{M\+D\+B\+\_\+val const $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+A L\+M\+DB comparison function that uses {\ttfamily std\+::memcmp}.
+
+\textbackslash{}toaram T satisfies {\ttfamily epee\+::is\+\_\+byte\+\_\+spannable$<$T$>$} 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em offset} & to {\ttfamily T} within the value.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The result of {\ttfamily std\+::memcmp} over the value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelmdb_a7f0a0964a6cfa3460ef0ddbd9d1a44f4}\label{namespacelmdb_a7f0a0964a6cfa3460ef0ddbd9d1a44f4}} 
+\index{lmdb@{lmdb}!error\_category@{error\_category}}
+\index{error\_category@{error\_category}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{error\_category()}{error\_category()}}
+{\footnotesize\ttfamily std\+::error\+\_\+category const  \& lmdb\+::error\+\_\+category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}\label{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}} 
+\index{lmdb@{lmdb}!less@{less}}
+\index{less@{less}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{less()}{less()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t offset = 0$>$ \\
+int lmdb\+::less (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+val const $\ast$}]{left,  }\item[{M\+D\+B\+\_\+val const $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+A L\+M\+DB comparison function that uses {\ttfamily operator$<$}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & has a defined {\ttfamily operator$<$} . \\
+\hline
+{\em offset} & to {\ttfamily T} within the value.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if {\ttfamily left $<$ right}, 1 if {\ttfamily right $<$ left}, and 0 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelmdb_af937991cd24a23bfb48d5bc6a1c6bb4c}\label{namespacelmdb_af937991cd24a23bfb48d5bc6a1c6bb4c}} 
+\index{lmdb@{lmdb}!make\_error\_code@{make\_error\_code}}
+\index{make\_error\_code@{make\_error\_code}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{make\_error\_code()}{make\_error\_code()}}
+{\footnotesize\ttfamily std\+::error\+\_\+code lmdb\+::make\+\_\+error\+\_\+code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{error}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_a8cd2930726c036371e7b98b043e0ec36}\label{namespacelmdb_a8cd2930726c036371e7b98b043e0ec36}} 
+\index{lmdb@{lmdb}!open\_cursor@{open\_cursor}}
+\index{open\_cursor@{open\_cursor}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{open\_cursor()}{open\_cursor()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classexpect}{expect}}$<$std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+cursor, D$>$ $>$ lmdb\+::open\+\_\+cursor (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn \&}]{txn,  }\item[{M\+D\+B\+\_\+dbi}]{tbl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_aa45f863ca9e86bb56dfbab7548c267f2}\label{namespacelmdb_aa45f863ca9e86bb56dfbab7548c267f2}} 
+\index{lmdb@{lmdb}!open\_environment@{open\_environment}}
+\index{open\_environment@{open\_environment}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{open\_environment()}{open\_environment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} $>$ lmdb\+::open\+\_\+environment (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{M\+D\+B\+\_\+dbi}]{max\+\_\+dbs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+L\+M\+DB environment at {\ttfamily path} with a max of {\ttfamily max\+\_\+dbs} tables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelmdb_a464a6e57e1818bf2a724a9b2c4684a84}\label{namespacelmdb_a464a6e57e1818bf2a724a9b2c4684a84}} 
+\index{lmdb@{lmdb}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} lmdb\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_a43b7a3960adeeea03195710ea48d667c}\label{namespacelmdb_a43b7a3960adeeea03195710ea48d667c}} 
+\index{lmdb@{lmdb}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} lmdb\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_a119c8ada8f0c8a820074d6e861620e9b}\label{namespacelmdb_a119c8ada8f0c8a820074d6e861620e9b}} 
+\index{lmdb@{lmdb}!operator==@{operator==}}
+\index{operator==@{operator==}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} lmdb\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classlmdb_1_1key__iterator}{key\+\_\+iterator}}$<$ K, V $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_ae3ae732a4b8734eb1677a830eabaa263}\label{namespacelmdb_ae3ae732a4b8734eb1677a830eabaa263}} 
+\index{lmdb@{lmdb}!operator==@{operator==}}
+\index{operator==@{operator==}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename F , std\+::size\+\_\+t offset$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} lmdb\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&}]{lhs,  }\item[{\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ const \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacelmdb_a87ced9b8ad026a4831fc1b7b590e5b5f}\label{namespacelmdb_a87ced9b8ad026a4831fc1b7b590e5b5f}} 
+\index{lmdb@{lmdb}!to\_byte\_span@{to\_byte\_span}}
+\index{to\_byte\_span@{to\_byte\_span}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{to\_byte\_span()}{to\_byte\_span()}}
+{\footnotesize\ttfamily constexpr epee\+::span$<$const std\+::uint8\+\_\+t$>$ lmdb\+::to\+\_\+byte\+\_\+span (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+val}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+A span over the same chunk of memory as {\ttfamily value}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelmdb_a5eb88648d6b1060407f7a0928e5aa838}\label{namespacelmdb_a5eb88648d6b1060407f7a0928e5aa838}} 
+\index{lmdb@{lmdb}!to\_native@{to\_native}}
+\index{to\_native@{to\_native}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{to\_native()}{to\_native()}}
+{\footnotesize\ttfamily template$<$typename T , typename U  = typename std\+::underlying\+\_\+type$<$\+T$>$\+::type$>$ \\
+constexpr U lmdb\+::to\+\_\+native (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily value} as its native type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelmdb_a656cf7fc6437627278337f1a81e3588b}\label{namespacelmdb_a656cf7fc6437627278337f1a81e3588b}} 
+\index{lmdb@{lmdb}!to\_val@{to\_val}}
+\index{to\_val@{to\_val}!lmdb@{lmdb}}
+\doxysubsubsection{\texorpdfstring{to\_val()}{to\_val()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+M\+D\+B\+\_\+val lmdb\+::to\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily value} bytes in a L\+M\+DB {\ttfamily M\+D\+B\+\_\+val} object. 
+\end{DoxyReturn}

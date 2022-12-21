@@ -1,0 +1,82 @@
+\hypertarget{structcryptonote_1_1rpc_1_1START__MINING}{}\doxysection{cryptonote\+::rpc\+::S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+NG Struct Reference}
+\label{structcryptonote_1_1rpc_1_1START__MINING}\index{cryptonote::rpc::START\_MINING@{cryptonote::rpc::START\_MINING}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structcryptonote_1_1rpc_1_1START__MINING__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1START__MINING__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1START__MINING_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1START__MINING_ad57f155c0d2fd15d1d31d6e6b6d2824c}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1START__MINING_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+N\+G\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1START__MINING_a315979272e83032990d2baad07ab4ace}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Start mining on the daemon
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily miner\+\_\+address} Account address to mine to.
+\item {\ttfamily threads\+\_\+count} Number of mining threads to run. Defaults to 1 thread if omitted or 0.
+\item {\ttfamily num\+\_\+blocks} Mine until the blockchain has this many new blocks, then stop (no limit if 0, the default).
+\item {\ttfamily slow\+\_\+mining} Do slow mining (i.\+e. don\textquotesingle{}t allocate RandomX cache); primarily intended for testing.
+\end{DoxyItemize}
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+{\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1START__MINING_ad57f155c0d2fd15d1d31d6e6b6d2824c}\label{structcryptonote_1_1rpc_1_1START__MINING_ad57f155c0d2fd15d1d31d6e6b6d2824c}} 
+\index{cryptonote::rpc::START\_MINING@{cryptonote::rpc::START\_MINING}!names@{names}}
+\index{names@{names}!cryptonote::rpc::START\_MINING@{cryptonote::rpc::START\_MINING}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+N\+G\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1START__MINING_a315979272e83032990d2baad07ab4ace}\label{structcryptonote_1_1rpc_1_1START__MINING_a315979272e83032990d2baad07ab4ace}} 
+\index{cryptonote::rpc::START\_MINING@{cryptonote::rpc::START\_MINING}!request@{request}}
+\index{request@{request}!cryptonote::rpc::START\_MINING@{cryptonote::rpc::START\_MINING}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1START__MINING_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+N\+G\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+N\+G\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

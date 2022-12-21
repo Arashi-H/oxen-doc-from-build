@@ -1,0 +1,54 @@
+\hypertarget{meta_8h}{}\doxysection{src/common/meta.h File Reference}
+\label{meta_8h}\index{src/common/meta.h@{src/common/meta.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$oxenc/variant.\+h$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+Include dependency graph for meta.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{meta_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{meta_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1detail_1_1template__index__impl}{tools\+::detail\+::template\+\_\+index\+\_\+impl$<$ T, C $>$}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1detail_1_1template__index__impl_3_01T_00_01C_3_01Ts_8_8_8_01_4_01_4}{tools\+::detail\+::template\+\_\+index\+\_\+impl$<$ T, C$<$ Ts... $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list$<$... $>$}}
+\begin{DoxyCompactList}\small\item\em Type wrapper that contains an arbitrary list of types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1detail}{tools\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename T1 , typename... Ts$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1detail_a52d73c194490cdea3a56363e3ae6bc13}{tools\+::detail\+::template\+\_\+index\+\_\+impl\+\_\+inner}} ()
+\item 
+{\footnotesize template$<$typename... T$>$ }\\const std\+::type\+\_\+info \& \mbox{\hyperlink{namespacetools_a7b8146ba264095ca7150ed2a5edc6b57}{tools\+::variant\+\_\+type}} (const std\+::variant$<$ T... $>$ \&v)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_a6b594ce1deb30833744040a1cf2bfc6b}{tools\+::type\+\_\+name}} (const std\+::type\+\_\+info \&ti)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacetools_ab46f1f3892604cb366b861cb54ce30e0}{tools\+::type\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Same as above, but uses a templated type instead of a type\+\_\+info argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename C $>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_aa56b3d8dcb0f32af5ca9f5660aecbab1}{tools\+::template\+\_\+index}} = detail\+::template\+\_\+index\+\_\+impl$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, C$>$\+::value
+\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\hypertarget{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES}{}\doxysection{wallet\+::rpc\+::O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES Struct Reference}
+\label{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES}\index{wallet::rpc::ONS\_KNOWN\_NAMES@{wallet::rpc::ONS\_KNOWN\_NAMES}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_1_1known__record}{known\+\_\+record}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_aeaf3e0f9d91e1fbd7ff0457e93c286bd}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_a936c33a5d18107da9b85c8a1f4de062a}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Returns a list of known, plain-\/text O\+NS names along with record details for names that this wallet knows about. This can optionally decrypt the O\+NS value as well, or else just return the encrypted value.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily decrypt} -- If true (default false) then also decrypt and include the {\ttfamily value} field
+\item {\ttfamily include\+\_\+expired} -- If true (default false) then also include expired records
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily known\+\_\+names} -- List of records known to this wallet
+\begin{DoxyItemize}
+\item {\ttfamily type} -- The mapping type, \char`\"{}session\char`\"{} or \char`\"{}lokinet\char`\"{}.
+\item {\ttfamily hashed} -- The hashed name (in base64)
+\item {\ttfamily name} -- The plaintext name
+\item {\ttfamily owner} -- The public key that purchased the Loki Name Service entry.
+\item {\ttfamily backup\+\_\+owner} -- The backup public key or wallet that the owner specified when purchasing the Loki Name Service entry. Omitted if no backup owner.
+\item {\ttfamily encrypted\+\_\+value} -- The encrypted value that the name maps to, in hex.
+\item {\ttfamily value} -- Decrypted value that that name maps to. Only provided if {\ttfamily decrypt\+: true} was specified in the request.
+\item {\ttfamily update\+\_\+height} -- The last height that this Loki Name Service entry was updated on the Blockchain.
+\item {\ttfamily expiration\+\_\+height} -- For records that expire, this will be set to the expiration block height.
+\item {\ttfamily expired} -- Indicates whether the record has expired. Only included in the response if \char`\"{}include\+\_\+expired\char`\"{} is specified in the request.
+\item {\ttfamily txid} -- The txid of the mapping\textquotesingle{}s most recent update or purchase. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_aeaf3e0f9d91e1fbd7ff0457e93c286bd}\label{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_aeaf3e0f9d91e1fbd7ff0457e93c286bd}} 
+\index{wallet::rpc::ONS\_KNOWN\_NAMES@{wallet::rpc::ONS\_KNOWN\_NAMES}!names@{names}}
+\index{names@{names}!wallet::rpc::ONS\_KNOWN\_NAMES@{wallet::rpc::ONS\_KNOWN\_NAMES}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_a936c33a5d18107da9b85c8a1f4de062a}\label{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_a936c33a5d18107da9b85c8a1f4de062a}} 
+\index{wallet::rpc::ONS\_KNOWN\_NAMES@{wallet::rpc::ONS\_KNOWN\_NAMES}!request@{request}}
+\index{request@{request}!wallet::rpc::ONS\_KNOWN\_NAMES@{wallet::rpc::ONS\_KNOWN\_NAMES}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__KNOWN__NAMES_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

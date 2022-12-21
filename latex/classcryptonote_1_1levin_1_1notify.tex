@@ -1,0 +1,184 @@
+\hypertarget{classcryptonote_1_1levin_1_1notify}{}\doxysection{cryptonote\+::levin\+::notify Class Reference}
+\label{classcryptonote_1_1levin_1_1notify}\index{cryptonote::levin::notify@{cryptonote::levin::notify}}
+
+
+Provides tx notification privacy.  
+
+
+
+
+{\ttfamily \#include $<$levin\+\_\+notify.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1notify_1_1status}{status}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_add77c801196a5532d9297a1556b0b5a4}{notify}} () noexcept
+\begin{DoxyCompactList}\small\item\em Construct an instance that cannot notify. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a31845fe54acf2151fc4b2d0e7eec661c}{notify}} (boost\+::asio\+::io\+\_\+service \&service, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}} $>$ p2p, epee\+::shared\+\_\+sv noise, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+public)
+\begin{DoxyCompactList}\small\item\em Construct an instance with available notification {\ttfamily zones}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_aca991dd8ecd9d7b70a7e26632f5e4990}{notify}} (const \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&)=delete
+\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_aca7b12cd8cf62bf1463cfdfb01fb96f7}{notify}} (\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&\&)=default
+\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a852eae28125f33eb7d492bfde401d2f9}{$\sim$notify}} () noexcept
+\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \& \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a510788dd1814ecb33e1cf146a654197a}{operator=}} (const \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&)=delete
+\item 
+\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \& \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a676f147dc1d31b286a3c83ce9befec4b}{operator=}} (\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&\&)=default
+\item 
+\mbox{\hyperlink{structcryptonote_1_1levin_1_1notify_1_1status}{status}} \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a5812908181cec31c80ffe3e37a2fcf6f}{get\+\_\+status}} () const noexcept
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a398f91f449a859e7dd33a34f39095e3c}{new\+\_\+out\+\_\+connection}} ()
+\begin{DoxyCompactList}\small\item\em Probe for new outbound connection -\/ skips if not needed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_aa918a4988c19ea280faaf581b5116c62}{run\+\_\+epoch}} ()
+\begin{DoxyCompactList}\small\item\em Run the logic for the next epoch immediately. Only use in testing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a8017663bc3fa899a709af9cb409b0baf}{run\+\_\+stems}} ()
+\begin{DoxyCompactList}\small\item\em Run the logic for the next stem timeout imemdiately. Only use in testing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_a431d1f0d724cf21b3ef3c8d9de13b76b}{send\+\_\+txs}} (std\+::vector$<$ std\+::string $>$ txs, const boost\+::uuids\+::uuid \&source, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pad\+\_\+txs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone}{detail\+::zone}} $>$ \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify_ad0e3f4c6cbaecb33364d891bea00ecf5}{zone\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides tx notification privacy. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_add77c801196a5532d9297a1556b0b5a4}\label{classcryptonote_1_1levin_1_1notify_add77c801196a5532d9297a1556b0b5a4}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!notify@{notify}}
+\index{notify@{notify}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::notify\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construct an instance that cannot notify. 
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a31845fe54acf2151fc4b2d0e7eec661c}\label{classcryptonote_1_1levin_1_1notify_a31845fe54acf2151fc4b2d0e7eec661c}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!notify@{notify}}
+\index{notify@{notify}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::notify\+::notify (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+service \&}]{service,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}} $>$}]{p2p,  }\item[{epee\+::shared\+\_\+sv}]{noise,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{is\+\_\+public }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct an instance with available notification {\ttfamily zones}. 
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_aca991dd8ecd9d7b70a7e26632f5e4990}\label{classcryptonote_1_1levin_1_1notify_aca991dd8ecd9d7b70a7e26632f5e4990}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!notify@{notify}}
+\index{notify@{notify}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::notify\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_aca7b12cd8cf62bf1463cfdfb01fb96f7}\label{classcryptonote_1_1levin_1_1notify_aca7b12cd8cf62bf1463cfdfb01fb96f7}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!notify@{notify}}
+\index{notify@{notify}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::notify\+::notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a852eae28125f33eb7d492bfde401d2f9}\label{classcryptonote_1_1levin_1_1notify_a852eae28125f33eb7d492bfde401d2f9}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!````~notify@{$\sim$notify}}
+\index{````~notify@{$\sim$notify}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{$\sim$notify()}{~notify()}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::notify\+::$\sim$notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a5812908181cec31c80ffe3e37a2fcf6f}\label{classcryptonote_1_1levin_1_1notify_a5812908181cec31c80ffe3e37a2fcf6f}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!get\_status@{get\_status}}
+\index{get\_status@{get\_status}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{get\_status()}{get\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1levin_1_1notify_1_1status}{notify\+::status}} cryptonote\+::levin\+::notify\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Status information for zone selection. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a398f91f449a859e7dd33a34f39095e3c}\label{classcryptonote_1_1levin_1_1notify_a398f91f449a859e7dd33a34f39095e3c}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!new\_out\_connection@{new\_out\_connection}}
+\index{new\_out\_connection@{new\_out\_connection}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{new\_out\_connection()}{new\_out\_connection()}}
+{\footnotesize\ttfamily void cryptonote\+::levin\+::notify\+::new\+\_\+out\+\_\+connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Probe for new outbound connection -\/ skips if not needed. 
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a510788dd1814ecb33e1cf146a654197a}\label{classcryptonote_1_1levin_1_1notify_a510788dd1814ecb33e1cf146a654197a}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}}\& cryptonote\+::levin\+::notify\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a676f147dc1d31b286a3c83ce9befec4b}\label{classcryptonote_1_1levin_1_1notify_a676f147dc1d31b286a3c83ce9befec4b}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}}\& cryptonote\+::levin\+::notify\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1levin_1_1notify}{notify}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_aa918a4988c19ea280faaf581b5116c62}\label{classcryptonote_1_1levin_1_1notify_aa918a4988c19ea280faaf581b5116c62}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!run\_epoch@{run\_epoch}}
+\index{run\_epoch@{run\_epoch}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{run\_epoch()}{run\_epoch()}}
+{\footnotesize\ttfamily void cryptonote\+::levin\+::notify\+::run\+\_\+epoch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the logic for the next epoch immediately. Only use in testing. 
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a8017663bc3fa899a709af9cb409b0baf}\label{classcryptonote_1_1levin_1_1notify_a8017663bc3fa899a709af9cb409b0baf}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!run\_stems@{run\_stems}}
+\index{run\_stems@{run\_stems}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{run\_stems()}{run\_stems()}}
+{\footnotesize\ttfamily void cryptonote\+::levin\+::notify\+::run\+\_\+stems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Run the logic for the next stem timeout imemdiately. Only use in testing. 
+
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_a431d1f0d724cf21b3ef3c8d9de13b76b}\label{classcryptonote_1_1levin_1_1notify_a431d1f0d724cf21b3ef3c8d9de13b76b}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!send\_txs@{send\_txs}}
+\index{send\_txs@{send\_txs}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{send\_txs()}{send\_txs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::levin\+::notify\+::send\+\_\+txs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{txs,  }\item[{const boost\+::uuids\+::uuid \&}]{source,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{pad\+\_\+txs }\end{DoxyParamCaption})}
+
+Send txs using {\ttfamily \mbox{\hyperlink{cryptonote__protocol__defs_8h}{cryptonote\+\_\+protocol\+\_\+defs.\+h}}} payload format wrapped in a levin header. The message will be sent in a \char`\"{}discreet\char`\"{} manner if enabled -\/ if {\ttfamily !noise.empty()} then the {\ttfamily command}/{\ttfamily payload} will be queued to send at the next available noise interval. Otherwise, a standard Monero flood notification will be used.
+
+\begin{DoxyNote}{Note}
+Eventually Dandelion++ stem sending will be used here when enabled.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em txs} & The transactions that need to be serialized and relayed. \\
+\hline
+{\em source} & The source of the notification. {\ttfamily is\+\_\+nil()} indicates this node is the source. Dandelion++ will use this to map a source to a particular stem. \\
+\hline
+{\em pad\+\_\+txs} & A request to pad txs to help conceal origin via statistical analysis. Ignored if noise was enabled during construction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True iff the notification is queued for sending. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1levin_1_1notify_ad0e3f4c6cbaecb33364d891bea00ecf5}\label{classcryptonote_1_1levin_1_1notify_ad0e3f4c6cbaecb33364d891bea00ecf5}} 
+\index{cryptonote::levin::notify@{cryptonote::levin::notify}!zone\_@{zone\_}}
+\index{zone\_@{zone\_}!cryptonote::levin::notify@{cryptonote::levin::notify}}
+\doxysubsubsection{\texorpdfstring{zone\_}{zone\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone}{detail\+::zone}}$>$ cryptonote\+::levin\+::notify\+::zone\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{levin__notify_8h}{levin\+\_\+notify.\+h}}\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{levin__notify_8cpp}{levin\+\_\+notify.\+cpp}}\end{DoxyCompactItemize}

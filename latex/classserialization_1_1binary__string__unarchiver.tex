@@ -1,0 +1,95 @@
+\hypertarget{classserialization_1_1binary__string__unarchiver}{}\doxysection{serialization\+::binary\+\_\+string\+\_\+unarchiver Class Reference}
+\label{classserialization_1_1binary__string__unarchiver}\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+
+
+{\ttfamily \#include $<$binary\+\_\+utils.\+h$>$}
+
+
+
+Inheritance diagram for serialization\+::binary\+\_\+string\+\_\+unarchiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classserialization_1_1binary__string__unarchiver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for serialization\+::binary\+\_\+string\+\_\+unarchiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classserialization_1_1binary__string__unarchiver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_a519816e5cf7b1f8e597d6a1675c6eb22}{binary\+\_\+string\+\_\+unarchiver}} (std\+::string\+\_\+view \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+\mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_af1a336d7f9df1b47d42c6f426a99e5d2}{binary\+\_\+string\+\_\+unarchiver}} (const std\+::vector$<$ uint8\+\_\+t $>$ \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\begin{DoxyCompactList}\small\item\em Same as above, but taking a vector of uint8\+\_\+ts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_a560fc9d99cdd8975763d0969f9a6a170}{binary\+\_\+string\+\_\+unarchiver}} (const std\+::string \&\&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})=delete
+\begin{DoxyCompactList}\small\item\em Constructing from a std\+::string temporary is not allowed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialization_1_1one__shot__read__buffer}{one\+\_\+shot\+\_\+read\+\_\+buffer}} \mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_af8a0c9968a75250a72ae4bf744cce469}{buf}}
+\item 
+std\+::istream \mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_a06aed9383d62168d7574c96e88ebf57d}{is}} \{\&\mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_af8a0c9968a75250a72ae4bf744cce469}{buf}}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Subclass of \mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}} that reads from a string\+\_\+view. The caller {\itshape must} keep the string\+\_\+view data available for the lifetime of the unarchiver. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__string__unarchiver_a519816e5cf7b1f8e597d6a1675c6eb22}\label{classserialization_1_1binary__string__unarchiver_a519816e5cf7b1f8e597d6a1675c6eb22}} 
+\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}!binary\_string\_unarchiver@{binary\_string\_unarchiver}}
+\index{binary\_string\_unarchiver@{binary\_string\_unarchiver}!serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{binary\_string\_unarchiver()}{binary\_string\_unarchiver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily serialization\+::binary\+\_\+string\+\_\+unarchiver\+::binary\+\_\+string\+\_\+unarchiver (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructor; takes the string\+\_\+view to deserialize from. The caller must keep the referenced data alive! \mbox{\Hypertarget{classserialization_1_1binary__string__unarchiver_af1a336d7f9df1b47d42c6f426a99e5d2}\label{classserialization_1_1binary__string__unarchiver_af1a336d7f9df1b47d42c6f426a99e5d2}} 
+\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}!binary\_string\_unarchiver@{binary\_string\_unarchiver}}
+\index{binary\_string\_unarchiver@{binary\_string\_unarchiver}!serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{binary\_string\_unarchiver()}{binary\_string\_unarchiver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily serialization\+::binary\+\_\+string\+\_\+unarchiver\+::binary\+\_\+string\+\_\+unarchiver (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint8\+\_\+t $>$ \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Same as above, but taking a vector of uint8\+\_\+ts. 
+
+\mbox{\Hypertarget{classserialization_1_1binary__string__unarchiver_a560fc9d99cdd8975763d0969f9a6a170}\label{classserialization_1_1binary__string__unarchiver_a560fc9d99cdd8975763d0969f9a6a170}} 
+\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}!binary\_string\_unarchiver@{binary\_string\_unarchiver}}
+\index{binary\_string\_unarchiver@{binary\_string\_unarchiver}!serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{binary\_string\_unarchiver()}{binary\_string\_unarchiver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily serialization\+::binary\+\_\+string\+\_\+unarchiver\+::binary\+\_\+string\+\_\+unarchiver (\begin{DoxyParamCaption}\item[{const std\+::string \&\&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructing from a std\+::string temporary is not allowed. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__string__unarchiver_af8a0c9968a75250a72ae4bf744cce469}\label{classserialization_1_1binary__string__unarchiver_af8a0c9968a75250a72ae4bf744cce469}} 
+\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}!buf@{buf}}
+\index{buf@{buf}!serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classserialization_1_1one__shot__read__buffer}{one\+\_\+shot\+\_\+read\+\_\+buffer}} serialization\+::binary\+\_\+string\+\_\+unarchiver\+::buf\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__string__unarchiver_a06aed9383d62168d7574c96e88ebf57d}\label{classserialization_1_1binary__string__unarchiver_a06aed9383d62168d7574c96e88ebf57d}} 
+\index{serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}!is@{is}}
+\index{is@{is}!serialization::binary\_string\_unarchiver@{serialization::binary\_string\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{is}{is}}
+{\footnotesize\ttfamily std\+::istream serialization\+::binary\+\_\+string\+\_\+unarchiver\+::is \{\&\mbox{\hyperlink{classserialization_1_1binary__string__unarchiver_af8a0c9968a75250a72ae4bf744cce469}{buf}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/serialization/\mbox{\hyperlink{binary__utils_8h}{binary\+\_\+utils.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,273 @@
+\hypertarget{classWallet_1_1UnsignedTransactionImpl}{}\doxysection{Wallet\+::Unsigned\+Transaction\+Impl Class Reference}
+\label{classWallet_1_1UnsignedTransactionImpl}\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+
+
+{\ttfamily \#include $<$unsigned\+\_\+transaction.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Unsigned\+Transaction\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classWallet_1_1UnsignedTransactionImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Wallet\+::Unsigned\+Transaction\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classWallet_1_1UnsignedTransactionImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a9918453d9c2d655d0ef84c8295b9522b}{Unsigned\+Transaction\+Impl}} (\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} \&wallet)
+\item 
+\mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a6a01f2b4bc636f554688f90a095509c8}{$\sim$\+Unsigned\+Transaction\+Impl}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a8a2e1776e131e0e89fd06a216e0731e3}{good}} () const override
+\item 
+std\+::pair$<$ int, std\+::string $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ad1971b56d0325e9a9678f81ef760b20d}{status}} () const override
+\begin{DoxyCompactList}\small\item\em returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a16932d71796dccb4cb894c3a9fe999b7}{amount}} () const override
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a29535e3dc5b614f61a44efe0933a0a09}{fee}} () const override
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ac696c00a01fd118af04ea894d0006f03}{mixin}} () const override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_aa34028b6f0943fd834385411cf3d1bcf}{payment\+Id}} () const override
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ad525f67c3b4b66d01a54cc7ba173490d}{recipient\+Address}} () const override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_aa279167f782e7ce8a32a02102280bccb}{tx\+Count}} () const override
+\begin{DoxyCompactList}\small\item\em tx\+Count -\/ number of transactions current transaction will be splitted to \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a78eda948ec22e1bc6e0e38415b09b19b}{sign}} (std\+::string\+\_\+view signed\+File\+Name) override
+\begin{DoxyCompactList}\small\item\em sign -\/ Sign txs and saves to file \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ad748b554eb870fad9fe3d1ac1cbf35f1}{confirmation\+Message}} () const override
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a8f334007439ec28d2076c6c468476608}{min\+Mixin\+Count}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_af8415bb10c49600b0d607c31ea685bb4}{check\+Loaded\+Tx}} (const std\+::function$<$ size\+\_\+t()$>$ get\+\_\+num\+\_\+txes, const std\+::function$<$ const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \&(size\+\_\+t)$>$ \&get\+\_\+tx, const std\+::string \&extra\+\_\+message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} \& \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ac220d42ec31e18973c13109a695d8bc8}{m\+\_\+wallet}}
+\item 
+std\+::pair$<$ int, std\+::string $>$ \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ade42ebeb8e3a933f529dfcb71df6179c}{m\+\_\+status}}
+\item 
+\mbox{\hyperlink{classtools_1_1wallet2_a6d026f664fbd0c48f0be773b17e5d147}{tools\+::wallet2\+::unsigned\+\_\+tx\+\_\+set}} \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ab26cdc5f8e371a2af0dadf529a156ade}{m\+\_\+unsigned\+\_\+tx\+\_\+set}}
+\item 
+std\+::string \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_aa52701e0ccf5c5b29d3cab469ce87aab}{m\+\_\+confirmation\+Message}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_a1fc6cb31dad4ebd210deeb963f4640c7}{Wallet\+Impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a9918453d9c2d655d0ef84c8295b9522b}\label{classWallet_1_1UnsignedTransactionImpl_a9918453d9c2d655d0ef84c8295b9522b}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!UnsignedTransactionImpl@{UnsignedTransactionImpl}}
+\index{UnsignedTransactionImpl@{UnsignedTransactionImpl}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{UnsignedTransactionImpl()}{UnsignedTransactionImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::\+Unsigned\+Transaction\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} \&}]{wallet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a6a01f2b4bc636f554688f90a095509c8}\label{classWallet_1_1UnsignedTransactionImpl_a6a01f2b4bc636f554688f90a095509c8}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!````~UnsignedTransactionImpl@{$\sim$UnsignedTransactionImpl}}
+\index{````~UnsignedTransactionImpl@{$\sim$UnsignedTransactionImpl}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$UnsignedTransactionImpl()}{~UnsignedTransactionImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::$\sim$\+Unsigned\+Transaction\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a16932d71796dccb4cb894c3a9fe999b7}\label{classWallet_1_1UnsignedTransactionImpl_a16932d71796dccb4cb894c3a9fe999b7}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!amount@{amount}}
+\index{amount@{amount}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{amount()}{amount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ uint64\+\_\+t $>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a81e68dfd2c1804bb9b72dce756302c3f}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_af8415bb10c49600b0d607c31ea685bb4}\label{classWallet_1_1UnsignedTransactionImpl_af8415bb10c49600b0d607c31ea685bb4}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!checkLoadedTx@{checkLoadedTx}}
+\index{checkLoadedTx@{checkLoadedTx}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{checkLoadedTx()}{checkLoadedTx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::check\+Loaded\+Tx (\begin{DoxyParamCaption}\item[{const std\+::function$<$ size\+\_\+t()$>$}]{get\+\_\+num\+\_\+txes,  }\item[{const std\+::function$<$ const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \&(size\+\_\+t)$>$ \&}]{get\+\_\+tx,  }\item[{const std\+::string \&}]{extra\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ad748b554eb870fad9fe3d1ac1cbf35f1}\label{classWallet_1_1UnsignedTransactionImpl_ad748b554eb870fad9fe3d1ac1cbf35f1}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!confirmationMessage@{confirmationMessage}}
+\index{confirmationMessage@{confirmationMessage}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{confirmationMessage()}{confirmationMessage()}}
+{\footnotesize\ttfamily std\+::string Wallet\+::\+Unsigned\+Transaction\+Impl\+::confirmation\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_ab51b61d7e17e4134c1b962dabf6ca3a0}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a29535e3dc5b614f61a44efe0933a0a09}\label{classWallet_1_1UnsignedTransactionImpl_a29535e3dc5b614f61a44efe0933a0a09}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!fee@{fee}}
+\index{fee@{fee}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{fee()}{fee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ uint64\+\_\+t $>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::fee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a312d112837316e740c961e9fcfb091a7}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a8a2e1776e131e0e89fd06a216e0731e3}\label{classWallet_1_1UnsignedTransactionImpl_a8a2e1776e131e0e89fd06a216e0731e3}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!good@{good}}
+\index{good@{good}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{good()}{good()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::good (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+returns true if the status is currently set to Status\+\_\+\+Ok, false otherwise. For more details, call \mbox{\hyperlink{classWallet_1_1UnsignedTransactionImpl_ad1971b56d0325e9a9678f81ef760b20d}{status()}} instead. 
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a5f1ed8804e555c2fcd71e7be9574c7d3}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a8f334007439ec28d2076c6c468476608}\label{classWallet_1_1UnsignedTransactionImpl_a8f334007439ec28d2076c6c468476608}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!minMixinCount@{minMixinCount}}
+\index{minMixinCount@{minMixinCount}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{minMixinCount()}{minMixinCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} uint64\+\_\+t Wallet\+::\+Unsigned\+Transaction\+Impl\+::min\+Mixin\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_acfc0cf726bfa6801859d25024b81d9c6}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ac696c00a01fd118af04ea894d0006f03}\label{classWallet_1_1UnsignedTransactionImpl_ac696c00a01fd118af04ea894d0006f03}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!mixin@{mixin}}
+\index{mixin@{mixin}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{mixin()}{mixin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ uint64\+\_\+t $>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::mixin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_ad8b0126923ee991ec493406f844c1f16}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_aa34028b6f0943fd834385411cf3d1bcf}\label{classWallet_1_1UnsignedTransactionImpl_aa34028b6f0943fd834385411cf3d1bcf}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!paymentId@{paymentId}}
+\index{paymentId@{paymentId}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{paymentId()}{paymentId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ std\+::string $>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::payment\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_aa5ac592edba664f98089c073518bd850}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ad525f67c3b4b66d01a54cc7ba173490d}\label{classWallet_1_1UnsignedTransactionImpl_ad525f67c3b4b66d01a54cc7ba173490d}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!recipientAddress@{recipientAddress}}
+\index{recipientAddress@{recipientAddress}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{recipientAddress()}{recipientAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ std\+::string $>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::recipient\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a8c8e3c903357e9d5bd25e39082cde121}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a78eda948ec22e1bc6e0e38415b09b19b}\label{classWallet_1_1UnsignedTransactionImpl_a78eda948ec22e1bc6e0e38415b09b19b}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!sign@{sign}}
+\index{sign@{sign}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::sign (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{signed\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sign -\/ Sign txs and saves to file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signed\+File\+Name} & -\/ utf8 filename to write to return -\/ true on success \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a576b38255d58c329aa5dc984621240d7}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ad1971b56d0325e9a9678f81ef760b20d}\label{classWallet_1_1UnsignedTransactionImpl_ad1971b56d0325e9a9678f81ef760b20d}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!status@{status}}
+\index{status@{status}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily std\+::pair$<$int, std\+::string$>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+returns error status code (Status\+\_\+\+Ok, Status\+\_\+\+Error, or Status\+\_\+\+Critical) and error string. 
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_ac76c741adedbd9d6796179080b7bd0db}{Wallet\+::\+Unsigned\+Transaction}}.
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_aa279167f782e7ce8a32a02102280bccb}\label{classWallet_1_1UnsignedTransactionImpl_aa279167f782e7ce8a32a02102280bccb}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!txCount@{txCount}}
+\index{txCount@{txCount}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{txCount()}{txCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} uint64\+\_\+t Wallet\+::\+Unsigned\+Transaction\+Impl\+::tx\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+tx\+Count -\/ number of transactions current transaction will be splitted to 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{structWallet_1_1UnsignedTransaction_a46eca62eb1a4bbad476d821605aa6bb9}{Wallet\+::\+Unsigned\+Transaction}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_a1fc6cb31dad4ebd210deeb963f4640c7}\label{classWallet_1_1UnsignedTransactionImpl_a1fc6cb31dad4ebd210deeb963f4640c7}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!WalletImpl@{WalletImpl}}
+\index{WalletImpl@{WalletImpl}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{WalletImpl}{WalletImpl}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_aa52701e0ccf5c5b29d3cab469ce87aab}\label{classWallet_1_1UnsignedTransactionImpl_aa52701e0ccf5c5b29d3cab469ce87aab}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!m\_confirmationMessage@{m\_confirmationMessage}}
+\index{m\_confirmationMessage@{m\_confirmationMessage}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{m\_confirmationMessage}{m\_confirmationMessage}}
+{\footnotesize\ttfamily std\+::string Wallet\+::\+Unsigned\+Transaction\+Impl\+::m\+\_\+confirmation\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ade42ebeb8e3a933f529dfcb71df6179c}\label{classWallet_1_1UnsignedTransactionImpl_ade42ebeb8e3a933f529dfcb71df6179c}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!m\_status@{m\_status}}
+\index{m\_status@{m\_status}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{m\_status}{m\_status}}
+{\footnotesize\ttfamily std\+::pair$<$int, std\+::string$>$ Wallet\+::\+Unsigned\+Transaction\+Impl\+::m\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ab26cdc5f8e371a2af0dadf529a156ade}\label{classWallet_1_1UnsignedTransactionImpl_ab26cdc5f8e371a2af0dadf529a156ade}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!m\_unsigned\_tx\_set@{m\_unsigned\_tx\_set}}
+\index{m\_unsigned\_tx\_set@{m\_unsigned\_tx\_set}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{m\_unsigned\_tx\_set}{m\_unsigned\_tx\_set}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1wallet2_a6d026f664fbd0c48f0be773b17e5d147}{tools\+::wallet2\+::unsigned\+\_\+tx\+\_\+set}} Wallet\+::\+Unsigned\+Transaction\+Impl\+::m\+\_\+unsigned\+\_\+tx\+\_\+set\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1UnsignedTransactionImpl_ac220d42ec31e18973c13109a695d8bc8}\label{classWallet_1_1UnsignedTransactionImpl_ac220d42ec31e18973c13109a695d8bc8}} 
+\index{Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}!m\_wallet@{m\_wallet}}
+\index{m\_wallet@{m\_wallet}!Wallet::UnsignedTransactionImpl@{Wallet::UnsignedTransactionImpl}}
+\doxysubsubsection{\texorpdfstring{m\_wallet}{m\_wallet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}}\& Wallet\+::\+Unsigned\+Transaction\+Impl\+::m\+\_\+wallet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{unsigned__transaction_8h}{unsigned\+\_\+transaction.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{unsigned__transaction_8cpp}{unsigned\+\_\+transaction.\+cpp}}\end{DoxyCompactItemize}

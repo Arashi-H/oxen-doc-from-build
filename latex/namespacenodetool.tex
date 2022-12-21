@@ -1,0 +1,442 @@
+\hypertarget{namespacenodetool}{}\doxysection{nodetool Namespace Reference}
+\label{namespacenodetool}\index{nodetool@{nodetool}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03}{anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03}{anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1anonymous__inbound}{anonymous\+\_\+inbound}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1basic__node__data}{basic\+\_\+node\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1COMMAND__HANDSHAKE}{C\+O\+M\+M\+A\+N\+D\+\_\+\+H\+A\+N\+D\+S\+H\+A\+KE}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1COMMAND__PING}{C\+O\+M\+M\+A\+N\+D\+\_\+\+P\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1COMMAND__REQUEST__SUPPORT__FLAGS}{C\+O\+M\+M\+A\+N\+D\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+\_\+\+F\+L\+A\+GS}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1COMMAND__TIMED__SYNC}{C\+O\+M\+M\+A\+N\+D\+\_\+\+T\+I\+M\+E\+D\+\_\+\+S\+Y\+NC}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1connection__entry}{connection\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1i__p2p__endpoint}{i\+\_\+p2p\+\_\+endpoint}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1network__config}{network\+\_\+config}}
+\item 
+class \mbox{\hyperlink{classnodetool_1_1node__server}{node\+\_\+server}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1p2p__connection__context__t}{p2p\+\_\+connection\+\_\+context\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1p2p__endpoint__stub}{p2p\+\_\+endpoint\+\_\+stub}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__join}{peerlist\+\_\+join}}
+\item 
+class \mbox{\hyperlink{classnodetool_1_1peerlist__manager}{peerlist\+\_\+manager}}
+\item 
+class \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1proxy}{proxy}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::uuids\+::uuid \mbox{\hyperlink{namespacenodetool_a16baf6132912a77daa1e353921ce041c}{uuid}}
+\item 
+typedef boost\+::uuids\+::uuid \mbox{\hyperlink{namespacenodetool_afd054f1bd336dc9aaaaf00d568e400b4}{net\+\_\+connection\+\_\+id}}
+\item 
+using \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}} = uint64\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1proxy}{proxy}} $>$ $>$ \mbox{\hyperlink{namespacenodetool_a6a73bbc18c2c9bd173814bb5da760647}{get\+\_\+proxies}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+std\+::optional$<$ std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1anonymous__inbound}{anonymous\+\_\+inbound}} $>$ $>$ \mbox{\hyperlink{namespacenodetool_a98a2d31ce90dc5b190338095f269f545}{get\+\_\+anonymous\+\_\+inbounds}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_a14f9b9f859e8362e20e818b823a20546}{is\+\_\+filtered\+\_\+command}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address, int command)
+\item 
+std\+::optional$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ \mbox{\hyperlink{namespacenodetool_a8b3c1de4475dc1a6e318d7f3fec820a4}{socks\+\_\+connect\+\_\+internal}} (const std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&stop\+\_\+signal, boost\+::asio\+::io\+\_\+service \&service, const boost\+::asio\+::ip\+::tcp\+::endpoint \&\mbox{\hyperlink{structnodetool_1_1proxy}{proxy}}, const epee\+::net\+\_\+utils\+::network\+\_\+address \&remote)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_a8a7f3332aeee2d77b19455708946525b}{append\+\_\+net\+\_\+address}} (std\+::vector$<$ epee\+::net\+\_\+utils\+::network\+\_\+address $>$ \&seed\+\_\+nodes, std\+::string const \&addr, uint16\+\_\+t default\+\_\+port)
+\item 
+static std\+::string \mbox{\hyperlink{namespacenodetool_a2fa8a836747eb38070a3078212cf8861}{peerid\+\_\+to\+\_\+string}} (\mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}} peer\+\_\+id)
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\void \mbox{\hyperlink{namespacenodetool_a5f48804da168686e9616a55019dfbf73}{serialize}} (Archive \&a, \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&elem, unsigned ver)
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\void \mbox{\hyperlink{namespacenodetool_aaca376d3a1650751d40451346e2d45fb}{serialize}} (Archive \&a, \mbox{\hyperlink{structnodetool_1_1peerlist__join}{peerlist\+\_\+join}} elem, unsigned ver)
+\item 
+std\+::string \mbox{\hyperlink{namespacenodetool_a7cce77a12f92c0d09e46728f89f9cfef}{print\+\_\+peerlist\+\_\+to\+\_\+string}} (const std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&pl)
+\item 
+\mbox{\hyperlink{namespacenodetool_ab47eb839fe5b0ba81de3299eee4c7246}{K\+V\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+V\+A\+L\+UE}} (\mbox{\hyperlink{namespacenodetool_a3c3550fbd075f8a6d9de09c751288b50}{rpc\+\_\+port}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_a98cca054b036f78d94ab17dbe9703378}{arg\+\_\+p2p\+\_\+bind\+\_\+ip}} = \{\char`\"{}p2p-\/bind-\/ip\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv4)\char`\"{}, \char`\"{}0.\+0.\+0.\+0\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_ab6ea6aebc74dd853fe539969c114ab1c}{arg\+\_\+p2p\+\_\+bind\+\_\+ipv6\+\_\+address}} = \{\char`\"{}p2p-\/bind-\/ipv6-\/address\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv6)\char`\"{}, \char`\"{}\+::\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ \mbox{\hyperlink{namespacenodetool_a5e7c990554f759bcb3cf814d367e31a1}{arg\+\_\+p2p\+\_\+bind\+\_\+port}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ \mbox{\hyperlink{namespacenodetool_ab8edd80efc0d9c61880703224b0862e3}{arg\+\_\+p2p\+\_\+bind\+\_\+port\+\_\+ipv6}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a26b36b1d298ae4c3531a666faa098ec5}{arg\+\_\+p2p\+\_\+external\+\_\+port}} = \{\char`\"{}p2p-\/external-\/port\char`\"{}, \char`\"{}External port \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (\mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}} port forwarding used with N\+AT)\char`\"{}, 0\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a8b8b8897cc0a9edc880db3dbd06d7f0b}{arg\+\_\+p2p\+\_\+allow\+\_\+local\+\_\+ip}} = \{\char`\"{}allow-\/local-\/ip\char`\"{}, \char`\"{}Allow local ip add to peer list, mostly in debug purposes\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_af4e8feaa715ebe4d9353734e5758ab14}{arg\+\_\+p2p\+\_\+add\+\_\+peer}} = \{\char`\"{}add-\/peer\char`\"{}, \char`\"{}Manually add peer to local peerlist\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_a0947f93bce867be82bef6ad491bfd2a2}{arg\+\_\+p2p\+\_\+add\+\_\+priority\+\_\+node}} = \{\char`\"{}add-\/priority-\/node\char`\"{}, \char`\"{}Specify list of peers to connect to and attempt to keep the connection \mbox{\hyperlink{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}{open}}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_afeba6dded72414c0010bb7a3f02be672}{arg\+\_\+p2p\+\_\+add\+\_\+exclusive\+\_\+node}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_aeb51026a051e5d5929efe0d7ff0eb9d6}{arg\+\_\+p2p\+\_\+seed\+\_\+node}} = \{\char`\"{}seed-\/node\char`\"{}, \char`\"{}Connect to a node to retrieve peer addresses, and disconnect\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_a52e9f47f76f61f85461bf28441dd882b}{arg\+\_\+tx\+\_\+proxy}} = \{\char`\"{}tx-\/\mbox{\hyperlink{structnodetool_1_1proxy}{proxy}}\char`\"{}, \char`\"{}Send local txes through proxy\+: $<$network-\/type$>$,$<$socks-\/ip\+:port$>$\mbox{[},max\+\_\+connections\mbox{]}\mbox{[},disable\+\_\+noise\mbox{]} i.\+e. \textbackslash{}\char`\"{}tor,127.\+0.\+0.\+1\+:9050,100,disable\+\_\+noise\textbackslash{}\char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_aad89321d651fe9d9deed2381c70e2bf4}{arg\+\_\+anonymous\+\_\+inbound}} = \{\char`\"{}anonymous-\/inbound\char`\"{}, \char`\"{}$<$hidden-\/service-\/address$>$,$<$\mbox{[}bind-\/ip\+:\mbox{]}port$>$\mbox{[},max\+\_\+connections\mbox{]} i.\+e. \textbackslash{}\char`\"{}x.\+onion,127.\+0.\+0.\+1\+:18083,100\textbackslash{}\char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_abb1ebf6698fb85a4fdfb14a9980acab9}{arg\+\_\+p2p\+\_\+hide\+\_\+my\+\_\+port}} = \{\char`\"{}hide-\/my-\/port\char`\"{}, \char`\"{}Do not announce yourself as peerlist candidate\char`\"{}, false, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a612d217340851779ae52933343745951}{arg\+\_\+no\+\_\+sync}} = \{\char`\"{}no-\/sync\char`\"{}, \char`\"{}Don\textquotesingle{}t synchronize the blockchain with other peers\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a496a6f567359c35550fddc645a29f2af}{arg\+\_\+no\+\_\+igd}} = \{\char`\"{}no-\/igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_acc79ccd38eff9496e4882f0ebedcf86b}{arg\+\_\+igd}} = \{\char`\"{}igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}, \char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a6fae1026a1cc6bff9f216c355992a943}{arg\+\_\+p2p\+\_\+use\+\_\+ipv6}} = \{\char`\"{}p2p-\/use-\/ipv6\char`\"{}, \char`\"{}Enable I\+Pv6 \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_abb31865f18191a75181846f661cab49f}{arg\+\_\+p2p\+\_\+ignore\+\_\+ipv4}} = \{\char`\"{}p2p-\/ignore-\/ipv4\char`\"{}, \char`\"{}Ignore unsuccessful I\+Pv4 bind \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_ab6f136cba233c65333f3926651d14c42}{arg\+\_\+out\+\_\+peers}} = \{\char`\"{}out-\/peers\char`\"{}, \char`\"{}set max number of out peers\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_acffcbbfe1907ac04b0a97fdbdeab57de}{arg\+\_\+in\+\_\+peers}} = \{\char`\"{}in-\/peers\char`\"{}, \char`\"{}set max number of in peers\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int $>$ \mbox{\hyperlink{namespacenodetool_a1d4310f98ca38e530c7f3ab8392d7b0c}{arg\+\_\+tos\+\_\+flag}} = \{\char`\"{}tos-\/flag\char`\"{}, \char`\"{}set T\+OS flag\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a99004fc103d8d58b34e258c9f9611286}{arg\+\_\+limit\+\_\+rate\+\_\+up}} = \{\char`\"{}limit-\/rate-\/up\char`\"{}, \char`\"{}set limit-\/rate-\/up \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+UP\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a914dbd25213aa3c0dc14f821156e72a9}{arg\+\_\+limit\+\_\+rate\+\_\+down}} = \{\char`\"{}limit-\/rate-\/down\char`\"{}, \char`\"{}set limit-\/rate-\/down \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+D\+O\+WN\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a57ac7ce88f3d1a23b31d0172f2cfd039}{arg\+\_\+limit\+\_\+rate}} = \{\char`\"{}limit-\/rate\char`\"{}, \char`\"{}set limit-\/rate \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a365ed8b98523fdab3e73bedfef9ce487}{arg\+\_\+offline}}
+\item 
+static auto \mbox{\hyperlink{namespacenodetool_ac03de3745c273560e26bce6b06bb7310}{logcat}} = log\+::\+Cat(\char`\"{}net.\+p2p\char`\"{})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{namespacenodetool_a3c3550fbd075f8a6d9de09c751288b50}{rpc\+\_\+port}} = 0
+\item 
+constexpr int \mbox{\hyperlink{namespacenodetool_a81e6774bfd6f8a652d6a0dbf49d97932}{P2\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+S\+\_\+\+P\+O\+O\+L\+\_\+\+B\+A\+SE}} = 1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacenodetool_afd054f1bd336dc9aaaaf00d568e400b4}\label{namespacenodetool_afd054f1bd336dc9aaaaf00d568e400b4}} 
+\index{nodetool@{nodetool}!net\_connection\_id@{net\_connection\_id}}
+\index{net\_connection\_id@{net\_connection\_id}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{net\_connection\_id}{net\_connection\_id}}
+{\footnotesize\ttfamily typedef boost\+::uuids\+::uuid \mbox{\hyperlink{namespacenodetool_afd054f1bd336dc9aaaaf00d568e400b4}{nodetool\+::net\+\_\+connection\+\_\+id}}}
+
+\mbox{\Hypertarget{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}\label{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}} 
+\index{nodetool@{nodetool}!peerid\_type@{peerid\_type}}
+\index{peerid\_type@{peerid\_type}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{peerid\_type}{peerid\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{nodetool\+::peerid\+\_\+type}} = typedef uint64\+\_\+t}
+
+\mbox{\Hypertarget{namespacenodetool_a16baf6132912a77daa1e353921ce041c}\label{namespacenodetool_a16baf6132912a77daa1e353921ce041c}} 
+\index{nodetool@{nodetool}!uuid@{uuid}}
+\index{uuid@{uuid}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{uuid}{uuid}}
+{\footnotesize\ttfamily typedef boost\+::uuids\+::uuid \mbox{\hyperlink{namespacenodetool_a16baf6132912a77daa1e353921ce041c}{nodetool\+::uuid}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenodetool_a8a7f3332aeee2d77b19455708946525b}\label{namespacenodetool_a8a7f3332aeee2d77b19455708946525b}} 
+\index{nodetool@{nodetool}!append\_net\_address@{append\_net\_address}}
+\index{append\_net\_address@{append\_net\_address}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{append\_net\_address()}{append\_net\_address()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::append\+\_\+net\+\_\+address (\begin{DoxyParamCaption}\item[{std\+::vector$<$ epee\+::net\+\_\+utils\+::network\+\_\+address $>$ \&}]{seed\+\_\+nodes,  }\item[{std\+::string const \&}]{addr,  }\item[{uint16\+\_\+t}]{default\+\_\+port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacenodetool_a98a2d31ce90dc5b190338095f269f545}\label{namespacenodetool_a98a2d31ce90dc5b190338095f269f545}} 
+\index{nodetool@{nodetool}!get\_anonymous\_inbounds@{get\_anonymous\_inbounds}}
+\index{get\_anonymous\_inbounds@{get\_anonymous\_inbounds}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{get\_anonymous\_inbounds()}{get\_anonymous\_inbounds()}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1anonymous__inbound}{anonymous\+\_\+inbound}} $>$ $>$ nodetool\+::get\+\_\+anonymous\+\_\+inbounds (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::variables\+\_\+map const \&}]{vm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_a6a73bbc18c2c9bd173814bb5da760647}\label{namespacenodetool_a6a73bbc18c2c9bd173814bb5da760647}} 
+\index{nodetool@{nodetool}!get\_proxies@{get\_proxies}}
+\index{get\_proxies@{get\_proxies}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{get\_proxies()}{get\_proxies()}}
+{\footnotesize\ttfamily std\+::optional$<$ std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1proxy}{proxy}} $>$ $>$ nodetool\+::get\+\_\+proxies (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::variables\+\_\+map const \&}]{vm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_a14f9b9f859e8362e20e818b823a20546}\label{namespacenodetool_a14f9b9f859e8362e20e818b823a20546}} 
+\index{nodetool@{nodetool}!is\_filtered\_command@{is\_filtered\_command}}
+\index{is\_filtered\_command@{is\_filtered\_command}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{is\_filtered\_command()}{is\_filtered\_command()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::is\+\_\+filtered\+\_\+command (\begin{DoxyParamCaption}\item[{epee\+::net\+\_\+utils\+::network\+\_\+address const \&}]{address,  }\item[{int}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+True if {\ttfamily commnd} is filtered (ignored/dropped) for {\ttfamily address} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenodetool_ab47eb839fe5b0ba81de3299eee4c7246}\label{namespacenodetool_ab47eb839fe5b0ba81de3299eee4c7246}} 
+\index{nodetool@{nodetool}!KV\_SERIALIZE\_VALUE@{KV\_SERIALIZE\_VALUE}}
+\index{KV\_SERIALIZE\_VALUE@{KV\_SERIALIZE\_VALUE}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{KV\_SERIALIZE\_VALUE()}{KV\_SERIALIZE\_VALUE()}}
+{\footnotesize\ttfamily nodetool\+::\+K\+V\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+E\+\_\+\+V\+A\+L\+UE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacenodetool_a3c3550fbd075f8a6d9de09c751288b50}{rpc\+\_\+port}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_a2fa8a836747eb38070a3078212cf8861}\label{namespacenodetool_a2fa8a836747eb38070a3078212cf8861}} 
+\index{nodetool@{nodetool}!peerid\_to\_string@{peerid\_to\_string}}
+\index{peerid\_to\_string@{peerid\_to\_string}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{peerid\_to\_string()}{peerid\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string nodetool\+::peerid\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}}}]{peer\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacenodetool_a7cce77a12f92c0d09e46728f89f9cfef}\label{namespacenodetool_a7cce77a12f92c0d09e46728f89f9cfef}} 
+\index{nodetool@{nodetool}!print\_peerlist\_to\_string@{print\_peerlist\_to\_string}}
+\index{print\_peerlist\_to\_string@{print\_peerlist\_to\_string}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{print\_peerlist\_to\_string()}{print\_peerlist\_to\_string()}}
+{\footnotesize\ttfamily std\+::string nodetool\+::print\+\_\+peerlist\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&}]{pl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_aaca376d3a1650751d40451346e2d45fb}\label{namespacenodetool_aaca376d3a1650751d40451346e2d45fb}} 
+\index{nodetool@{nodetool}!serialize@{serialize}}
+\index{serialize@{serialize}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Archive $>$ \\
+void nodetool\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{a,  }\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__join}{peerlist\+\_\+join}}}]{elem,  }\item[{unsigned}]{ver }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_a5f48804da168686e9616a55019dfbf73}\label{namespacenodetool_a5f48804da168686e9616a55019dfbf73}} 
+\index{nodetool@{nodetool}!serialize@{serialize}}
+\index{serialize@{serialize}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Archive $>$ \\
+void nodetool\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{a,  }\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&}]{elem,  }\item[{unsigned}]{ver }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenodetool_a8b3c1de4475dc1a6e318d7f3fec820a4}\label{namespacenodetool_a8b3c1de4475dc1a6e318d7f3fec820a4}} 
+\index{nodetool@{nodetool}!socks\_connect\_internal@{socks\_connect\_internal}}
+\index{socks\_connect\_internal@{socks\_connect\_internal}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{socks\_connect\_internal()}{socks\_connect\_internal()}}
+{\footnotesize\ttfamily std\+::optional$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ nodetool\+::socks\+\_\+connect\+\_\+internal (\begin{DoxyParamCaption}\item[{const std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&}]{stop\+\_\+signal,  }\item[{boost\+::asio\+::io\+\_\+service \&}]{service,  }\item[{const boost\+::asio\+::ip\+::tcp\+::endpoint \&}]{proxy,  }\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{remote }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacenodetool_aad89321d651fe9d9deed2381c70e2bf4}\label{namespacenodetool_aad89321d651fe9d9deed2381c70e2bf4}} 
+\index{nodetool@{nodetool}!arg\_anonymous\_inbound@{arg\_anonymous\_inbound}}
+\index{arg\_anonymous\_inbound@{arg\_anonymous\_inbound}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_anonymous\_inbound}{arg\_anonymous\_inbound}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+anonymous\+\_\+inbound = \{\char`\"{}anonymous-\/inbound\char`\"{}, \char`\"{}$<$hidden-\/service-\/address$>$,$<$\mbox{[}bind-\/ip\+:\mbox{]}port$>$\mbox{[},max\+\_\+connections\mbox{]} i.\+e. \textbackslash{}\char`\"{}x.\+onion,127.\+0.\+0.\+1\+:18083,100\textbackslash{}\char`\"{}\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_acc79ccd38eff9496e4882f0ebedcf86b}\label{namespacenodetool_acc79ccd38eff9496e4882f0ebedcf86b}} 
+\index{nodetool@{nodetool}!arg\_igd@{arg\_igd}}
+\index{arg\_igd@{arg\_igd}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_igd}{arg\_igd}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ nodetool\+::arg\+\_\+igd = \{\char`\"{}igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}, \char`\"{}\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_acffcbbfe1907ac04b0a97fdbdeab57de}\label{namespacenodetool_acffcbbfe1907ac04b0a97fdbdeab57de}} 
+\index{nodetool@{nodetool}!arg\_in\_peers@{arg\_in\_peers}}
+\index{arg\_in\_peers@{arg\_in\_peers}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_in\_peers}{arg\_in\_peers}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ nodetool\+::arg\+\_\+in\+\_\+peers = \{\char`\"{}in-\/peers\char`\"{}, \char`\"{}set max number of in peers\char`\"{}, -\/1\}}
+
+\mbox{\Hypertarget{namespacenodetool_a57ac7ce88f3d1a23b31d0172f2cfd039}\label{namespacenodetool_a57ac7ce88f3d1a23b31d0172f2cfd039}} 
+\index{nodetool@{nodetool}!arg\_limit\_rate@{arg\_limit\_rate}}
+\index{arg\_limit\_rate@{arg\_limit\_rate}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_limit\_rate}{arg\_limit\_rate}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ nodetool\+::arg\+\_\+limit\+\_\+rate = \{\char`\"{}limit-\/rate\char`\"{}, \char`\"{}set limit-\/rate \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, -\/1\}}
+
+\mbox{\Hypertarget{namespacenodetool_a914dbd25213aa3c0dc14f821156e72a9}\label{namespacenodetool_a914dbd25213aa3c0dc14f821156e72a9}} 
+\index{nodetool@{nodetool}!arg\_limit\_rate\_down@{arg\_limit\_rate\_down}}
+\index{arg\_limit\_rate\_down@{arg\_limit\_rate\_down}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_limit\_rate\_down}{arg\_limit\_rate\_down}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ nodetool\+::arg\+\_\+limit\+\_\+rate\+\_\+down = \{\char`\"{}limit-\/rate-\/down\char`\"{}, \char`\"{}set limit-\/rate-\/down \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+D\+O\+WN\}}
+
+\mbox{\Hypertarget{namespacenodetool_a99004fc103d8d58b34e258c9f9611286}\label{namespacenodetool_a99004fc103d8d58b34e258c9f9611286}} 
+\index{nodetool@{nodetool}!arg\_limit\_rate\_up@{arg\_limit\_rate\_up}}
+\index{arg\_limit\_rate\_up@{arg\_limit\_rate\_up}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_limit\_rate\_up}{arg\_limit\_rate\_up}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ nodetool\+::arg\+\_\+limit\+\_\+rate\+\_\+up = \{\char`\"{}limit-\/rate-\/up\char`\"{}, \char`\"{}set limit-\/rate-\/up \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+UP\}}
+
+\mbox{\Hypertarget{namespacenodetool_a496a6f567359c35550fddc645a29f2af}\label{namespacenodetool_a496a6f567359c35550fddc645a29f2af}} 
+\index{nodetool@{nodetool}!arg\_no\_igd@{arg\_no\_igd}}
+\index{arg\_no\_igd@{arg\_no\_igd}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_no\_igd}{arg\_no\_igd}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+no\+\_\+igd = \{\char`\"{}no-\/igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a612d217340851779ae52933343745951}\label{namespacenodetool_a612d217340851779ae52933343745951}} 
+\index{nodetool@{nodetool}!arg\_no\_sync@{arg\_no\_sync}}
+\index{arg\_no\_sync@{arg\_no\_sync}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_no\_sync}{arg\_no\_sync}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+no\+\_\+sync = \{\char`\"{}no-\/sync\char`\"{}, \char`\"{}Don\textquotesingle{}t synchronize the blockchain with other peers\char`\"{}, false\}}
+
+\mbox{\Hypertarget{namespacenodetool_a365ed8b98523fdab3e73bedfef9ce487}\label{namespacenodetool_a365ed8b98523fdab3e73bedfef9ce487}} 
+\index{nodetool@{nodetool}!arg\_offline@{arg\_offline}}
+\index{arg\_offline@{arg\_offline}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_offline}{arg\_offline}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ nodetool\+::arg\+\_\+offline}
+
+\mbox{\Hypertarget{namespacenodetool_ab6f136cba233c65333f3926651d14c42}\label{namespacenodetool_ab6f136cba233c65333f3926651d14c42}} 
+\index{nodetool@{nodetool}!arg\_out\_peers@{arg\_out\_peers}}
+\index{arg\_out\_peers@{arg\_out\_peers}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_out\_peers}{arg\_out\_peers}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ nodetool\+::arg\+\_\+out\+\_\+peers = \{\char`\"{}out-\/peers\char`\"{}, \char`\"{}set max number of out peers\char`\"{}, -\/1\}}
+
+\mbox{\Hypertarget{namespacenodetool_afeba6dded72414c0010bb7a3f02be672}\label{namespacenodetool_afeba6dded72414c0010bb7a3f02be672}} 
+\index{nodetool@{nodetool}!arg\_p2p\_add\_exclusive\_node@{arg\_p2p\_add\_exclusive\_node}}
+\index{arg\_p2p\_add\_exclusive\_node@{arg\_p2p\_add\_exclusive\_node}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_add\_exclusive\_node}{arg\_p2p\_add\_exclusive\_node}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+exclusive\+\_\+node}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{"add-\/exclusive-\/node"}, \textcolor{stringliteral}{"Specify list of peers to connect to only."}}
+\DoxyCodeLine{                                                                                                  \textcolor{stringliteral}{" If this option is given the options add-\/priority-\/node and seed-\/node are ignored"}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacenodetool_af4e8feaa715ebe4d9353734e5758ab14}\label{namespacenodetool_af4e8feaa715ebe4d9353734e5758ab14}} 
+\index{nodetool@{nodetool}!arg\_p2p\_add\_peer@{arg\_p2p\_add\_peer}}
+\index{arg\_p2p\_add\_peer@{arg\_p2p\_add\_peer}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_add\_peer}{arg\_p2p\_add\_peer}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+peer = \{\char`\"{}add-\/peer\char`\"{}, \char`\"{}Manually add peer to local peerlist\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a0947f93bce867be82bef6ad491bfd2a2}\label{namespacenodetool_a0947f93bce867be82bef6ad491bfd2a2}} 
+\index{nodetool@{nodetool}!arg\_p2p\_add\_priority\_node@{arg\_p2p\_add\_priority\_node}}
+\index{arg\_p2p\_add\_priority\_node@{arg\_p2p\_add\_priority\_node}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_add\_priority\_node}{arg\_p2p\_add\_priority\_node}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+priority\+\_\+node = \{\char`\"{}add-\/priority-\/node\char`\"{}, \char`\"{}Specify list of peers to connect to and attempt to keep the connection \mbox{\hyperlink{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}{open}}\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a8b8b8897cc0a9edc880db3dbd06d7f0b}\label{namespacenodetool_a8b8b8897cc0a9edc880db3dbd06d7f0b}} 
+\index{nodetool@{nodetool}!arg\_p2p\_allow\_local\_ip@{arg\_p2p\_allow\_local\_ip}}
+\index{arg\_p2p\_allow\_local\_ip@{arg\_p2p\_allow\_local\_ip}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_allow\_local\_ip}{arg\_p2p\_allow\_local\_ip}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+p2p\+\_\+allow\+\_\+local\+\_\+ip = \{\char`\"{}allow-\/local-\/ip\char`\"{}, \char`\"{}Allow local ip add to peer list, mostly in debug purposes\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a98cca054b036f78d94ab17dbe9703378}\label{namespacenodetool_a98cca054b036f78d94ab17dbe9703378}} 
+\index{nodetool@{nodetool}!arg\_p2p\_bind\_ip@{arg\_p2p\_bind\_ip}}
+\index{arg\_p2p\_bind\_ip@{arg\_p2p\_bind\_ip}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_bind\_ip}{arg\_p2p\_bind\_ip}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+ip = \{\char`\"{}p2p-\/bind-\/ip\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv4)\char`\"{}, \char`\"{}0.\+0.\+0.\+0\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_ab6ea6aebc74dd853fe539969c114ab1c}\label{namespacenodetool_ab6ea6aebc74dd853fe539969c114ab1c}} 
+\index{nodetool@{nodetool}!arg\_p2p\_bind\_ipv6\_address@{arg\_p2p\_bind\_ipv6\_address}}
+\index{arg\_p2p\_bind\_ipv6\_address@{arg\_p2p\_bind\_ipv6\_address}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_bind\_ipv6\_address}{arg\_p2p\_bind\_ipv6\_address}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+ipv6\+\_\+address = \{\char`\"{}p2p-\/bind-\/ipv6-\/address\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv6)\char`\"{}, \char`\"{}\+::\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a5e7c990554f759bcb3cf814d367e31a1}\label{namespacenodetool_a5e7c990554f759bcb3cf814d367e31a1}} 
+\index{nodetool@{nodetool}!arg\_p2p\_bind\_port@{arg\_p2p\_bind\_port}}
+\index{arg\_p2p\_bind\_port@{arg\_p2p\_bind\_port}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_bind\_port}{arg\_p2p\_bind\_port}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+port}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"p2p-\/bind-\/port"}}
+\DoxyCodeLine{      , \textcolor{stringliteral}{"Port for p2p network protocol (IPv4)"}}
+\DoxyCodeLine{      , \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_a4d53eabd43b71e905bbb1625d772dfe9}{cryptonote::config::P2P\_DEFAULT\_PORT}})}
+\DoxyCodeLine{      , \{\{ \&\mbox{\hyperlink{namespacecryptonote_a6efc06bfd96ed447b2aff3b08c42b4d5}{cryptonote::arg\_testnet\_on}}, \&\mbox{\hyperlink{namespacecryptonote_adb4943fca61ebc24195f19b01806e3f5}{cryptonote::arg\_devnet\_on}} \}\}}
+\DoxyCodeLine{      , [](std::array<bool, 2> testnet\_devnet, \textcolor{keywordtype}{bool} defaulted, std::string val)-\/>std::string \{}
+\DoxyCodeLine{          \textcolor{keyword}{auto} [testnet, devnet] = testnet\_devnet;}
+\DoxyCodeLine{          \textcolor{keywordflow}{if} (testnet \&\& defaulted)}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_af7c55383458acb5fbe6f299de801530c}{cryptonote::config::testnet::P2P\_DEFAULT\_PORT}});}
+\DoxyCodeLine{          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (testnet\_devnet[1] \&\& defaulted)}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_ae00a8e94600459e0c0f1f699bad7d77a}{cryptonote::config::devnet::P2P\_DEFAULT\_PORT}});}
+\DoxyCodeLine{          \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacenodetool_ab8edd80efc0d9c61880703224b0862e3}\label{namespacenodetool_ab8edd80efc0d9c61880703224b0862e3}} 
+\index{nodetool@{nodetool}!arg\_p2p\_bind\_port\_ipv6@{arg\_p2p\_bind\_port\_ipv6}}
+\index{arg\_p2p\_bind\_port\_ipv6@{arg\_p2p\_bind\_port\_ipv6}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_bind\_port\_ipv6}{arg\_p2p\_bind\_port\_ipv6}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+port\+\_\+ipv6}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"p2p-\/bind-\/port-\/ipv6"}}
+\DoxyCodeLine{      , \textcolor{stringliteral}{"Port for p2p network protocol (IPv6)"}}
+\DoxyCodeLine{      , \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_a4d53eabd43b71e905bbb1625d772dfe9}{cryptonote::config::P2P\_DEFAULT\_PORT}})}
+\DoxyCodeLine{      , \{\{ \&\mbox{\hyperlink{namespacecryptonote_a6efc06bfd96ed447b2aff3b08c42b4d5}{cryptonote::arg\_testnet\_on}}, \&\mbox{\hyperlink{namespacecryptonote_adb4943fca61ebc24195f19b01806e3f5}{cryptonote::arg\_devnet\_on}} \}\}}
+\DoxyCodeLine{      , [](std::array<bool, 2> testnet\_devnet, \textcolor{keywordtype}{bool} defaulted, std::string val)-\/>std::string \{}
+\DoxyCodeLine{          \textcolor{keywordflow}{if} (testnet\_devnet[0] \&\& defaulted)}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_af7c55383458acb5fbe6f299de801530c}{cryptonote::config::testnet::P2P\_DEFAULT\_PORT}});}
+\DoxyCodeLine{          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (testnet\_devnet[1] \&\& defaulted)}
+\DoxyCodeLine{            \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_ae00a8e94600459e0c0f1f699bad7d77a}{cryptonote::config::devnet::P2P\_DEFAULT\_PORT}});}
+\DoxyCodeLine{          \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{      \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacenodetool_a26b36b1d298ae4c3531a666faa098ec5}\label{namespacenodetool_a26b36b1d298ae4c3531a666faa098ec5}} 
+\index{nodetool@{nodetool}!arg\_p2p\_external\_port@{arg\_p2p\_external\_port}}
+\index{arg\_p2p\_external\_port@{arg\_p2p\_external\_port}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_external\_port}{arg\_p2p\_external\_port}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ nodetool\+::arg\+\_\+p2p\+\_\+external\+\_\+port = \{\char`\"{}p2p-\/external-\/port\char`\"{}, \char`\"{}External port \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (\mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}} port forwarding used with N\+AT)\char`\"{}, 0\}}
+
+\mbox{\Hypertarget{namespacenodetool_abb1ebf6698fb85a4fdfb14a9980acab9}\label{namespacenodetool_abb1ebf6698fb85a4fdfb14a9980acab9}} 
+\index{nodetool@{nodetool}!arg\_p2p\_hide\_my\_port@{arg\_p2p\_hide\_my\_port}}
+\index{arg\_p2p\_hide\_my\_port@{arg\_p2p\_hide\_my\_port}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_hide\_my\_port}{arg\_p2p\_hide\_my\_port}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+p2p\+\_\+hide\+\_\+my\+\_\+port = \{\char`\"{}hide-\/my-\/port\char`\"{}, \char`\"{}Do not announce yourself as peerlist candidate\char`\"{}, false, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\}}
+
+\mbox{\Hypertarget{namespacenodetool_abb31865f18191a75181846f661cab49f}\label{namespacenodetool_abb31865f18191a75181846f661cab49f}} 
+\index{nodetool@{nodetool}!arg\_p2p\_ignore\_ipv4@{arg\_p2p\_ignore\_ipv4}}
+\index{arg\_p2p\_ignore\_ipv4@{arg\_p2p\_ignore\_ipv4}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_ignore\_ipv4}{arg\_p2p\_ignore\_ipv4}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+p2p\+\_\+ignore\+\_\+ipv4 = \{\char`\"{}p2p-\/ignore-\/ipv4\char`\"{}, \char`\"{}Ignore unsuccessful I\+Pv4 bind \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}}
+
+\mbox{\Hypertarget{namespacenodetool_aeb51026a051e5d5929efe0d7ff0eb9d6}\label{namespacenodetool_aeb51026a051e5d5929efe0d7ff0eb9d6}} 
+\index{nodetool@{nodetool}!arg\_p2p\_seed\_node@{arg\_p2p\_seed\_node}}
+\index{arg\_p2p\_seed\_node@{arg\_p2p\_seed\_node}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_seed\_node}{arg\_p2p\_seed\_node}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+p2p\+\_\+seed\+\_\+node = \{\char`\"{}seed-\/node\char`\"{}, \char`\"{}Connect to a node to retrieve peer addresses, and disconnect\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_a6fae1026a1cc6bff9f216c355992a943}\label{namespacenodetool_a6fae1026a1cc6bff9f216c355992a943}} 
+\index{nodetool@{nodetool}!arg\_p2p\_use\_ipv6@{arg\_p2p\_use\_ipv6}}
+\index{arg\_p2p\_use\_ipv6@{arg\_p2p\_use\_ipv6}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_p2p\_use\_ipv6}{arg\_p2p\_use\_ipv6}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ nodetool\+::arg\+\_\+p2p\+\_\+use\+\_\+ipv6 = \{\char`\"{}p2p-\/use-\/ipv6\char`\"{}, \char`\"{}Enable I\+Pv6 \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}}
+
+\mbox{\Hypertarget{namespacenodetool_a1d4310f98ca38e530c7f3ab8392d7b0c}\label{namespacenodetool_a1d4310f98ca38e530c7f3ab8392d7b0c}} 
+\index{nodetool@{nodetool}!arg\_tos\_flag@{arg\_tos\_flag}}
+\index{arg\_tos\_flag@{arg\_tos\_flag}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_tos\_flag}{arg\_tos\_flag}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int $>$ nodetool\+::arg\+\_\+tos\+\_\+flag = \{\char`\"{}tos-\/flag\char`\"{}, \char`\"{}set T\+OS flag\char`\"{}, -\/1\}}
+
+\mbox{\Hypertarget{namespacenodetool_a52e9f47f76f61f85461bf28441dd882b}\label{namespacenodetool_a52e9f47f76f61f85461bf28441dd882b}} 
+\index{nodetool@{nodetool}!arg\_tx\_proxy@{arg\_tx\_proxy}}
+\index{arg\_tx\_proxy@{arg\_tx\_proxy}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{arg\_tx\_proxy}{arg\_tx\_proxy}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ nodetool\+::arg\+\_\+tx\+\_\+proxy = \{\char`\"{}tx-\/\mbox{\hyperlink{structnodetool_1_1proxy}{proxy}}\char`\"{}, \char`\"{}Send local txes through proxy\+: $<$network-\/type$>$,$<$socks-\/ip\+:port$>$\mbox{[},max\+\_\+connections\mbox{]}\mbox{[},disable\+\_\+noise\mbox{]} i.\+e. \textbackslash{}\char`\"{}tor,127.\+0.\+0.\+1\+:9050,100,disable\+\_\+noise\textbackslash{}\char`\"{}\char`\"{}\}}
+
+\mbox{\Hypertarget{namespacenodetool_ac03de3745c273560e26bce6b06bb7310}\label{namespacenodetool_ac03de3745c273560e26bce6b06bb7310}} 
+\index{nodetool@{nodetool}!logcat@{logcat}}
+\index{logcat@{logcat}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto nodetool\+::logcat = log\+::\+Cat(\char`\"{}net.\+p2p\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacenodetool_a81e6774bfd6f8a652d6a0dbf49d97932}\label{namespacenodetool_a81e6774bfd6f8a652d6a0dbf49d97932}} 
+\index{nodetool@{nodetool}!P2P\_COMMANDS\_POOL\_BASE@{P2P\_COMMANDS\_POOL\_BASE}}
+\index{P2P\_COMMANDS\_POOL\_BASE@{P2P\_COMMANDS\_POOL\_BASE}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{P2P\_COMMANDS\_POOL\_BASE}{P2P\_COMMANDS\_POOL\_BASE}}
+{\footnotesize\ttfamily constexpr int nodetool\+::\+P2\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+S\+\_\+\+P\+O\+O\+L\+\_\+\+B\+A\+SE = 1000\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacenodetool_a3c3550fbd075f8a6d9de09c751288b50}\label{namespacenodetool_a3c3550fbd075f8a6d9de09c751288b50}} 
+\index{nodetool@{nodetool}!rpc\_port@{rpc\_port}}
+\index{rpc\_port@{rpc\_port}!nodetool@{nodetool}}
+\doxysubsubsection{\texorpdfstring{rpc\_port}{rpc\_port}}
+{\footnotesize\ttfamily uint16\+\_\+t nodetool\+::rpc\+\_\+port = 0}
+

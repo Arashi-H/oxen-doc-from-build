@@ -1,0 +1,62 @@
+\hypertarget{lmq__server_8cpp}{}\doxysection{src/rpc/lmq\+\_\+server.cpp File Reference}
+\label{lmq__server_8cpp}\index{src/rpc/lmq\_server.cpp@{src/rpc/lmq\_server.cpp}}
+{\ttfamily \#include \char`\"{}lmq\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/param\+\_\+parser.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/bt.\+h$>$}\newline
+{\ttfamily \#include $<$oxenmq/oxenmq.\+h$>$}\newline
+{\ttfamily \#include $<$oxenmq/fmt.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+Include dependency graph for lmq\+\_\+server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lmq__server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a4cd67c46278e78ba8c900c478857efd3}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::check\+\_\+omq\+\_\+listen\+\_\+addr}} (std\+::string\+\_\+view addr)
+\item 
+auto \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a490744898bdf7829560f00d75b1804e4}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::as\+\_\+x\+\_\+pubkeys}} (const std\+::vector$<$ std\+::string $>$ \&pk\+\_\+strings)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a79a0b5c9c32fe9e270366445e0afa366}{cryptonote\+::rpc\+::init\+\_\+omq\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc)
+\item 
+{\footnotesize template$<$typename Mutex , typename Subs , typename Call $>$ }\\static void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a00e7543f76b4cd16cf82b18905c02e46}{cryptonote\+::rpc\+::send\+\_\+notifies}} (Mutex \&mutex, Subs \&subs, const char $\ast$desc, Call call)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_af9faa1eec03895a69570e428aff19106}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}daemon.\+rpc\char`\"{})
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a38637d60731fa05e45eff470c71ff48c}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+public}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_ad8efbd3deeb9aae4b27458093c30daa0}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+curve\+\_\+public}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a2293414feb88b1d93227403ea23ece59}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+curve}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a561a48ac0467027725d04f98f31384c1}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+admin}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a119c9ebb5d2f4fcbf9c9e0f7a3423757}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+user}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_aa0dfb2b4cfdeaa55803570b9ffb2a91b}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+local\+\_\+control}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a50d873ea4445f44dd92e9221341d3c5a}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::arg\+\_\+omq\+\_\+umask}}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a7fdb1f427e722fe6767a043611debc9e}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::\+L\+M\+Q\+\_\+\+OK}} \{\char`\"{}200\char`\"{}sv\}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_a2ec06cb1553799825660a28f33d1cce4}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::\+L\+M\+Q\+\_\+\+B\+A\+D\+\_\+\+R\+E\+Q\+U\+E\+ST}} \{\char`\"{}400\char`\"{}sv\}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02lmq__server_8cpp_03_aaf4b7fc280c2297519703020a8f243b3}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{lmq\+\_\+server.\+cpp\}\+::\+L\+M\+Q\+\_\+\+E\+R\+R\+OR}} \{\char`\"{}500\char`\"{}sv\}
+\end{DoxyCompactItemize}

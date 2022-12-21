@@ -1,0 +1,139 @@
+\hypertarget{classoxen_1_1logging_1_1dev__sink}{}\doxysection{oxen\+::logging\+::dev\+\_\+sink$<$ Mutex $>$ Class Template Reference}
+\label{classoxen_1_1logging_1_1dev__sink}\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+
+
+{\ttfamily \#include $<$dev\+\_\+sink.\+h$>$}
+
+
+
+Inheritance diagram for oxen\+::logging\+::dev\+\_\+sink$<$ Mutex $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classoxen_1_1logging_1_1dev__sink__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for oxen\+::logging\+::dev\+\_\+sink$<$ Mutex $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classoxen_1_1logging_1_1dev__sink__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a2580cb7e6534170818b2cf22bf7e4cb2}{dev\+\_\+sink}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a29c19dfac5eab9fad3472d0a60794526}{peek}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_aae39971bfa8c38422e2043179719c8f0}{sink\+\_\+it\+\_\+}} (const spdlog\+::details\+::log\+\_\+msg \&msg) override
+\item 
+void \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a043ca31743bc0e9c02eeeaf846bbf716}{flush\+\_\+}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a0caeb76fd69207936e514d7a67a0fae9}{Base}} = spdlog\+::sinks\+::base\+\_\+sink$<$ Mutex $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_acda3d691a2790acacbf522f2b7876714}{primary\+\_\+buffer\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a0c307675779a0a141cd0c62cdd43036d}{secondary\+\_\+buffer\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_abe76ed66d2a9d39748ab7798737a2a8e}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} = 100
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_ad3e7b76e003260139d5724cd2b767f5e}{M\+A\+X\+\_\+\+E\+N\+T\+R\+I\+ES}} = 2 $\ast$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_abe76ed66d2a9d39748ab7798737a2a8e}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_a0caeb76fd69207936e514d7a67a0fae9}\label{classoxen_1_1logging_1_1dev__sink_a0caeb76fd69207936e514d7a67a0fae9}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!Base@{Base}}
+\index{Base@{Base}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{Base}{Base}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+using \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::\mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_a0caeb76fd69207936e514d7a67a0fae9}{Base}} =  spdlog\+::sinks\+::base\+\_\+sink$<$Mutex$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_a2580cb7e6534170818b2cf22bf7e4cb2}\label{classoxen_1_1logging_1_1dev__sink_a2580cb7e6534170818b2cf22bf7e4cb2}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!dev\_sink@{dev\_sink}}
+\index{dev\_sink@{dev\_sink}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{dev\_sink()}{dev\_sink()}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+\mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::\mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{dev\+\_\+sink}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_a043ca31743bc0e9c02eeeaf846bbf716}\label{classoxen_1_1logging_1_1dev__sink_a043ca31743bc0e9c02eeeaf846bbf716}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!flush\_@{flush\_}}
+\index{flush\_@{flush\_}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{flush\_()}{flush\_()}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+void \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::flush\+\_\+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_a29c19dfac5eab9fad3472d0a60794526}\label{classoxen_1_1logging_1_1dev__sink_a29c19dfac5eab9fad3472d0a60794526}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!peek@{peek}}
+\index{peek@{peek}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_aae39971bfa8c38422e2043179719c8f0}\label{classoxen_1_1logging_1_1dev__sink_aae39971bfa8c38422e2043179719c8f0}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!sink\_it\_@{sink\_it\_}}
+\index{sink\_it\_@{sink\_it\_}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{sink\_it\_()}{sink\_it\_()}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+void \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::sink\+\_\+it\+\_\+ (\begin{DoxyParamCaption}\item[{const spdlog\+::details\+::log\+\_\+msg \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_abe76ed66d2a9d39748ab7798737a2a8e}\label{classoxen_1_1logging_1_1dev__sink_abe76ed66d2a9d39748ab7798737a2a8e}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+constexpr size\+\_\+t \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE = 100\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_ad3e7b76e003260139d5724cd2b767f5e}\label{classoxen_1_1logging_1_1dev__sink_ad3e7b76e003260139d5724cd2b767f5e}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!MAX\_ENTRIES@{MAX\_ENTRIES}}
+\index{MAX\_ENTRIES@{MAX\_ENTRIES}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{MAX\_ENTRIES}{MAX\_ENTRIES}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+constexpr size\+\_\+t \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::M\+A\+X\+\_\+\+E\+N\+T\+R\+I\+ES = 2 $\ast$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink_abe76ed66d2a9d39748ab7798737a2a8e}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_acda3d691a2790acacbf522f2b7876714}\label{classoxen_1_1logging_1_1dev__sink_acda3d691a2790acacbf522f2b7876714}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!primary\_buffer\_@{primary\_buffer\_}}
+\index{primary\_buffer\_@{primary\_buffer\_}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{primary\_buffer\_}{primary\_buffer\_}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::primary\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classoxen_1_1logging_1_1dev__sink_a0c307675779a0a141cd0c62cdd43036d}\label{classoxen_1_1logging_1_1dev__sink_a0c307675779a0a141cd0c62cdd43036d}} 
+\index{oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}!secondary\_buffer\_@{secondary\_buffer\_}}
+\index{secondary\_buffer\_@{secondary\_buffer\_}!oxen::logging::dev\_sink$<$ Mutex $>$@{oxen::logging::dev\_sink$<$ Mutex $>$}}
+\doxysubsubsection{\texorpdfstring{secondary\_buffer\_}{secondary\_buffer\_}}
+{\footnotesize\ttfamily template$<$typename Mutex $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classoxen_1_1logging_1_1dev__sink}{oxen\+::logging\+::dev\+\_\+sink}}$<$ Mutex $>$\+::secondary\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/logging/\mbox{\hyperlink{dev__sink_8h}{dev\+\_\+sink.\+h}}\end{DoxyCompactItemize}

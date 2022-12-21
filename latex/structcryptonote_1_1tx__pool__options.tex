@@ -1,0 +1,157 @@
+\hypertarget{structcryptonote_1_1tx__pool__options}{}\doxysection{cryptonote\+::tx\+\_\+pool\+\_\+options Struct Reference}
+\label{structcryptonote_1_1tx__pool__options}\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+
+
+Argument passed into add\+\_\+tx specifying different requires on the transaction.  
+
+
+
+
+{\ttfamily \#include $<$tx\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::tx\+\_\+pool\+\_\+options\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{structcryptonote_1_1tx__pool__options__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a0f0cbf38cc22fed0c1e3e70d640e1371}{from\+\_\+block}} ()
+\item 
+static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a15127e16e6c8bf5e05adaeae2c962caf}{from\+\_\+peer}} ()
+\item 
+static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a06edb4320ccd38f29c4bd2e71c71ac8e}{new\+\_\+tx}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a52a32f2f88cf6ab332c7d68e2e9a87d5}{do\+\_\+not\+\_\+relay}}=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a3ca45a26f8f898479419592e10107a39}{new\+\_\+blink}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} approved, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}} hf\+\_\+version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a502d8fed21226db749415ed7415fc4ce}{kept\+\_\+by\+\_\+block}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em has this transaction been in a block? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a79af50e6ab702ec22ad69226ee87f00f}{relayed}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em was this transaction from the network or a local client? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a52a32f2f88cf6ab332c7d68e2e9a87d5}{do\+\_\+not\+\_\+relay}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em to avoid relaying the transaction to the network \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a42c4a7b63dd11fc42f402616bf23873c}{approved\+\_\+blink}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em signals that this is a blink tx and so should be accepted even if it conflicts with mempool or recent txes in non-\/immutable block; typically specified indirectly (via \mbox{\hyperlink{classcryptonote_1_1core_a79aedc53369f0be0b99ed1e5f04e7abf}{core.\+handle\+\_\+incoming\+\_\+txs()}}) \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a7c1a40ecfb16d900666993ada499513d}{fee\+\_\+percent}} = 100
+\begin{DoxyCompactList}\small\item\em the required miner tx fee in percent relative to the base required miner tx fee; must be $>$= 100. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_aa5579d05844f4e0fe4b49b6a07ad9dd5}{burn\+\_\+fixed}} = 0
+\begin{DoxyCompactList}\small\item\em a required minimum amount that must be burned (in atomic currency) \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__pool__options_a46c251121834a7f3627b64a887ae0fb2}{burn\+\_\+percent}} = 0
+\begin{DoxyCompactList}\small\item\em a required amount as a percentage of the base required miner tx fee that must be burned (additive with burn\+\_\+fixed, if both $>$ 0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Argument passed into add\+\_\+tx specifying different requires on the transaction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a0f0cbf38cc22fed0c1e3e70d640e1371}\label{structcryptonote_1_1tx__pool__options_a0f0cbf38cc22fed0c1e3e70d640e1371}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!from\_block@{from\_block}}
+\index{from\_block@{from\_block}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{from\_block()}{from\_block()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::from\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a15127e16e6c8bf5e05adaeae2c962caf}\label{structcryptonote_1_1tx__pool__options_a15127e16e6c8bf5e05adaeae2c962caf}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!from\_peer@{from\_peer}}
+\index{from\_peer@{from\_peer}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{from\_peer()}{from\_peer()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::from\+\_\+peer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a3ca45a26f8f898479419592e10107a39}\label{structcryptonote_1_1tx__pool__options_a3ca45a26f8f898479419592e10107a39}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!new\_blink@{new\_blink}}
+\index{new\_blink@{new\_blink}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{new\_blink()}{new\_blink()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::new\+\_\+blink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{approved,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{hf}}}]{hf\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a06edb4320ccd38f29c4bd2e71c71ac8e}\label{structcryptonote_1_1tx__pool__options_a06edb4320ccd38f29c4bd2e71c71ac8e}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!new\_tx@{new\_tx}}
+\index{new\_tx@{new\_tx}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{new\_tx()}{new\_tx()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::new\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{do\+\_\+not\+\_\+relay = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a42c4a7b63dd11fc42f402616bf23873c}\label{structcryptonote_1_1tx__pool__options_a42c4a7b63dd11fc42f402616bf23873c}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!approved\_blink@{approved\_blink}}
+\index{approved\_blink@{approved\_blink}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{approved\_blink}{approved\_blink}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::approved\+\_\+blink = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+signals that this is a blink tx and so should be accepted even if it conflicts with mempool or recent txes in non-\/immutable block; typically specified indirectly (via \mbox{\hyperlink{classcryptonote_1_1core_a79aedc53369f0be0b99ed1e5f04e7abf}{core.\+handle\+\_\+incoming\+\_\+txs()}}) 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_aa5579d05844f4e0fe4b49b6a07ad9dd5}\label{structcryptonote_1_1tx__pool__options_aa5579d05844f4e0fe4b49b6a07ad9dd5}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!burn\_fixed@{burn\_fixed}}
+\index{burn\_fixed@{burn\_fixed}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{burn\_fixed}{burn\_fixed}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+pool\+\_\+options\+::burn\+\_\+fixed = 0}
+
+
+
+a required minimum amount that must be burned (in atomic currency) 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a46c251121834a7f3627b64a887ae0fb2}\label{structcryptonote_1_1tx__pool__options_a46c251121834a7f3627b64a887ae0fb2}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!burn\_percent@{burn\_percent}}
+\index{burn\_percent@{burn\_percent}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{burn\_percent}{burn\_percent}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+pool\+\_\+options\+::burn\+\_\+percent = 0}
+
+
+
+a required amount as a percentage of the base required miner tx fee that must be burned (additive with burn\+\_\+fixed, if both $>$ 0) 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a52a32f2f88cf6ab332c7d68e2e9a87d5}\label{structcryptonote_1_1tx__pool__options_a52a32f2f88cf6ab332c7d68e2e9a87d5}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!do\_not\_relay@{do\_not\_relay}}
+\index{do\_not\_relay@{do\_not\_relay}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{do\_not\_relay}{do\_not\_relay}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::do\+\_\+not\+\_\+relay = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+to avoid relaying the transaction to the network 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a7c1a40ecfb16d900666993ada499513d}\label{structcryptonote_1_1tx__pool__options_a7c1a40ecfb16d900666993ada499513d}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!fee\_percent@{fee\_percent}}
+\index{fee\_percent@{fee\_percent}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{fee\_percent}{fee\_percent}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+pool\+\_\+options\+::fee\+\_\+percent = 100}
+
+
+
+the required miner tx fee in percent relative to the base required miner tx fee; must be $>$= 100. 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a502d8fed21226db749415ed7415fc4ce}\label{structcryptonote_1_1tx__pool__options_a502d8fed21226db749415ed7415fc4ce}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!kept\_by\_block@{kept\_by\_block}}
+\index{kept\_by\_block@{kept\_by\_block}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{kept\_by\_block}{kept\_by\_block}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::kept\+\_\+by\+\_\+block = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+has this transaction been in a block? 
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__pool__options_a79af50e6ab702ec22ad69226ee87f00f}\label{structcryptonote_1_1tx__pool__options_a79af50e6ab702ec22ad69226ee87f00f}} 
+\index{cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}!relayed@{relayed}}
+\index{relayed@{relayed}!cryptonote::tx\_pool\_options@{cryptonote::tx\_pool\_options}}
+\doxysubsubsection{\texorpdfstring{relayed}{relayed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::tx\+\_\+pool\+\_\+options\+::relayed = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+was this transaction from the network or a local client? 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__pool_8h}{tx\+\_\+pool.\+h}}\end{DoxyCompactItemize}

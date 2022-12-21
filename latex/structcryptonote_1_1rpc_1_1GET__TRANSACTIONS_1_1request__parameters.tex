@@ -1,0 +1,73 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+NS\+::request\+\_\+parameters Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters}\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a182bc4df75434ab6823da5f7bad8af47}{tx\+\_\+hashes}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a0f8aac88c172df091ca572ccc5560555}{memory\+\_\+pool}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a91d83859f9018816c9a5c6301b783995}{tx\+\_\+extra}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em If set to true then parse and return tx-\/extra information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_af7a836e8080c6c76c8dfbbf6afb78ba8}{data}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a9d3da79e27862390f28a1be27a3e2efb}{split}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a2a5c7a808441b3443162e7a00016cdfb}{prune}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em Like {\ttfamily split}, but also omits the prunable part of transactions from the response details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_af7a836e8080c6c76c8dfbbf6afb78ba8}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_af7a836e8080c6c76c8dfbbf6afb78ba8}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!data@{data}}
+\index{data@{data}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::data = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}}
+
+Controls whether the {\ttfamily data} (or {\ttfamily pruned}, if pruned) field containing raw tx data is included\+: if explicitly specified then the raw data will be included if true. Otherwise the raw data is included only when neither of {\ttfamily split} nor {\ttfamily prune} are set to true. \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a0f8aac88c172df091ca572ccc5560555}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a0f8aac88c172df091ca572ccc5560555}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!memory\_pool@{memory\_pool}}
+\index{memory\_pool@{memory\_pool}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{memory\_pool}{memory\_pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::memory\+\_\+pool = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+If true then return all transactions and spent key images currently in the memory pool. This field is exclusive of {\ttfamily tx\+\_\+hashes}. \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a2a5c7a808441b3443162e7a00016cdfb}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a2a5c7a808441b3443162e7a00016cdfb}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!prune@{prune}}
+\index{prune@{prune}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{prune}{prune}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::prune = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+Like {\ttfamily split}, but also omits the prunable part of transactions from the response details. 
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a9d3da79e27862390f28a1be27a3e2efb}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a9d3da79e27862390f28a1be27a3e2efb}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!split@{split}}
+\index{split@{split}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{split}{split}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::split = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+If set to true then always split transactions into non-\/prunable and prunable parts in the response. \mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a91d83859f9018816c9a5c6301b783995}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a91d83859f9018816c9a5c6301b783995}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!tx\_extra@{tx\_extra}}
+\index{tx\_extra@{tx\_extra}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{tx\_extra}{tx\_extra}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::tx\+\_\+extra = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+If set to true then parse and return tx-\/extra information. 
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a182bc4df75434ab6823da5f7bad8af47}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters_a182bc4df75434ab6823da5f7bad8af47}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}!tx\_hashes@{tx\_hashes}}
+\index{tx\_hashes@{tx\_hashes}!cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters@{cryptonote::rpc::GET\_TRANSACTIONS::request\_parameters}}
+\doxysubsubsection{\texorpdfstring{tx\_hashes}{tx\_hashes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters\+::tx\+\_\+hashes}
+
+List of transaction hashes to look up. (Will also be accepted as json input key \char`\"{}txs\+\_\+hashes\char`\"{} for backwards compatibility). Exclusive of {\ttfamily memory\+\_\+pool}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

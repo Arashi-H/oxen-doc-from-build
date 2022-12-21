@@ -1,0 +1,663 @@
+\hypertarget{classservice__nodes_1_1service__node__list}{}\doxysection{service\+\_\+nodes\+::service\+\_\+node\+\_\+list Class Reference}
+\label{classservice__nodes_1_1service__node__list}\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+
+
+{\ttfamily \#include $<$service\+\_\+node\+\_\+list.\+h$>$}
+
+
+
+Collaboration diagram for service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classservice__nodes_1_1service__node__list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\+\_\+for\+\_\+serialization}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorum__for__serialization}{quorum\+\_\+for\+\_\+serialization}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorums__by__height}{quorums\+\_\+by\+\_\+height}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__serialized}{state\+\_\+serialized}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\+\_\+set}} = std\+::set$<$ \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}}, std\+::less$<$$>$ $>$
+\item 
+using \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5fe9dac9d66536b61ae163dd8509aa78}{block\+\_\+height}} = uint64\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classservice__nodes_1_1service__node__list_af43e539cc25aebcc4d7e93309c1fb67d}{service\+\_\+node\+\_\+list}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&blockchain)
+\item 
+\mbox{\hyperlink{classservice__nodes_1_1service__node__list_a4fe3d6724e3d31e74ae26becbf196035}{service\+\_\+node\+\_\+list}} (const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}} \&)=delete
+\item 
+\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}} \& \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a8437de27b225395949ebbe35a668e4a3}{operator=}} (const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}} \&)=delete
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ae65b2ba66e95ebaa50ac0a2dcea06fe5}{block\+\_\+add}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block, const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&txs, const \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} $\ast$checkpoint)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a2b526576adbda5c631c0413b4da0fb6c}{state\+\_\+history\+\_\+exists}} (uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3e10facf73036321e6a38e36bfc34b25}{process\+\_\+batching\+\_\+rewards}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aa438d5608ed78642ef758c73e67eaa51}{pop\+\_\+batching\+\_\+rewards\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a237f6116505d301f77f0387b1a942826}{blockchain\+\_\+detached}} (uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}})
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a2b42900b104314133bdce3d13ca53e8a}{init}} ()
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ab78c909e8b8da29bb7c10b8db3f6be25}{validate\+\_\+miner\+\_\+tx}} (const \mbox{\hyperlink{structcryptonote_1_1miner__tx__info}{cryptonote\+::miner\+\_\+tx\+\_\+info}} \&info) const
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_af1314ae25e9fae51f11ea1eb3939415b}{alt\+\_\+block\+\_\+add}} (const \mbox{\hyperlink{structcryptonote_1_1block__add__info}{cryptonote\+::block\+\_\+add\+\_\+info}} \&info)
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1payout}{payout}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a876b268b3ccb8c070cc64fe6021f5e71}{get\+\_\+block\+\_\+leader}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aff47296c39ce5f0cfb63db030aed77aa}{is\+\_\+service\+\_\+node}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} require\+\_\+active=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a8ff359f8ee696a71fa620dcf76055003}{is\+\_\+key\+\_\+image\+\_\+locked}} (\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} const \&check\+\_\+image, uint64\+\_\+t $\ast$unlock\+\_\+height=nullptr, \mbox{\hyperlink{structservice__nodes_1_1service__node__info_1_1contribution__t}{service\+\_\+node\+\_\+info\+::contribution\+\_\+t}} $\ast$the\+\_\+locked\+\_\+contribution=nullptr) const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a1acd37a2ae36a645deb9646134ae14b7}{get\+\_\+quorum}} (\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} type, uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+old=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $>$$>$ $\ast$alt\+\_\+states=nullptr) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a61300b414aa6c14b4a934f8d13828526}{get\+\_\+quorum\+\_\+pubkey}} (\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} type, \mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5db}{quorum\+\_\+group}} group, uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}}, size\+\_\+t quorum\+\_\+index, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&key) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5d4f7606fb3460ae29754fe06c266b8b}{get\+\_\+service\+\_\+node\+\_\+count}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1service__node__pubkey__info}{service\+\_\+node\+\_\+pubkey\+\_\+info}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a82cf539d2f92921e90cf873a222a96e3}{get\+\_\+service\+\_\+node\+\_\+list\+\_\+state}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&service\+\_\+node\+\_\+pubkeys=\{\}) const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1key__image__blacklist__entry}{key\+\_\+image\+\_\+blacklist\+\_\+entry}} $>$ \& \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aae64672a274e0f01c511fcaa80058384}{get\+\_\+blacklisted\+\_\+key\+\_\+images}} () const
+\item 
+{\footnotesize template$<$typename Func $>$ }\\void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a96041b3df45dc0007acabbb51b79a26b}{access\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, Func f) const
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ae676c670e5d6e4fa5f7279f716a7a70f}{get\+\_\+pubkey\+\_\+from\+\_\+x25519}} (const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&x25519) const
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a8c41f22a74b66df96a494a231f54a17f}{get\+\_\+random\+\_\+pubkey}} ()
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ae628b9de00d769d11837b34d13770eab}{initialize\+\_\+x25519\+\_\+map}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the x25519 map from current pubkey state; called during initialization. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9ac452c119db5c7ff84c9cacb11c2ecb}{remote\+\_\+lookup}} (std\+::string\+\_\+view x25519\+\_\+pk)
+\item 
+{\footnotesize template$<$typename It , typename Func $>$ }\\void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aebc6b28bce15b717d86cea40cb458029}{for\+\_\+each\+\_\+service\+\_\+node\+\_\+info\+\_\+and\+\_\+proof}} (It begin, It end, Func f) const
+\item 
+{\footnotesize template$<$typename Output\+It $>$ }\\void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ab777873cc99385f5e92556e3b5be034c}{copy\+\_\+active\+\_\+x25519\+\_\+pubkeys}} (Output\+It out) const
+\begin{DoxyCompactList}\small\item\em Copies x25519 pubkeys (as strings) of all currently active S\+Ns into the given output iterator. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceservice__nodes_a0fa77a49caf0a22ed86b6b0fc9f2dfca}{pubkey\+\_\+and\+\_\+sninfo}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ab9606eea677d10b7c1c0562e6827f922}{active\+\_\+service\+\_\+nodes\+\_\+infos}} () const
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aca84ba186c579a2ed49620719eaf0f10}{set\+\_\+my\+\_\+service\+\_\+node\+\_\+keys}} (const \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+node\+\_\+keys}} $\ast$keys)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a6e7e069a446bc017d6fbcd2ed3e2f245}{set\+\_\+quorum\+\_\+history\+\_\+storage}} (uint64\+\_\+t hist\+\_\+size)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_acdbf254ca142ce33aa6e17d361184f97}{store}} ()
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a6a6efa5a243e6c42c044a5df34373514}{hash\+\_\+uptime\+\_\+proof}} (const \mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&proof) const
+\item 
+\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5cf64af8949f3381c15732a3ab459518}{generate\+\_\+uptime\+\_\+proof}} (uint32\+\_\+t public\+\_\+ip, uint16\+\_\+t storage\+\_\+https\+\_\+port, uint16\+\_\+t storage\+\_\+omq\+\_\+port, uint16\+\_\+t quorumnet\+\_\+port) const
+\begin{DoxyCompactList}\small\item\em Record public ip and storage port and add them to the service node list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a1aa498625aa58a1164e80ccad8b10a0f}{generate\+\_\+uptime\+\_\+proof}} (uint32\+\_\+t public\+\_\+ip, uint16\+\_\+t storage\+\_\+port, uint16\+\_\+t storage\+\_\+omq\+\_\+port, std\+::array$<$ uint16\+\_\+t, 3 $>$ ss\+\_\+version, uint16\+\_\+t quorumnet\+\_\+port, std\+::array$<$ uint16\+\_\+t, 3 $>$ lokinet\+\_\+version) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a83bdeb834f4a04eee9d8fc516fc64839}{handle\+\_\+uptime\+\_\+proof}} (\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} const \&proof, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&my\+\_\+uptime\+\_\+proof\+\_\+confirmation, \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&x25519\+\_\+pkey)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a70a5d1c82823257ebf1539bffd34a10e}{handle\+\_\+btencoded\+\_\+uptime\+\_\+proof}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} $>$ proof, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&my\+\_\+uptime\+\_\+proof\+\_\+confirmation, \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&x25519\+\_\+pkey)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_af0c4d9da12dfff1022012886c8811ba1}{record\+\_\+checkpoint\+\_\+participation}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} participated)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5606ca8358baa20068b44188e4ebfa46}{cleanup\+\_\+proofs}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_add4b7634dcbfb1a5f40324e9e8373b58}{set\+\_\+storage\+\_\+server\+\_\+peer\+\_\+reachable}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} value)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a0e85897957bfe5fe0871ff59645c2a44}{set\+\_\+lokinet\+\_\+peer\+\_\+reachable}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} value)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a00ef73a14d395e9a2e22abe7cfea0848}{record\+\_\+timestamp\+\_\+participation}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} participated)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a0810669f842b89f4ba7258ed16223d4a}{record\+\_\+timesync\+\_\+status}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} synced)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ace309ec3061dc159a2c38f286bb9bc3a}{is\+\_\+premature\+\_\+unlock}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5fe9dac9d66536b61ae163dd8509aa78}{block\+\_\+height}}, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aba4711a93c1b1b84fec506e168f8d3b8}{debug\+\_\+allow\+\_\+local\+\_\+ips}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+std\+::deque$<$ \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorums__by__height}{quorums\+\_\+by\+\_\+height}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a919cdaa0fb68f1f9b9053fb082942c08}{old\+\_\+quorum\+\_\+states}}
+\item 
+\mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\+\_\+set}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a4b9861ed9cb505cdaec8ca47b57187b0}{state\+\_\+history}}
+\item 
+\mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\+\_\+set}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a6d535e8484718668275138c339fac5fe}{state\+\_\+archive}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ae7b43adc91d129ab84eab968fa1eb57c}{alt\+\_\+state}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a37cfa750e15935dc5070172e4d0e6682}{state\+\_\+added\+\_\+to\+\_\+archive}}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\+\_\+for\+\_\+serialization}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a8719bbb6294d46a583732bffcab78fe1}{cache\+\_\+long\+\_\+term\+\_\+data}}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\+\_\+for\+\_\+serialization}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_af62d6c67c711e42665814619ba6e22eb}{cache\+\_\+short\+\_\+term\+\_\+data}}
+\item 
+std\+::string \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a98146b2d310b32a4c3894906118b5edb}{cache\+\_\+data\+\_\+blob}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aba224e615736928c8dabd1de5447b750}{set\+\_\+peer\+\_\+reachable}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} storage\+\_\+server, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} value)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5d29f70509986f6d284793c913e09162}{process\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block, const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&txs)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a39733098ad2f0c696549b76f62d501e2}{record\+\_\+pulse\+\_\+participation}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&pubkey, uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}{height}}, uint8\+\_\+t \mbox{\hyperlink{aesb_8c_aca9f6c90dc08553c6d90f6f0d2c85dce}{round}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} participated)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a951194467a702389502b1d3fa803434f}{verify\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} alt\+\_\+block, \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} const $\ast$checkpoint)
+\item 
+void \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a2ec0f5fd5992e4119e6a0ebda9cd9980}{reset}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} delete\+\_\+db\+\_\+entry=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_af9f6b117f0f04099816c1bcb4b2ba3ca}{load}} (uint64\+\_\+t current\+\_\+height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a79c8eec1bd1d8714c3721fc4f16ad4dc}{m\+\_\+rescanning}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a788a7fbb0313ea5b2c410b2b723a99c8}{m\+\_\+sn\+\_\+mutex}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \& \mbox{\hyperlink{classservice__nodes_1_1service__node__list_abc22462e6c55b86106924d109ebca123}{m\+\_\+blockchain}}
+\item 
+const \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+node\+\_\+keys}} $\ast$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_aad7f5a22d382ef80c77c60f1cfa59d60}{m\+\_\+service\+\_\+node\+\_\+keys}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a68e15fea41fb70d84ce8b4fba6a5b133}{m\+\_\+store\+\_\+quorum\+\_\+history}} = 0
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a9c2dbbf2e00d7302a9d4eaf58223d107}{m\+\_\+x25519\+\_\+map\+\_\+mutex}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}, std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, time\+\_\+t $>$ $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a164ebe30c374a1b39a015d47717c948f}{x25519\+\_\+to\+\_\+pub}}
+\begin{DoxyCompactList}\small\item\em Maps x25519 pubkeys to registration pubkeys + last block seen value (used for expiry) \end{DoxyCompactList}\item 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a12092a99f00783743cebb9c7183d6240}{x25519\+\_\+map\+\_\+last\+\_\+pruned}} = std\+::chrono\+::system\+\_\+clock\+::from\+\_\+time\+\_\+t(0)
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, \mbox{\hyperlink{structservice__nodes_1_1proof__info}{proof\+\_\+info}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a78852b1523931c50ad1a70c9d893ae0a}{proofs}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::deque$<$ \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorums__by__height}{quorums\_by\_height}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a919cdaa0fb68f1f9b9053fb082942c08}{old\_quorum\_states}}\\
+\>\mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\_set}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a4b9861ed9cb505cdaec8ca47b57187b0}{state\_history}}\\
+\>\mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\_set}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a6d535e8484718668275138c339fac5fe}{state\_archive}}\\
+\>std::unordered\_map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto::hash}}, \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\_t}} $>$ \mbox{\hyperlink{classservice__nodes_1_1service__node__list_ae7b43adc91d129ab84eab968fa1eb57c}{alt\_state}}\\
+\>\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a37cfa750e15935dc5070172e4d0e6682}{state\_added\_to\_archive}}\\
+\>\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\_for\_serialization}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a8719bbb6294d46a583732bffcab78fe1}{cache\_long\_term\_data}}\\
+\>\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\_for\_serialization}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_af62d6c67c711e42665814619ba6e22eb}{cache\_short\_term\_data}}\\
+\>std::string \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a98146b2d310b32a4c3894906118b5edb}{cache\_data\_blob}}\\
+\} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a72f3b1df9de1a192baf0e3ca0b63f464}{m\_transient}} = \{\}\\
+
+\end{tabbing}\item 
+\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}} \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a2f5a7a849afcc17aeb0edc5076ac4674}{m\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a5fe9dac9d66536b61ae163dd8509aa78}\label{classservice__nodes_1_1service__node__list_a5fe9dac9d66536b61ae163dd8509aa78}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!block\_height@{block\_height}}
+\index{block\_height@{block\_height}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{block\_height}{block\_height}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a5fe9dac9d66536b61ae163dd8509aa78}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::block\+\_\+height}} =  uint64\+\_\+t}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}\label{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!state\_set@{state\_set}}
+\index{state\_set@{state\_set}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{state\_set}{state\_set}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+set}} =  std\+::set$<$\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}}, std\+::less$<$$>$ $>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_af43e539cc25aebcc4d7e93309c1fb67d}\label{classservice__nodes_1_1service__node__list_af43e539cc25aebcc4d7e93309c1fb67d}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!service\_node\_list@{service\_node\_list}}
+\index{service\_node\_list@{service\_node\_list}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{service\_node\_list()}{service\_node\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::service\+\_\+node\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&}]{blockchain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a4fe3d6724e3d31e74ae26becbf196035}\label{classservice__nodes_1_1service__node__list_a4fe3d6724e3d31e74ae26becbf196035}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!service\_node\_list@{service\_node\_list}}
+\index{service\_node\_list@{service\_node\_list}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{service\_node\_list()}{service\_node\_list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::service\+\_\+node\+\_\+list (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a96041b3df45dc0007acabbb51b79a26b}\label{classservice__nodes_1_1service__node__list_a96041b3df45dc0007acabbb51b79a26b}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!access\_proof@{access\_proof}}
+\index{access\_proof@{access\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{access\_proof()}{access\_proof()}}
+{\footnotesize\ttfamily template$<$typename Func $>$ \\
+void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::access\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{Func}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Accesses a proof with the required lock held; used to extract needed proof values. Func should be callable with a single {\ttfamily const \mbox{\hyperlink{structservice__nodes_1_1proof__info}{proof\+\_\+info}} \&} argument. If there is no proof info at all for the given pubkey then Func will not be called. \mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ab9606eea677d10b7c1c0562e6827f922}\label{classservice__nodes_1_1service__node__list_ab9606eea677d10b7c1c0562e6827f922}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!active\_service\_nodes\_infos@{active\_service\_nodes\_infos}}
+\index{active\_service\_nodes\_infos@{active\_service\_nodes\_infos}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{active\_service\_nodes\_infos()}{active\_service\_nodes\_infos()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{namespaceservice__nodes_a0fa77a49caf0a22ed86b6b0fc9f2dfca}{pubkey\+\_\+and\+\_\+sninfo}}$>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::active\+\_\+service\+\_\+nodes\+\_\+infos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_af1314ae25e9fae51f11ea1eb3939415b}\label{classservice__nodes_1_1service__node__list_af1314ae25e9fae51f11ea1eb3939415b}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!alt\_block\_add@{alt\_block\_add}}
+\index{alt\_block\_add@{alt\_block\_add}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{alt\_block\_add()}{alt\_block\_add()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::alt\+\_\+block\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block__add__info}{cryptonote\+::block\+\_\+add\+\_\+info}} \&}]{info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ae65b2ba66e95ebaa50ac0a2dcea06fe5}\label{classservice__nodes_1_1service__node__list_ae65b2ba66e95ebaa50ac0a2dcea06fe5}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!block\_add@{block\_add}}
+\index{block\_add@{block\_add}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{block\_add()}{block\_add()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::block\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&}]{txs,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} $\ast$}]{checkpoint }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a237f6116505d301f77f0387b1a942826}\label{classservice__nodes_1_1service__node__list_a237f6116505d301f77f0387b1a942826}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!blockchain\_detached@{blockchain\_detached}}
+\index{blockchain\_detached@{blockchain\_detached}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{blockchain\_detached()}{blockchain\_detached()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::blockchain\+\_\+detached (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a5606ca8358baa20068b44188e4ebfa46}\label{classservice__nodes_1_1service__node__list_a5606ca8358baa20068b44188e4ebfa46}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!cleanup\_proofs@{cleanup\_proofs}}
+\index{cleanup\_proofs@{cleanup\_proofs}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{cleanup\_proofs()}{cleanup\_proofs()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::cleanup\+\_\+proofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ab777873cc99385f5e92556e3b5be034c}\label{classservice__nodes_1_1service__node__list_ab777873cc99385f5e92556e3b5be034c}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!copy\_active\_x25519\_pubkeys@{copy\_active\_x25519\_pubkeys}}
+\index{copy\_active\_x25519\_pubkeys@{copy\_active\_x25519\_pubkeys}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{copy\_active\_x25519\_pubkeys()}{copy\_active\_x25519\_pubkeys()}}
+{\footnotesize\ttfamily template$<$typename Output\+It $>$ \\
+void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::copy\+\_\+active\+\_\+x25519\+\_\+pubkeys (\begin{DoxyParamCaption}\item[{Output\+It}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copies x25519 pubkeys (as strings) of all currently active S\+Ns into the given output iterator. 
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aebc6b28bce15b717d86cea40cb458029}\label{classservice__nodes_1_1service__node__list_aebc6b28bce15b717d86cea40cb458029}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!for\_each\_service\_node\_info\_and\_proof@{for\_each\_service\_node\_info\_and\_proof}}
+\index{for\_each\_service\_node\_info\_and\_proof@{for\_each\_service\_node\_info\_and\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{for\_each\_service\_node\_info\_and\_proof()}{for\_each\_service\_node\_info\_and\_proof()}}
+{\footnotesize\ttfamily template$<$typename It , typename Func $>$ \\
+void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::for\+\_\+each\+\_\+service\+\_\+node\+\_\+info\+\_\+and\+\_\+proof (\begin{DoxyParamCaption}\item[{It}]{begin,  }\item[{It}]{end,  }\item[{Func}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Does something read-\/only for each registered service node in the range of pubkeys. The SN lock is held while iterating, so the \char`\"{}something\char`\"{} should be quick. Func should take arguments\+: (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}\&, const \mbox{\hyperlink{structservice__nodes_1_1service__node__info}{service\+\_\+node\+\_\+info}}\&, const \mbox{\hyperlink{structservice__nodes_1_1proof__info}{proof\+\_\+info}}\&) Unknown public keys are skipped. \mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a5cf64af8949f3381c15732a3ab459518}\label{classservice__nodes_1_1service__node__list_a5cf64af8949f3381c15732a3ab459518}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!generate\_uptime\_proof@{generate\_uptime\_proof}}
+\index{generate\_uptime\_proof@{generate\_uptime\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{generate\_uptime\_proof()}{generate\_uptime\_proof()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::generate\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{public\+\_\+ip,  }\item[{uint16\+\_\+t}]{storage\+\_\+https\+\_\+port,  }\item[{uint16\+\_\+t}]{storage\+\_\+omq\+\_\+port,  }\item[{uint16\+\_\+t}]{quorumnet\+\_\+port }\end{DoxyParamCaption}) const}
+
+
+
+Record public ip and storage port and add them to the service node list. 
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a1aa498625aa58a1164e80ccad8b10a0f}\label{classservice__nodes_1_1service__node__list_a1aa498625aa58a1164e80ccad8b10a0f}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!generate\_uptime\_proof@{generate\_uptime\_proof}}
+\index{generate\_uptime\_proof@{generate\_uptime\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{generate\_uptime\_proof()}{generate\_uptime\_proof()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::generate\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{public\+\_\+ip,  }\item[{uint16\+\_\+t}]{storage\+\_\+port,  }\item[{uint16\+\_\+t}]{storage\+\_\+omq\+\_\+port,  }\item[{std\+::array$<$ uint16\+\_\+t, 3 $>$}]{ss\+\_\+version,  }\item[{uint16\+\_\+t}]{quorumnet\+\_\+port,  }\item[{std\+::array$<$ uint16\+\_\+t, 3 $>$}]{lokinet\+\_\+version }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aae64672a274e0f01c511fcaa80058384}\label{classservice__nodes_1_1service__node__list_aae64672a274e0f01c511fcaa80058384}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_blacklisted\_key\_images@{get\_blacklisted\_key\_images}}
+\index{get\_blacklisted\_key\_images@{get\_blacklisted\_key\_images}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_blacklisted\_key\_images()}{get\_blacklisted\_key\_images()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structservice__nodes_1_1key__image__blacklist__entry}{key\+\_\+image\+\_\+blacklist\+\_\+entry}}$>$\& service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+blacklisted\+\_\+key\+\_\+images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a876b268b3ccb8c070cc64fe6021f5e71}\label{classservice__nodes_1_1service__node__list_a876b268b3ccb8c070cc64fe6021f5e71}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_block\_leader@{get\_block\_leader}}
+\index{get\_block\_leader@{get\_block\_leader}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_block\_leader()}{get\_block\_leader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1payout}{payout}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+block\+\_\+leader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ae676c670e5d6e4fa5f7279f716a7a70f}\label{classservice__nodes_1_1service__node__list_ae676c670e5d6e4fa5f7279f716a7a70f}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_pubkey\_from\_x25519@{get\_pubkey\_from\_x25519}}
+\index{get\_pubkey\_from\_x25519@{get\_pubkey\_from\_x25519}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_pubkey\_from\_x25519()}{get\_pubkey\_from\_x25519()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+pubkey\+\_\+from\+\_\+x25519 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&}]{x25519 }\end{DoxyParamCaption}) const}
+
+Returns the (monero curve) pubkey associated with a x25519 pubkey. Returns a null public key if not found. (Note\+: this is just looking up the association, not derivation). \mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a1acd37a2ae36a645deb9646134ae14b7}\label{classservice__nodes_1_1service__node__list_a1acd37a2ae36a645deb9646134ae14b7}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_quorum@{get\_quorum}}
+\index{get\_quorum@{get\_quorum}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_quorum()}{get\_quorum()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+quorum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}}}]{type,  }\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+old = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}} $>$$>$ $\ast$}]{alt\+\_\+states = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+Note(maxim)\+: this should not affect thread-\/safety as the returned object is const
+
+For checkpointing, quorums are only generated when height \% C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL == 0 (and the actual internal quorum used is for {\ttfamily height -\/ R\+E\+O\+R\+G\+\_\+\+S\+A\+F\+E\+T\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+P\+O\+S\+T\+\_\+\+H\+F12}, i.\+e. do no subtract off the buffer in advance). Similarly for blink (but on B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+I\+N\+T\+E\+R\+V\+AL, but without any buffer offset applied here). return\+: nullptr if the quorum is not cached in memory (pruned from memory). \mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a61300b414aa6c14b4a934f8d13828526}\label{classservice__nodes_1_1service__node__list_a61300b414aa6c14b4a934f8d13828526}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_quorum\_pubkey@{get\_quorum\_pubkey}}
+\index{get\_quorum\_pubkey@{get\_quorum\_pubkey}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_quorum\_pubkey()}{get\_quorum\_pubkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+quorum\+\_\+pubkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}}}]{type,  }\item[{\mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5db}{quorum\+\_\+group}}}]{group,  }\item[{uint64\+\_\+t}]{height,  }\item[{size\+\_\+t}]{quorum\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{key }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a8c41f22a74b66df96a494a231f54a17f}\label{classservice__nodes_1_1service__node__list_a8c41f22a74b66df96a494a231f54a17f}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_random\_pubkey@{get\_random\_pubkey}}
+\index{get\_random\_pubkey@{get\_random\_pubkey}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_random\_pubkey()}{get\_random\_pubkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+random\+\_\+pubkey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a5d4f7606fb3460ae29754fe06c266b8b}\label{classservice__nodes_1_1service__node__list_a5d4f7606fb3460ae29754fe06c266b8b}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_service\_node\_count@{get\_service\_node\_count}}
+\index{get\_service\_node\_count@{get\_service\_node\_count}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_service\_node\_count()}{get\_service\_node\_count()}}
+{\footnotesize\ttfamily size\+\_\+t service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+service\+\_\+node\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a82cf539d2f92921e90cf873a222a96e3}\label{classservice__nodes_1_1service__node__list_a82cf539d2f92921e90cf873a222a96e3}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!get\_service\_node\_list\_state@{get\_service\_node\_list\_state}}
+\index{get\_service\_node\_list\_state@{get\_service\_node\_list\_state}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{get\_service\_node\_list\_state()}{get\_service\_node\_list\_state()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1service__node__pubkey__info}{service\+\_\+node\+\_\+pubkey\+\_\+info}} $>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::get\+\_\+service\+\_\+node\+\_\+list\+\_\+state (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{service\+\_\+node\+\_\+pubkeys = {\ttfamily \{\}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a70a5d1c82823257ebf1539bffd34a10e}\label{classservice__nodes_1_1service__node__list_a70a5d1c82823257ebf1539bffd34a10e}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!handle\_btencoded\_uptime\_proof@{handle\_btencoded\_uptime\_proof}}
+\index{handle\_btencoded\_uptime\_proof@{handle\_btencoded\_uptime\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{handle\_btencoded\_uptime\_proof()}{handle\_btencoded\_uptime\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::handle\+\_\+btencoded\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} $>$}]{proof,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{my\+\_\+uptime\+\_\+proof\+\_\+confirmation,  }\item[{\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&}]{x25519\+\_\+pkey }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a83bdeb834f4a04eee9d8fc516fc64839}\label{classservice__nodes_1_1service__node__list_a83bdeb834f4a04eee9d8fc516fc64839}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!handle\_uptime\_proof@{handle\_uptime\_proof}}
+\index{handle\_uptime\_proof@{handle\_uptime\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{handle\_uptime\_proof()}{handle\_uptime\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::handle\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} const \&}]{proof,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{my\+\_\+uptime\+\_\+proof\+\_\+confirmation,  }\item[{\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&}]{x25519\+\_\+pkey }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a6a6efa5a243e6c42c044a5df34373514}\label{classservice__nodes_1_1service__node__list_a6a6efa5a243e6c42c044a5df34373514}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!hash\_uptime\_proof@{hash\_uptime\_proof}}
+\index{hash\_uptime\_proof@{hash\_uptime\_proof}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{hash\_uptime\_proof()}{hash\_uptime\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::hash\+\_\+uptime\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1NOTIFY__UPTIME__PROOF_1_1request}{cryptonote\+::\+N\+O\+T\+I\+F\+Y\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+::request}} \&}]{proof }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}\label{classservice__nodes_1_1service__node__list_a9a5ab12f6abf381863d7cc04b7b9a572}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!height@{height}}
+\index{height@{height}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily uint64\+\_\+t service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a2b42900b104314133bdce3d13ca53e8a}\label{classservice__nodes_1_1service__node__list_a2b42900b104314133bdce3d13ca53e8a}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!init@{init}}
+\index{init@{init}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ae628b9de00d769d11837b34d13770eab}\label{classservice__nodes_1_1service__node__list_ae628b9de00d769d11837b34d13770eab}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!initialize\_x25519\_map@{initialize\_x25519\_map}}
+\index{initialize\_x25519\_map@{initialize\_x25519\_map}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{initialize\_x25519\_map()}{initialize\_x25519\_map()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::initialize\+\_\+x25519\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the x25519 map from current pubkey state; called during initialization. 
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a8ff359f8ee696a71fa620dcf76055003}\label{classservice__nodes_1_1service__node__list_a8ff359f8ee696a71fa620dcf76055003}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!is\_key\_image\_locked@{is\_key\_image\_locked}}
+\index{is\_key\_image\_locked@{is\_key\_image\_locked}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{is\_key\_image\_locked()}{is\_key\_image\_locked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::is\+\_\+key\+\_\+image\+\_\+locked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} const \&}]{check\+\_\+image,  }\item[{uint64\+\_\+t $\ast$}]{unlock\+\_\+height = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__info_1_1contribution__t}{service\+\_\+node\+\_\+info\+::contribution\+\_\+t}} $\ast$}]{the\+\_\+locked\+\_\+contribution = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ace309ec3061dc159a2c38f286bb9bc3a}\label{classservice__nodes_1_1service__node__list_ace309ec3061dc159a2c38f286bb9bc3a}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!is\_premature\_unlock@{is\_premature\_unlock}}
+\index{is\_premature\_unlock@{is\_premature\_unlock}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{is\_premature\_unlock()}{is\_premature\_unlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::is\+\_\+premature\+\_\+unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{hf\+\_\+version,  }\item[{uint64\+\_\+t}]{block\+\_\+height,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aff47296c39ce5f0cfb63db030aed77aa}\label{classservice__nodes_1_1service__node__list_aff47296c39ce5f0cfb63db030aed77aa}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!is\_service\_node@{is\_service\_node}}
+\index{is\_service\_node@{is\_service\_node}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{is\_service\_node()}{is\_service\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::is\+\_\+service\+\_\+node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{require\+\_\+active = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_af9f6b117f0f04099816c1bcb4b2ba3ca}\label{classservice__nodes_1_1service__node__list_af9f6b117f0f04099816c1bcb4b2ba3ca}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!load@{load}}
+\index{load@{load}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::load (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{current\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a8437de27b225395949ebbe35a668e4a3}\label{classservice__nodes_1_1service__node__list_a8437de27b225395949ebbe35a668e4a3}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!operator=@{operator=}}
+\index{operator=@{operator=}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}}\& service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+node\+\_\+list}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aa438d5608ed78642ef758c73e67eaa51}\label{classservice__nodes_1_1service__node__list_aa438d5608ed78642ef758c73e67eaa51}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!pop\_batching\_rewards\_block@{pop\_batching\_rewards\_block}}
+\index{pop\_batching\_rewards\_block@{pop\_batching\_rewards\_block}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{pop\_batching\_rewards\_block()}{pop\_batching\_rewards\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::pop\+\_\+batching\+\_\+rewards\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a3e10facf73036321e6a38e36bfc34b25}\label{classservice__nodes_1_1service__node__list_a3e10facf73036321e6a38e36bfc34b25}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!process\_batching\_rewards@{process\_batching\_rewards}}
+\index{process\_batching\_rewards@{process\_batching\_rewards}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{process\_batching\_rewards()}{process\_batching\_rewards()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::process\+\_\+batching\+\_\+rewards (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a5d29f70509986f6d284793c913e09162}\label{classservice__nodes_1_1service__node__list_a5d29f70509986f6d284793c913e09162}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!process\_block@{process\_block}}
+\index{process\_block@{process\_block}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{process\_block()}{process\_block()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::process\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&}]{txs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_af0c4d9da12dfff1022012886c8811ba1}\label{classservice__nodes_1_1service__node__list_af0c4d9da12dfff1022012886c8811ba1}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!record\_checkpoint\_participation@{record\_checkpoint\_participation}}
+\index{record\_checkpoint\_participation@{record\_checkpoint\_participation}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{record\_checkpoint\_participation()}{record\_checkpoint\_participation()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::record\+\_\+checkpoint\+\_\+participation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{participated }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a39733098ad2f0c696549b76f62d501e2}\label{classservice__nodes_1_1service__node__list_a39733098ad2f0c696549b76f62d501e2}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!record\_pulse\_participation@{record\_pulse\_participation}}
+\index{record\_pulse\_participation@{record\_pulse\_participation}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{record\_pulse\_participation()}{record\_pulse\_participation()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::record\+\_\+pulse\+\_\+participation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{uint64\+\_\+t}]{height,  }\item[{uint8\+\_\+t}]{round,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{participated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a00ef73a14d395e9a2e22abe7cfea0848}\label{classservice__nodes_1_1service__node__list_a00ef73a14d395e9a2e22abe7cfea0848}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!record\_timestamp\_participation@{record\_timestamp\_participation}}
+\index{record\_timestamp\_participation@{record\_timestamp\_participation}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{record\_timestamp\_participation()}{record\_timestamp\_participation()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::record\+\_\+timestamp\+\_\+participation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{participated }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a0810669f842b89f4ba7258ed16223d4a}\label{classservice__nodes_1_1service__node__list_a0810669f842b89f4ba7258ed16223d4a}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!record\_timesync\_status@{record\_timesync\_status}}
+\index{record\_timesync\_status@{record\_timesync\_status}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{record\_timesync\_status()}{record\_timesync\_status()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::record\+\_\+timesync\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{synced }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a9ac452c119db5c7ff84c9cacb11c2ecb}\label{classservice__nodes_1_1service__node__list_a9ac452c119db5c7ff84c9cacb11c2ecb}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!remote\_lookup@{remote\_lookup}}
+\index{remote\_lookup@{remote\_lookup}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{remote\_lookup()}{remote\_lookup()}}
+{\footnotesize\ttfamily std\+::string service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::remote\+\_\+lookup (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{x25519\+\_\+pk }\end{DoxyParamCaption})}
+
+Remote SN lookup address function for Oxen\+MQ\+: given a string\+\_\+view of a x25519 pubkey, this returns that service node\textquotesingle{}s quorumnet contact information, if we have it, else empty string. \mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a2ec0f5fd5992e4119e6a0ebda9cd9980}\label{classservice__nodes_1_1service__node__list_a2ec0f5fd5992e4119e6a0ebda9cd9980}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!reset@{reset}}
+\index{reset@{reset}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{delete\+\_\+db\+\_\+entry = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a0e85897957bfe5fe0871ff59645c2a44}\label{classservice__nodes_1_1service__node__list_a0e85897957bfe5fe0871ff59645c2a44}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!set\_lokinet\_peer\_reachable@{set\_lokinet\_peer\_reachable}}
+\index{set\_lokinet\_peer\_reachable@{set\_lokinet\_peer\_reachable}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{set\_lokinet\_peer\_reachable()}{set\_lokinet\_peer\_reachable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::set\+\_\+lokinet\+\_\+peer\+\_\+reachable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aca84ba186c579a2ed49620719eaf0f10}\label{classservice__nodes_1_1service__node__list_aca84ba186c579a2ed49620719eaf0f10}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!set\_my\_service\_node\_keys@{set\_my\_service\_node\_keys}}
+\index{set\_my\_service\_node\_keys@{set\_my\_service\_node\_keys}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{set\_my\_service\_node\_keys()}{set\_my\_service\_node\_keys()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::set\+\_\+my\+\_\+service\+\_\+node\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+node\+\_\+keys}} $\ast$}]{keys }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aba224e615736928c8dabd1de5447b750}\label{classservice__nodes_1_1service__node__list_aba224e615736928c8dabd1de5447b750}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!set\_peer\_reachable@{set\_peer\_reachable}}
+\index{set\_peer\_reachable@{set\_peer\_reachable}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{set\_peer\_reachable()}{set\_peer\_reachable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::set\+\_\+peer\+\_\+reachable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{storage\+\_\+server,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a6e7e069a446bc017d6fbcd2ed3e2f245}\label{classservice__nodes_1_1service__node__list_a6e7e069a446bc017d6fbcd2ed3e2f245}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!set\_quorum\_history\_storage@{set\_quorum\_history\_storage}}
+\index{set\_quorum\_history\_storage@{set\_quorum\_history\_storage}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{set\_quorum\_history\_storage()}{set\_quorum\_history\_storage()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::set\+\_\+quorum\+\_\+history\+\_\+storage (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{hist\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_add4b7634dcbfb1a5f40324e9e8373b58}\label{classservice__nodes_1_1service__node__list_add4b7634dcbfb1a5f40324e9e8373b58}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!set\_storage\_server\_peer\_reachable@{set\_storage\_server\_peer\_reachable}}
+\index{set\_storage\_server\_peer\_reachable@{set\_storage\_server\_peer\_reachable}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{set\_storage\_server\_peer\_reachable()}{set\_storage\_server\_peer\_reachable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::set\+\_\+storage\+\_\+server\+\_\+peer\+\_\+reachable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&}]{pubkey,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a2b526576adbda5c631c0413b4da0fb6c}\label{classservice__nodes_1_1service__node__list_a2b526576adbda5c631c0413b4da0fb6c}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!state\_history\_exists@{state\_history\_exists}}
+\index{state\_history\_exists@{state\_history\_exists}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{state\_history\_exists()}{state\_history\_exists()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+history\+\_\+exists (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_acdbf254ca142ce33aa6e17d361184f97}\label{classservice__nodes_1_1service__node__list_acdbf254ca142ce33aa6e17d361184f97}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!store@{store}}
+\index{store@{store}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::store (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ab78c909e8b8da29bb7c10b8db3f6be25}\label{classservice__nodes_1_1service__node__list_ab78c909e8b8da29bb7c10b8db3f6be25}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!validate\_miner\_tx@{validate\_miner\_tx}}
+\index{validate\_miner\_tx@{validate\_miner\_tx}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{validate\_miner\_tx()}{validate\_miner\_tx()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::validate\+\_\+miner\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1miner__tx__info}{cryptonote\+::miner\+\_\+tx\+\_\+info}} \&}]{info }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a951194467a702389502b1d3fa803434f}\label{classservice__nodes_1_1service__node__list_a951194467a702389502b1d3fa803434f}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!verify\_block@{verify\_block}}
+\index{verify\_block@{verify\_block}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{verify\_block()}{verify\_block()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::verify\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{alt\+\_\+block,  }\item[{\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} const $\ast$}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_ae7b43adc91d129ab84eab968fa1eb57c}\label{classservice__nodes_1_1service__node__list_ae7b43adc91d129ab84eab968fa1eb57c}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!alt\_state@{alt\_state}}
+\index{alt\_state@{alt\_state}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{alt\_state}{alt\_state}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}}$>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::alt\+\_\+state}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a98146b2d310b32a4c3894906118b5edb}\label{classservice__nodes_1_1service__node__list_a98146b2d310b32a4c3894906118b5edb}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!cache\_data\_blob@{cache\_data\_blob}}
+\index{cache\_data\_blob@{cache\_data\_blob}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{cache\_data\_blob}{cache\_data\_blob}}
+{\footnotesize\ttfamily std\+::string service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::cache\+\_\+data\+\_\+blob}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a8719bbb6294d46a583732bffcab78fe1}\label{classservice__nodes_1_1service__node__list_a8719bbb6294d46a583732bffcab78fe1}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!cache\_long\_term\_data@{cache\_long\_term\_data}}
+\index{cache\_long\_term\_data@{cache\_long\_term\_data}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{cache\_long\_term\_data}{cache\_long\_term\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\+\_\+for\+\_\+serialization}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::cache\+\_\+long\+\_\+term\+\_\+data}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_af62d6c67c711e42665814619ba6e22eb}\label{classservice__nodes_1_1service__node__list_af62d6c67c711e42665814619ba6e22eb}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!cache\_short\_term\_data@{cache\_short\_term\_data}}
+\index{cache\_short\_term\_data@{cache\_short\_term\_data}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{cache\_short\_term\_data}{cache\_short\_term\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{data\+\_\+for\+\_\+serialization}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::cache\+\_\+short\+\_\+term\+\_\+data}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aba4711a93c1b1b84fec506e168f8d3b8}\label{classservice__nodes_1_1service__node__list_aba4711a93c1b1b84fec506e168f8d3b8}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!debug\_allow\_local\_ips@{debug\_allow\_local\_ips}}
+\index{debug\_allow\_local\_ips@{debug\_allow\_local\_ips}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{debug\_allow\_local\_ips}{debug\_allow\_local\_ips}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::debug\+\_\+allow\+\_\+local\+\_\+ips = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_abc22462e6c55b86106924d109ebca123}\label{classservice__nodes_1_1service__node__list_abc22462e6c55b86106924d109ebca123}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_blockchain@{m\_blockchain}}
+\index{m\_blockchain@{m\_blockchain}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_blockchain}{m\_blockchain}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}}\& service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+blockchain\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a79c8eec1bd1d8714c3721fc4f16ad4dc}\label{classservice__nodes_1_1service__node__list_a79c8eec1bd1d8714c3721fc4f16ad4dc}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_rescanning@{m\_rescanning}}
+\index{m\_rescanning@{m\_rescanning}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_rescanning}{m\_rescanning}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+rescanning = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_aad7f5a22d382ef80c77c60f1cfa59d60}\label{classservice__nodes_1_1service__node__list_aad7f5a22d382ef80c77c60f1cfa59d60}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_service\_node\_keys@{m\_service\_node\_keys}}
+\index{m\_service\_node\_keys@{m\_service\_node\_keys}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_service\_node\_keys}{m\_service\_node\_keys}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+node\+\_\+keys}}$\ast$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+service\+\_\+node\+\_\+keys\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a788a7fbb0313ea5b2c410b2b723a99c8}\label{classservice__nodes_1_1service__node__list_a788a7fbb0313ea5b2c410b2b723a99c8}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_sn\_mutex@{m\_sn\_mutex}}
+\index{m\_sn\_mutex@{m\_sn\_mutex}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_sn\_mutex}{m\_sn\_mutex}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+sn\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a2f5a7a849afcc17aeb0edc5076ac4674}\label{classservice__nodes_1_1service__node__list_a2f5a7a849afcc17aeb0edc5076ac4674}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_state@{m\_state}}
+\index{m\_state@{m\_state}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_state}{m\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{state\+\_\+t}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a68e15fea41fb70d84ce8b4fba6a5b133}\label{classservice__nodes_1_1service__node__list_a68e15fea41fb70d84ce8b4fba6a5b133}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_store\_quorum\_history@{m\_store\_quorum\_history}}
+\index{m\_store\_quorum\_history@{m\_store\_quorum\_history}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_store\_quorum\_history}{m\_store\_quorum\_history}}
+{\footnotesize\ttfamily uint64\+\_\+t service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+store\+\_\+quorum\+\_\+history = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a72f3b1df9de1a192baf0e3ca0b63f464}\label{classservice__nodes_1_1service__node__list_a72f3b1df9de1a192baf0e3ca0b63f464}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_transient@{m\_transient}}
+\index{m\_transient@{m\_transient}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_transient}{m\_transient}}
+{\footnotesize\ttfamily struct \{ ... \}  service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+transient\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a9c2dbbf2e00d7302a9d4eaf58223d107}\label{classservice__nodes_1_1service__node__list_a9c2dbbf2e00d7302a9d4eaf58223d107}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!m\_x25519\_map\_mutex@{m\_x25519\_map\_mutex}}
+\index{m\_x25519\_map\_mutex@{m\_x25519\_map\_mutex}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{m\_x25519\_map\_mutex}{m\_x25519\_map\_mutex}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::m\+\_\+x25519\+\_\+map\+\_\+mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a919cdaa0fb68f1f9b9053fb082942c08}\label{classservice__nodes_1_1service__node__list_a919cdaa0fb68f1f9b9053fb082942c08}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!old\_quorum\_states@{old\_quorum\_states}}
+\index{old\_quorum\_states@{old\_quorum\_states}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{old\_quorum\_states}{old\_quorum\_states}}
+{\footnotesize\ttfamily std\+::deque$<$\mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorums__by__height}{quorums\+\_\+by\+\_\+height}}$>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::old\+\_\+quorum\+\_\+states}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a78852b1523931c50ad1a70c9d893ae0a}\label{classservice__nodes_1_1service__node__list_a78852b1523931c50ad1a70c9d893ae0a}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!proofs@{proofs}}
+\index{proofs@{proofs}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{proofs}{proofs}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, \mbox{\hyperlink{structservice__nodes_1_1proof__info}{proof\+\_\+info}}$>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::proofs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a37cfa750e15935dc5070172e4d0e6682}\label{classservice__nodes_1_1service__node__list_a37cfa750e15935dc5070172e4d0e6682}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!state\_added\_to\_archive@{state\_added\_to\_archive}}
+\index{state\_added\_to\_archive@{state\_added\_to\_archive}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{state\_added\_to\_archive}{state\_added\_to\_archive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+added\+\_\+to\+\_\+archive}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a6d535e8484718668275138c339fac5fe}\label{classservice__nodes_1_1service__node__list_a6d535e8484718668275138c339fac5fe}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!state\_archive@{state\_archive}}
+\index{state\_archive@{state\_archive}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{state\_archive}{state\_archive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\+\_\+set}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+archive}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a4b9861ed9cb505cdaec8ca47b57187b0}\label{classservice__nodes_1_1service__node__list_a4b9861ed9cb505cdaec8ca47b57187b0}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!state\_history@{state\_history}}
+\index{state\_history@{state\_history}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{state\_history}{state\_history}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classservice__nodes_1_1service__node__list_a3f0e8af89ed84eacc34e9cb72dbbc440}{state\+\_\+set}} service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+history}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a12092a99f00783743cebb9c7183d6240}\label{classservice__nodes_1_1service__node__list_a12092a99f00783743cebb9c7183d6240}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!x25519\_map\_last\_pruned@{x25519\_map\_last\_pruned}}
+\index{x25519\_map\_last\_pruned@{x25519\_map\_last\_pruned}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{x25519\_map\_last\_pruned}{x25519\_map\_last\_pruned}}
+{\footnotesize\ttfamily std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::x25519\+\_\+map\+\_\+last\+\_\+pruned = std\+::chrono\+::system\+\_\+clock\+::from\+\_\+time\+\_\+t(0)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classservice__nodes_1_1service__node__list_a164ebe30c374a1b39a015d47717c948f}\label{classservice__nodes_1_1service__node__list_a164ebe30c374a1b39a015d47717c948f}} 
+\index{service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}!x25519\_to\_pub@{x25519\_to\_pub}}
+\index{x25519\_to\_pub@{x25519\_to\_pub}!service\_nodes::service\_node\_list@{service\_nodes::service\_node\_list}}
+\doxysubsubsection{\texorpdfstring{x25519\_to\_pub}{x25519\_to\_pub}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}, std\+::pair$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, time\+\_\+t$>$ $>$ service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::x25519\+\_\+to\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maps x25519 pubkeys to registration pubkeys + last block seen value (used for expiry) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__list_8h}{service\+\_\+node\+\_\+list.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__list_8cpp}{service\+\_\+node\+\_\+list.\+cpp}}\end{DoxyCompactItemize}

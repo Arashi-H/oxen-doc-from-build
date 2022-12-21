@@ -1,0 +1,108 @@
+\hypertarget{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE}{}\doxysection{wallet\+::rpc\+::O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE Struct Reference}
+\label{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE}\index{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a014e539847ffcab17ca47206ad8fe792}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_aa7da32132a9eeb3212b26771ec33e1af}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a3624a8006f8630e89e759027863ff5f7}{description}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Generate the signature necessary for updating the requested record using the wallet\textquotesingle{}s active \mbox{[}sub\mbox{]}address\textquotesingle{}s spend key. The signature is only valid if the queried wallet is one of the owners of the O\+NS record.
+
+This command is only required if the open wallet is one of the owners of a O\+NS record but wants the update transaction to occur via another non-\/owning wallet. By default, if no signature is specified to the update transaction, the open wallet is assumed the owner and it\textquotesingle{}s active \mbox{[}sub\mbox{]}address\textquotesingle{}s spend key will automatically be used.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily type} -- The mapping type, currently we support \char`\"{}session\char`\"{}, \char`\"{}lokinet\char`\"{} and \char`\"{}wallet\char`\"{} mappings.
+\item {\ttfamily name} -- The desired name to update via Oxen Name Service
+\item {\ttfamily encrypted\+\_\+value} -- (Optional)\+: The new encrypted value that the name maps to via Oxen Name Service. If not specified or given the empty string \char`\"{}\char`\"{}, then the mapping\textquotesingle{}s value remains unchanged.
+\item {\ttfamily owner} -- (Optional)\+: The new owner of the mapping. If not specified or given the empty string \char`\"{}\char`\"{}, then the mapping\textquotesingle{}s owner remains unchanged.
+\item {\ttfamily backup\+\_\+owner} -- (Optional)\+: The new backup owner of the mapping. If not specified or given the empty string \char`\"{}\char`\"{}, then the mapping\textquotesingle{}s backup owner remains unchanged.
+\item {\ttfamily account\+\_\+index} -- (Optional) Use this wallet\textquotesingle{}s subaddress account for generating the signature
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily signature} -- A signature valid for using in O\+NS to update an underlying mapping. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a014e539847ffcab17ca47206ad8fe792}\label{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a014e539847ffcab17ca47206ad8fe792}} 
+\index{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}!names@{names}}
+\index{names@{names}!wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a3624a8006f8630e89e759027863ff5f7}\label{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_a3624a8006f8630e89e759027863ff5f7}} 
+\index{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}!description@{description}}
+\index{description@{description}!wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily constexpr const char$\ast$ wallet\+::rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::description\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{R\textcolor{stringliteral}{"(Generate the signature necessary for updating the requested record using the wallet's active [sub]address's spend key. The signature is only valid if the queried wallet is one of the owners of the ONS record.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{This command is only required if the open wallet is one of the owners of a ONS record but wants the update transaction to occur via another non-\/owning wallet. By default, if no signature is specified to the update transaction, the open wallet is assumed the owner and it's active [sub]address's spend key will automatically be used.)"}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_aa7da32132a9eeb3212b26771ec33e1af}\label{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_aa7da32132a9eeb3212b26771ec33e1af}} 
+\index{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}!request@{request}}
+\index{request@{request}!wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE@{wallet::rpc::ONS\_MAKE\_UPDATE\_SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_1_1REQUEST}{wallet\+::rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

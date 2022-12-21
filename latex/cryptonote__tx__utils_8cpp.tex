@@ -1,0 +1,80 @@
+\hypertarget{cryptonote__tx__utils_8cpp}{}\doxysection{src/cryptonote\+\_\+core/cryptonote\+\_\+tx\+\_\+utils.cpp File Reference}
+\label{cryptonote__tx__utils_8cpp}\index{src/cryptonote\_core/cryptonote\_tx\_utils.cpp@{src/cryptonote\_core/cryptonote\_tx\_utils.cpp}}
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/apply\+\_\+permutation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+tx\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/miner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Sigs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multisig/multisig.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+Include dependency graph for cryptonote\+\_\+tx\+\_\+utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__tx__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespacecryptonote_ab87eea81f806655da87fe298c1ea1cf0}{cryptonote\+::classify\+\_\+addresses}} (const std\+::vector$<$ tx\+\_\+destination\+\_\+entry $>$ \&destinations, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&change\+\_\+addr, size\+\_\+t \&num\+\_\+stdaddresses, size\+\_\+t \&num\+\_\+subaddresses, account\+\_\+public\+\_\+address \&single\+\_\+dest\+\_\+subaddress)
+\item 
+keypair \mbox{\hyperlink{namespacecryptonote_a2999918981c8f5ac8d1bdd08cf7cf363}{cryptonote\+::get\+\_\+deterministic\+\_\+keypair\+\_\+from\+\_\+height}} (uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a0985dd4b050b3017c81ce16c35d08cab}{cryptonote\+::get\+\_\+deterministic\+\_\+output\+\_\+key}} (const account\+\_\+public\+\_\+address \&address, const keypair \&tx\+\_\+key, size\+\_\+t output\+\_\+index, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&output\+\_\+key)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a3412e084b124d5777fc20fea61dc633a}{cryptonote\+::validate\+\_\+governance\+\_\+reward\+\_\+key}} (uint64\+\_\+t height, std\+::string\+\_\+view governance\+\_\+wallet\+\_\+address\+\_\+str, size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&output\+\_\+key, const \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a6fccf6fbbce78034bc68e7b9dfc63714}{cryptonote\+::governance\+\_\+reward\+\_\+formula}} (hf hf\+\_\+version, uint64\+\_\+t base\+\_\+reward)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a29ead3f2916e29f50b368753b8a3f5aa}{cryptonote\+::block\+\_\+has\+\_\+governance\+\_\+output}} (network\+\_\+type nettype, \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} const \&block)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_abbe413f3d9fae620156d454295fa621b}{cryptonote\+::height\+\_\+has\+\_\+governance\+\_\+output}} (network\+\_\+type nettype, hf hard\+\_\+fork\+\_\+version, uint64\+\_\+t height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a16b20b90148843d71d78dce88aaaabbb}{cryptonote\+::derive\+\_\+governance\+\_\+from\+\_\+block\+\_\+reward}} (network\+\_\+type nettype, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block, hf hf\+\_\+version)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_aa22fa36c022001dd059031666a6ff8b6}{cryptonote\+::service\+\_\+node\+\_\+reward\+\_\+formula}} (uint64\+\_\+t base\+\_\+reward, hf hard\+\_\+fork\+\_\+version)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_ad8bcb8c3e78924c19a5bd54b9ff02b21}{cryptonote\+::get\+\_\+portion\+\_\+of\+\_\+reward}} (uint64\+\_\+t portions, uint64\+\_\+t total\+\_\+service\+\_\+node\+\_\+reward)
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_a435547369079a44deeb97304c3cd5f1d}{cryptonote\+::distribute\+\_\+reward\+\_\+by\+\_\+portions}} (const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1payout__entry}{service\+\_\+nodes\+::payout\+\_\+entry}} $>$ \&payout, uint64\+\_\+t total\+\_\+reward, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} distribute\+\_\+remainder)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a80b4950ff70e56cfac70bd2560e07171}{cryptonote\+::calculate\+\_\+sum\+\_\+of\+\_\+portions}} (const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1payout__entry}{service\+\_\+nodes\+::payout\+\_\+entry}} $>$ \&payout, uint64\+\_\+t total\+\_\+service\+\_\+node\+\_\+reward)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, uint64\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_a33926c5e50a10f3b533711721869b36c}{cryptonote\+::construct\+\_\+miner\+\_\+tx}} (size\+\_\+t height, size\+\_\+t median\+\_\+weight, uint64\+\_\+t already\+\_\+generated\+\_\+coins, size\+\_\+t current\+\_\+block\+\_\+weight, uint64\+\_\+t fee, transaction \&tx, const oxen\+\_\+miner\+\_\+tx\+\_\+context \&miner\+\_\+tx\+\_\+context, const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1batch__sn__payment}{cryptonote\+::batch\+\_\+sn\+\_\+payment}} $>$ \&sn\+\_\+rwds, const std\+::string \&extra\+\_\+nonce, hf hard\+\_\+fork\+\_\+version)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a25513b65c98bf0ac142b4a4d62a93e6f}{cryptonote\+::get\+\_\+oxen\+\_\+block\+\_\+reward}} (size\+\_\+t median\+\_\+weight, size\+\_\+t current\+\_\+block\+\_\+weight, uint64\+\_\+t already\+\_\+generated\+\_\+coins, hf hard\+\_\+fork\+\_\+version, block\+\_\+reward\+\_\+parts \&result, const oxen\+\_\+block\+\_\+reward\+\_\+context \&oxen\+\_\+context)
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{namespacecryptonote_ac8e8c96611a485ec8207fcdddffb2a35}{cryptonote\+::get\+\_\+destination\+\_\+view\+\_\+key\+\_\+pub}} (const std\+::vector$<$ tx\+\_\+destination\+\_\+entry $>$ \&destinations, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&change\+\_\+addr)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ab1e1bf7fec8f4edbaeac896c186e8bf9}{cryptonote\+::construct\+\_\+tx\+\_\+with\+\_\+tx\+\_\+key}} (const account\+\_\+keys \&sender\+\_\+account\+\_\+keys, const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, subaddress\+\_\+index $>$ \&subaddresses, std\+::vector$<$ tx\+\_\+source\+\_\+entry $>$ \&sources, std\+::vector$<$ tx\+\_\+destination\+\_\+entry $>$ \&destinations, const std\+::optional$<$ tx\+\_\+destination\+\_\+entry $>$ \&change\+\_\+addr, const std\+::vector$<$ uint8\+\_\+t $>$ \&extra, transaction \&tx, uint64\+\_\+t unlock\+\_\+time, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+keys, const \mbox{\hyperlink{structrct_1_1RCTConfig}{rct\+::\+R\+C\+T\+Config}} \&rct\+\_\+config, \mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}} $\ast$msout, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} shuffle\+\_\+outs, oxen\+\_\+construct\+\_\+tx\+\_\+params const \&tx\+\_\+params)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a8405eb6f8bb1d46c0f4a45fb64dada08}{cryptonote\+::construct\+\_\+tx\+\_\+and\+\_\+get\+\_\+tx\+\_\+key}} (const account\+\_\+keys \&sender\+\_\+account\+\_\+keys, const std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, subaddress\+\_\+index $>$ \&subaddresses, std\+::vector$<$ tx\+\_\+source\+\_\+entry $>$ \&sources, std\+::vector$<$ tx\+\_\+destination\+\_\+entry $>$ \&destinations, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&change\+\_\+addr, const std\+::vector$<$ uint8\+\_\+t $>$ \&extra, transaction \&tx, uint64\+\_\+t unlock\+\_\+time, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+keys, const \mbox{\hyperlink{structrct_1_1RCTConfig}{rct\+::\+R\+C\+T\+Config}} \&rct\+\_\+config, \mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}} $\ast$msout, oxen\+\_\+construct\+\_\+tx\+\_\+params const \&tx\+\_\+params)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a2d94ff7aaec669e2f0f4013a7c36af4a}{cryptonote\+::construct\+\_\+tx}} (const account\+\_\+keys \&sender\+\_\+account\+\_\+keys, std\+::vector$<$ tx\+\_\+source\+\_\+entry $>$ \&sources, const std\+::vector$<$ tx\+\_\+destination\+\_\+entry $>$ \&destinations, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&change\+\_\+addr, const std\+::vector$<$ uint8\+\_\+t $>$ \&extra, transaction \&tx, uint64\+\_\+t unlock\+\_\+time, const oxen\+\_\+construct\+\_\+tx\+\_\+params \&tx\+\_\+params)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ace472d48562ff1c197257acdd5dad9c2}{cryptonote\+::generate\+\_\+genesis\+\_\+block}} (block \&bl, network\+\_\+type nettype)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacecryptonote_a5282b343bd2fe8951d87ad2c7e71aa9b}{cryptonote\+::get\+\_\+altblock\+\_\+longhash}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, randomx\+\_\+longhash\+\_\+context const \&randomx\+\_\+context, const block \&b, uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacecryptonote_ad25c3d8917d3e1ed60a46926e7e49dae}{cryptonote\+::get\+\_\+block\+\_\+longhash}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, randomx\+\_\+longhash\+\_\+context const \&randomx\+\_\+context, const block \&b, uint64\+\_\+t height, int miners)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacecryptonote_a8693fd7589182ff751ff02dfbe1a7185}{cryptonote\+::get\+\_\+block\+\_\+longhash\+\_\+w\+\_\+blockchain}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, const Blockchain $\ast$pbc, const block \&b, uint64\+\_\+t height, int miners)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_af1adb2e447c4d5c4ee8f3918eab162b9}{cryptonote\+::get\+\_\+block\+\_\+longhash\+\_\+reorg}} (const uint64\+\_\+t split\+\_\+height)
+\end{DoxyCompactItemize}

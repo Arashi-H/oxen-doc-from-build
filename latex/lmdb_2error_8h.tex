@@ -1,0 +1,72 @@
+\hypertarget{lmdb_2error_8h}{}\doxysection{src/lmdb/error.h File Reference}
+\label{lmdb_2error_8h}\index{src/lmdb/error.h@{src/lmdb/error.h}}
+{\ttfamily \#include $<$system\+\_\+error$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for error.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{lmdb_2error_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lmdb_2error_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstd_1_1is__error__code__enum_3_1_1lmdb_1_1error_01_4}{std\+::is\+\_\+error\+\_\+code\+\_\+enum$<$\+::lmdb\+::error $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb}{lmdb}}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lmdb_2error_8h_ab8d21d0d07294fc0a92434857ccbc5ee}{M\+O\+N\+E\+R\+O\+\_\+\+L\+M\+D\+B\+\_\+\+C\+H\+E\+CK}}(...)
+\begin{DoxyCompactList}\small\item\em Executes a L\+M\+DB command, and returns errors via {\ttfamily \mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{lmdb\+::error}}} enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{lmdb\+::error}} \+: int 
+\begin{DoxyCompactList}\small\item\em Tracks L\+M\+DB error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::error\+\_\+category const  \& \mbox{\hyperlink{namespacelmdb_a7f0a0964a6cfa3460ef0ddbd9d1a44f4}{lmdb\+::error\+\_\+category}} () noexcept
+\item 
+std\+::error\+\_\+code \mbox{\hyperlink{namespacelmdb_af937991cd24a23bfb48d5bc6a1c6bb4c}{lmdb\+::make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}} value) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lmdb_2error_8h_ab8d21d0d07294fc0a92434857ccbc5ee}\label{lmdb_2error_8h_ab8d21d0d07294fc0a92434857ccbc5ee}} 
+\index{error.h@{error.h}!MONERO\_LMDB\_CHECK@{MONERO\_LMDB\_CHECK}}
+\index{MONERO\_LMDB\_CHECK@{MONERO\_LMDB\_CHECK}!error.h@{error.h}}
+\doxysubsubsection{\texorpdfstring{MONERO\_LMDB\_CHECK}{MONERO\_LMDB\_CHECK}}
+{\footnotesize\ttfamily \#define M\+O\+N\+E\+R\+O\+\_\+\+L\+M\+D\+B\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do}                                 \(\backslash\)}
+\DoxyCodeLine{    \{                                  \(\backslash\)}
+\DoxyCodeLine{        const \textcolor{keywordtype}{int} err = \_\_VA\_ARGS\_\_ ;  \(\backslash\)}
+\DoxyCodeLine{        if (err)                       \(\backslash\)}
+\DoxyCodeLine{            return \{\mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{lmdb::error}}(err)\}; \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Executes a L\+M\+DB command, and returns errors via {\ttfamily \mbox{\hyperlink{namespacelmdb_a9cb8ade56f7bb8b0f875602bede7cd3e}{lmdb\+::error}}} enum. 
+

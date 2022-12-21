@@ -1,0 +1,105 @@
+\hypertarget{command__line_8h}{}\doxysection{src/common/command\+\_\+line.h File Reference}
+\label{command__line_8h}\index{src/common/command\_line.h@{src/common/command\_line.h}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/parsers.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/options\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/i18n.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for command\+\_\+line.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{command__line_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{command__line_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor$<$ T, required, dependent, N\+U\+M\+\_\+\+D\+E\+P\+S $>$}}
+\item 
+struct \mbox{\hyperlink{structcommand__line_1_1arg__descriptor_3_01T_00_01false_01_4}{command\+\_\+line\+::arg\+\_\+descriptor$<$ T, false $>$}}
+\item 
+struct \mbox{\hyperlink{structcommand__line_1_1arg__descriptor_3_01T_00_01true_01_4}{command\+\_\+line\+::arg\+\_\+descriptor$<$ T, true $>$}}
+\item 
+struct \mbox{\hyperlink{structcommand__line_1_1arg__descriptor_3_01T_00_01false_00_01true_01_4}{command\+\_\+line\+::arg\+\_\+descriptor$<$ T, false, true $>$}}
+\item 
+struct \mbox{\hyperlink{structcommand__line_1_1arg__descriptor_3_01T_00_01false_00_01true_00_01NUM__DEPS_01_4}{command\+\_\+line\+::arg\+\_\+descriptor$<$ T, false, true, N\+U\+M\+\_\+\+D\+E\+P\+S $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecommand__line}{command\+\_\+line}}
+\item 
+ \mbox{\hyperlink{namespacecommand__line_1_1anonymous__namespace_02command__line_8h_03}{command\+\_\+line\+::anonymous\+\_\+namespace\{command\+\_\+line.\+h\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacecommand__line_a1f35b589cd191e35df0c3b11db7ce8ac}{command\+\_\+line\+::tr}} (const char $\ast$str)
+\item 
+{\footnotesize template$<$typename S , typename... More$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_a33aa77f4304de6a66798648878f28384}{command\+\_\+line\+::is\+\_\+yes}} (const S \&str, const More \&... more)
+\item 
+{\footnotesize template$<$typename S , typename... More$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_a6dc3f6baaa83e3e6307a23f203cf6750}{command\+\_\+line\+::is\+\_\+no}} (const S \&str, const More \&... more)
+\item 
+{\footnotesize template$<$typename S , typename... More$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_a1315b0d4d814ffec0352a3a3a73e6cfe}{command\+\_\+line\+::is\+\_\+cancel}} (const S \&str, const More \&... more)
+\item 
+{\footnotesize template$<$typename S , typename... More$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_a179e4b53d2e2acaaeb4686637634fbb4}{command\+\_\+line\+::is\+\_\+back}} (const S \&str, const More \&... more)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a00098491462ada1df2369fefc7e10aca}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$ \&)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a6f6dd281184c28e9684613fed3b26c27}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacecommand__line_1_1anonymous__namespace_02command__line_8h_03_a31ce68222b4ade38cfc5d4f71ed1a717}{command\+\_\+line\+::anonymous\+\_\+namespace\{command\+\_\+line.\+h\}\+::arg\+\_\+stringify}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacecommand__line_1_1anonymous__namespace_02command__line_8h_03_ab979fb6942232a2b14d632fe32ae2ec0}{command\+\_\+line\+::anonymous\+\_\+namespace\{command\+\_\+line.\+h\}\+::arg\+\_\+stringify}} (const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a6364bdae6c5b55bf7fe5a4ebe00e72d4}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T , int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a7b8604e48afd7e353541e32124188477}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a3b41c5f0e33933bc7bf5e394abcd3dd0}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \&arg, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&def)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::program\+\_\+options\+::typed\+\_\+value$<$ std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$, char $>$ $\ast$ \mbox{\hyperlink{namespacecommand__line_a441f5882fdff415fd89ffd94b75e6c03}{command\+\_\+line\+::make\+\_\+semantic}} (const arg\+\_\+descriptor$<$ std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \&)
+\item 
+{\footnotesize template$<$typename T , bool required, bool dependent, int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\void \mbox{\hyperlink{namespacecommand__line_a23f9df418b5bf46af14871b02d4d3632}{command\+\_\+line\+::add\+\_\+arg}} (boost\+::program\+\_\+options\+::options\+\_\+description \&description, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, required, dependent, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unique=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacecommand__line_ab39c6bd669a038f526a89a3e7fca1827}{command\+\_\+line\+::add\+\_\+arg}} (boost\+::program\+\_\+options\+::options\+\_\+description \&description, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \&arg, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&def, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unique=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+template$<$$>$ void \mbox{\hyperlink{namespacecommand__line_a0618acbe3a039aa374e1c2c8bb91804d}{command\+\_\+line\+::add\+\_\+arg}} (boost\+::program\+\_\+options\+::options\+\_\+description \&description, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \&arg, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unique)
+\item 
+{\footnotesize template$<$typename charT $>$ }\\boost\+::program\+\_\+options\+::basic\+\_\+parsed\+\_\+options$<$ charT $>$ \mbox{\hyperlink{namespacecommand__line_a1bd2df4d7a2c5e7cc405d7509d418a6d}{command\+\_\+line\+::parse\+\_\+command\+\_\+line}} (int argc, const charT $\ast$const argv\mbox{[}$\,$\mbox{]}, const boost\+::program\+\_\+options\+::options\+\_\+description \&desc, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+unregistered=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_ae5d3870396beb2fb6c20063790c404b9}{command\+\_\+line\+::handle\+\_\+error\+\_\+helper}} (const boost\+::program\+\_\+options\+::options\+\_\+description \&desc, std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}()$>$ parser)
+\item 
+{\footnotesize template$<$typename T , bool required, bool dependent, int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same\+\_\+v$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacecommand__line_ab4b65fb7d6bd0f8206fb0814827be60b}{command\+\_\+line\+::has\+\_\+arg}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, required, dependent, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T , bool required, bool dependent, int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_ab26a49ab8df93f072f46634d56919143}{command\+\_\+line\+::is\+\_\+arg\+\_\+defaulted}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, required, dependent, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacecommand__line_af96b5acaa1b0a2134c31674deb6fc4be}{command\+\_\+line\+::get\+\_\+arg}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T , int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacecommand__line_a5be2a6c5f9c0ff5ad469a98dc62912fc}{command\+\_\+line\+::get\+\_\+arg}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg)
+\item 
+{\footnotesize template$<$typename T , bool required$>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacecommand__line_a8896ce669add8ddfd677bb52cff227e8}{command\+\_\+line\+::get\+\_\+arg}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, required $>$ \&arg)
+\item 
+{\footnotesize template$<$bool dependent, int N\+U\+M\+\_\+\+D\+E\+PS$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecommand__line_a9822ad9f9af126f5c6c3ea27d90030d2}{command\+\_\+line\+::has\+\_\+arg}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm, const arg\+\_\+descriptor$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, dependent, N\+U\+M\+\_\+\+D\+E\+PS $>$ \&arg)
+\item 
+std\+::pair$<$ unsigned, unsigned $>$ \mbox{\hyperlink{namespacecommand__line_a3eca7a727c08d7620ff66de0f4c56899}{command\+\_\+line\+::terminal\+\_\+size}} ()
+\item 
+std\+::pair$<$ unsigned, unsigned $>$ \mbox{\hyperlink{namespacecommand__line_aef92efe03034d3051b4904800959c8d6}{command\+\_\+line\+::boost\+\_\+option\+\_\+sizes}} ()
+\item 
+void \mbox{\hyperlink{namespacecommand__line_a77d486b24fcb175819272a58cf406e94}{command\+\_\+line\+::clear\+\_\+screen}} ()
+\end{DoxyCompactItemize}

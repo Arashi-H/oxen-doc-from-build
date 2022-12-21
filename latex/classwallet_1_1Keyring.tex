@@ -1,0 +1,221 @@
+\hypertarget{classwallet_1_1Keyring}{}\doxysection{wallet\+::Keyring Class Reference}
+\label{classwallet_1_1Keyring}\index{wallet::Keyring@{wallet::Keyring}}
+
+
+{\ttfamily \#include $<$keyring.\+hpp$>$}
+
+
+
+Collaboration diagram for wallet\+::Keyring\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classwallet_1_1Keyring__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwallet_1_1Keyring_a4d954185acd0a554f95eaf0ecfd2a710}{Keyring}} (\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \+\_\+spend\+\_\+private\+\_\+key, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \+\_\+spend\+\_\+public\+\_\+key, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \+\_\+view\+\_\+private\+\_\+key, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \+\_\+view\+\_\+public\+\_\+key, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \+\_\+nettype=\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}})
+\item 
+\mbox{\hyperlink{classwallet_1_1Keyring_a5e274536a0658a204fe50ec3e5dd09a7}{Keyring}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{classwallet_1_1Keyring_a7e856e2e5469afb72ba3e0fcaac9129c}{get\+\_\+main\+\_\+address}} ()
+\item 
+virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_af1c9e1263fb07fdbd967981b2691ba78}{generate\+\_\+tx\+\_\+key}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version)
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \mbox{\hyperlink{classwallet_1_1Keyring_ac75827a97d00d520e2e84a6e9c63ec31}{generate\+\_\+key\+\_\+derivation}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&tx\+\_\+pubkey) const
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a134b599deb0c7464470f264b7563f432}{secret\+\_\+tx\+\_\+key\+\_\+to\+\_\+public\+\_\+tx\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} tx\+\_\+key)
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} $>$ \mbox{\hyperlink{classwallet_1_1Keyring_a93840cede64d18807579d5975b298696}{generate\+\_\+key\+\_\+derivations}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&tx\+\_\+pubkeys) const
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a224d94f86f4c89382e3fdccc7ab73b55}{output\+\_\+spend\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&output\+\_\+key, uint64\+\_\+t output\+\_\+index)
+\item 
+virtual std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} $>$ \mbox{\hyperlink{classwallet_1_1Keyring_af7ba8ffe22758f3b6ee63709fb51a27c}{output\+\_\+and\+\_\+derivation\+\_\+ours}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&output\+\_\+key, uint64\+\_\+t output\+\_\+index)
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \mbox{\hyperlink{classwallet_1_1Keyring_a4dec44bf05f3e61730fd1f7a3819504c}{key\+\_\+image}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&output\+\_\+key, uint64\+\_\+t output\+\_\+index, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&sub\+\_\+index)
+\item 
+virtual std\+::pair$<$ uint64\+\_\+t, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \mbox{\hyperlink{classwallet_1_1Keyring_a318aaa412b46b151e226a250e4f8214b}{output\+\_\+amount\+\_\+and\+\_\+mask}} (const \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} \&rv, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, unsigned int i)
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a3514476a64302ce7e85a2bb0fa13e863}{generate\+\_\+output\+\_\+ephemeral\+\_\+keys}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&dst\+\_\+entr, const size\+\_\+t output\+\_\+index, std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&amount\+\_\+keys)
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a61f1788759a0f9498ba7080112c0d4d6}{generate\+\_\+change\+\_\+address\+\_\+ephemeral\+\_\+keys}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&dst\+\_\+entr, const size\+\_\+t output\+\_\+index, std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&amount\+\_\+keys)
+\item 
+virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a8fa1c061d273a34985c3e8542f21743a}{derive\+\_\+transaction\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&key\+\_\+derivation, const size\+\_\+t output\+\_\+index)
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classwallet_1_1Keyring_a2242e41a23f0208d451607ec11c6dbff}{get\+\_\+transaction\+\_\+prefix\+\_\+hash}} (const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&)
+\item 
+virtual void \mbox{\hyperlink{classwallet_1_1Keyring_a5ae5c16880b4e10c55394eec17f628c0}{sign\+\_\+transaction}} (\mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&ptx)
+\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \mbox{\hyperlink{classwallet_1_1Keyring_ac94be368cbe10134d06920d67e480328}{export\+\_\+keys}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_ace8414caac29c8d53ab1c57e830db6f4}{spend\+\_\+private\+\_\+key}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_aa1a2e63d7d5ffbbed96776392d9dab9f}{spend\+\_\+public\+\_\+key}}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a456259c488fb68f8fdc5bd99463ecdbf}{view\+\_\+private\+\_\+key}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classwallet_1_1Keyring_a3e258edf8d57457e1d3f17679034b41f}{view\+\_\+public\+\_\+key}}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{classwallet_1_1Keyring_ae4fad17b95777077c3c7fc49069b1a69}{nettype}}
+\item 
+\mbox{\hyperlink{classhw_1_1core_1_1device__default}{hw\+::core\+::device\+\_\+default}} \mbox{\hyperlink{classwallet_1_1Keyring_a07f217521cd7c95911a7ea5286ab86ba}{key\+\_\+device}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwallet_1_1Keyring_a4d954185acd0a554f95eaf0ecfd2a710}\label{classwallet_1_1Keyring_a4d954185acd0a554f95eaf0ecfd2a710}} 
+\index{wallet::Keyring@{wallet::Keyring}!Keyring@{Keyring}}
+\index{Keyring@{Keyring}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{Keyring()}{Keyring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily wallet\+::\+Keyring\+::\+Keyring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}}]{\+\_\+spend\+\_\+private\+\_\+key,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}}]{\+\_\+spend\+\_\+public\+\_\+key,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}}]{\+\_\+view\+\_\+private\+\_\+key,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}}]{\+\_\+view\+\_\+public\+\_\+key,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{\+\_\+nettype = {\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aace8400aeb0c47ce5cd8e37a3a54e557b}{cryptonote\+::network\+\_\+type\+::\+T\+E\+S\+T\+N\+ET}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a5e274536a0658a204fe50ec3e5dd09a7}\label{classwallet_1_1Keyring_a5e274536a0658a204fe50ec3e5dd09a7}} 
+\index{wallet::Keyring@{wallet::Keyring}!Keyring@{Keyring}}
+\index{Keyring@{Keyring}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{Keyring()}{Keyring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily wallet\+::\+Keyring\+::\+Keyring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1Keyring_a8fa1c061d273a34985c3e8542f21743a}\label{classwallet_1_1Keyring_a8fa1c061d273a34985c3e8542f21743a}} 
+\index{wallet::Keyring@{wallet::Keyring}!derive\_transaction\_secret\_key@{derive\_transaction\_secret\_key}}
+\index{derive\_transaction\_secret\_key@{derive\_transaction\_secret\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{derive\_transaction\_secret\_key()}{derive\_transaction\_secret\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} wallet\+::\+Keyring\+::derive\+\_\+transaction\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{key\+\_\+derivation,  }\item[{const size\+\_\+t}]{output\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_ac94be368cbe10134d06920d67e480328}\label{classwallet_1_1Keyring_ac94be368cbe10134d06920d67e480328}} 
+\index{wallet::Keyring@{wallet::Keyring}!export\_keys@{export\_keys}}
+\index{export\_keys@{export\_keys}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{export\_keys()}{export\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} wallet\+::\+Keyring\+::export\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a61f1788759a0f9498ba7080112c0d4d6}\label{classwallet_1_1Keyring_a61f1788759a0f9498ba7080112c0d4d6}} 
+\index{wallet::Keyring@{wallet::Keyring}!generate\_change\_address\_ephemeral\_keys@{generate\_change\_address\_ephemeral\_keys}}
+\index{generate\_change\_address\_ephemeral\_keys@{generate\_change\_address\_ephemeral\_keys}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{generate\_change\_address\_ephemeral\_keys()}{generate\_change\_address\_ephemeral\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::generate\+\_\+change\+\_\+address\+\_\+ephemeral\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{tx\+\_\+key,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&}]{dst\+\_\+entr,  }\item[{const size\+\_\+t}]{output\+\_\+index,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&}]{amount\+\_\+keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_ac75827a97d00d520e2e84a6e9c63ec31}\label{classwallet_1_1Keyring_ac75827a97d00d520e2e84a6e9c63ec31}} 
+\index{wallet::Keyring@{wallet::Keyring}!generate\_key\_derivation@{generate\_key\_derivation}}
+\index{generate\_key\_derivation@{generate\_key\_derivation}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivation()}{generate\_key\_derivation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} wallet\+::\+Keyring\+::generate\+\_\+key\+\_\+derivation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{tx\+\_\+pubkey }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a93840cede64d18807579d5975b298696}\label{classwallet_1_1Keyring_a93840cede64d18807579d5975b298696}} 
+\index{wallet::Keyring@{wallet::Keyring}!generate\_key\_derivations@{generate\_key\_derivations}}
+\index{generate\_key\_derivations@{generate\_key\_derivations}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivations()}{generate\_key\_derivations()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} $>$ wallet\+::\+Keyring\+::generate\+\_\+key\+\_\+derivations (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{tx\+\_\+pubkeys }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a3514476a64302ce7e85a2bb0fa13e863}\label{classwallet_1_1Keyring_a3514476a64302ce7e85a2bb0fa13e863}} 
+\index{wallet::Keyring@{wallet::Keyring}!generate\_output\_ephemeral\_keys@{generate\_output\_ephemeral\_keys}}
+\index{generate\_output\_ephemeral\_keys@{generate\_output\_ephemeral\_keys}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{generate\_output\_ephemeral\_keys()}{generate\_output\_ephemeral\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::generate\+\_\+output\+\_\+ephemeral\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{tx\+\_\+key,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&}]{dst\+\_\+entr,  }\item[{const size\+\_\+t}]{output\+\_\+index,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&}]{amount\+\_\+keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_af1c9e1263fb07fdbd967981b2691ba78}\label{classwallet_1_1Keyring_af1c9e1263fb07fdbd967981b2691ba78}} 
+\index{wallet::Keyring@{wallet::Keyring}!generate\_tx\_key@{generate\_tx\_key}}
+\index{generate\_tx\_key@{generate\_tx\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{generate\_tx\_key()}{generate\_tx\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} wallet\+::\+Keyring\+::generate\+\_\+tx\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{hf\+\_\+version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a7e856e2e5469afb72ba3e0fcaac9129c}\label{classwallet_1_1Keyring_a7e856e2e5469afb72ba3e0fcaac9129c}} 
+\index{wallet::Keyring@{wallet::Keyring}!get\_main\_address@{get\_main\_address}}
+\index{get\_main\_address@{get\_main\_address}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{get\_main\_address()}{get\_main\_address()}}
+{\footnotesize\ttfamily std\+::string wallet\+::\+Keyring\+::get\+\_\+main\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a2242e41a23f0208d451607ec11c6dbff}\label{classwallet_1_1Keyring_a2242e41a23f0208d451607ec11c6dbff}} 
+\index{wallet::Keyring@{wallet::Keyring}!get\_transaction\_prefix\_hash@{get\_transaction\_prefix\_hash}}
+\index{get\_transaction\_prefix\_hash@{get\_transaction\_prefix\_hash}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_prefix\_hash()}{get\_transaction\_prefix\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} wallet\+::\+Keyring\+::get\+\_\+transaction\+\_\+prefix\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a4dec44bf05f3e61730fd1f7a3819504c}\label{classwallet_1_1Keyring_a4dec44bf05f3e61730fd1f7a3819504c}} 
+\index{wallet::Keyring@{wallet::Keyring}!key\_image@{key\_image}}
+\index{key\_image@{key\_image}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{key\_image()}{key\_image()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} wallet\+::\+Keyring\+::key\+\_\+image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{output\+\_\+key,  }\item[{uint64\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{sub\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a318aaa412b46b151e226a250e4f8214b}\label{classwallet_1_1Keyring_a318aaa412b46b151e226a250e4f8214b}} 
+\index{wallet::Keyring@{wallet::Keyring}!output\_amount\_and\_mask@{output\_amount\_and\_mask}}
+\index{output\_amount\_and\_mask@{output\_amount\_and\_mask}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{output\_amount\_and\_mask()}{output\_amount\_and\_mask()}}
+{\footnotesize\ttfamily std\+::pair$<$ uint64\+\_\+t, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ wallet\+::\+Keyring\+::output\+\_\+amount\+\_\+and\+\_\+mask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} \&}]{rv,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_af7ba8ffe22758f3b6ee63709fb51a27c}\label{classwallet_1_1Keyring_af7ba8ffe22758f3b6ee63709fb51a27c}} 
+\index{wallet::Keyring@{wallet::Keyring}!output\_and\_derivation\_ours@{output\_and\_derivation\_ours}}
+\index{output\_and\_derivation\_ours@{output\_and\_derivation\_ours}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{output\_and\_derivation\_ours()}{output\_and\_derivation\_ours()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} $>$ wallet\+::\+Keyring\+::output\+\_\+and\+\_\+derivation\+\_\+ours (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{output\+\_\+key,  }\item[{uint64\+\_\+t}]{output\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a224d94f86f4c89382e3fdccc7ab73b55}\label{classwallet_1_1Keyring_a224d94f86f4c89382e3fdccc7ab73b55}} 
+\index{wallet::Keyring@{wallet::Keyring}!output\_spend\_key@{output\_spend\_key}}
+\index{output\_spend\_key@{output\_spend\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{output\_spend\_key()}{output\_spend\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::output\+\_\+spend\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{output\+\_\+key,  }\item[{uint64\+\_\+t}]{output\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a134b599deb0c7464470f264b7563f432}\label{classwallet_1_1Keyring_a134b599deb0c7464470f264b7563f432}} 
+\index{wallet::Keyring@{wallet::Keyring}!secret\_tx\_key\_to\_public\_tx\_key@{secret\_tx\_key\_to\_public\_tx\_key}}
+\index{secret\_tx\_key\_to\_public\_tx\_key@{secret\_tx\_key\_to\_public\_tx\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{secret\_tx\_key\_to\_public\_tx\_key()}{secret\_tx\_key\_to\_public\_tx\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::secret\+\_\+tx\+\_\+key\+\_\+to\+\_\+public\+\_\+tx\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}}]{tx\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a5ae5c16880b4e10c55394eec17f628c0}\label{classwallet_1_1Keyring_a5ae5c16880b4e10c55394eec17f628c0}} 
+\index{wallet::Keyring@{wallet::Keyring}!sign\_transaction@{sign\_transaction}}
+\index{sign\_transaction@{sign\_transaction}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{sign\_transaction()}{sign\_transaction()}}
+{\footnotesize\ttfamily void wallet\+::\+Keyring\+::sign\+\_\+transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwallet_1_1PendingTransaction}{Pending\+Transaction}} \&}]{ptx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classwallet_1_1Keyring_a07f217521cd7c95911a7ea5286ab86ba}\label{classwallet_1_1Keyring_a07f217521cd7c95911a7ea5286ab86ba}} 
+\index{wallet::Keyring@{wallet::Keyring}!key\_device@{key\_device}}
+\index{key\_device@{key\_device}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{key\_device}{key\_device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1core_1_1device__default}{hw\+::core\+::device\+\_\+default}} wallet\+::\+Keyring\+::key\+\_\+device\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_ae4fad17b95777077c3c7fc49069b1a69}\label{classwallet_1_1Keyring_ae4fad17b95777077c3c7fc49069b1a69}} 
+\index{wallet::Keyring@{wallet::Keyring}!nettype@{nettype}}
+\index{nettype@{nettype}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{nettype}{nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} wallet\+::\+Keyring\+::nettype\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_ace8414caac29c8d53ab1c57e830db6f4}\label{classwallet_1_1Keyring_ace8414caac29c8d53ab1c57e830db6f4}} 
+\index{wallet::Keyring@{wallet::Keyring}!spend\_private\_key@{spend\_private\_key}}
+\index{spend\_private\_key@{spend\_private\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{spend\_private\_key}{spend\_private\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} wallet\+::\+Keyring\+::spend\+\_\+private\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_aa1a2e63d7d5ffbbed96776392d9dab9f}\label{classwallet_1_1Keyring_aa1a2e63d7d5ffbbed96776392d9dab9f}} 
+\index{wallet::Keyring@{wallet::Keyring}!spend\_public\_key@{spend\_public\_key}}
+\index{spend\_public\_key@{spend\_public\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{spend\_public\_key}{spend\_public\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::spend\+\_\+public\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a456259c488fb68f8fdc5bd99463ecdbf}\label{classwallet_1_1Keyring_a456259c488fb68f8fdc5bd99463ecdbf}} 
+\index{wallet::Keyring@{wallet::Keyring}!view\_private\_key@{view\_private\_key}}
+\index{view\_private\_key@{view\_private\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{view\_private\_key}{view\_private\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} wallet\+::\+Keyring\+::view\+\_\+private\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1Keyring_a3e258edf8d57457e1d3f17679034b41f}\label{classwallet_1_1Keyring_a3e258edf8d57457e1d3f17679034b41f}} 
+\index{wallet::Keyring@{wallet::Keyring}!view\_public\_key@{view\_public\_key}}
+\index{view\_public\_key@{view\_public\_key}!wallet::Keyring@{wallet::Keyring}}
+\doxysubsubsection{\texorpdfstring{view\_public\_key}{view\_public\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} wallet\+::\+Keyring\+::view\+\_\+public\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{keyring_8hpp}{keyring.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{keyring_8cpp}{keyring.\+cpp}}\end{DoxyCompactItemize}

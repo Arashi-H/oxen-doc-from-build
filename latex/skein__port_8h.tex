@@ -1,0 +1,191 @@
+\hypertarget{skein__port_8h}{}\doxysection{src/crypto/skein\+\_\+port.h File Reference}
+\label{skein__port_8h}\index{src/crypto/skein\_port.h@{src/crypto/skein\_port.h}}
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+Include dependency graph for skein\+\_\+port.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{skein__port_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skein__port_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a6ab2e13cff777db6a91360d9cae4ee5a}{R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+U\+ES}}
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_af71e197a4d5c1137fdca6be3595fdc8a}{V\+O\+I\+D\+\_\+\+R\+E\+T\+U\+RN}}~void
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_af808374fe222f29598b82d8c1e69efde}{I\+N\+T\+\_\+\+R\+E\+T\+U\+RN}}~int
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size)~uint\#\#size\#\#\+\_\+t
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_ab29af6710b839af7ecf13eada493abd6}{dec\+\_\+unit\+\_\+type}}(size,  x)~typedef \mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size) x
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a290d801795408bebbc420f1782b2c844}{dec\+\_\+bufr\+\_\+type}}(size,  bsize,  x)~typedef \mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size) x\mbox{[}bsize / (size $>$$>$ 3)\mbox{]}
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a1e4ff8c765bc31e8c4b801e7d32f3da9}{ptr\+\_\+cast}}(x,  size)~((\mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size)$\ast$)(x))
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_acbb729a28f876230827e8af03ec24cc0}{Rot\+L\+\_\+64}}(x,  N)~(((x) $<$$<$ (N)) $\vert$ ((x) $>$$>$ (64-\/(N))))
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a0fdc6fe49d3e76c9ed558321df1decef}{I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}}~4321 /$\ast$ byte 0 is most significant (mc68k) $\ast$/
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a30f87dfd7349d5165f116b550c35c6ed}{I\+S\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}~1234 /$\ast$ byte 0 is least significant (i386) $\ast$/
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}{P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}}~\mbox{\hyperlink{skein__port_8h_a30f87dfd7349d5165f116b550c35c6ed}{I\+S\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}{P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}}~\mbox{\hyperlink{skein__port_8h_a0fdc6fe49d3e76c9ed558321df1decef}{I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}}
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a597b9bef3a54d48bd59a66749ad07640}{P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+M\+U\+S\+T\+\_\+\+A\+L\+I\+GN}}~(0)
+\item 
+\#define \mbox{\hyperlink{skein__port_8h_a8f5a89e88f6b262b62433cd49ac8b39a}{Skein\+\_\+\+Swap64}}(w64)~(w64)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}{uint\+\_\+t}}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{skein__port_8h_a0e7894a26c546e778d128dd54f931839}{Skein\+\_\+\+Put64\+\_\+\+L\+S\+B\+\_\+\+First}} (\mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}} $\ast$dst, const \mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}} $\ast$src, size\+\_\+t b\+Cnt)
+\item 
+void \mbox{\hyperlink{skein__port_8h_a60dedd962bbc4a3554a1a94df43c5b5a}{Skein\+\_\+\+Get64\+\_\+\+L\+S\+B\+\_\+\+First}} (\mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}} $\ast$dst, const \mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}} $\ast$src, size\+\_\+t w\+Cnt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{skein__port_8h_a290d801795408bebbc420f1782b2c844}\label{skein__port_8h_a290d801795408bebbc420f1782b2c844}} 
+\index{skein\_port.h@{skein\_port.h}!dec\_bufr\_type@{dec\_bufr\_type}}
+\index{dec\_bufr\_type@{dec\_bufr\_type}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{dec\_bufr\_type}{dec\_bufr\_type}}
+{\footnotesize\ttfamily \#define dec\+\_\+bufr\+\_\+type(\begin{DoxyParamCaption}\item[{}]{size,  }\item[{}]{bsize,  }\item[{}]{x }\end{DoxyParamCaption})~typedef \mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size) x\mbox{[}bsize / (size $>$$>$ 3)\mbox{]}}
+
+\mbox{\Hypertarget{skein__port_8h_ab29af6710b839af7ecf13eada493abd6}\label{skein__port_8h_ab29af6710b839af7ecf13eada493abd6}} 
+\index{skein\_port.h@{skein\_port.h}!dec\_unit\_type@{dec\_unit\_type}}
+\index{dec\_unit\_type@{dec\_unit\_type}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{dec\_unit\_type}{dec\_unit\_type}}
+{\footnotesize\ttfamily \#define dec\+\_\+unit\+\_\+type(\begin{DoxyParamCaption}\item[{}]{size,  }\item[{}]{x }\end{DoxyParamCaption})~typedef \mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size) x}
+
+\mbox{\Hypertarget{skein__port_8h_af808374fe222f29598b82d8c1e69efde}\label{skein__port_8h_af808374fe222f29598b82d8c1e69efde}} 
+\index{skein\_port.h@{skein\_port.h}!INT\_RETURN@{INT\_RETURN}}
+\index{INT\_RETURN@{INT\_RETURN}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{INT\_RETURN}{INT\_RETURN}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+R\+E\+T\+U\+RN~int}
+
+\mbox{\Hypertarget{skein__port_8h_a0fdc6fe49d3e76c9ed558321df1decef}\label{skein__port_8h_a0fdc6fe49d3e76c9ed558321df1decef}} 
+\index{skein\_port.h@{skein\_port.h}!IS\_BIG\_ENDIAN@{IS\_BIG\_ENDIAN}}
+\index{IS\_BIG\_ENDIAN@{IS\_BIG\_ENDIAN}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{IS\_BIG\_ENDIAN}{IS\_BIG\_ENDIAN}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN~4321 /$\ast$ byte 0 is most significant (mc68k) $\ast$/}
+
+\mbox{\Hypertarget{skein__port_8h_a30f87dfd7349d5165f116b550c35c6ed}\label{skein__port_8h_a30f87dfd7349d5165f116b550c35c6ed}} 
+\index{skein\_port.h@{skein\_port.h}!IS\_LITTLE\_ENDIAN@{IS\_LITTLE\_ENDIAN}}
+\index{IS\_LITTLE\_ENDIAN@{IS\_LITTLE\_ENDIAN}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{IS\_LITTLE\_ENDIAN}{IS\_LITTLE\_ENDIAN}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN~1234 /$\ast$ byte 0 is least significant (i386) $\ast$/}
+
+\mbox{\Hypertarget{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}\label{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}} 
+\index{skein\_port.h@{skein\_port.h}!PLATFORM\_BYTE\_ORDER@{PLATFORM\_BYTE\_ORDER}}
+\index{PLATFORM\_BYTE\_ORDER@{PLATFORM\_BYTE\_ORDER}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_BYTE\_ORDER}{PLATFORM\_BYTE\_ORDER}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER~\mbox{\hyperlink{skein__port_8h_a30f87dfd7349d5165f116b550c35c6ed}{I\+S\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+AN}}}
+
+\mbox{\Hypertarget{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}\label{skein__port_8h_af1fc6f24fa4e3d41f5e584cfed2c88dd}} 
+\index{skein\_port.h@{skein\_port.h}!PLATFORM\_BYTE\_ORDER@{PLATFORM\_BYTE\_ORDER}}
+\index{PLATFORM\_BYTE\_ORDER@{PLATFORM\_BYTE\_ORDER}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_BYTE\_ORDER}{PLATFORM\_BYTE\_ORDER}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER~\mbox{\hyperlink{skein__port_8h_a0fdc6fe49d3e76c9ed558321df1decef}{I\+S\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}}}
+
+\mbox{\Hypertarget{skein__port_8h_a597b9bef3a54d48bd59a66749ad07640}\label{skein__port_8h_a597b9bef3a54d48bd59a66749ad07640}} 
+\index{skein\_port.h@{skein\_port.h}!PLATFORM\_MUST\_ALIGN@{PLATFORM\_MUST\_ALIGN}}
+\index{PLATFORM\_MUST\_ALIGN@{PLATFORM\_MUST\_ALIGN}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_MUST\_ALIGN}{PLATFORM\_MUST\_ALIGN}}
+{\footnotesize\ttfamily \#define P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+M\+U\+S\+T\+\_\+\+A\+L\+I\+GN~(0)}
+
+\mbox{\Hypertarget{skein__port_8h_a1e4ff8c765bc31e8c4b801e7d32f3da9}\label{skein__port_8h_a1e4ff8c765bc31e8c4b801e7d32f3da9}} 
+\index{skein\_port.h@{skein\_port.h}!ptr\_cast@{ptr\_cast}}
+\index{ptr\_cast@{ptr\_cast}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{ptr\_cast}{ptr\_cast}}
+{\footnotesize\ttfamily \#define ptr\+\_\+cast(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{size }\end{DoxyParamCaption})~((\mbox{\hyperlink{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}{ui\+\_\+type}}(size)$\ast$)(x))}
+
+\mbox{\Hypertarget{skein__port_8h_a6ab2e13cff777db6a91360d9cae4ee5a}\label{skein__port_8h_a6ab2e13cff777db6a91360d9cae4ee5a}} 
+\index{skein\_port.h@{skein\_port.h}!RETURN\_VALUES@{RETURN\_VALUES}}
+\index{RETURN\_VALUES@{RETURN\_VALUES}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_VALUES}{RETURN\_VALUES}}
+{\footnotesize\ttfamily \#define R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+U\+ES}
+
+\mbox{\Hypertarget{skein__port_8h_acbb729a28f876230827e8af03ec24cc0}\label{skein__port_8h_acbb729a28f876230827e8af03ec24cc0}} 
+\index{skein\_port.h@{skein\_port.h}!RotL\_64@{RotL\_64}}
+\index{RotL\_64@{RotL\_64}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{RotL\_64}{RotL\_64}}
+{\footnotesize\ttfamily \#define Rot\+L\+\_\+64(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{N }\end{DoxyParamCaption})~(((x) $<$$<$ (N)) $\vert$ ((x) $>$$>$ (64-\/(N))))}
+
+\mbox{\Hypertarget{skein__port_8h_a8f5a89e88f6b262b62433cd49ac8b39a}\label{skein__port_8h_a8f5a89e88f6b262b62433cd49ac8b39a}} 
+\index{skein\_port.h@{skein\_port.h}!Skein\_Swap64@{Skein\_Swap64}}
+\index{Skein\_Swap64@{Skein\_Swap64}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{Skein\_Swap64}{Skein\_Swap64}}
+{\footnotesize\ttfamily \#define Skein\+\_\+\+Swap64(\begin{DoxyParamCaption}\item[{}]{w64 }\end{DoxyParamCaption})~(w64)}
+
+\mbox{\Hypertarget{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}\label{skein__port_8h_a60c9c7476b3b121bef023663aa1124f4}} 
+\index{skein\_port.h@{skein\_port.h}!ui\_type@{ui\_type}}
+\index{ui\_type@{ui\_type}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{ui\_type}{ui\_type}}
+{\footnotesize\ttfamily \#define ui\+\_\+type(\begin{DoxyParamCaption}\item[{}]{size }\end{DoxyParamCaption})~uint\#\#size\#\#\+\_\+t}
+
+\mbox{\Hypertarget{skein__port_8h_af71e197a4d5c1137fdca6be3595fdc8a}\label{skein__port_8h_af71e197a4d5c1137fdca6be3595fdc8a}} 
+\index{skein\_port.h@{skein\_port.h}!VOID\_RETURN@{VOID\_RETURN}}
+\index{VOID\_RETURN@{VOID\_RETURN}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{VOID\_RETURN}{VOID\_RETURN}}
+{\footnotesize\ttfamily \#define V\+O\+I\+D\+\_\+\+R\+E\+T\+U\+RN~void}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}\label{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}} 
+\index{skein\_port.h@{skein\_port.h}!u08b\_t@{u08b\_t}}
+\index{u08b\_t@{u08b\_t}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{u08b\_t}{u08b\_t}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}}}
+
+\mbox{\Hypertarget{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}\label{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}} 
+\index{skein\_port.h@{skein\_port.h}!u64b\_t@{u64b\_t}}
+\index{u64b\_t@{u64b\_t}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{u64b\_t}{u64b\_t}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}}}
+
+\mbox{\Hypertarget{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}\label{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}} 
+\index{skein\_port.h@{skein\_port.h}!uint\_t@{uint\_t}}
+\index{uint\_t@{uint\_t}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{uint\_t}{uint\_t}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}{uint\+\_\+t}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{skein__port_8h_a60dedd962bbc4a3554a1a94df43c5b5a}\label{skein__port_8h_a60dedd962bbc4a3554a1a94df43c5b5a}} 
+\index{skein\_port.h@{skein\_port.h}!Skein\_Get64\_LSB\_First@{Skein\_Get64\_LSB\_First}}
+\index{Skein\_Get64\_LSB\_First@{Skein\_Get64\_LSB\_First}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{Skein\_Get64\_LSB\_First()}{Skein\_Get64\_LSB\_First()}}
+{\footnotesize\ttfamily void Skein\+\_\+\+Get64\+\_\+\+L\+S\+B\+\_\+\+First (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}} $\ast$}]{src,  }\item[{size\+\_\+t}]{w\+Cnt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{skein__port_8h_a0e7894a26c546e778d128dd54f931839}\label{skein__port_8h_a0e7894a26c546e778d128dd54f931839}} 
+\index{skein\_port.h@{skein\_port.h}!Skein\_Put64\_LSB\_First@{Skein\_Put64\_LSB\_First}}
+\index{Skein\_Put64\_LSB\_First@{Skein\_Put64\_LSB\_First}!skein\_port.h@{skein\_port.h}}
+\doxysubsubsection{\texorpdfstring{Skein\_Put64\_LSB\_First()}{Skein\_Put64\_LSB\_First()}}
+{\footnotesize\ttfamily void Skein\+\_\+\+Put64\+\_\+\+L\+S\+B\+\_\+\+First (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{skein__port_8h_abd2e7ffd9e5accadcaa5cefd372181f2}{u08b\+\_\+t}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{skein__port_8h_ad99b6728ec8eefaf2de5a04a9b8d9835}{u64b\+\_\+t}} $\ast$}]{src,  }\item[{size\+\_\+t}]{b\+Cnt }\end{DoxyParamCaption})}
+

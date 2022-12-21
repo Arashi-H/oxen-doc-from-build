@@ -1,0 +1,214 @@
+\hypertarget{classtools_1_1threadpool}{}\doxysection{tools\+::threadpool Class Reference}
+\label{classtools_1_1threadpool}\index{tools::threadpool@{tools::threadpool}}
+
+
+A global thread pool.  
+
+
+
+
+{\ttfamily \#include $<$threadpool.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{entry}}
+\item 
+class \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter}{waiter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_ab90f40251d2d16d6581abd567d62308c}{submit}} (\mbox{\hyperlink{classtools_1_1threadpool_1_1waiter}{waiter}} $\ast$\mbox{\hyperlink{classtools_1_1threadpool_1_1waiter}{waiter}}, std\+::function$<$ void()$>$ f, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} leaf=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_a3bce8a6fd9c1f05f2baf21f411038ea7}{recycle}} ()
+\item 
+unsigned int \mbox{\hyperlink{classtools_1_1threadpool_aef3d1e74e97e8d071f30654e52e5711a}{get\+\_\+max\+\_\+concurrency}} () const
+\item 
+\mbox{\hyperlink{classtools_1_1threadpool_a864d69c2113dcaadc87ab109f67be4d3}{$\sim$threadpool}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_a42bbe6b71af9c80026560696167baf81}{stop}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_a7d0f4fbd3ff46e8e886a94f1ac87cfed}{start}} (unsigned int max\+\_\+threads=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classtools_1_1threadpool}{threadpool}} \& \mbox{\hyperlink{classtools_1_1threadpool_ab3a98e0645c8614479c663b50d056a1c}{get\+Instance}} ()
+\item 
+static \mbox{\hyperlink{classtools_1_1threadpool}{threadpool}} $\ast$ \mbox{\hyperlink{classtools_1_1threadpool_a73993c63dda81617a3f65c8d61742c3a}{get\+New\+For\+Unit\+Tests}} (unsigned max\+\_\+threads=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{tools\+::threadpool\+::entry}} \mbox{\hyperlink{classtools_1_1threadpool_a6218ea1646f0c78a5fc2d59c845da83a}{entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1threadpool_a67216fea236b0e7c1d7d3f597a4a647d}{threadpool}} (unsigned int max\+\_\+threads=0)
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_ac867631a383a3a00cd9ea6c6887abcfb}{destroy}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_af86fa530e077b95942661e0ec5d9645b}{create}} (unsigned int max\+\_\+threads)
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_a23bd165013b2152a88402da04c9ae270}{run}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} flush=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ \mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{entry}} $>$ \mbox{\hyperlink{classtools_1_1threadpool_a703f193457cd0d2514029307eba802c5}{queue}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classtools_1_1threadpool_a1f20fd85560169d341c6d01eb43bde04}{has\+\_\+work}}
+\item 
+std\+::mutex \mbox{\hyperlink{classtools_1_1threadpool_abdb5a6fcf5a298d5bd234a68a257107a}{mutex}}
+\item 
+std\+::vector$<$ std\+::thread $>$ \mbox{\hyperlink{classtools_1_1threadpool_a3b6882e94946ca07e28f2cf9293f5a2f}{threads}}
+\item 
+unsigned int \mbox{\hyperlink{classtools_1_1threadpool_a050a2e0a76c6e84d6b5fb52d8fea021b}{active}}
+\item 
+unsigned int \mbox{\hyperlink{classtools_1_1threadpool_a8e4fed7fd5a27b99342f49d264b88af7}{max}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1threadpool_a862fb4d86209da4e235964d3b434ab57}{running}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A global thread pool. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_a6218ea1646f0c78a5fc2d59c845da83a}\label{classtools_1_1threadpool_a6218ea1646f0c78a5fc2d59c845da83a}} 
+\index{tools::threadpool@{tools::threadpool}!entry@{entry}}
+\index{entry@{entry}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{entry}{entry}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{tools\+::threadpool\+::entry}} \mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{tools\+::threadpool\+::entry}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_a864d69c2113dcaadc87ab109f67be4d3}\label{classtools_1_1threadpool_a864d69c2113dcaadc87ab109f67be4d3}} 
+\index{tools::threadpool@{tools::threadpool}!````~threadpool@{$\sim$threadpool}}
+\index{````~threadpool@{$\sim$threadpool}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{$\sim$threadpool()}{~threadpool()}}
+{\footnotesize\ttfamily tools\+::threadpool\+::$\sim$threadpool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a67216fea236b0e7c1d7d3f597a4a647d}\label{classtools_1_1threadpool_a67216fea236b0e7c1d7d3f597a4a647d}} 
+\index{tools::threadpool@{tools::threadpool}!threadpool@{threadpool}}
+\index{threadpool@{threadpool}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{threadpool()}{threadpool()}}
+{\footnotesize\ttfamily tools\+::threadpool\+::threadpool (\begin{DoxyParamCaption}\item[{unsigned int}]{max\+\_\+threads = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_af86fa530e077b95942661e0ec5d9645b}\label{classtools_1_1threadpool_af86fa530e077b95942661e0ec5d9645b}} 
+\index{tools::threadpool@{tools::threadpool}!create@{create}}
+\index{create@{create}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::create (\begin{DoxyParamCaption}\item[{unsigned int}]{max\+\_\+threads }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_ac867631a383a3a00cd9ea6c6887abcfb}\label{classtools_1_1threadpool_ac867631a383a3a00cd9ea6c6887abcfb}} 
+\index{tools::threadpool@{tools::threadpool}!destroy@{destroy}}
+\index{destroy@{destroy}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_aef3d1e74e97e8d071f30654e52e5711a}\label{classtools_1_1threadpool_aef3d1e74e97e8d071f30654e52e5711a}} 
+\index{tools::threadpool@{tools::threadpool}!get\_max\_concurrency@{get\_max\_concurrency}}
+\index{get\_max\_concurrency@{get\_max\_concurrency}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{get\_max\_concurrency()}{get\_max\_concurrency()}}
+{\footnotesize\ttfamily unsigned int tools\+::threadpool\+::get\+\_\+max\+\_\+concurrency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_ab3a98e0645c8614479c663b50d056a1c}\label{classtools_1_1threadpool_ab3a98e0645c8614479c663b50d056a1c}} 
+\index{tools::threadpool@{tools::threadpool}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classtools_1_1threadpool}{threadpool}}\& tools\+::threadpool\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a73993c63dda81617a3f65c8d61742c3a}\label{classtools_1_1threadpool_a73993c63dda81617a3f65c8d61742c3a}} 
+\index{tools::threadpool@{tools::threadpool}!getNewForUnitTests@{getNewForUnitTests}}
+\index{getNewForUnitTests@{getNewForUnitTests}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{getNewForUnitTests()}{getNewForUnitTests()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classtools_1_1threadpool}{threadpool}}$\ast$ tools\+::threadpool\+::get\+New\+For\+Unit\+Tests (\begin{DoxyParamCaption}\item[{unsigned}]{max\+\_\+threads = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a3bce8a6fd9c1f05f2baf21f411038ea7}\label{classtools_1_1threadpool_a3bce8a6fd9c1f05f2baf21f411038ea7}} 
+\index{tools::threadpool@{tools::threadpool}!recycle@{recycle}}
+\index{recycle@{recycle}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{recycle()}{recycle()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::recycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a23bd165013b2152a88402da04c9ae270}\label{classtools_1_1threadpool_a23bd165013b2152a88402da04c9ae270}} 
+\index{tools::threadpool@{tools::threadpool}!run@{run}}
+\index{run@{run}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{flush = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a7d0f4fbd3ff46e8e886a94f1ac87cfed}\label{classtools_1_1threadpool_a7d0f4fbd3ff46e8e886a94f1ac87cfed}} 
+\index{tools::threadpool@{tools::threadpool}!start@{start}}
+\index{start@{start}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::start (\begin{DoxyParamCaption}\item[{unsigned int}]{max\+\_\+threads = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a42bbe6b71af9c80026560696167baf81}\label{classtools_1_1threadpool_a42bbe6b71af9c80026560696167baf81}} 
+\index{tools::threadpool@{tools::threadpool}!stop@{stop}}
+\index{stop@{stop}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_ab90f40251d2d16d6581abd567d62308c}\label{classtools_1_1threadpool_ab90f40251d2d16d6581abd567d62308c}} 
+\index{tools::threadpool@{tools::threadpool}!submit@{submit}}
+\index{submit@{submit}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::submit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1threadpool_1_1waiter}{waiter}} $\ast$}]{waiter,  }\item[{std\+::function$<$ void()$>$}]{f,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{leaf = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_a050a2e0a76c6e84d6b5fb52d8fea021b}\label{classtools_1_1threadpool_a050a2e0a76c6e84d6b5fb52d8fea021b}} 
+\index{tools::threadpool@{tools::threadpool}!active@{active}}
+\index{active@{active}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily unsigned int tools\+::threadpool\+::active\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a1f20fd85560169d341c6d01eb43bde04}\label{classtools_1_1threadpool_a1f20fd85560169d341c6d01eb43bde04}} 
+\index{tools::threadpool@{tools::threadpool}!has\_work@{has\_work}}
+\index{has\_work@{has\_work}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{has\_work}{has\_work}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable tools\+::threadpool\+::has\+\_\+work\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a8e4fed7fd5a27b99342f49d264b88af7}\label{classtools_1_1threadpool_a8e4fed7fd5a27b99342f49d264b88af7}} 
+\index{tools::threadpool@{tools::threadpool}!max@{max}}
+\index{max@{max}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily unsigned int tools\+::threadpool\+::max\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_abdb5a6fcf5a298d5bd234a68a257107a}\label{classtools_1_1threadpool_abdb5a6fcf5a298d5bd234a68a257107a}} 
+\index{tools::threadpool@{tools::threadpool}!mutex@{mutex}}
+\index{mutex@{mutex}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::mutex tools\+::threadpool\+::mutex\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a703f193457cd0d2514029307eba802c5}\label{classtools_1_1threadpool_a703f193457cd0d2514029307eba802c5}} 
+\index{tools::threadpool@{tools::threadpool}!queue@{queue}}
+\index{queue@{queue}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily std\+::deque$<$\mbox{\hyperlink{structtools_1_1threadpool_1_1entry}{entry}}$>$ tools\+::threadpool\+::queue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a862fb4d86209da4e235964d3b434ab57}\label{classtools_1_1threadpool_a862fb4d86209da4e235964d3b434ab57}} 
+\index{tools::threadpool@{tools::threadpool}!running@{running}}
+\index{running@{running}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::threadpool\+::running\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_a3b6882e94946ca07e28f2cf9293f5a2f}\label{classtools_1_1threadpool_a3b6882e94946ca07e28f2cf9293f5a2f}} 
+\index{tools::threadpool@{tools::threadpool}!threads@{threads}}
+\index{threads@{threads}!tools::threadpool@{tools::threadpool}}
+\doxysubsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::thread$>$ tools\+::threadpool\+::threads\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{threadpool_8h}{threadpool.\+h}}\item 
+src/common/\mbox{\hyperlink{threadpool_8cpp}{threadpool.\+cpp}}\end{DoxyCompactItemize}

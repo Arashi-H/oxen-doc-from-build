@@ -1,0 +1,61 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+P\+R\+I\+V\+K\+E\+YS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS}\index{cryptonote::rpc::GET\_SERVICE\_PRIVKEYS@{cryptonote::rpc::GET\_SERVICE\_PRIVKEYS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+P\+R\+I\+V\+K\+E\+YS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+P\+R\+I\+V\+K\+E\+YS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS_a3f3dafcb87979c0f9ec98e6f4f42511e}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the service private keys of the queried daemon, encoded in hex. Do not ever share these keys\+: they would allow someone to impersonate your service node. All three keys are used when running as a service node; when running as a regular node only the x25519 key is regularly used for some R\+PC and and node-\/to-\/\+SN communication requests.
+
+Inputs\+: None
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily service\+\_\+node\+\_\+privkey} The queried daemon\textquotesingle{}s service node private key. Will be empty if not running as a service node.
+\item {\ttfamily service\+\_\+node\+\_\+ed25519\+\_\+privkey} The daemon\textquotesingle{}s ed25519 private key (note that this is in sodium\textquotesingle{}s format, which consists of the private and public keys concatenated together)
+\item {\ttfamily service\+\_\+node\+\_\+x25519\+\_\+privkey} The daemon\textquotesingle{}s x25519 private key. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS_a3f3dafcb87979c0f9ec98e6f4f42511e}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__PRIVKEYS_a3f3dafcb87979c0f9ec98e6f4f42511e}} 
+\index{cryptonote::rpc::GET\_SERVICE\_PRIVKEYS@{cryptonote::rpc::GET\_SERVICE\_PRIVKEYS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_SERVICE\_PRIVKEYS@{cryptonote::rpc::GET\_SERVICE\_PRIVKEYS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+P\+R\+I\+V\+K\+E\+Y\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

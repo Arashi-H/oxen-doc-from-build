@@ -1,0 +1,101 @@
+\hypertarget{classtools_1_1wallet__keys__unlocker}{}\doxysection{tools\+::wallet\+\_\+keys\+\_\+unlocker Class Reference}
+\label{classtools_1_1wallet__keys__unlocker}\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+
+
+{\ttfamily \#include $<$wallet2.\+h$>$}
+
+
+
+Collaboration diagram for tools\+::wallet\+\_\+keys\+\_\+unlocker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtools_1_1wallet__keys__unlocker__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_a1e77365f311ab83331ab7b68c457896c}{wallet\+\_\+keys\+\_\+unlocker}} (\mbox{\hyperlink{classtools_1_1wallet2}{wallet2}} \&\mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_ab835d8983ab281b5ebb65f010600fa8a}{w}}, const std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \&password)
+\item 
+\mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_adc56094347d278665e63217b29ad200d}{wallet\+\_\+keys\+\_\+unlocker}} (\mbox{\hyperlink{classtools_1_1wallet2}{wallet2}} \&\mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_ab835d8983ab281b5ebb65f010600fa8a}{w}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_a84b6225e14613ab82edd506c61d6da09}{locked}}, const epee\+::wipeable\+\_\+string \&password)
+\item 
+\mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_ab64020c795221f8a861e82934116f0f6}{$\sim$wallet\+\_\+keys\+\_\+unlocker}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1wallet2}{wallet2}} \& \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_ab835d8983ab281b5ebb65f010600fa8a}{w}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_a84b6225e14613ab82edd506c61d6da09}{locked}}
+\item 
+crypto\+::chacha\+\_\+key \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_a20be54c1da04f1abfad18f9a47eab9ec}{key}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::mutex \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_aa241f6689b2bf6c23ef9fa5ca895c8a6}{lockers\+\_\+mutex}}
+\item 
+static unsigned int \mbox{\hyperlink{classtools_1_1wallet__keys__unlocker_a3c664552c44b28e9cfea524c7f73b661}{lockers}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_a1e77365f311ab83331ab7b68c457896c}\label{classtools_1_1wallet__keys__unlocker_a1e77365f311ab83331ab7b68c457896c}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!wallet\_keys\_unlocker@{wallet\_keys\_unlocker}}
+\index{wallet\_keys\_unlocker@{wallet\_keys\_unlocker}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{wallet\_keys\_unlocker()}{wallet\_keys\_unlocker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tools\+::wallet\+\_\+keys\+\_\+unlocker\+::wallet\+\_\+keys\+\_\+unlocker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1wallet2}{wallet2}} \&}]{w,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_adc56094347d278665e63217b29ad200d}\label{classtools_1_1wallet__keys__unlocker_adc56094347d278665e63217b29ad200d}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!wallet\_keys\_unlocker@{wallet\_keys\_unlocker}}
+\index{wallet\_keys\_unlocker@{wallet\_keys\_unlocker}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{wallet\_keys\_unlocker()}{wallet\_keys\_unlocker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tools\+::wallet\+\_\+keys\+\_\+unlocker\+::wallet\+\_\+keys\+\_\+unlocker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1wallet2}{wallet2}} \&}]{w,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{locked,  }\item[{const epee\+::wipeable\+\_\+string \&}]{password }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_ab64020c795221f8a861e82934116f0f6}\label{classtools_1_1wallet__keys__unlocker_ab64020c795221f8a861e82934116f0f6}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!````~wallet\_keys\_unlocker@{$\sim$wallet\_keys\_unlocker}}
+\index{````~wallet\_keys\_unlocker@{$\sim$wallet\_keys\_unlocker}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{$\sim$wallet\_keys\_unlocker()}{~wallet\_keys\_unlocker()}}
+{\footnotesize\ttfamily tools\+::wallet\+\_\+keys\+\_\+unlocker\+::$\sim$wallet\+\_\+keys\+\_\+unlocker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_a20be54c1da04f1abfad18f9a47eab9ec}\label{classtools_1_1wallet__keys__unlocker_a20be54c1da04f1abfad18f9a47eab9ec}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!key@{key}}
+\index{key@{key}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily crypto\+::chacha\+\_\+key tools\+::wallet\+\_\+keys\+\_\+unlocker\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_a84b6225e14613ab82edd506c61d6da09}\label{classtools_1_1wallet__keys__unlocker_a84b6225e14613ab82edd506c61d6da09}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!locked@{locked}}
+\index{locked@{locked}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{locked}{locked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::wallet\+\_\+keys\+\_\+unlocker\+::locked\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_a3c664552c44b28e9cfea524c7f73b661}\label{classtools_1_1wallet__keys__unlocker_a3c664552c44b28e9cfea524c7f73b661}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!lockers@{lockers}}
+\index{lockers@{lockers}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{lockers}{lockers}}
+{\footnotesize\ttfamily unsigned int tools\+::wallet\+\_\+keys\+\_\+unlocker\+::lockers = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_aa241f6689b2bf6c23ef9fa5ca895c8a6}\label{classtools_1_1wallet__keys__unlocker_aa241f6689b2bf6c23ef9fa5ca895c8a6}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!lockers\_mutex@{lockers\_mutex}}
+\index{lockers\_mutex@{lockers\_mutex}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{lockers\_mutex}{lockers\_mutex}}
+{\footnotesize\ttfamily std\+::mutex tools\+::wallet\+\_\+keys\+\_\+unlocker\+::lockers\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1wallet__keys__unlocker_ab835d8983ab281b5ebb65f010600fa8a}\label{classtools_1_1wallet__keys__unlocker_ab835d8983ab281b5ebb65f010600fa8a}} 
+\index{tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}!w@{w}}
+\index{w@{w}!tools::wallet\_keys\_unlocker@{tools::wallet\_keys\_unlocker}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtools_1_1wallet2}{wallet2}}\& tools\+::wallet\+\_\+keys\+\_\+unlocker\+::w\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet2_8h}{wallet2.\+h}}\item 
+src/wallet/\mbox{\hyperlink{wallet2_8cpp}{wallet2.\+cpp}}\end{DoxyCompactItemize}

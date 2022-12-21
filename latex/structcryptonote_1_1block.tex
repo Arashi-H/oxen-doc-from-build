@@ -1,0 +1,189 @@
+\hypertarget{structcryptonote_1_1block}{}\doxysection{cryptonote\+::block Struct Reference}
+\label{structcryptonote_1_1block}\index{cryptonote::block@{cryptonote::block}}
+
+
+{\ttfamily \#include $<$cryptonote\+\_\+basic.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{structcryptonote_1_1block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block_aabce89371a4b9ee2e8e83b59348f9937}{block}} ()=default
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block_a7be9de8de7a7dd4e477ebe0074e1f79e}{block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&b)
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block_ab59acda0922edba69b5771df05b4e3f1}{block}} (\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\&b)
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block}{block}} \& \mbox{\hyperlink{structcryptonote_1_1block_a6796deb7704099af28904f72b14adf33}{operator=}} (const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&b)
+\item 
+\mbox{\hyperlink{structcryptonote_1_1block}{block}} \& \mbox{\hyperlink{structcryptonote_1_1block_ad49b450ca97950be25d673f201a4e709}{operator=}} (\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\&b)
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1block_a1ce598a8301cbbdc7a37cad49b2ae766}{invalidate\+\_\+hashes}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1block_a6c2f0f0fcb94d26dcd6c84973601022d}{is\+\_\+hash\+\_\+valid}} () const
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1block_a6f91e994214e44296a8e6d8e373040ab}{set\+\_\+hash\+\_\+valid}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} v) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \mbox{\hyperlink{structcryptonote_1_1block_a02d109dcb2068ac5e310c32e31c29e05}{miner\+\_\+tx}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structcryptonote_1_1block_a2fb20f6d016fca78ee7a16cf607117b1}{height}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{structcryptonote_1_1block_a67bffbd478e09f52039175930474a14f}{service\+\_\+node\+\_\+winner\+\_\+key}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1block_a7a251374c5753c1ecad85951284d72c3}{reward}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{structcryptonote_1_1block_aa4be398a2c50f4bbfe17e371ead44c2e}{tx\+\_\+hashes}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structcryptonote_1_1block_a2cbba8fc9b1b92455a7111ec7a71355b}{hash}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__signature}{service\+\_\+nodes\+::quorum\+\_\+signature}} $>$ \mbox{\hyperlink{structcryptonote_1_1block_aa7fa2a04a14972f4e54cc0ab67d4a82b}{signatures}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1block_a6a5702c7dc1d1ab08f39ffd49d35b5cb}{copy\+\_\+hash}} (const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{structcryptonote_1_1block_af1f69b03a9d6e3a47f602ccddf974121}{hash\+\_\+valid}} \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1block_aabce89371a4b9ee2e8e83b59348f9937}\label{structcryptonote_1_1block_aabce89371a4b9ee2e8e83b59348f9937}} 
+\index{cryptonote::block@{cryptonote::block}!block@{block}}
+\index{block@{block}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cryptonote\+::block\+::block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a7be9de8de7a7dd4e477ebe0074e1f79e}\label{structcryptonote_1_1block_a7be9de8de7a7dd4e477ebe0074e1f79e}} 
+\index{cryptonote::block@{cryptonote::block}!block@{block}}
+\index{block@{block}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cryptonote\+::block\+::block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_ab59acda0922edba69b5771df05b4e3f1}\label{structcryptonote_1_1block_ab59acda0922edba69b5771df05b4e3f1}} 
+\index{cryptonote::block@{cryptonote::block}!block@{block}}
+\index{block@{block}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cryptonote\+::block\+::block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\&}]{b }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1block_a6a5702c7dc1d1ab08f39ffd49d35b5cb}\label{structcryptonote_1_1block_a6a5702c7dc1d1ab08f39ffd49d35b5cb}} 
+\index{cryptonote::block@{cryptonote::block}!copy\_hash@{copy\_hash}}
+\index{copy\_hash@{copy\_hash}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{copy\_hash()}{copy\_hash()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+::copy\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a1ce598a8301cbbdc7a37cad49b2ae766}\label{structcryptonote_1_1block_a1ce598a8301cbbdc7a37cad49b2ae766}} 
+\index{cryptonote::block@{cryptonote::block}!invalidate\_hashes@{invalidate\_hashes}}
+\index{invalidate\_hashes@{invalidate\_hashes}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{invalidate\_hashes()}{invalidate\_hashes()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+::invalidate\+\_\+hashes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a6c2f0f0fcb94d26dcd6c84973601022d}\label{structcryptonote_1_1block_a6c2f0f0fcb94d26dcd6c84973601022d}} 
+\index{cryptonote::block@{cryptonote::block}!is\_hash\_valid@{is\_hash\_valid}}
+\index{is\_hash\_valid@{is\_hash\_valid}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{is\_hash\_valid()}{is\_hash\_valid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+::is\+\_\+hash\+\_\+valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_ad49b450ca97950be25d673f201a4e709}\label{structcryptonote_1_1block_ad49b450ca97950be25d673f201a4e709}} 
+\index{cryptonote::block@{cryptonote::block}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1block}{block}} \& cryptonote\+::block\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a6796deb7704099af28904f72b14adf33}\label{structcryptonote_1_1block_a6796deb7704099af28904f72b14adf33}} 
+\index{cryptonote::block@{cryptonote::block}!operator=@{operator=}}
+\index{operator=@{operator=}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1block}{block}} \& cryptonote\+::block\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a6f91e994214e44296a8e6d8e373040ab}\label{structcryptonote_1_1block_a6f91e994214e44296a8e6d8e373040ab}} 
+\index{cryptonote::block@{cryptonote::block}!set\_hash\_valid@{set\_hash\_valid}}
+\index{set\_hash\_valid@{set\_hash\_valid}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{set\_hash\_valid()}{set\_hash\_valid()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+::set\+\_\+hash\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{v }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1block_a2cbba8fc9b1b92455a7111ec7a71355b}\label{structcryptonote_1_1block_a2cbba8fc9b1b92455a7111ec7a71355b}} 
+\index{cryptonote::block@{cryptonote::block}!hash@{hash}}
+\index{hash@{hash}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{hash}{hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::block\+::hash\hspace{0.3cm}{\ttfamily [mutable]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_af1f69b03a9d6e3a47f602ccddf974121}\label{structcryptonote_1_1block_af1f69b03a9d6e3a47f602ccddf974121}} 
+\index{cryptonote::block@{cryptonote::block}!hash\_valid@{hash\_valid}}
+\index{hash\_valid@{hash\_valid}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{hash\_valid}{hash\_valid}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ cryptonote\+::block\+::hash\+\_\+valid \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a2fb20f6d016fca78ee7a16cf607117b1}\label{structcryptonote_1_1block_a2fb20f6d016fca78ee7a16cf607117b1}} 
+\index{cryptonote::block@{cryptonote::block}!height@{height}}
+\index{height@{height}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::block\+::height}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a02d109dcb2068ac5e310c32e31c29e05}\label{structcryptonote_1_1block_a02d109dcb2068ac5e310c32e31c29e05}} 
+\index{cryptonote::block@{cryptonote::block}!miner\_tx@{miner\_tx}}
+\index{miner\_tx@{miner\_tx}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{miner\_tx}{miner\_tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} cryptonote\+::block\+::miner\+\_\+tx}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a7a251374c5753c1ecad85951284d72c3}\label{structcryptonote_1_1block_a7a251374c5753c1ecad85951284d72c3}} 
+\index{cryptonote::block@{cryptonote::block}!reward@{reward}}
+\index{reward@{reward}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{reward}{reward}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::block\+::reward = 0}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_a67bffbd478e09f52039175930474a14f}\label{structcryptonote_1_1block_a67bffbd478e09f52039175930474a14f}} 
+\index{cryptonote::block@{cryptonote::block}!service\_node\_winner\_key@{service\_node\_winner\_key}}
+\index{service\_node\_winner\_key@{service\_node\_winner\_key}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{service\_node\_winner\_key}{service\_node\_winner\_key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} cryptonote\+::block\+::service\+\_\+node\+\_\+winner\+\_\+key}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_aa7fa2a04a14972f4e54cc0ab67d4a82b}\label{structcryptonote_1_1block_aa7fa2a04a14972f4e54cc0ab67d4a82b}} 
+\index{cryptonote::block@{cryptonote::block}!signatures@{signatures}}
+\index{signatures@{signatures}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{signatures}{signatures}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structservice__nodes_1_1quorum__signature}{service\+\_\+nodes\+::quorum\+\_\+signature}}$>$ cryptonote\+::block\+::signatures}
+
+\mbox{\Hypertarget{structcryptonote_1_1block_aa4be398a2c50f4bbfe17e371ead44c2e}\label{structcryptonote_1_1block_aa4be398a2c50f4bbfe17e371ead44c2e}} 
+\index{cryptonote::block@{cryptonote::block}!tx\_hashes@{tx\_hashes}}
+\index{tx\_hashes@{tx\_hashes}!cryptonote::block@{cryptonote::block}}
+\doxysubsubsection{\texorpdfstring{tx\_hashes}{tx\_hashes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::block\+::tx\+\_\+hashes}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{cryptonote__basic_8h}{cryptonote\+\_\+basic.\+h}}\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{cryptonote__basic_8cpp}{cryptonote\+\_\+basic.\+cpp}}\end{DoxyCompactItemize}

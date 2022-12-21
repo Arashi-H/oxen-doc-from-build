@@ -1,0 +1,195 @@
+\hypertarget{structons_1_1mapping__value}{}\doxysection{ons\+::mapping\+\_\+value Struct Reference}
+\label{structons_1_1mapping__value}\index{ons::mapping\_value@{ons::mapping\_value}}
+
+
+{\ttfamily \#include $<$oxen\+\_\+name\+\_\+system.\+h$>$}
+
+
+
+Collaboration diagram for ons\+::mapping\+\_\+value\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{structons_1_1mapping__value__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structons_1_1mapping__value_a591bde775f6d8b04ed65c9b3d79c164e}{to\+\_\+string}} () const
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{structons_1_1mapping__value_a3aeba2e72ad3ab85de7c18f213e3b22a}{to\+\_\+view}} () const
+\item 
+std\+::string \mbox{\hyperlink{structons_1_1mapping__value_a90ea4b35ba9571d660f4009e1d70174c}{to\+\_\+readable\+\_\+value}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type) const
+\item 
+std\+::pair$<$ std\+::basic\+\_\+string\+\_\+view$<$ unsigned char $>$, std\+::basic\+\_\+string\+\_\+view$<$ unsigned char $>$ $>$ \mbox{\hyperlink{structons_1_1mapping__value_a0f9148c6d4f167f9d18917796853b633}{value\+\_\+nonce}} (\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_a7ea6e6a8f7129c6ccc7606795db4f0d6}{operator==}} (\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} const \&other) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_a2ab22c3960fcfcf709379382e9633e72}{operator==}} (std\+::string\+\_\+view other) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_af314422a4005f9596af8011b0772b128}{encrypt}} (std\+::string\+\_\+view name, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$name\+\_\+hash=nullptr, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} deprecated\+\_\+heavy=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_a88017dc77b2c2f42d3eb7dd422d7eb64}{decrypt}} (std\+::string\+\_\+view name, \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$name\+\_\+hash=nullptr)
+\item 
+\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} \mbox{\hyperlink{structons_1_1mapping__value_a4075b56b4007466390d7174fd74e4690}{make\+\_\+encrypted}} (std\+::string\+\_\+view name, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$name\+\_\+hash=nullptr, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} deprecated\+\_\+heavy=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}) const
+\item 
+\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} \mbox{\hyperlink{structons_1_1mapping__value_a940773df0e021c603e2b6720780ec581}{make\+\_\+decrypted}} (std\+::string\+\_\+view name, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$name\+\_\+hash=nullptr) const
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} $>$ \mbox{\hyperlink{structons_1_1mapping__value_a217924d35d69188b6782def9a21dae34}{get\+\_\+wallet\+\_\+address\+\_\+info}} () const
+\item 
+\mbox{\hyperlink{structons_1_1mapping__value_a2d19872322a23467c3186637dde8d1fc}{mapping\+\_\+value}} ()
+\item 
+\mbox{\hyperlink{structons_1_1mapping__value_a27181542bf2a326ed189f87e20f89245}{mapping\+\_\+value}} (std\+::string encrypted\+\_\+value, std\+::string nonce)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_ab3f4f43539e5f3c2cb1ac8d6957d0985}{validate}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type, std\+::string\+\_\+view value, \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $\ast$blob=nullptr, std\+::string $\ast$reason=nullptr)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_a285acc850ebfb53e778a797dc6dc6973}{validate\+\_\+encrypted}} (\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type, std\+::string\+\_\+view value, \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $\ast$blob=nullptr, std\+::string $\ast$reason=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ uint8\+\_\+t, \mbox{\hyperlink{structons_1_1mapping__value_a924e086e7051608bfb3e82a0a6a8729b}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} $>$ \mbox{\hyperlink{structons_1_1mapping__value_a0b8c992dcb27c34aba11a63b1a23db45}{buffer}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1mapping__value_aa1e6f12009708e4b34da2323f475ecc1}{encrypted}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structons_1_1mapping__value_aabbbe005636dbcf2dcab08c7435bece4}{len}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structons_1_1mapping__value_a924e086e7051608bfb3e82a0a6a8729b}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} = std\+::max(\{\mbox{\hyperlink{namespaceons_ae5c07ec3fec3791890c5ad122df34f7a}{W\+A\+L\+L\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+I\+N\+C\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+ID}}, \mbox{\hyperlink{namespaceons_a89949edeb94e4417b1e3c010d3c747a0}{L\+O\+K\+I\+N\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}}, \mbox{\hyperlink{namespaceons_a363f99466b65d166a904ddc05be8cb0c}{S\+E\+S\+S\+I\+O\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}}\}) + \mbox{\hyperlink{namespaceons_ae0d5f6f4add6d7d3f12c43911a2a4481}{S\+O\+D\+I\+U\+M\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+E\+X\+T\+R\+A\+\_\+\+B\+Y\+T\+ES}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structons_1_1mapping__value_a2d19872322a23467c3186637dde8d1fc}\label{structons_1_1mapping__value_a2d19872322a23467c3186637dde8d1fc}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!mapping\_value@{mapping\_value}}
+\index{mapping\_value@{mapping\_value}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{mapping\_value()}{mapping\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ons\+::mapping\+\_\+value\+::mapping\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a27181542bf2a326ed189f87e20f89245}\label{structons_1_1mapping__value_a27181542bf2a326ed189f87e20f89245}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!mapping\_value@{mapping\_value}}
+\index{mapping\_value@{mapping\_value}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{mapping\_value()}{mapping\_value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ons\+::mapping\+\_\+value\+::mapping\+\_\+value (\begin{DoxyParamCaption}\item[{std\+::string}]{encrypted\+\_\+value,  }\item[{std\+::string}]{nonce }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structons_1_1mapping__value_a88017dc77b2c2f42d3eb7dd422d7eb64}\label{structons_1_1mapping__value_a88017dc77b2c2f42d3eb7dd422d7eb64}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::decrypt (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$}]{name\+\_\+hash = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_af314422a4005f9596af8011b0772b128}\label{structons_1_1mapping__value_af314422a4005f9596af8011b0772b128}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::encrypt (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$}]{name\+\_\+hash = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{deprecated\+\_\+heavy = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a217924d35d69188b6782def9a21dae34}\label{structons_1_1mapping__value_a217924d35d69188b6782def9a21dae34}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!get\_wallet\_address\_info@{get\_wallet\_address\_info}}
+\index{get\_wallet\_address\_info@{get\_wallet\_address\_info}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{get\_wallet\_address\_info()}{get\_wallet\_address\_info()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} $>$ ons\+::mapping\+\_\+value\+::get\+\_\+wallet\+\_\+address\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a940773df0e021c603e2b6720780ec581}\label{structons_1_1mapping__value_a940773df0e021c603e2b6720780ec581}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!make\_decrypted@{make\_decrypted}}
+\index{make\_decrypted@{make\_decrypted}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{make\_decrypted()}{make\_decrypted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} ons\+::mapping\+\_\+value\+::make\+\_\+decrypted (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$}]{name\+\_\+hash = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a4075b56b4007466390d7174fd74e4690}\label{structons_1_1mapping__value_a4075b56b4007466390d7174fd74e4690}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!make\_encrypted@{make\_encrypted}}
+\index{make\_encrypted@{make\_encrypted}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{make\_encrypted()}{make\_encrypted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} ons\+::mapping\+\_\+value\+::make\+\_\+encrypted (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $\ast$}]{name\+\_\+hash = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{deprecated\+\_\+heavy = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a7ea6e6a8f7129c6ccc7606795db4f0d6}\label{structons_1_1mapping__value_a7ea6e6a8f7129c6ccc7606795db4f0d6}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!operator==@{operator==}}
+\index{operator==@{operator==}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} const \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a2ab22c3960fcfcf709379382e9633e72}\label{structons_1_1mapping__value_a2ab22c3960fcfcf709379382e9633e72}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!operator==@{operator==}}
+\index{operator==@{operator==}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::operator== (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a90ea4b35ba9571d660f4009e1d70174c}\label{structons_1_1mapping__value_a90ea4b35ba9571d660f4009e1d70174c}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!to\_readable\_value@{to\_readable\_value}}
+\index{to\_readable\_value@{to\_readable\_value}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{to\_readable\_value()}{to\_readable\_value()}}
+{\footnotesize\ttfamily std\+::string ons\+::mapping\+\_\+value\+::to\+\_\+readable\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{ons\+::mapping\+\_\+type}}}]{type }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a591bde775f6d8b04ed65c9b3d79c164e}\label{structons_1_1mapping__value_a591bde775f6d8b04ed65c9b3d79c164e}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string ons\+::mapping\+\_\+value\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a3aeba2e72ad3ab85de7c18f213e3b22a}\label{structons_1_1mapping__value_a3aeba2e72ad3ab85de7c18f213e3b22a}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!to\_view@{to\_view}}
+\index{to\_view@{to\_view}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{to\_view()}{to\_view()}}
+{\footnotesize\ttfamily std\+::string\+\_\+view ons\+::mapping\+\_\+value\+::to\+\_\+view (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_ab3f4f43539e5f3c2cb1ac8d6957d0985}\label{structons_1_1mapping__value_ab3f4f43539e5f3c2cb1ac8d6957d0985}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!validate@{validate}}
+\index{validate@{validate}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type,  }\item[{std\+::string\+\_\+view}]{value,  }\item[{\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $\ast$}]{blob = {\ttfamily nullptr},  }\item[{std\+::string $\ast$}]{reason = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a285acc850ebfb53e778a797dc6dc6973}\label{structons_1_1mapping__value_a285acc850ebfb53e778a797dc6dc6973}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!validate\_encrypted@{validate\_encrypted}}
+\index{validate\_encrypted@{validate\_encrypted}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{validate\_encrypted()}{validate\_encrypted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::validate\+\_\+encrypted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type,  }\item[{std\+::string\+\_\+view}]{value,  }\item[{\mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $\ast$}]{blob = {\ttfamily nullptr},  }\item[{std\+::string $\ast$}]{reason = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a0f9148c6d4f167f9d18917796853b633}\label{structons_1_1mapping__value_a0f9148c6d4f167f9d18917796853b633}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!value\_nonce@{value\_nonce}}
+\index{value\_nonce@{value\_nonce}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{value\_nonce()}{value\_nonce()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::basic\+\_\+string\+\_\+view$<$ unsigned char $>$, std\+::basic\+\_\+string\+\_\+view$<$ unsigned char $>$ $>$ ons\+::mapping\+\_\+value\+::value\+\_\+nonce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structons_1_1mapping__value_a0b8c992dcb27c34aba11a63b1a23db45}\label{structons_1_1mapping__value_a0b8c992dcb27c34aba11a63b1a23db45}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!buffer@{buffer}}
+\index{buffer@{buffer}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily std\+::array$<$uint8\+\_\+t, \mbox{\hyperlink{structons_1_1mapping__value_a924e086e7051608bfb3e82a0a6a8729b}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}$>$ ons\+::mapping\+\_\+value\+::buffer}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_a924e086e7051608bfb3e82a0a6a8729b}\label{structons_1_1mapping__value_a924e086e7051608bfb3e82a0a6a8729b}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!BUFFER\_SIZE@{BUFFER\_SIZE}}
+\index{BUFFER\_SIZE@{BUFFER\_SIZE}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{BUFFER\_SIZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily constexpr size\+\_\+t ons\+::mapping\+\_\+value\+::\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE = std\+::max(\{\mbox{\hyperlink{namespaceons_ae5c07ec3fec3791890c5ad122df34f7a}{W\+A\+L\+L\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+I\+N\+C\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+ID}}, \mbox{\hyperlink{namespaceons_a89949edeb94e4417b1e3c010d3c747a0}{L\+O\+K\+I\+N\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}}, \mbox{\hyperlink{namespaceons_a363f99466b65d166a904ddc05be8cb0c}{S\+E\+S\+S\+I\+O\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}}\}) + \mbox{\hyperlink{namespaceons_ae0d5f6f4add6d7d3f12c43911a2a4481}{S\+O\+D\+I\+U\+M\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+E\+X\+T\+R\+A\+\_\+\+B\+Y\+T\+ES}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_aa1e6f12009708e4b34da2323f475ecc1}\label{structons_1_1mapping__value_aa1e6f12009708e4b34da2323f475ecc1}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!encrypted@{encrypted}}
+\index{encrypted@{encrypted}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{encrypted}{encrypted}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::mapping\+\_\+value\+::encrypted}
+
+\mbox{\Hypertarget{structons_1_1mapping__value_aabbbe005636dbcf2dcab08c7435bece4}\label{structons_1_1mapping__value_aabbbe005636dbcf2dcab08c7435bece4}} 
+\index{ons::mapping\_value@{ons::mapping\_value}!len@{len}}
+\index{len@{len}!ons::mapping\_value@{ons::mapping\_value}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily size\+\_\+t ons\+::mapping\+\_\+value\+::len}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8h}{oxen\+\_\+name\+\_\+system.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8cpp}{oxen\+\_\+name\+\_\+system.\+cpp}}\end{DoxyCompactItemize}

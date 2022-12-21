@@ -1,0 +1,75 @@
+\hypertarget{cn__deserialize_8cpp}{}\doxysection{src/debug\+\_\+utilities/cn\+\_\+deserialize.cpp File Reference}
+\label{cn__deserialize_8cpp}\index{src/debug\_utilities/cn\_deserialize.cpp@{src/debug\_utilities/cn\_deserialize.cpp}}
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+Include dependency graph for cn\+\_\+deserialize.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cn__deserialize_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structextra__printer}{extra\+\_\+printer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{cn__deserialize_8cpp_a57e9d9380a361706132c513ab5c3521a}{extra\+\_\+nonce\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{structcryptonote_1_1tx__extra__nonce}{cryptonote\+::tx\+\_\+extra\+\_\+nonce}} \&extra\+\_\+nonce)
+\item 
+static void \mbox{\hyperlink{cn__deserialize_8cpp_a3be00ba6f0beb36726fdf2d5f51ebb58}{print\+\_\+extra\+\_\+fields}} (const std\+::vector$<$ \mbox{\hyperlink{namespacecryptonote_ac1f8949ff41ae23774caec81edb57eff}{cryptonote\+::tx\+\_\+extra\+\_\+field}} $>$ \&fields)
+\item 
+constexpr static std\+::string\+\_\+view \mbox{\hyperlink{cn__deserialize_8cpp_a96295cc444146125ca8c97c1059990f5}{network\+\_\+type\+\_\+str}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype)
+\item 
+int \mbox{\hyperlink{cn__deserialize_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{cn__deserialize_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}debugtools.\+deserialize\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cn__deserialize_8cpp_a57e9d9380a361706132c513ab5c3521a}\label{cn__deserialize_8cpp_a57e9d9380a361706132c513ab5c3521a}} 
+\index{cn\_deserialize.cpp@{cn\_deserialize.cpp}!extra\_nonce\_to\_string@{extra\_nonce\_to\_string}}
+\index{extra\_nonce\_to\_string@{extra\_nonce\_to\_string}!cn\_deserialize.cpp@{cn\_deserialize.cpp}}
+\doxysubsubsection{\texorpdfstring{extra\_nonce\_to\_string()}{extra\_nonce\_to\_string()}}
+{\footnotesize\ttfamily static std\+::string extra\+\_\+nonce\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__extra__nonce}{cryptonote\+::tx\+\_\+extra\+\_\+nonce}} \&}]{extra\+\_\+nonce }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__deserialize_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{cn__deserialize_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{cn\_deserialize.cpp@{cn\_deserialize.cpp}!main@{main}}
+\index{main@{main}!cn\_deserialize.cpp@{cn\_deserialize.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__deserialize_8cpp_a96295cc444146125ca8c97c1059990f5}\label{cn__deserialize_8cpp_a96295cc444146125ca8c97c1059990f5}} 
+\index{cn\_deserialize.cpp@{cn\_deserialize.cpp}!network\_type\_str@{network\_type\_str}}
+\index{network\_type\_str@{network\_type\_str}!cn\_deserialize.cpp@{cn\_deserialize.cpp}}
+\doxysubsubsection{\texorpdfstring{network\_type\_str()}{network\_type\_str()}}
+{\footnotesize\ttfamily constexpr static std\+::string\+\_\+view network\+\_\+type\+\_\+str (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{cn__deserialize_8cpp_a3be00ba6f0beb36726fdf2d5f51ebb58}\label{cn__deserialize_8cpp_a3be00ba6f0beb36726fdf2d5f51ebb58}} 
+\index{cn\_deserialize.cpp@{cn\_deserialize.cpp}!print\_extra\_fields@{print\_extra\_fields}}
+\index{print\_extra\_fields@{print\_extra\_fields}!cn\_deserialize.cpp@{cn\_deserialize.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_extra\_fields()}{print\_extra\_fields()}}
+{\footnotesize\ttfamily static void print\+\_\+extra\+\_\+fields (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacecryptonote_ac1f8949ff41ae23774caec81edb57eff}{cryptonote\+::tx\+\_\+extra\+\_\+field}} $>$ \&}]{fields }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cn__deserialize_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{cn__deserialize_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{cn\_deserialize.cpp@{cn\_deserialize.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!cn\_deserialize.cpp@{cn\_deserialize.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}debugtools.\+deserialize\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

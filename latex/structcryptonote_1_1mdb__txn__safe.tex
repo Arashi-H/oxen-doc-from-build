@@ -1,0 +1,179 @@
+\hypertarget{structcryptonote_1_1mdb__txn__safe}{}\doxysection{cryptonote\+::mdb\+\_\+txn\+\_\+safe Struct Reference}
+\label{structcryptonote_1_1mdb__txn__safe}\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+
+
+{\ttfamily \#include $<$db\+\_\+lmdb.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::mdb\+\_\+txn\+\_\+safe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{structcryptonote_1_1mdb__txn__safe__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_abbdf08c3e1c7c9ca7728d32856f8fe90}{mdb\+\_\+txn\+\_\+safe}} (const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} check=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\item 
+\mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a879cdbb337d142fbff689afe2995ed22}{$\sim$mdb\+\_\+txn\+\_\+safe}} ()
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_af240c8d1ae12b558e5e7b058dcdf4085}{commit}} (std\+::string message=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a3660e7023217da152ac23a67b1625ee1}{abort}} ()
+\item 
+void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_ae76d21b9c2307bbfa6bab0880072544c}{uncheck}} ()
+\item 
+\mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a09fb569879019d9204282771680dc52c}{operator M\+D\+B\+\_\+txn $\ast$}} ()
+\item 
+\mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a2cbb6191d141607579adf39a8faa1094}{operator M\+D\+B\+\_\+txn $\ast$$\ast$}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a924c45cf0dda80a3aafef7a363fa6cb2}{num\+\_\+active\+\_\+tx}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a08b41a4efc8f2ba4d429542d21041840}{prevent\+\_\+new\+\_\+txns}} ()
+\item 
+static void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a94dacfe05c36a270cbaaaa4de25ed2db}{wait\+\_\+no\+\_\+active\+\_\+txns}} ()
+\item 
+static void \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a4e2940eebb888bbfbfab2ac02d837c45}{allow\+\_\+new\+\_\+txns}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1mdb__threadinfo}{mdb\+\_\+threadinfo}} $\ast$ \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a3dc6d063d2d471dd8e8d4dfb59ee340b}{m\+\_\+tinfo}}
+\item 
+M\+D\+B\+\_\+txn $\ast$ \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a3d6acad395f4a44bc0439a96e5aee4b4}{m\+\_\+txn}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a21d0b68c82f152885f7fd58a9d38f67e}{m\+\_\+batch\+\_\+txn}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_ac90a5fc64ce68c2ac14a133b8a30c55c}{m\+\_\+check}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_a9682e9151ce201279bf50d300642b5bd}{num\+\_\+active\+\_\+txns}} \{0\}
+\item 
+static std\+::atomic\+\_\+flag \mbox{\hyperlink{structcryptonote_1_1mdb__txn__safe_af35d4765e24c8b7ed4084ec8248ca89b}{creation\+\_\+gate}} = A\+T\+O\+M\+I\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+IT
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_abbdf08c3e1c7c9ca7728d32856f8fe90}\label{structcryptonote_1_1mdb__txn__safe_abbdf08c3e1c7c9ca7728d32856f8fe90}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!mdb\_txn\_safe@{mdb\_txn\_safe}}
+\index{mdb\_txn\_safe@{mdb\_txn\_safe}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{mdb\_txn\_safe()}{mdb\_txn\_safe()}}
+{\footnotesize\ttfamily cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::mdb\+\_\+txn\+\_\+safe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{check = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a879cdbb337d142fbff689afe2995ed22}\label{structcryptonote_1_1mdb__txn__safe_a879cdbb337d142fbff689afe2995ed22}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!````~mdb\_txn\_safe@{$\sim$mdb\_txn\_safe}}
+\index{````~mdb\_txn\_safe@{$\sim$mdb\_txn\_safe}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{$\sim$mdb\_txn\_safe()}{~mdb\_txn\_safe()}}
+{\footnotesize\ttfamily cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::$\sim$mdb\+\_\+txn\+\_\+safe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a3660e7023217da152ac23a67b1625ee1}\label{structcryptonote_1_1mdb__txn__safe_a3660e7023217da152ac23a67b1625ee1}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!abort@{abort}}
+\index{abort@{abort}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a4e2940eebb888bbfbfab2ac02d837c45}\label{structcryptonote_1_1mdb__txn__safe_a4e2940eebb888bbfbfab2ac02d837c45}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!allow\_new\_txns@{allow\_new\_txns}}
+\index{allow\_new\_txns@{allow\_new\_txns}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{allow\_new\_txns()}{allow\_new\_txns()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::allow\+\_\+new\+\_\+txns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_af240c8d1ae12b558e5e7b058dcdf4085}\label{structcryptonote_1_1mdb__txn__safe_af240c8d1ae12b558e5e7b058dcdf4085}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!commit@{commit}}
+\index{commit@{commit}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::commit (\begin{DoxyParamCaption}\item[{std\+::string}]{message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a924c45cf0dda80a3aafef7a363fa6cb2}\label{structcryptonote_1_1mdb__txn__safe_a924c45cf0dda80a3aafef7a363fa6cb2}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!num\_active\_tx@{num\_active\_tx}}
+\index{num\_active\_tx@{num\_active\_tx}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{num\_active\_tx()}{num\_active\_tx()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::num\+\_\+active\+\_\+tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a09fb569879019d9204282771680dc52c}\label{structcryptonote_1_1mdb__txn__safe_a09fb569879019d9204282771680dc52c}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!operator MDB\_txn $\ast$@{operator MDB\_txn $\ast$}}
+\index{operator MDB\_txn $\ast$@{operator MDB\_txn $\ast$}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{operator MDB\_txn $\ast$()}{operator MDB\_txn *()}}
+{\footnotesize\ttfamily cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::operator M\+D\+B\+\_\+txn $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a2cbb6191d141607579adf39a8faa1094}\label{structcryptonote_1_1mdb__txn__safe_a2cbb6191d141607579adf39a8faa1094}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!operator MDB\_txn $\ast$$\ast$@{operator MDB\_txn $\ast$$\ast$}}
+\index{operator MDB\_txn $\ast$$\ast$@{operator MDB\_txn $\ast$$\ast$}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{operator MDB\_txn $\ast$$\ast$()}{operator MDB\_txn **()}}
+{\footnotesize\ttfamily cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::operator M\+D\+B\+\_\+txn $\ast$$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a08b41a4efc8f2ba4d429542d21041840}\label{structcryptonote_1_1mdb__txn__safe_a08b41a4efc8f2ba4d429542d21041840}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!prevent\_new\_txns@{prevent\_new\_txns}}
+\index{prevent\_new\_txns@{prevent\_new\_txns}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{prevent\_new\_txns()}{prevent\_new\_txns()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::prevent\+\_\+new\+\_\+txns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_ae76d21b9c2307bbfa6bab0880072544c}\label{structcryptonote_1_1mdb__txn__safe_ae76d21b9c2307bbfa6bab0880072544c}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!uncheck@{uncheck}}
+\index{uncheck@{uncheck}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{uncheck()}{uncheck()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::uncheck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a94dacfe05c36a270cbaaaa4de25ed2db}\label{structcryptonote_1_1mdb__txn__safe_a94dacfe05c36a270cbaaaa4de25ed2db}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!wait\_no\_active\_txns@{wait\_no\_active\_txns}}
+\index{wait\_no\_active\_txns@{wait\_no\_active\_txns}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{wait\_no\_active\_txns()}{wait\_no\_active\_txns()}}
+{\footnotesize\ttfamily void cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::wait\+\_\+no\+\_\+active\+\_\+txns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_af35d4765e24c8b7ed4084ec8248ca89b}\label{structcryptonote_1_1mdb__txn__safe_af35d4765e24c8b7ed4084ec8248ca89b}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!creation\_gate@{creation\_gate}}
+\index{creation\_gate@{creation\_gate}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{creation\_gate}{creation\_gate}}
+{\footnotesize\ttfamily std\+::atomic\+\_\+flag cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::creation\+\_\+gate = A\+T\+O\+M\+I\+C\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+IT\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a21d0b68c82f152885f7fd58a9d38f67e}\label{structcryptonote_1_1mdb__txn__safe_a21d0b68c82f152885f7fd58a9d38f67e}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!m\_batch\_txn@{m\_batch\_txn}}
+\index{m\_batch\_txn@{m\_batch\_txn}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{m\_batch\_txn}{m\_batch\_txn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::m\+\_\+batch\+\_\+txn = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_ac90a5fc64ce68c2ac14a133b8a30c55c}\label{structcryptonote_1_1mdb__txn__safe_ac90a5fc64ce68c2ac14a133b8a30c55c}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!m\_check@{m\_check}}
+\index{m\_check@{m\_check}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{m\_check}{m\_check}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::m\+\_\+check}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a3dc6d063d2d471dd8e8d4dfb59ee340b}\label{structcryptonote_1_1mdb__txn__safe_a3dc6d063d2d471dd8e8d4dfb59ee340b}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!m\_tinfo@{m\_tinfo}}
+\index{m\_tinfo@{m\_tinfo}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{m\_tinfo}{m\_tinfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1mdb__threadinfo}{mdb\+\_\+threadinfo}}$\ast$ cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::m\+\_\+tinfo}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a3d6acad395f4a44bc0439a96e5aee4b4}\label{structcryptonote_1_1mdb__txn__safe_a3d6acad395f4a44bc0439a96e5aee4b4}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!m\_txn@{m\_txn}}
+\index{m\_txn@{m\_txn}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{m\_txn}{m\_txn}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+txn$\ast$ cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::m\+\_\+txn}
+
+\mbox{\Hypertarget{structcryptonote_1_1mdb__txn__safe_a9682e9151ce201279bf50d300642b5bd}\label{structcryptonote_1_1mdb__txn__safe_a9682e9151ce201279bf50d300642b5bd}} 
+\index{cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}!num\_active\_txns@{num\_active\_txns}}
+\index{num\_active\_txns@{num\_active\_txns}!cryptonote::mdb\_txn\_safe@{cryptonote::mdb\_txn\_safe}}
+\doxysubsubsection{\texorpdfstring{num\_active\_txns}{num\_active\_txns}}
+{\footnotesize\ttfamily std\+::atomic$<$ uint64\+\_\+t $>$ cryptonote\+::mdb\+\_\+txn\+\_\+safe\+::num\+\_\+active\+\_\+txns \{0\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blockchain\+\_\+db/lmdb/\mbox{\hyperlink{db__lmdb_8h}{db\+\_\+lmdb.\+h}}\item 
+src/blockchain\+\_\+db/lmdb/\mbox{\hyperlink{db__lmdb_8cpp}{db\+\_\+lmdb.\+cpp}}\end{DoxyCompactItemize}

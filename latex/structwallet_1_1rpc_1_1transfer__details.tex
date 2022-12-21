@@ -1,0 +1,115 @@
+\hypertarget{structwallet_1_1rpc_1_1transfer__details}{}\doxysection{wallet\+::rpc\+::transfer\+\_\+details Struct Reference}
+\label{structwallet_1_1rpc_1_1transfer__details}\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Collaboration diagram for wallet\+::rpc\+::transfer\+\_\+details\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{structwallet_1_1rpc_1_1transfer__details__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_ae25186cf7b2760349bdd5134c8d992b8}{amount}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_a7c6792438779717c7887df622708e0cb}{spent}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_a9bb6ffa293f0073a560fee237ea104f0}{global\+\_\+index}}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_ad314ffa94245607bedc3beef8ca6c0cc}{tx\+\_\+hash}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_a04c4125f8304971dfccbea777e5baad5}{subaddr\+\_\+index}}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_ae2e9539cf849c919a2edbacde9720a7c}{key\+\_\+image}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_abc934becba23fa4e6861d8f468a214d3}{block\+\_\+height}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_ae483b8f3405b05d22a87edcc68d7e93b}{frozen}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1rpc_1_1transfer__details_a923c92374c01dac0983ddd61c7497f36}{unlocked}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transfer details struct
+
+
+\begin{DoxyItemize}
+\item {\ttfamily amount} -- Amount of this transfer.
+\item {\ttfamily spent} -- Indicates if this transfer has been spent.
+\item {\ttfamily global\+\_\+index} -- The index into the global list of transactions grouped by amount in the Loki network.
+\item {\ttfamily tx\+\_\+hash} -- Several incoming transfers may share the same hash if they were in the same transaction.
+\item {\ttfamily subaddr\+\_\+index} -- Major \& minor index, account and subaddress index respectively.
+\item {\ttfamily key\+\_\+image} -- Key image for the incoming transfer\textquotesingle{}s unspent output (empty unless verbose is true).
+\item {\ttfamily block\+\_\+height} -- \mbox{\hyperlink{structwallet_1_1Block}{Block}} height the transfer occurred on
+\item {\ttfamily frozen} -- If the output has been intentionally frozen by the user, i.\+e. unspendable.
+\item {\ttfamily unlocked} -- If the TX is spendable yet 
+\end{DoxyItemize}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_ae25186cf7b2760349bdd5134c8d992b8}\label{structwallet_1_1rpc_1_1transfer__details_ae25186cf7b2760349bdd5134c8d992b8}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!amount@{amount}}
+\index{amount@{amount}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::transfer\+\_\+details\+::amount}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_abc934becba23fa4e6861d8f468a214d3}\label{structwallet_1_1rpc_1_1transfer__details_abc934becba23fa4e6861d8f468a214d3}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!block\_height@{block\_height}}
+\index{block\_height@{block\_height}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{block\_height}{block\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::transfer\+\_\+details\+::block\+\_\+height}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_ae483b8f3405b05d22a87edcc68d7e93b}\label{structwallet_1_1rpc_1_1transfer__details_ae483b8f3405b05d22a87edcc68d7e93b}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!frozen@{frozen}}
+\index{frozen@{frozen}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{frozen}{frozen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::rpc\+::transfer\+\_\+details\+::frozen}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_a9bb6ffa293f0073a560fee237ea104f0}\label{structwallet_1_1rpc_1_1transfer__details_a9bb6ffa293f0073a560fee237ea104f0}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!global\_index@{global\_index}}
+\index{global\_index@{global\_index}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{global\_index}{global\_index}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::rpc\+::transfer\+\_\+details\+::global\+\_\+index}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_ae2e9539cf849c919a2edbacde9720a7c}\label{structwallet_1_1rpc_1_1transfer__details_ae2e9539cf849c919a2edbacde9720a7c}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!key\_image@{key\_image}}
+\index{key\_image@{key\_image}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{key\_image}{key\_image}}
+{\footnotesize\ttfamily std\+::string wallet\+::rpc\+::transfer\+\_\+details\+::key\+\_\+image}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_a7c6792438779717c7887df622708e0cb}\label{structwallet_1_1rpc_1_1transfer__details_a7c6792438779717c7887df622708e0cb}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!spent@{spent}}
+\index{spent@{spent}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{spent}{spent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::rpc\+::transfer\+\_\+details\+::spent}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_a04c4125f8304971dfccbea777e5baad5}\label{structwallet_1_1rpc_1_1transfer__details_a04c4125f8304971dfccbea777e5baad5}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!subaddr\_index@{subaddr\_index}}
+\index{subaddr\_index@{subaddr\_index}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{subaddr\_index}{subaddr\_index}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} wallet\+::rpc\+::transfer\+\_\+details\+::subaddr\+\_\+index}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_ad314ffa94245607bedc3beef8ca6c0cc}\label{structwallet_1_1rpc_1_1transfer__details_ad314ffa94245607bedc3beef8ca6c0cc}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!tx\_hash@{tx\_hash}}
+\index{tx\_hash@{tx\_hash}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{tx\_hash}{tx\_hash}}
+{\footnotesize\ttfamily std\+::string wallet\+::rpc\+::transfer\+\_\+details\+::tx\+\_\+hash}
+
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1transfer__details_a923c92374c01dac0983ddd61c7497f36}\label{structwallet_1_1rpc_1_1transfer__details_a923c92374c01dac0983ddd61c7497f36}} 
+\index{wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}!unlocked@{unlocked}}
+\index{unlocked@{unlocked}!wallet::rpc::transfer\_details@{wallet::rpc::transfer\_details}}
+\doxysubsubsection{\texorpdfstring{unlocked}{unlocked}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::rpc\+::transfer\+\_\+details\+::unlocked}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{structservice__nodes_1_1quorum__vote__t}{}\doxysection{service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t Struct Reference}
+\label{structservice__nodes_1_1quorum__vote__t}\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+
+
+{\ttfamily \#include $<$service\+\_\+node\+\_\+voting.\+h$>$}
+
+
+
+Collaboration diagram for service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structservice__nodes_1_1quorum__vote__t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_af8dce1a6aa98105b4d9913047c50b161}{version}} = 0
+\item 
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_ad0948305b75a3a0b6713d6e03b804157}{type}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a6362a04a04df4922f7a4b808eddce15f}{block\+\_\+height}}
+\item 
+\mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5db}{quorum\+\_\+group}} \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a1312cff8c5b8cf0b974c66198e8c7c6a}{group}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_acd692e30cb318f198c4624120aa3aa6b}{index\+\_\+in\+\_\+group}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a0f9e99b71df52becb09f80ac1c9b2798}{signature}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structservice__nodes_1_1state__change__vote}{state\_change\_vote}} \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a4de2231ad524c09f6089fa12ffe032b1}{state\_change}}\\
+\>\mbox{\hyperlink{structservice__nodes_1_1checkpoint__vote}{checkpoint\_vote}} \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a456fc5a855ecfdbf4420860cf6255f18}{checkpoint}}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_a7f1958847f7123f05a57ebed9284dce3}{serialize}} (Archive \&ar, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a7f1958847f7123f05a57ebed9284dce3}\label{structservice__nodes_1_1quorum__vote__t_a7f1958847f7123f05a57ebed9284dce3}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!serialize@{serialize}}
+\index{serialize@{serialize}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structservice__nodes_1_1quorum__vote__t_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_ae54cf24ea951a035ffc86fcf0eba1386}\label{structservice__nodes_1_1quorum__vote__t_ae54cf24ea951a035ffc86fcf0eba1386}} 
+\doxysubsubsection{\texorpdfstring{"@38}{@38}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a6362a04a04df4922f7a4b808eddce15f}\label{structservice__nodes_1_1quorum__vote__t_a6362a04a04df4922f7a4b808eddce15f}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!block\_height@{block\_height}}
+\index{block\_height@{block\_height}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{block\_height}{block\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::block\+\_\+height}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a456fc5a855ecfdbf4420860cf6255f18}\label{structservice__nodes_1_1quorum__vote__t_a456fc5a855ecfdbf4420860cf6255f18}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!checkpoint@{checkpoint}}
+\index{checkpoint@{checkpoint}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{checkpoint}{checkpoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1checkpoint__vote}{checkpoint\+\_\+vote}} service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::checkpoint}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a1312cff8c5b8cf0b974c66198e8c7c6a}\label{structservice__nodes_1_1quorum__vote__t_a1312cff8c5b8cf0b974c66198e8c7c6a}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!group@{group}}
+\index{group@{group}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{group}{group}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5db}{quorum\+\_\+group}} service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::group}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_acd692e30cb318f198c4624120aa3aa6b}\label{structservice__nodes_1_1quorum__vote__t_acd692e30cb318f198c4624120aa3aa6b}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!index\_in\_group@{index\_in\_group}}
+\index{index\_in\_group@{index\_in\_group}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{index\_in\_group}{index\_in\_group}}
+{\footnotesize\ttfamily uint16\+\_\+t service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::index\+\_\+in\+\_\+group}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a0f9e99b71df52becb09f80ac1c9b2798}\label{structservice__nodes_1_1quorum__vote__t_a0f9e99b71df52becb09f80ac1c9b2798}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!signature@{signature}}
+\index{signature@{signature}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{signature}{signature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::signature}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_a4de2231ad524c09f6089fa12ffe032b1}\label{structservice__nodes_1_1quorum__vote__t_a4de2231ad524c09f6089fa12ffe032b1}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!state\_change@{state\_change}}
+\index{state\_change@{state\_change}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{state\_change}{state\_change}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1state__change__vote}{state\+\_\+change\+\_\+vote}} service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::state\+\_\+change}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_ad0948305b75a3a0b6713d6e03b804157}\label{structservice__nodes_1_1quorum__vote__t_ad0948305b75a3a0b6713d6e03b804157}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!type@{type}}
+\index{type@{type}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{quorum\+\_\+type}} service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::type}
+
+\mbox{\Hypertarget{structservice__nodes_1_1quorum__vote__t_af8dce1a6aa98105b4d9913047c50b161}\label{structservice__nodes_1_1quorum__vote__t_af8dce1a6aa98105b4d9913047c50b161}} 
+\index{service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}!version@{version}}
+\index{version@{version}!service\_nodes::quorum\_vote\_t@{service\_nodes::quorum\_vote\_t}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily uint8\+\_\+t service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t\+::version = 0}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__voting_8h}{service\+\_\+node\+\_\+voting.\+h}}\end{DoxyCompactItemize}

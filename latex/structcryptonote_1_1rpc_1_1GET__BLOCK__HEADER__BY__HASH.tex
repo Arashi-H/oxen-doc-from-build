@@ -1,0 +1,85 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+SH Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH}\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+SH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+SH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_a9d86c8230eb9673c2a17729bc56164e6}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+S\+H\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_aeff3f5b8ff42e9d0c5f51d55eca844ab}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Block header information can be retrieved using either a block\textquotesingle{}s hash or height. This method includes a block\textquotesingle{}s hash as an input parameter to retrieve basic information about the block.
+
+Inputs\+:
+\begin{DoxyItemize}
+\item {\ttfamily hash} The block\textquotesingle{}s S\+H\+A256 hash.
+\item {\ttfamily hashes} Request multiple blocks via an array of hashes
+\item {\ttfamily fill\+\_\+pow\+\_\+hash} Tell the daemon if it should fill out pow\+\_\+hash field.
+\item {\ttfamily get\+\_\+tx\+\_\+hashes} If true (default false) then include the hashes of non-\/coinbase transactions
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}}} Block header information for the requested {\ttfamily hash} block
+\item {\ttfamily block\+\_\+headers} Block header information for the requested {\ttfamily hashes} blocks 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_a9d86c8230eb9673c2a17729bc56164e6}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_a9d86c8230eb9673c2a17729bc56164e6}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+S\+H\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_aeff3f5b8ff42e9d0c5f51d55eca844ab}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_aeff3f5b8ff42e9d0c5f51d55eca844ab}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HASH}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HASH_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+S\+H\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+A\+S\+H\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

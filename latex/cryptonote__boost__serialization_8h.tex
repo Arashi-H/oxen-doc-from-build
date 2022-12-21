@@ -1,0 +1,115 @@
+\hypertarget{cryptonote__boost__serialization_8h}{}\doxysection{src/cryptonote\+\_\+basic/cryptonote\+\_\+boost\+\_\+serialization.h File Reference}
+\label{cryptonote__boost__serialization_8h}\index{src/cryptonote\_basic/cryptonote\_boost\_serialization.h@{src/cryptonote\_basic/cryptonote\_boost\_serialization.h}}
+{\ttfamily \#include $<$boost/serialization/vector.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/utility.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/set.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/map.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/is\+\_\+bitwise\+\_\+serializable.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/unordered\+\_\+containers\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Ops.\+h\char`\"{}}\newline
+Include dependency graph for cryptonote\+\_\+boost\+\_\+serialization.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__boost__serialization_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__boost__serialization_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1serialization}{boost\+::serialization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a7b289aec53b1271d1971279e160bc1bf}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_ab0e75155aab2f7e6afd87aeab0cb2c48}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a78c793651692020fb0247d6e154c6398}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_aa6a1f15d594e47b045a04d72396a2a4e}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a57507c22e7843e6e518d9135a107c6fe}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a47235e78b605702e7d4afe9d054d5a93}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_ab647b8f958b8b74e1ed8de3a02f89887}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a9a915cdad61d568528d9aec529ac8350}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txout__to__script}{cryptonote\+::txout\+\_\+to\+\_\+script}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a4883029756de19ceecdd182d87d6a5c0}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_ae45912b169ee8714d8a34ee11a04e9f1}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a70b31c94634dcc88ee630e7cb788d879}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txin__gen}{cryptonote\+::txin\+\_\+gen}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5c8b4a0ceaac0b5fb96c569fd244d34c}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txin__to__script}{cryptonote\+::txin\+\_\+to\+\_\+script}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_af33159dd1ea43c690a7b2c6e829afd8f}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txin__to__scripthash}{cryptonote\+::txin\+\_\+to\+\_\+scripthash}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a20940f5db43e3a6a5c7cc08b196b1559}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1txin__to__key}{cryptonote\+::txin\+\_\+to\+\_\+key}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5ebb467c19a49a27f8ca6ba359057c76}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1tx__out}{cryptonote\+::tx\+\_\+out}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a3a06c072f8eee06519dd208dae86e8ce}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736}{cryptonote\+::txversion}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a3d0d22c3935b38218fd88bfd29fb6cd7}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913e}{cryptonote\+::txtype}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a4bd20f35a7aa06906079ad8af6ca45c8}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a4a19bfc809227b5ccb5e5f5110ee370c}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_aafbbf3036a66a0aa6bb5673d88d6521d}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&b, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a72ff11284167a04cc3cf44d420ab84de}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a0499113540275bf3f57847403728f578}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_adb715852a05d3c9b5ac4f553d7abe7b4}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1rangeSig}{rct\+::range\+Sig}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a70d9edcbca532d42a28b2b7c587033d1}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a38d4b5e4074f83489fc5f44bc7b45e6c}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_acd4183bae05659e96bcc417589872ba9}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1mgSig}{rct\+::mg\+Sig}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a7c05c6e6faf96de80ecbb9c7c56f1b52}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1clsag}{rct\+::clsag}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5f6f6452c611971b991f9b90f39a1019}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a9628d79624b826cf94485f83809b7275}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5967916a43fadeec19bc8d7478af5c7e}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\std\+::enable\+\_\+if$<$ Archive\+::is\+\_\+loading\+::value, void $>$\+::type \mbox{\hyperlink{namespaceboost_1_1serialization_a65d0d43db67699c26351bd473fe199c9}{boost\+::serialization\+::serialize\+Out\+Pk}} (Archive \&a, \mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}} \&out\+Pk\+\_\+, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\std\+::enable\+\_\+if$<$ Archive\+::is\+\_\+saving\+::value, void $>$\+::type \mbox{\hyperlink{namespaceboost_1_1serialization_a4d375abf8e611684a65f70bd47e9dfa5}{boost\+::serialization\+::serialize\+Out\+Pk}} (Archive \&a, \mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}} \&out\+Pk\+\_\+, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a0f257cd4a828550a17dd85c7097c6e9f}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1rctSigBase}{rct\+::rct\+Sig\+Base}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a32b974e077a701196ae8cfbd00df15dd}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1rctSigPrunable}{rct\+::rct\+Sig\+Prunable}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_aa47d904d1271a9e2a43396abe5070ac5}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a43f63e18fdfd63d18f4e2f7103796cbe}{boost\+::serialization\+::serialize}} (Archive \&a, \mbox{\hyperlink{structrct_1_1RCTConfig}{rct\+::\+R\+C\+T\+Config}} \&x, const boost\+::serialization\+::version\+\_\+type ver)
+\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{oxen__logger_8h}{}\doxysection{src/logging/oxen\+\_\+logger.h File Reference}
+\label{oxen__logger_8h}\index{src/logging/oxen\_logger.h@{src/logging/oxen\_logger.h}}
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$oxen/log.\+hpp$>$}\newline
+{\ttfamily \#include $<$oxenmq/oxenmq.\+h$>$}\newline
+Include dependency graph for oxen\+\_\+logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__logger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\item 
+ \mbox{\hyperlink{namespacenodetool}{nodetool}}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\item 
+ \mbox{\hyperlink{namespaceoxen}{oxen}}
+\item 
+ \mbox{\hyperlink{namespaceoxen_1_1logging}{oxen\+::logging}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{oxen__logger_8h_a3551ef42c68bd735240f79d029beb950}{O\+X\+E\+N\+\_\+\+L\+O\+G\+\_\+\+E\+N\+A\+B\+L\+ED}}(L\+VL)~\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}-\/$>$should\+\_\+log(spdlog\+::level\+::\+L\+VL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_afcb7ca14f4c05098b45d0cc3ac4e28da}{oxen\+::logging\+::init}} (const std\+::string \&log\+\_\+location, log\+::\+Level log\+\_\+level)
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_a28da4516dd1e05a9b1cec8eacad43426}{oxen\+::logging\+::set\+\_\+additional\+\_\+log\+\_\+categories}} (const log\+::\+Level \&log\+\_\+level)
+\item 
+void \mbox{\hyperlink{namespaceoxen_1_1logging_a5d17a25dc1793e5e2be0fef7f652b949}{oxen\+::logging\+::process\+\_\+categories\+\_\+string}} (const std\+::string \&categories)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_acd7af5fc5c47162e2ee33e93c4713ebb}{oxen\+::logging\+::parse\+\_\+level}} (std\+::string\+\_\+view input)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_a2a3d59eace3406fbcff95923778a9c8a}{oxen\+::logging\+::parse\+\_\+level}} (uint8\+\_\+t input)
+\item 
+std\+::optional$<$ spdlog\+::level\+::level\+\_\+enum $>$ \mbox{\hyperlink{namespaceoxen_1_1logging_acf23865705b7988cfaba29422255381c}{oxen\+::logging\+::parse\+\_\+level}} (oxenmq\+::\+Log\+Level input)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{oxen__logger_8h_a9143b3751091da4c5efb89d4965b3247}{globallogcat}} = oxen\+::log\+::\+Cat(\char`\"{}global\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{oxen__logger_8h_a3551ef42c68bd735240f79d029beb950}\label{oxen__logger_8h_a3551ef42c68bd735240f79d029beb950}} 
+\index{oxen\_logger.h@{oxen\_logger.h}!OXEN\_LOG\_ENABLED@{OXEN\_LOG\_ENABLED}}
+\index{OXEN\_LOG\_ENABLED@{OXEN\_LOG\_ENABLED}!oxen\_logger.h@{oxen\_logger.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_LOG\_ENABLED}{OXEN\_LOG\_ENABLED}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+L\+O\+G\+\_\+\+E\+N\+A\+B\+L\+ED(\begin{DoxyParamCaption}\item[{}]{L\+VL }\end{DoxyParamCaption})~\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}-\/$>$should\+\_\+log(spdlog\+::level\+::\+L\+VL)}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{oxen__logger_8h_a9143b3751091da4c5efb89d4965b3247}\label{oxen__logger_8h_a9143b3751091da4c5efb89d4965b3247}} 
+\index{oxen\_logger.h@{oxen\_logger.h}!globallogcat@{globallogcat}}
+\index{globallogcat@{globallogcat}!oxen\_logger.h@{oxen\_logger.h}}
+\doxysubsubsection{\texorpdfstring{globallogcat}{globallogcat}}
+{\footnotesize\ttfamily auto globallogcat = oxen\+::log\+::\+Cat(\char`\"{}global\char`\"{})\hspace{0.3cm}{\ttfamily [inline]}}
+

@@ -1,0 +1,84 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+NT Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT}\index{cryptonote::rpc::GET\_STAKING\_REQUIREMENT@{cryptonote::rpc::GET\_STAKING\_REQUIREMENT}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+NT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+NT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_ac88402bb46a94a1b4c803b9feb7ec8bc}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+T\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_a47a7af8fcc376358c303fe0d03daddd9}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the required amount of Oxen to become a Service Node at the queried height. For devnet and testnet values, ensure the daemon is started with the {\ttfamily -\/-\/devnet} or {\ttfamily -\/-\/testnet} flags respectively.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily height} The height to query the staking requirement for. 0 (or omitting) means current height.
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} generic R\+PC error code; \char`\"{}\+O\+K\char`\"{} means the request was successful.
+\item {\ttfamily staking\+\_\+requirement} The staking requirement in Oxen, in atomic units.
+\item {\ttfamily height} The height requested (or current height if 0 was requested) 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_ac88402bb46a94a1b4c803b9feb7ec8bc}\label{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_ac88402bb46a94a1b4c803b9feb7ec8bc}} 
+\index{cryptonote::rpc::GET\_STAKING\_REQUIREMENT@{cryptonote::rpc::GET\_STAKING\_REQUIREMENT}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_STAKING\_REQUIREMENT@{cryptonote::rpc::GET\_STAKING\_REQUIREMENT}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_a47a7af8fcc376358c303fe0d03daddd9}\label{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_a47a7af8fcc376358c303fe0d03daddd9}} 
+\index{cryptonote::rpc::GET\_STAKING\_REQUIREMENT@{cryptonote::rpc::GET\_STAKING\_REQUIREMENT}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_STAKING\_REQUIREMENT@{cryptonote::rpc::GET\_STAKING\_REQUIREMENT}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__STAKING__REQUIREMENT_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+T\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+T\+A\+K\+I\+N\+G\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+M\+E\+N\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,174 @@
+\hypertarget{rctOps_8cpp}{}\doxysection{src/ringct/rct\+Ops.cpp File Reference}
+\label{rctOps_8cpp}\index{src/ringct/rctOps.cpp@{src/ringct/rctOps.cpp}}
+{\ttfamily \#include $<$boost/lexical\+\_\+cast.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rct\+Ops.\+h\char`\"{}}\newline
+Include dependency graph for rct\+Ops.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rctOps_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structzero__commitment}{zero\+\_\+commitment}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rctOps_8cpp_a57820f06887d9992e14f45649fbdc7e5}{C\+H\+E\+C\+K\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+T\+H\+R\+O\+W\+\_\+\+M\+E\+S\+\_\+\+L1}}(expr,  message)~\{\mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}}(!(expr)) \{oxen\+::log\+::warning(\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}, message); throw std\+::runtime\+\_\+error(message);\}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+keyM \mbox{\hyperlink{namespacerct_aeaa30ce9b98368e11ce1833e4cbfb124}{rct\+::key\+M\+Init}} (size\+\_\+t rows, size\+\_\+t cols)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a87ad4b15a323cbe285b866031de39bf2}{rct\+::to\+Point\+Check\+Order}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$P, const unsigned char $\ast$data)
+\item 
+void \mbox{\hyperlink{namespacerct_ae164d349152191b4336202031b1bcf03}{rct\+::sk\+Gen}} (key \&sk)
+\item 
+key \mbox{\hyperlink{namespacerct_a65486172cb51d8e4edd5ead74db94c6e}{rct\+::sk\+Gen}} ()
+\item 
+keyV \mbox{\hyperlink{namespacerct_ab04a296caf293c9f7a97fd43bcda0eaa}{rct\+::skv\+Gen}} (size\+\_\+t rows)
+\item 
+key \mbox{\hyperlink{namespacerct_ad658afc6ac341d05bd0676025f0faf2e}{rct\+::pk\+Gen}} ()
+\item 
+void \mbox{\hyperlink{namespacerct_a1dcb85245396efa4195a87241d30e451}{rct\+::skpk\+Gen}} (key \&sk, key \&pk)
+\item 
+tuple$<$ key, key $>$ \mbox{\hyperlink{namespacerct_a909dcbe4c712129137208ca918e3df06}{rct\+::skpk\+Gen}} ()
+\item 
+void \mbox{\hyperlink{namespacerct_ae204da215456405ffb84e9ecbcb2709e}{rct\+::genC}} (key \&C, const key \&a, xmr\+\_\+amount amount)
+\item 
+tuple$<$ ctkey, ctkey $>$ \mbox{\hyperlink{namespacerct_ad8a9f7c3f2addbaa2ad62a02ba22dab2}{rct\+::ctskpk\+Gen}} (xmr\+\_\+amount amount)
+\item 
+tuple$<$ ctkey, ctkey $>$ \mbox{\hyperlink{namespacerct_ad3dfbbcd20e2e2018bd0a3a7432eab25}{rct\+::ctskpk\+Gen}} (const key \&bH)
+\item 
+key \mbox{\hyperlink{namespacerct_a31df3bf24858a10100d0d3a241cdd633}{rct\+::zero\+Commit}} (xmr\+\_\+amount amount)
+\item 
+key \mbox{\hyperlink{namespacerct_aa3e08731d8c0d1ddd8fbd1e5ea67cf84}{rct\+::commit}} (xmr\+\_\+amount amount, const key \&mask)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_afd16fc7d3aad21d2e82eb8b2f80ae049}{rct\+::rand\+Xmr\+Amount}} (xmr\+\_\+amount upperlimit)
+\item 
+void \mbox{\hyperlink{namespacerct_a0459a7a7d770a926dee9b5ada3b62e1a}{rct\+::scalarmult\+Base}} (key \&aG, const key \&a)
+\item 
+key \mbox{\hyperlink{namespacerct_a9e6476f9f30163a6d2963f9ca5ca0781}{rct\+::scalarmult\+Base}} (const key \&a)
+\item 
+void \mbox{\hyperlink{namespacerct_a9ead41ef6de2757082c6e7169b828010}{rct\+::scalarmult\+Key}} (key \&aP, const key \&P, const key \&a)
+\item 
+key \mbox{\hyperlink{namespacerct_ab8768c92aee95409c36498b0ca40a15c}{rct\+::scalarmult\+Key}} (const key \&P, const key \&a)
+\item 
+key \mbox{\hyperlink{namespacerct_a4aa2cf2441f63ced65d24e386d620b9b}{rct\+::scalarmultH}} (const key \&a)
+\item 
+key \mbox{\hyperlink{namespacerct_abf7d1a4481bfc64630ffbf1feca6081b}{rct\+::scalarmult8}} (const key \&P)
+\item 
+void \mbox{\hyperlink{namespacerct_a83f8d79715c23c3cc3c0b7d05ffc43d3}{rct\+::scalarmult8}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&res, const key \&P)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a26965b0d07d7939bb5877a949be46241}{rct\+::is\+In\+Main\+Subgroup}} (const key \&A)
+\item 
+void \mbox{\hyperlink{namespacerct_ab3633b0eff8b4be1ad84aabbb5d53415}{rct\+::add\+Keys}} (key \&AB, const key \&A, const key \&B)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_ad4e38563448289abe776cf099adf051c}{rct\+::add\+Keys}} (const key \&A, const key \&B)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_aaa98ca76aebf78631eee4f67a2c1a730}{rct\+::add\+Keys}} (const keyV \&A)
+\item 
+void \mbox{\hyperlink{namespacerct_aa2103c1a731b8e9ab3972fec93e323b7}{rct\+::add\+Keys1}} (key \&a\+GB, const key \&a, const key \&B)
+\item 
+void \mbox{\hyperlink{namespacerct_acc64b43dc0fdc8ad8cd74d160d136a36}{rct\+::add\+Keys2}} (key \&a\+GbB, const key \&a, const key \&b, const key \&B)
+\item 
+void \mbox{\hyperlink{namespacerct_ada7c29ce5cbd46347d296ecc53fe0b4f}{rct\+::precomp}} (\mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} rv, const key \&B)
+\item 
+void \mbox{\hyperlink{namespacerct_ae9ac8083f68a130ff7e8df364fe509ab}{rct\+::add\+Keys3}} (key \&a\+AbB, const key \&a, const key \&A, const key \&b, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} B)
+\item 
+void \mbox{\hyperlink{namespacerct_a0444d650f31e0a703291c0a5467b91df}{rct\+::add\+Keys3}} (key \&a\+AbB, const key \&a, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} A, const key \&b, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} B)
+\item 
+void \mbox{\hyperlink{namespacerct_a15fd0f08e043a65ec2bd8c07ce16b8cc}{rct\+::add\+Keys\+\_\+a\+Gb\+BcC}} (key \&a\+Gb\+BcC, const key \&a, const key \&b, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} B, const key \&c, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} C)
+\item 
+void \mbox{\hyperlink{namespacerct_ab48b8f3dbd63eff5b92c6f28b2ace94c}{rct\+::add\+Keys\+\_\+a\+Ab\+BcC}} (key \&a\+Ab\+BcC, const key \&a, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} A, const key \&b, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} B, const key \&c, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} C)
+\item 
+void \mbox{\hyperlink{namespacerct_a65d2b9e668d550143e7d86bcbda04920}{rct\+::sub\+Keys}} (key \&AB, const key \&A, const key \&B)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_af046012fe1a618a5f65644cff1d0460c}{rct\+::equal\+Keys}} (const key \&a, const key \&b)
+\item 
+void \mbox{\hyperlink{namespacerct_a1835a7c97c34bcdfb8813b8c597b4d0c}{rct\+::cn\+\_\+fast\+\_\+hash}} (key \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}}, const void $\ast$data, const std\+::size\+\_\+t l)
+\item 
+void \mbox{\hyperlink{namespacerct_a14ac6ef4ee9a171e47aacab21078a888}{rct\+::hash\+\_\+to\+\_\+scalar}} (key \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}}, const void $\ast$data, const std\+::size\+\_\+t l)
+\item 
+void \mbox{\hyperlink{namespacerct_af73fc829c225985d5ecd5b1b38854f27}{rct\+::cn\+\_\+fast\+\_\+hash}} (key \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}}, const key \&in)
+\item 
+void \mbox{\hyperlink{namespacerct_af52eb6a0b37f967d18b871ede82a6d68}{rct\+::hash\+\_\+to\+\_\+scalar}} (key \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}}, const key \&in)
+\item 
+key \mbox{\hyperlink{namespacerct_acebab76bc354cdac727b3ede41b58438}{rct\+::cn\+\_\+fast\+\_\+hash}} (const key \&in)
+\item 
+key \mbox{\hyperlink{namespacerct_ae5b1d330da7a34f03b4ad6aaa3451eb3}{rct\+::hash\+\_\+to\+\_\+scalar}} (const key \&in)
+\item 
+key \mbox{\hyperlink{namespacerct_ab0994a776cf125fb988f541206491125}{rct\+::cn\+\_\+fast\+\_\+hash128}} (const void $\ast$in)
+\item 
+key \mbox{\hyperlink{namespacerct_ade270ffb9444cc710ad866fd66c2d584}{rct\+::hash\+\_\+to\+\_\+scalar128}} (const void $\ast$in)
+\item 
+key \mbox{\hyperlink{namespacerct_a20dd722188d6d7068234c8fb10955b6c}{rct\+::cn\+\_\+fast\+\_\+hash}} (const ctkeyV \&PC)
+\item 
+key \mbox{\hyperlink{namespacerct_af65cea01341fd4beedf748f57fc5743e}{rct\+::hash\+\_\+to\+\_\+scalar}} (const ctkeyV \&PC)
+\item 
+key \mbox{\hyperlink{namespacerct_a9311620031985339f0ac36bccc2734a6}{rct\+::cn\+\_\+fast\+\_\+hash}} (const keyV \&keys)
+\item 
+key \mbox{\hyperlink{namespacerct_aafa6b63aafc86febc2df65e5429f856d}{rct\+::hash\+\_\+to\+\_\+scalar}} (const keyV \&keys)
+\item 
+key \mbox{\hyperlink{namespacerct_a20a68feaadcf7be500fa97fd521cafb9}{rct\+::cn\+\_\+fast\+\_\+hash}} (const key64 keys)
+\item 
+key \mbox{\hyperlink{namespacerct_a1d19ed7467ff67fa18c57d7f39c210f9}{rct\+::hash\+\_\+to\+\_\+scalar}} (const key64 keys)
+\item 
+void \mbox{\hyperlink{namespacerct_a2ff3e601ecb8a4b8498ec609c68c94a4}{rct\+::hash\+\_\+to\+\_\+p3}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&hash8\+\_\+p3, const key \&k)
+\item 
+void \mbox{\hyperlink{namespacerct_af6fa4063d84fb2fdb7f93bd355419234}{rct\+::sum\+Keys}} (key \&Csum, const keyV \&Cis)
+\item 
+static key \mbox{\hyperlink{namespacerct_a8bc33a32e79d21c28baaf69cadd555ab}{rct\+::ecdh\+Hash}} (const key \&k)
+\item 
+static void \mbox{\hyperlink{namespacerct_a9153f0bc4b0444e354696752f73bc6b1}{rct\+::xor8}} (key \&v, const key \&k)
+\item 
+key \mbox{\hyperlink{namespacerct_aeef7248294d6862e4e5a1e80c138e33e}{rct\+::gen\+Commitment\+Mask}} (const key \&sk)
+\item 
+void \mbox{\hyperlink{namespacerct_a0fd8c62b6a97232f1879663be248aa8f}{rct\+::ecdh\+Encode}} (ecdh\+Tuple \&unmasked, const key \&shared\+Sec, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{aesb_8c_ade187f6a15088c39aad03c9b91ec021d}{v2}})
+\item 
+void \mbox{\hyperlink{namespacerct_aca243df5dacb3151f8ed6b0dae22f16b}{rct\+::ecdh\+Decode}} (ecdh\+Tuple \&masked, const key \&shared\+Sec, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{aesb_8c_ade187f6a15088c39aad03c9b91ec021d}{v2}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = oxen\+::log\+::\+Cat(\char`\"{}ringct\char`\"{})
+\item 
+static const \mbox{\hyperlink{structzero__commitment}{zero\+\_\+commitment}} \mbox{\hyperlink{rctOps_8cpp_a15f0a12975298b26a00a508ab98f712a}{zero\+\_\+commitments}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rctOps_8cpp_a57820f06887d9992e14f45649fbdc7e5}\label{rctOps_8cpp_a57820f06887d9992e14f45649fbdc7e5}} 
+\index{rctOps.cpp@{rctOps.cpp}!CHECK\_AND\_ASSERT\_THROW\_MES\_L1@{CHECK\_AND\_ASSERT\_THROW\_MES\_L1}}
+\index{CHECK\_AND\_ASSERT\_THROW\_MES\_L1@{CHECK\_AND\_ASSERT\_THROW\_MES\_L1}!rctOps.cpp@{rctOps.cpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_AND\_ASSERT\_THROW\_MES\_L1}{CHECK\_AND\_ASSERT\_THROW\_MES\_L1}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+T\+H\+R\+O\+W\+\_\+\+M\+E\+S\+\_\+\+L1(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{message }\end{DoxyParamCaption})~\{\mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}}(!(expr)) \{oxen\+::log\+::warning(\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}, message); throw std\+::runtime\+\_\+error(message);\}\}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{rctOps.cpp@{rctOps.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!rctOps.cpp@{rctOps.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = oxen\+::log\+::\+Cat(\char`\"{}ringct\char`\"{})}
+
+\mbox{\Hypertarget{rctOps_8cpp_a15f0a12975298b26a00a508ab98f712a}\label{rctOps_8cpp_a15f0a12975298b26a00a508ab98f712a}} 
+\index{rctOps.cpp@{rctOps.cpp}!zero\_commitments@{zero\_commitments}}
+\index{zero\_commitments@{zero\_commitments}!rctOps.cpp@{rctOps.cpp}}
+\doxysubsubsection{\texorpdfstring{zero\_commitments}{zero\_commitments}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structzero__commitment}{zero\+\_\+commitment}} zero\+\_\+commitments\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+

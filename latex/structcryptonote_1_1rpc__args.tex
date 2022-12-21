@@ -1,0 +1,112 @@
+\hypertarget{structcryptonote_1_1rpc__args}{}\doxysection{cryptonote\+::rpc\+\_\+args Struct Reference}
+\label{structcryptonote_1_1rpc__args}\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+
+
+Processes command line arguments related to server-\/side R\+PC.  
+
+
+
+
+{\ttfamily \#include $<$rpc\+\_\+args.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc__args_1_1descriptors}{descriptors}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{structcryptonote_1_1rpc__args_a480a95da71275fdbbf95b33563ceba7a}{tr}} (const char $\ast$str)
+\item 
+static void \mbox{\hyperlink{structcryptonote_1_1rpc__args_a7de6be40e61e8b20386eb277d40dace7}{init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc, boost\+::program\+\_\+options\+::options\+\_\+description \&hidden)
+\item 
+static \mbox{\hyperlink{structcryptonote_1_1rpc__args}{rpc\+\_\+args}} \mbox{\hyperlink{structcryptonote_1_1rpc__args_a193cf48203c492418a6b026b4c0f8837}{process}} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structcryptonote_1_1rpc__args_a54b48fd0595fb3668e8e05e84c20b433}{bind\+\_\+ip}}
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structcryptonote_1_1rpc__args_a8ef27e7248ad6def17c3ba0cd4fe4d72}{bind\+\_\+ipv6\+\_\+address}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc__args_ac94196b0a75c1d99494fa0207197160d}{use\+\_\+ipv6}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1rpc__args_a251ebbd87cecabcf5cda2116286ac736}{require\+\_\+ipv4}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structcryptonote_1_1rpc__args_a153c3e7ffc45307eec08bf9b269d33a8}{access\+\_\+control\+\_\+origins}}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structtools_1_1login}{tools\+::login}} $>$ \mbox{\hyperlink{structcryptonote_1_1rpc__args_aa32966d2e7beb9633262c96392a95350}{login}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Processes command line arguments related to server-\/side R\+PC. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a7de6be40e61e8b20386eb277d40dace7}\label{structcryptonote_1_1rpc__args_a7de6be40e61e8b20386eb277d40dace7}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!init\_options@{init\_options}}
+\index{init\_options@{init\_options}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{init\_options()}{init\_options()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+\_\+args\+::init\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{desc,  }\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{hidden }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a193cf48203c492418a6b026b4c0f8837}\label{structcryptonote_1_1rpc__args_a193cf48203c492418a6b026b4c0f8837}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!process@{process}}
+\index{process@{process}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1rpc__args}{rpc\+\_\+args}} cryptonote\+::rpc\+\_\+args\+::process (\begin{DoxyParamCaption}\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Arguments specified by user. Throws on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a480a95da71275fdbbf95b33563ceba7a}\label{structcryptonote_1_1rpc__args_a480a95da71275fdbbf95b33563ceba7a}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!tr@{tr}}
+\index{tr@{tr}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{tr()}{tr()}}
+{\footnotesize\ttfamily const char $\ast$ cryptonote\+::rpc\+\_\+args\+::tr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a153c3e7ffc45307eec08bf9b269d33a8}\label{structcryptonote_1_1rpc__args_a153c3e7ffc45307eec08bf9b269d33a8}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!access\_control\_origins@{access\_control\_origins}}
+\index{access\_control\_origins@{access\_control\_origins}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{access\_control\_origins}{access\_control\_origins}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ cryptonote\+::rpc\+\_\+args\+::access\+\_\+control\+\_\+origins}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a54b48fd0595fb3668e8e05e84c20b433}\label{structcryptonote_1_1rpc__args_a54b48fd0595fb3668e8e05e84c20b433}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!bind\_ip@{bind\_ip}}
+\index{bind\_ip@{bind\_ip}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{bind\_ip}{bind\_ip}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::string$>$ cryptonote\+::rpc\+\_\+args\+::bind\+\_\+ip}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a8ef27e7248ad6def17c3ba0cd4fe4d72}\label{structcryptonote_1_1rpc__args_a8ef27e7248ad6def17c3ba0cd4fe4d72}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!bind\_ipv6\_address@{bind\_ipv6\_address}}
+\index{bind\_ipv6\_address@{bind\_ipv6\_address}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{bind\_ipv6\_address}{bind\_ipv6\_address}}
+{\footnotesize\ttfamily std\+::optional$<$std\+::string$>$ cryptonote\+::rpc\+\_\+args\+::bind\+\_\+ipv6\+\_\+address}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_aa32966d2e7beb9633262c96392a95350}\label{structcryptonote_1_1rpc__args_aa32966d2e7beb9633262c96392a95350}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!login@{login}}
+\index{login@{login}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{login}{login}}
+{\footnotesize\ttfamily std\+::optional$<$\mbox{\hyperlink{structtools_1_1login}{tools\+::login}}$>$ cryptonote\+::rpc\+\_\+args\+::login}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_a251ebbd87cecabcf5cda2116286ac736}\label{structcryptonote_1_1rpc__args_a251ebbd87cecabcf5cda2116286ac736}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!require\_ipv4@{require\_ipv4}}
+\index{require\_ipv4@{require\_ipv4}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{require\_ipv4}{require\_ipv4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+\_\+args\+::require\+\_\+ipv4}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc__args_ac94196b0a75c1d99494fa0207197160d}\label{structcryptonote_1_1rpc__args_ac94196b0a75c1d99494fa0207197160d}} 
+\index{cryptonote::rpc\_args@{cryptonote::rpc\_args}!use\_ipv6@{use\_ipv6}}
+\index{use\_ipv6@{use\_ipv6}!cryptonote::rpc\_args@{cryptonote::rpc\_args}}
+\doxysubsubsection{\texorpdfstring{use\_ipv6}{use\_ipv6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+\_\+args\+::use\+\_\+ipv6}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/common/\mbox{\hyperlink{rpc__args_8h}{rpc\+\_\+args.\+h}}\item 
+src/rpc/common/\mbox{\hyperlink{rpc__args_8cpp}{rpc\+\_\+args.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{structwallet_1_1rpc_1_1GET__ACCOUNTS}{}\doxysection{wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+TS Struct Reference}
+\label{structwallet_1_1rpc_1_1GET__ACCOUNTS}\index{wallet::rpc::GET\_ACCOUNTS@{wallet::rpc::GET\_ACCOUNTS}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{structwallet_1_1rpc_1_1GET__ACCOUNTS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1GET__ACCOUNTS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_1_1subaddress__account__info}{subaddress\+\_\+account\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_abf6b3efab969db97ed2c198a7194ad14}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_a51d4e4ad494fe622aa838e16b0c05922}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get all accounts for a wallet. Optionally filter accounts by tag.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tag} -- (Optional) Tag for filtering accounts. All accounts if empty, otherwise those accounts with this tag
+\item {\ttfamily strict\+\_\+balances} -- If true, only return the balance for transactions that have been spent and are not pending (i.\+e. excluding any transactions sitting in the TX pool)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily total\+\_\+balance} -- Total balance of the selected accounts (locked or unlocked).
+\item {\ttfamily total\+\_\+unlocked\+\_\+balance} -- Total unlocked balance of the selected accounts.
+\item {\ttfamily subaddress\+\_\+accounts} -- Account information.
+\begin{DoxyItemize}
+\item {\ttfamily account\+\_\+index} -- Index of the account.
+\item {\ttfamily base\+\_\+address} -- The first address of the account (i.\+e. the primary address).
+\item {\ttfamily balance} -- Balance of the account (locked or unlocked).
+\item {\ttfamily unlocked\+\_\+balance} -- Unlocked balance for the account.
+\item {\ttfamily label} -- (Optional) Label of the account.
+\item {\ttfamily tag} -- (Optional) Tag for filtering accounts. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__ACCOUNTS_abf6b3efab969db97ed2c198a7194ad14}\label{structwallet_1_1rpc_1_1GET__ACCOUNTS_abf6b3efab969db97ed2c198a7194ad14}} 
+\index{wallet::rpc::GET\_ACCOUNTS@{wallet::rpc::GET\_ACCOUNTS}!names@{names}}
+\index{names@{names}!wallet::rpc::GET\_ACCOUNTS@{wallet::rpc::GET\_ACCOUNTS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__ACCOUNTS_a51d4e4ad494fe622aa838e16b0c05922}\label{structwallet_1_1rpc_1_1GET__ACCOUNTS_a51d4e4ad494fe622aa838e16b0c05922}} 
+\index{wallet::rpc::GET\_ACCOUNTS@{wallet::rpc::GET\_ACCOUNTS}!request@{request}}
+\index{request@{request}!wallet::rpc::GET\_ACCOUNTS@{wallet::rpc::GET\_ACCOUNTS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__ACCOUNTS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

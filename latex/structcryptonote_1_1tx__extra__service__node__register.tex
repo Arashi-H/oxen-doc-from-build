@@ -1,0 +1,92 @@
+\hypertarget{structcryptonote_1_1tx__extra__service__node__register}{}\doxysection{cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register Struct Reference}
+\label{structcryptonote_1_1tx__extra__service__node__register}\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+
+
+{\ttfamily \#include $<$tx\+\_\+extra.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{structcryptonote_1_1tx__extra__service__node__register__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a70af1ec772d4504650ca05f04da30840}{public\+\_\+spend\+\_\+keys}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a4819641104f8e45e46f632986a55a7a3}{public\+\_\+view\+\_\+keys}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a29d3af796b1c1760768b428b9bab0013}{fee}}
+\item 
+std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a1e5bb836f0121fdc47c38801b1e0e8a7}{amounts}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a5928eb1d91b00cb79c8b763037b30209}{hf\+\_\+or\+\_\+expiration}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__register_a1b8347b8bc55331676744e21979a0aa3}{signature}}
+\begin{DoxyCompactList}\small\item\em registration expiration unix timestamp before H\+F18; the hardfork version of the registration starting in H\+F19 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service node registration details.
+
+A registration contains any reserved amounts + addresses starting with the operator, and must always have at least one (the operator).
+
+Before H\+F19 this is limited to 4 spots per registrations, and amounts/fees are specified in portions (i.\+e. the numerator of a fraction with denominator 2$^\wedge$64 -\/ 4).
+
+Starting in H\+F19 we allow 10 spots per registration, reserved amounts are specified in atomic O\+X\+EN (i.\+e. 1000000000 = 1 O\+X\+EN), and the operator fee is specified in a per-\/million value (i.\+e. 1000000 = 100\%).
+
+The {\ttfamily hf\+\_\+or\+\_\+expiration} field, before H\+F19, is a timestamp at which the registration expires; starting in H\+F19, it is instead a hardfork version of the registration which must agree with the current hardfork version (e.\+g. if set to 23 then the registration is only accepted on H\+F23).
+
+For crossing-\/the-\/hardfork compatibility, we allow pre-\/\+H\+F19 registrations (i.\+e. using a timestamp + portions + at most 4 reserved spots) during H\+F19 (but not in H\+F20+). 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a1e5bb836f0121fdc47c38801b1e0e8a7}\label{structcryptonote_1_1tx__extra__service__node__register_a1e5bb836f0121fdc47c38801b1e0e8a7}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!amounts@{amounts}}
+\index{amounts@{amounts}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{amounts}{amounts}}
+{\footnotesize\ttfamily std\+::vector$<$uint64\+\_\+t$>$ cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::amounts}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a29d3af796b1c1760768b428b9bab0013}\label{structcryptonote_1_1tx__extra__service__node__register_a29d3af796b1c1760768b428b9bab0013}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!fee@{fee}}
+\index{fee@{fee}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{fee}{fee}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::fee}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a5928eb1d91b00cb79c8b763037b30209}\label{structcryptonote_1_1tx__extra__service__node__register_a5928eb1d91b00cb79c8b763037b30209}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!hf\_or\_expiration@{hf\_or\_expiration}}
+\index{hf\_or\_expiration@{hf\_or\_expiration}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{hf\_or\_expiration}{hf\_or\_expiration}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::hf\+\_\+or\+\_\+expiration}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a70af1ec772d4504650ca05f04da30840}\label{structcryptonote_1_1tx__extra__service__node__register_a70af1ec772d4504650ca05f04da30840}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!public\_spend\_keys@{public\_spend\_keys}}
+\index{public\_spend\_keys@{public\_spend\_keys}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{public\_spend\_keys}{public\_spend\_keys}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$ cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::public\+\_\+spend\+\_\+keys}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a4819641104f8e45e46f632986a55a7a3}\label{structcryptonote_1_1tx__extra__service__node__register_a4819641104f8e45e46f632986a55a7a3}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!public\_view\_keys@{public\_view\_keys}}
+\index{public\_view\_keys@{public\_view\_keys}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{public\_view\_keys}{public\_view\_keys}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$ cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::public\+\_\+view\+\_\+keys}
+
+\mbox{\Hypertarget{structcryptonote_1_1tx__extra__service__node__register_a1b8347b8bc55331676744e21979a0aa3}\label{structcryptonote_1_1tx__extra__service__node__register_a1b8347b8bc55331676744e21979a0aa3}} 
+\index{cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}!signature@{signature}}
+\index{signature@{signature}!cryptonote::tx\_extra\_service\_node\_register@{cryptonote::tx\_extra\_service\_node\_register}}
+\doxysubsubsection{\texorpdfstring{signature}{signature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+register\+::signature}
+
+
+
+registration expiration unix timestamp before H\+F18; the hardfork version of the registration starting in H\+F19 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+basic/\mbox{\hyperlink{tx__extra_8h}{tx\+\_\+extra.\+h}}\end{DoxyCompactItemize}

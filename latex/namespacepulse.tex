@@ -1,0 +1,135 @@
+\hypertarget{namespacepulse}{}\doxysection{pulse Namespace Reference}
+\label{namespacepulse}\index{pulse@{pulse}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03}{anonymous\+\_\+namespace\{pulse.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1message}{message}}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1timings}{timings}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacepulse_a79eff1acf092595e95f011ff25c157b6}{clock}} = std\+::chrono\+::system\+\_\+clock
+\item 
+using \mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{time\+\_\+point}} = std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{namespacepulse_a79eff1acf092595e95f011ff25c157b6}{clock}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}{message\+\_\+type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6afedb2d84cafe20862cb4399751a8a7e3}{message\+\_\+type\+::invalid}}, 
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ab62ddf5022a23734d4927324ba8eb3b8}{message\+\_\+type\+::handshake}}, 
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ac3754e09c91afce5cc04c6de8fcfe03c}{message\+\_\+type\+::handshake\+\_\+bitset}}, 
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0d5ab7d6365338fba2047203b82fd174}{message\+\_\+type\+::block\+\_\+template}}, 
+\newline
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6af69c01899b3e38f26d620c856927e91c}{message\+\_\+type\+::random\+\_\+value\+\_\+hash}}, 
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ae757655e1d90f9e4c33009498920f465}{message\+\_\+type\+::random\+\_\+value}}, 
+\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0492ddb50afed9527cd886bb2a4b0211}{message\+\_\+type\+::signed\+\_\+block}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacepulse_a6f0b69034f1e120b03f978d2cfc27111}{handle\+\_\+message}} (void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacepulse_a99fd32dadaaa9e2ab35ab1dbf542475d}{convert\+\_\+time\+\_\+to\+\_\+round}} (\mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{pulse\+::time\+\_\+point}} const \&time, \mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{pulse\+::time\+\_\+point}} const \&r0\+\_\+timestamp, uint8\+\_\+t $\ast$\mbox{\hyperlink{aesb_8c_aca9f6c90dc08553c6d90f6f0d2c85dce}{round}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacepulse_a49f9a29efaf59e35dd3da04372a56b61}{get\+\_\+round\+\_\+timings}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&blockchain, uint64\+\_\+t block\+\_\+height, uint64\+\_\+t prev\+\_\+timestamp, \mbox{\hyperlink{structpulse_1_1timings}{pulse\+::timings}} \&times)
+\item 
+void \mbox{\hyperlink{namespacepulse_afdd87122deba4a38d907d31829f00767}{main}} (void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacepulse_ae8b3a6638a3cf4b1a88d310bff96e0ac}{to\+\_\+string}} (\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}{message\+\_\+type}} type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacepulse_a79eff1acf092595e95f011ff25c157b6}\label{namespacepulse_a79eff1acf092595e95f011ff25c157b6}} 
+\index{pulse@{pulse}!clock@{clock}}
+\index{clock@{clock}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacepulse_a79eff1acf092595e95f011ff25c157b6}{pulse\+::clock}} = typedef std\+::chrono\+::system\+\_\+clock}
+
+\mbox{\Hypertarget{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}\label{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}} 
+\index{pulse@{pulse}!time\_point@{time\_point}}
+\index{time\_point@{time\_point}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{time\_point}{time\_point}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{pulse\+::time\+\_\+point}} = typedef std\+::chrono\+::time\+\_\+point$<$\mbox{\hyperlink{namespacepulse_a79eff1acf092595e95f011ff25c157b6}{clock}}$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}} 
+\index{pulse@{pulse}!message\_type@{message\_type}}
+\index{message\_type@{message\_type}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{message\_type}{message\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}{pulse\+::message\+\_\+type}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid@{invalid}!pulse@{pulse}}\index{pulse@{pulse}!invalid@{invalid}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6afedb2d84cafe20862cb4399751a8a7e3}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6afedb2d84cafe20862cb4399751a8a7e3}} 
+invalid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{handshake@{handshake}!pulse@{pulse}}\index{pulse@{pulse}!handshake@{handshake}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ab62ddf5022a23734d4927324ba8eb3b8}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ab62ddf5022a23734d4927324ba8eb3b8}} 
+handshake&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{handshake\_bitset@{handshake\_bitset}!pulse@{pulse}}\index{pulse@{pulse}!handshake\_bitset@{handshake\_bitset}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ac3754e09c91afce5cc04c6de8fcfe03c}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ac3754e09c91afce5cc04c6de8fcfe03c}} 
+handshake\+\_\+bitset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{block\_template@{block\_template}!pulse@{pulse}}\index{pulse@{pulse}!block\_template@{block\_template}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0d5ab7d6365338fba2047203b82fd174}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0d5ab7d6365338fba2047203b82fd174}} 
+block\+\_\+template&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{random\_value\_hash@{random\_value\_hash}!pulse@{pulse}}\index{pulse@{pulse}!random\_value\_hash@{random\_value\_hash}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6af69c01899b3e38f26d620c856927e91c}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6af69c01899b3e38f26d620c856927e91c}} 
+random\+\_\+value\+\_\+hash&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{random\_value@{random\_value}!pulse@{pulse}}\index{pulse@{pulse}!random\_value@{random\_value}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ae757655e1d90f9e4c33009498920f465}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6ae757655e1d90f9e4c33009498920f465}} 
+random\+\_\+value&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{signed\_block@{signed\_block}!pulse@{pulse}}\index{pulse@{pulse}!signed\_block@{signed\_block}}}\mbox{\Hypertarget{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0492ddb50afed9527cd886bb2a4b0211}\label{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6a0492ddb50afed9527cd886bb2a4b0211}} 
+signed\+\_\+block&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepulse_a99fd32dadaaa9e2ab35ab1dbf542475d}\label{namespacepulse_a99fd32dadaaa9e2ab35ab1dbf542475d}} 
+\index{pulse@{pulse}!convert\_time\_to\_round@{convert\_time\_to\_round}}
+\index{convert\_time\_to\_round@{convert\_time\_to\_round}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{convert\_time\_to\_round()}{convert\_time\_to\_round()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pulse\+::convert\+\_\+time\+\_\+to\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{pulse\+::time\+\_\+point}} const \&}]{time,  }\item[{\mbox{\hyperlink{namespacepulse_acdcef7af1115a131fd68e2e8514e2711}{pulse\+::time\+\_\+point}} const \&}]{r0\+\_\+timestamp,  }\item[{uint8\+\_\+t $\ast$}]{round }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_a49f9a29efaf59e35dd3da04372a56b61}\label{namespacepulse_a49f9a29efaf59e35dd3da04372a56b61}} 
+\index{pulse@{pulse}!get\_round\_timings@{get\_round\_timings}}
+\index{get\_round\_timings@{get\_round\_timings}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{get\_round\_timings()}{get\_round\_timings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pulse\+::get\+\_\+round\+\_\+timings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&}]{blockchain,  }\item[{uint64\+\_\+t}]{block\+\_\+height,  }\item[{uint64\+\_\+t}]{prev\+\_\+timestamp,  }\item[{\mbox{\hyperlink{structpulse_1_1timings}{pulse\+::timings}} \&}]{times }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_a6f0b69034f1e120b03f978d2cfc27111}\label{namespacepulse_a6f0b69034f1e120b03f978d2cfc27111}} 
+\index{pulse@{pulse}!handle\_message@{handle\_message}}
+\index{handle\_message@{handle\_message}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{handle\_message()}{handle\_message()}}
+{\footnotesize\ttfamily void pulse\+::handle\+\_\+message (\begin{DoxyParamCaption}\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_afdd87122deba4a38d907d31829f00767}\label{namespacepulse_afdd87122deba4a38d907d31829f00767}} 
+\index{pulse@{pulse}!main@{main}}
+\index{main@{main}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void pulse\+::main (\begin{DoxyParamCaption}\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_ae8b3a6638a3cf4b1a88d310bff96e0ac}\label{namespacepulse_ae8b3a6638a3cf4b1a88d310bff96e0ac}} 
+\index{pulse@{pulse}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!pulse@{pulse}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view pulse\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}{message\+\_\+type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+

@@ -1,0 +1,95 @@
+\hypertarget{classtools_1_1threadpool_1_1waiter}{}\doxysection{tools\+::threadpool\+::waiter Class Reference}
+\label{classtools_1_1threadpool_1_1waiter}\index{tools::threadpool::waiter@{tools::threadpool::waiter}}
+
+
+{\ttfamily \#include $<$threadpool.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_a79dc97ea90fb89bae44679dae6a14543}{inc}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_a8696721f3427f944165eb2bad03f3ff0}{dec}} ()
+\item 
+void \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_ac877963f09f74ab2a2fe97c5fa7420a1}{wait}} (\mbox{\hyperlink{classtools_1_1threadpool}{threadpool}} $\ast$tpool)
+\item 
+\mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_a259ed02a18ff46db1c1e0313b08672b7}{waiter}} ()
+\begin{DoxyCompactList}\small\item\em Wait for a set of tasks to finish. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_ad88d3e4613e760c200fa40cdb40902ac}{$\sim$waiter}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_a1bbe3dc469293755ed0f018f5731dfc3}{mt}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_abfe882217f6189cf2ff7758188b26943}{cv}}
+\item 
+int \mbox{\hyperlink{classtools_1_1threadpool_1_1waiter_a4688797b88990c9bfb4b365d8e731d36}{num}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_a259ed02a18ff46db1c1e0313b08672b7}\label{classtools_1_1threadpool_1_1waiter_a259ed02a18ff46db1c1e0313b08672b7}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!waiter@{waiter}}
+\index{waiter@{waiter}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{waiter()}{waiter()}}
+{\footnotesize\ttfamily tools\+::threadpool\+::waiter\+::waiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wait for a set of tasks to finish. 
+
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_ad88d3e4613e760c200fa40cdb40902ac}\label{classtools_1_1threadpool_1_1waiter_ad88d3e4613e760c200fa40cdb40902ac}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!````~waiter@{$\sim$waiter}}
+\index{````~waiter@{$\sim$waiter}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{$\sim$waiter()}{~waiter()}}
+{\footnotesize\ttfamily tools\+::threadpool\+::waiter\+::$\sim$waiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_a8696721f3427f944165eb2bad03f3ff0}\label{classtools_1_1threadpool_1_1waiter_a8696721f3427f944165eb2bad03f3ff0}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!dec@{dec}}
+\index{dec@{dec}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{dec()}{dec()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::waiter\+::dec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_a79dc97ea90fb89bae44679dae6a14543}\label{classtools_1_1threadpool_1_1waiter_a79dc97ea90fb89bae44679dae6a14543}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!inc@{inc}}
+\index{inc@{inc}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{inc()}{inc()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::waiter\+::inc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_ac877963f09f74ab2a2fe97c5fa7420a1}\label{classtools_1_1threadpool_1_1waiter_ac877963f09f74ab2a2fe97c5fa7420a1}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!wait@{wait}}
+\index{wait@{wait}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void tools\+::threadpool\+::waiter\+::wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1threadpool}{threadpool}} $\ast$}]{tpool }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_abfe882217f6189cf2ff7758188b26943}\label{classtools_1_1threadpool_1_1waiter_abfe882217f6189cf2ff7758188b26943}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!cv@{cv}}
+\index{cv@{cv}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{cv}{cv}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable tools\+::threadpool\+::waiter\+::cv\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_a1bbe3dc469293755ed0f018f5731dfc3}\label{classtools_1_1threadpool_1_1waiter_a1bbe3dc469293755ed0f018f5731dfc3}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!mt@{mt}}
+\index{mt@{mt}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{mt}{mt}}
+{\footnotesize\ttfamily std\+::mutex tools\+::threadpool\+::waiter\+::mt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1threadpool_1_1waiter_a4688797b88990c9bfb4b365d8e731d36}\label{classtools_1_1threadpool_1_1waiter_a4688797b88990c9bfb4b365d8e731d36}} 
+\index{tools::threadpool::waiter@{tools::threadpool::waiter}!num@{num}}
+\index{num@{num}!tools::threadpool::waiter@{tools::threadpool::waiter}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int tools\+::threadpool\+::waiter\+::num\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{threadpool_8h}{threadpool.\+h}}\item 
+src/common/\mbox{\hyperlink{threadpool_8cpp}{threadpool.\+cpp}}\end{DoxyCompactItemize}

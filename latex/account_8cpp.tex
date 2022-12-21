@@ -1,0 +1,38 @@
+\hypertarget{account_8cpp}{}\doxysection{src/cryptonote\+\_\+basic/account.cpp File Reference}
+\label{account_8cpp}\index{src/cryptonote\_basic/account.cpp@{src/cryptonote\_basic/account.cpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}account.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/keccak.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/meta.\+h\char`\"{}}\newline
+Include dependency graph for account.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{account_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{namespacecryptonote_afde83fbf2bb5bb1d3e9d011c03ee3eab}{cryptonote\+::derive\+\_\+key}} (const crypto\+::chacha\+\_\+key \&base\+\_\+key, crypto\+::chacha\+\_\+key \&key)
+\item 
+static epee\+::wipeable\+\_\+string \mbox{\hyperlink{namespacecryptonote_a782dffd5a1816f4956e0d1ea65ec7bde}{cryptonote\+::get\+\_\+key\+\_\+stream}} (const crypto\+::chacha\+\_\+key \&base\+\_\+key, const crypto\+::chacha\+\_\+iv \&\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, size\+\_\+t bytes)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a7638851f001c0eaf837ba657f0a2757c}{cryptonote\+::creation\+\_\+timestamp}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} use\+\_\+genesis\+\_\+timestamp)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}account\char`\"{})
+\end{DoxyCompactItemize}

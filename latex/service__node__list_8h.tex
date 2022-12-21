@@ -1,0 +1,145 @@
+\hypertarget{service__node__list_8h}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+list.h File Reference}
+\label{service__node__list_8h}\index{src/cryptonote\_core/service\_node\_list.h@{src/cryptonote\_core/service\_node\_list.h}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$shared\+\_\+mutex$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+quorum\+\_\+cop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uptime\+\_\+proof.\+h\char`\"{}}\newline
+Include dependency graph for service\+\_\+node\+\_\+list.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__list_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__list_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1checkpoint__participation__entry}{service\+\_\+nodes\+::checkpoint\+\_\+participation\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1pulse__participation__entry}{service\+\_\+nodes\+::pulse\+\_\+participation\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1timestamp__participation__entry}{service\+\_\+nodes\+::timestamp\+\_\+participation\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1timesync__entry}{service\+\_\+nodes\+::timesync\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1participation__history}{service\+\_\+nodes\+::participation\+\_\+history$<$ Value\+Type, Count $>$}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{service\+\_\+nodes\+::proof\+\_\+info\+::reachable\+\_\+stats}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1pulse__sort__key}{service\+\_\+nodes\+::pulse\+\_\+sort\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__info}{service\+\_\+nodes\+::service\+\_\+node\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__info_1_1contribution__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+info\+::contribution\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__info_1_1contributor__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+info\+::contributor\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__pubkey__info}{service\+\_\+nodes\+::service\+\_\+node\+\_\+pubkey\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1key__image__blacklist__entry}{service\+\_\+nodes\+::key\+\_\+image\+\_\+blacklist\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1payout__entry}{service\+\_\+nodes\+::payout\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1payout}{service\+\_\+nodes\+::payout}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}}
+\begin{DoxyCompactList}\small\item\em Collection of keys used by a service node. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorum__for__serialization}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::quorum\+\_\+for\+\_\+serialization}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__serialized}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+serialized}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1data__for__serialization}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::data\+\_\+for\+\_\+serialization}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1state__t}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::state\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1service__node__list_1_1quorums__by__height}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list\+::quorums\+\_\+by\+\_\+height}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1staking__components}{service\+\_\+nodes\+::staking\+\_\+components}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1registration__details}{service\+\_\+nodes\+::registration\+\_\+details}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_a0fa77a49caf0a22ed86b6b0fc9f2dfca}{service\+\_\+nodes\+::pubkey\+\_\+and\+\_\+sninfo}} = std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, std\+::shared\+\_\+ptr$<$ const service\+\_\+node\+\_\+info $>$ $>$
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_a63185b52ba09c11922abe0c8e401fc44}{service\+\_\+nodes\+::service\+\_\+nodes\+\_\+infos\+\_\+t}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, std\+::shared\+\_\+ptr$<$ const service\+\_\+node\+\_\+info $>$ $>$
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_a638780b293ab2f7b84519072611cd72b}{service\+\_\+nodes\+::contribution}} = std\+::pair$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}, uint64\+\_\+t $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ad05338873131c78728f9731a092f2822}{service\+\_\+nodes\+::tx\+\_\+get\+\_\+staking\+\_\+components}} (\mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} const \&tx, staking\+\_\+components $\ast$contribution, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&txid)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a98dff085e2d8591c6b172734f94b5814}{service\+\_\+nodes\+::tx\+\_\+get\+\_\+staking\+\_\+components}} (\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const \&tx, staking\+\_\+components $\ast$contribution)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a54117104fcc7b9c0895ade561aae17e1}{service\+\_\+nodes\+::tx\+\_\+get\+\_\+staking\+\_\+components\+\_\+and\+\_\+amounts}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const \&tx, uint64\+\_\+t block\+\_\+height, staking\+\_\+components $\ast$contribution)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_aa92958b6bb8aaad37f2aa76a7151c2cc}{service\+\_\+nodes\+::is\+\_\+registration\+\_\+tx}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx, uint64\+\_\+t block\+\_\+timestamp, uint64\+\_\+t block\+\_\+height, uint32\+\_\+t index, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&key, service\+\_\+node\+\_\+info \&info)
+\item 
+std\+::optional$<$ registration\+\_\+details $>$ \mbox{\hyperlink{namespaceservice__nodes_aadfecf139d5538f3d0a3489d735cab97}{service\+\_\+nodes\+::reg\+\_\+tx\+\_\+extract\+\_\+fields}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a5fb1ab8aa5ce7309be47bab9c80a358c}{service\+\_\+nodes\+::offset\+\_\+testing\+\_\+quorum\+\_\+height}} (quorum\+\_\+type type, uint64\+\_\+t height)
+\item 
+registration\+\_\+details \mbox{\hyperlink{namespaceservice__nodes_a714d8c3ca9dba10a318844453e8e2e60}{service\+\_\+nodes\+::convert\+\_\+registration\+\_\+args}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, const std\+::vector$<$ std\+::string $>$ \&args, uint64\+\_\+t staking\+\_\+requirement)
+\item 
+void \mbox{\hyperlink{namespaceservice__nodes_ac896740f47512d5e4c4baf65e78965b6}{service\+\_\+nodes\+::validate\+\_\+registration}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t block\+\_\+timestamp, const registration\+\_\+details \&registration)
+\item 
+void \mbox{\hyperlink{namespaceservice__nodes_a8fbc99deb8b92cfa7e4784c53ae3518a}{service\+\_\+nodes\+::validate\+\_\+registration\+\_\+signature}} (const registration\+\_\+details \&registration)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceservice__nodes_ad6091b8bbb3db895619bf403ce3a78ff}{service\+\_\+nodes\+::get\+\_\+registration\+\_\+hash}} (const registration\+\_\+details \&registration)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ae6c9a46e6c0c943689958a4511ec1e2e}{service\+\_\+nodes\+::make\+\_\+registration\+\_\+cmd}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, uint64\+\_\+t staking\+\_\+requirement, const std\+::vector$<$ std\+::string $>$ \&args, const service\+\_\+node\+\_\+keys \&keys, std\+::string \&cmd, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} make\+\_\+friendly)
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} \mbox{\hyperlink{namespaceservice__nodes_a77cd3df53fd3dab2e1ba1a6b8eafbb02}{service\+\_\+nodes\+::generate\+\_\+pulse\+\_\+quorum}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&leader, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, std\+::vector$<$ pubkey\+\_\+and\+\_\+sninfo $>$ const \&active\+\_\+snode\+\_\+list, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ const \&pulse\+\_\+entropy, uint8\+\_\+t pulse\+\_\+round)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{namespaceservice__nodes_af8e4caabd6be6766bee735f4baad7a7a}{service\+\_\+nodes\+::get\+\_\+pulse\+\_\+entropy\+\_\+for\+\_\+next\+\_\+block}} (\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{cryptonote\+::\+Blockchain\+DB}} const \&db, \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} const \&top\+\_\+block, uint8\+\_\+t pulse\+\_\+round)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{namespaceservice__nodes_abae2ca96a1a38e65c226d8fbef6c23ee}{service\+\_\+nodes\+::get\+\_\+pulse\+\_\+entropy\+\_\+for\+\_\+next\+\_\+block}} (\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{cryptonote\+::\+Blockchain\+DB}} const \&db, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&top\+\_\+hash, uint8\+\_\+t pulse\+\_\+round)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{namespaceservice__nodes_a1f391ecb220145fff8cf4d2564856449}{service\+\_\+nodes\+::get\+\_\+pulse\+\_\+entropy\+\_\+for\+\_\+next\+\_\+block}} (\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{cryptonote\+::\+Blockchain\+DB}} const \&db, uint8\+\_\+t pulse\+\_\+round)
+\item 
+payout \mbox{\hyperlink{namespaceservice__nodes_a3b9b6e821013ef50b5fc675c41278ba6}{service\+\_\+nodes\+::service\+\_\+node\+\_\+payout\+\_\+portions}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&key, const service\+\_\+node\+\_\+info \&info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_adf1c6370ea88643cdd79c29c8ed19bca}{service\+\_\+nodes\+::\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+E\+I\+G\+HT}} = static\+\_\+cast$<$uint64\+\_\+t$>$(-\/1)
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a85b592a78a00349b68087e490996b111}{service\+\_\+nodes\+::\+N\+E\+V\+ER}} = std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point\+::min()
+\item 
+const static payout\+\_\+entry \mbox{\hyperlink{namespaceservice__nodes_ae27db2b68eebcd84902cd9587080290a}{service\+\_\+nodes\+::null\+\_\+payout\+\_\+entry}} = \{\mbox{\hyperlink{namespacecryptonote_aa7cc93bf154f0bb86dcf3d4e1279e76e}{cryptonote\+::null\+\_\+address}}, \mbox{\hyperlink{namespacecryptonote_1_1old_aff49d5bd41207b3e4a8c406c053261be}{cryptonote\+::old\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+P\+O\+R\+T\+I\+O\+NS}}\}
+\item 
+const static payout \mbox{\hyperlink{namespaceservice__nodes_a8ca69f263e29108b866ebc2aebb2fd07}{service\+\_\+nodes\+::null\+\_\+payout}} = \{\mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$, \{null\+\_\+payout\+\_\+entry\}\}
+\end{DoxyCompactItemize}

@@ -1,0 +1,186 @@
+\hypertarget{quorumnet_8cpp}{}\doxysection{src/cryptonote\+\_\+protocol/quorumnet.cpp File Reference}
+\label{quorumnet_8cpp}\index{src/cryptonote\_protocol/quorumnet.cpp@{src/cryptonote\_protocol/quorumnet.cpp}}
+{\ttfamily \#include \char`\"{}quorumnet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/tx\+\_\+blink.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/tx\+\_\+pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/pulse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}quorumnet\+\_\+conn\+\_\+matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/random.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenmq/oxenmq.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include $<$shared\+\_\+mutex$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for quorumnet.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{quorumnet_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1pending__signature__hash}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pending\+\_\+signature\+\_\+hash}}
+\item 
+struct \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+Qnet\+State}}
+\item 
+struct \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1QnetState_1_1blink__metadata}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+Qnet\+State\+::blink\+\_\+metadata}}
+\item 
+struct \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1prepared__relay__destinations}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::prepared\+\_\+relay\+\_\+destinations}}
+\item 
+class \mbox{\hyperlink{classquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1peer__info}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structquorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_1_1blink__result__data}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::blink\+\_\+result\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacequorumnet}{quorumnet}}
+\item 
+ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ace5788d0d526d44515fbaf2569c8cf9c}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::quorum\+\_\+array}} = std\+::array$<$ std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} $>$, N\+U\+M\+\_\+\+B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+MS $>$
+\item 
+using \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ae97e5b133c7f2834cccef84a3eb9974e}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pending\+\_\+signature}} = std\+::tuple$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, uint8\+\_\+t, int, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$
+\item 
+using \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_adfd22dfd80cac1f87b11e0c281498958}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pending\+\_\+signature\+\_\+set}} = std\+::unordered\+\_\+set$<$ pending\+\_\+signature, pending\+\_\+signature\+\_\+hash $>$
+\item 
+using \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ab5dd86057ce063ee56960bdcdebeb7f6}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::blink\+\_\+response}} = std\+::pair$<$ \mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445}{cryptonote\+::blink\+\_\+result}}, std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a3c16ca693e6d4044e8916e2e456baaf9}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::get\+\_\+data\+\_\+as\+\_\+string}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&key)
+\item 
+\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a3be605e352cd557fe6996e037fa59c8f}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::x25519\+\_\+from\+\_\+string}} (std\+::string\+\_\+view pubkey)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aacd5ad00bf940ea47c880f5aedb4c9c2}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::setup\+\_\+endpoints}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, void $\ast$obj)
+\item 
+void $\ast$ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a57b1720a4066530cb4aa66434c21aa89}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::new\+\_\+qnetstate}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_acf348d74c1e0b24d040c99952395b226}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::delete\+\_\+qnetstate}} (void $\ast$\&obj)
+\item 
+{\footnotesize template$<$typename E $>$ }\\E \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a81c1b817847fb12479946f3c935ead7b}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::get\+\_\+enum}} (const bt\+\_\+dict \&\mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}, const std\+::string \&key)
+\item 
+{\footnotesize template$<$typename It $>$ }\\std\+::vector$<$ prepared\+\_\+relay\+\_\+destinations $>$ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a0671321eb2e8a12e6d269d1692f7fc70}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+prepare\+\_\+relay\+\_\+to\+\_\+quorum\+\_\+subset}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, It quorum\+\_\+begin, It quorum\+\_\+end, size\+\_\+t num\+\_\+peers)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ac22220f6c43e8a201142b709c55641ea}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::peer\+\_\+relay\+\_\+to\+\_\+prepared\+\_\+destinations}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, std\+::vector$<$ prepared\+\_\+relay\+\_\+destinations $>$ const \&destinations, std\+::string\+\_\+view command, std\+::string \&\&data)
+\item 
+bt\+\_\+dict \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ac7c962cf23690ead5a4789efb57dbb8a}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::serialize\+\_\+vote}} (const quorum\+\_\+vote\+\_\+t \&vote)
+\item 
+quorum\+\_\+vote\+\_\+t \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a7245a916e831bae4289f44bac6f94331}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::deserialize\+\_\+vote}} (std\+::string\+\_\+view v)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aa56dd3208011dde8d9e0b35543ef2202}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::relay\+\_\+obligation\+\_\+votes}} (void $\ast$obj, const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t}} $>$ \&votes)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a1e0d4172fa10a7601e99921c62895e5d}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+obligation\+\_\+vote}} (Message \&m, Qnet\+State \&qnet)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ac48d3814c74a76c80a57cb2f4e7608d0}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+timestamp}} (Message \&m)
+\item 
+{\footnotesize template$<$typename I $>$ }\\std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral$<$ I $>$\+::value, I $>$ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a28040f3ef02cbc446a3a8d27ecbf17b4}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::get\+\_\+or}} (bt\+\_\+dict \&\mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}, const std\+::string \&key, I fallback)
+\item 
+quorum\+\_\+array \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_af5956de6b0451f3b338923a2df0a1ae1}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::get\+\_\+blink\+\_\+quorums}} (uint64\+\_\+t blink\+\_\+height, const service\+\_\+node\+\_\+list \&snl, const uint64\+\_\+t $\ast$input\+\_\+checksum, uint64\+\_\+t $\ast$output\+\_\+checksum=nullptr)
+\item 
+std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ab532bc48ba9ed7a88cbe843bd7f460eb}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::debug\+\_\+known\+\_\+signatures}} (blink\+\_\+tx \&btx, quorum\+\_\+array \&blink\+\_\+quorums)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aa3c50f21e2c15efbf79296f7f5650806}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::process\+\_\+blink\+\_\+signatures}} (Qnet\+State \&qnet, const std\+::shared\+\_\+ptr$<$ blink\+\_\+tx $>$ \&btxptr, quorum\+\_\+array \&blink\+\_\+quorums, uint64\+\_\+t quorum\+\_\+checksum, std\+::list$<$ pending\+\_\+signature $>$ \&\&signatures, uint64\+\_\+t reply\+\_\+tag, oxenmq\+::\+Connection\+ID reply\+\_\+conn, const std\+::string \&received\+\_\+from=\char`\"{}\char`\"{}\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ad693e69a98d14c50e9e6c1f52988b90b}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+blink}} (Message \&m, Qnet\+State \&qnet)
+\item 
+{\footnotesize template$<$typename Consume $>$ }\\void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_abd4c573074683dce12a10ba02f2fe440}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::extract\+\_\+signature\+\_\+values}} (bt\+\_\+dict\+\_\+consumer \&data, std\+::string\+\_\+view key, std\+::list$<$ pending\+\_\+signature $>$ \&signatures, Consume consume)
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a1ab3a3041ec49510af3ff1eaa5f67659}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::convert\+\_\+string\+\_\+view\+\_\+bytes\+\_\+to\+\_\+signature}} (std\+::string\+\_\+view sig\+\_\+str)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aeb0ef0bfa3ff0ac2f00e823c463af172}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+blink\+\_\+signature}} (Message \&m, Qnet\+State \&qnet)
+\item 
+std\+::future$<$ std\+::pair$<$ \mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445}{cryptonote\+::blink\+\_\+result}}, std\+::string $>$ $>$ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a6a4c6dba4a085e67042ead05eda802b5}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::send\+\_\+blink}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, const std\+::string \&tx\+\_\+blob)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a6b6e7027cc795a10c2453dfc520954f8}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::common\+\_\+blink\+\_\+response}} (uint64\+\_\+t tag, \mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445}{cryptonote\+::blink\+\_\+result}} res, std\+::string msg, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nostart=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ad4c2b96a6f62835553940860a79a4260}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+blink\+\_\+not\+\_\+started}} (Message \&m)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a6228fccfcda2ca54e46a94ddf737a872}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+blink\+\_\+failure}} (Message \&m)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aeed02d44c2bcccb7518512c932e73658}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+blink\+\_\+success}} (Message \&m)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a9083be3e004b488589b63179af96a36c}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pulse\+\_\+relay\+\_\+message\+\_\+to\+\_\+quorum}} (void $\ast$self, \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg, \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} block\+\_\+producer)
+\item 
+\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a79f63b40a67dd7cec4f845047629dfbc}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pulse\+\_\+parse\+\_\+msg\+\_\+header\+\_\+fields}} (\mbox{\hyperlink{namespacepulse_ac19257da0b18b8609c23c2a3aa77aac6}{pulse\+::message\+\_\+type}} type, bt\+\_\+dict\+\_\+consumer \&data, std\+::string\+\_\+view error\+\_\+prefix)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a2be7694d1af476f702c572b62276ed6d}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+pulse\+\_\+participation\+\_\+bit\+\_\+or\+\_\+bitset}} (Message \&m, Qnet\+State \&qnet, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} bitset)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a4cb98dad94cb3b87fc7c9740e964b546}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+pulse\+\_\+block\+\_\+template}} (Message \&m, Qnet\+State \&qnet)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a949f4bea612f081b26b10cc70acc2c78}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+pulse\+\_\+random\+\_\+value\+\_\+hash}} (Message \&m, Qnet\+State \&qnet)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a04f19a445abf4fa6d19683ed968541bd}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+pulse\+\_\+random\+\_\+value}} (Message \&m, Qnet\+State \&qnet)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ab90a28843698f8fbde04c72443948436}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::handle\+\_\+pulse\+\_\+signed\+\_\+block}} (Message \&m, Qnet\+State \&qnet)
+\item 
+void \mbox{\hyperlink{namespacequorumnet_ac6644227c9127af9cee119fc4984c950}{quorumnet\+::init\+\_\+core\+\_\+callbacks}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacequorumnet_a0f42507be3c9472f1a9cc863356cd75d}{quorumnet\+::logcat}} = log\+::\+Cat(\char`\"{}qnet\char`\"{})
+\item 
+constexpr auto \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a02b279a10476a4b267caca0e6525c948}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+N\+U\+M\+\_\+\+B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+MS}} = \mbox{\hyperlink{namespacetools_a951acda786b12282a5cd8040354e4159}{tools\+::enum\+\_\+count}}$<$blink\+\_\+tx\+::subquorum$>$
+\item 
+std\+::unordered\+\_\+map$<$ uint64\+\_\+t, blink\+\_\+result\+\_\+data $>$ \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a8daf877f637e69dc546d5c980e02a970}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pending\+\_\+blink\+\_\+results}}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aae91ea7587a05f31f5dad229a75830ad}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::pending\+\_\+blink\+\_\+result\+\_\+mutex}}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a6f5555129d5e7d3981d15463c21e53da}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+M\+A\+X\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+P\+R\+O\+M\+I\+S\+ES}} = 1000
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a816e1c8215ca796bf8ba363f3c711301}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}} = \char`\"{}q\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_adc6ed138fa64bf033cc498b34a8ad6d5}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+B\+L\+O\+C\+K\+\_\+\+R\+O\+U\+ND}} = \char`\"{}r\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a0cf5d7a0cf6f1863256ac68237566533}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}} = \char`\"{}s\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a7ab16e0ad2b9b67b6dbb779848c9ba0d}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+M\+P\+L\+A\+TE}} = \char`\"{}t\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_afde8250c4eecd760e4a381051b13ffc7}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+I\+T\+S\+ET}} = \char`\"{}u\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a0d54a655e4aab1ef42d87d38e0f0319b}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+UE}} = \char`\"{}v\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a1aab8b114e8009a93a4bce3db2b02442}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+H\+A\+SH}} = \char`\"{}x\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a43f79a55dc200226518814241a7608a8}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+T\+A\+G\+\_\+\+F\+I\+N\+A\+L\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}} = \char`\"{}z\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a7d40a171f7257ee60f1fe1aa78d9c5b2}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY}} = \char`\"{}pulse\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a8732f05c69122b495d5adfffabbfda32}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+I\+T\+S\+ET}} = \char`\"{}validator\+\_\+bitset\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a4ba76c45efa9fef0b019f88900e80dc6}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+IT}} = \char`\"{}validator\+\_\+bit\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ac1c875211763147bba89dddfa27483b3}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+M\+P\+L\+A\+TE}} = \char`\"{}block\+\_\+template\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a4c4f951b6e8bd3615f68381c5dd55819}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+H\+A\+SH}} = \char`\"{}random\+\_\+value\+\_\+hash\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ab7a5f2ae6c4025fe5749b3e7ac04facb}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+UE}} = \char`\"{}random\+\_\+value\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_aeda248c3d0c5b3927bf19ed7cddb19e0}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+B\+L\+O\+CK}} = \char`\"{}signed\+\_\+block\char`\"{}
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a78233d95333185f18d4646e7fa59cb9f}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+I\+T\+S\+ET}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+I\+T\+S\+ET
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ad1b8b658bd895389cf1cf2f7135d4890}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+IT}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+B\+IT
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a7d22e29ef1a3d6bccd2fcfbbecc8312f}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+M\+P\+L\+A\+TE}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+M\+P\+L\+A\+TE
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a289efbb9905e7886a5b4cc1e70c6d1c3}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+H\+A\+SH}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+H\+A\+SH
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_a8660c3d71a76ac127726ebceea078491}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+UE}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+UE
+\item 
+const std\+::string \mbox{\hyperlink{namespacequorumnet_1_1anonymous__namespace_02quorumnet_8cpp_03_ac72ee546f59af24a4af997ec1e4e1ee8}{quorumnet\+::anonymous\+\_\+namespace\{quorumnet.\+cpp\}\+::\+P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+E\+N\+D\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+B\+L\+O\+CK}} = P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+C\+A\+T\+E\+G\+O\+RY + \char`\"{}.\char`\"{} + P\+U\+L\+S\+E\+\_\+\+C\+M\+D\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+B\+L\+O\+CK
+\end{DoxyCompactItemize}

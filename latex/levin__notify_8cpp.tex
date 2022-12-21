@@ -1,0 +1,72 @@
+\hypertarget{levin__notify_8cpp}{}\doxysection{src/cryptonote\+\_\+protocol/levin\+\_\+notify.cpp File Reference}
+\label{levin__notify_8cpp}\index{src/cryptonote\_protocol/levin\_notify.cpp@{src/cryptonote\_protocol/levin\_notify.cpp}}
+{\ttfamily \#include \char`\"{}levin\+\_\+notify.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/asio/steady\+\_\+timer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/system/system\+\_\+error.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}common/expect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/connection\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/dandelionpp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p/net\+\_\+node.\+h\char`\"{}}\newline
+Include dependency graph for levin\+\_\+notify.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{levin__notify_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1noise__channel}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::noise\+\_\+channel}}
+\begin{DoxyCompactList}\small\item\em A queue of levin messages for a noise i2p/tor link. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone}{cryptonote\+::levin\+::detail\+::zone}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1queue__covert__notify}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::queue\+\_\+covert\+\_\+notify}}
+\begin{DoxyCompactList}\small\item\em Adds a message to the sending queue of the channel. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1flood__notify}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::flood\+\_\+notify}}
+\begin{DoxyCompactList}\small\item\em Sends a message to every active connection. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1update__channel}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::update\+\_\+channel}}
+\begin{DoxyCompactList}\small\item\em Updates the connection for a channel. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1update__channels}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::update\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Merges {\ttfamily out\+\_\+connections\+\_\+} into the existing {\ttfamily zone\+\_\+-\/$>$map}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1change__channels}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::change\+\_\+channels}}
+\begin{DoxyCompactList}\small\item\em Swaps out noise channels entirely; new epoch start. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1send__noise}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::send\+\_\+noise}}
+\begin{DoxyCompactList}\small\item\em Sends a noise packet or real notification and sets timer for next call. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_1_1start__epoch}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::start\+\_\+epoch}}
+\begin{DoxyCompactList}\small\item\em Prepares connections for new channel epoch and sets timer for next epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1levin}{cryptonote\+::levin}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1detail}{cryptonote\+::levin\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::duration \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_a4ae632f40f0c924e32f3b795dc3493c8}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::random\+\_\+duration}} (std\+::chrono\+::steady\+\_\+clock\+::duration range)
+\item 
+std\+::vector$<$ boost\+::uuids\+::uuid $>$ \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_abed8009d96d822f772a3587c804694e6}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::get\+\_\+out\+\_\+connections}} (connections \&p2p)
+\item 
+std\+::string \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_aa38b6f056d49c22314bad1761add4eaa}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::make\+\_\+tx\+\_\+payload}} (std\+::vector$<$ std\+::string $>$ \&\&txs, const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pad)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_1_1levin_ae6c5b786b234cc87ddea24755f82bae8}{cryptonote\+::levin\+::logcat}} = log\+::\+Cat(\char`\"{}net.\+p2p.\+tx\char`\"{})
+\item 
+constexpr std\+::size\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1levin_1_1anonymous__namespace_02levin__notify_8cpp_03_af99c02304ca80986c641acb39a0a6051}{cryptonote\+::levin\+::anonymous\+\_\+namespace\{levin\+\_\+notify.\+cpp\}\+::connection\+\_\+id\+\_\+reserve\+\_\+size}} = 100
+\end{DoxyCompactItemize}

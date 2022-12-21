@@ -1,0 +1,199 @@
+\hypertarget{classpy2backports_1_1weakref_1_1finalize}{}\doxysection{py2backports.\+weakref.\+finalize Class Reference}
+\label{classpy2backports_1_1weakref_1_1finalize}\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+
+
+Inheritance diagram for py2backports.\+weakref.\+finalize\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classpy2backports_1_1weakref_1_1finalize__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for py2backports.\+weakref.\+finalize\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classpy2backports_1_1weakref_1_1finalize__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_1_1__Info}{\+\_\+\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_aaa854974fcaf0bc6fae46012f465e41d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, obj, func, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_aaee56f8b8db5b0110b979a4d41ee72d4}{\+\_\+\+\_\+call\+\_\+\+\_\+}} (self, \+\_\+=None)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a30c12355d2ce207b2b5200d99a7dc9e5}{detach}} (self)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a388db8429cbdfdae63e3c7e2bc28e4a2}{peek}} (self)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a918f762d875020a6fb3ea006c7fa8ee5}{alive}} (self)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a1f57364980326670a19fca9f473a0e1c}{atexit}} (self)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_ad9db9024aa89cbd9b012687db43c64c9}{atexit}} (self, value)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_ac8a8175c724d4ea50469ebe7fd248592}{\+\_\+\+\_\+repr\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_af19a534dfcbe40005a80e7560e55cb73}{\+\_\+select\+\_\+for\+\_\+exit}} (cls)
+\item 
+def \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_aa0b476dc639a1d44fa39d474c14ea7ad}{\+\_\+exitfunc}} (cls)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_adaf9f3dc1af7c9e260820d36fb00a656}{\+\_\+\+\_\+slots\+\_\+\+\_\+}} = ()
+\item 
+dictionary \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_ac02ab1ec23540f80dc3039d184035509}{\+\_\+registry}} = \{\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_ac785c1e2c417af524f214b79df7e9370}{\+\_\+shutdown}} = False
+\item 
+\mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a36f65ce30a1596ce302073bc5a068bbb}{\+\_\+index\+\_\+iter}} = itertools.\+count()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_a32f88d57252f89ef1e8f0ab4d346cb27}{\+\_\+dirty}} = False
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classpy2backports_1_1weakref_1_1finalize_ae3c99ba3044a695c97ef132b1e8b768b}{\+\_\+registered\+\_\+with\+\_\+atexit}} = False
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class for finalization of weakrefable objects
+finalize(obj, func, *args, **kwargs) returns a callable finalizer
+object which will be called when obj is garbage collected. The
+first time the finalizer is called it evaluates func(*arg, **kwargs)
+and returns the result. After this the finalizer is dead, and
+calling it just returns None.
+When the program exits any remaining finalizers for which the
+atexit attribute is true will be run in reverse order of creation.
+By default atexit is true.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_aaa854974fcaf0bc6fae46012f465e41d}\label{classpy2backports_1_1weakref_1_1finalize_aaa854974fcaf0bc6fae46012f465e41d}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{obj,  }\item[{}]{func,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_aaee56f8b8db5b0110b979a4d41ee72d4}\label{classpy2backports_1_1weakref_1_1finalize_aaee56f8b8db5b0110b979a4d41ee72d4}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_\_call\_\_@{\_\_call\_\_}}
+\index{\_\_call\_\_@{\_\_call\_\_}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_\_call\_\_()}{\_\_call\_\_()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+\_\+\+\_\+call\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{\+\_\+ = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If alive then mark as dead and return func(*args, **kwargs);
+otherwise return None\end{DoxyVerb}
+ \mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_ac8a8175c724d4ea50469ebe7fd248592}\label{classpy2backports_1_1weakref_1_1finalize_ac8a8175c724d4ea50469ebe7fd248592}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_\_repr\_\_@{\_\_repr\_\_}}
+\index{\_\_repr\_\_@{\_\_repr\_\_}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_\_repr\_\_()}{\_\_repr\_\_()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+\_\+\+\_\+repr\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_aa0b476dc639a1d44fa39d474c14ea7ad}\label{classpy2backports_1_1weakref_1_1finalize_aa0b476dc639a1d44fa39d474c14ea7ad}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_exitfunc@{\_exitfunc}}
+\index{\_exitfunc@{\_exitfunc}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_exitfunc()}{\_exitfunc()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+\_\+exitfunc (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_af19a534dfcbe40005a80e7560e55cb73}\label{classpy2backports_1_1weakref_1_1finalize_af19a534dfcbe40005a80e7560e55cb73}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_select\_for\_exit@{\_select\_for\_exit}}
+\index{\_select\_for\_exit@{\_select\_for\_exit}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_select\_for\_exit()}{\_select\_for\_exit()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+\_\+select\+\_\+for\+\_\+exit (\begin{DoxyParamCaption}\item[{}]{cls }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a918f762d875020a6fb3ea006c7fa8ee5}\label{classpy2backports_1_1weakref_1_1finalize_a918f762d875020a6fb3ea006c7fa8ee5}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!alive@{alive}}
+\index{alive@{alive}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{alive()}{alive()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+alive (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Whether finalizer is alive\end{DoxyVerb}
+ \mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a1f57364980326670a19fca9f473a0e1c}\label{classpy2backports_1_1weakref_1_1finalize_a1f57364980326670a19fca9f473a0e1c}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!atexit@{atexit}}
+\index{atexit@{atexit}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{atexit()}{atexit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+atexit (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Whether finalizer should be called at exit\end{DoxyVerb}
+ \mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_ad9db9024aa89cbd9b012687db43c64c9}\label{classpy2backports_1_1weakref_1_1finalize_ad9db9024aa89cbd9b012687db43c64c9}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!atexit@{atexit}}
+\index{atexit@{atexit}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{atexit()}{atexit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+atexit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a30c12355d2ce207b2b5200d99a7dc9e5}\label{classpy2backports_1_1weakref_1_1finalize_a30c12355d2ce207b2b5200d99a7dc9e5}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!detach@{detach}}
+\index{detach@{detach}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+detach (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If alive then mark as dead and return (obj, func, args, kwargs);
+otherwise return None\end{DoxyVerb}
+ \mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a388db8429cbdfdae63e3c7e2bc28e4a2}\label{classpy2backports_1_1weakref_1_1finalize_a388db8429cbdfdae63e3c7e2bc28e4a2}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!peek@{peek}}
+\index{peek@{peek}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily def py2backports.\+weakref.\+finalize.\+peek (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}If alive then return (obj, func, args, kwargs);
+otherwise return None\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_adaf9f3dc1af7c9e260820d36fb00a656}\label{classpy2backports_1_1weakref_1_1finalize_adaf9f3dc1af7c9e260820d36fb00a656}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_\_slots\_\_@{\_\_slots\_\_}}
+\index{\_\_slots\_\_@{\_\_slots\_\_}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_\_slots\_\_}{\_\_slots\_\_}}
+{\footnotesize\ttfamily tuple py2backports.\+weakref.\+finalize.\+\_\+\+\_\+slots\+\_\+\+\_\+ = ()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a32f88d57252f89ef1e8f0ab4d346cb27}\label{classpy2backports_1_1weakref_1_1finalize_a32f88d57252f89ef1e8f0ab4d346cb27}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_dirty@{\_dirty}}
+\index{\_dirty@{\_dirty}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_dirty}{\_dirty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} py2backports.\+weakref.\+finalize.\+\_\+dirty = False\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_a36f65ce30a1596ce302073bc5a068bbb}\label{classpy2backports_1_1weakref_1_1finalize_a36f65ce30a1596ce302073bc5a068bbb}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_index\_iter@{\_index\_iter}}
+\index{\_index\_iter@{\_index\_iter}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_index\_iter}{\_index\_iter}}
+{\footnotesize\ttfamily py2backports.\+weakref.\+finalize.\+\_\+index\+\_\+iter = itertools.\+count()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_ae3c99ba3044a695c97ef132b1e8b768b}\label{classpy2backports_1_1weakref_1_1finalize_ae3c99ba3044a695c97ef132b1e8b768b}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_registered\_with\_atexit@{\_registered\_with\_atexit}}
+\index{\_registered\_with\_atexit@{\_registered\_with\_atexit}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_registered\_with\_atexit}{\_registered\_with\_atexit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} py2backports.\+weakref.\+finalize.\+\_\+registered\+\_\+with\+\_\+atexit = False\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_ac02ab1ec23540f80dc3039d184035509}\label{classpy2backports_1_1weakref_1_1finalize_ac02ab1ec23540f80dc3039d184035509}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_registry@{\_registry}}
+\index{\_registry@{\_registry}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_registry}{\_registry}}
+{\footnotesize\ttfamily dictionary py2backports.\+weakref.\+finalize.\+\_\+registry = \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classpy2backports_1_1weakref_1_1finalize_ac785c1e2c417af524f214b79df7e9370}\label{classpy2backports_1_1weakref_1_1finalize_ac785c1e2c417af524f214b79df7e9370}} 
+\index{py2backports.weakref.finalize@{py2backports.weakref.finalize}!\_shutdown@{\_shutdown}}
+\index{\_shutdown@{\_shutdown}!py2backports.weakref.finalize@{py2backports.weakref.finalize}}
+\doxysubsubsection{\texorpdfstring{\_shutdown}{\_shutdown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} py2backports.\+weakref.\+finalize.\+\_\+shutdown = False\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/device\+\_\+trezor/trezor/tools/py2backports/\mbox{\hyperlink{weakref_8py}{weakref.\+py}}\end{DoxyCompactItemize}

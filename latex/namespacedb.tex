@@ -1,0 +1,193 @@
+\hypertarget{namespacedb}{}\doxysection{db Namespace Reference}
+\label{namespacedb}\index{db@{db}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedb_1_1detail}{detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdb_1_1blob__binder}{blob\+\_\+binder}}
+\item 
+class \mbox{\hyperlink{classdb_1_1Database}{Database}}
+\item 
+struct \mbox{\hyperlink{structdb_1_1first__type}{first\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... T$>$ }\\using \mbox{\hyperlink{namespacedb_a7e2a09008626aa881ccd48708c9af311}{first\+\_\+type\+\_\+t}} = typename \mbox{\hyperlink{structdb_1_1first__type}{first\+\_\+type}}$<$ T... $>$\+::type
+\item 
+{\footnotesize template$<$typename... T$>$ }\\using \mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}} = std\+::conditional\+\_\+t$<$ sizeof...(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})==1, \mbox{\hyperlink{namespacedb_a7e2a09008626aa881ccd48708c9af311}{first\+\_\+type\+\_\+t}}$<$ T... $>$, std\+::tuple$<$ T... $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacedb_a097d2a748b6255a68722289e6fe883b0}{multi\+\_\+in\+\_\+query}} (std\+::string\+\_\+view prefix, size\+\_\+t count, std\+::string\+\_\+view suffix)
+\item 
+void \mbox{\hyperlink{namespacedb_a916083bcf3622d4990fdc5559ebecaa6}{bind\+\_\+blob\+\_\+ref}} (S\+Q\+Lite\+::\+Statement \&st, int i, std\+::string\+\_\+view blob)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\void \mbox{\hyperlink{namespacedb_aed83b08908eab4e7e3918d4e2bec17fc}{bind\+\_\+oneshot}} (S\+Q\+Lite\+::\+Statement \&st, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&... bind)
+\item 
+{\footnotesize template$<$typename... T, int... Index$>$ }\\int \mbox{\hyperlink{namespacedb_a9c32dc195bd1e3a041bd49222026ada7}{exec\+\_\+query}} (S\+Q\+Lite\+::\+Statement \&st, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&... bind)
+\item 
+{\footnotesize template$<$typename... T$>$ }\\int \mbox{\hyperlink{namespacedb_a0a3876429bb0da7758fb9eabff3d22c5}{exec\+\_\+query}} (S\+Q\+Lite\+::\+Database \&db, const char $\ast$query, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&... bind)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacedb_a3c487effb10163bd3b133977ee5c3ffe}{get}} (S\+Q\+Lite\+::\+Statement \&st)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename... Tn$>$ }\\std\+::tuple$<$ T1, T2, Tn... $>$ \mbox{\hyperlink{namespacedb_a9f429ec649b93a1e504ad89497796efb}{get}} (S\+Q\+Lite\+::\+Statement \&st)
+\item 
+{\footnotesize template$<$typename... T, typename... Args$>$ }\\std\+::optional$<$ \mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$ T... $>$ $>$ \mbox{\hyperlink{namespacedb_a36aa2f3297ceadd696021793bdbfeb24}{exec\+\_\+and\+\_\+maybe\+\_\+get}} (S\+Q\+Lite\+::\+Statement \&st, const Args \&... bind)
+\item 
+{\footnotesize template$<$typename... T, typename... Args$>$ }\\\mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$ T... $>$ \mbox{\hyperlink{namespacedb_a0e6de472933eb290f1540a2986689cc4}{exec\+\_\+and\+\_\+get}} (S\+Q\+Lite\+::\+Statement \&st, const Args \&... bind)
+\item 
+{\footnotesize template$<$typename... T, typename... Bind$>$ }\\std\+::vector$<$ \mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$ T... $>$ $>$ \mbox{\hyperlink{namespacedb_a53e982fb9cd29542f4801245ceafc591}{get\+\_\+all}} (S\+Q\+Lite\+::\+Statement \&st, const Bind \&... bind)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacedb_a8cf04af916049d47dba91a96e95e125a}{sqlitedb\+\_\+logcat}} = log\+::\+Cat(\char`\"{}db.\+sqlite\char`\"{})
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_ace61320623af7827bb46e42054632340}{is\+\_\+cstr}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_a83ca2a05beb1f5936d1102c61f23289b}{is\+\_\+cstr$<$ char\mbox{[}\+N\mbox{]}$>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_af4cf4bcc3b459457a43a2688fef4afbf}{is\+\_\+cstr$<$ const char\mbox{[}\+N\mbox{]}$>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+template$<$$>$ constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_a9f88bf2687b0a4d30d0770465d907a29}{is\+\_\+cstr$<$ char $\ast$ $>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+template$<$$>$ constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_aa19afeace5466f668241ec2c6d704272}{is\+\_\+cstr$<$ const char $\ast$ $>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacedb_a7e2a09008626aa881ccd48708c9af311}\label{namespacedb_a7e2a09008626aa881ccd48708c9af311}} 
+\index{db@{db}!first\_type\_t@{first\_type\_t}}
+\index{first\_type\_t@{first\_type\_t}!db@{db}}
+\doxysubsubsection{\texorpdfstring{first\_type\_t}{first\_type\_t}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+using \mbox{\hyperlink{namespacedb_a7e2a09008626aa881ccd48708c9af311}{db\+::first\+\_\+type\+\_\+t}} = typedef typename \mbox{\hyperlink{structdb_1_1first__type}{first\+\_\+type}}$<$T...$>$\+::type}
+
+\mbox{\Hypertarget{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}\label{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}} 
+\index{db@{db}!type\_or\_tuple@{type\_or\_tuple}}
+\index{type\_or\_tuple@{type\_or\_tuple}!db@{db}}
+\doxysubsubsection{\texorpdfstring{type\_or\_tuple}{type\_or\_tuple}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+using \mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{db\+::type\+\_\+or\+\_\+tuple}} = typedef std\+::conditional\+\_\+t$<$sizeof...(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}) == 1, \mbox{\hyperlink{namespacedb_a7e2a09008626aa881ccd48708c9af311}{first\+\_\+type\+\_\+t}}$<$T...$>$, std\+::tuple$<$T...$>$ $>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedb_a916083bcf3622d4990fdc5559ebecaa6}\label{namespacedb_a916083bcf3622d4990fdc5559ebecaa6}} 
+\index{db@{db}!bind\_blob\_ref@{bind\_blob\_ref}}
+\index{bind\_blob\_ref@{bind\_blob\_ref}!db@{db}}
+\doxysubsubsection{\texorpdfstring{bind\_blob\_ref()}{bind\_blob\_ref()}}
+{\footnotesize\ttfamily void db\+::bind\+\_\+blob\+\_\+ref (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{int}]{i,  }\item[{std\+::string\+\_\+view}]{blob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacedb_aed83b08908eab4e7e3918d4e2bec17fc}\label{namespacedb_aed83b08908eab4e7e3918d4e2bec17fc}} 
+\index{db@{db}!bind\_oneshot@{bind\_oneshot}}
+\index{bind\_oneshot@{bind\_oneshot}!db@{db}}
+\doxysubsubsection{\texorpdfstring{bind\_oneshot()}{bind\_oneshot()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+void db\+::bind\+\_\+oneshot (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a0e6de472933eb290f1540a2986689cc4}\label{namespacedb_a0e6de472933eb290f1540a2986689cc4}} 
+\index{db@{db}!exec\_and\_get@{exec\_and\_get}}
+\index{exec\_and\_get@{exec\_and\_get}!db@{db}}
+\doxysubsubsection{\texorpdfstring{exec\_and\_get()}{exec\_and\_get()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Args$>$ \\
+\mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$T...$>$ db\+::exec\+\_\+and\+\_\+get (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{const Args \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a36aa2f3297ceadd696021793bdbfeb24}\label{namespacedb_a36aa2f3297ceadd696021793bdbfeb24}} 
+\index{db@{db}!exec\_and\_maybe\_get@{exec\_and\_maybe\_get}}
+\index{exec\_and\_maybe\_get@{exec\_and\_maybe\_get}!db@{db}}
+\doxysubsubsection{\texorpdfstring{exec\_and\_maybe\_get()}{exec\_and\_maybe\_get()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Args$>$ \\
+std\+::optional$<$\mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$T...$>$ $>$ db\+::exec\+\_\+and\+\_\+maybe\+\_\+get (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{const Args \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a0a3876429bb0da7758fb9eabff3d22c5}\label{namespacedb_a0a3876429bb0da7758fb9eabff3d22c5}} 
+\index{db@{db}!exec\_query@{exec\_query}}
+\index{exec\_query@{exec\_query}!db@{db}}
+\doxysubsubsection{\texorpdfstring{exec\_query()}{exec\_query()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+int db\+::exec\+\_\+query (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Database \&}]{db,  }\item[{const char $\ast$}]{query,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a9c32dc195bd1e3a041bd49222026ada7}\label{namespacedb_a9c32dc195bd1e3a041bd49222026ada7}} 
+\index{db@{db}!exec\_query@{exec\_query}}
+\index{exec\_query@{exec\_query}!db@{db}}
+\doxysubsubsection{\texorpdfstring{exec\_query()}{exec\_query()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename... T, int... Index$>$ \\
+int db\+::exec\+\_\+query (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a3c487effb10163bd3b133977ee5c3ffe}\label{namespacedb_a3c487effb10163bd3b133977ee5c3ffe}} 
+\index{db@{db}!get@{get}}
+\index{get@{get}!db@{db}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} db\+::get (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a9f429ec649b93a1e504ad89497796efb}\label{namespacedb_a9f429ec649b93a1e504ad89497796efb}} 
+\index{db@{db}!get@{get}}
+\index{get@{get}!db@{db}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename... Tn$>$ \\
+std\+::tuple$<$T1, T2, Tn...$>$ db\+::get (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a53e982fb9cd29542f4801245ceafc591}\label{namespacedb_a53e982fb9cd29542f4801245ceafc591}} 
+\index{db@{db}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!db@{db}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily template$<$typename... T, typename... Bind$>$ \\
+std\+::vector$<$\mbox{\hyperlink{namespacedb_a54dcaf21e3e5312b389c462fe29865ca}{type\+\_\+or\+\_\+tuple}}$<$T...$>$ $>$ db\+::get\+\_\+all (\begin{DoxyParamCaption}\item[{S\+Q\+Lite\+::\+Statement \&}]{st,  }\item[{const Bind \&...}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedb_a097d2a748b6255a68722289e6fe883b0}\label{namespacedb_a097d2a748b6255a68722289e6fe883b0}} 
+\index{db@{db}!multi\_in\_query@{multi\_in\_query}}
+\index{multi\_in\_query@{multi\_in\_query}!db@{db}}
+\doxysubsubsection{\texorpdfstring{multi\_in\_query()}{multi\_in\_query()}}
+{\footnotesize\ttfamily std\+::string db\+::multi\+\_\+in\+\_\+query (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{prefix,  }\item[{size\+\_\+t}]{count,  }\item[{std\+::string\+\_\+view}]{suffix }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedb_ace61320623af7827bb46e42054632340}\label{namespacedb_ace61320623af7827bb46e42054632340}} 
+\index{db@{db}!is\_cstr@{is\_cstr}}
+\index{is\_cstr@{is\_cstr}!db@{db}}
+\doxysubsubsection{\texorpdfstring{is\_cstr}{is\_cstr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} db\+::is\+\_\+cstr = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacedb_a9f88bf2687b0a4d30d0770465d907a29}\label{namespacedb_a9f88bf2687b0a4d30d0770465d907a29}} 
+\index{db@{db}!is\_cstr$<$ char $\ast$ $>$@{is\_cstr$<$ char $\ast$ $>$}}
+\index{is\_cstr$<$ char $\ast$ $>$@{is\_cstr$<$ char $\ast$ $>$}!db@{db}}
+\doxysubsubsection{\texorpdfstring{is\_cstr$<$ char $\ast$ $>$}{is\_cstr< char * >}}
+{\footnotesize\ttfamily template$<$$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_ace61320623af7827bb46e42054632340}{db\+::is\+\_\+cstr}}$<$ char $\ast$ $>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacedb_a83ca2a05beb1f5936d1102c61f23289b}\label{namespacedb_a83ca2a05beb1f5936d1102c61f23289b}} 
+\index{db@{db}!is\_cstr$<$ char\mbox{[}N\mbox{]}$>$@{is\_cstr$<$ char[N]$>$}}
+\index{is\_cstr$<$ char\mbox{[}N\mbox{]}$>$@{is\_cstr$<$ char[N]$>$}!db@{db}}
+\doxysubsubsection{\texorpdfstring{is\_cstr$<$ char[N]$>$}{is\_cstr< char[N]>}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_ace61320623af7827bb46e42054632340}{db\+::is\+\_\+cstr}}$<$ char\mbox{[}N\mbox{]}$>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacedb_aa19afeace5466f668241ec2c6d704272}\label{namespacedb_aa19afeace5466f668241ec2c6d704272}} 
+\index{db@{db}!is\_cstr$<$ const char $\ast$ $>$@{is\_cstr$<$ const char $\ast$ $>$}}
+\index{is\_cstr$<$ const char $\ast$ $>$@{is\_cstr$<$ const char $\ast$ $>$}!db@{db}}
+\doxysubsubsection{\texorpdfstring{is\_cstr$<$ const char $\ast$ $>$}{is\_cstr< const char * >}}
+{\footnotesize\ttfamily template$<$$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_ace61320623af7827bb46e42054632340}{db\+::is\+\_\+cstr}}$<$ const char $\ast$ $>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacedb_af4cf4bcc3b459457a43a2688fef4afbf}\label{namespacedb_af4cf4bcc3b459457a43a2688fef4afbf}} 
+\index{db@{db}!is\_cstr$<$ const char\mbox{[}N\mbox{]}$>$@{is\_cstr$<$ const char[N]$>$}}
+\index{is\_cstr$<$ const char\mbox{[}N\mbox{]}$>$@{is\_cstr$<$ const char[N]$>$}!db@{db}}
+\doxysubsubsection{\texorpdfstring{is\_cstr$<$ const char[N]$>$}{is\_cstr< const char[N]>}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedb_ace61320623af7827bb46e42054632340}{db\+::is\+\_\+cstr}}$<$ const char\mbox{[}N\mbox{]}$>$ = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacedb_a8cf04af916049d47dba91a96e95e125a}\label{namespacedb_a8cf04af916049d47dba91a96e95e125a}} 
+\index{db@{db}!sqlitedb\_logcat@{sqlitedb\_logcat}}
+\index{sqlitedb\_logcat@{sqlitedb\_logcat}!db@{db}}
+\doxysubsubsection{\texorpdfstring{sqlitedb\_logcat}{sqlitedb\_logcat}}
+{\footnotesize\ttfamily auto db\+::sqlitedb\+\_\+logcat = log\+::\+Cat(\char`\"{}db.\+sqlite\char`\"{})\hspace{0.3cm}{\ttfamily [inline]}}
+

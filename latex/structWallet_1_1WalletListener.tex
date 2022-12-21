@@ -1,0 +1,199 @@
+\hypertarget{structWallet_1_1WalletListener}{}\doxysection{Wallet\+::Wallet\+Listener Struct Reference}
+\label{structWallet_1_1WalletListener}\index{Wallet::WalletListener@{Wallet::WalletListener}}
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1WalletListener_a8cdb067347c442e6cb47be03b0075d38}{$\sim$\+Wallet\+Listener}} ()=0
+\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_a158569aafb5b94f715b14cfacb6e80c5}{money\+Spent}} (const std\+::string \&tx\+Id, uint64\+\_\+t amount)=0
+\begin{DoxyCompactList}\small\item\em money\+Spent -\/ called when money spent \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_a0a7eed8253d82db0c6679a78c0a24bd2}{money\+Received}} (const std\+::string \&tx\+Id, uint64\+\_\+t amount)=0
+\begin{DoxyCompactList}\small\item\em money\+Received -\/ called when money received \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_ace9c76ff3105117603b2705e9f1fff8d}{unconfirmed\+Money\+Received}} (const std\+::string \&tx\+Id, uint64\+\_\+t amount)=0
+\begin{DoxyCompactList}\small\item\em unconfirmed\+Money\+Received -\/ called when payment arrived in tx pool \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_ab9e83fd431435b7ff89b8d045e58fac0}{new\+Block}} (uint64\+\_\+t height)=0
+\begin{DoxyCompactList}\small\item\em new\+Block -\/ called when new block received \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_af5d139d6e740975bff52657a30f46f9a}{updated}} ()=0
+\begin{DoxyCompactList}\small\item\em updated -\/ generic callback, called when any event (sent/received/block reveived/etc) happened with the wallet; \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_a4300d83ccc00325379f0e796297fe992}{refreshed}} ()=0
+\begin{DoxyCompactList}\small\item\em refreshed -\/ called when wallet refreshed by background thread or explicitly refreshed by calling \char`\"{}refresh\char`\"{} synchronously \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_a79db85330fd3109089f042a51fb6e9c1}{on\+Device\+Button\+Request}} (uint64\+\_\+t code)
+\begin{DoxyCompactList}\small\item\em called by device if the action is required \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_aac53b3b3808740b3961523daf8be84ec}{on\+Device\+Button\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em called by device if the button was pressed \end{DoxyCompactList}\item 
+virtual std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1WalletListener_a6be5a587ac589c327d6d3d073d0bf359}{on\+Device\+Pin\+Request}} ()
+\begin{DoxyCompactList}\small\item\em called by device when P\+IN is needed \end{DoxyCompactList}\item 
+virtual std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1WalletListener_aca59375b318892a51b677f49fb2ad59a}{on\+Device\+Passphrase\+Request}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&on\+\_\+device)
+\begin{DoxyCompactList}\small\item\em called by device when passphrase entry is needed \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_ae277940b007a062609273331d7ed25ee}{on\+Device\+Progress}} (const \mbox{\hyperlink{structWallet_1_1DeviceProgress}{Device\+Progress}} \&event)
+\begin{DoxyCompactList}\small\item\em Signalizes device operation progress. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletListener_a8f2c284fd49e8cbe330deb7e049326b6}{on\+Set\+Wallet}} (\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$wallet)
+\begin{DoxyCompactList}\small\item\em If the listener is created before the wallet this enables to set created wallet object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a8cdb067347c442e6cb47be03b0075d38}\label{structWallet_1_1WalletListener_a8cdb067347c442e6cb47be03b0075d38}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!````~WalletListener@{$\sim$WalletListener}}
+\index{````~WalletListener@{$\sim$WalletListener}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$WalletListener()}{~WalletListener()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Wallet\+Listener\+::$\sim$\+Wallet\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a0a7eed8253d82db0c6679a78c0a24bd2}\label{structWallet_1_1WalletListener_a0a7eed8253d82db0c6679a78c0a24bd2}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!moneyReceived@{moneyReceived}}
+\index{moneyReceived@{moneyReceived}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{moneyReceived()}{moneyReceived()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::money\+Received (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tx\+Id,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+money\+Received -\/ called when money received 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+Id} & -\/ transaction id \\
+\hline
+{\em amount} & -\/ amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a158569aafb5b94f715b14cfacb6e80c5}\label{structWallet_1_1WalletListener_a158569aafb5b94f715b14cfacb6e80c5}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!moneySpent@{moneySpent}}
+\index{moneySpent@{moneySpent}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{moneySpent()}{moneySpent()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::money\+Spent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tx\+Id,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+money\+Spent -\/ called when money spent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+Id} & -\/ transaction id \\
+\hline
+{\em amount} & -\/ amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_ab9e83fd431435b7ff89b8d045e58fac0}\label{structWallet_1_1WalletListener_ab9e83fd431435b7ff89b8d045e58fac0}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!newBlock@{newBlock}}
+\index{newBlock@{newBlock}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{newBlock()}{newBlock()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::new\+Block (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+new\+Block -\/ called when new block received 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & -\/ block height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_aac53b3b3808740b3961523daf8be84ec}\label{structWallet_1_1WalletListener_aac53b3b3808740b3961523daf8be84ec}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onDeviceButtonPressed@{onDeviceButtonPressed}}
+\index{onDeviceButtonPressed@{onDeviceButtonPressed}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onDeviceButtonPressed()}{onDeviceButtonPressed()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::on\+Device\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+called by device if the button was pressed 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a79db85330fd3109089f042a51fb6e9c1}\label{structWallet_1_1WalletListener_a79db85330fd3109089f042a51fb6e9c1}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onDeviceButtonRequest@{onDeviceButtonRequest}}
+\index{onDeviceButtonRequest@{onDeviceButtonRequest}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onDeviceButtonRequest()}{onDeviceButtonRequest()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::on\+Device\+Button\+Request (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+called by device if the action is required 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_aca59375b318892a51b677f49fb2ad59a}\label{structWallet_1_1WalletListener_aca59375b318892a51b677f49fb2ad59a}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onDevicePassphraseRequest@{onDevicePassphraseRequest}}
+\index{onDevicePassphraseRequest@{onDevicePassphraseRequest}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onDevicePassphraseRequest()}{onDevicePassphraseRequest()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$std\+::string$>$ Wallet\+::\+Wallet\+Listener\+::on\+Device\+Passphrase\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{on\+\_\+device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+called by device when passphrase entry is needed 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a6be5a587ac589c327d6d3d073d0bf359}\label{structWallet_1_1WalletListener_a6be5a587ac589c327d6d3d073d0bf359}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onDevicePinRequest@{onDevicePinRequest}}
+\index{onDevicePinRequest@{onDevicePinRequest}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onDevicePinRequest()}{onDevicePinRequest()}}
+{\footnotesize\ttfamily virtual std\+::optional$<$std\+::string$>$ Wallet\+::\+Wallet\+Listener\+::on\+Device\+Pin\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+called by device when P\+IN is needed 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_ae277940b007a062609273331d7ed25ee}\label{structWallet_1_1WalletListener_ae277940b007a062609273331d7ed25ee}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onDeviceProgress@{onDeviceProgress}}
+\index{onDeviceProgress@{onDeviceProgress}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onDeviceProgress()}{onDeviceProgress()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::on\+Device\+Progress (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWallet_1_1DeviceProgress}{Device\+Progress}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signalizes device operation progress. 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a8f2c284fd49e8cbe330deb7e049326b6}\label{structWallet_1_1WalletListener_a8f2c284fd49e8cbe330deb7e049326b6}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!onSetWallet@{onSetWallet}}
+\index{onSetWallet@{onSetWallet}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{onSetWallet()}{onSetWallet()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::on\+Set\+Wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$}]{wallet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+If the listener is created before the wallet this enables to set created wallet object. 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_a4300d83ccc00325379f0e796297fe992}\label{structWallet_1_1WalletListener_a4300d83ccc00325379f0e796297fe992}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!refreshed@{refreshed}}
+\index{refreshed@{refreshed}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{refreshed()}{refreshed()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::refreshed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+refreshed -\/ called when wallet refreshed by background thread or explicitly refreshed by calling \char`\"{}refresh\char`\"{} synchronously 
+
+\mbox{\Hypertarget{structWallet_1_1WalletListener_ace9c76ff3105117603b2705e9f1fff8d}\label{structWallet_1_1WalletListener_ace9c76ff3105117603b2705e9f1fff8d}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!unconfirmedMoneyReceived@{unconfirmedMoneyReceived}}
+\index{unconfirmedMoneyReceived@{unconfirmedMoneyReceived}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{unconfirmedMoneyReceived()}{unconfirmedMoneyReceived()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::unconfirmed\+Money\+Received (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tx\+Id,  }\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+unconfirmed\+Money\+Received -\/ called when payment arrived in tx pool 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+Id} & -\/ transaction id \\
+\hline
+{\em amount} & -\/ amount \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structWallet_1_1WalletListener_af5d139d6e740975bff52657a30f46f9a}\label{structWallet_1_1WalletListener_af5d139d6e740975bff52657a30f46f9a}} 
+\index{Wallet::WalletListener@{Wallet::WalletListener}!updated@{updated}}
+\index{updated@{updated}!Wallet::WalletListener@{Wallet::WalletListener}}
+\doxysubsubsection{\texorpdfstring{updated()}{updated()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Listener\+::updated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+updated -\/ generic callback, called when any event (sent/received/block reveived/etc) happened with the wallet; 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{api_2wallet_8cpp}{wallet.\+cpp}}\end{DoxyCompactItemize}

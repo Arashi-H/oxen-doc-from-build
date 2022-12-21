@@ -1,0 +1,303 @@
+\hypertarget{classnodetool_1_1peerlist__manager}{}\doxysection{nodetool\+::peerlist\+\_\+manager Class Reference}
+\label{classnodetool_1_1peerlist__manager}\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+
+
+{\ttfamily \#include $<$net\+\_\+peerlist.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__addr}{by\+\_\+addr}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__id}{by\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__time}{by\+\_\+time}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1modify__all}{modify\+\_\+all}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1modify__all__but__id}{modify\+\_\+all\+\_\+but\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1modify__last__seen}{modify\+\_\+last\+\_\+seen}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a61530c5dba9284609d1b25f8c0248b30}{init}} (\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&\&peers, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+local\+\_\+ip)
+\item 
+size\+\_\+t \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aec06a10d8956b792285daf19c9c6f9eb}{get\+\_\+white\+\_\+peers\+\_\+count}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aa02fa4749396caa4278e01baf02784c4}{get\+\_\+gray\+\_\+peers\+\_\+count}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a3da693c1708815d4cbfb76c7be2c39a0}{merge\+\_\+peerlist}} (const std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&outer\+\_\+bs, const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&)$>$ \&f=N\+U\+LL)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a0c5d9ee30d543439044fc91550435b30}{get\+\_\+peerlist\+\_\+head}} (std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&bs\+\_\+head, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} anonymize, uint32\+\_\+t \mbox{\hyperlink{threadpool_8cpp_a17c014f27a77bfdf722a042d7c34ef0a}{depth}}=\mbox{\hyperlink{namespacecryptonote_1_1p2p_a19f78becb30785e53fde22e75377e572}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+R\+S\+\_\+\+I\+N\+\_\+\+H\+A\+N\+D\+S\+H\+A\+KE}})
+\item 
+void \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a3ade9a6fd9e4a7655ceb26dcfec375a2}{get\+\_\+peerlist}} (std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&pl\+\_\+gray, std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&pl\+\_\+white)
+\item 
+void \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a0e0e505c79c4e6a92acf58510ea1f0f5}{get\+\_\+peerlist}} (\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&peers)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aca35821d9bb0a8fe5f95b3ba1b7081b1}{get\+\_\+white\+\_\+peer\+\_\+by\+\_\+index}} (\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&p, size\+\_\+t i)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a033e3483bdf567fc75688d82c2aec892}{get\+\_\+gray\+\_\+peer\+\_\+by\+\_\+index}} (\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&p, size\+\_\+t i)
+\item 
+{\footnotesize template$<$typename F $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a0db93bd9c0e011663bedbe824f13a42f}{foreach}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} white, const \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}} \&f)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a50abec5e317a524ebfc3be0bdcbc4b70}{append\+\_\+with\+\_\+peer\+\_\+white}} (const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&pr)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a6e9dbef06a2ec62f03824c4d4e3a3060}{append\+\_\+with\+\_\+peer\+\_\+gray}} (const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&pr)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a301c896aac4f233ee01c0540cf9dea6b}{append\+\_\+with\+\_\+peer\+\_\+anchor}} (const \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}} \&ple)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aa7619ecfdf2ec1961a3cffd16105cc51}{set\+\_\+peer\+\_\+just\+\_\+seen}} (\mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}} peer, const epee\+::net\+\_\+utils\+::network\+\_\+address \&addr, uint32\+\_\+t pruning\+\_\+seed)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_af5410b3f01603b86c1fedba26d84006e}{is\+\_\+host\+\_\+allowed}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a4f654d6ad72bc9886d2bb2e4fbc2cdeb}{get\+\_\+random\+\_\+gray\+\_\+peer}} (\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&pe)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aaba537991f68aa734fdd9b9f860e9c71}{remove\+\_\+from\+\_\+peer\+\_\+gray}} (const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&pe)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a48fc40243449756b0ba94720630d611f}{get\+\_\+and\+\_\+empty\+\_\+anchor\+\_\+peerlist}} (std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}} $>$ \&apl)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_aac049d9e63994799e335dec5fc84bf00}{remove\+\_\+from\+\_\+peer\+\_\+anchor}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&addr)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a4fb07d511e3f509c79acf2caf23382ae}{remove\+\_\+from\+\_\+peer\+\_\+white}} (const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&pe)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\+::multi\+\_\+index\+\_\+container$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}}, boost\+::multi\+\_\+index\+::indexed\+\_\+by$<$ boost\+::multi\+\_\+index\+::ordered\+\_\+unique$<$ boost\+::multi\+\_\+index\+::tag$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__addr}{by\+\_\+addr}} $>$, boost\+::multi\+\_\+index\+::member$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}}, epee\+::net\+\_\+utils\+::network\+\_\+address,\&\mbox{\hyperlink{structnodetool_1_1peerlist__entry_ad88415c90e83c8607a2284ae4c382de0}{peerlist\+\_\+entry\+::adr}} $>$ $>$, boost\+::multi\+\_\+index\+::ordered\+\_\+non\+\_\+unique$<$ boost\+::multi\+\_\+index\+::tag$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__time}{by\+\_\+time}} $>$, boost\+::multi\+\_\+index\+::member$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}}, int64\+\_\+t,\&\mbox{\hyperlink{structnodetool_1_1peerlist__entry_adb9e11acbffb5805755af83d2d72b449}{peerlist\+\_\+entry\+::last\+\_\+seen}} $>$ $>$ $>$ $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{peers\+\_\+indexed}}
+\item 
+typedef boost\+::multi\+\_\+index\+\_\+container$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}}, boost\+::multi\+\_\+index\+::indexed\+\_\+by$<$ boost\+::multi\+\_\+index\+::ordered\+\_\+unique$<$ boost\+::multi\+\_\+index\+::tag$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__addr}{by\+\_\+addr}} $>$, boost\+::multi\+\_\+index\+::member$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}}, epee\+::net\+\_\+utils\+::network\+\_\+address,\&\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry_a75d341ec7d2d63db3790e11aa88c8ee7}{anchor\+\_\+peerlist\+\_\+entry\+::adr}} $>$ $>$, boost\+::multi\+\_\+index\+::ordered\+\_\+non\+\_\+unique$<$ boost\+::multi\+\_\+index\+::tag$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__time}{by\+\_\+time}} $>$, boost\+::multi\+\_\+index\+::member$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}}, int64\+\_\+t,\&\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry_ae131874d0c265df978acda2c019e772c}{anchor\+\_\+peerlist\+\_\+entry\+::first\+\_\+seen}} $>$ $>$ $>$ $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}{anchor\+\_\+peers\+\_\+indexed}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a85ff0390fef7c83e51930fc7504a9c1b}{trim\+\_\+white\+\_\+peerlist}} ()
+\item 
+void \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a5898b6e9e3ef966665576a52cb0787e9}{trim\+\_\+gray\+\_\+peerlist}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{classnodetool_1_1peerlist__manager_af0709581b455bddc9214987c326804d9}{m\+\_\+peerlist\+\_\+lock}}
+\item 
+std\+::string \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a1345421c5ba8052602650001842683a2}{m\+\_\+config\+\_\+folder}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a55f1b44395cab609b001dff48129ae14}{m\+\_\+allow\+\_\+local\+\_\+ip}}
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{peers\+\_\+indexed}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_ae0932278f5b83e37625b1267ead1b2e2}{m\+\_\+peers\+\_\+gray}}
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{peers\+\_\+indexed}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_ac32d2cce8566a1f1a675b7ac15cb3d5e}{m\+\_\+peers\+\_\+white}}
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}{anchor\+\_\+peers\+\_\+indexed}} \mbox{\hyperlink{classnodetool_1_1peerlist__manager_ac428a5f66ccd8e5a99f5d539109f3111}{m\+\_\+peers\+\_\+anchor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnodetool_1_1peerlist__manager_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}\label{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!anchor\_peers\_indexed@{anchor\_peers\_indexed}}
+\index{anchor\_peers\_indexed@{anchor\_peers\_indexed}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{anchor\_peers\_indexed}{anchor\_peers\_indexed}}
+{\footnotesize\ttfamily typedef boost\+::multi\+\_\+index\+\_\+container$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}}, boost\+::multi\+\_\+index\+::indexed\+\_\+by$<$ boost\+::multi\+\_\+index\+::ordered\+\_\+unique$<$boost\+::multi\+\_\+index\+::tag$<$\mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__addr}{by\+\_\+addr}}$>$, boost\+::multi\+\_\+index\+::member$<$\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}},epee\+::net\+\_\+utils\+::network\+\_\+address,\&\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry_a75d341ec7d2d63db3790e11aa88c8ee7}{anchor\+\_\+peerlist\+\_\+entry\+::adr}}$>$ $>$, boost\+::multi\+\_\+index\+::ordered\+\_\+non\+\_\+unique$<$boost\+::multi\+\_\+index\+::tag$<$\mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__time}{by\+\_\+time}}$>$, boost\+::multi\+\_\+index\+::member$<$\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}},int64\+\_\+t,\&\mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry_ae131874d0c265df978acda2c019e772c}{anchor\+\_\+peerlist\+\_\+entry\+::first\+\_\+seen}}$>$ $>$ $>$ $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}{nodetool\+::peerlist\+\_\+manager\+::anchor\+\_\+peers\+\_\+indexed}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}\label{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!peers\_indexed@{peers\_indexed}}
+\index{peers\_indexed@{peers\_indexed}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{peers\_indexed}{peers\_indexed}}
+{\footnotesize\ttfamily typedef boost\+::multi\+\_\+index\+\_\+container$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}}, boost\+::multi\+\_\+index\+::indexed\+\_\+by$<$ boost\+::multi\+\_\+index\+::ordered\+\_\+unique$<$boost\+::multi\+\_\+index\+::tag$<$\mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__addr}{by\+\_\+addr}}$>$, boost\+::multi\+\_\+index\+::member$<$\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}},epee\+::net\+\_\+utils\+::network\+\_\+address,\&\mbox{\hyperlink{structnodetool_1_1peerlist__entry_ad88415c90e83c8607a2284ae4c382de0}{peerlist\+\_\+entry\+::adr}}$>$ $>$, boost\+::multi\+\_\+index\+::ordered\+\_\+non\+\_\+unique$<$boost\+::multi\+\_\+index\+::tag$<$\mbox{\hyperlink{structnodetool_1_1peerlist__manager_1_1by__time}{by\+\_\+time}}$>$, boost\+::multi\+\_\+index\+::member$<$\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}},int64\+\_\+t,\&\mbox{\hyperlink{structnodetool_1_1peerlist__entry_adb9e11acbffb5805755af83d2d72b449}{peerlist\+\_\+entry\+::last\+\_\+seen}}$>$ $>$ $>$ $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{nodetool\+::peerlist\+\_\+manager\+::peers\+\_\+indexed}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a301c896aac4f233ee01c0540cf9dea6b}\label{classnodetool_1_1peerlist__manager_a301c896aac4f233ee01c0540cf9dea6b}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!append\_with\_peer\_anchor@{append\_with\_peer\_anchor}}
+\index{append\_with\_peer\_anchor@{append\_with\_peer\_anchor}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{append\_with\_peer\_anchor()}{append\_with\_peer\_anchor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::append\+\_\+with\+\_\+peer\+\_\+anchor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}} \&}]{ple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a6e9dbef06a2ec62f03824c4d4e3a3060}\label{classnodetool_1_1peerlist__manager_a6e9dbef06a2ec62f03824c4d4e3a3060}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!append\_with\_peer\_gray@{append\_with\_peer\_gray}}
+\index{append\_with\_peer\_gray@{append\_with\_peer\_gray}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{append\_with\_peer\_gray()}{append\_with\_peer\_gray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::append\+\_\+with\+\_\+peer\+\_\+gray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{pr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a50abec5e317a524ebfc3be0bdcbc4b70}\label{classnodetool_1_1peerlist__manager_a50abec5e317a524ebfc3be0bdcbc4b70}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!append\_with\_peer\_white@{append\_with\_peer\_white}}
+\index{append\_with\_peer\_white@{append\_with\_peer\_white}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{append\_with\_peer\_white()}{append\_with\_peer\_white()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::append\+\_\+with\+\_\+peer\+\_\+white (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{pr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a0db93bd9c0e011663bedbe824f13a42f}\label{classnodetool_1_1peerlist__manager_a0db93bd9c0e011663bedbe824f13a42f}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!foreach@{foreach}}
+\index{foreach@{foreach}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{foreach()}{foreach()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::foreach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{white,  }\item[{const \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}} \&}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a48fc40243449756b0ba94720630d611f}\label{classnodetool_1_1peerlist__manager_a48fc40243449756b0ba94720630d611f}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_and\_empty\_anchor\_peerlist@{get\_and\_empty\_anchor\_peerlist}}
+\index{get\_and\_empty\_anchor\_peerlist@{get\_and\_empty\_anchor\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_and\_empty\_anchor\_peerlist()}{get\_and\_empty\_anchor\_peerlist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::get\+\_\+and\+\_\+empty\+\_\+anchor\+\_\+peerlist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1anchor__peerlist__entry}{anchor\+\_\+peerlist\+\_\+entry}} $>$ \&}]{apl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a033e3483bdf567fc75688d82c2aec892}\label{classnodetool_1_1peerlist__manager_a033e3483bdf567fc75688d82c2aec892}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_gray\_peer\_by\_index@{get\_gray\_peer\_by\_index}}
+\index{get\_gray\_peer\_by\_index@{get\_gray\_peer\_by\_index}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_gray\_peer\_by\_index()}{get\_gray\_peer\_by\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::get\+\_\+gray\+\_\+peer\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{p,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aa02fa4749396caa4278e01baf02784c4}\label{classnodetool_1_1peerlist__manager_aa02fa4749396caa4278e01baf02784c4}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_gray\_peers\_count@{get\_gray\_peers\_count}}
+\index{get\_gray\_peers\_count@{get\_gray\_peers\_count}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_gray\_peers\_count()}{get\_gray\_peers\_count()}}
+{\footnotesize\ttfamily size\+\_\+t nodetool\+::peerlist\+\_\+manager\+::get\+\_\+gray\+\_\+peers\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a0e0e505c79c4e6a92acf58510ea1f0f5}\label{classnodetool_1_1peerlist__manager_a0e0e505c79c4e6a92acf58510ea1f0f5}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_peerlist@{get\_peerlist}}
+\index{get\_peerlist@{get\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_peerlist()}{get\_peerlist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void nodetool\+::peerlist\+\_\+manager\+::get\+\_\+peerlist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&}]{peers }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a3ade9a6fd9e4a7655ceb26dcfec375a2}\label{classnodetool_1_1peerlist__manager_a3ade9a6fd9e4a7655ceb26dcfec375a2}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_peerlist@{get\_peerlist}}
+\index{get\_peerlist@{get\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_peerlist()}{get\_peerlist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void nodetool\+::peerlist\+\_\+manager\+::get\+\_\+peerlist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&}]{pl\+\_\+gray,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&}]{pl\+\_\+white }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a0c5d9ee30d543439044fc91550435b30}\label{classnodetool_1_1peerlist__manager_a0c5d9ee30d543439044fc91550435b30}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_peerlist\_head@{get\_peerlist\_head}}
+\index{get\_peerlist\_head@{get\_peerlist\_head}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_peerlist\_head()}{get\_peerlist\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::get\+\_\+peerlist\+\_\+head (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&}]{bs\+\_\+head,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{anonymize,  }\item[{uint32\+\_\+t}]{depth = {\ttfamily \mbox{\hyperlink{namespacecryptonote_1_1p2p_a19f78becb30785e53fde22e75377e572}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+E\+E\+R\+S\+\_\+\+I\+N\+\_\+\+H\+A\+N\+D\+S\+H\+A\+KE}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a4f654d6ad72bc9886d2bb2e4fbc2cdeb}\label{classnodetool_1_1peerlist__manager_a4f654d6ad72bc9886d2bb2e4fbc2cdeb}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_random\_gray\_peer@{get\_random\_gray\_peer}}
+\index{get\_random\_gray\_peer@{get\_random\_gray\_peer}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_random\_gray\_peer()}{get\_random\_gray\_peer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::get\+\_\+random\+\_\+gray\+\_\+peer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{pe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aca35821d9bb0a8fe5f95b3ba1b7081b1}\label{classnodetool_1_1peerlist__manager_aca35821d9bb0a8fe5f95b3ba1b7081b1}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_white\_peer\_by\_index@{get\_white\_peer\_by\_index}}
+\index{get\_white\_peer\_by\_index@{get\_white\_peer\_by\_index}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_white\_peer\_by\_index()}{get\_white\_peer\_by\_index()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::get\+\_\+white\+\_\+peer\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{p,  }\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aec06a10d8956b792285daf19c9c6f9eb}\label{classnodetool_1_1peerlist__manager_aec06a10d8956b792285daf19c9c6f9eb}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!get\_white\_peers\_count@{get\_white\_peers\_count}}
+\index{get\_white\_peers\_count@{get\_white\_peers\_count}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{get\_white\_peers\_count()}{get\_white\_peers\_count()}}
+{\footnotesize\ttfamily size\+\_\+t nodetool\+::peerlist\+\_\+manager\+::get\+\_\+white\+\_\+peers\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a61530c5dba9284609d1b25f8c0248b30}\label{classnodetool_1_1peerlist__manager_a61530c5dba9284609d1b25f8c0248b30}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!init@{init}}
+\index{init@{init}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&\&}]{peers,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{allow\+\_\+local\+\_\+ip }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_af5410b3f01603b86c1fedba26d84006e}\label{classnodetool_1_1peerlist__manager_af5410b3f01603b86c1fedba26d84006e}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!is\_host\_allowed@{is\_host\_allowed}}
+\index{is\_host\_allowed@{is\_host\_allowed}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{is\_host\_allowed()}{is\_host\_allowed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::is\+\_\+host\+\_\+allowed (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a3da693c1708815d4cbfb76c7be2c39a0}\label{classnodetool_1_1peerlist__manager_a3da693c1708815d4cbfb76c7be2c39a0}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!merge\_peerlist@{merge\_peerlist}}
+\index{merge\_peerlist@{merge\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{merge\_peerlist()}{merge\_peerlist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::merge\+\_\+peerlist (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} $>$ \&}]{outer\+\_\+bs,  }\item[{const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&)$>$ \&}]{f = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aac049d9e63994799e335dec5fc84bf00}\label{classnodetool_1_1peerlist__manager_aac049d9e63994799e335dec5fc84bf00}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!remove\_from\_peer\_anchor@{remove\_from\_peer\_anchor}}
+\index{remove\_from\_peer\_anchor@{remove\_from\_peer\_anchor}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_peer\_anchor()}{remove\_from\_peer\_anchor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::remove\+\_\+from\+\_\+peer\+\_\+anchor (\begin{DoxyParamCaption}\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aaba537991f68aa734fdd9b9f860e9c71}\label{classnodetool_1_1peerlist__manager_aaba537991f68aa734fdd9b9f860e9c71}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!remove\_from\_peer\_gray@{remove\_from\_peer\_gray}}
+\index{remove\_from\_peer\_gray@{remove\_from\_peer\_gray}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_peer\_gray()}{remove\_from\_peer\_gray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::remove\+\_\+from\+\_\+peer\+\_\+gray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{pe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a4fb07d511e3f509c79acf2caf23382ae}\label{classnodetool_1_1peerlist__manager_a4fb07d511e3f509c79acf2caf23382ae}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!remove\_from\_peer\_white@{remove\_from\_peer\_white}}
+\index{remove\_from\_peer\_white@{remove\_from\_peer\_white}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{remove\_from\_peer\_white()}{remove\_from\_peer\_white()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::remove\+\_\+from\+\_\+peer\+\_\+white (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{peerlist\+\_\+entry}} \&}]{pe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_aa7619ecfdf2ec1961a3cffd16105cc51}\label{classnodetool_1_1peerlist__manager_aa7619ecfdf2ec1961a3cffd16105cc51}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!set\_peer\_just\_seen@{set\_peer\_just\_seen}}
+\index{set\_peer\_just\_seen@{set\_peer\_just\_seen}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{set\_peer\_just\_seen()}{set\_peer\_just\_seen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::set\+\_\+peer\+\_\+just\+\_\+seen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacenodetool_ae59d7077b2f1ba393b5f6a7a61d1321f}{peerid\+\_\+type}}}]{peer,  }\item[{const epee\+::net\+\_\+utils\+::network\+\_\+address \&}]{addr,  }\item[{uint32\+\_\+t}]{pruning\+\_\+seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a5898b6e9e3ef966665576a52cb0787e9}\label{classnodetool_1_1peerlist__manager_a5898b6e9e3ef966665576a52cb0787e9}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!trim\_gray\_peerlist@{trim\_gray\_peerlist}}
+\index{trim\_gray\_peerlist@{trim\_gray\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{trim\_gray\_peerlist()}{trim\_gray\_peerlist()}}
+{\footnotesize\ttfamily void nodetool\+::peerlist\+\_\+manager\+::trim\+\_\+gray\+\_\+peerlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a85ff0390fef7c83e51930fc7504a9c1b}\label{classnodetool_1_1peerlist__manager_a85ff0390fef7c83e51930fc7504a9c1b}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!trim\_white\_peerlist@{trim\_white\_peerlist}}
+\index{trim\_white\_peerlist@{trim\_white\_peerlist}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{trim\_white\_peerlist()}{trim\_white\_peerlist()}}
+{\footnotesize\ttfamily void nodetool\+::peerlist\+\_\+manager\+::trim\+\_\+white\+\_\+peerlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classnodetool_1_1peerlist__manager_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a55f1b44395cab609b001dff48129ae14}\label{classnodetool_1_1peerlist__manager_a55f1b44395cab609b001dff48129ae14}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_allow\_local\_ip@{m\_allow\_local\_ip}}
+\index{m\_allow\_local\_ip@{m\_allow\_local\_ip}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_allow\_local\_ip}{m\_allow\_local\_ip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+manager\+::m\+\_\+allow\+\_\+local\+\_\+ip\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_a1345421c5ba8052602650001842683a2}\label{classnodetool_1_1peerlist__manager_a1345421c5ba8052602650001842683a2}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_config\_folder@{m\_config\_folder}}
+\index{m\_config\_folder@{m\_config\_folder}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_config\_folder}{m\_config\_folder}}
+{\footnotesize\ttfamily std\+::string nodetool\+::peerlist\+\_\+manager\+::m\+\_\+config\+\_\+folder\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_af0709581b455bddc9214987c326804d9}\label{classnodetool_1_1peerlist__manager_af0709581b455bddc9214987c326804d9}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_peerlist\_lock@{m\_peerlist\_lock}}
+\index{m\_peerlist\_lock@{m\_peerlist\_lock}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_peerlist\_lock}{m\_peerlist\_lock}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex nodetool\+::peerlist\+\_\+manager\+::m\+\_\+peerlist\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_ac428a5f66ccd8e5a99f5d539109f3111}\label{classnodetool_1_1peerlist__manager_ac428a5f66ccd8e5a99f5d539109f3111}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_peers\_anchor@{m\_peers\_anchor}}
+\index{m\_peers\_anchor@{m\_peers\_anchor}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_peers\_anchor}{m\_peers\_anchor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a73c0b78536d216b71db0257f42353a08}{anchor\+\_\+peers\+\_\+indexed}} nodetool\+::peerlist\+\_\+manager\+::m\+\_\+peers\+\_\+anchor\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_ae0932278f5b83e37625b1267ead1b2e2}\label{classnodetool_1_1peerlist__manager_ae0932278f5b83e37625b1267ead1b2e2}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_peers\_gray@{m\_peers\_gray}}
+\index{m\_peers\_gray@{m\_peers\_gray}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_peers\_gray}{m\_peers\_gray}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{peers\+\_\+indexed}} nodetool\+::peerlist\+\_\+manager\+::m\+\_\+peers\+\_\+gray\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__manager_ac32d2cce8566a1f1a675b7ac15cb3d5e}\label{classnodetool_1_1peerlist__manager_ac32d2cce8566a1f1a675b7ac15cb3d5e}} 
+\index{nodetool::peerlist\_manager@{nodetool::peerlist\_manager}!m\_peers\_white@{m\_peers\_white}}
+\index{m\_peers\_white@{m\_peers\_white}!nodetool::peerlist\_manager@{nodetool::peerlist\_manager}}
+\doxysubsubsection{\texorpdfstring{m\_peers\_white}{m\_peers\_white}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnodetool_1_1peerlist__manager_a35a05ebcd69081fe8291b9ec015eb11d}{peers\+\_\+indexed}} nodetool\+::peerlist\+\_\+manager\+::m\+\_\+peers\+\_\+white\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/p2p/\mbox{\hyperlink{net__peerlist_8h}{net\+\_\+peerlist.\+h}}\item 
+src/p2p/\mbox{\hyperlink{net__peerlist_8cpp}{net\+\_\+peerlist.\+cpp}}\end{DoxyCompactItemize}

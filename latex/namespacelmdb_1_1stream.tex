@@ -1,0 +1,49 @@
+\hypertarget{namespacelmdb_1_1stream}{}\doxysection{lmdb\+::stream Namespace Reference}
+\label{namespacelmdb_1_1stream}\index{lmdb::stream@{lmdb::stream}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+mdb\+\_\+size\+\_\+t \mbox{\hyperlink{namespacelmdb_1_1stream_aba452209f8756851cd8e72e4cb42e2b9}{count}} (M\+D\+B\+\_\+cursor $\ast$cur)
+\item 
+std\+::pair$<$ epee\+::span$<$ const std\+::uint8\+\_\+t $>$, epee\+::span$<$ const std\+::uint8\+\_\+t $>$ $>$ \mbox{\hyperlink{namespacelmdb_1_1stream_ae5251d5cae44c6344fb051a81e16d2cf}{get}} (M\+D\+B\+\_\+cursor \&cur, M\+D\+B\+\_\+cursor\+\_\+op op, std\+::size\+\_\+t key, std\+::size\+\_\+t value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelmdb_1_1stream_aba452209f8756851cd8e72e4cb42e2b9}\label{namespacelmdb_1_1stream_aba452209f8756851cd8e72e4cb42e2b9}} 
+\index{lmdb::stream@{lmdb::stream}!count@{count}}
+\index{count@{count}!lmdb::stream@{lmdb::stream}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily mdb\+\_\+size\+\_\+t lmdb\+::stream\+::count (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacelmdb_1_1stream_ae5251d5cae44c6344fb051a81e16d2cf}\label{namespacelmdb_1_1stream_ae5251d5cae44c6344fb051a81e16d2cf}} 
+\index{lmdb::stream@{lmdb::stream}!get@{get}}
+\index{get@{get}!lmdb::stream@{lmdb::stream}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::pair$<$ epee\+::span$<$ const std\+::uint8\+\_\+t $>$, epee\+::span$<$ const std\+::uint8\+\_\+t $>$ $>$ lmdb\+::stream\+::get (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor \&}]{cur,  }\item[{M\+D\+B\+\_\+cursor\+\_\+op}]{op,  }\item[{std\+::size\+\_\+t}]{key,  }\item[{std\+::size\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Calls {\ttfamily mdb\+\_\+cursor\+\_\+get} and does some error checking.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & is given to {\ttfamily mdb\+\_\+cursor\+\_\+get} without modification. \\
+\hline
+{\em op} & is passed to {\ttfamily mdb\+\_\+cursor\+\_\+get} without modification. \\
+\hline
+{\em key} & expected key size or 0 to skip key size check. \\
+\hline
+{\em value} & expected value size or 0 to skip value size check.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if {\ttfamily key != 0} and {\ttfamily key\+\_\+.\+mv\+\_\+size != key}. \\
+\hline
+{\em std\+::system\+\_\+error} & if {\ttfamily value != 0} and {\ttfamily value\+\_\+.\+mv\+\_\+size != value}. \\
+\hline
+{\em std\+::system\+\_\+error} & if {\ttfamily mdb\+\_\+cursor\+\_\+get} returns any error other than {\ttfamily M\+D\+B\+\_\+\+N\+O\+T\+F\+O\+U\+ND}.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+\{key bytes, value bytes\} or two empty spans if {\ttfamily M\+D\+B\+\_\+\+N\+O\+T\+F\+O\+U\+ND}. 
+\end{DoxyReturn}

@@ -1,0 +1,130 @@
+\hypertarget{sn__key__tool_8cpp}{}\doxysection{src/blockchain\+\_\+utilities/sn\+\_\+key\+\_\+tool.cpp File Reference}
+\label{sn__key__tool_8cpp}\index{src/blockchain\_utilities/sn\_key\_tool.cpp@{src/blockchain\_utilities/sn\_key\_tool.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sodium.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include $<$oxenc/base32z.\+h$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+Include dependency graph for sn\+\_\+key\+\_\+tool.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sn__key__tool_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{sn__key__tool_8cpp_a1422bf79ffd60e6cae6a217260ab5d44}{ustring}} = std\+::basic\+\_\+string$<$ unsigned char $>$
+\item 
+using \mbox{\hyperlink{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}{ustring\+\_\+view}} = std\+::basic\+\_\+string\+\_\+view$<$ unsigned char $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_afaf63ca7f80874b55e2e8b95995fa2fc}{usage}} (int exit\+\_\+code, std\+::string\+\_\+view msg=\char`\"{}\char`\"{}sv)
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}} (int exit\+\_\+code, std\+::string\+\_\+view msg)
+\item 
+std\+::array$<$ unsigned char, crypto\+\_\+core\+\_\+ed25519\+\_\+\+B\+Y\+T\+ES $>$ \mbox{\hyperlink{sn__key__tool_8cpp_a5f46ed7edbb9d9c111919bb2034c5970}{pubkey\+\_\+from\+\_\+privkey}} (\mbox{\hyperlink{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}{ustring\+\_\+view}} privkey)
+\item 
+{\footnotesize template$<$size\+\_\+t N, std\+::enable\+\_\+if\+\_\+t$<$(\+N $>$=32), int $>$  = 0$>$ }\\std\+::array$<$ unsigned char, crypto\+\_\+core\+\_\+ed25519\+\_\+\+B\+Y\+T\+ES $>$ \mbox{\hyperlink{sn__key__tool_8cpp_a6f76e074bb62ddc3622dcbc7d8f92b7b}{pubkey\+\_\+from\+\_\+privkey}} (const std\+::array$<$ unsigned char, N $>$ \&privkey)
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_a38ca9b8fdd97af4599f84c46bbb57119}{generate}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ed25519, std\+::list$<$ std\+::string\+\_\+view $>$ args)
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_a0adba7ca4ba9768f5235c52ef576752c}{show}} (std\+::list$<$ std\+::string\+\_\+view $>$ args)
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_a1fbd997ad243174bf6f0854ed0e73b37}{restore}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ed25519, std\+::list$<$ std\+::string\+\_\+view $>$ args)
+\item 
+int \mbox{\hyperlink{sn__key__tool_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string\+\_\+view \mbox{\hyperlink{sn__key__tool_8cpp_a31cf292210ed2f6a3aad8397e9d5434c}{arg0}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{sn__key__tool_8cpp_a1422bf79ffd60e6cae6a217260ab5d44}\label{sn__key__tool_8cpp_a1422bf79ffd60e6cae6a217260ab5d44}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!ustring@{ustring}}
+\index{ustring@{ustring}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{ustring}{ustring}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{sn__key__tool_8cpp_a1422bf79ffd60e6cae6a217260ab5d44}{ustring}} =  std\+::basic\+\_\+string$<$unsigned char$>$}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}\label{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!ustring\_view@{ustring\_view}}
+\index{ustring\_view@{ustring\_view}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{ustring\_view}{ustring\_view}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}{ustring\+\_\+view}} =  std\+::basic\+\_\+string\+\_\+view$<$unsigned char$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}\label{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!error@{error}}
+\index{error@{error}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily int error (\begin{DoxyParamCaption}\item[{int}]{exit\+\_\+code,  }\item[{std\+::string\+\_\+view}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a38ca9b8fdd97af4599f84c46bbb57119}\label{sn__key__tool_8cpp_a38ca9b8fdd97af4599f84c46bbb57119}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!generate@{generate}}
+\index{generate@{generate}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily int generate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{ed25519,  }\item[{std\+::list$<$ std\+::string\+\_\+view $>$}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{sn__key__tool_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!main@{main}}
+\index{main@{main}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a6f76e074bb62ddc3622dcbc7d8f92b7b}\label{sn__key__tool_8cpp_a6f76e074bb62ddc3622dcbc7d8f92b7b}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!pubkey\_from\_privkey@{pubkey\_from\_privkey}}
+\index{pubkey\_from\_privkey@{pubkey\_from\_privkey}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{pubkey\_from\_privkey()}{pubkey\_from\_privkey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N, std\+::enable\+\_\+if\+\_\+t$<$(\+N $>$=32), int $>$  = 0$>$ \\
+std\+::array$<$unsigned char, crypto\+\_\+core\+\_\+ed25519\+\_\+\+B\+Y\+T\+ES$>$ pubkey\+\_\+from\+\_\+privkey (\begin{DoxyParamCaption}\item[{const std\+::array$<$ unsigned char, N $>$ \&}]{privkey }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a5f46ed7edbb9d9c111919bb2034c5970}\label{sn__key__tool_8cpp_a5f46ed7edbb9d9c111919bb2034c5970}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!pubkey\_from\_privkey@{pubkey\_from\_privkey}}
+\index{pubkey\_from\_privkey@{pubkey\_from\_privkey}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{pubkey\_from\_privkey()}{pubkey\_from\_privkey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$unsigned char, crypto\+\_\+core\+\_\+ed25519\+\_\+\+B\+Y\+T\+ES$>$ pubkey\+\_\+from\+\_\+privkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sn__key__tool_8cpp_a7946b2f35b53eae0aeb84a923b07c092}{ustring\+\_\+view}}}]{privkey }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a1fbd997ad243174bf6f0854ed0e73b37}\label{sn__key__tool_8cpp_a1fbd997ad243174bf6f0854ed0e73b37}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!restore@{restore}}
+\index{restore@{restore}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily int restore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{ed25519,  }\item[{std\+::list$<$ std\+::string\+\_\+view $>$}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_a0adba7ca4ba9768f5235c52ef576752c}\label{sn__key__tool_8cpp_a0adba7ca4ba9768f5235c52ef576752c}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!show@{show}}
+\index{show@{show}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily int show (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::string\+\_\+view $>$}]{args }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sn__key__tool_8cpp_afaf63ca7f80874b55e2e8b95995fa2fc}\label{sn__key__tool_8cpp_afaf63ca7f80874b55e2e8b95995fa2fc}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!usage@{usage}}
+\index{usage@{usage}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily int usage (\begin{DoxyParamCaption}\item[{int}]{exit\+\_\+code,  }\item[{std\+::string\+\_\+view}]{msg = {\ttfamily \char`\"{}\char`\"{}sv} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sn__key__tool_8cpp_a31cf292210ed2f6a3aad8397e9d5434c}\label{sn__key__tool_8cpp_a31cf292210ed2f6a3aad8397e9d5434c}} 
+\index{sn\_key\_tool.cpp@{sn\_key\_tool.cpp}!arg0@{arg0}}
+\index{arg0@{arg0}!sn\_key\_tool.cpp@{sn\_key\_tool.cpp}}
+\doxysubsubsection{\texorpdfstring{arg0}{arg0}}
+{\footnotesize\ttfamily std\+::string\+\_\+view arg0}
+

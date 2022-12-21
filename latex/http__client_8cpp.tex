@@ -1,0 +1,32 @@
+\hypertarget{http__client_8cpp}{}\doxysection{src/rpc/http\+\_\+client.cpp File Reference}
+\label{http__client_8cpp}\index{src/rpc/http\_client.cpp@{src/rpc/http\_client.cpp}}
+{\ttfamily \#include \char`\"{}http\+\_\+client.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cpr/cpr.\+h$>$}\newline
+{\ttfamily \#include $<$cpr/ssl\+\_\+options.\+h$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for http\+\_\+client.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{http__client_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_1_1rpc_a17af0f5760772b847f981da675c76b9e}{cryptonote\+::rpc\+::logcat}} = log\+::\+Cat(\char`\"{}rpc.\+http\+\_\+client\char`\"{})
+\item 
+static const std\+::regex \mbox{\hyperlink{namespacecryptonote_1_1rpc_ae2530805e75c4ead8685159f7ef4fa91}{cryptonote\+::rpc\+::rexp\+\_\+match\+\_\+url}} \{R\char`\"{}($^\wedge$(?\+:(\mbox{[}a-\/zA-\/Z\mbox{]}\mbox{[}a-\/zA-\/Z0-\/9.+-\/\mbox{]}$\ast$)\+://)?(?\+:(\textbackslash{}\mbox{[}\mbox{[}0-\/9a-\/fA-\/F\+:.\mbox{]}$\ast$\textbackslash{}\mbox{]})$\vert$(\mbox{[}$^\wedge$\textbackslash{}\mbox{[}\textbackslash{}\mbox{]}/\+:?\mbox{]}$\ast$))(?\+::(\textbackslash{}\mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}+))?)\char`\"{}, std\+::regex\+::optimize\}
+\end{DoxyCompactItemize}

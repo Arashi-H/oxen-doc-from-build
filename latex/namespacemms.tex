@@ -1,0 +1,232 @@
+\hypertarget{namespacemms}{}\doxysection{mms Namespace Reference}
+\label{namespacemms}\index{mms@{mms}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemms_1_1anonymous__namespace_02message__store_8cpp_03}{anonymous\+\_\+namespace\{message\+\_\+store.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacemms_1_1bitmessage__rpc}{bitmessage\+\_\+rpc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmms_1_1authorized__signer}{authorized\+\_\+signer}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1auto__config__data}{auto\+\_\+config\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1file__data}{file\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1file__transport__message}{file\+\_\+transport\+\_\+message}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1message}{message}}
+\item 
+class \mbox{\hyperlink{classmms_1_1message__store}{message\+\_\+store}}
+\item 
+class \mbox{\hyperlink{classmms_1_1message__transporter}{message\+\_\+transporter}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1multisig__wallet__state}{multisig\+\_\+wallet\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1processing__data}{processing\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structmms_1_1transport__message}{transport\+\_\+message}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{message\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a7b51b3ebed8ff5cc03e6e95efbc7735f}{message\+\_\+type\+::key\+\_\+set}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021ad8a85a671f97798231982ad8e7c966e7}{message\+\_\+type\+::additional\+\_\+key\+\_\+set}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aba5c234ed63213ad6edc59ce8caa1f16}{message\+\_\+type\+::multisig\+\_\+sync\+\_\+data}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a02c2aff6d1272810b0703686dde2ef71}{message\+\_\+type\+::partially\+\_\+signed\+\_\+tx}}, 
+\newline
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021abdd9a8e14b470852c7f409b93a032ff2}{message\+\_\+type\+::fully\+\_\+signed\+\_\+tx}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aaad653ca3ee669635f2938b73098b6d7}{message\+\_\+type\+::note}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a01b54762b729d5b11833275b94247d4f}{message\+\_\+type\+::signer\+\_\+config}}, 
+\mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aa70e74d12865cc2bef4b285ec0762142}{message\+\_\+type\+::auto\+\_\+config\+\_\+data}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{message\+\_\+direction}} \{ \mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeba13b5bfe96f3e2fe411c9f66f4a582adf}{message\+\_\+direction\+::in}}, 
+\mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebebac68271a63ddbc431c307beb7d2918275}{message\+\_\+direction\+::out}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}{message\+\_\+state}} \{ \newline
+\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79aefc34b4306ae743b83250f06049e376a}{message\+\_\+state\+::ready\+\_\+to\+\_\+send}}, 
+\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a789183b7e98646c11d5f0544c8f3c4c9}{message\+\_\+state\+::sent}}, 
+\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79acb05cab65afefab8fd3831d92cfc68be}{message\+\_\+state\+::waiting}}, 
+\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a9d090a4005926e9e2a32e05cbd8c2fc6}{message\+\_\+state\+::processed}}, 
+\newline
+\mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a38881e0a24039dc2621e1d6f86cb71f7}{message\+\_\+state\+::cancelled}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115}{message\+\_\+processing}} \{ \newline
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a4afcd7198c9deb0e3fd0a5bba2bb0b5c}{message\+\_\+processing\+::prepare\+\_\+multisig}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a52f39ecbb097b3e69105346cd342ab99}{message\+\_\+processing\+::make\+\_\+multisig}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a6386047209329e3074b46e4e956d5005}{message\+\_\+processing\+::exchange\+\_\+multisig\+\_\+keys}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115ae7373d8ed03ae9bf48bded310f6a96a4}{message\+\_\+processing\+::create\+\_\+sync\+\_\+data}}, 
+\newline
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a269430ec89610fd73847a3bdb6f76ea9}{message\+\_\+processing\+::process\+\_\+sync\+\_\+data}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115aa4035a0c178ace588fba3039b8dd23cc}{message\+\_\+processing\+::sign\+\_\+tx}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a4027d2a0aaf6b6da82d7e57ee9e6eac5}{message\+\_\+processing\+::send\+\_\+tx}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a233ef5fecf79feab1dad6d7f4737857a}{message\+\_\+processing\+::submit\+\_\+tx}}, 
+\newline
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115a2aa429a49c6fceffada4ec50dbfb999a}{message\+\_\+processing\+::process\+\_\+signer\+\_\+config}}, 
+\mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115adafb31ea5cd083dc104fc5df2910bc38}{message\+\_\+processing\+::process\+\_\+auto\+\_\+config\+\_\+data}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}{logcat}} = log\+::\+Cat(\char`\"{}wallet.\+mms\char`\"{})
+\item 
+static auto \mbox{\hyperlink{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}{logcat}} = log\+::\+Cat(\char`\"{}wallet.\+mms\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}\label{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}} 
+\index{mms@{mms}!message\_direction@{message\_direction}}
+\index{message\_direction@{message\_direction}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{message\_direction}{message\_direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeb}{mms\+::message\+\_\+direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{in@{in}!mms@{mms}}\index{mms@{mms}!in@{in}}}\mbox{\Hypertarget{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeba13b5bfe96f3e2fe411c9f66f4a582adf}\label{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebeba13b5bfe96f3e2fe411c9f66f4a582adf}} 
+in&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{out@{out}!mms@{mms}}\index{mms@{mms}!out@{out}}}\mbox{\Hypertarget{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebebac68271a63ddbc431c307beb7d2918275}\label{namespacemms_a27f6ec95bc8f0815f2c6a0b17fdaebebac68271a63ddbc431c307beb7d2918275}} 
+out&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115}\label{namespacemms_a8671ec266157c7b9cac976d143c50115}} 
+\index{mms@{mms}!message\_processing@{message\_processing}}
+\index{message\_processing@{message\_processing}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{message\_processing}{message\_processing}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemms_a8671ec266157c7b9cac976d143c50115}{mms\+::message\+\_\+processing}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prepare\_multisig@{prepare\_multisig}!mms@{mms}}\index{mms@{mms}!prepare\_multisig@{prepare\_multisig}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a4afcd7198c9deb0e3fd0a5bba2bb0b5c}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a4afcd7198c9deb0e3fd0a5bba2bb0b5c}} 
+prepare\+\_\+multisig&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{make\_multisig@{make\_multisig}!mms@{mms}}\index{mms@{mms}!make\_multisig@{make\_multisig}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a52f39ecbb097b3e69105346cd342ab99}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a52f39ecbb097b3e69105346cd342ab99}} 
+make\+\_\+multisig&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{exchange\_multisig\_keys@{exchange\_multisig\_keys}!mms@{mms}}\index{mms@{mms}!exchange\_multisig\_keys@{exchange\_multisig\_keys}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a6386047209329e3074b46e4e956d5005}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a6386047209329e3074b46e4e956d5005}} 
+exchange\+\_\+multisig\+\_\+keys&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{create\_sync\_data@{create\_sync\_data}!mms@{mms}}\index{mms@{mms}!create\_sync\_data@{create\_sync\_data}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115ae7373d8ed03ae9bf48bded310f6a96a4}\label{namespacemms_a8671ec266157c7b9cac976d143c50115ae7373d8ed03ae9bf48bded310f6a96a4}} 
+create\+\_\+sync\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{process\_sync\_data@{process\_sync\_data}!mms@{mms}}\index{mms@{mms}!process\_sync\_data@{process\_sync\_data}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a269430ec89610fd73847a3bdb6f76ea9}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a269430ec89610fd73847a3bdb6f76ea9}} 
+process\+\_\+sync\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sign\_tx@{sign\_tx}!mms@{mms}}\index{mms@{mms}!sign\_tx@{sign\_tx}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115aa4035a0c178ace588fba3039b8dd23cc}\label{namespacemms_a8671ec266157c7b9cac976d143c50115aa4035a0c178ace588fba3039b8dd23cc}} 
+sign\+\_\+tx&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_tx@{send\_tx}!mms@{mms}}\index{mms@{mms}!send\_tx@{send\_tx}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a4027d2a0aaf6b6da82d7e57ee9e6eac5}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a4027d2a0aaf6b6da82d7e57ee9e6eac5}} 
+send\+\_\+tx&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{submit\_tx@{submit\_tx}!mms@{mms}}\index{mms@{mms}!submit\_tx@{submit\_tx}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a233ef5fecf79feab1dad6d7f4737857a}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a233ef5fecf79feab1dad6d7f4737857a}} 
+submit\+\_\+tx&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{process\_signer\_config@{process\_signer\_config}!mms@{mms}}\index{mms@{mms}!process\_signer\_config@{process\_signer\_config}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115a2aa429a49c6fceffada4ec50dbfb999a}\label{namespacemms_a8671ec266157c7b9cac976d143c50115a2aa429a49c6fceffada4ec50dbfb999a}} 
+process\+\_\+signer\+\_\+config&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{process\_auto\_config\_data@{process\_auto\_config\_data}!mms@{mms}}\index{mms@{mms}!process\_auto\_config\_data@{process\_auto\_config\_data}}}\mbox{\Hypertarget{namespacemms_a8671ec266157c7b9cac976d143c50115adafb31ea5cd083dc104fc5df2910bc38}\label{namespacemms_a8671ec266157c7b9cac976d143c50115adafb31ea5cd083dc104fc5df2910bc38}} 
+process\+\_\+auto\+\_\+config\+\_\+data&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}} 
+\index{mms@{mms}!message\_state@{message\_state}}
+\index{message\_state@{message\_state}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{message\_state}{message\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemms_a79260e891df8d76bc01c9c05b5d08d79}{mms\+::message\+\_\+state}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ready\_to\_send@{ready\_to\_send}!mms@{mms}}\index{mms@{mms}!ready\_to\_send@{ready\_to\_send}}}\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79aefc34b4306ae743b83250f06049e376a}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79aefc34b4306ae743b83250f06049e376a}} 
+ready\+\_\+to\+\_\+send&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sent@{sent}!mms@{mms}}\index{mms@{mms}!sent@{sent}}}\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a789183b7e98646c11d5f0544c8f3c4c9}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a789183b7e98646c11d5f0544c8f3c4c9}} 
+sent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{waiting@{waiting}!mms@{mms}}\index{mms@{mms}!waiting@{waiting}}}\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79acb05cab65afefab8fd3831d92cfc68be}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79acb05cab65afefab8fd3831d92cfc68be}} 
+waiting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{processed@{processed}!mms@{mms}}\index{mms@{mms}!processed@{processed}}}\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a9d090a4005926e9e2a32e05cbd8c2fc6}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a9d090a4005926e9e2a32e05cbd8c2fc6}} 
+processed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cancelled@{cancelled}!mms@{mms}}\index{mms@{mms}!cancelled@{cancelled}}}\mbox{\Hypertarget{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a38881e0a24039dc2621e1d6f86cb71f7}\label{namespacemms_a79260e891df8d76bc01c9c05b5d08d79a38881e0a24039dc2621e1d6f86cb71f7}} 
+cancelled&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}} 
+\index{mms@{mms}!message\_type@{message\_type}}
+\index{message\_type@{message\_type}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{message\_type}{message\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021}{mms\+::message\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{key\_set@{key\_set}!mms@{mms}}\index{mms@{mms}!key\_set@{key\_set}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a7b51b3ebed8ff5cc03e6e95efbc7735f}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a7b51b3ebed8ff5cc03e6e95efbc7735f}} 
+key\+\_\+set&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{additional\_key\_set@{additional\_key\_set}!mms@{mms}}\index{mms@{mms}!additional\_key\_set@{additional\_key\_set}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021ad8a85a671f97798231982ad8e7c966e7}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021ad8a85a671f97798231982ad8e7c966e7}} 
+additional\+\_\+key\+\_\+set&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{multisig\_sync\_data@{multisig\_sync\_data}!mms@{mms}}\index{mms@{mms}!multisig\_sync\_data@{multisig\_sync\_data}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aba5c234ed63213ad6edc59ce8caa1f16}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aba5c234ed63213ad6edc59ce8caa1f16}} 
+multisig\+\_\+sync\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{partially\_signed\_tx@{partially\_signed\_tx}!mms@{mms}}\index{mms@{mms}!partially\_signed\_tx@{partially\_signed\_tx}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a02c2aff6d1272810b0703686dde2ef71}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a02c2aff6d1272810b0703686dde2ef71}} 
+partially\+\_\+signed\+\_\+tx&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fully\_signed\_tx@{fully\_signed\_tx}!mms@{mms}}\index{mms@{mms}!fully\_signed\_tx@{fully\_signed\_tx}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021abdd9a8e14b470852c7f409b93a032ff2}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021abdd9a8e14b470852c7f409b93a032ff2}} 
+fully\+\_\+signed\+\_\+tx&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{note@{note}!mms@{mms}}\index{mms@{mms}!note@{note}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aaad653ca3ee669635f2938b73098b6d7}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aaad653ca3ee669635f2938b73098b6d7}} 
+note&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{signer\_config@{signer\_config}!mms@{mms}}\index{mms@{mms}!signer\_config@{signer\_config}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a01b54762b729d5b11833275b94247d4f}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021a01b54762b729d5b11833275b94247d4f}} 
+signer\+\_\+config&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{auto\_config\_data@{auto\_config\_data}!mms@{mms}}\index{mms@{mms}!auto\_config\_data@{auto\_config\_data}}}\mbox{\Hypertarget{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aa70e74d12865cc2bef4b285ec0762142}\label{namespacemms_ae89e2c9c22dbe120ad1d296ab3b13021aa70e74d12865cc2bef4b285ec0762142}} 
+auto\+\_\+config\+\_\+data&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}\label{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}} 
+\index{mms@{mms}!logcat@{logcat}}
+\index{logcat@{logcat}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto mms\+::logcat = log\+::\+Cat(\char`\"{}wallet.\+mms\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}\label{namespacemms_a063aa2d2ab5ccc788fe68897c4feb6c2}} 
+\index{mms@{mms}!logcat@{logcat}}
+\index{logcat@{logcat}!mms@{mms}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto mms\+::logcat = log\+::\+Cat(\char`\"{}wallet.\+mms\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

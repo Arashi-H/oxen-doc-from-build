@@ -1,0 +1,137 @@
+\hypertarget{namespacedaemonize}{}\doxysection{daemonize Namespace Reference}
+\label{namespacedaemonize}\index{daemonize@{daemonize}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedaemonize_1_1anonymous__namespace_02rpc__command__executor_8cpp_03}{anonymous\+\_\+namespace\{rpc\+\_\+command\+\_\+executor.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdaemonize_1_1command__parser__executor}{command\+\_\+parser\+\_\+executor}}
+\item 
+class \mbox{\hyperlink{classdaemonize_1_1command__server}{command\+\_\+server}}
+\item 
+class \mbox{\hyperlink{classdaemonize_1_1daemon}{daemon}}
+\item 
+class \mbox{\hyperlink{classdaemonize_1_1rpc__command__executor}{rpc\+\_\+command\+\_\+executor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedaemonize_a75493474d50ae45b93c735594877906a}{parse\+\_\+if\+\_\+present}} (std\+::forward\+\_\+list$<$ std\+::string $>$ \&list, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&var, const char $\ast$name)
+\item 
+std\+::pair$<$ std\+::string, uint16\+\_\+t $>$ \mbox{\hyperlink{namespacedaemonize_afc0831729cb963e8ad1fd3dc9b2467b3}{parse\+\_\+ip\+\_\+port}} (std\+::string\+\_\+view ip\+\_\+port, const std\+::string \&argname)
+\item 
+{\footnotesize template$<$typename Callback $>$ }\\static auto \mbox{\hyperlink{namespacedaemonize_ac859fe6f591581f96c884b1c9927ad83}{try\+\_\+running}} (Callback code, std\+::string\+\_\+view error\+\_\+prefix) -\/$>$ std\+::optional$<$ decltype(code())$>$
+\item 
+static std\+::string \mbox{\hyperlink{namespacedaemonize_aaf93d962cfb4fd9fab50cdde96810497}{get\+\_\+mining\+\_\+speed}} (uint64\+\_\+t hr)
+\item 
+static \mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}} \& \mbox{\hyperlink{namespacedaemonize_a5cbc44da5996da8f2df184baa24295e4}{print\+\_\+fork\+\_\+extra\+\_\+info}} (\mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}} \&msg, uint64\+\_\+t t, uint64\+\_\+t now, std\+::chrono\+::seconds block\+\_\+time)
+\item 
+static float \mbox{\hyperlink{namespacedaemonize_a6008450ffe96e2c41901c02b18935870}{get\+\_\+sync\+\_\+percentage}} (uint64\+\_\+t height, uint64\+\_\+t target\+\_\+height)
+\item 
+static const char $\ast$ \mbox{\hyperlink{namespacedaemonize_a3bd7076428ce032e19ef00ea39bc43a4}{get\+\_\+address\+\_\+type\+\_\+name}} (epee\+::net\+\_\+utils\+::address\+\_\+type address\+\_\+type)
+\item 
+static void \mbox{\hyperlink{namespacedaemonize_a5aa66ae7620b4d6dbf0c245bf5d3fb50}{print\+\_\+pool}} (const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&txs)
+\item 
+static std\+::string \mbox{\hyperlink{namespacedaemonize_a235e311c894d996553f54216c096aa09}{to\+\_\+string\+\_\+rounded}} (double \mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}, int precision)
+\item 
+{\footnotesize template$<$typename E , typename E\+Printer $>$ }\\void \mbox{\hyperlink{namespacedaemonize_a9416c8deb5df3478514612749e386649}{print\+\_\+votes}} (std\+::ostream \&o, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&elem, const std\+::string \&key, E\+Printer eprint)
+\item 
+static void \mbox{\hyperlink{namespacedaemonize_a0d1c2eddeb46db9a462b533def38a781}{append\+\_\+printable\+\_\+service\+\_\+node\+\_\+list\+\_\+entry}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} detailed\+\_\+view, uint64\+\_\+t blockchain\+\_\+height, uint64\+\_\+t entry\+\_\+index, const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&entry, std\+::string \&buffer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}{logcat}} = log\+::\+Cat(\char`\"{}daemon\char`\"{})
+\item 
+static auto \mbox{\hyperlink{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}{logcat}} = log\+::\+Cat(\char`\"{}daemon\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedaemonize_a0d1c2eddeb46db9a462b533def38a781}\label{namespacedaemonize_a0d1c2eddeb46db9a462b533def38a781}} 
+\index{daemonize@{daemonize}!append\_printable\_service\_node\_list\_entry@{append\_printable\_service\_node\_list\_entry}}
+\index{append\_printable\_service\_node\_list\_entry@{append\_printable\_service\_node\_list\_entry}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{append\_printable\_service\_node\_list\_entry()}{append\_printable\_service\_node\_list\_entry()}}
+{\footnotesize\ttfamily static void daemonize\+::append\+\_\+printable\+\_\+service\+\_\+node\+\_\+list\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{detailed\+\_\+view,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{uint64\+\_\+t}]{entry\+\_\+index,  }\item[{const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&}]{entry,  }\item[{std\+::string \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a3bd7076428ce032e19ef00ea39bc43a4}\label{namespacedaemonize_a3bd7076428ce032e19ef00ea39bc43a4}} 
+\index{daemonize@{daemonize}!get\_address\_type\_name@{get\_address\_type\_name}}
+\index{get\_address\_type\_name@{get\_address\_type\_name}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{get\_address\_type\_name()}{get\_address\_type\_name()}}
+{\footnotesize\ttfamily static const char$\ast$ daemonize\+::get\+\_\+address\+\_\+type\+\_\+name (\begin{DoxyParamCaption}\item[{epee\+::net\+\_\+utils\+::address\+\_\+type}]{address\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_aaf93d962cfb4fd9fab50cdde96810497}\label{namespacedaemonize_aaf93d962cfb4fd9fab50cdde96810497}} 
+\index{daemonize@{daemonize}!get\_mining\_speed@{get\_mining\_speed}}
+\index{get\_mining\_speed@{get\_mining\_speed}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{get\_mining\_speed()}{get\_mining\_speed()}}
+{\footnotesize\ttfamily static std\+::string daemonize\+::get\+\_\+mining\+\_\+speed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{hr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a6008450ffe96e2c41901c02b18935870}\label{namespacedaemonize_a6008450ffe96e2c41901c02b18935870}} 
+\index{daemonize@{daemonize}!get\_sync\_percentage@{get\_sync\_percentage}}
+\index{get\_sync\_percentage@{get\_sync\_percentage}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{get\_sync\_percentage()}{get\_sync\_percentage()}}
+{\footnotesize\ttfamily static float daemonize\+::get\+\_\+sync\+\_\+percentage (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t}]{target\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a75493474d50ae45b93c735594877906a}\label{namespacedaemonize_a75493474d50ae45b93c735594877906a}} 
+\index{daemonize@{daemonize}!parse\_if\_present@{parse\_if\_present}}
+\index{parse\_if\_present@{parse\_if\_present}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{parse\_if\_present()}{parse\_if\_present()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} daemonize\+::parse\+\_\+if\+\_\+present (\begin{DoxyParamCaption}\item[{std\+::forward\+\_\+list$<$ std\+::string $>$ \&}]{list,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{var,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_afc0831729cb963e8ad1fd3dc9b2467b3}\label{namespacedaemonize_afc0831729cb963e8ad1fd3dc9b2467b3}} 
+\index{daemonize@{daemonize}!parse\_ip\_port@{parse\_ip\_port}}
+\index{parse\_ip\_port@{parse\_ip\_port}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{parse\_ip\_port()}{parse\_ip\_port()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, uint16\+\_\+t $>$ daemonize\+::parse\+\_\+ip\+\_\+port (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{ip\+\_\+port,  }\item[{const std\+::string \&}]{argname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedaemonize_a5cbc44da5996da8f2df184baa24295e4}\label{namespacedaemonize_a5cbc44da5996da8f2df184baa24295e4}} 
+\index{daemonize@{daemonize}!print\_fork\_extra\_info@{print\_fork\_extra\_info}}
+\index{print\_fork\_extra\_info@{print\_fork\_extra\_info}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{print\_fork\_extra\_info()}{print\_fork\_extra\_info()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}}\& daemonize\+::print\+\_\+fork\+\_\+extra\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtools_1_1scoped__message__writer}{tools\+::scoped\+\_\+message\+\_\+writer}} \&}]{msg,  }\item[{uint64\+\_\+t}]{t,  }\item[{uint64\+\_\+t}]{now,  }\item[{std\+::chrono\+::seconds}]{block\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a5aa66ae7620b4d6dbf0c245bf5d3fb50}\label{namespacedaemonize_a5aa66ae7620b4d6dbf0c245bf5d3fb50}} 
+\index{daemonize@{daemonize}!print\_pool@{print\_pool}}
+\index{print\_pool@{print\_pool}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{print\_pool()}{print\_pool()}}
+{\footnotesize\ttfamily static void daemonize\+::print\+\_\+pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&}]{txs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a9416c8deb5df3478514612749e386649}\label{namespacedaemonize_a9416c8deb5df3478514612749e386649}} 
+\index{daemonize@{daemonize}!print\_votes@{print\_votes}}
+\index{print\_votes@{print\_votes}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{print\_votes()}{print\_votes()}}
+{\footnotesize\ttfamily template$<$typename E , typename E\+Printer $>$ \\
+void daemonize\+::print\+\_\+votes (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \&}]{elem,  }\item[{const std\+::string \&}]{key,  }\item[{E\+Printer}]{eprint }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacedaemonize_a235e311c894d996553f54216c096aa09}\label{namespacedaemonize_a235e311c894d996553f54216c096aa09}} 
+\index{daemonize@{daemonize}!to\_string\_rounded@{to\_string\_rounded}}
+\index{to\_string\_rounded@{to\_string\_rounded}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{to\_string\_rounded()}{to\_string\_rounded()}}
+{\footnotesize\ttfamily static std\+::string daemonize\+::to\+\_\+string\+\_\+rounded (\begin{DoxyParamCaption}\item[{double}]{d,  }\item[{int}]{precision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_ac859fe6f591581f96c884b1c9927ad83}\label{namespacedaemonize_ac859fe6f591581f96c884b1c9927ad83}} 
+\index{daemonize@{daemonize}!try\_running@{try\_running}}
+\index{try\_running@{try\_running}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{try\_running()}{try\_running()}}
+{\footnotesize\ttfamily template$<$typename Callback $>$ \\
+static auto daemonize\+::try\+\_\+running (\begin{DoxyParamCaption}\item[{Callback}]{code,  }\item[{std\+::string\+\_\+view}]{error\+\_\+prefix }\end{DoxyParamCaption}) -\/$>$ std\+::optional$<$decltype(code())$>$ \hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}\label{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}} 
+\index{daemonize@{daemonize}!logcat@{logcat}}
+\index{logcat@{logcat}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto daemonize\+::logcat = log\+::\+Cat(\char`\"{}daemon\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}\label{namespacedaemonize_a42f9690536875ae37a3b5e65c64ddb62}} 
+\index{daemonize@{daemonize}!logcat@{logcat}}
+\index{logcat@{logcat}!daemonize@{daemonize}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto daemonize\+::logcat = log\+::\+Cat(\char`\"{}daemon\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

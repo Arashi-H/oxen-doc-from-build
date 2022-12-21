@@ -1,0 +1,78 @@
+\hypertarget{net__peerlist_8cpp}{}\doxysection{src/p2p/net\+\_\+peerlist.cpp File Reference}
+\label{net__peerlist_8cpp}\index{src/p2p/net\_peerlist.cpp@{src/p2p/net\_peerlist.cpp}}
+{\ttfamily \#include \char`\"{}net\+\_\+peerlist.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$boost/archive/binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+oarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/archive/portable\+\_\+binary\+\_\+iarchive.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/join.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/version.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+peerlist\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for net\+\_\+peerlist.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__peerlist_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_1_1by__zone}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::by\+\_\+zone}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1peerlist__join}{nodetool\+::peerlist\+\_\+join}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenodetool}{nodetool}}
+\item 
+ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Elem , typename Archive $>$ }\\std\+::vector$<$ Elem $>$ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a0308dd365189a38b7185246c119470ca}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::load\+\_\+peers}} (Archive \&a, unsigned ver)
+\item 
+{\footnotesize template$<$typename Archive , typename Range $>$ }\\void \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a902218fadb746764076dc925ea3098d8}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::save\+\_\+peers}} (Archive \&a, const Range \&elems)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a29a73e6ab6117ee4cd52e1dce718ba36}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::do\+\_\+take\+\_\+zone}} (std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&src, epee\+::net\+\_\+utils\+::zone zone)
+\item 
+{\footnotesize template$<$typename Container , typename T $>$ }\\void \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a4656a754a1664758c626df1d36b5bdc3}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::add\+\_\+peers}} (Container \&dest, std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&\&src)
+\item 
+{\footnotesize template$<$typename Container , typename Range $>$ }\\void \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a9f53cebd4424d23271c6bceecfd1f937}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::copy\+\_\+peers}} (Container \&dest, const Range \&src)
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\void \mbox{\hyperlink{namespacenodetool_a5f48804da168686e9616a55019dfbf73}{nodetool\+::serialize}} (Archive \&a, peerlist\+\_\+types \&elem, unsigned ver)
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\void \mbox{\hyperlink{namespacenodetool_aaca376d3a1650751d40451346e2d45fb}{nodetool\+::serialize}} (Archive \&a, peerlist\+\_\+join elem, unsigned ver)
+\item 
+\mbox{\hyperlink{net__peerlist_8cpp_a64ad4b499347d17abbd73d0d799c0f43}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON}} (\mbox{\hyperlink{structnodetool_1_1peerlist__types}{nodetool\+::peerlist\+\_\+types}}, nodetool\+::\+C\+U\+R\+R\+E\+N\+T\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+V\+ER)
+\item 
+\mbox{\hyperlink{net__peerlist_8cpp_a9d3ca28bd9f25ca38dfe7afa497eed77}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON}} (\mbox{\hyperlink{structnodetool_1_1peerlist__join}{nodetool\+::peerlist\+\_\+join}}, nodetool\+::\+C\+U\+R\+R\+E\+N\+T\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+V\+ER)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr unsigned \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__peerlist_8cpp_03_a2dc63b6342b2cdaae8ac65d18c40f942}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+peerlist.\+cpp\}\+::\+C\+U\+R\+R\+E\+N\+T\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+V\+ER}} = 6
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{net__peerlist_8cpp_a9d3ca28bd9f25ca38dfe7afa497eed77}\label{net__peerlist_8cpp_a9d3ca28bd9f25ca38dfe7afa497eed77}} 
+\index{net\_peerlist.cpp@{net\_peerlist.cpp}!BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}}
+\index{BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}!net\_peerlist.cpp@{net\_peerlist.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_VERSION()}{BOOST\_CLASS\_VERSION()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__join}{nodetool\+::peerlist\+\_\+join}}}]{,  }\item[{nodetool\+::\+C\+U\+R\+R\+E\+N\+T\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+V\+ER}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{net__peerlist_8cpp_a64ad4b499347d17abbd73d0d799c0f43}\label{net__peerlist_8cpp_a64ad4b499347d17abbd73d0d799c0f43}} 
+\index{net\_peerlist.cpp@{net\_peerlist.cpp}!BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}}
+\index{BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}!net\_peerlist.cpp@{net\_peerlist.cpp}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_VERSION()}{BOOST\_CLASS\_VERSION()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodetool_1_1peerlist__types}{nodetool\+::peerlist\+\_\+types}}}]{,  }\item[{nodetool\+::\+C\+U\+R\+R\+E\+N\+T\+\_\+\+P\+E\+E\+R\+L\+I\+S\+T\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+A\+R\+C\+H\+I\+V\+E\+\_\+\+V\+ER}]{ }\end{DoxyParamCaption})}
+

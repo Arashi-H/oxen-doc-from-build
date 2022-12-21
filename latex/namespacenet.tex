@@ -1,0 +1,201 @@
+\hypertarget{namespacenet}{}\doxysection{net Namespace Reference}
+\label{namespacenet}\index{net@{net}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1anonymous__namespace_02i2p__address_8cpp_03}{anonymous\+\_\+namespace\{i2p\+\_\+address.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1anonymous__namespace_02tor__address_8cpp_03}{anonymous\+\_\+namespace\{tor\+\_\+address.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1dandelionpp}{dandelionpp}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1socks}{socks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}}
+\begin{DoxyCompactList}\small\item\em b32 i2p address; internal format not condensed/decoded. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}}
+\begin{DoxyCompactList}\small\item\em Tor onion address; internal format not condensed/decoded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{error}} \+: int \{ \newline
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a7f4bbe63e777d9ea441f740fd39427b0}{error\+::expected\+\_\+tld}} = 1, 
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3ab6a058e781386839255b35ec73500124}{error\+::invalid\+\_\+host}}, 
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a8d064329a2dfdf914e4731d1080bc5de}{error\+::invalid\+\_\+i2p\+\_\+address}}, 
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a0355f6b3a360aa38b5824481dd4e53e3}{error\+::invalid\+\_\+port}}, 
+\newline
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a10645f49597bd31744689ab8268c1915}{error\+::invalid\+\_\+tor\+\_\+address}}, 
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a1505862cce62e87dcef781c13877cb99}{error\+::unsupported\+\_\+address}}, 
+\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3a01f4a6c8919018e9df44948ed78a5f71}{error\+::invalid\+\_\+mask}}
+ \}
+\begin{DoxyCompactList}\small\item\em General net errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::error\+\_\+category const  \& \mbox{\hyperlink{namespacenet_a48d5b161eacb6a7bdb9efa313ea612ec}{error\+\_\+category}} () noexcept
+\item 
+std\+::error\+\_\+code \mbox{\hyperlink{namespacenet_ac5f767569e1338b8edf8d4b294d48d01}{make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{error}} value) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_afff856d2f944083ca3eb1c4bde1f93a6}{operator==}} (const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_afd890d8edc4759af9d5e7c987d74018f}{operator!=}} (const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_af86d942a7c3e3ed3a7e9c63808aee568}{operator$<$}} (const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&rhs) noexcept
+\item 
+std\+::pair$<$ std\+::string\+\_\+view, std\+::string\+\_\+view $>$ \mbox{\hyperlink{namespacenet_abc10b967476bca84b7ae50c6fa3983ba}{get\+\_\+network\+\_\+address\+\_\+host\+\_\+and\+\_\+port}} (std\+::string\+\_\+view address)
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ epee\+::net\+\_\+utils\+::network\+\_\+address $>$ \mbox{\hyperlink{namespacenet_a4b42671b0dd16398eeed345e507d96fa}{get\+\_\+network\+\_\+address}} (std\+::string\+\_\+view address, const std\+::uint16\+\_\+t default\+\_\+port)
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+subnet $>$ \mbox{\hyperlink{namespacenet_abbef672adee8d86b1082d969de309210}{get\+\_\+ipv4\+\_\+subnet\+\_\+address}} (std\+::string\+\_\+view address, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+implicit\+\_\+32)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_a3e428d7643bc8c1c4eebc014a3cc6ab9}{operator==}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_aaa0dc833aa74acf8f8432048b476ef18}{operator!=}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) noexcept
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenet_a6d8b47d4aedd878945ca5bdda2e59e59}{operator$<$}} (const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&lhs, const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&rhs) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3}} 
+\index{net@{net}!error@{error}}
+\index{error@{error}!net@{net}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{net\+::error}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+General net errors. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{expected\_tld@{expected\_tld}!net@{net}}\index{net@{net}!expected\_tld@{expected\_tld}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a7f4bbe63e777d9ea441f740fd39427b0}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a7f4bbe63e777d9ea441f740fd39427b0}} 
+expected\+\_\+tld&Expected a tld. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_host@{invalid\_host}!net@{net}}\index{net@{net}!invalid\_host@{invalid\_host}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3ab6a058e781386839255b35ec73500124}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3ab6a058e781386839255b35ec73500124}} 
+invalid\+\_\+host&Hostname is not valid. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_i2p\_address@{invalid\_i2p\_address}!net@{net}}\index{net@{net}!invalid\_i2p\_address@{invalid\_i2p\_address}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a8d064329a2dfdf914e4731d1080bc5de}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a8d064329a2dfdf914e4731d1080bc5de}} 
+invalid\+\_\+i2p\+\_\+address&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_port@{invalid\_port}!net@{net}}\index{net@{net}!invalid\_port@{invalid\_port}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a0355f6b3a360aa38b5824481dd4e53e3}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a0355f6b3a360aa38b5824481dd4e53e3}} 
+invalid\+\_\+port&Outside of 0-\/65535 range. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_tor\_address@{invalid\_tor\_address}!net@{net}}\index{net@{net}!invalid\_tor\_address@{invalid\_tor\_address}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a10645f49597bd31744689ab8268c1915}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a10645f49597bd31744689ab8268c1915}} 
+invalid\+\_\+tor\+\_\+address&Invalid base32 or length. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{unsupported\_address@{unsupported\_address}!net@{net}}\index{net@{net}!unsupported\_address@{unsupported\_address}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a1505862cce62e87dcef781c13877cb99}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a1505862cce62e87dcef781c13877cb99}} 
+unsupported\+\_\+address&Type not supported by {\ttfamily get\+\_\+network\+\_\+address} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\_mask@{invalid\_mask}!net@{net}}\index{net@{net}!invalid\_mask@{invalid\_mask}}}\mbox{\Hypertarget{namespacenet_aad71e4120e841a5941c2270f826b5fd3a01f4a6c8919018e9df44948ed78a5f71}\label{namespacenet_aad71e4120e841a5941c2270f826b5fd3a01f4a6c8919018e9df44948ed78a5f71}} 
+invalid\+\_\+mask&Outside of 0-\/32 range. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenet_a48d5b161eacb6a7bdb9efa313ea612ec}\label{namespacenet_a48d5b161eacb6a7bdb9efa313ea612ec}} 
+\index{net@{net}!error\_category@{error\_category}}
+\index{error\_category@{error\_category}!net@{net}}
+\doxysubsubsection{\texorpdfstring{error\_category()}{error\_category()}}
+{\footnotesize\ttfamily std\+::error\+\_\+category const  \& net\+::error\+\_\+category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily std\+::error\+\_\+category} for {\ttfamily net} namespace. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenet_abbef672adee8d86b1082d969de309210}\label{namespacenet_abbef672adee8d86b1082d969de309210}} 
+\index{net@{net}!get\_ipv4\_subnet\_address@{get\_ipv4\_subnet\_address}}
+\index{get\_ipv4\_subnet\_address@{get\_ipv4\_subnet\_address}!net@{net}}
+\doxysubsubsection{\texorpdfstring{get\_ipv4\_subnet\_address()}{get\_ipv4\_subnet\_address()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ epee\+::net\+\_\+utils\+::ipv4\+\_\+network\+\_\+subnet $>$ net\+::get\+\_\+ipv4\+\_\+subnet\+\_\+address (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{allow\+\_\+implicit\+\_\+32 = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Identifies an I\+Pv4 subnet in C\+I\+DR notatioa and returns it as a generic {\ttfamily network\+\_\+address}. If the type is unsupported, it might be a hostname, and {\ttfamily \mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{error()}} == net\+::error\+::k\+Unsupported\+Address} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & An ipv4 address. \\
+\hline
+{\em allow\+\_\+implicit\+\_\+32} & whether to accept \char`\"{}raw\char`\"{} I\+Pv4 addresses, with C\+I\+DR notation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tor or I\+Pv4 address, else error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenet_a4b42671b0dd16398eeed345e507d96fa}\label{namespacenet_a4b42671b0dd16398eeed345e507d96fa}} 
+\index{net@{net}!get\_network\_address@{get\_network\_address}}
+\index{get\_network\_address@{get\_network\_address}!net@{net}}
+\doxysubsubsection{\texorpdfstring{get\_network\_address()}{get\_network\_address()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ epee\+::net\+\_\+utils\+::network\+\_\+address $>$ net\+::get\+\_\+network\+\_\+address (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address,  }\item[{std\+::uint16\+\_\+t}]{default\+\_\+port }\end{DoxyParamCaption})}
+
+Identifies onion, i2p and I\+Pv4 addresses and returns them as a generic {\ttfamily network\+\_\+address}. If the type is unsupported, it might be a hostname, and {\ttfamily \mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{error()}} == net\+::error\+::k\+Unsupported\+Address} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & An onion address, i2p address, ipv4 address or hostname. Hostname will return an error. \\
+\hline
+{\em default\+\_\+port} & If {\ttfamily address} does not specify a port, this value will be used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tor or I\+Pv4 address, else error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenet_abc10b967476bca84b7ae50c6fa3983ba}\label{namespacenet_abc10b967476bca84b7ae50c6fa3983ba}} 
+\index{net@{net}!get\_network\_address\_host\_and\_port@{get\_network\_address\_host\_and\_port}}
+\index{get\_network\_address\_host\_and\_port@{get\_network\_address\_host\_and\_port}!net@{net}}
+\doxysubsubsection{\texorpdfstring{get\_network\_address\_host\_and\_port()}{get\_network\_address\_host\_and\_port()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string\+\_\+view, std\+::string\+\_\+view $>$ net\+::get\+\_\+network\+\_\+address\+\_\+host\+\_\+and\+\_\+port (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenet_ac5f767569e1338b8edf8d4b294d48d01}\label{namespacenet_ac5f767569e1338b8edf8d4b294d48d01}} 
+\index{net@{net}!make\_error\_code@{make\_error\_code}}
+\index{make\_error\_code@{make\_error\_code}!net@{net}}
+\doxysubsubsection{\texorpdfstring{make\_error\_code()}{make\_error\_code()}}
+{\footnotesize\ttfamily std\+::error\+\_\+code net\+::make\+\_\+error\+\_\+code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{error}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{namespacenet_aad71e4120e841a5941c2270f826b5fd3}{net\+::error}}} as a {\ttfamily std\+::error\+\_\+code} value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenet_afd890d8edc4759af9d5e7c987d74018f}\label{namespacenet_afd890d8edc4759af9d5e7c987d74018f}} 
+\index{net@{net}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacenet_aaa0dc833aa74acf8f8432048b476ef18}\label{namespacenet_aaa0dc833aa74acf8f8432048b476ef18}} 
+\index{net@{net}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacenet_af86d942a7c3e3ed3a7e9c63808aee568}\label{namespacenet_af86d942a7c3e3ed3a7e9c63808aee568}} 
+\index{net@{net}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacenet_a6d8b47d4aedd878945ca5bdda2e59e59}\label{namespacenet_a6d8b47d4aedd878945ca5bdda2e59e59}} 
+\index{net@{net}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacenet_afff856d2f944083ca3eb1c4bde1f93a6}\label{namespacenet_afff856d2f944083ca3eb1c4bde1f93a6}} 
+\index{net@{net}!operator==@{operator==}}
+\index{operator==@{operator==}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1i2p__address}{i2p\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{namespacenet_a3e428d7643bc8c1c4eebc014a3cc6ab9}\label{namespacenet_a3e428d7643bc8c1c4eebc014a3cc6ab9}} 
+\index{net@{net}!operator==@{operator==}}
+\index{operator==@{operator==}!net@{net}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} net\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnet_1_1tor__address}{tor\+\_\+address}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+

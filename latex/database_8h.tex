@@ -1,0 +1,50 @@
+\hypertarget{database_8h}{}\doxysection{src/lmdb/database.h File Reference}
+\label{database_8h}\index{src/lmdb/database.h@{src/lmdb/database.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}common/expect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lmdb/error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lmdb/transaction.\+h\char`\"{}}\newline
+Include dependency graph for database.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{database_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1close__env}{lmdb\+::close\+\_\+env}}
+\begin{DoxyCompactList}\small\item\em Closes L\+M\+DB environment handle. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlmdb_1_1context}{lmdb\+::context}}
+\begin{DoxyCompactList}\small\item\em Context given to L\+M\+DB. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classlmdb_1_1database}{lmdb\+::database}}
+\begin{DoxyCompactList}\small\item\em Manages a L\+M\+DB environment for safe memory-\/map resizing. Thread-\/safe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb}{lmdb}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{lmdb\+::environment}} = std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+env, close\+\_\+env $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ environment $>$ \mbox{\hyperlink{namespacelmdb_aa45f863ca9e86bb56dfbab7548c267f2}{lmdb\+::open\+\_\+environment}} (const char $\ast$path, M\+D\+B\+\_\+dbi max\+\_\+dbs) noexcept
+\end{DoxyCompactItemize}

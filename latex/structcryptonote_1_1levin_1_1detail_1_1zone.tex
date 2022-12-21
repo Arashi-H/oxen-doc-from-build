@@ -1,0 +1,121 @@
+\hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone}{}\doxysection{cryptonote\+::levin\+::detail\+::zone Struct Reference}
+\label{structcryptonote_1_1levin_1_1detail_1_1zone}\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+
+
+Collaboration diagram for cryptonote\+::levin\+::detail\+::zone\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{structcryptonote_1_1levin_1_1detail_1_1zone__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ad6ed8e78aea144cf5a40ebdd7b84a46d}{zone}} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}} $>$ \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_a977626f04ea53be442a94da240263e15}{p2p}}, epee\+::shared\+\_\+sv noise\+\_\+in, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ac3b37f1ef38644a9b5dc641b4d7c2329}{is\+\_\+public}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}} $>$ \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_a977626f04ea53be442a94da240263e15}{p2p}}
+\item 
+const epee\+::shared\+\_\+sv \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_a0b0dfb97a182058bbab72b19b6af21f5}{noise}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily !empty()} means zone is using noise channels \end{DoxyCompactList}\item 
+boost\+::asio\+::steady\+\_\+timer \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ab88165762fcc810006eeb55631abdd86}{next\+\_\+epoch}}
+\item 
+boost\+::asio\+::io\+\_\+service\+::strand \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_a59307065b315d9db75dd5a6b0ea7bd49}{strand}}
+\item 
+\mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{net\+::dandelionpp\+::connection\+\_\+map}} \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ab6efba589e0866368319c154836ddb4a}{map}}
+\begin{DoxyCompactList}\small\item\em Tracks outgoing uuid\textquotesingle{}s for noise channels or Dandelion++ stems. \end{DoxyCompactList}\item 
+std\+::deque$<$ noise\+\_\+channel $>$ \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_a80dfc76ed7670420006258da050d7af1}{channels}}
+\begin{DoxyCompactList}\small\item\em Never touch after init; only update elements on {\ttfamily noise\+\_\+channel.\+strand} \end{DoxyCompactList}\item 
+std\+::atomic$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ad73f9d8ec6767b7fb1d57d054677658f}{connection\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Only update in strand, can be read at any time. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structcryptonote_1_1levin_1_1detail_1_1zone_ac3b37f1ef38644a9b5dc641b4d7c2329}{is\+\_\+public}}
+\begin{DoxyCompactList}\small\item\em Zone is public ipv4/ipv6 connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_ad6ed8e78aea144cf5a40ebdd7b84a46d}\label{structcryptonote_1_1levin_1_1detail_1_1zone_ad6ed8e78aea144cf5a40ebdd7b84a46d}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!zone@{zone}}
+\index{zone@{zone}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{zone()}{zone()}}
+{\footnotesize\ttfamily cryptonote\+::levin\+::detail\+::zone\+::zone (\begin{DoxyParamCaption}\item[{boost\+::asio\+::io\+\_\+service \&}]{io\+\_\+service,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}} $>$}]{p2p,  }\item[{epee\+::shared\+\_\+sv}]{noise\+\_\+in,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{is\+\_\+public }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_a80dfc76ed7670420006258da050d7af1}\label{structcryptonote_1_1levin_1_1detail_1_1zone_a80dfc76ed7670420006258da050d7af1}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!channels@{channels}}
+\index{channels@{channels}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily std\+::deque$<$noise\+\_\+channel$>$ cryptonote\+::levin\+::detail\+::zone\+::channels}
+
+
+
+Never touch after init; only update elements on {\ttfamily noise\+\_\+channel.\+strand} 
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_ad73f9d8ec6767b7fb1d57d054677658f}\label{structcryptonote_1_1levin_1_1detail_1_1zone_ad73f9d8ec6767b7fb1d57d054677658f}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!connection\_count@{connection\_count}}
+\index{connection\_count@{connection\_count}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{connection\_count}{connection\_count}}
+{\footnotesize\ttfamily std\+::atomic$<$std\+::size\+\_\+t$>$ cryptonote\+::levin\+::detail\+::zone\+::connection\+\_\+count}
+
+
+
+Only update in strand, can be read at any time. 
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_ac3b37f1ef38644a9b5dc641b4d7c2329}\label{structcryptonote_1_1levin_1_1detail_1_1zone_ac3b37f1ef38644a9b5dc641b4d7c2329}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!is\_public@{is\_public}}
+\index{is\_public@{is\_public}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{is\_public}{is\_public}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::levin\+::detail\+::zone\+::is\+\_\+public}
+
+
+
+Zone is public ipv4/ipv6 connections. 
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_ab6efba589e0866368319c154836ddb4a}\label{structcryptonote_1_1levin_1_1detail_1_1zone_ab6efba589e0866368319c154836ddb4a}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!map@{map}}
+\index{map@{map}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnet_1_1dandelionpp_1_1connection__map}{net\+::dandelionpp\+::connection\+\_\+map}} cryptonote\+::levin\+::detail\+::zone\+::map}
+
+
+
+Tracks outgoing uuid\textquotesingle{}s for noise channels or Dandelion++ stems. 
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_ab88165762fcc810006eeb55631abdd86}\label{structcryptonote_1_1levin_1_1detail_1_1zone_ab88165762fcc810006eeb55631abdd86}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!next\_epoch@{next\_epoch}}
+\index{next\_epoch@{next\_epoch}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{next\_epoch}{next\_epoch}}
+{\footnotesize\ttfamily boost\+::asio\+::steady\+\_\+timer cryptonote\+::levin\+::detail\+::zone\+::next\+\_\+epoch}
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_a0b0dfb97a182058bbab72b19b6af21f5}\label{structcryptonote_1_1levin_1_1detail_1_1zone_a0b0dfb97a182058bbab72b19b6af21f5}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!noise@{noise}}
+\index{noise@{noise}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{noise}{noise}}
+{\footnotesize\ttfamily const epee\+::shared\+\_\+sv cryptonote\+::levin\+::detail\+::zone\+::noise}
+
+
+
+{\ttfamily !empty()} means zone is using noise channels 
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_a977626f04ea53be442a94da240263e15}\label{structcryptonote_1_1levin_1_1detail_1_1zone_a977626f04ea53be442a94da240263e15}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!p2p@{p2p}}
+\index{p2p@{p2p}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{p2p}{p2p}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{namespacecryptonote_1_1levin_a95314ed712669cfd7cd26c33520c7864}{connections}}$>$ cryptonote\+::levin\+::detail\+::zone\+::p2p}
+
+\mbox{\Hypertarget{structcryptonote_1_1levin_1_1detail_1_1zone_a59307065b315d9db75dd5a6b0ea7bd49}\label{structcryptonote_1_1levin_1_1detail_1_1zone_a59307065b315d9db75dd5a6b0ea7bd49}} 
+\index{cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}!strand@{strand}}
+\index{strand@{strand}!cryptonote::levin::detail::zone@{cryptonote::levin::detail::zone}}
+\doxysubsubsection{\texorpdfstring{strand}{strand}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+service\+::strand cryptonote\+::levin\+::detail\+::zone\+::strand}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{levin__notify_8cpp}{levin\+\_\+notify.\+cpp}}\end{DoxyCompactItemize}

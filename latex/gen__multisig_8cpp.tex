@@ -1,0 +1,84 @@
+\hypertarget{gen__multisig_8cpp}{}\doxysection{src/gen\+\_\+multisig/gen\+\_\+multisig.cpp File Reference}
+\label{gen__multisig_8cpp}\index{src/gen\_multisig/gen\_multisig.cpp@{src/gen\_multisig/gen\_multisig.cpp}}
+
+
+Generates a set of multisig wallets.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/i18n.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/scoped\+\_\+message\+\_\+writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/wallet\+\_\+args.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/wallet2.\+h\char`\"{}}\newline
+Include dependency graph for gen\+\_\+multisig.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gen__multisig_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacegenms}{genms}}
+\item 
+ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacegenms_ae93183161e9a1a0037f5ab50e5b25750}{genms\+::tr}} (const char $\ast$str)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{gen__multisig_8cpp_a6826eb04f9139a18d2135e17f223b7be}{generate\+\_\+multisig}} (uint32\+\_\+t threshold, uint32\+\_\+t total, const fs\+::path \&basename, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} create\+\_\+address\+\_\+file)
+\item 
+int \mbox{\hyperlink{gen__multisig_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a5438d6dfa86703787ce88872a0d25eb3}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}wallet.\+gen\+\_\+multisig\char`\"{})
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a82191eb0a0f63d5c7da8131a59a53c60}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+filename\+\_\+base}} = \{\char`\"{}filename-\/\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}\char`\"{}, genms\+::tr(\char`\"{}Base filename (-\/1, -\/2, etc suffixes will be appended as needed)\char`\"{}), \char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_aa09e1c3c77e3f7ec12b40cdfa746908d}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+scheme}} = \{\char`\"{}scheme\char`\"{}, genms\+::tr(\char`\"{}Give threshold and participants at once as \mbox{\hyperlink{sha512-blocks_8c_a87f13a68d6d4a33a0660cc51d33e80e5}{M}}/N\char`\"{}), \char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a4929a7cebf42ea41d71790efa9966431}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+participants}} = \{\char`\"{}participants\char`\"{}, genms\+::tr(\char`\"{}How many participants will share parts of the multisig wallet\char`\"{}), 0\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a0ebb1af08a4e860fb88f3304e8f6325d}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+threshold}} = \{\char`\"{}threshold\char`\"{}, genms\+::tr(\char`\"{}How many signers are required to sign a valid \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}}\char`\"{}), 0\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a7b293d3c8fef7d35c995163244c3bcce}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+testnet}} = \{\char`\"{}testnet\char`\"{}, genms\+::tr(\char`\"{}Create testnet multisig wallets\char`\"{}), false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a4fe9276406361fd6cc289aafca3bfe45}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+devnet}} = \{\char`\"{}devnet\char`\"{}, genms\+::tr(\char`\"{}Create devnet multisig wallets\char`\"{}), false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}} $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_a33168c208d979cdea3be7677b8d351a0}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+create\+\_\+address\+\_\+file}} = \{\char`\"{}create-\/address-\/file\char`\"{}, genms\+::tr(\char`\"{}Create an address file \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} new wallets\char`\"{}), false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02gen__multisig_8cpp_03_aebe3513a3da7ddf13c5557d5290aea0e}{anonymous\+\_\+namespace\{gen\+\_\+multisig.\+cpp\}\+::arg\+\_\+command}} = \{\char`\"{}command\char`\"{}, \char`\"{}\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a set of multisig wallets. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gen__multisig_8cpp_a6826eb04f9139a18d2135e17f223b7be}\label{gen__multisig_8cpp_a6826eb04f9139a18d2135e17f223b7be}} 
+\index{gen\_multisig.cpp@{gen\_multisig.cpp}!generate\_multisig@{generate\_multisig}}
+\index{generate\_multisig@{generate\_multisig}!gen\_multisig.cpp@{gen\_multisig.cpp}}
+\doxysubsubsection{\texorpdfstring{generate\_multisig()}{generate\_multisig()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} generate\+\_\+multisig (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{threshold,  }\item[{uint32\+\_\+t}]{total,  }\item[{const fs\+::path \&}]{basename,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{create\+\_\+address\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{gen__multisig_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{gen__multisig_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{gen\_multisig.cpp@{gen\_multisig.cpp}!main@{main}}
+\index{main@{main}!gen\_multisig.cpp@{gen\_multisig.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+

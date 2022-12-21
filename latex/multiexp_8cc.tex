@@ -1,0 +1,96 @@
+\hypertarget{multiexp_8cc}{}\doxysection{src/ringct/multiexp.cc File Reference}
+\label{multiexp_8cc}\index{src/ringct/multiexp.cc@{src/ringct/multiexp.cc}}
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$logging/oxen\+\_\+logger.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/aligned.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rct\+Ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multiexp.\+h\char`\"{}}\newline
+Include dependency graph for multiexp.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{multiexp_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrct_1_1straus__cached__data}{rct\+::straus\+\_\+cached\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1pippenger__cached__data}{rct\+::pippenger\+\_\+cached\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{multiexp_8cc_a0a60e5ed2ff02c9e73ea6eb1b2644bfe}{R\+A\+W\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+L\+O\+CK}}
+\item 
+\#define \mbox{\hyperlink{multiexp_8cc_aa5f7f7ae8f88fa21b2ac0442831db01b}{S\+T\+R\+A\+U\+S\+\_\+C}}~4
+\item 
+\#define \mbox{\hyperlink{multiexp_8cc_a2cf87c26d1f009b5807eaa3d31b72b0d}{C\+A\+C\+H\+E\+\_\+\+O\+F\+F\+S\+ET}}(cache,  point,  digit)~cache-\/$>$multiples\mbox{[}(point)+cache-\/$>$size$\ast$((digit)-\/1)\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a6a5992af68da58a1e333a2fa16798bff}{rct\+::operator$<$}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k1)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a38797dd0bd40caa9c0575a49156cc17c}{rct\+::div2}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k)
+\item 
+static \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a60343e42834b75d6e7664e4e9f375b27}{rct\+::pow2}} (size\+\_\+t n)
+\item 
+static int \mbox{\hyperlink{namespacerct_aca1fe89956f9debf655e4c4e67e72b42}{rct\+::test}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k, size\+\_\+t n)
+\item 
+static void \mbox{\hyperlink{namespacerct_adcb3053144d1a1e30b3b4996687013f3}{rct\+::add}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&p3, const \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} \&other)
+\item 
+static void \mbox{\hyperlink{namespacerct_a42e14912775ed69a34a9509f4d9447c5}{rct\+::add}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&p3, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&other)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_ad7fa474f50d25b436bf1b5dc629c6607}{rct\+::bos\+\_\+coster\+\_\+heap\+\_\+conv}} (std\+::vector$<$ Multiexp\+Data $>$ data)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a0a0cc167d3a5b3f78869dc923a9fc987}{rct\+::bos\+\_\+coster\+\_\+heap\+\_\+conv\+\_\+robust}} (std\+::vector$<$ Multiexp\+Data $>$ data)
+\item 
+std\+::shared\+\_\+ptr$<$ straus\+\_\+cached\+\_\+data $>$ \mbox{\hyperlink{namespacerct_a23a6b31a133e4ea474606beb69f6a4a0}{rct\+::straus\+\_\+init\+\_\+cache}} (const std\+::vector$<$ Multiexp\+Data $>$ \&data, size\+\_\+t N)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_afa118939dfdad6dead2da5284a63e786}{rct\+::straus\+\_\+get\+\_\+cache\+\_\+size}} (const std\+::shared\+\_\+ptr$<$ straus\+\_\+cached\+\_\+data $>$ \&cache)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a69e8589fa0200a7301bbc66ca94827eb}{rct\+::straus}} (const std\+::vector$<$ Multiexp\+Data $>$ \&data, const std\+::shared\+\_\+ptr$<$ straus\+\_\+cached\+\_\+data $>$ \&cache, size\+\_\+t S\+T\+EP)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_a0bf0303c8a58861f0a04688f52b19e2b}{rct\+::get\+\_\+pippenger\+\_\+c}} (size\+\_\+t N)
+\item 
+std\+::shared\+\_\+ptr$<$ pippenger\+\_\+cached\+\_\+data $>$ \mbox{\hyperlink{namespacerct_a904d62ef9bd7a636f3331e6c604c2369}{rct\+::pippenger\+\_\+init\+\_\+cache}} (const std\+::vector$<$ Multiexp\+Data $>$ \&data, size\+\_\+t start\+\_\+offset, size\+\_\+t N)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_a1b36671e5159e65d22f0b273e5c0264d}{rct\+::pippenger\+\_\+get\+\_\+cache\+\_\+size}} (const std\+::shared\+\_\+ptr$<$ pippenger\+\_\+cached\+\_\+data $>$ \&cache)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{namespacerct_a43768d0ddaab6b81acbe5c29d3e18026}{rct\+::pippenger}} (const std\+::vector$<$ Multiexp\+Data $>$ \&data, const std\+::shared\+\_\+ptr$<$ pippenger\+\_\+cached\+\_\+data $>$ \&cache, size\+\_\+t cache\+\_\+size, size\+\_\+t c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacerct_a8af5c1f35bfc03a7b40bc431932ec422}{rct\+::logcat}} = log\+::\+Cat(\char`\"{}multiexp\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{multiexp_8cc_a2cf87c26d1f009b5807eaa3d31b72b0d}\label{multiexp_8cc_a2cf87c26d1f009b5807eaa3d31b72b0d}} 
+\index{multiexp.cc@{multiexp.cc}!CACHE\_OFFSET@{CACHE\_OFFSET}}
+\index{CACHE\_OFFSET@{CACHE\_OFFSET}!multiexp.cc@{multiexp.cc}}
+\doxysubsubsection{\texorpdfstring{CACHE\_OFFSET}{CACHE\_OFFSET}}
+{\footnotesize\ttfamily \#define C\+A\+C\+H\+E\+\_\+\+O\+F\+F\+S\+ET(\begin{DoxyParamCaption}\item[{}]{cache,  }\item[{}]{point,  }\item[{}]{digit }\end{DoxyParamCaption})~cache-\/$>$multiples\mbox{[}(point)+cache-\/$>$size$\ast$((digit)-\/1)\mbox{]}}
+
+\mbox{\Hypertarget{multiexp_8cc_a0a60e5ed2ff02c9e73ea6eb1b2644bfe}\label{multiexp_8cc_a0a60e5ed2ff02c9e73ea6eb1b2644bfe}} 
+\index{multiexp.cc@{multiexp.cc}!RAW\_MEMORY\_BLOCK@{RAW\_MEMORY\_BLOCK}}
+\index{RAW\_MEMORY\_BLOCK@{RAW\_MEMORY\_BLOCK}!multiexp.cc@{multiexp.cc}}
+\doxysubsubsection{\texorpdfstring{RAW\_MEMORY\_BLOCK}{RAW\_MEMORY\_BLOCK}}
+{\footnotesize\ttfamily \#define R\+A\+W\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+L\+O\+CK}
+
+\mbox{\Hypertarget{multiexp_8cc_aa5f7f7ae8f88fa21b2ac0442831db01b}\label{multiexp_8cc_aa5f7f7ae8f88fa21b2ac0442831db01b}} 
+\index{multiexp.cc@{multiexp.cc}!STRAUS\_C@{STRAUS\_C}}
+\index{STRAUS\_C@{STRAUS\_C}!multiexp.cc@{multiexp.cc}}
+\doxysubsubsection{\texorpdfstring{STRAUS\_C}{STRAUS\_C}}
+{\footnotesize\ttfamily \#define S\+T\+R\+A\+U\+S\+\_\+C~4}
+

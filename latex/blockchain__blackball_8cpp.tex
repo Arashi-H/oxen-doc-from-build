@@ -1,0 +1,483 @@
+\hypertarget{blockchain__blackball_8cpp}{}\doxysection{src/blockchain\+\_\+utilities/blockchain\+\_\+blackball.cpp File Reference}
+\label{blockchain__blackball_8cpp}\index{src/blockchain\_utilities/blockchain\_blackball.cpp@{src/blockchain\_utilities/blockchain\_blackball.cpp}}
+{\ttfamily \#include \char`\"{}common/unordered\+\_\+containers\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/signal\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+objects.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/ringdb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+Include dependency graph for blockchain\+\_\+blackball.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__blackball_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structoutput__data}{output\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a544a7539f38a65f9c3a3c0c2cc597e73}{parse\+\_\+db\+\_\+sync\+\_\+mode}} (std\+::string db\+\_\+sync\+\_\+mode)
+\item 
+static fs\+::path \mbox{\hyperlink{blockchain__blackball_8cpp_a2c90d136092d64b571bf39570998652a}{get\+\_\+default\+\_\+db\+\_\+path}} ()
+\item 
+static fs\+::path \mbox{\hyperlink{blockchain__blackball_8cpp_afdfbfabe8b119d0b2975f673d5e5991b}{get\+\_\+cache\+\_\+filename}} (fs\+::path filename)
+\item 
+static int \mbox{\hyperlink{blockchain__blackball_8cpp_a3338310dd49f4f8897d888a6189319db}{compare\+\_\+hash32}} (const M\+D\+B\+\_\+val $\ast$a, const M\+D\+B\+\_\+val $\ast$b)
+\item 
+int \mbox{\hyperlink{blockchain__blackball_8cpp_ae120d0d2432953d14eeb45f267c240da}{compare\+\_\+uint64}} (const M\+D\+B\+\_\+val $\ast$a, const M\+D\+B\+\_\+val $\ast$b)
+\item 
+static int \mbox{\hyperlink{blockchain__blackball_8cpp_a64f73c5c8eec361f119f86a7067395ff}{compare\+\_\+double64}} (const M\+D\+B\+\_\+val $\ast$a, const M\+D\+B\+\_\+val $\ast$b)
+\item 
+static int \mbox{\hyperlink{blockchain__blackball_8cpp_a11c69aedd27adc2c30ae1e653375d361}{resize\+\_\+env}} (const char $\ast$\mbox{\hyperlink{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}{db\+\_\+path}})
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a04a3af0fbe8d8bca236f1a19d5cb88a3}{init}} (fs\+::path cache\+\_\+filename)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a83ca59777c4b85fd50a9c8270deda46c}{close}} ()
+\item 
+static std\+::string \mbox{\hyperlink{blockchain__blackball_8cpp_aa41c6bb079d442fdd716c0138d714122}{compress\+\_\+ring}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&ring, std\+::string \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}=\char`\"{}\char`\"{})
+\item 
+static std\+::string \mbox{\hyperlink{blockchain__blackball_8cpp_a9874475e2378298df03ebfee3b00a299}{compress\+\_\+ring}} (uint64\+\_\+t amount, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{blockchain__blackball_8cpp_a3470786adc221622967b2205a279ce28}{decompress\+\_\+ring}} (const std\+::string \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a84f8de000255637148255c6c233080d5}{for\+\_\+all\+\_\+transactions}} (const fs\+::path \&filename, uint64\+\_\+t \&start\+\_\+idx, uint64\+\_\+t \&n\+\_\+txes, const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&)$>$ \&f)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_acad87e6ac5af307be53d4776f53026df}{for\+\_\+all\+\_\+transactions}} (const fs\+::path \&filename, const uint64\+\_\+t \&start\+\_\+idx, uint64\+\_\+t \&n\+\_\+txes, const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, uint64\+\_\+t, const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&)$>$ \&f)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a951a656cbaf7aa8c80a3eab8ee3e73b9}{find\+\_\+first\+\_\+diverging\+\_\+transaction}} (const fs\+::path \&first\+\_\+filename, const fs\+::path \&second\+\_\+filename)
+\item 
+static std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{blockchain__blackball_8cpp_a3ec95e9c15fb48108035bde42b8e6ace}{canonicalize}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&v)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_ab46f389a918259e26eeb3d35ce561f8a}{get\+\_\+num\+\_\+spent\+\_\+outputs}} ()
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a7b40ec25a553128721b44fea53590f9b}{add\+\_\+spent\+\_\+output}} (M\+D\+B\+\_\+cursor $\ast$cur, const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&od)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_aa9a008506de7f3619a2b93621ab1956e}{is\+\_\+output\+\_\+spent}} (M\+D\+B\+\_\+cursor $\ast$cur, const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&od)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} $>$ \mbox{\hyperlink{blockchain__blackball_8cpp_afdf687ee90c48a19e5b832664944643e}{get\+\_\+spent\+\_\+outputs}} (M\+D\+B\+\_\+txn $\ast$txn)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_af93fcb8d6bf914818e67ecb6cf365ff8}{get\+\_\+per\+\_\+amount\+\_\+outputs}} (M\+D\+B\+\_\+txn $\ast$txn, uint64\+\_\+t amount, uint64\+\_\+t \&total, uint64\+\_\+t \&spent)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a402e03038ef79c00118c218bab70dbb0}{inc\+\_\+per\+\_\+amount\+\_\+outputs}} (M\+D\+B\+\_\+txn $\ast$txn, uint64\+\_\+t amount, uint64\+\_\+t total, uint64\+\_\+t spent)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_ac802d9cb909d0f7b41ccb88ce198129c}{get\+\_\+processed\+\_\+txidx}} (const std\+::string \&name)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_aaee88b0421a94220184dd6fcf38ef85d}{set\+\_\+processed\+\_\+txidx}} (M\+D\+B\+\_\+txn $\ast$txn, const std\+::string \&name, uint64\+\_\+t height)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a6f8881a1e661fcab848aea47e0ac715f}{get\+\_\+relative\+\_\+ring}} (M\+D\+B\+\_\+txn $\ast$txn, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki, std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a2ece2d11575d6cedb028d4bd3e1657bb}{set\+\_\+relative\+\_\+ring}} (M\+D\+B\+\_\+txn $\ast$txn, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static std\+::string \mbox{\hyperlink{blockchain__blackball_8cpp_a0bd78dabbde40fb71d2b2633ad9e5b53}{keep\+\_\+under\+\_\+511}} (const std\+::string \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a9f69faf51ae05db6f68400e42eaac7b2}{get\+\_\+ring\+\_\+instances}} (M\+D\+B\+\_\+txn $\ast$txn, uint64\+\_\+t amount, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a051dfc779d02fb18ce02bb107552d340}{get\+\_\+ring\+\_\+subset\+\_\+instances}} (M\+D\+B\+\_\+txn $\ast$txn, uint64\+\_\+t amount, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_af44779836a420e40fb173792369a2411}{inc\+\_\+ring\+\_\+instances}} (M\+D\+B\+\_\+txn $\ast$txn, uint64\+\_\+t amount, const std\+::vector$<$ uint64\+\_\+t $>$ \&ring)
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \mbox{\hyperlink{blockchain__blackball_8cpp_acda987db60887339baf834f9f69a57af}{get\+\_\+key\+\_\+images}} (M\+D\+B\+\_\+txn $\ast$txn, const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&od)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a1f7ca3142f373cec37a2b19a3bf06fc8}{add\+\_\+key\+\_\+image}} (M\+D\+B\+\_\+txn $\ast$txn, const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&od, const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a2df2dfa7c8b3f93a3ce10cd2af151a16}{get\+\_\+stat}} (M\+D\+B\+\_\+txn $\ast$txn, const char $\ast$key, uint64\+\_\+t \&data)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a2723f3f92e416e998cc19adbb9ee412a}{set\+\_\+stat}} (M\+D\+B\+\_\+txn $\ast$txn, const char $\ast$key, uint64\+\_\+t data)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a97eaa14416866ca39dc5a4bbdbc85fe0}{inc\+\_\+stat}} (M\+D\+B\+\_\+txn $\ast$txn, const char $\ast$key)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a799e0a3f08401f2b8fc44769d15fc694}{open\+\_\+db}} (const fs\+::path \&filename, M\+D\+B\+\_\+env $\ast$$\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, M\+D\+B\+\_\+txn $\ast$$\ast$txn, M\+D\+B\+\_\+cursor $\ast$$\ast$cur, M\+D\+B\+\_\+dbi $\ast$dbi)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_a8a109ab803044121f4ed278123aa390d}{close\+\_\+db}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, M\+D\+B\+\_\+txn $\ast$txn, M\+D\+B\+\_\+cursor $\ast$cur, M\+D\+B\+\_\+dbi dbi)
+\item 
+static void \mbox{\hyperlink{blockchain__blackball_8cpp_ae122f12d4725252db851cd61c6854daf}{get\+\_\+num\+\_\+outputs}} (M\+D\+B\+\_\+txn $\ast$txn, M\+D\+B\+\_\+cursor $\ast$cur, M\+D\+B\+\_\+dbi dbi, uint64\+\_\+t \&pre\+\_\+rct, uint64\+\_\+t \&rct)
+\item 
+static \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{blockchain__blackball_8cpp_a003d96073ce6a5f41317ee96e0cd323d}{get\+\_\+genesis\+\_\+block\+\_\+hash}} (const fs\+::path \&filename)
+\item 
+static std\+::vector$<$ std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{blockchain__blackball_8cpp_acb68f73d23f9f607b0fd3336d66897fb}{load\+\_\+outputs}} (const fs\+::path \&filename)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__blackball_8cpp_a6784f4585cb2a2da57775a0dea480f5c}{export\+\_\+spent\+\_\+outputs}} (M\+D\+B\+\_\+cursor $\ast$cur, const fs\+::path \&filename)
+\item 
+int \mbox{\hyperlink{blockchain__blackball_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{blockchain__blackball_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}bcutil\char`\"{})
+\item 
+static const char \mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}} \mbox{[}8\mbox{]} = \{0\}
+\item 
+static const M\+D\+B\+\_\+val \mbox{\hyperlink{blockchain__blackball_8cpp_aea10808f3fe9ff71fbefa19345a4a2e5}{zerokval}} = \{ sizeof(\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}}), (void $\ast$)\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}} \}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}{records\+\_\+per\+\_\+sync}} = 200
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}{db\+\_\+flags}} = 0
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_a56a8692f237f2991006d84be43ee52c2}{dbi\+\_\+relative\+\_\+rings}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_aeae79149fbc02c6bf311c2388b4150a7}{dbi\+\_\+outputs}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_a2eef48ba1793a011d2f16f977ba3c832}{dbi\+\_\+processed\+\_\+txidx}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_aaee7c665020b820a04aceb229557a3db}{dbi\+\_\+spent}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_a70edff1668fd4ad2c23443e24d8dd909}{dbi\+\_\+per\+\_\+amount}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_adfd83e174ffd38ac3343e24e5f9ac474}{dbi\+\_\+ring\+\_\+instances}}
+\item 
+static M\+D\+B\+\_\+dbi \mbox{\hyperlink{blockchain__blackball_8cpp_ab337f7de34e4102a2d1615ff28ad8d46}{dbi\+\_\+stats}}
+\item 
+static M\+D\+B\+\_\+env $\ast$ \mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a1f7ca3142f373cec37a2b19a3bf06fc8}\label{blockchain__blackball_8cpp_a1f7ca3142f373cec37a2b19a3bf06fc8}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!add\_key\_image@{add\_key\_image}}
+\index{add\_key\_image@{add\_key\_image}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_key\_image()}{add\_key\_image()}}
+{\footnotesize\ttfamily static void add\+\_\+key\+\_\+image (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&}]{od,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a7b40ec25a553128721b44fea53590f9b}\label{blockchain__blackball_8cpp_a7b40ec25a553128721b44fea53590f9b}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!add\_spent\_output@{add\_spent\_output}}
+\index{add\_spent\_output@{add\_spent\_output}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_spent\_output()}{add\_spent\_output()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} add\+\_\+spent\+\_\+output (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur,  }\item[{const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&}]{od }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a3ec95e9c15fb48108035bde42b8e6ace}\label{blockchain__blackball_8cpp_a3ec95e9c15fb48108035bde42b8e6ace}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!canonicalize@{canonicalize}}
+\index{canonicalize@{canonicalize}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{canonicalize()}{canonicalize()}}
+{\footnotesize\ttfamily static std\+::vector$<$uint64\+\_\+t$>$ canonicalize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a83ca59777c4b85fd50a9c8270deda46c}\label{blockchain__blackball_8cpp_a83ca59777c4b85fd50a9c8270deda46c}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!close@{close}}
+\index{close@{close}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily static void close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a8a109ab803044121f4ed278123aa390d}\label{blockchain__blackball_8cpp_a8a109ab803044121f4ed278123aa390d}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!close\_db@{close\_db}}
+\index{close\_db@{close\_db}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{close\_db()}{close\_db()}}
+{\footnotesize\ttfamily static void close\+\_\+db (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env,  }\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur,  }\item[{M\+D\+B\+\_\+dbi}]{dbi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a64f73c5c8eec361f119f86a7067395ff}\label{blockchain__blackball_8cpp_a64f73c5c8eec361f119f86a7067395ff}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!compare\_double64@{compare\_double64}}
+\index{compare\_double64@{compare\_double64}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_double64()}{compare\_double64()}}
+{\footnotesize\ttfamily static int compare\+\_\+double64 (\begin{DoxyParamCaption}\item[{const M\+D\+B\+\_\+val $\ast$}]{a,  }\item[{const M\+D\+B\+\_\+val $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a3338310dd49f4f8897d888a6189319db}\label{blockchain__blackball_8cpp_a3338310dd49f4f8897d888a6189319db}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!compare\_hash32@{compare\_hash32}}
+\index{compare\_hash32@{compare\_hash32}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_hash32()}{compare\_hash32()}}
+{\footnotesize\ttfamily static int compare\+\_\+hash32 (\begin{DoxyParamCaption}\item[{const M\+D\+B\+\_\+val $\ast$}]{a,  }\item[{const M\+D\+B\+\_\+val $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_ae120d0d2432953d14eeb45f267c240da}\label{blockchain__blackball_8cpp_ae120d0d2432953d14eeb45f267c240da}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!compare\_uint64@{compare\_uint64}}
+\index{compare\_uint64@{compare\_uint64}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{compare\_uint64()}{compare\_uint64()}}
+{\footnotesize\ttfamily int compare\+\_\+uint64 (\begin{DoxyParamCaption}\item[{const M\+D\+B\+\_\+val $\ast$}]{a,  }\item[{const M\+D\+B\+\_\+val $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aa41c6bb079d442fdd716c0138d714122}\label{blockchain__blackball_8cpp_aa41c6bb079d442fdd716c0138d714122}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!compress\_ring@{compress\_ring}}
+\index{compress\_ring@{compress\_ring}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{compress\_ring()}{compress\_ring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::string compress\+\_\+ring (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring,  }\item[{std\+::string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a9874475e2378298df03ebfee3b00a299}\label{blockchain__blackball_8cpp_a9874475e2378298df03ebfee3b00a299}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!compress\_ring@{compress\_ring}}
+\index{compress\_ring@{compress\_ring}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{compress\_ring()}{compress\_ring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static std\+::string compress\+\_\+ring (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a3470786adc221622967b2205a279ce28}\label{blockchain__blackball_8cpp_a3470786adc221622967b2205a279ce28}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!decompress\_ring@{decompress\_ring}}
+\index{decompress\_ring@{decompress\_ring}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{decompress\_ring()}{decompress\_ring()}}
+{\footnotesize\ttfamily static std\+::vector$<$uint64\+\_\+t$>$ decompress\+\_\+ring (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a6784f4585cb2a2da57775a0dea480f5c}\label{blockchain__blackball_8cpp_a6784f4585cb2a2da57775a0dea480f5c}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!export\_spent\_outputs@{export\_spent\_outputs}}
+\index{export\_spent\_outputs@{export\_spent\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{export\_spent\_outputs()}{export\_spent\_outputs()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} export\+\_\+spent\+\_\+outputs (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur,  }\item[{const fs\+::path \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a951a656cbaf7aa8c80a3eab8ee3e73b9}\label{blockchain__blackball_8cpp_a951a656cbaf7aa8c80a3eab8ee3e73b9}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!find\_first\_diverging\_transaction@{find\_first\_diverging\_transaction}}
+\index{find\_first\_diverging\_transaction@{find\_first\_diverging\_transaction}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{find\_first\_diverging\_transaction()}{find\_first\_diverging\_transaction()}}
+{\footnotesize\ttfamily static uint64\+\_\+t find\+\_\+first\+\_\+diverging\+\_\+transaction (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{first\+\_\+filename,  }\item[{const fs\+::path \&}]{second\+\_\+filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_acad87e6ac5af307be53d4776f53026df}\label{blockchain__blackball_8cpp_acad87e6ac5af307be53d4776f53026df}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!for\_all\_transactions@{for\_all\_transactions}}
+\index{for\_all\_transactions@{for\_all\_transactions}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{for\_all\_transactions()}{for\_all\_transactions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} for\+\_\+all\+\_\+transactions (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename,  }\item[{const uint64\+\_\+t \&}]{start\+\_\+idx,  }\item[{uint64\+\_\+t \&}]{n\+\_\+txes,  }\item[{const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, uint64\+\_\+t, const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&)$>$ \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a84f8de000255637148255c6c233080d5}\label{blockchain__blackball_8cpp_a84f8de000255637148255c6c233080d5}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!for\_all\_transactions@{for\_all\_transactions}}
+\index{for\_all\_transactions@{for\_all\_transactions}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{for\_all\_transactions()}{for\_all\_transactions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} for\+\_\+all\+\_\+transactions (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename,  }\item[{uint64\+\_\+t \&}]{start\+\_\+idx,  }\item[{uint64\+\_\+t \&}]{n\+\_\+txes,  }\item[{const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&)$>$ \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_afdfbfabe8b119d0b2975f673d5e5991b}\label{blockchain__blackball_8cpp_afdfbfabe8b119d0b2975f673d5e5991b}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_cache\_filename@{get\_cache\_filename}}
+\index{get\_cache\_filename@{get\_cache\_filename}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_cache\_filename()}{get\_cache\_filename()}}
+{\footnotesize\ttfamily static fs\+::path get\+\_\+cache\+\_\+filename (\begin{DoxyParamCaption}\item[{fs\+::path}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a2c90d136092d64b571bf39570998652a}\label{blockchain__blackball_8cpp_a2c90d136092d64b571bf39570998652a}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_default\_db\_path@{get\_default\_db\_path}}
+\index{get\_default\_db\_path@{get\_default\_db\_path}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_default\_db\_path()}{get\_default\_db\_path()}}
+{\footnotesize\ttfamily static fs\+::path get\+\_\+default\+\_\+db\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a003d96073ce6a5f41317ee96e0cd323d}\label{blockchain__blackball_8cpp_a003d96073ce6a5f41317ee96e0cd323d}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_genesis\_block\_hash@{get\_genesis\_block\_hash}}
+\index{get\_genesis\_block\_hash@{get\_genesis\_block\_hash}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_genesis\_block\_hash()}{get\_genesis\_block\_hash()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} get\+\_\+genesis\+\_\+block\+\_\+hash (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_acda987db60887339baf834f9f69a57af}\label{blockchain__blackball_8cpp_acda987db60887339baf834f9f69a57af}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_key\_images@{get\_key\_images}}
+\index{get\_key\_images@{get\_key\_images}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_key\_images()}{get\_key\_images()}}
+{\footnotesize\ttfamily static std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}$>$ get\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&}]{od }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_ae122f12d4725252db851cd61c6854daf}\label{blockchain__blackball_8cpp_ae122f12d4725252db851cd61c6854daf}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_num\_outputs@{get\_num\_outputs}}
+\index{get\_num\_outputs@{get\_num\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_num\_outputs()}{get\_num\_outputs()}}
+{\footnotesize\ttfamily static void get\+\_\+num\+\_\+outputs (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur,  }\item[{M\+D\+B\+\_\+dbi}]{dbi,  }\item[{uint64\+\_\+t \&}]{pre\+\_\+rct,  }\item[{uint64\+\_\+t \&}]{rct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_ab46f389a918259e26eeb3d35ce561f8a}\label{blockchain__blackball_8cpp_ab46f389a918259e26eeb3d35ce561f8a}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_num\_spent\_outputs@{get\_num\_spent\_outputs}}
+\index{get\_num\_spent\_outputs@{get\_num\_spent\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_num\_spent\_outputs()}{get\_num\_spent\_outputs()}}
+{\footnotesize\ttfamily static uint64\+\_\+t get\+\_\+num\+\_\+spent\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_af93fcb8d6bf914818e67ecb6cf365ff8}\label{blockchain__blackball_8cpp_af93fcb8d6bf914818e67ecb6cf365ff8}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_per\_amount\_outputs@{get\_per\_amount\_outputs}}
+\index{get\_per\_amount\_outputs@{get\_per\_amount\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_per\_amount\_outputs()}{get\_per\_amount\_outputs()}}
+{\footnotesize\ttfamily static void get\+\_\+per\+\_\+amount\+\_\+outputs (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{uint64\+\_\+t}]{amount,  }\item[{uint64\+\_\+t \&}]{total,  }\item[{uint64\+\_\+t \&}]{spent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_ac802d9cb909d0f7b41ccb88ce198129c}\label{blockchain__blackball_8cpp_ac802d9cb909d0f7b41ccb88ce198129c}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_processed\_txidx@{get\_processed\_txidx}}
+\index{get\_processed\_txidx@{get\_processed\_txidx}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_processed\_txidx()}{get\_processed\_txidx()}}
+{\footnotesize\ttfamily static uint64\+\_\+t get\+\_\+processed\+\_\+txidx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a6f8881a1e661fcab848aea47e0ac715f}\label{blockchain__blackball_8cpp_a6f8881a1e661fcab848aea47e0ac715f}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_relative\_ring@{get\_relative\_ring}}
+\index{get\_relative\_ring@{get\_relative\_ring}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_relative\_ring()}{get\_relative\_ring()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} get\+\_\+relative\+\_\+ring (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki,  }\item[{std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a9f69faf51ae05db6f68400e42eaac7b2}\label{blockchain__blackball_8cpp_a9f69faf51ae05db6f68400e42eaac7b2}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_ring\_instances@{get\_ring\_instances}}
+\index{get\_ring\_instances@{get\_ring\_instances}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_ring\_instances()}{get\_ring\_instances()}}
+{\footnotesize\ttfamily static uint64\+\_\+t get\+\_\+ring\+\_\+instances (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a051dfc779d02fb18ce02bb107552d340}\label{blockchain__blackball_8cpp_a051dfc779d02fb18ce02bb107552d340}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_ring\_subset\_instances@{get\_ring\_subset\_instances}}
+\index{get\_ring\_subset\_instances@{get\_ring\_subset\_instances}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_ring\_subset\_instances()}{get\_ring\_subset\_instances()}}
+{\footnotesize\ttfamily static uint64\+\_\+t get\+\_\+ring\+\_\+subset\+\_\+instances (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_afdf687ee90c48a19e5b832664944643e}\label{blockchain__blackball_8cpp_afdf687ee90c48a19e5b832664944643e}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_spent\_outputs@{get\_spent\_outputs}}
+\index{get\_spent\_outputs@{get\_spent\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_spent\_outputs()}{get\_spent\_outputs()}}
+{\footnotesize\ttfamily static std\+::vector$<$\mbox{\hyperlink{structoutput__data}{output\+\_\+data}}$>$ get\+\_\+spent\+\_\+outputs (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a2df2dfa7c8b3f93a3ce10cd2af151a16}\label{blockchain__blackball_8cpp_a2df2dfa7c8b3f93a3ce10cd2af151a16}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!get\_stat@{get\_stat}}
+\index{get\_stat@{get\_stat}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_stat()}{get\_stat()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} get\+\_\+stat (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const char $\ast$}]{key,  }\item[{uint64\+\_\+t \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a402e03038ef79c00118c218bab70dbb0}\label{blockchain__blackball_8cpp_a402e03038ef79c00118c218bab70dbb0}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!inc\_per\_amount\_outputs@{inc\_per\_amount\_outputs}}
+\index{inc\_per\_amount\_outputs@{inc\_per\_amount\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{inc\_per\_amount\_outputs()}{inc\_per\_amount\_outputs()}}
+{\footnotesize\ttfamily static void inc\+\_\+per\+\_\+amount\+\_\+outputs (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{uint64\+\_\+t}]{amount,  }\item[{uint64\+\_\+t}]{total,  }\item[{uint64\+\_\+t}]{spent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_af44779836a420e40fb173792369a2411}\label{blockchain__blackball_8cpp_af44779836a420e40fb173792369a2411}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!inc\_ring\_instances@{inc\_ring\_instances}}
+\index{inc\_ring\_instances@{inc\_ring\_instances}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{inc\_ring\_instances()}{inc\_ring\_instances()}}
+{\footnotesize\ttfamily static uint64\+\_\+t inc\+\_\+ring\+\_\+instances (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a97eaa14416866ca39dc5a4bbdbc85fe0}\label{blockchain__blackball_8cpp_a97eaa14416866ca39dc5a4bbdbc85fe0}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!inc\_stat@{inc\_stat}}
+\index{inc\_stat@{inc\_stat}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{inc\_stat()}{inc\_stat()}}
+{\footnotesize\ttfamily static void inc\+\_\+stat (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const char $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a04a3af0fbe8d8bca236f1a19d5cb88a3}\label{blockchain__blackball_8cpp_a04a3af0fbe8d8bca236f1a19d5cb88a3}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!init@{init}}
+\index{init@{init}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static void init (\begin{DoxyParamCaption}\item[{fs\+::path}]{cache\+\_\+filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aa9a008506de7f3619a2b93621ab1956e}\label{blockchain__blackball_8cpp_aa9a008506de7f3619a2b93621ab1956e}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!is\_output\_spent@{is\_output\_spent}}
+\index{is\_output\_spent@{is\_output\_spent}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_output\_spent()}{is\_output\_spent()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+output\+\_\+spent (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{cur,  }\item[{const \mbox{\hyperlink{structoutput__data}{output\+\_\+data}} \&}]{od }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a0bd78dabbde40fb71d2b2633ad9e5b53}\label{blockchain__blackball_8cpp_a0bd78dabbde40fb71d2b2633ad9e5b53}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!keep\_under\_511@{keep\_under\_511}}
+\index{keep\_under\_511@{keep\_under\_511}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{keep\_under\_511()}{keep\_under\_511()}}
+{\footnotesize\ttfamily static std\+::string keep\+\_\+under\+\_\+511 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_acb68f73d23f9f607b0fd3336d66897fb}\label{blockchain__blackball_8cpp_acb68f73d23f9f607b0fd3336d66897fb}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!load\_outputs@{load\_outputs}}
+\index{load\_outputs@{load\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{load\_outputs()}{load\_outputs()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::pair$<$uint64\+\_\+t, uint64\+\_\+t$>$ $>$ load\+\_\+outputs (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{blockchain__blackball_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!main@{main}}
+\index{main@{main}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a799e0a3f08401f2b8fc44769d15fc694}\label{blockchain__blackball_8cpp_a799e0a3f08401f2b8fc44769d15fc694}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!open\_db@{open\_db}}
+\index{open\_db@{open\_db}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{open\_db()}{open\_db()}}
+{\footnotesize\ttfamily static void open\+\_\+db (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename,  }\item[{M\+D\+B\+\_\+env $\ast$$\ast$}]{env,  }\item[{M\+D\+B\+\_\+txn $\ast$$\ast$}]{txn,  }\item[{M\+D\+B\+\_\+cursor $\ast$$\ast$}]{cur,  }\item[{M\+D\+B\+\_\+dbi $\ast$}]{dbi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a544a7539f38a65f9c3a3c0c2cc597e73}\label{blockchain__blackball_8cpp_a544a7539f38a65f9c3a3c0c2cc597e73}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!parse\_db\_sync\_mode@{parse\_db\_sync\_mode}}
+\index{parse\_db\_sync\_mode@{parse\_db\_sync\_mode}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_db\_sync\_mode()}{parse\_db\_sync\_mode()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} parse\+\_\+db\+\_\+sync\+\_\+mode (\begin{DoxyParamCaption}\item[{std\+::string}]{db\+\_\+sync\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a11c69aedd27adc2c30ae1e653375d361}\label{blockchain__blackball_8cpp_a11c69aedd27adc2c30ae1e653375d361}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!resize\_env@{resize\_env}}
+\index{resize\_env@{resize\_env}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{resize\_env()}{resize\_env()}}
+{\footnotesize\ttfamily static int resize\+\_\+env (\begin{DoxyParamCaption}\item[{const char $\ast$}]{db\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aaee88b0421a94220184dd6fcf38ef85d}\label{blockchain__blackball_8cpp_aaee88b0421a94220184dd6fcf38ef85d}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!set\_processed\_txidx@{set\_processed\_txidx}}
+\index{set\_processed\_txidx@{set\_processed\_txidx}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_processed\_txidx()}{set\_processed\_txidx()}}
+{\footnotesize\ttfamily static void set\+\_\+processed\+\_\+txidx (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const std\+::string \&}]{name,  }\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a2ece2d11575d6cedb028d4bd3e1657bb}\label{blockchain__blackball_8cpp_a2ece2d11575d6cedb028d4bd3e1657bb}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!set\_relative\_ring@{set\_relative\_ring}}
+\index{set\_relative\_ring@{set\_relative\_ring}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_relative\_ring()}{set\_relative\_ring()}}
+{\footnotesize\ttfamily static void set\+\_\+relative\+\_\+ring (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{ring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a2723f3f92e416e998cc19adbb9ee412a}\label{blockchain__blackball_8cpp_a2723f3f92e416e998cc19adbb9ee412a}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!set\_stat@{set\_stat}}
+\index{set\_stat@{set\_stat}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{set\_stat()}{set\_stat()}}
+{\footnotesize\ttfamily static void set\+\_\+stat (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+txn $\ast$}]{txn,  }\item[{const char $\ast$}]{key,  }\item[{uint64\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}\label{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!db\_flags@{db\_flags}}
+\index{db\_flags@{db\_flags}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{db\_flags}{db\_flags}}
+{\footnotesize\ttfamily uint64\+\_\+t db\+\_\+flags = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aeae79149fbc02c6bf311c2388b4150a7}\label{blockchain__blackball_8cpp_aeae79149fbc02c6bf311c2388b4150a7}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_outputs@{dbi\_outputs}}
+\index{dbi\_outputs@{dbi\_outputs}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_outputs}{dbi\_outputs}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+outputs\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a70edff1668fd4ad2c23443e24d8dd909}\label{blockchain__blackball_8cpp_a70edff1668fd4ad2c23443e24d8dd909}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_per\_amount@{dbi\_per\_amount}}
+\index{dbi\_per\_amount@{dbi\_per\_amount}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_per\_amount}{dbi\_per\_amount}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+per\+\_\+amount\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a2eef48ba1793a011d2f16f977ba3c832}\label{blockchain__blackball_8cpp_a2eef48ba1793a011d2f16f977ba3c832}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_processed\_txidx@{dbi\_processed\_txidx}}
+\index{dbi\_processed\_txidx@{dbi\_processed\_txidx}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_processed\_txidx}{dbi\_processed\_txidx}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+processed\+\_\+txidx\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a56a8692f237f2991006d84be43ee52c2}\label{blockchain__blackball_8cpp_a56a8692f237f2991006d84be43ee52c2}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_relative\_rings@{dbi\_relative\_rings}}
+\index{dbi\_relative\_rings@{dbi\_relative\_rings}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_relative\_rings}{dbi\_relative\_rings}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+relative\+\_\+rings\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_adfd83e174ffd38ac3343e24e5f9ac474}\label{blockchain__blackball_8cpp_adfd83e174ffd38ac3343e24e5f9ac474}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_ring\_instances@{dbi\_ring\_instances}}
+\index{dbi\_ring\_instances@{dbi\_ring\_instances}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_ring\_instances}{dbi\_ring\_instances}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+ring\+\_\+instances\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aaee7c665020b820a04aceb229557a3db}\label{blockchain__blackball_8cpp_aaee7c665020b820a04aceb229557a3db}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_spent@{dbi\_spent}}
+\index{dbi\_spent@{dbi\_spent}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_spent}{dbi\_spent}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+spent\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_ab337f7de34e4102a2d1615ff28ad8d46}\label{blockchain__blackball_8cpp_ab337f7de34e4102a2d1615ff28ad8d46}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!dbi\_stats@{dbi\_stats}}
+\index{dbi\_stats@{dbi\_stats}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{dbi\_stats}{dbi\_stats}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+dbi dbi\+\_\+stats\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}\label{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!env@{env}}
+\index{env@{env}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{env}{env}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+env$\ast$ env = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{blockchain__blackball_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}bcutil\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}\label{blockchain__blackball_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!records\_per\_sync@{records\_per\_sync}}
+\index{records\_per\_sync@{records\_per\_sync}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{records\_per\_sync}{records\_per\_sync}}
+{\footnotesize\ttfamily uint64\+\_\+t records\+\_\+per\+\_\+sync = 200\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}\label{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!zerokey@{zerokey}}
+\index{zerokey@{zerokey}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{zerokey}{zerokey}}
+{\footnotesize\ttfamily const char zerokey\mbox{[}8\mbox{]} = \{0\}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__blackball_8cpp_aea10808f3fe9ff71fbefa19345a4a2e5}\label{blockchain__blackball_8cpp_aea10808f3fe9ff71fbefa19345a4a2e5}} 
+\index{blockchain\_blackball.cpp@{blockchain\_blackball.cpp}!zerokval@{zerokval}}
+\index{zerokval@{zerokval}!blockchain\_blackball.cpp@{blockchain\_blackball.cpp}}
+\doxysubsubsection{\texorpdfstring{zerokval}{zerokval}}
+{\footnotesize\ttfamily const M\+D\+B\+\_\+val zerokval = \{ sizeof(\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}}), (void $\ast$)\mbox{\hyperlink{blockchain__blackball_8cpp_a59618848821115b6f66b29d342fd5bc7}{zerokey}} \}\hspace{0.3cm}{\ttfamily [static]}}
+

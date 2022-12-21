@@ -1,0 +1,61 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+K\+E\+YS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS}\index{cryptonote::rpc::GET\_SERVICE\_KEYS@{cryptonote::rpc::GET\_SERVICE\_KEYS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+K\+E\+YS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+K\+E\+YS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS_a05b71a905f7013a5af190ec81b0957a3}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the service public keys of the queried daemon, encoded in hex. All three keys are used when running as a service node; when running as a regular node only the x25519 key is regularly used for some R\+PC and and node-\/to-\/\+SN communication requests.
+
+Inputs\+: None
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily service\+\_\+node\+\_\+pubkey} The queried daemon\textquotesingle{}s service node public key. Will be empty if not running as a service node.
+\item {\ttfamily service\+\_\+node\+\_\+ed25519\+\_\+pubkey} The daemon\textquotesingle{}s ed25519 auxiliary public key.
+\item {\ttfamily service\+\_\+node\+\_\+x25519\+\_\+pubkey} The daemon\textquotesingle{}s x25519 auxiliary public key. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS_a05b71a905f7013a5af190ec81b0957a3}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__KEYS_a05b71a905f7013a5af190ec81b0957a3}} 
+\index{cryptonote::rpc::GET\_SERVICE\_KEYS@{cryptonote::rpc::GET\_SERVICE\_KEYS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_SERVICE\_KEYS@{cryptonote::rpc::GET\_SERVICE\_KEYS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+K\+E\+Y\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

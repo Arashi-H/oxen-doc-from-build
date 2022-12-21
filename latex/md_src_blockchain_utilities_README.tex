@@ -1,0 +1,65 @@
+Copyright (c) 2014-\/2019, The Monero Project Copyright (c) 2018, The Loki Project\hypertarget{md_src_blockchain_utilities_README_autotoc_md1}{}\doxysection{Introduction}\label{md_src_blockchain_utilities_README_autotoc_md1}
+The blockchain utilities allow one to import and export the blockchain.\hypertarget{md_src_blockchain_utilities_README_autotoc_md2}{}\doxysection{Usage\+:}\label{md_src_blockchain_utilities_README_autotoc_md2}
+See also each utility\textquotesingle{}s \char`\"{}-\/-\/help\char`\"{} option.\hypertarget{md_src_blockchain_utilities_README_autotoc_md3}{}\doxysubsection{Export an existing blockchain database}\label{md_src_blockchain_utilities_README_autotoc_md3}
+{\ttfamily \$ oxen-\/blockchain-\/export}
+
+This loads the existing blockchain and exports it to {\ttfamily \$\+O\+X\+E\+N\+\_\+\+D\+A\+T\+A\+\_\+\+D\+IR/export/blockchain.raw}\hypertarget{md_src_blockchain_utilities_README_autotoc_md4}{}\doxysubsection{Import the exported file}\label{md_src_blockchain_utilities_README_autotoc_md4}
+{\ttfamily \$ oxen-\/blockchain-\/import}
+
+This imports blocks from {\ttfamily \$\+O\+X\+E\+N\+\_\+\+D\+A\+T\+A\+\_\+\+D\+IR/export/blockchain.raw} (exported using the {\ttfamily oxen-\/blockchain-\/export} tool as described above) into the current database.
+
+Defaults\+: {\ttfamily -\/-\/batch on}, {\ttfamily -\/-\/batch size 20000}, {\ttfamily -\/-\/verify on}
+
+Batch size refers to number of blocks and can be adjusted for performance based on available R\+AM.
+
+Verification should only be turned off if importing from a trusted blockchain.
+
+If you encounter an error like \char`\"{}resizing not supported in batch mode\char`\"{}, you can just re-\/run the {\ttfamily oxen-\/blockchain-\/import} command again, and it will restart from where it left off.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\# use default settings to import blockchain.raw into database}
+\DoxyCodeLine{\$ oxen-\/blockchain-\/import}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\# fast import with large batch size, database mode "fastest", verification off}
+\DoxyCodeLine{\$ oxen-\/blockchain-\/import -\/-\/batch-\/size 20000 -\/-\/database lmdb\#fastest -\/-\/verify off}
+\end{DoxyCode}
+\hypertarget{md_src_blockchain_utilities_README_autotoc_md5}{}\doxysubsection{Import options}\label{md_src_blockchain_utilities_README_autotoc_md5}
+{\ttfamily -\/-\/input-\/file} specifies input file path for importing
+
+default\+: {\ttfamily $<$data-\/dir$>$/export/blockchain.raw}
+
+{\ttfamily -\/-\/output-\/file} specifies output file path to export to
+
+default\+: {\ttfamily $<$data-\/dir$>$/export/blockchain.raw}
+
+{\ttfamily -\/-\/block-\/stop} stop at block number
+
+{\ttfamily -\/-\/database $<$database type$>$}
+
+{\ttfamily -\/-\/database $<$database type$>$\#$<$flag(s)$>$}
+
+database type\+: {\ttfamily lmdb, memory}
+
+flags\+:
+
+The flag after the \# is interpreted as a composite mode/flag if there\textquotesingle{}s only one (no comma separated arguments).
+
+The composite mode represents multiple DB flags and support different database types\+:
+
+{\ttfamily safe, fast, fastest}
+
+Database-\/specific flags can be set instead.
+
+L\+M\+DB flags (more than one may be specified)\+:
+
+{\ttfamily nosync, nometasync, writemap, mapasync, nordahead}\hypertarget{md_src_blockchain_utilities_README_autotoc_md6}{}\doxysection{Examples\+:}\label{md_src_blockchain_utilities_README_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ oxen-\/blockchain-\/import -\/-\/database lmdb\#fastest}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$ oxen-\/blockchain-\/import -\/-\/database lmdb\#nosync}
+\DoxyCodeLine{}
+\DoxyCodeLine{\$ oxen-\/blockchain-\/import -\/-\/database lmdb\#nosync,nometasync}
+\end{DoxyCode}
+ 

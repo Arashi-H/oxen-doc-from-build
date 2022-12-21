@@ -1,0 +1,89 @@
+\hypertarget{net__node_8h}{}\doxysection{src/p2p/net\+\_\+node.h File Reference}
+\label{net__node_8h}\index{src/p2p/net\_node.h@{src/p2p/net\_node.h}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$boost/asio/io\+\_\+service.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/options\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/uuid/uuid.\+hpp$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$shared\+\_\+mutex$>$}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/levin\+\_\+notify.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/connection\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/abstract\+\_\+tcp\+\_\+server2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/levin\+\_\+protocol\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/levin\+\_\+protocol\+\_\+handler\+\_\+async.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/levin\+\_\+abstract\+\_\+invoke2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+peerlist.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+node\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/enums.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/fwd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/periodic\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+Include dependency graph for net\+\_\+node.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__node_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__node_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1proxy}{nodetool\+::proxy}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1anonymous__inbound}{nodetool\+::anonymous\+\_\+inbound}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1p2p__connection__context__t}{nodetool\+::p2p\+\_\+connection\+\_\+context\+\_\+t$<$ base\+\_\+type $>$}}
+\item 
+class \mbox{\hyperlink{classnodetool_1_1node__server}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1node__server_1_1by__conn__id}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$\+::by\+\_\+conn\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1node__server_1_1by__peer__id}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$\+::by\+\_\+peer\+\_\+id}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1node__server_1_1by__addr}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$\+::by\+\_\+addr}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1node__server_1_1config}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$\+::config}}
+\item 
+struct \mbox{\hyperlink{structnodetool_1_1node__server_1_1network__zone}{nodetool\+::node\+\_\+server$<$ t\+\_\+payload\+\_\+net\+\_\+handler $>$\+::network\+\_\+zone}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenodetool}{nodetool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ std\+::vector$<$ proxy $>$ $>$ \mbox{\hyperlink{namespacenodetool_a6a73bbc18c2c9bd173814bb5da760647}{nodetool\+::get\+\_\+proxies}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+std\+::optional$<$ std\+::vector$<$ anonymous\+\_\+inbound $>$ $>$ \mbox{\hyperlink{namespacenodetool_a98a2d31ce90dc5b190338095f269f545}{nodetool\+::get\+\_\+anonymous\+\_\+inbounds}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_a14f9b9f859e8362e20e818b823a20546}{nodetool\+::is\+\_\+filtered\+\_\+command}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address, int command)
+\item 
+std\+::optional$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ \mbox{\hyperlink{namespacenodetool_a8b3c1de4475dc1a6e318d7f3fec820a4}{nodetool\+::socks\+\_\+connect\+\_\+internal}} (const std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&stop\+\_\+signal, boost\+::asio\+::io\+\_\+service \&service, const boost\+::asio\+::ip\+::tcp\+::endpoint \&proxy, const epee\+::net\+\_\+utils\+::network\+\_\+address \&remote)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a365ed8b98523fdab3e73bedfef9ce487}{nodetool\+::arg\+\_\+offline}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\hypertarget{oxen__name__system_8h}{}\doxysection{src/cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.h File Reference}
+\label{oxen__name__system_8h}\index{src/cryptonote\_core/oxen\_name\_system.h@{src/cryptonote\_core/oxen\_name\_system.h}}
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for oxen\+\_\+name\+\_\+system.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__name__system_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen__name__system_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structons_1_1mapping__value}{ons\+::mapping\+\_\+value}}
+\item 
+struct \mbox{\hyperlink{structons_1_1owner__record}{ons\+::owner\+\_\+record}}
+\item 
+struct \mbox{\hyperlink{structons_1_1settings__record}{ons\+::settings\+\_\+record}}
+\item 
+struct \mbox{\hyperlink{structons_1_1mapping__record}{ons\+::mapping\+\_\+record}}
+\item 
+class \mbox{\hyperlink{classons_1_1sql__compiled__statement}{ons\+::sql\+\_\+compiled\+\_\+statement}}
+\item 
+struct \mbox{\hyperlink{structons_1_1name__system__db}{ons\+::name\+\_\+system\+\_\+db}}
+\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01ons_1_1mapping__value_01_4}{fmt\+::formatter$<$ ons\+::mapping\+\_\+value $>$}}
+\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01ons_1_1mapping__type_01_4}{fmt\+::formatter$<$ ons\+::mapping\+\_\+type $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceons}{ons}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16db}{ons\+::ons\+\_\+tx\+\_\+type}} \{ \mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16dbabd95200a60e47be9736970fd665f6195}{ons\+::ons\+\_\+tx\+\_\+type\+::lookup}}, 
+\mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16dba0461ebd2b773878eac9f78a891912d65}{ons\+::ons\+\_\+tx\+\_\+type\+::buy}}, 
+\mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16dba3ac340832f29c11538fbe2d6f75e8bcc}{ons\+::ons\+\_\+tx\+\_\+type\+::update}}, 
+\mbox{\hyperlink{namespaceons_ad8fc8eb3b31df5126f1e7dfa37ff16dbaa546cabc633a9d02345954ffa2c98f44}{ons\+::ons\+\_\+tx\+\_\+type\+::renew}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespaceons_a6f9b7728c33c526dd15abee49c621892}{ons\+::mapping\+\_\+type\+\_\+str}} (mapping\+\_\+type type)
+\item 
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_a34b1e532ce1722725f35204c52f56d63}{ons\+::mapping\+\_\+type\+\_\+allowed}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, mapping\+\_\+type type)
+\item 
+std\+::vector$<$ mapping\+\_\+type $>$ \mbox{\hyperlink{namespaceons_a399ab6bc2dc5de1a7f980e68b5fac662}{ons\+::all\+\_\+mapping\+\_\+types}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version)
+\item 
+sqlite3 $\ast$ \mbox{\hyperlink{namespaceons_ae450f35e1f708d5b8f9f854776ac5345}{ons\+::init\+\_\+oxen\+\_\+name\+\_\+system}} (const fs\+::path \&file\+\_\+path, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} read\+\_\+only)
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespaceons_a17121c7c0d89c4d39dc5dd72c4d19aa2}{ons\+::db\+\_\+mapping\+\_\+type}} (\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{ons\+::mapping\+\_\+type}} type)
+\item 
+std\+::optional$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{namespaceons_ac75415847a1185189cbafb64b29fff41}{ons\+::expiry\+\_\+blocks}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, mapping\+\_\+type type)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_afaf712021644e21862dc99657dfb727a}{ons\+::name\+\_\+hash\+\_\+bytes\+\_\+to\+\_\+base64}} (std\+::string\+\_\+view bytes)
+\item 
+std\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{namespaceons_aa6316b06d749f836540199855e0c2ee3}{ons\+::name\+\_\+hash\+\_\+input\+\_\+to\+\_\+base64}} (std\+::string\+\_\+view input)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_aed4be8981d98b0577eca75418fb41eed}{ons\+::validate\+\_\+ons\+\_\+name}} (mapping\+\_\+type type, std\+::string name, std\+::string $\ast$reason)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} $>$ \mbox{\hyperlink{namespaceons_a454f3595df7c0a1a14f37b939329cd39}{ons\+::encrypted\+\_\+wallet\+\_\+value\+\_\+to\+\_\+info}} (std\+::string name, std\+::string encrypted\+\_\+value, std\+::string nonce)
+\item 
+\mbox{\hyperlink{structons_1_1generic__signature}{ons\+::generic\+\_\+signature}} \mbox{\hyperlink{namespaceons_a86725b235150e0f6d85b8c93a115bf03}{ons\+::make\+\_\+ed25519\+\_\+signature}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&hash, \mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{crypto\+::ed25519\+\_\+secret\+\_\+key}} const \&skey)
+\item 
+\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} \mbox{\hyperlink{namespaceons_a9efe9b6629c76827de5b2eaab2219afc}{ons\+::make\+\_\+monero\+\_\+owner}} (\mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} const \&owner, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+subaddress)
+\item 
+\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} \mbox{\hyperlink{namespaceons_a93501e0ded065d327487c5db25ff7dd2}{ons\+::make\+\_\+ed25519\+\_\+owner}} (\mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} const \&pkey)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_ad608997cae6fc1e3786ecb64189f1148}{ons\+::parse\+\_\+owner\+\_\+to\+\_\+generic\+\_\+owner}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, std\+::string\+\_\+view owner, generic\+\_\+owner \&result, std\+::string $\ast$reason)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_afa04817974e51ad4e41abb679877b2ff}{ons\+::tx\+\_\+extra\+\_\+signature}} (std\+::string\+\_\+view value, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const $\ast$owner, \mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const $\ast$backup\+\_\+owner, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&prev\+\_\+txid)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceons_a8c7f4515c2ae781692c89ab4504952dd}{ons\+::validate\+\_\+mapping\+\_\+type}} (std\+::string\+\_\+view type, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, ons\+\_\+tx\+\_\+type txtype, mapping\+\_\+type $\ast$mapping\+\_\+type, std\+::string $\ast$reason)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceons_a333a47bb814504a3fbe576e3e2254b9c}{ons\+::name\+\_\+to\+\_\+hash}} (std\+::string\+\_\+view name, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&key)
+\item 
+std\+::string \mbox{\hyperlink{namespaceons_a67d0014e0fe6296f8ff6d755925009c2}{ons\+::name\+\_\+to\+\_\+base64\+\_\+hash}} (std\+::string\+\_\+view name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a6649a7975e76df11e78ae9bbe376f72f}{ons\+::\+W\+A\+L\+L\+E\+T\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}} = 64
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_ae5c07ec3fec3791890c5ad122df34f7a}{ons\+::\+W\+A\+L\+L\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+I\+N\+C\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+ID}} = 73
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a3784a0f57a121b1d44f574b7a4733979}{ons\+::\+W\+A\+L\+L\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+T\+H\+\_\+\+N\+O\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+\_\+\+ID}} = 65
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_aafd0012e57b4503dff6f816f178b7209}{ons\+::\+L\+O\+K\+I\+N\+E\+T\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}} = 63 + 5
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a8c0748b2d42604589c5f2c119b6c843b}{ons\+::\+L\+O\+K\+I\+N\+E\+T\+\_\+\+D\+O\+M\+A\+I\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+A\+X\+\_\+\+N\+O\+H\+Y\+P\+H\+EN}} = 32 + 5
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a89949edeb94e4417b1e3c010d3c747a0}{ons\+::\+L\+O\+K\+I\+N\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}} = sizeof(\mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}})
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_adc387613904f0957d2b7cff8e7dce630}{ons\+::\+S\+E\+S\+S\+I\+O\+N\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX}} = 64
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a363f99466b65d166a904ddc05be8cb0c}{ons\+::\+S\+E\+S\+S\+I\+O\+N\+\_\+\+P\+U\+B\+L\+I\+C\+\_\+\+K\+E\+Y\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+L\+E\+N\+G\+TH}} = 1 + sizeof(\mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}})
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a9530e6bb7b824044a03e87dde0bc99aa}{ons\+::\+N\+A\+M\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE}} = sizeof(\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}})
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_aebf8e36fd26113b0ba62494590b75f98}{ons\+::\+N\+A\+M\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+Z\+E\+\_\+\+B64\+\_\+\+M\+IN}} = (4$\ast$N\+A\+M\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE + 2) / 3
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_a903aa760038f51803e659a296696a15d}{ons\+::\+N\+A\+M\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+Z\+E\+\_\+\+B64\+\_\+\+M\+AX}} = (N\+A\+M\+E\+\_\+\+H\+A\+S\+H\+\_\+\+S\+I\+ZE + 2) / 3 $\ast$ 4
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceons_ae0d5f6f4add6d7d3f12c43911a2a4481}{ons\+::\+S\+O\+D\+I\+U\+M\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+I\+O\+N\+\_\+\+E\+X\+T\+R\+A\+\_\+\+B\+Y\+T\+ES}} = 40
+\item 
+constexpr char \mbox{\hyperlink{namespaceons_ab9879b199f17237959f43d0b3c5433ec}{ons\+::\+O\+N\+S\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+I\+M\+A\+RY}} = 0x00
+\item 
+constexpr char \mbox{\hyperlink{namespaceons_a56c20036c6a287db16692c92442ef47e}{ons\+::\+O\+N\+S\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+A\+D\+D\+R\+E\+SS}} = 0x01
+\item 
+constexpr char \mbox{\hyperlink{namespaceons_a543ff4ead8ad012d6b6479575787c356}{ons\+::\+O\+N\+S\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+ED}} = 0x02
+\end{DoxyCompactItemize}

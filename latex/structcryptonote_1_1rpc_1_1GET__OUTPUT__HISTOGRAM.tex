@@ -1,0 +1,95 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+AM Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM}\index{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM@{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+AM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+AM\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_1_1entry}{entry}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a263bc309c9c848f10d9603d330711d4c}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a6dffe14de932818b86d1d2c24469295e}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get a histogram of output amounts. For all amounts (possibly filtered by parameters), gives the number of outputs on the chain for that amount. Ring\+CT outputs counts as 0 amount.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily amounts} list of amounts in Atomic Units.
+\item {\ttfamily min\+\_\+count} The minimum amounts you are requesting.
+\item {\ttfamily max\+\_\+count} The maximum amounts you are requesting.
+\item {\ttfamily unlocked} Look for locked only.
+\item {\ttfamily recent\+\_\+cutoff} 
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily histogram} List of histogram entries. Each element is structured as follows\+:
+\begin{DoxyItemize}
+\item {\ttfamily uint64\+\_\+t} amount Output amount in atomic units.
+\item {\ttfamily uint64\+\_\+t} total\+\_\+instances
+\item {\ttfamily uint64\+\_\+t} unlocked\+\_\+instances
+\item {\ttfamily uint64\+\_\+t} recent\+\_\+instances 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a263bc309c9c848f10d9603d330711d4c}\label{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a263bc309c9c848f10d9603d330711d4c}} 
+\index{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM@{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM@{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a6dffe14de932818b86d1d2c24469295e}\label{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_a6dffe14de932818b86d1d2c24469295e}} 
+\index{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM@{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM@{cryptonote::rpc::GET\_OUTPUT\_HISTOGRAM}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__OUTPUT__HISTOGRAM_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,198 @@
+\hypertarget{classBootstrapFile}{}\doxysection{Bootstrap\+File Class Reference}
+\label{classBootstrapFile}\index{BootstrapFile@{BootstrapFile}}
+
+
+{\ttfamily \#include $<$bootstrap\+\_\+file.\+h$>$}
+
+
+
+Collaboration diagram for Bootstrap\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBootstrapFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_a5b11cd1f350355f5e4d846aa27f7ed51}{count\+\_\+bytes}} (\mbox{\hyperlink{namespacefs_a6d19688035fe152dc239ccbddd7f8226}{fs\+::ifstream}} \&import\+\_\+file, uint64\+\_\+t \mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}}, uint64\+\_\+t \&h, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&quit)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_a826f7fac09f9f96c4972ea955c50c17f}{count\+\_\+blocks}} (const fs\+::path \&dir\+\_\+path, std\+::streampos \&start\+\_\+pos, uint64\+\_\+t \&seek\+\_\+height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_a34356a16ef09b1d20966755668af14a6}{count\+\_\+blocks}} (const fs\+::path \&dir\+\_\+path)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_ad910464b611f9d0e704b5eddb4d7da97}{seek\+\_\+to\+\_\+first\+\_\+chunk}} (\mbox{\hyperlink{namespacefs_a6d19688035fe152dc239ccbddd7f8226}{fs\+::ifstream}} \&import\+\_\+file)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classBootstrapFile_a9429dc4b00e566e4e8f132bd28a7c262}{store\+\_\+blockchain\+\_\+raw}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} $\ast$cs, \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{cryptonote\+::tx\+\_\+memory\+\_\+pool}} $\ast$txp, fs\+::path \&output\+\_\+file, uint64\+\_\+t use\+\_\+block\+\_\+height=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ char $>$ \mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{buffer\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classBootstrapFile_a04359dd3b115a9385e23a6f6a0957994}{open\+\_\+writer}} (const fs\+::path \&file\+\_\+path)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classBootstrapFile_a2bab9d4587e161c66cea8a94f0b73148}{initialize\+\_\+file}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classBootstrapFile_a16c7fb19f562bfb9c4edec61b275f645}{close}} ()
+\item 
+void \mbox{\hyperlink{classBootstrapFile_a2ed4f6706b4dc09e710e4a9da118b029}{write\+\_\+block}} (\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}})
+\item 
+void \mbox{\hyperlink{classBootstrapFile_a360ba1dbb35e7c6e26bc52c4bbe10fbd}{flush\+\_\+chunk}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}} $\ast$ \mbox{\hyperlink{classBootstrapFile_a838395cec2ffcfd6e44f52607d518640}{m\+\_\+blockchain\+\_\+storage}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}} $\ast$ \mbox{\hyperlink{classBootstrapFile_a3f1d645a903b913c3cee28aab8d7a5ab}{m\+\_\+tx\+\_\+pool}}
+\item 
+std\+::ofstream $\ast$ \mbox{\hyperlink{classBootstrapFile_a0fea3c96884e8b8d66de3decc1034bb6}{m\+\_\+raw\+\_\+data\+\_\+file}}
+\item 
+\mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{buffer\+\_\+type}} \mbox{\hyperlink{classBootstrapFile_a7f8e72e034ddc1af5c88082fa7321031}{m\+\_\+buffer}}
+\item 
+boost\+::iostreams\+::stream$<$ boost\+::iostreams\+::back\+\_\+insert\+\_\+device$<$ \mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{buffer\+\_\+type}} $>$ $>$ $\ast$ \mbox{\hyperlink{classBootstrapFile_ac03c41193f0f1951704b1f9530368cce}{m\+\_\+output\+\_\+stream}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_ac4afe33efa5404c6915bacd01651d720}{m\+\_\+height}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classBootstrapFile_a3edd8c22f69ea94ce0fccdf7b7096504}{m\+\_\+cur\+\_\+height}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classBootstrapFile_acf0ef00abfcc497a8f954c0d0f97fb95}{m\+\_\+max\+\_\+chunk}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classBootstrapFile_a21349df041579c44761060219106098f}\label{classBootstrapFile_a21349df041579c44761060219106098f}} 
+\index{BootstrapFile@{BootstrapFile}!buffer\_type@{buffer\_type}}
+\index{buffer\_type@{buffer\_type}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{buffer\_type}{buffer\_type}}
+{\footnotesize\ttfamily typedef std\+::vector$<$char$>$ \mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{Bootstrap\+File\+::buffer\+\_\+type}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBootstrapFile_a16c7fb19f562bfb9c4edec61b275f645}\label{classBootstrapFile_a16c7fb19f562bfb9c4edec61b275f645}} 
+\index{BootstrapFile@{BootstrapFile}!close@{close}}
+\index{close@{close}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Bootstrap\+File\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a34356a16ef09b1d20966755668af14a6}\label{classBootstrapFile_a34356a16ef09b1d20966755668af14a6}} 
+\index{BootstrapFile@{BootstrapFile}!count\_blocks@{count\_blocks}}
+\index{count\_blocks@{count\_blocks}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{count\_blocks()}{count\_blocks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::count\+\_\+blocks (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{dir\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBootstrapFile_a826f7fac09f9f96c4972ea955c50c17f}\label{classBootstrapFile_a826f7fac09f9f96c4972ea955c50c17f}} 
+\index{BootstrapFile@{BootstrapFile}!count\_blocks@{count\_blocks}}
+\index{count\_blocks@{count\_blocks}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{count\_blocks()}{count\_blocks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::count\+\_\+blocks (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{dir\+\_\+path,  }\item[{std\+::streampos \&}]{start\+\_\+pos,  }\item[{uint64\+\_\+t \&}]{seek\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBootstrapFile_a5b11cd1f350355f5e4d846aa27f7ed51}\label{classBootstrapFile_a5b11cd1f350355f5e4d846aa27f7ed51}} 
+\index{BootstrapFile@{BootstrapFile}!count\_bytes@{count\_bytes}}
+\index{count\_bytes@{count\_bytes}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{count\_bytes()}{count\_bytes()}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::count\+\_\+bytes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacefs_a6d19688035fe152dc239ccbddd7f8226}{fs\+::ifstream}} \&}]{import\+\_\+file,  }\item[{uint64\+\_\+t}]{blocks,  }\item[{uint64\+\_\+t \&}]{h,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{quit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBootstrapFile_a360ba1dbb35e7c6e26bc52c4bbe10fbd}\label{classBootstrapFile_a360ba1dbb35e7c6e26bc52c4bbe10fbd}} 
+\index{BootstrapFile@{BootstrapFile}!flush\_chunk@{flush\_chunk}}
+\index{flush\_chunk@{flush\_chunk}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{flush\_chunk()}{flush\_chunk()}}
+{\footnotesize\ttfamily void Bootstrap\+File\+::flush\+\_\+chunk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a2bab9d4587e161c66cea8a94f0b73148}\label{classBootstrapFile_a2bab9d4587e161c66cea8a94f0b73148}} 
+\index{BootstrapFile@{BootstrapFile}!initialize\_file@{initialize\_file}}
+\index{initialize\_file@{initialize\_file}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{initialize\_file()}{initialize\_file()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Bootstrap\+File\+::initialize\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a04359dd3b115a9385e23a6f6a0957994}\label{classBootstrapFile_a04359dd3b115a9385e23a6f6a0957994}} 
+\index{BootstrapFile@{BootstrapFile}!open\_writer@{open\_writer}}
+\index{open\_writer@{open\_writer}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{open\_writer()}{open\_writer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Bootstrap\+File\+::open\+\_\+writer (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_ad910464b611f9d0e704b5eddb4d7da97}\label{classBootstrapFile_ad910464b611f9d0e704b5eddb4d7da97}} 
+\index{BootstrapFile@{BootstrapFile}!seek\_to\_first\_chunk@{seek\_to\_first\_chunk}}
+\index{seek\_to\_first\_chunk@{seek\_to\_first\_chunk}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{seek\_to\_first\_chunk()}{seek\_to\_first\_chunk()}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::seek\+\_\+to\+\_\+first\+\_\+chunk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacefs_a6d19688035fe152dc239ccbddd7f8226}{fs\+::ifstream}} \&}]{import\+\_\+file }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBootstrapFile_a9429dc4b00e566e4e8f132bd28a7c262}\label{classBootstrapFile_a9429dc4b00e566e4e8f132bd28a7c262}} 
+\index{BootstrapFile@{BootstrapFile}!store\_blockchain\_raw@{store\_blockchain\_raw}}
+\index{store\_blockchain\_raw@{store\_blockchain\_raw}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{store\_blockchain\_raw()}{store\_blockchain\_raw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Bootstrap\+File\+::store\+\_\+blockchain\+\_\+raw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} $\ast$}]{cs,  }\item[{\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{cryptonote\+::tx\+\_\+memory\+\_\+pool}} $\ast$}]{txp,  }\item[{fs\+::path \&}]{output\+\_\+file,  }\item[{uint64\+\_\+t}]{use\+\_\+block\+\_\+height = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBootstrapFile_a2ed4f6706b4dc09e710e4a9da118b029}\label{classBootstrapFile_a2ed4f6706b4dc09e710e4a9da118b029}} 
+\index{BootstrapFile@{BootstrapFile}!write\_block@{write\_block}}
+\index{write\_block@{write\_block}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{write\_block()}{write\_block()}}
+{\footnotesize\ttfamily void Bootstrap\+File\+::write\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBootstrapFile_a838395cec2ffcfd6e44f52607d518640}\label{classBootstrapFile_a838395cec2ffcfd6e44f52607d518640}} 
+\index{BootstrapFile@{BootstrapFile}!m\_blockchain\_storage@{m\_blockchain\_storage}}
+\index{m\_blockchain\_storage@{m\_blockchain\_storage}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_blockchain\_storage}{m\_blockchain\_storage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1Blockchain}{Blockchain}}$\ast$ Bootstrap\+File\+::m\+\_\+blockchain\+\_\+storage\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a7f8e72e034ddc1af5c88082fa7321031}\label{classBootstrapFile_a7f8e72e034ddc1af5c88082fa7321031}} 
+\index{BootstrapFile@{BootstrapFile}!m\_buffer@{m\_buffer}}
+\index{m\_buffer@{m\_buffer}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_buffer}{m\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{buffer\+\_\+type}} Bootstrap\+File\+::m\+\_\+buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a3edd8c22f69ea94ce0fccdf7b7096504}\label{classBootstrapFile_a3edd8c22f69ea94ce0fccdf7b7096504}} 
+\index{BootstrapFile@{BootstrapFile}!m\_cur\_height@{m\_cur\_height}}
+\index{m\_cur\_height@{m\_cur\_height}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_cur\_height}{m\_cur\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::m\+\_\+cur\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBootstrapFile_ac4afe33efa5404c6915bacd01651d720}\label{classBootstrapFile_ac4afe33efa5404c6915bacd01651d720}} 
+\index{BootstrapFile@{BootstrapFile}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t Bootstrap\+File\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBootstrapFile_acf0ef00abfcc497a8f954c0d0f97fb95}\label{classBootstrapFile_acf0ef00abfcc497a8f954c0d0f97fb95}} 
+\index{BootstrapFile@{BootstrapFile}!m\_max\_chunk@{m\_max\_chunk}}
+\index{m\_max\_chunk@{m\_max\_chunk}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_max\_chunk}{m\_max\_chunk}}
+{\footnotesize\ttfamily uint32\+\_\+t Bootstrap\+File\+::m\+\_\+max\+\_\+chunk\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classBootstrapFile_ac03c41193f0f1951704b1f9530368cce}\label{classBootstrapFile_ac03c41193f0f1951704b1f9530368cce}} 
+\index{BootstrapFile@{BootstrapFile}!m\_output\_stream@{m\_output\_stream}}
+\index{m\_output\_stream@{m\_output\_stream}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_output\_stream}{m\_output\_stream}}
+{\footnotesize\ttfamily boost\+::iostreams\+::stream$<$boost\+::iostreams\+::back\+\_\+insert\+\_\+device$<$\mbox{\hyperlink{classBootstrapFile_a21349df041579c44761060219106098f}{buffer\+\_\+type}}$>$ $>$$\ast$ Bootstrap\+File\+::m\+\_\+output\+\_\+stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a0fea3c96884e8b8d66de3decc1034bb6}\label{classBootstrapFile_a0fea3c96884e8b8d66de3decc1034bb6}} 
+\index{BootstrapFile@{BootstrapFile}!m\_raw\_data\_file@{m\_raw\_data\_file}}
+\index{m\_raw\_data\_file@{m\_raw\_data\_file}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_raw\_data\_file}{m\_raw\_data\_file}}
+{\footnotesize\ttfamily std\+::ofstream$\ast$ Bootstrap\+File\+::m\+\_\+raw\+\_\+data\+\_\+file\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classBootstrapFile_a3f1d645a903b913c3cee28aab8d7a5ab}\label{classBootstrapFile_a3f1d645a903b913c3cee28aab8d7a5ab}} 
+\index{BootstrapFile@{BootstrapFile}!m\_tx\_pool@{m\_tx\_pool}}
+\index{m\_tx\_pool@{m\_tx\_pool}!BootstrapFile@{BootstrapFile}}
+\doxysubsubsection{\texorpdfstring{m\_tx\_pool}{m\_tx\_pool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{tx\+\_\+memory\+\_\+pool}}$\ast$ Bootstrap\+File\+::m\+\_\+tx\+\_\+pool\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blockchain\+\_\+utilities/\mbox{\hyperlink{bootstrap__file_8h}{bootstrap\+\_\+file.\+h}}\item 
+src/blockchain\+\_\+utilities/\mbox{\hyperlink{bootstrap__file_8cpp}{bootstrap\+\_\+file.\+cpp}}\end{DoxyCompactItemize}

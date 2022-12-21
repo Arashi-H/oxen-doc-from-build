@@ -1,0 +1,245 @@
+\hypertarget{wallet__errors_8h}{}\doxysection{src/wallet/wallet\+\_\+errors.h File Reference}
+\label{wallet__errors_8h}\index{src/wallet/wallet\_errors.h@{src/wallet/wallet\_errors.h}}
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$system\+\_\+error$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+tx\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+Include dependency graph for wallet\+\_\+errors.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet__errors_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet__errors_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__error__base}{tools\+::error\+::wallet\+\_\+error\+\_\+base$<$ Base $>$}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1failed__rpc__request}{tools\+::error\+::failed\+\_\+rpc\+\_\+request$<$ Base, msg\+\_\+index $>$}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__internal__error}{tools\+::error\+::wallet\+\_\+internal\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1unexpected__txin__type}{tools\+::error\+::unexpected\+\_\+txin\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__not__initialized}{tools\+::error\+::wallet\+\_\+not\+\_\+initialized}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1multisig__export__needed}{tools\+::error\+::multisig\+\_\+export\+\_\+needed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1multisig__import__needed}{tools\+::error\+::multisig\+\_\+import\+\_\+needed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1password__needed}{tools\+::error\+::password\+\_\+needed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1password__entry__failed}{tools\+::error\+::password\+\_\+entry\+\_\+failed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1file__error__base}{tools\+::error\+::file\+\_\+error\+\_\+base$<$ msg\+\_\+index $>$}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1invalid__password}{tools\+::error\+::invalid\+\_\+password}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1invalid__priority}{tools\+::error\+::invalid\+\_\+priority}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1invalid__multisig__seed}{tools\+::error\+::invalid\+\_\+multisig\+\_\+seed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1invalid__pregenerated__random}{tools\+::error\+::invalid\+\_\+pregenerated\+\_\+random}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1refresh__error}{tools\+::error\+::refresh\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1index__outofbound}{tools\+::error\+::index\+\_\+outofbound}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1account__index__outofbound}{tools\+::error\+::account\+\_\+index\+\_\+outofbound}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1address__index__outofbound}{tools\+::error\+::address\+\_\+index\+\_\+outofbound}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1acc__outs__lookup__error}{tools\+::error\+::acc\+\_\+outs\+\_\+lookup\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1block__parse__error}{tools\+::error\+::block\+\_\+parse\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__parse__error}{tools\+::error\+::tx\+\_\+parse\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1get__tx__pool__error}{tools\+::error\+::get\+\_\+tx\+\_\+pool\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1out__of__hashchain__bounds__error}{tools\+::error\+::out\+\_\+of\+\_\+hashchain\+\_\+bounds\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1signature__check__failed}{tools\+::error\+::signature\+\_\+check\+\_\+failed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1transfer__error}{tools\+::error\+::transfer\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1not__enough__unlocked__money}{tools\+::error\+::not\+\_\+enough\+\_\+unlocked\+\_\+money}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1not__enough__money}{tools\+::error\+::not\+\_\+enough\+\_\+money}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__not__possible}{tools\+::error\+::tx\+\_\+not\+\_\+possible}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1not__enough__outs__to__mix}{tools\+::error\+::not\+\_\+enough\+\_\+outs\+\_\+to\+\_\+mix}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__not__constructed}{tools\+::error\+::tx\+\_\+not\+\_\+constructed}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__rejected}{tools\+::error\+::tx\+\_\+rejected}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__blink__rejected}{tools\+::error\+::tx\+\_\+blink\+\_\+rejected}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__sum__overflow}{tools\+::error\+::tx\+\_\+sum\+\_\+overflow}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1tx__too__big}{tools\+::error\+::tx\+\_\+too\+\_\+big}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1zero__destination}{tools\+::error\+::zero\+\_\+destination}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__rpc__error}{tools\+::error\+::wallet\+\_\+rpc\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__generic__rpc__error}{tools\+::error\+::wallet\+\_\+generic\+\_\+rpc\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1daemon__busy}{tools\+::error\+::daemon\+\_\+busy}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1no__connection__to__daemon}{tools\+::error\+::no\+\_\+connection\+\_\+to\+\_\+daemon}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1is__key__image__spent__error}{tools\+::error\+::is\+\_\+key\+\_\+image\+\_\+spent\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1get__histogram__error}{tools\+::error\+::get\+\_\+histogram\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1get__output__distribution}{tools\+::error\+::get\+\_\+output\+\_\+distribution}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1get__output__blacklist}{tools\+::error\+::get\+\_\+output\+\_\+blacklist}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1wallet__files__doesnt__correspond}{tools\+::error\+::wallet\+\_\+files\+\_\+doesnt\+\_\+correspond}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1get__accrued__batched__earnings__error}{tools\+::error\+::get\+\_\+accrued\+\_\+batched\+\_\+earnings\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1mms__error}{tools\+::error\+::mms\+\_\+error}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1no__connection__to__bitmessage}{tools\+::error\+::no\+\_\+connection\+\_\+to\+\_\+bitmessage}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1error_1_1bitmessage__api__error}{tools\+::error\+::bitmessage\+\_\+api\+\_\+error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1error}{tools\+::error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wallet__errors_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{S\+T\+R\+I\+N\+G\+I\+Z\+E\+\_\+\+D\+E\+T\+A\+IL}}(x)~\#x
+\item 
+\#define \mbox{\hyperlink{wallet__errors_8h_a3428692efe6051ef30016ffde1a9f7bb}{S\+T\+R\+I\+N\+G\+I\+ZE}}(x)~\mbox{\hyperlink{wallet__errors_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{S\+T\+R\+I\+N\+G\+I\+Z\+E\+\_\+\+D\+E\+T\+A\+IL}}(x)
+\item 
+\#define \mbox{\hyperlink{wallet__errors_8h_a7f9e7e51a40a994a5491a2ad8ba5769d}{T\+H\+R\+O\+W\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}(err\+\_\+type, ...)
+\item 
+\#define \mbox{\hyperlink{wallet__errors_8h_a230675a7a96f2d01bb0ec3871e540523}{T\+H\+R\+O\+W\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+IF}}(cond,  err\+\_\+type, ...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef wallet\+\_\+error\+\_\+base$<$ std\+::logic\+\_\+error $>$ \mbox{\hyperlink{namespacetools_1_1error_ac3df008c985b70645e16222760930755}{tools\+::error\+::wallet\+\_\+logic\+\_\+error}}
+\item 
+typedef wallet\+\_\+error\+\_\+base$<$ std\+::runtime\+\_\+error $>$ \mbox{\hyperlink{namespacetools_1_1error_ae933d0596e7878970070c7c953bc4a1f}{tools\+::error\+::wallet\+\_\+runtime\+\_\+error}}
+\item 
+typedef file\+\_\+error\+\_\+base$<$ file\+\_\+exists\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_a974635b09acc402ceff31367492f69b7}{tools\+::error\+::file\+\_\+exists}}
+\item 
+typedef file\+\_\+error\+\_\+base$<$ file\+\_\+not\+\_\+found\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_a598058187888426e7904627e8348bf5f}{tools\+::error\+::file\+\_\+not\+\_\+found}}
+\item 
+typedef file\+\_\+error\+\_\+base$<$ file\+\_\+read\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_ab1d0d99a1faaa2b7de6ebb60767a401a}{tools\+::error\+::file\+\_\+read\+\_\+error}}
+\item 
+typedef file\+\_\+error\+\_\+base$<$ file\+\_\+save\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_a29ecb389a31cb5d897a320ecd79c0f25}{tools\+::error\+::file\+\_\+save\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ refresh\+\_\+error, get\+\_\+blocks\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_aa16be725935f8e3c136d1072d5b7e97e}{tools\+::error\+::get\+\_\+blocks\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ refresh\+\_\+error, get\+\_\+service\+\_\+nodes\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_a97c579968153e5e41bc4e4507b2b9405}{tools\+::error\+::get\+\_\+service\+\_\+nodes\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ refresh\+\_\+error, get\+\_\+hashes\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_a860098984edcebf23d5f4c1a18a406d9}{tools\+::error\+::get\+\_\+hashes\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ refresh\+\_\+error, get\+\_\+out\+\_\+indices\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_aa5263bab4ce9768ca30eda836007b674}{tools\+::error\+::get\+\_\+out\+\_\+indices\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ transfer\+\_\+error, get\+\_\+hard\+\_\+fork\+\_\+version\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_ac0f44efb05f7c3da618ab9183930e19f}{tools\+::error\+::get\+\_\+hard\+\_\+fork\+\_\+version\+\_\+error}}
+\item 
+typedef failed\+\_\+rpc\+\_\+request$<$ transfer\+\_\+error, get\+\_\+outs\+\_\+error\+\_\+message\+\_\+index $>$ \mbox{\hyperlink{namespacetools_1_1error_aaf488150b44fb5fd1aa38c3c8ef59cf8}{tools\+::error\+::get\+\_\+outs\+\_\+error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8b}{tools\+::error\+::failed\+\_\+rpc\+\_\+request\+\_\+message\+\_\+indices}} \{ \newline
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8ba16bdf5cf0a2c4f70b229ed00e952a081}{tools\+::error\+::get\+\_\+blocks\+\_\+error\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8bacc2550544580e488412a59aa86ef48a5}{tools\+::error\+::get\+\_\+hashes\+\_\+error\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8ba09ea1789e656d0dc2d1ae9022e2758a8}{tools\+::error\+::get\+\_\+out\+\_\+indices\+\_\+error\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8bafee183323353dc76f6e0b0e2dcdc3eb2}{tools\+::error\+::get\+\_\+outs\+\_\+error\+\_\+message\+\_\+index}}, 
+\newline
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8ba5787ca269c7c7ee12ee94e61adb233de}{tools\+::error\+::get\+\_\+service\+\_\+nodes\+\_\+error\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a2acd03050ab22515731a9d8864677d8babb09c8419c3d259a6782beed7f6675ad}{tools\+::error\+::get\+\_\+hard\+\_\+fork\+\_\+version\+\_\+error\+\_\+message\+\_\+index}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacetools_1_1error_a08845222a530ef684801796a8dd5ebfc}{tools\+::error\+::file\+\_\+error\+\_\+message\+\_\+indices}} \{ \mbox{\hyperlink{namespacetools_1_1error_a08845222a530ef684801796a8dd5ebfcaf3a8efb1b0c89e28e20cfb9da9648571}{tools\+::error\+::file\+\_\+exists\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a08845222a530ef684801796a8dd5ebfcac16c744ab3eb27b778c7fea413d6f879}{tools\+::error\+::file\+\_\+not\+\_\+found\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a08845222a530ef684801796a8dd5ebfca75c09325c237472ce6e8768ef3d0bee3}{tools\+::error\+::file\+\_\+read\+\_\+error\+\_\+message\+\_\+index}}, 
+\mbox{\hyperlink{namespacetools_1_1error_a08845222a530ef684801796a8dd5ebfca11d6c0ec17792da85b91fc7d7d777ea5}{tools\+::error\+::file\+\_\+save\+\_\+error\+\_\+message\+\_\+index}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+Exception , typename... T\+Args$>$ }\\void \mbox{\hyperlink{namespacetools_1_1error_a24170484cb198e634498bd69e21bed9f}{tools\+::error\+::throw\+\_\+wallet\+\_\+ex}} (std\+::string \&\&loc, T\+Args \&\&... args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespacetools_1_1error_a2d0596b0d7b5dbf09a2516ba5b73e7f4}{tools\+::error\+::failed\+\_\+rpc\+\_\+request\+\_\+messages}} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$const \mbox{\hyperlink{namespacetools_1_1error_a16aecca7d1970898535033c66a726c7c}{tools\+::error\+::file\+\_\+error\+\_\+messages}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wallet__errors_8h_a3428692efe6051ef30016ffde1a9f7bb}\label{wallet__errors_8h_a3428692efe6051ef30016ffde1a9f7bb}} 
+\index{wallet\_errors.h@{wallet\_errors.h}!STRINGIZE@{STRINGIZE}}
+\index{STRINGIZE@{STRINGIZE}!wallet\_errors.h@{wallet\_errors.h}}
+\doxysubsubsection{\texorpdfstring{STRINGIZE}{STRINGIZE}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+N\+G\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{wallet__errors_8h_a9a63ce5ce3b143f8df9df20769c2ab86}{S\+T\+R\+I\+N\+G\+I\+Z\+E\+\_\+\+D\+E\+T\+A\+IL}}(x)}
+
+\mbox{\Hypertarget{wallet__errors_8h_a9a63ce5ce3b143f8df9df20769c2ab86}\label{wallet__errors_8h_a9a63ce5ce3b143f8df9df20769c2ab86}} 
+\index{wallet\_errors.h@{wallet\_errors.h}!STRINGIZE\_DETAIL@{STRINGIZE\_DETAIL}}
+\index{STRINGIZE\_DETAIL@{STRINGIZE\_DETAIL}!wallet\_errors.h@{wallet\_errors.h}}
+\doxysubsubsection{\texorpdfstring{STRINGIZE\_DETAIL}{STRINGIZE\_DETAIL}}
+{\footnotesize\ttfamily \#define S\+T\+R\+I\+N\+G\+I\+Z\+E\+\_\+\+D\+E\+T\+A\+IL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\#x}
+
+\mbox{\Hypertarget{wallet__errors_8h_a7f9e7e51a40a994a5491a2ad8ba5769d}\label{wallet__errors_8h_a7f9e7e51a40a994a5491a2ad8ba5769d}} 
+\index{wallet\_errors.h@{wallet\_errors.h}!THROW\_WALLET\_EXCEPTION@{THROW\_WALLET\_EXCEPTION}}
+\index{THROW\_WALLET\_EXCEPTION@{THROW\_WALLET\_EXCEPTION}!wallet\_errors.h@{wallet\_errors.h}}
+\doxysubsubsection{\texorpdfstring{THROW\_WALLET\_EXCEPTION}{THROW\_WALLET\_EXCEPTION}}
+{\footnotesize\ttfamily \#define T\+H\+R\+O\+W\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{err\+\_\+type,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{                                                                                                      \mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{    oxen::log::error}}(\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}, \textcolor{stringliteral}{"THROW EXCEPTION: \{\}"}, \#err\_type);                                                 \(\backslash\)}
+\DoxyCodeLine{    tools::error::throw\_wallet\_ex<err\_type>(std::string(\_\_FILE\_\_ \textcolor{stringliteral}{":"} \mbox{\hyperlink{wallet__errors_8h_a3428692efe6051ef30016ffde1a9f7bb}{STRINGIZE}}(\_\_LINE\_\_)), \#\# \_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wallet__errors_8h_a230675a7a96f2d01bb0ec3871e540523}\label{wallet__errors_8h_a230675a7a96f2d01bb0ec3871e540523}} 
+\index{wallet\_errors.h@{wallet\_errors.h}!THROW\_WALLET\_EXCEPTION\_IF@{THROW\_WALLET\_EXCEPTION\_IF}}
+\index{THROW\_WALLET\_EXCEPTION\_IF@{THROW\_WALLET\_EXCEPTION\_IF}!wallet\_errors.h@{wallet\_errors.h}}
+\doxysubsubsection{\texorpdfstring{THROW\_WALLET\_EXCEPTION\_IF}{THROW\_WALLET\_EXCEPTION\_IF}}
+{\footnotesize\ttfamily \#define T\+H\+R\+O\+W\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+IF(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{err\+\_\+type,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if} (cond)                                                                                            \(\backslash\)}
+\DoxyCodeLine{  \{                                                                                                         \mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{    oxen::log::error}}(\mbox{\hyperlink{rctOps_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}}, \textcolor{stringliteral}{"\{\}. THROW EXCEPTION: \{\}"}, \#cond, \#err\_type);                                                 \(\backslash\)}
+\DoxyCodeLine{    tools::error::throw\_wallet\_ex<err\_type>(std::string(\_\_FILE\_\_ \textcolor{stringliteral}{":"} \mbox{\hyperlink{wallet__errors_8h_a3428692efe6051ef30016ffde1a9f7bb}{STRINGIZE}}(\_\_LINE\_\_)), \#\# \_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{  \} \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

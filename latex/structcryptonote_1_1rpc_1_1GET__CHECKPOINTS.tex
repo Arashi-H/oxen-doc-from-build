@@ -1,0 +1,112 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS}\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a2ead624807808b8322f82cd7f465aeee}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af142176af6ab3699388d2b5f2b0712c6}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a8f122943da1a6d871b36710781c5a953}{M\+A\+X\+\_\+\+C\+O\+U\+NT}} = 256
+\item 
+static constexpr uint32\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af66baa4bec8389ad6eafaeb62850bbb6}{N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+\_\+\+T\+O\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+B\+Y\+\_\+\+D\+E\+F\+A\+U\+LT}} = 60
+\item 
+static constexpr uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af0cace30561769ce6df21fade021ae70}{H\+E\+I\+G\+H\+T\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE}} = std\+::numeric\+\_\+limits$<$uint64\+\_\+t$>$\+::max() -\/ 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Query hardcoded/service node checkpoints stored for the blockchain. Omit all arguments to retrieve the latest \char`\"{}count\char`\"{} checkpoints.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily start\+\_\+height} Optional\+: Get the first count checkpoints starting from this height. Specify both start and end to get the checkpoints inbetween.
+\item {\ttfamily end\+\_\+height} Optional\+: Get the first count checkpoints before end height. Specify both start and end to get the checkpoints inbetween.
+\item {\ttfamily count} Optional\+: Number of checkpoints to query.
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} generic R\+PC error code; \char`\"{}\+O\+K\char`\"{} means the request was successful.
+\item {\ttfamily checkpoints} Array of requested checkpoints 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a2ead624807808b8322f82cd7f465aeee}\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a2ead624807808b8322f82cd7f465aeee}} 
+\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af0cace30561769ce6df21fade021ae70}\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af0cace30561769ce6df21fade021ae70}} 
+\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}!HEIGHT\_SENTINEL\_VALUE@{HEIGHT\_SENTINEL\_VALUE}}
+\index{HEIGHT\_SENTINEL\_VALUE@{HEIGHT\_SENTINEL\_VALUE}!cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+\doxysubsubsection{\texorpdfstring{HEIGHT\_SENTINEL\_VALUE}{HEIGHT\_SENTINEL\_VALUE}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::\+H\+E\+I\+G\+H\+T\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE = std\+::numeric\+\_\+limits$<$uint64\+\_\+t$>$\+::max() -\/ 1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a8f122943da1a6d871b36710781c5a953}\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_a8f122943da1a6d871b36710781c5a953}} 
+\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}!MAX\_COUNT@{MAX\_COUNT}}
+\index{MAX\_COUNT@{MAX\_COUNT}!cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+\doxysubsubsection{\texorpdfstring{MAX\_COUNT}{MAX\_COUNT}}
+{\footnotesize\ttfamily constexpr size\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::\+M\+A\+X\+\_\+\+C\+O\+U\+NT = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af66baa4bec8389ad6eafaeb62850bbb6}\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af66baa4bec8389ad6eafaeb62850bbb6}} 
+\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}!NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT@{NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT}}
+\index{NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT@{NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT}!cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+\doxysubsubsection{\texorpdfstring{NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT}{NUM\_CHECKPOINTS\_TO\_QUERY\_BY\_DEFAULT}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+\_\+\+T\+O\+\_\+\+Q\+U\+E\+R\+Y\+\_\+\+B\+Y\+\_\+\+D\+E\+F\+A\+U\+LT = 60\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af142176af6ab3699388d2b5f2b0712c6}\label{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_af142176af6ab3699388d2b5f2b0712c6}} 
+\index{cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_CHECKPOINTS@{cryptonote::rpc::GET\_CHECKPOINTS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CHECKPOINTS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

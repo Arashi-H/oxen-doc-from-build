@@ -1,0 +1,64 @@
+\hypertarget{chacha_8h}{}\doxysection{src/crypto/chacha.h File Reference}
+\label{chacha_8h}\index{src/crypto/chacha.h@{src/crypto/chacha.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for chacha.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{chacha_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chacha_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{chacha_8h_a3bf636f5bb87b7b750ba95fb2e52724c}{C\+H\+A\+C\+H\+A\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE}}~32
+\item 
+\#define \mbox{\hyperlink{chacha_8h_aba99921ac4622a790c347264a71efd86}{C\+H\+A\+C\+H\+A\+\_\+\+I\+V\+\_\+\+S\+I\+ZE}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{chacha_8h_a8b2efed6eb443a3e5606ac5dbaf9f2aa}{chacha8}} (const void $\ast$data, size\+\_\+t length, const uint8\+\_\+t $\ast$key, const uint8\+\_\+t $\ast$\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\item 
+void \mbox{\hyperlink{chacha_8h_a220bb7311582b4764e4c992e7fef633b}{chacha20}} (const void $\ast$data, size\+\_\+t length, const uint8\+\_\+t $\ast$key, const uint8\+\_\+t $\ast$\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{chacha_8h_aba99921ac4622a790c347264a71efd86}\label{chacha_8h_aba99921ac4622a790c347264a71efd86}} 
+\index{chacha.h@{chacha.h}!CHACHA\_IV\_SIZE@{CHACHA\_IV\_SIZE}}
+\index{CHACHA\_IV\_SIZE@{CHACHA\_IV\_SIZE}!chacha.h@{chacha.h}}
+\doxysubsubsection{\texorpdfstring{CHACHA\_IV\_SIZE}{CHACHA\_IV\_SIZE}}
+{\footnotesize\ttfamily \#define C\+H\+A\+C\+H\+A\+\_\+\+I\+V\+\_\+\+S\+I\+ZE~8}
+
+\mbox{\Hypertarget{chacha_8h_a3bf636f5bb87b7b750ba95fb2e52724c}\label{chacha_8h_a3bf636f5bb87b7b750ba95fb2e52724c}} 
+\index{chacha.h@{chacha.h}!CHACHA\_KEY\_SIZE@{CHACHA\_KEY\_SIZE}}
+\index{CHACHA\_KEY\_SIZE@{CHACHA\_KEY\_SIZE}!chacha.h@{chacha.h}}
+\doxysubsubsection{\texorpdfstring{CHACHA\_KEY\_SIZE}{CHACHA\_KEY\_SIZE}}
+{\footnotesize\ttfamily \#define C\+H\+A\+C\+H\+A\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE~32}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{chacha_8h_a220bb7311582b4764e4c992e7fef633b}\label{chacha_8h_a220bb7311582b4764e4c992e7fef633b}} 
+\index{chacha.h@{chacha.h}!chacha20@{chacha20}}
+\index{chacha20@{chacha20}!chacha.h@{chacha.h}}
+\doxysubsubsection{\texorpdfstring{chacha20()}{chacha20()}}
+{\footnotesize\ttfamily void chacha20 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{chacha_8h_a8b2efed6eb443a3e5606ac5dbaf9f2aa}\label{chacha_8h_a8b2efed6eb443a3e5606ac5dbaf9f2aa}} 
+\index{chacha.h@{chacha.h}!chacha8@{chacha8}}
+\index{chacha8@{chacha8}!chacha.h@{chacha.h}}
+\doxysubsubsection{\texorpdfstring{chacha8()}{chacha8()}}
+{\footnotesize\ttfamily void chacha8 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{const uint8\+\_\+t $\ast$}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+

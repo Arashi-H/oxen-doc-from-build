@@ -1,0 +1,163 @@
+\hypertarget{blockchain__db_8h}{}\doxysection{src/blockchain\+\_\+db/blockchain\+\_\+db.h File Reference}
+\label{blockchain__db_8h}\index{src/blockchain\_db/blockchain\_db.h@{src/blockchain\_db/blockchain\_db.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/difficulty.\+h\char`\"{}}\newline
+Include dependency graph for blockchain\+\_\+db.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__db_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__db_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1output__data__t}{cryptonote\+::output\+\_\+data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em a struct containing output metadata \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcryptonote_1_1tx__data__t}{cryptonote\+::tx\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1alt__block__data__1__t}{cryptonote\+::alt\+\_\+block\+\_\+data\+\_\+1\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{cryptonote\+::alt\+\_\+block\+\_\+data\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em a struct containing txpool per transaction metadata \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{cryptonote\+::\+D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\begin{DoxyCompactList}\small\item\em A base class for \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} exceptions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{cryptonote\+::\+D\+B\+\_\+\+E\+R\+R\+OR}}
+\begin{DoxyCompactList}\small\item\em A generic \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} exception. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__ERROR__TXN__START}{cryptonote\+::\+D\+B\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+X\+N\+\_\+\+S\+T\+A\+RT}}
+\begin{DoxyCompactList}\small\item\em thrown when there is an error starting a DB transaction \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__OPEN__FAILURE}{cryptonote\+::\+D\+B\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em thrown when opening the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} fails \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__CREATE__FAILURE}{cryptonote\+::\+D\+B\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em thrown when creating the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} fails \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1DB__SYNC__FAILURE}{cryptonote\+::\+D\+B\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\begin{DoxyCompactList}\small\item\em thrown when synchronizing the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} to disk fails \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+\begin{DoxyCompactList}\small\item\em thrown when a requested block does not exist \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1BLOCK__PARENT__DNE}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+D\+NE}}
+\begin{DoxyCompactList}\small\item\em thrown when a block\textquotesingle{}s parent does not exist (and it needed to) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1BLOCK__EXISTS}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+E\+X\+I\+S\+TS}}
+\begin{DoxyCompactList}\small\item\em thrown when a block exists, but shouldn\textquotesingle{}t, namely when adding a block \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1BLOCK__INVALID}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+I\+N\+V\+A\+L\+ID}}
+\begin{DoxyCompactList}\small\item\em thrown when something is wrong with the block to be added \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{cryptonote\+::\+T\+X\+\_\+\+D\+NE}}
+\begin{DoxyCompactList}\small\item\em thrown when a requested transaction does not exist \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1TX__EXISTS}{cryptonote\+::\+T\+X\+\_\+\+E\+X\+I\+S\+TS}}
+\begin{DoxyCompactList}\small\item\em thrown when a transaction exists, but shouldn\textquotesingle{}t, namely when adding a block \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1OUTPUT__DNE}{cryptonote\+::\+O\+U\+T\+P\+U\+T\+\_\+\+D\+NE}}
+\begin{DoxyCompactList}\small\item\em thrown when a requested output does not exist \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1OUTPUT__EXISTS}{cryptonote\+::\+O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+I\+S\+TS}}
+\begin{DoxyCompactList}\small\item\em thrown when an output exists, but shouldn\textquotesingle{}t, namely when adding a block \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1KEY__IMAGE__EXISTS}{cryptonote\+::\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+X\+I\+S\+TS}}
+\begin{DoxyCompactList}\small\item\em thrown when a spent key image exists, but shouldn\textquotesingle{}t, namely when adding a block \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{cryptonote\+::\+Blockchain\+DB}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} backing store interface declaration/contract. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1db__txn__guard}{cryptonote\+::db\+\_\+txn\+\_\+guard}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1db__rtxn__guard}{cryptonote\+::db\+\_\+rtxn\+\_\+guard}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1db__wtxn__guard}{cryptonote\+::db\+\_\+wtxn\+\_\+guard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{blockchain__db_8h_a69742ef958d58fa6fd1e743a6dbfe601}{D\+B\+F\+\_\+\+S\+A\+FE}}~1
+\item 
+\#define \mbox{\hyperlink{blockchain__db_8h_abb2e91f7144d76fea945c425df1ca868}{D\+B\+F\+\_\+\+F\+A\+ST}}~2
+\item 
+\#define \mbox{\hyperlink{blockchain__db_8h_abd5c595dd2ae762bcc240b3f8100f218}{D\+B\+F\+\_\+\+F\+A\+S\+T\+E\+ST}}~4
+\item 
+\#define \mbox{\hyperlink{blockchain__db_8h_a4ff98992aedd6407e1e97866cb24ed07}{D\+B\+F\+\_\+\+R\+D\+O\+N\+LY}}~8
+\item 
+\#define \mbox{\hyperlink{blockchain__db_8h_ae6fd6282ddf27bd179a235f06b51209e}{D\+B\+F\+\_\+\+S\+A\+L\+V\+A\+GE}}~0x10
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, uint64\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Blockchain\+DB $\ast$ \mbox{\hyperlink{namespacecryptonote_a8eb94757810eb3512b1ccf0dd9d0aa56}{cryptonote\+::new\+\_\+db}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cryptonote Blockchain Database Interface
+
+The DB interface is a store for the canonical block chain. It serves as a persistent storage for the blockchain.
+
+For the sake of efficiency, a concrete implementation may also store some blockchain data outside of the blocks, such as spent transfer key images, unspent transaction outputs, etc.
+
+Examples are as follows\+:
+
+Transactions are duplicated so that we don\textquotesingle{}t have to fetch a whole block in order to fetch a transaction from that block.
+
+Spent key images are duplicated outside of the blocks so it is quick to verify an output hasn\textquotesingle{}t already been spent
+
+Unspent transaction outputs are duplicated to quickly gather random outputs to use for mixins
+
+Indices and Identifiers\+: The word \char`\"{}index\char`\"{} is used ambiguously throughout this code. It is particularly confusing when talking about the output or transaction tables since their indexing can refer to themselves or each other. I have attempted to clarify these usages here\+:
+
+Blocks, transactions, and outputs are all identified by a hash. For storage efficiency, a 64-\/bit integer ID is used instead of the hash inside the DB. Tables exist to map between hash and ID. A block ID is also referred to as its \char`\"{}height\char`\"{}. Transactions and outputs generally are not referred to by ID outside of this module, but the tx ID is returned by tx\+\_\+exists() and used by get\+\_\+tx\+\_\+amount\+\_\+output\+\_\+indices(). Like their corresponding hashes, I\+Ds are globally unique.
+
+The remaining uses of the word \char`\"{}index\char`\"{} refer to local offsets, and are not globally unique. An \char`\"{}amount output index\char`\"{} N refers to the Nth output of a specific amount. An \char`\"{}output local index\char`\"{} N refers to the Nth output of a specific tx.
+
+Exceptions\+: D\+B\+\_\+\+E\+R\+R\+OR -- generic D\+B\+\_\+\+O\+P\+E\+N\+\_\+\+F\+A\+I\+L\+U\+RE D\+B\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+A\+I\+L\+U\+RE D\+B\+\_\+\+S\+Y\+N\+C\+\_\+\+F\+A\+I\+L\+U\+RE B\+L\+O\+C\+K\+\_\+\+D\+NE B\+L\+O\+C\+K\+\_\+\+P\+A\+R\+E\+N\+T\+\_\+\+D\+NE B\+L\+O\+C\+K\+\_\+\+E\+X\+I\+S\+TS B\+L\+O\+C\+K\+\_\+\+I\+N\+V\+A\+L\+ID -- considering making this multiple errors T\+X\+\_\+\+D\+NE T\+X\+\_\+\+E\+X\+I\+S\+TS O\+U\+T\+P\+U\+T\+\_\+\+D\+NE O\+U\+T\+P\+U\+T\+\_\+\+E\+X\+I\+S\+TS K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+E\+X\+I\+S\+TS 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{blockchain__db_8h_abb2e91f7144d76fea945c425df1ca868}\label{blockchain__db_8h_abb2e91f7144d76fea945c425df1ca868}} 
+\index{blockchain\_db.h@{blockchain\_db.h}!DBF\_FAST@{DBF\_FAST}}
+\index{DBF\_FAST@{DBF\_FAST}!blockchain\_db.h@{blockchain\_db.h}}
+\doxysubsubsection{\texorpdfstring{DBF\_FAST}{DBF\_FAST}}
+{\footnotesize\ttfamily \#define D\+B\+F\+\_\+\+F\+A\+ST~2}
+
+\mbox{\Hypertarget{blockchain__db_8h_abd5c595dd2ae762bcc240b3f8100f218}\label{blockchain__db_8h_abd5c595dd2ae762bcc240b3f8100f218}} 
+\index{blockchain\_db.h@{blockchain\_db.h}!DBF\_FASTEST@{DBF\_FASTEST}}
+\index{DBF\_FASTEST@{DBF\_FASTEST}!blockchain\_db.h@{blockchain\_db.h}}
+\doxysubsubsection{\texorpdfstring{DBF\_FASTEST}{DBF\_FASTEST}}
+{\footnotesize\ttfamily \#define D\+B\+F\+\_\+\+F\+A\+S\+T\+E\+ST~4}
+
+\mbox{\Hypertarget{blockchain__db_8h_a4ff98992aedd6407e1e97866cb24ed07}\label{blockchain__db_8h_a4ff98992aedd6407e1e97866cb24ed07}} 
+\index{blockchain\_db.h@{blockchain\_db.h}!DBF\_RDONLY@{DBF\_RDONLY}}
+\index{DBF\_RDONLY@{DBF\_RDONLY}!blockchain\_db.h@{blockchain\_db.h}}
+\doxysubsubsection{\texorpdfstring{DBF\_RDONLY}{DBF\_RDONLY}}
+{\footnotesize\ttfamily \#define D\+B\+F\+\_\+\+R\+D\+O\+N\+LY~8}
+
+\mbox{\Hypertarget{blockchain__db_8h_a69742ef958d58fa6fd1e743a6dbfe601}\label{blockchain__db_8h_a69742ef958d58fa6fd1e743a6dbfe601}} 
+\index{blockchain\_db.h@{blockchain\_db.h}!DBF\_SAFE@{DBF\_SAFE}}
+\index{DBF\_SAFE@{DBF\_SAFE}!blockchain\_db.h@{blockchain\_db.h}}
+\doxysubsubsection{\texorpdfstring{DBF\_SAFE}{DBF\_SAFE}}
+{\footnotesize\ttfamily \#define D\+B\+F\+\_\+\+S\+A\+FE~1}
+
+\mbox{\Hypertarget{blockchain__db_8h_ae6fd6282ddf27bd179a235f06b51209e}\label{blockchain__db_8h_ae6fd6282ddf27bd179a235f06b51209e}} 
+\index{blockchain\_db.h@{blockchain\_db.h}!DBF\_SALVAGE@{DBF\_SALVAGE}}
+\index{DBF\_SALVAGE@{DBF\_SALVAGE}!blockchain\_db.h@{blockchain\_db.h}}
+\doxysubsubsection{\texorpdfstring{DBF\_SALVAGE}{DBF\_SALVAGE}}
+{\footnotesize\ttfamily \#define D\+B\+F\+\_\+\+S\+A\+L\+V\+A\+GE~0x10}
+

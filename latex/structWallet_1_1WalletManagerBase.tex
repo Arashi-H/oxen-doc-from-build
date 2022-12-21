@@ -1,0 +1,442 @@
+\hypertarget{structWallet_1_1WalletManagerBase}{}\doxysection{Wallet\+::Wallet\+Manager\+Base Struct Reference}
+\label{structWallet_1_1WalletManagerBase}\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+
+
+Wallet\+Manager -\/ provides functions to manage wallets.  
+
+
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Wallet\+Manager\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{structWallet_1_1WalletManagerBase__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_a100e91d6daa79522984289f0152044ec}{create\+Wallet}} (std\+::string\+\_\+view path, const std\+::string \&password, const std\+::string \&language, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} nettype, uint64\+\_\+t kdf\+\_\+rounds=1)=0
+\begin{DoxyCompactList}\small\item\em Creates new wallet. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_acb4953b96c92be78d3911e20c692cae1}{open\+Wallet}} (std\+::string\+\_\+view path, const std\+::string \&password, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} nettype, uint64\+\_\+t kdf\+\_\+rounds=1, \mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$listener=nullptr)=0
+\begin{DoxyCompactList}\small\item\em Opens existing wallet. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_ad8fe437c4a25e30486246f469fba0b89}{recovery\+Wallet}} (std\+::string\+\_\+view path, const std\+::string \&password, const std\+::string \&mnemonic, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} nettype=\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8da8bb45f028610bd73b679b3d24d76592d}{M\+A\+I\+N\+N\+ET}}, uint64\+\_\+t restore\+Height=0, uint64\+\_\+t kdf\+\_\+rounds=1, const std\+::string \&seed\+\_\+offset=\{\})=0
+\begin{DoxyCompactList}\small\item\em recovers existing wallet using mnemonic (electrum seed) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_a352927cec64980c8db5affe09cffb286}{create\+Wallet\+From\+Keys}} (std\+::string\+\_\+view path, const std\+::string \&password, const std\+::string \&language, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} nettype, uint64\+\_\+t restore\+Height, const std\+::string \&address\+String, const std\+::string \&view\+Key\+String, const std\+::string \&spend\+Key\+String=\char`\"{}\char`\"{}, uint64\+\_\+t kdf\+\_\+rounds=1)=0
+\begin{DoxyCompactList}\small\item\em recovers existing wallet using keys. Creates a view only wallet if spend key is omitted \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_abef826faf6e37a9de741adc16f7860dd}{create\+Wallet\+From\+Device}} (std\+::string\+\_\+view path, const std\+::string \&password, \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}} nettype, const std\+::string \&device\+Name, uint64\+\_\+t restore\+Height=0, const std\+::string \&subaddress\+Lookahead=\char`\"{}\char`\"{}, uint64\+\_\+t kdf\+\_\+rounds=1, \mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$listener=nullptr)=0
+\begin{DoxyCompactList}\small\item\em creates wallet using hardware device. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1WalletManagerBase_ac4a681c6db86618851a583ca206869c4}{close\+Wallet}} (\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$wallet, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} store=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})=0
+\begin{DoxyCompactList}\small\item\em Closes wallet. In case operation succeeded, wallet object deleted. in case operation failed, wallet object not deleted. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1WalletManagerBase_a011a26dc09dc192f70a5b2b9cb88aa8f}{wallet\+Exists}} (std\+::string\+\_\+view path)=0
+\begin{DoxyCompactList}\small\item\em T\+O\+DO\+: delme wallet\+Exists -\/ check if the given filename is the wallet. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1WalletManagerBase_affefa92249aae578e90d416c5eb8a621}{verify\+Wallet\+Password}} (std\+::string\+\_\+view keys\+\_\+file\+\_\+name, const std\+::string \&password, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} no\+\_\+spend\+\_\+key, uint64\+\_\+t kdf\+\_\+rounds=1) const =0
+\begin{DoxyCompactList}\small\item\em verify\+Wallet\+Password -\/ check if the given filename is the wallet \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1WalletManagerBase_a49036e681720461f19b78a3804f9b7d7}{query\+Wallet\+Device}} (\mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Wallet\+::\+Device}} \&device\+\_\+type, std\+::string\+\_\+view keys\+\_\+file\+\_\+name, const std\+::string \&password, uint64\+\_\+t kdf\+\_\+rounds=1) const =0
+\begin{DoxyCompactList}\small\item\em determine the key storage for the specified wallet file \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structWallet_1_1WalletManagerBase_afc2fc48639b6fd97499a2a023ec5f69a}{find\+Wallets}} (std\+::string\+\_\+view path)=0
+\begin{DoxyCompactList}\small\item\em find\+Wallets -\/ searches for the wallet files by given path name recursively \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1WalletManagerBase_ab3dd8105d744110e897e074b4dbfa5af}{error\+String}} () const =0
+\begin{DoxyCompactList}\small\item\em returns verbose error string regarding last error; \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{structWallet_1_1WalletManagerBase_af4bb7de4405468daf569e8276a1c60d6}{set\+Daemon\+Address}} (std\+::string address)=0
+\begin{DoxyCompactList}\small\item\em set the daemon address (hostname and port) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1WalletManagerBase_af52ec973b67576a284b39b8fad7a74bf}{connected}} (uint32\+\_\+t $\ast$version=nullptr)=0
+\begin{DoxyCompactList}\small\item\em returns whether the daemon can be reached, and its version number \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1WalletManagerBase_adcc82906b80e650d9f71ebd1f9d09049}{blockchain\+Height}} ()=0
+\begin{DoxyCompactList}\small\item\em returns current blockchain height \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1WalletManagerBase_a262cc7e4db4a143e4a133d202450402e}{blockchain\+Target\+Height}} ()=0
+\begin{DoxyCompactList}\small\item\em returns current blockchain target height \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1WalletManagerBase_add9592f0015b284d22f957e77484a5f1}{block\+Target}} ()=0
+\begin{DoxyCompactList}\small\item\em returns current block target \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wallet\+Manager -\/ provides functions to manage wallets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_adcc82906b80e650d9f71ebd1f9d09049}\label{structWallet_1_1WalletManagerBase_adcc82906b80e650d9f71ebd1f9d09049}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!blockchainHeight@{blockchainHeight}}
+\index{blockchainHeight@{blockchainHeight}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{blockchainHeight()}{blockchainHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+Manager\+Base\+::blockchain\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns current blockchain height 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a2ac5f0be567b25464fa0a20920ada9f1}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_a262cc7e4db4a143e4a133d202450402e}\label{structWallet_1_1WalletManagerBase_a262cc7e4db4a143e4a133d202450402e}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!blockchainTargetHeight@{blockchainTargetHeight}}
+\index{blockchainTargetHeight@{blockchainTargetHeight}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{blockchainTargetHeight()}{blockchainTargetHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+Manager\+Base\+::blockchain\+Target\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns current blockchain target height 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a71c0fb6af25a29d8045a4592efbb4018}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_add9592f0015b284d22f957e77484a5f1}\label{structWallet_1_1WalletManagerBase_add9592f0015b284d22f957e77484a5f1}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!blockTarget@{blockTarget}}
+\index{blockTarget@{blockTarget}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{blockTarget()}{blockTarget()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Wallet\+Manager\+Base\+::block\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns current block target 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_aba1cb11932e3a71f9db0ef24a2df0877}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_ac4a681c6db86618851a583ca206869c4}\label{structWallet_1_1WalletManagerBase_ac4a681c6db86618851a583ca206869c4}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!closeWallet@{closeWallet}}
+\index{closeWallet@{closeWallet}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{closeWallet()}{closeWallet()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+Manager\+Base\+::close\+Wallet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} $\ast$}]{wallet,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{store = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Closes wallet. In case operation succeeded, wallet object deleted. in case operation failed, wallet object not deleted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet} & previously opened / created wallet instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a9a3f947e379a9a8ab7fff0606a8eaf1f}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_af52ec973b67576a284b39b8fad7a74bf}\label{structWallet_1_1WalletManagerBase_af52ec973b67576a284b39b8fad7a74bf}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!connected@{connected}}
+\index{connected@{connected}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{connected()}{connected()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+Manager\+Base\+::connected (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{version = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns whether the daemon can be reached, and its version number 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a00e67a257bfcd63859cac07b4cfff684}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_a100e91d6daa79522984289f0152044ec}\label{structWallet_1_1WalletManagerBase_a100e91d6daa79522984289f0152044ec}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!createWallet@{createWallet}}
+\index{createWallet@{createWallet}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{createWallet()}{createWallet()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}}$\ast$ Wallet\+::\+Wallet\+Manager\+Base\+::create\+Wallet (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{const std\+::string \&}]{language,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates new wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of wallet file (utf-\/8) \\
+\hline
+{\em password} & Password of wallet file \\
+\hline
+{\em language} & \mbox{\hyperlink{namespaceLanguage}{Language}} to be used to generate electrum seed mnemonic \\
+\hline
+{\em nettype} & Network type \\
+\hline
+{\em kdf\+\_\+rounds} & Number of rounds for key derivation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} instance (\mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{Wallet\+::status()}} needs to be called to check if created successfully) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a8b436993f035219e3c75c142d38e1adc}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_abef826faf6e37a9de741adc16f7860dd}\label{structWallet_1_1WalletManagerBase_abef826faf6e37a9de741adc16f7860dd}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!createWalletFromDevice@{createWalletFromDevice}}
+\index{createWalletFromDevice@{createWalletFromDevice}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{createWalletFromDevice()}{createWalletFromDevice()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}}$\ast$ Wallet\+::\+Wallet\+Manager\+Base\+::create\+Wallet\+From\+Device (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype,  }\item[{const std\+::string \&}]{device\+Name,  }\item[{uint64\+\_\+t}]{restore\+Height = {\ttfamily 0},  }\item[{const std\+::string \&}]{subaddress\+Lookahead = {\ttfamily \char`\"{}\char`\"{}},  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1},  }\item[{\mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$}]{listener = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+creates wallet using hardware device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of wallet file to be created (utf-\/8) \\
+\hline
+{\em password} & Password of wallet file \\
+\hline
+{\em nettype} & Network type \\
+\hline
+{\em device\+Name} & Device name \\
+\hline
+{\em restore\+Height} & restore from start height (0 sets to current height) \\
+\hline
+{\em subaddress\+Lookahead} & Size of subaddress lookahead (empty sets to some default low value) \\
+\hline
+{\em kdf\+\_\+rounds} & Number of rounds for key derivation function \\
+\hline
+{\em listener} & \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} listener to set to the wallet after creation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} instance (\mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{Wallet\+::status()}} needs to be called to check if recovered successfully) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a54c86cee07cbb6341eb230c0ca776952}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_a352927cec64980c8db5affe09cffb286}\label{structWallet_1_1WalletManagerBase_a352927cec64980c8db5affe09cffb286}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!createWalletFromKeys@{createWalletFromKeys}}
+\index{createWalletFromKeys@{createWalletFromKeys}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{createWalletFromKeys()}{createWalletFromKeys()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}}$\ast$ Wallet\+::\+Wallet\+Manager\+Base\+::create\+Wallet\+From\+Keys (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{const std\+::string \&}]{language,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype,  }\item[{uint64\+\_\+t}]{restore\+Height,  }\item[{const std\+::string \&}]{address\+String,  }\item[{const std\+::string \&}]{view\+Key\+String,  }\item[{const std\+::string \&}]{spend\+Key\+String = {\ttfamily \char`\"{}\char`\"{}},  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+recovers existing wallet using keys. Creates a view only wallet if spend key is omitted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of wallet file to be created (utf-\/8) \\
+\hline
+{\em password} & Password of wallet file \\
+\hline
+{\em language} & language \\
+\hline
+{\em nettype} & Network type \\
+\hline
+{\em restore\+Height} & restore from start height \\
+\hline
+{\em address\+String} & public address \\
+\hline
+{\em view\+Key\+String} & view key \\
+\hline
+{\em spend\+Key\+String} & spend key (optional) \\
+\hline
+{\em kdf\+\_\+rounds} & Number of rounds for key derivation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} instance (\mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{Wallet\+::status()}} needs to be called to check if recovered successfully) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a8e2e1e5aa50dd7b044370c752177e50b}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_ab3dd8105d744110e897e074b4dbfa5af}\label{structWallet_1_1WalletManagerBase_ab3dd8105d744110e897e074b4dbfa5af}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!errorString@{errorString}}
+\index{errorString@{errorString}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{errorString()}{errorString()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Wallet\+Manager\+Base\+::error\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+returns verbose error string regarding last error; 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_aee39dfdd411c784146c78bfbda05bd35}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_afc2fc48639b6fd97499a2a023ec5f69a}\label{structWallet_1_1WalletManagerBase_afc2fc48639b6fd97499a2a023ec5f69a}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!findWallets@{findWallets}}
+\index{findWallets@{findWallets}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{findWallets()}{findWallets()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wallet\+::\+Wallet\+Manager\+Base\+::find\+Wallets (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+find\+Wallets -\/ searches for the wallet files by given path name recursively 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ starting point to search (utf-\/8) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ list of strings with found wallets (absolute paths); 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_abddd3e318225ada6af5daf9d85f06f66}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_acb4953b96c92be78d3911e20c692cae1}\label{structWallet_1_1WalletManagerBase_acb4953b96c92be78d3911e20c692cae1}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!openWallet@{openWallet}}
+\index{openWallet@{openWallet}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{openWallet()}{openWallet()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}}$\ast$ Wallet\+::\+Wallet\+Manager\+Base\+::open\+Wallet (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1},  }\item[{\mbox{\hyperlink{structWallet_1_1WalletListener}{Wallet\+Listener}} $\ast$}]{listener = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Opens existing wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of wallet file \\
+\hline
+{\em password} & Password of wallet file \\
+\hline
+{\em nettype} & Network type \\
+\hline
+{\em kdf\+\_\+rounds} & Number of rounds for key derivation function \\
+\hline
+{\em listener} & \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} listener to set to the wallet after creation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} instance (\mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{Wallet\+::status()}} needs to be called to check if opened successfully) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_af536ba27be570bbce99632b75b0d36b7}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_a49036e681720461f19b78a3804f9b7d7}\label{structWallet_1_1WalletManagerBase_a49036e681720461f19b78a3804f9b7d7}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!queryWalletDevice@{queryWalletDevice}}
+\index{queryWalletDevice@{queryWalletDevice}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{queryWalletDevice()}{queryWalletDevice()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+Manager\+Base\+::query\+Wallet\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Wallet\+::\+Device}} \&}]{device\+\_\+type,  }\item[{std\+::string\+\_\+view}]{keys\+\_\+file\+\_\+name,  }\item[{const std\+::string \&}]{password,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+determine the key storage for the specified wallet file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+type} & (O\+UT) wallet backend as enumerated in \mbox{\hyperlink{structWallet_1_1Wallet_ac1b5d3c1296ee954607934d9ee7fe14f}{Wallet\+::\+Device}} \\
+\hline
+{\em keys\+\_\+file\+\_\+name} & Keys file to verify password for (utf-\/8) \\
+\hline
+{\em password} & Password to verify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if password correct, else false
+\end{DoxyReturn}
+for verification only -\/ determines key storage hardware 
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_aab477a1926c93a925179b2fe8ce89403}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_ad8fe437c4a25e30486246f469fba0b89}\label{structWallet_1_1WalletManagerBase_ad8fe437c4a25e30486246f469fba0b89}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!recoveryWallet@{recoveryWallet}}
+\index{recoveryWallet@{recoveryWallet}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{recoveryWallet()}{recoveryWallet()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}}$\ast$ Wallet\+::\+Wallet\+Manager\+Base\+::recovery\+Wallet (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path,  }\item[{const std\+::string \&}]{password,  }\item[{const std\+::string \&}]{mnemonic,  }\item[{\mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8d}{Network\+Type}}}]{nettype = {\ttfamily \mbox{\hyperlink{namespaceWallet_abfb10a7c9c7398c054c950f9af02ab8da8bb45f028610bd73b679b3d24d76592d}{M\+A\+I\+N\+N\+ET}}},  }\item[{uint64\+\_\+t}]{restore\+Height = {\ttfamily 0},  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1},  }\item[{const std\+::string \&}]{seed\+\_\+offset = {\ttfamily \{\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+recovers existing wallet using mnemonic (electrum seed) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Name of wallet file to be created (utf-\/8) \\
+\hline
+{\em password} & Password of wallet file \\
+\hline
+{\em mnemonic} & mnemonic (25 words electrum seed) \\
+\hline
+{\em nettype} & Network type \\
+\hline
+{\em restore\+Height} & restore from start height \\
+\hline
+{\em kdf\+\_\+rounds} & Number of rounds for key derivation function \\
+\hline
+{\em seed\+\_\+offset} & Seed offset passphrase (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{structWallet_1_1Wallet}{Wallet}} instance (\mbox{\hyperlink{structWallet_1_1Wallet_aa45e994ea0fc531e0278a4f7a5850b04}{Wallet\+::status()}} needs to be called to check if recovered successfully) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a817004d061515e3624490237848a91fb}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_af4bb7de4405468daf569e8276a1c60d6}\label{structWallet_1_1WalletManagerBase_af4bb7de4405468daf569e8276a1c60d6}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!setDaemonAddress@{setDaemonAddress}}
+\index{setDaemonAddress@{setDaemonAddress}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{setDaemonAddress()}{setDaemonAddress()}}
+{\footnotesize\ttfamily virtual void Wallet\+::\+Wallet\+Manager\+Base\+::set\+Daemon\+Address (\begin{DoxyParamCaption}\item[{std\+::string}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+set the daemon address (hostname and port) 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a5bcb9306206d15ac9ffe8254766b3599}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_affefa92249aae578e90d416c5eb8a621}\label{structWallet_1_1WalletManagerBase_affefa92249aae578e90d416c5eb8a621}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!verifyWalletPassword@{verifyWalletPassword}}
+\index{verifyWalletPassword@{verifyWalletPassword}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{verifyWalletPassword()}{verifyWalletPassword()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+Manager\+Base\+::verify\+Wallet\+Password (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{keys\+\_\+file\+\_\+name,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{no\+\_\+spend\+\_\+key,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds = {\ttfamily 1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+verify\+Wallet\+Password -\/ check if the given filename is the wallet 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keys\+\_\+file\+\_\+name} & -\/ location of keys file (utf-\/8) \\
+\hline
+{\em password} & -\/ password to verify \\
+\hline
+{\em no\+\_\+spend\+\_\+key} & -\/ verify only view keys? \\
+\hline
+{\em kdf\+\_\+rounds} & -\/ number of rounds for key derivation function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true if password is correct
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function will fail when the wallet keys file is opened because the wallet program locks the keys file. In this case, \mbox{\hyperlink{structWallet_1_1Wallet_aa782ad70045e00f3fafa55544eba7a00}{Wallet\+::unlock\+Keys\+File()}} and \mbox{\hyperlink{structWallet_1_1Wallet_afa14550a2353ed4bce69c71d1b228c05}{Wallet\+::lock\+Keys\+File()}} need to be called before and after the call to this function, respectively. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a1d6c8fab7ce73e25a13a5e5acf0792b9}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1WalletManagerBase_a011a26dc09dc192f70a5b2b9cb88aa8f}\label{structWallet_1_1WalletManagerBase_a011a26dc09dc192f70a5b2b9cb88aa8f}} 
+\index{Wallet::WalletManagerBase@{Wallet::WalletManagerBase}!walletExists@{walletExists}}
+\index{walletExists@{walletExists}!Wallet::WalletManagerBase@{Wallet::WalletManagerBase}}
+\doxysubsubsection{\texorpdfstring{walletExists()}{walletExists()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Wallet\+Manager\+Base\+::wallet\+Exists (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+T\+O\+DO\+: delme wallet\+Exists -\/ check if the given filename is the wallet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ filename (utf-\/8) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ true if wallet exists 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1WalletManagerImpl_a181adaf713fc2d5bc3be08cca5729d8c}{Wallet\+::\+Wallet\+Manager\+Impl}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\end{DoxyCompactItemize}

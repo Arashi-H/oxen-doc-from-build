@@ -1,0 +1,78 @@
+\hypertarget{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING}{}\doxysection{tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG Struct Reference}
+\label{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING}\index{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING@{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING}}
+
+
+{\ttfamily \#include $<$wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_1_1request}{request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_1_1response}{response}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_afccb51225f9dab01c0e9664e3baee1d1}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_ad8ed61d89ef8b2ed5c9a6ee71d0734ea}{description}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_afccb51225f9dab01c0e9664e3baee1d1}\label{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_afccb51225f9dab01c0e9664e3baee1d1}} 
+\index{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING@{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING}!names@{names}}
+\index{names@{names}!tools::wallet\_rpc::ONS\_UPDATE\_MAPPING@{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_ad8ed61d89ef8b2ed5c9a6ee71d0734ea}\label{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_ad8ed61d89ef8b2ed5c9a6ee71d0734ea}} 
+\index{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING@{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING}!description@{description}}
+\index{description@{description}!tools::wallet\_rpc::ONS\_UPDATE\_MAPPING@{tools::wallet\_rpc::ONS\_UPDATE\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily constexpr const char$\ast$ tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::description\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{R\textcolor{stringliteral}{"(Update a Loki Name System mapping to refer to a new address or owner.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{At least one field (value, owner, or backup owner) must be specified in the update.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The existing owner (wallet address or ed25519 public key) of the mapping must be used to sign the update. If no signature is provided then the wallet's active address (or subaddress) will be used to sign the update.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{If signing is performed externally then you must first encrypt the `value` (if being updated), then sign a BLAKE2b hash of \{encryptedvalue || owner || backup\_owner || txid\} (where txid is the most recent ONS update or registration transaction of this mapping; each of encrypted/owner/backup are empty strings if not being updated). For a wallet owner this is signed using the owning wallet's spend key; for a Ed25519 key this is a standard Ed25519 signature.)"}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h}{wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

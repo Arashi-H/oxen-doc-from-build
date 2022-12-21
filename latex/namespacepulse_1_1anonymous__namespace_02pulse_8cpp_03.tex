@@ -1,0 +1,387 @@
+\hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03}{}\doxysection{pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\} Namespace Reference}
+\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1message__queue}{message\+\_\+queue}}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__send__stage}{pulse\+\_\+send\+\_\+stage}}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__wait__stage}{pulse\+\_\+wait\+\_\+stage}}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}}
+\item 
+struct \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__history}{round\+\_\+history}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad65385118d050ba4a5120bbd21238572}{quorum\+\_\+array}} = std\+::array$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{namespaceservice__nodes_ae9cbd0134985b8fafe837ef380787484}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+N\+U\+M\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+RS}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \{ \newline
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaeb24ec663babd027dcc0de275780032e}{round\+\_\+state\+::null\+\_\+state}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea744ec0b71fa14f2a5878fd70d3e7dfcd}{round\+\_\+state\+::wait\+\_\+for\+\_\+next\+\_\+block}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea8cda0494526fa3d4cf166ea67843d15a}{round\+\_\+state\+::prepare\+\_\+for\+\_\+round}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea760d446f0626230c0add779d2de78dad}{round\+\_\+state\+::wait\+\_\+for\+\_\+round}}, 
+\newline
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaee4cf03b35842d8bfa7572eb3a243639}{round\+\_\+state\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+handshakes}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea3f7206732ee038d594b89d20bd741500}{round\+\_\+state\+::send\+\_\+handshake\+\_\+bitsets}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacf09afdb695cd6f14aa6a603bb48ce3}{round\+\_\+state\+::wait\+\_\+for\+\_\+handshake\+\_\+bitsets}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea406e1e6a0fe3b5af70e86c9ce7edc0b0}{round\+\_\+state\+::send\+\_\+block\+\_\+template}}, 
+\newline
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaef139c901153c1aa899455ccd9dacd3d}{round\+\_\+state\+::wait\+\_\+for\+\_\+block\+\_\+template}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea144a97dc384f6e474bbc96973b15e205}{round\+\_\+state\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value\+\_\+hashes}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaf67e7a2eb6e3af611f16251c3fa65d51}{round\+\_\+state\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacc7f13c0578444f15b72341cdb1d1ec}{round\+\_\+state\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+signed\+\_\+blocks}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122}{sn\+\_\+type}} \{ \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a334c4a4c42fdb79d7ebc3e73b517e6f8}{sn\+\_\+type\+::none}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122af18122ddebc4341b4ed758b3f0817da8}{sn\+\_\+type\+::producer}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a8d6c391e7cb39133c91b73281a24f21f}{sn\+\_\+type\+::validator}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662d}{queueing\+\_\+state}} \{ \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662daa2e4822a98337283e39f7b60acf85ec9}{queueing\+\_\+state\+::empty}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662dac5946eb9400717fd6f40e26e36cdb498}{queueing\+\_\+state\+::received}}, 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662da9d090a4005926e9e2a32e05cbd8c2fc6}{queueing\+\_\+state\+::processed}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_abaf61ab44f9fa92e31c5b608d355c3dd}{round\+\_\+state\+\_\+string}} (\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{structstate}{state}})
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a2b2090a23402adcb21fee2ec49ca7a76}{blake2b\+\_\+hash}} (void const $\ast$data, size\+\_\+t size)
+\item 
+std\+::string \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a62e33c5eebf07ca63bddcd906d944924}{log\+\_\+prefix}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}})
+\item 
+std\+::bitset$<$ sizeof(uint16\+\_\+t) $\ast$8 $>$ \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a83864cc35fd1c73dfdc17c76376b715b}{bitset\+\_\+view16}} (uint16\+\_\+t val)
+\item 
+\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a4563e87b82bf1ff284260204dd4bf583}{msg\+\_\+init\+\_\+from\+\_\+context}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}})
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aa3e06169814d3685122bc5681bfb1a71}{msg\+\_\+signature\+\_\+hash}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&top\+\_\+block\+\_\+hash, \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg)
+\item 
+std\+::string \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6a818a77ed3ef728aa6a2c18a5e9f1f8}{msg\+\_\+source\+\_\+string}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_adc084ddc01ce7bb4064eb486e7876ac5}{msg\+\_\+signature\+\_\+check}} (\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&top\+\_\+block\+\_\+hash, \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum, std\+::string $\ast$\mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}})
+\item 
+void \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0f806ff122f5e719b4005414ad62b58c}{relay\+\_\+validator\+\_\+handshake\+\_\+bit\+\_\+or\+\_\+bitset}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} sending\+\_\+bitset)
+\item 
+void \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae8b9b63cf58513b66c869799714387e}{handle\+\_\+messages\+\_\+received\+\_\+early\+\_\+for}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__wait__stage}{pulse\+\_\+wait\+\_\+stage}} \&stage, void $\ast$quorumnet\+\_\+state)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a1411bc0221e001801d428c85c0d1a4a4}{enforce\+\_\+validator\+\_\+participation\+\_\+and\+\_\+timeouts}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__wait__stage}{pulse\+\_\+wait\+\_\+stage}} const \&stage, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} timed\+\_\+out, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} all\+\_\+received)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a996b273a51f0d11a419d9ebcbc9124e3}{goto\+\_\+preparing\+\_\+for\+\_\+next\+\_\+round}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}})
+\item 
+void \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aaed0e28c433b39921219701902c1a5fd}{clear\+\_\+round\+\_\+data}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}})
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae16b1d03a2702d0502a512c983c41ee}{goto\+\_\+wait\+\_\+for\+\_\+next\+\_\+block\+\_\+and\+\_\+clear\+\_\+round\+\_\+data}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}})
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a75facc8127f980ea1378e9f198586ff0}{wait\+\_\+for\+\_\+next\+\_\+block}} (uint64\+\_\+t hf16\+\_\+height, \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&blockchain)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9ef8c258089c13d6224acf6cb4f9170f}{prepare\+\_\+for\+\_\+round}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&blockchain)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9f8c955f068b0573ff967c5b381657f8}{wait\+\_\+for\+\_\+round}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&blockchain)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae5e21f89d98451d9c352c15cea07df4}{send\+\_\+and\+\_\+wait\+\_\+for\+\_\+handshakes}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a98e52ec8fdd0a294824d5aef79a5f151}{send\+\_\+handshake\+\_\+bitsets}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad7cdeb1e1167dc8d4c24f2d5b14678c7}{wait\+\_\+for\+\_\+handshake\+\_\+bitsets}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a70c2cce8556934a069051bffad8782ef}{send\+\_\+block\+\_\+template}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&blockchain)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7842548dfc0cc52dd15edff466ef690d}{wait\+\_\+for\+\_\+block\+\_\+template}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&blockchain)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a298e01a4b96a2bb222c774f918213adf}{send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value\+\_\+hashes}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6115b8fe83bd3f6fd6277354bf5163f2}{send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key)
+\item 
+\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a91fd7287ac269f1f032c447d920e6cbd}{send\+\_\+and\+\_\+wait\+\_\+for\+\_\+signed\+\_\+blocks}} (\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}, \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&node\+\_\+list, void $\ast$quorumnet\+\_\+state, \mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&key, \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ac92607fac2d797fe697f024ff4273664}{logcat}} = log\+::\+Cat(\char`\"{}pulse\char`\"{})
+\item 
+\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}{context}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad65385118d050ba4a5120bbd21238572}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad65385118d050ba4a5120bbd21238572}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!quorum\_array@{quorum\_array}}
+\index{quorum\_array@{quorum\_array}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{quorum\_array}{quorum\_array}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad65385118d050ba4a5120bbd21238572}{quorum\+\_\+array}} = typedef std\+::array$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, \mbox{\hyperlink{namespaceservice__nodes_ae9cbd0134985b8fafe837ef380787484}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+N\+U\+M\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+RS}}$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662d}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662d}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!queueing\_state@{queueing\_state}}
+\index{queueing\_state@{queueing\_state}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{queueing\_state}{queueing\_state}}
+{\footnotesize\ttfamily enum pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662d}{queueing\+\_\+state}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{empty@{empty}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!empty@{empty}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662daa2e4822a98337283e39f7b60acf85ec9}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662daa2e4822a98337283e39f7b60acf85ec9}} 
+empty&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{received@{received}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!received@{received}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662dac5946eb9400717fd6f40e26e36cdb498}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662dac5946eb9400717fd6f40e26e36cdb498}} 
+received&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{processed@{processed}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!processed@{processed}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662da9d090a4005926e9e2a32e05cbd8c2fc6}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7b1f8338d707ea01fb98d7b3a2f2662da9d090a4005926e9e2a32e05cbd8c2fc6}} 
+processed&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!round\_state@{round\_state}}
+\index{round\_state@{round\_state}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{round\_state}{round\_state}}
+{\footnotesize\ttfamily enum pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{null\_state@{null\_state}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!null\_state@{null\_state}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaeb24ec663babd027dcc0de275780032e}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaeb24ec663babd027dcc0de275780032e}} 
+null\+\_\+state&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wait\_for\_next\_block@{wait\_for\_next\_block}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_next\_block@{wait\_for\_next\_block}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea744ec0b71fa14f2a5878fd70d3e7dfcd}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea744ec0b71fa14f2a5878fd70d3e7dfcd}} 
+wait\+\_\+for\+\_\+next\+\_\+block&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{prepare\_for\_round@{prepare\_for\_round}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!prepare\_for\_round@{prepare\_for\_round}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea8cda0494526fa3d4cf166ea67843d15a}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea8cda0494526fa3d4cf166ea67843d15a}} 
+prepare\+\_\+for\+\_\+round&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wait\_for\_round@{wait\_for\_round}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_round@{wait\_for\_round}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea760d446f0626230c0add779d2de78dad}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea760d446f0626230c0add779d2de78dad}} 
+wait\+\_\+for\+\_\+round&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_and\_wait\_for\_handshakes@{send\_and\_wait\_for\_handshakes}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_handshakes@{send\_and\_wait\_for\_handshakes}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaee4cf03b35842d8bfa7572eb3a243639}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaee4cf03b35842d8bfa7572eb3a243639}} 
+send\+\_\+and\+\_\+wait\+\_\+for\+\_\+handshakes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_handshake\_bitsets@{send\_handshake\_bitsets}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_handshake\_bitsets@{send\_handshake\_bitsets}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea3f7206732ee038d594b89d20bd741500}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea3f7206732ee038d594b89d20bd741500}} 
+send\+\_\+handshake\+\_\+bitsets&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wait\_for\_handshake\_bitsets@{wait\_for\_handshake\_bitsets}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_handshake\_bitsets@{wait\_for\_handshake\_bitsets}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacf09afdb695cd6f14aa6a603bb48ce3}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacf09afdb695cd6f14aa6a603bb48ce3}} 
+wait\+\_\+for\+\_\+handshake\+\_\+bitsets&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_block\_template@{send\_block\_template}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_block\_template@{send\_block\_template}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea406e1e6a0fe3b5af70e86c9ce7edc0b0}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea406e1e6a0fe3b5af70e86c9ce7edc0b0}} 
+send\+\_\+block\+\_\+template&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{wait\_for\_block\_template@{wait\_for\_block\_template}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_block\_template@{wait\_for\_block\_template}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaef139c901153c1aa899455ccd9dacd3d}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaef139c901153c1aa899455ccd9dacd3d}} 
+wait\+\_\+for\+\_\+block\+\_\+template&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_and\_wait\_for\_random\_value\_hashes@{send\_and\_wait\_for\_random\_value\_hashes}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_random\_value\_hashes@{send\_and\_wait\_for\_random\_value\_hashes}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea144a97dc384f6e474bbc96973b15e205}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eea144a97dc384f6e474bbc96973b15e205}} 
+send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value\+\_\+hashes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_and\_wait\_for\_random\_value@{send\_and\_wait\_for\_random\_value}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_random\_value@{send\_and\_wait\_for\_random\_value}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaf67e7a2eb6e3af611f16251c3fa65d51}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaf67e7a2eb6e3af611f16251c3fa65d51}} 
+send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{send\_and\_wait\_for\_signed\_blocks@{send\_and\_wait\_for\_signed\_blocks}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_signed\_blocks@{send\_and\_wait\_for\_signed\_blocks}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacc7f13c0578444f15b72341cdb1d1ec}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096eeaacc7f13c0578444f15b72341cdb1d1ec}} 
+send\+\_\+and\+\_\+wait\+\_\+for\+\_\+signed\+\_\+blocks&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!sn\_type@{sn\_type}}
+\index{sn\_type@{sn\_type}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{sn\_type}{sn\_type}}
+{\footnotesize\ttfamily enum pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122}{sn\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!none@{none}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a334c4a4c42fdb79d7ebc3e73b517e6f8}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a334c4a4c42fdb79d7ebc3e73b517e6f8}} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{producer@{producer}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!producer@{producer}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122af18122ddebc4341b4ed758b3f0817da8}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122af18122ddebc4341b4ed758b3f0817da8}} 
+producer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{validator@{validator}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!validator@{validator}}}\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a8d6c391e7cb39133c91b73281a24f21f}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3ff7449e5ee3a3304ff753108ec59122a8d6c391e7cb39133c91b73281a24f21f}} 
+validator&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a83864cc35fd1c73dfdc17c76376b715b}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a83864cc35fd1c73dfdc17c76376b715b}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!bitset\_view16@{bitset\_view16}}
+\index{bitset\_view16@{bitset\_view16}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{bitset\_view16()}{bitset\_view16()}}
+{\footnotesize\ttfamily std\+::bitset$<$sizeof(uint16\+\_\+t) $\ast$ 8$>$ pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::bitset\+\_\+view16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a2b2090a23402adcb21fee2ec49ca7a76}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a2b2090a23402adcb21fee2ec49ca7a76}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!blake2b\_hash@{blake2b\_hash}}
+\index{blake2b\_hash@{blake2b\_hash}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{blake2b\_hash()}{blake2b\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::blake2b\+\_\+hash (\begin{DoxyParamCaption}\item[{void const $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aaed0e28c433b39921219701902c1a5fd}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aaed0e28c433b39921219701902c1a5fd}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!clear\_round\_data@{clear\_round\_data}}
+\index{clear\_round\_data@{clear\_round\_data}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{clear\_round\_data()}{clear\_round\_data()}}
+{\footnotesize\ttfamily void pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::clear\+\_\+round\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a1411bc0221e001801d428c85c0d1a4a4}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a1411bc0221e001801d428c85c0d1a4a4}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!enforce\_validator\_participation\_and\_timeouts@{enforce\_validator\_participation\_and\_timeouts}}
+\index{enforce\_validator\_participation\_and\_timeouts@{enforce\_validator\_participation\_and\_timeouts}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{enforce\_validator\_participation\_and\_timeouts()}{enforce\_validator\_participation\_and\_timeouts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::enforce\+\_\+validator\+\_\+participation\+\_\+and\+\_\+timeouts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&}]{context,  }\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__wait__stage}{pulse\+\_\+wait\+\_\+stage}} const \&}]{stage,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{timed\+\_\+out,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{all\+\_\+received }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a996b273a51f0d11a419d9ebcbc9124e3}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a996b273a51f0d11a419d9ebcbc9124e3}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!goto\_preparing\_for\_next\_round@{goto\_preparing\_for\_next\_round}}
+\index{goto\_preparing\_for\_next\_round@{goto\_preparing\_for\_next\_round}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{goto\_preparing\_for\_next\_round()}{goto\_preparing\_for\_next\_round()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::goto\+\_\+preparing\+\_\+for\+\_\+next\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae16b1d03a2702d0502a512c983c41ee}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae16b1d03a2702d0502a512c983c41ee}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!goto\_wait\_for\_next\_block\_and\_clear\_round\_data@{goto\_wait\_for\_next\_block\_and\_clear\_round\_data}}
+\index{goto\_wait\_for\_next\_block\_and\_clear\_round\_data@{goto\_wait\_for\_next\_block\_and\_clear\_round\_data}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{goto\_wait\_for\_next\_block\_and\_clear\_round\_data()}{goto\_wait\_for\_next\_block\_and\_clear\_round\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::goto\+\_\+wait\+\_\+for\+\_\+next\+\_\+block\+\_\+and\+\_\+clear\+\_\+round\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae8b9b63cf58513b66c869799714387e}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae8b9b63cf58513b66c869799714387e}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!handle\_messages\_received\_early\_for@{handle\_messages\_received\_early\_for}}
+\index{handle\_messages\_received\_early\_for@{handle\_messages\_received\_early\_for}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{handle\_messages\_received\_early\_for()}{handle\_messages\_received\_early\_for()}}
+{\footnotesize\ttfamily void pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::handle\+\_\+messages\+\_\+received\+\_\+early\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1pulse__wait__stage}{pulse\+\_\+wait\+\_\+stage}} \&}]{stage,  }\item[{void $\ast$}]{quorumnet\+\_\+state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a62e33c5eebf07ca63bddcd906d944924}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a62e33c5eebf07ca63bddcd906d944924}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!log\_prefix@{log\_prefix}}
+\index{log\_prefix@{log\_prefix}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{log\_prefix()}{log\_prefix()}}
+{\footnotesize\ttfamily std\+::string pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::log\+\_\+prefix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a4563e87b82bf1ff284260204dd4bf583}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a4563e87b82bf1ff284260204dd4bf583}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!msg\_init\_from\_context@{msg\_init\_from\_context}}
+\index{msg\_init\_from\_context@{msg\_init\_from\_context}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{msg\_init\_from\_context()}{msg\_init\_from\_context()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::msg\+\_\+init\+\_\+from\+\_\+context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&}]{context }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_adc084ddc01ce7bb4064eb486e7876ac5}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_adc084ddc01ce7bb4064eb486e7876ac5}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!msg\_signature\_check@{msg\_signature\_check}}
+\index{msg\_signature\_check@{msg\_signature\_check}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{msg\_signature\_check()}{msg\_signature\_check()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::msg\+\_\+signature\+\_\+check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&}]{msg,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{top\+\_\+block\+\_\+hash,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&}]{quorum,  }\item[{std\+::string $\ast$}]{error }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aa3e06169814d3685122bc5681bfb1a71}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aa3e06169814d3685122bc5681bfb1a71}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!msg\_signature\_hash@{msg\_signature\_hash}}
+\index{msg\_signature\_hash@{msg\_signature\_hash}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{msg\_signature\_hash()}{msg\_signature\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::msg\+\_\+signature\+\_\+hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{top\+\_\+block\+\_\+hash,  }\item[{\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6a818a77ed3ef728aa6a2c18a5e9f1f8}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6a818a77ed3ef728aa6a2c18a5e9f1f8}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!msg\_source\_string@{msg\_source\_string}}
+\index{msg\_source\_string@{msg\_source\_string}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{msg\_source\_string()}{msg\_source\_string()}}
+{\footnotesize\ttfamily std\+::string pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::msg\+\_\+source\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&}]{context,  }\item[{\mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9ef8c258089c13d6224acf6cb4f9170f}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9ef8c258089c13d6224acf6cb4f9170f}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!prepare\_for\_round@{prepare\_for\_round}}
+\index{prepare\_for\_round@{prepare\_for\_round}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{prepare\_for\_round()}{prepare\_for\_round()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::prepare\+\_\+for\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&}]{blockchain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0f806ff122f5e719b4005414ad62b58c}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0f806ff122f5e719b4005414ad62b58c}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!relay\_validator\_handshake\_bit\_or\_bitset@{relay\_validator\_handshake\_bit\_or\_bitset}}
+\index{relay\_validator\_handshake\_bit\_or\_bitset@{relay\_validator\_handshake\_bit\_or\_bitset}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{relay\_validator\_handshake\_bit\_or\_bitset()}{relay\_validator\_handshake\_bit\_or\_bitset()}}
+{\footnotesize\ttfamily void pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::relay\+\_\+validator\+\_\+handshake\+\_\+bit\+\_\+or\+\_\+bitset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} const \&}]{context,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{sending\+\_\+bitset }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_abaf61ab44f9fa92e31c5b608d355c3dd}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_abaf61ab44f9fa92e31c5b608d355c3dd}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!round\_state\_string@{round\_state\_string}}
+\index{round\_state\_string@{round\_state\_string}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{round\_state\_string()}{round\_state\_string()}}
+{\footnotesize\ttfamily constexpr std\+::string\+\_\+view pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::round\+\_\+state\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae5e21f89d98451d9c352c15cea07df4}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_aae5e21f89d98451d9c352c15cea07df4}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_handshakes@{send\_and\_wait\_for\_handshakes}}
+\index{send\_and\_wait\_for\_handshakes@{send\_and\_wait\_for\_handshakes}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_and\_wait\_for\_handshakes()}{send\_and\_wait\_for\_handshakes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+handshakes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6115b8fe83bd3f6fd6277354bf5163f2}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a6115b8fe83bd3f6fd6277354bf5163f2}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_random\_value@{send\_and\_wait\_for\_random\_value}}
+\index{send\_and\_wait\_for\_random\_value@{send\_and\_wait\_for\_random\_value}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_and\_wait\_for\_random\_value()}{send\_and\_wait\_for\_random\_value()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a298e01a4b96a2bb222c774f918213adf}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a298e01a4b96a2bb222c774f918213adf}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_random\_value\_hashes@{send\_and\_wait\_for\_random\_value\_hashes}}
+\index{send\_and\_wait\_for\_random\_value\_hashes@{send\_and\_wait\_for\_random\_value\_hashes}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_and\_wait\_for\_random\_value\_hashes()}{send\_and\_wait\_for\_random\_value\_hashes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+random\+\_\+value\+\_\+hashes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a91fd7287ac269f1f032c447d920e6cbd}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a91fd7287ac269f1f032c447d920e6cbd}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_and\_wait\_for\_signed\_blocks@{send\_and\_wait\_for\_signed\_blocks}}
+\index{send\_and\_wait\_for\_signed\_blocks@{send\_and\_wait\_for\_signed\_blocks}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_and\_wait\_for\_signed\_blocks()}{send\_and\_wait\_for\_signed\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+and\+\_\+wait\+\_\+for\+\_\+signed\+\_\+blocks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key,  }\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a70c2cce8556934a069051bffad8782ef}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a70c2cce8556934a069051bffad8782ef}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_block\_template@{send\_block\_template}}
+\index{send\_block\_template@{send\_block\_template}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_block\_template()}{send\_block\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+block\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&}]{blockchain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a98e52ec8fdd0a294824d5aef79a5f151}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a98e52ec8fdd0a294824d5aef79a5f151}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!send\_handshake\_bitsets@{send\_handshake\_bitsets}}
+\index{send\_handshake\_bitsets@{send\_handshake\_bitsets}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{send\_handshake\_bitsets()}{send\_handshake\_bitsets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::send\+\_\+handshake\+\_\+bitsets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7842548dfc0cc52dd15edff466ef690d}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a7842548dfc0cc52dd15edff466ef690d}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_block\_template@{wait\_for\_block\_template}}
+\index{wait\_for\_block\_template@{wait\_for\_block\_template}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_block\_template()}{wait\_for\_block\_template()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::wait\+\_\+for\+\_\+block\+\_\+template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&}]{blockchain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad7cdeb1e1167dc8d4c24f2d5b14678c7}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ad7cdeb1e1167dc8d4c24f2d5b14678c7}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_handshake\_bitsets@{wait\_for\_handshake\_bitsets}}
+\index{wait\_for\_handshake\_bitsets@{wait\_for\_handshake\_bitsets}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_handshake\_bitsets()}{wait\_for\_handshake\_bitsets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::wait\+\_\+for\+\_\+handshake\+\_\+bitsets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{node\+\_\+list,  }\item[{void $\ast$}]{quorumnet\+\_\+state,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1service__node__keys}{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys}} const \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a75facc8127f980ea1378e9f198586ff0}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a75facc8127f980ea1378e9f198586ff0}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_next\_block@{wait\_for\_next\_block}}
+\index{wait\_for\_next\_block@{wait\_for\_next\_block}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_next\_block()}{wait\_for\_next\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::wait\+\_\+for\+\_\+next\+\_\+block (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{hf16\+\_\+height,  }\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&}]{blockchain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9f8c955f068b0573ff967c5b381657f8}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a9f8c955f068b0573ff967c5b381657f8}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!wait\_for\_round@{wait\_for\_round}}
+\index{wait\_for\_round@{wait\_for\_round}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_round()}{wait\_for\_round()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a3006a799cac80626381bcd68d9f096ee}{round\+\_\+state}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::wait\+\_\+for\+\_\+round (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} \&}]{context,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&}]{blockchain }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_a0b7481e21eb211f8f844e37f4f4fd6e6}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!context@{context}}
+\index{context@{context}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpulse_1_1anonymous__namespace_02pulse_8cpp_03_1_1round__context}{round\+\_\+context}} pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::context}
+
+\mbox{\Hypertarget{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ac92607fac2d797fe697f024ff4273664}\label{namespacepulse_1_1anonymous__namespace_02pulse_8cpp_03_ac92607fac2d797fe697f024ff4273664}} 
+\index{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}!logcat@{logcat}}
+\index{logcat@{logcat}!pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}@{pulse::anonymous\_namespace\lcurly{}pulse.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto pulse\+::anonymous\+\_\+namespace\{pulse.\+cpp\}\+::logcat = log\+::\+Cat(\char`\"{}pulse\char`\"{})}
+

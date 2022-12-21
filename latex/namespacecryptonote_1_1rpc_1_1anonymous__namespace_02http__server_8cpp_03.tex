@@ -1,0 +1,91 @@
+\hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03}{}\doxysection{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\} Namespace Reference}
+\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03}\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_aa363b20c91c89b8a7dd06396c03b3a0a}{long\+\_\+poll\+\_\+trigger}} (\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{cryptonote\+::tx\+\_\+memory\+\_\+pool}} \&)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a51f071514fb098206be13494f295c164}{queue\+\_\+response}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$ data, std\+::string body)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af0b830e430ba10fd3ac2008aae56db55}{invoke\+\_\+txpool\+\_\+hashes\+\_\+bin}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$ data)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a964cc20f50c7c328afb8179ed83be45b}{invoke\+\_\+rpc}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$ dataptr)
+\item 
+std\+::string \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a3700179a413bc4440ac89ccb20ebc0df}{pool\+\_\+hashes\+\_\+response}} (std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&\&pool\+\_\+hashes)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af21d71b8f6741aab34f346164594985c}{long\+\_\+poll\+\_\+process\+\_\+timeouts}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::pair$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$, std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ab49fe6c9bf3235093a946c9783756e9e}{long\+\_\+pollers}}
+\item 
+std\+::mutex \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a7f60b36d10ad2a429c1ba683a290ac99}{long\+\_\+poll\+\_\+mutex}}
+\item 
+std\+::string \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ac8507231c7666dcbf1848cc6fb227043}{long\+\_\+poll\+\_\+timeout\+\_\+body}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a964cc20f50c7c328afb8179ed83be45b}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a964cc20f50c7c328afb8179ed83be45b}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!invoke\_rpc@{invoke\_rpc}}
+\index{invoke\_rpc@{invoke\_rpc}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{invoke\_rpc()}{invoke\_rpc()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::invoke\+\_\+rpc (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$}]{dataptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af0b830e430ba10fd3ac2008aae56db55}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af0b830e430ba10fd3ac2008aae56db55}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!invoke\_txpool\_hashes\_bin@{invoke\_txpool\_hashes\_bin}}
+\index{invoke\_txpool\_hashes\_bin@{invoke\_txpool\_hashes\_bin}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{invoke\_txpool\_hashes\_bin()}{invoke\_txpool\_hashes\_bin()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::invoke\+\_\+txpool\+\_\+hashes\+\_\+bin (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af21d71b8f6741aab34f346164594985c}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_af21d71b8f6741aab34f346164594985c}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!long\_poll\_process\_timeouts@{long\_poll\_process\_timeouts}}
+\index{long\_poll\_process\_timeouts@{long\_poll\_process\_timeouts}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{long\_poll\_process\_timeouts()}{long\_poll\_process\_timeouts()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::long\+\_\+poll\+\_\+process\+\_\+timeouts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_aa363b20c91c89b8a7dd06396c03b3a0a}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_aa363b20c91c89b8a7dd06396c03b3a0a}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!long\_poll\_trigger@{long\_poll\_trigger}}
+\index{long\_poll\_trigger@{long\_poll\_trigger}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{long\_poll\_trigger()}{long\_poll\_trigger()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::long\+\_\+poll\+\_\+trigger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1tx__memory__pool}{cryptonote\+::tx\+\_\+memory\+\_\+pool}} \&}]{pool }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a3700179a413bc4440ac89ccb20ebc0df}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a3700179a413bc4440ac89ccb20ebc0df}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!pool\_hashes\_response@{pool\_hashes\_response}}
+\index{pool\_hashes\_response@{pool\_hashes\_response}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{pool\_hashes\_response()}{pool\_hashes\_response()}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::pool\+\_\+hashes\+\_\+response (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&\&}]{pool\+\_\+hashes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a51f071514fb098206be13494f295c164}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a51f071514fb098206be13494f295c164}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!queue\_response@{queue\_response}}
+\index{queue\_response@{queue\_response}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{queue\_response()}{queue\_response()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::queue\+\_\+response (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}} $>$}]{data,  }\item[{std\+::string}]{body }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a7f60b36d10ad2a429c1ba683a290ac99}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_a7f60b36d10ad2a429c1ba683a290ac99}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!long\_poll\_mutex@{long\_poll\_mutex}}
+\index{long\_poll\_mutex@{long\_poll\_mutex}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{long\_poll\_mutex}{long\_poll\_mutex}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::long\+\_\+poll\+\_\+mutex}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ac8507231c7666dcbf1848cc6fb227043}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ac8507231c7666dcbf1848cc6fb227043}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!long\_poll\_timeout\_body@{long\_poll\_timeout\_body}}
+\index{long\_poll\_timeout\_body@{long\_poll\_timeout\_body}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{long\_poll\_timeout\_body}{long\_poll\_timeout\_body}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::long\+\_\+poll\+\_\+timeout\+\_\+body}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ab49fe6c9bf3235093a946c9783756e9e}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_ab49fe6c9bf3235093a946c9783756e9e}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}!long\_pollers@{long\_pollers}}
+\index{long\_pollers@{long\_pollers}!cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}http\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{long\_pollers}{long\_pollers}}
+{\footnotesize\ttfamily std\+::list$<$std\+::pair$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02http__server_8cpp_03_1_1call__data}{call\+\_\+data}}$>$, std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point$>$ $>$ cryptonote\+::rpc\+::anonymous\+\_\+namespace\{http\+\_\+server.\+cpp\}\+::long\+\_\+pollers}
+

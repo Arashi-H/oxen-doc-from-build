@@ -1,0 +1,193 @@
+\hypertarget{classlmdb_1_1value__stream}{}\doxysection{lmdb\+::value\+\_\+stream$<$ T, D $>$ Class Template Reference}
+\label{classlmdb_1_1value__stream}\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+
+
+{\ttfamily \#include $<$value\+\_\+stream.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream_a381614204aa3f89b7f64eadeb1bb3193}{value\+\_\+stream}} (std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ \mbox{\hyperlink{classlmdb_1_1value__stream_a4b46fb1fb9b5f63c8657a7775830aac5}{cur}})
+\begin{DoxyCompactList}\small\item\em Take ownership of {\ttfamily cur} without changing position. {\ttfamily nullptr} valid. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream_a0dc107ea10d346314c1ee09214cd0f13}{value\+\_\+stream}} (\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} \&\&)=default
+\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream_a06771f9f1775f9079df8e0cf83e97b28}{value\+\_\+stream}} (\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} const \&)=delete
+\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream_addfe1e19ad13e3d741d7cf9b584d3791}{$\sim$value\+\_\+stream}} ()=default
+\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} \& \mbox{\hyperlink{classlmdb_1_1value__stream_adb2da9341f808eab2f5052c374e3f17a}{operator=}} (\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} \&\&)=default
+\item 
+\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} \& \mbox{\hyperlink{classlmdb_1_1value__stream_a410bb42cfae6790bea728f2a05ef5dc9}{operator=}} (\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} const \&)=delete
+\item 
+std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ \mbox{\hyperlink{classlmdb_1_1value__stream_a73141190bb14f3cdd187e1bbcf11e965}{give\+\_\+cursor}} () noexcept
+\item 
+void \mbox{\hyperlink{classlmdb_1_1value__stream_a1ca0ca86789eac8f46ac01077afab5b3}{reset}} ()
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classlmdb_1_1value__stream_a33a41ed42d3fcb95201bd5c81060431c}{count}} () const
+\item 
+{\footnotesize template$<$typename U  = T, typename F  = U, std\+::size\+\_\+t offset = 0$>$ }\\\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ U, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ \mbox{\hyperlink{classlmdb_1_1value__stream_ae98fbab4354332dea99e5b3a04872a33}{make\+\_\+iterator}} () const
+\item 
+{\footnotesize template$<$typename U  = T, typename F  = U, std\+::size\+\_\+t offset = 0$>$ }\\boost\+::iterator\+\_\+range$<$ \mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$ U, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset $>$ $>$ \mbox{\hyperlink{classlmdb_1_1value__stream_a885b6d3d8d399d8d75b2be7c9e17e5e1}{make\+\_\+range}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ \mbox{\hyperlink{classlmdb_1_1value__stream_a4b46fb1fb9b5f63c8657a7775830aac5}{cur}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename D$>$\newline
+class lmdb\+::value\+\_\+stream$<$ T, D $>$}
+
+C++ wrapper for a L\+M\+DB read-\/only cursor on a fixed-\/sized value {\ttfamily T}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & value type being stored by each record. \\
+\hline
+{\em D} & cleanup functor for the cursor; usually unique per db/table. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a381614204aa3f89b7f64eadeb1bb3193}\label{classlmdb_1_1value__stream_a381614204aa3f89b7f64eadeb1bb3193}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!value\_stream@{value\_stream}}
+\index{value\_stream@{value\_stream}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{value\_stream()}{value\_stream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Take ownership of {\ttfamily cur} without changing position. {\ttfamily nullptr} valid. 
+
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a0dc107ea10d346314c1ee09214cd0f13}\label{classlmdb_1_1value__stream_a0dc107ea10d346314c1ee09214cd0f13}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!value\_stream@{value\_stream}}
+\index{value\_stream@{value\_stream}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{value\_stream()}{value\_stream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a06771f9f1775f9079df8e0cf83e97b28}\label{classlmdb_1_1value__stream_a06771f9f1775f9079df8e0cf83e97b28}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!value\_stream@{value\_stream}}
+\index{value\_stream@{value\_stream}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{value\_stream()}{value\_stream()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$ const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1value__stream_addfe1e19ad13e3d741d7cf9b584d3791}\label{classlmdb_1_1value__stream_addfe1e19ad13e3d741d7cf9b584d3791}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!````~value\_stream@{$\sim$value\_stream}}
+\index{````~value\_stream@{$\sim$value\_stream}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$value\_stream()}{~value\_stream()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::$\sim$\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a33a41ed42d3fcb95201bd5c81060431c}\label{classlmdb_1_1value__stream_a33a41ed42d3fcb95201bd5c81060431c}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!count@{count}}
+\index{count@{count}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if L\+M\+DB has unexpected errors. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Number of values at this key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a73141190bb14f3cdd187e1bbcf11e965}\label{classlmdb_1_1value__stream_a73141190bb14f3cdd187e1bbcf11e965}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!give\_cursor@{give\_cursor}}
+\index{give\_cursor@{give\_cursor}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{give\_cursor()}{give\_cursor()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+cursor, D$>$ \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::give\+\_\+cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Give up ownership of the cursor. {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream_a33a41ed42d3fcb95201bd5c81060431c}{count()}}}, {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream_ae98fbab4354332dea99e5b3a04872a33}{make\+\_\+iterator()}}} and {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream_a885b6d3d8d399d8d75b2be7c9e17e5e1}{make\+\_\+range()}}} can still be invoked, but return the empty set.
+
+\begin{DoxyReturn}{Returns}
+Currently owned L\+M\+DB cursor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_ae98fbab4354332dea99e5b3a04872a33}\label{classlmdb_1_1value__stream_ae98fbab4354332dea99e5b3a04872a33}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!make\_iterator@{make\_iterator}}
+\index{make\_iterator@{make\_iterator}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{make\_iterator()}{make\_iterator()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+template$<$typename U  = T, typename F  = U, std\+::size\+\_\+t offset = 0$>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$U, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset$>$ \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::make\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a C++ iterator over database values from current cursor position that will reach {\ttfamily .is\+\_\+end()} after the last duplicate key record. Calling {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream_ae98fbab4354332dea99e5b3a04872a33}{make\+\_\+iterator()}}} will return an iterator whose {\ttfamily operator$\ast$} will return entire value ({\ttfamily T}). {\ttfamily make\+\_\+iterator$<$\mbox{\hyperlink{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}{M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+L\+D(account, id)}}$>$()} will return an iterator whose {\ttfamily operator$\ast$} will return a {\ttfamily decltype(account.\+id)} object -\/ the other fields in the struct {\ttfamily account} are never copied from the database.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if L\+M\+DB has unexpected errors. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+C++ iterator starting at current cursor position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a885b6d3d8d399d8d75b2be7c9e17e5e1}\label{classlmdb_1_1value__stream_a885b6d3d8d399d8d75b2be7c9e17e5e1}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!make\_range@{make\_range}}
+\index{make\_range@{make\_range}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{make\_range()}{make\_range()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+template$<$typename U  = T, typename F  = U, std\+::size\+\_\+t offset = 0$>$ \\
+boost\+::iterator\+\_\+range$<$\mbox{\hyperlink{classlmdb_1_1value__iterator}{value\+\_\+iterator}}$<$U, \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}, offset$>$ $>$ \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::make\+\_\+range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a range from current cursor position until last duplicate key record. Useful in for-\/each range loops or in templated code expecting a range of elements. Calling {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream_a885b6d3d8d399d8d75b2be7c9e17e5e1}{make\+\_\+range()}}} will return a range of {\ttfamily T} objects. {\ttfamily make\+\_\+range$<$\mbox{\hyperlink{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}{M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+L\+D(account, id)}}$>$()} will return a range of {\ttfamily decltype(account.\+id)} objects -\/ the other fields in the struct {\ttfamily account} are never copied from the database.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::system\+\_\+error} & if L\+M\+DB has unexpected errors. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+An Input\+Iterator range over values at cursor position. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_adb2da9341f808eab2f5052c374e3f17a}\label{classlmdb_1_1value__stream_adb2da9341f808eab2f5052c374e3f17a}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}\& \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a410bb42cfae6790bea728f2a05ef5dc9}\label{classlmdb_1_1value__stream_a410bb42cfae6790bea728f2a05ef5dc9}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}\& \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$ const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a1ca0ca86789eac8f46ac01077afab5b3}\label{classlmdb_1_1value__stream_a1ca0ca86789eac8f46ac01077afab5b3}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!reset@{reset}}
+\index{reset@{reset}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+void \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Place the stream back at the first value. Newly created iterators will start at the first value again.
+
+\begin{DoxyNote}{Note}
+Invalidates all current iterators from {\ttfamily this}, including those created with {\ttfamily make\+\_\+iterator} or {\ttfamily make\+\_\+range}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlmdb_1_1value__stream_a4b46fb1fb9b5f63c8657a7775830aac5}\label{classlmdb_1_1value__stream_a4b46fb1fb9b5f63c8657a7775830aac5}} 
+\index{lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}!cur@{cur}}
+\index{cur@{cur}!lmdb::value\_stream$<$ T, D $>$@{lmdb::value\_stream$<$ T, D $>$}}
+\doxysubsubsection{\texorpdfstring{cur}{cur}}
+{\footnotesize\ttfamily template$<$typename T , typename D $>$ \\
+std\+::unique\+\_\+ptr$<$M\+D\+B\+\_\+cursor, D$>$ \mbox{\hyperlink{classlmdb_1_1value__stream}{lmdb\+::value\+\_\+stream}}$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}, D $>$\+::cur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lmdb/\mbox{\hyperlink{value__stream_8h}{value\+\_\+stream.\+h}}\end{DoxyCompactItemize}

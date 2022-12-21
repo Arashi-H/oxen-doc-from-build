@@ -1,0 +1,60 @@
+\hypertarget{checkpoints_8h}{}\doxysection{src/checkpoints/checkpoints.h File Reference}
+\label{checkpoints_8h}\index{src/checkpoints/checkpoints.h@{src/checkpoints/checkpoints.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+Include dependency graph for checkpoints.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{checkpoints_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{checkpoints_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1height__to__hash}{cryptonote\+::height\+\_\+to\+\_\+hash}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1height__to__hash__json}{cryptonote\+::height\+\_\+to\+\_\+hash\+\_\+json}}
+\begin{DoxyCompactList}\small\item\em struct for loading many checkpoints from json \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1checkpoints}{cryptonote\+::checkpoints}}
+\begin{DoxyCompactList}\small\item\em A container for blockchain checkpoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_a303935ecc5a88ab2a10dbc78ddffcf4a}{cryptonote\+::checkpoint\+\_\+type}} \{ \mbox{\hyperlink{namespacecryptonote_a303935ecc5a88ab2a10dbc78ddffcf4aaeca7a05085eba86cbab65a157f848354}{cryptonote\+::checkpoint\+\_\+type\+::hardcoded}}, 
+\mbox{\hyperlink{namespacecryptonote_a303935ecc5a88ab2a10dbc78ddffcf4aaa76a696cd10aac56690b0ebdf55dd43c}{cryptonote\+::checkpoint\+\_\+type\+::service\+\_\+node}}, 
+\mbox{\hyperlink{namespacecryptonote_a303935ecc5a88ab2a10dbc78ddffcf4aae2942a04780e223b215eb8b663cf5353}{cryptonote\+::checkpoint\+\_\+type\+::count}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespacecryptonote_a1fb4b58348932e501a3c98af16d8b81b}{cryptonote\+::get\+\_\+newest\+\_\+hardcoded\+\_\+checkpoint}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t $\ast$height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_aa0671e2eaebcbdadaf77737ef7568ad6}{cryptonote\+::load\+\_\+checkpoints\+\_\+from\+\_\+json}} (const fs\+::path \&json\+\_\+hashfile\+\_\+fullpath, std\+::vector$<$ height\+\_\+to\+\_\+hash $>$ \&checkpoint\+\_\+hashes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespacecryptonote_ad4add9af05cc2fbd9a36903baee8f9e8}{cryptonote\+::\+J\+S\+O\+N\+\_\+\+H\+A\+S\+H\+\_\+\+F\+I\+L\+E\+\_\+\+N\+A\+ME}} = \char`\"{}checkpoints.\+json\char`\"{}sv
+\end{DoxyCompactItemize}

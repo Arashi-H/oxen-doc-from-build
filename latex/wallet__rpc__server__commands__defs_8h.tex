@@ -1,0 +1,681 @@
+\hypertarget{wallet__rpc__server__commands__defs_8h}{}\doxysection{src/wallet/wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.h File Reference}
+\label{wallet__rpc__server__commands__defs_8h}\index{src/wallet/wallet\_rpc\_server\_commands\_defs.h@{src/wallet/wallet\_rpc\_server\_commands\_defs.h}}
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/subaddress\+\_\+index.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet\+\_\+rpc\+\_\+server\+\_\+error\+\_\+codes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/transfer\+\_\+destination.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/transfer\+\_\+view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/meta.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+Include dependency graph for wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet__rpc__server__commands__defs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet__rpc__server__commands__defs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RPC__COMMAND}{tools\+::wallet\+\_\+rpc\+::\+R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+ND}}
+\begin{DoxyCompactList}\small\item\em Base class that all wallet rpc commands inherit from. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESTRICTED}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+T\+R\+I\+C\+T\+ED}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EMPTY}{tools\+::wallet\+\_\+rpc\+::\+E\+M\+P\+TY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BALANCE}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+A\+L\+A\+N\+CE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BALANCE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+A\+L\+A\+N\+C\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BALANCE_1_1per__subaddress__info}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+A\+L\+A\+N\+C\+E\+::per\+\_\+subaddress\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BALANCE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+A\+L\+A\+N\+C\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS_1_1address__info}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::address\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__INDEX}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+I\+N\+D\+EX}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__INDEX_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+I\+N\+D\+E\+X\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__INDEX_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+I\+N\+D\+E\+X\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ADDRESS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1LABEL__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+L\+A\+B\+E\+L\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1LABEL__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+L\+A\+B\+E\+L\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNTS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNTS_1_1subaddress__account__info}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::subaddress\+\_\+account\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNTS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ACCOUNT}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+C\+C\+O\+U\+NT}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ACCOUNT_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+C\+C\+O\+U\+N\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__ACCOUNT_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+A\+C\+C\+O\+U\+N\+T\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1LABEL__ACCOUNT}{tools\+::wallet\+\_\+rpc\+::\+L\+A\+B\+E\+L\+\_\+\+A\+C\+C\+O\+U\+NT}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1LABEL__ACCOUNT_1_1request}{tools\+::wallet\+\_\+rpc\+::\+L\+A\+B\+E\+L\+\_\+\+A\+C\+C\+O\+U\+N\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNT__TAGS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+GS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNT__TAGS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNT__TAGS_1_1account__tag__info}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+S\+::account\+\_\+tag\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ACCOUNT__TAGS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TAG__ACCOUNTS}{tools\+::wallet\+\_\+rpc\+::\+T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TAG__ACCOUNTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1UNTAG__ACCOUNTS}{tools\+::wallet\+\_\+rpc\+::\+U\+N\+T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1UNTAG__ACCOUNTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+U\+N\+T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__ACCOUNT__TAG__DESCRIPTION}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__ACCOUNT__TAG__DESCRIPTION_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__HEIGHT}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+H\+E\+I\+G\+HT}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__HEIGHT_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+H\+E\+I\+G\+H\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__HEIGHT_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+H\+E\+I\+G\+H\+T\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+ER}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER_1_1request}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER_1_1response}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER__SPLIT}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+IT}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER__SPLIT_1_1request}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER__SPLIT_1_1key__list}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::key\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1TRANSFER__SPLIT_1_1response}{tools\+::wallet\+\_\+rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DESCRIBE__TRANSFER}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DESCRIBE__TRANSFER_1_1recipient}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::recipient}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DESCRIBE__TRANSFER_1_1transfer__description}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::transfer\+\_\+description}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DESCRIBE__TRANSFER_1_1request}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DESCRIBE__TRANSFER_1_1response}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__TRANSFER}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+T\+R\+A\+N\+S\+F\+ER}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__TRANSFER_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__TRANSFER_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__TRANSFER}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+F\+ER}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__TRANSFER_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__TRANSFER_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__DUST}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+ST}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__DUST_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__DUST_1_1key__list}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::key\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__DUST_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+D\+U\+S\+T\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__ALL}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+A\+LL}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__ALL_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+A\+L\+L\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__ALL_1_1key__list}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+A\+L\+L\+::key\+\_\+list}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__ALL_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+A\+L\+L\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__SINGLE}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+LE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__SINGLE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SWEEP__SINGLE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+L\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RELAY__TX}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+L\+A\+Y\+\_\+\+TX}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RELAY__TX_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+L\+A\+Y\+\_\+\+T\+X\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RELAY__TX_1_1response}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+L\+A\+Y\+\_\+\+T\+X\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STORE}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+RE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STORE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+R\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1payment__details}{tools\+::wallet\+\_\+rpc\+::payment\+\_\+details}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__PAYMENTS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+P\+A\+Y\+M\+E\+N\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__PAYMENTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__PAYMENTS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BULK__PAYMENTS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BULK__PAYMENTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__BULK__PAYMENTS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1transfer__details}{tools\+::wallet\+\_\+rpc\+::transfer\+\_\+details}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1INCOMING__TRANSFERS}{tools\+::wallet\+\_\+rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1INCOMING__TRANSFERS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1INCOMING__TRANSFERS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1QUERY__KEY}{tools\+::wallet\+\_\+rpc\+::\+Q\+U\+E\+R\+Y\+\_\+\+K\+EY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1QUERY__KEY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+Q\+U\+E\+R\+Y\+\_\+\+K\+E\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1QUERY__KEY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+Q\+U\+E\+R\+Y\+\_\+\+K\+E\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__INTEGRATED__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__INTEGRATED__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__INTEGRATED__ADDRESS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SPLIT__INTEGRATED__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+S\+P\+L\+I\+T\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SPLIT__INTEGRATED__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+P\+L\+I\+T\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SPLIT__INTEGRATED__ADDRESS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+P\+L\+I\+T\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STOP__WALLET}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+P\+\_\+\+W\+A\+L\+L\+ET}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STOP__WALLET_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+P\+\_\+\+W\+A\+L\+L\+E\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESCAN__BLOCKCHAIN}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+C\+A\+N\+\_\+\+B\+L\+O\+C\+K\+C\+H\+A\+IN}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESCAN__BLOCKCHAIN_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+C\+A\+N\+\_\+\+B\+L\+O\+C\+K\+C\+H\+A\+I\+N\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__TX__NOTES}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__TX__NOTES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__NOTES}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__NOTES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__NOTES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__ATTRIBUTE}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__ATTRIBUTE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ATTRIBUTE}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ATTRIBUTE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ATTRIBUTE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__KEY}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+K\+EY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__KEY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+K\+E\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__KEY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+K\+E\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__KEY}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+K\+EY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__KEY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+K\+E\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__KEY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+K\+E\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__PROOF}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TX__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+X\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__PROOF}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__TX__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__SPEND__PROOF}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__SPEND__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__SPEND__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__SPEND__PROOF}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__SPEND__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__SPEND__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__RESERVE__PROOF}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__RESERVE__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__RESERVE__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__RESERVE__PROOF}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+OF}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__RESERVE__PROOF_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHECK__RESERVE__PROOF_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+O\+F\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS__CSV}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+\_\+\+C\+SV}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS__CSV_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+\_\+\+C\+S\+V\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFERS__CSV_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+\_\+\+C\+S\+V\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFER__BY__TXID}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+Y\+\_\+\+T\+X\+ID}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFER__BY__TXID_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+Y\+\_\+\+T\+X\+I\+D\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__TRANSFER__BY__TXID_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+Y\+\_\+\+T\+X\+I\+D\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+GN}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VERIFY}{tools\+::wallet\+\_\+rpc\+::\+V\+E\+R\+I\+FY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VERIFY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+V\+E\+R\+I\+F\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VERIFY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+V\+E\+R\+I\+F\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__OUTPUTS}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__OUTPUTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__OUTPUTS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+T\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__TRANSFERS}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__TRANSFERS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__TRANSFERS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__OUTPUTS}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+TS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__OUTPUTS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+T\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__OUTPUTS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+T\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__KEY__IMAGES}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__KEY__IMAGES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__KEY__IMAGES_1_1signed__key__image}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::signed\+\_\+key\+\_\+image}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__KEY__IMAGES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__KEY__IMAGES}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__KEY__IMAGES_1_1signed__key__image}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::signed\+\_\+key\+\_\+image}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__KEY__IMAGES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__KEY__IMAGES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1uri__spec}{tools\+::wallet\+\_\+rpc\+::uri\+\_\+spec}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__URI}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+U\+RI}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__URI_1_1request}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+U\+R\+I\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__URI_1_1response}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+U\+R\+I\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PARSE__URI}{tools\+::wallet\+\_\+rpc\+::\+P\+A\+R\+S\+E\+\_\+\+U\+RI}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PARSE__URI_1_1request}{tools\+::wallet\+\_\+rpc\+::\+P\+A\+R\+S\+E\+\_\+\+U\+R\+I\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PARSE__URI_1_1response}{tools\+::wallet\+\_\+rpc\+::\+P\+A\+R\+S\+E\+\_\+\+U\+R\+I\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ADD__ADDRESS__BOOK__ENTRY}{tools\+::wallet\+\_\+rpc\+::\+A\+D\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ADD__ADDRESS__BOOK__ENTRY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+A\+D\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ADD__ADDRESS__BOOK__ENTRY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+A\+D\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EDIT__ADDRESS__BOOK__ENTRY}{tools\+::wallet\+\_\+rpc\+::\+E\+D\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EDIT__ADDRESS__BOOK__ENTRY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+D\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__BOOK__ENTRY}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__BOOK__ENTRY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__BOOK__ENTRY_1_1entry}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::entry}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__ADDRESS__BOOK__ENTRY_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DELETE__ADDRESS__BOOK__ENTRY}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1DELETE__ADDRESS__BOOK__ENTRY_1_1request}{tools\+::wallet\+\_\+rpc\+::\+D\+E\+L\+E\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+R\+Y\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESCAN__SPENT}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+C\+A\+N\+\_\+\+S\+P\+E\+NT}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESCAN__SPENT_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+C\+A\+N\+\_\+\+S\+P\+E\+N\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REFRESH}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+F\+R\+E\+SH}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REFRESH_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+F\+R\+E\+S\+H\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REFRESH_1_1response}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+F\+R\+E\+S\+H\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1AUTO__REFRESH}{tools\+::wallet\+\_\+rpc\+::\+A\+U\+T\+O\+\_\+\+R\+E\+F\+R\+E\+SH}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1AUTO__REFRESH_1_1request}{tools\+::wallet\+\_\+rpc\+::\+A\+U\+T\+O\+\_\+\+R\+E\+F\+R\+E\+S\+H\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1START__MINING}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1START__MINING_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+N\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STOP__MINING}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+P\+\_\+\+M\+I\+N\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STOP__MINING_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+O\+P\+\_\+\+M\+I\+N\+I\+N\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__LANGUAGES}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+L\+A\+N\+G\+U\+A\+G\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__LANGUAGES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__LANGUAGES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__WALLET}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+W\+A\+L\+L\+ET}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CREATE__WALLET_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+R\+E\+A\+T\+E\+\_\+\+W\+A\+L\+L\+E\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1OPEN__WALLET}{tools\+::wallet\+\_\+rpc\+::\+O\+P\+E\+N\+\_\+\+W\+A\+L\+L\+ET}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1OPEN__WALLET_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+P\+E\+N\+\_\+\+W\+A\+L\+L\+E\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CLOSE__WALLET}{tools\+::wallet\+\_\+rpc\+::\+C\+L\+O\+S\+E\+\_\+\+W\+A\+L\+L\+ET}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CLOSE__WALLET_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+L\+O\+S\+E\+\_\+\+W\+A\+L\+L\+E\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHANGE__WALLET__PASSWORD}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+A\+N\+G\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+P\+A\+S\+S\+W\+O\+RD}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CHANGE__WALLET__PASSWORD_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+H\+A\+N\+G\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+P\+A\+S\+S\+W\+O\+R\+D\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GENERATE__FROM__KEYS}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+F\+R\+O\+M\+\_\+\+K\+E\+YS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GENERATE__FROM__KEYS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+F\+R\+O\+M\+\_\+\+K\+E\+Y\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GENERATE__FROM__KEYS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+F\+R\+O\+M\+\_\+\+K\+E\+Y\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESTORE__DETERMINISTIC__WALLET}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+T\+O\+R\+E\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+I\+S\+T\+I\+C\+\_\+\+W\+A\+L\+L\+ET}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESTORE__DETERMINISTIC__WALLET_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+T\+O\+R\+E\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+I\+S\+T\+I\+C\+\_\+\+W\+A\+L\+L\+E\+T\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1RESTORE__DETERMINISTIC__WALLET_1_1response}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+S\+T\+O\+R\+E\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+I\+S\+T\+I\+C\+\_\+\+W\+A\+L\+L\+E\+T\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IS__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+I\+S\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IS__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+I\+S\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IS__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+I\+S\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PREPARE__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PREPARE__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1PREPARE__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1MAKE__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+M\+A\+K\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXPORT__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1IMPORT__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+I\+M\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1FINALIZE__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+F\+I\+N\+A\+L\+I\+Z\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1FINALIZE__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+F\+I\+N\+A\+L\+I\+Z\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1FINALIZE__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+F\+I\+N\+A\+L\+I\+Z\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXCHANGE__MULTISIG__KEYS}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+C\+H\+A\+N\+G\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+K\+E\+YS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXCHANGE__MULTISIG__KEYS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+C\+H\+A\+N\+G\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+K\+E\+Y\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1EXCHANGE__MULTISIG__KEYS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+E\+X\+C\+H\+A\+N\+G\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+K\+E\+Y\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SIGN__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__MULTISIG}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__MULTISIG_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SUBMIT__MULTISIG_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+U\+B\+M\+I\+T\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__VERSION}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__VERSION_1_1request}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1GET__VERSION_1_1response}{tools\+::wallet\+\_\+rpc\+::\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STAKE}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+A\+KE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STAKE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+A\+K\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1STAKE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+T\+A\+K\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REGISTER__SERVICE__NODE}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+DE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REGISTER__SERVICE__NODE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REGISTER__SERVICE__NODE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REQUEST__STAKE__UNLOCK}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+CK}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REQUEST__STAKE__UNLOCK_1_1request}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+C\+K\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1REQUEST__STAKE__UNLOCK_1_1response}{tools\+::wallet\+\_\+rpc\+::\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+C\+K\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CAN__REQUEST__STAKE__UNLOCK}{tools\+::wallet\+\_\+rpc\+::\+C\+A\+N\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+CK}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CAN__REQUEST__STAKE__UNLOCK_1_1request}{tools\+::wallet\+\_\+rpc\+::\+C\+A\+N\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+C\+K\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1CAN__REQUEST__STAKE__UNLOCK_1_1response}{tools\+::wallet\+\_\+rpc\+::\+C\+A\+N\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+C\+K\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VALIDATE__ADDRESS}{tools\+::wallet\+\_\+rpc\+::\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VALIDATE__ADDRESS_1_1request}{tools\+::wallet\+\_\+rpc\+::\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1VALIDATE__ADDRESS_1_1response}{tools\+::wallet\+\_\+rpc\+::\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__DAEMON}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+D\+A\+E\+M\+ON}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__DAEMON_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+D\+A\+E\+M\+O\+N\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__LOG__LEVEL}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__LOG__LEVEL_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__LOG__CATEGORIES}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__LOG__CATEGORIES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1SET__LOG__CATEGORIES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__RENEW__MAPPING}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+R\+E\+N\+E\+W\+\_\+\+M\+A\+P\+P\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__RENEW__MAPPING_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+R\+E\+N\+E\+W\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__UPDATE__MAPPING_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__MAKE__UPDATE__SIGNATURE}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__MAKE__UPDATE__SIGNATURE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__HASH__NAME}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+H\+A\+S\+H\+\_\+\+N\+A\+ME}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__HASH__NAME_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+H\+A\+S\+H\+\_\+\+N\+A\+M\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__HASH__NAME_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+H\+A\+S\+H\+\_\+\+N\+A\+M\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__KNOWN__NAMES}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__KNOWN__NAMES_1_1known__record}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::known\+\_\+record}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__KNOWN__NAMES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__KNOWN__NAMES_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ADD__KNOWN__NAMES}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+A\+D\+D\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ADD__KNOWN__NAMES_1_1record}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+A\+D\+D\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::record}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ADD__KNOWN__NAMES_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+A\+D\+D\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+E\+S\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ENCRYPT__VALUE}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+UE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ENCRYPT__VALUE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+U\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__ENCRYPT__VALUE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+U\+E\+::response}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__DECRYPT__VALUE}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+UE}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__DECRYPT__VALUE_1_1request}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+U\+E\+::request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__DECRYPT__VALUE_1_1response}{tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+U\+E\+::response}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1wallet__rpc}{tools\+::wallet\+\_\+rpc}}
+\item 
+ \mbox{\hyperlink{namespacetools_1_1wallet__rpc_1_1anonymous__namespace_02wallet__rpc__server__commands__defs_8h_03}{tools\+::wallet\+\_\+rpc\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a169ac9eb6a26f67a1757a049b0f53d07}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}~1
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a499ab9b1e575868a8e3e7f2a74369222}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}}~17
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a223b8016cba3093b0a3ca33162530b14}{M\+A\+K\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON}}(major,  minor)~(((major)$<$$<$16)$\vert$(minor))
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_aec4655414f04aebdffa4fbc58a6ffd9d}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON}}~\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a223b8016cba3093b0a3ca33162530b14}{M\+A\+K\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON}}(\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a169ac9eb6a26f67a1757a049b0f53d07}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}, \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a499ab9b1e575868a8e3e7f2a74369222}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}})
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a076c5e193d6cd06370a1abdc472d8fb7}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK}}~\char`\"{}OK\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a8ef543be88c16b2511741de879579653}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY}}~\char`\"{}B\+U\+SY\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetools_1_1wallet__rpc_afe05d9271fd09ff26083576a99aab69a}{tools\+::wallet\+\_\+rpc\+::wallet\+\_\+rpc\+\_\+types}} = \mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ G\+E\+T\+\_\+\+B\+A\+L\+A\+N\+CE, G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+SS, G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+I\+N\+D\+EX, C\+R\+E\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+SS, L\+A\+B\+E\+L\+\_\+\+A\+D\+D\+R\+E\+SS, G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+TS, C\+R\+E\+A\+T\+E\+\_\+\+A\+C\+C\+O\+U\+NT, L\+A\+B\+E\+L\+\_\+\+A\+C\+C\+O\+U\+NT, G\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+GS, T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+TS, U\+N\+T\+A\+G\+\_\+\+A\+C\+C\+O\+U\+N\+TS, S\+E\+T\+\_\+\+A\+C\+C\+O\+U\+N\+T\+\_\+\+T\+A\+G\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+I\+ON, G\+E\+T\+\_\+\+H\+E\+I\+G\+HT, T\+R\+A\+N\+S\+F\+ER, T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+IT, D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER, S\+I\+G\+N\+\_\+\+T\+R\+A\+N\+S\+F\+ER, S\+U\+B\+M\+I\+T\+\_\+\+T\+R\+A\+N\+S\+F\+ER, S\+W\+E\+E\+P\+\_\+\+D\+U\+ST, S\+W\+E\+E\+P\+\_\+\+A\+LL, S\+W\+E\+E\+P\+\_\+\+S\+I\+N\+G\+LE, R\+E\+L\+A\+Y\+\_\+\+TX, S\+T\+O\+RE, G\+E\+T\+\_\+\+P\+A\+Y\+M\+E\+N\+TS, G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+TS, I\+N\+C\+O\+M\+I\+N\+G\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS, Q\+U\+E\+R\+Y\+\_\+\+K\+EY, M\+A\+K\+E\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS, S\+P\+L\+I\+T\+\_\+\+I\+N\+T\+E\+G\+R\+A\+T\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS, S\+T\+O\+P\+\_\+\+W\+A\+L\+L\+ET, R\+E\+S\+C\+A\+N\+\_\+\+B\+L\+O\+C\+K\+C\+H\+A\+IN, S\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+ES, G\+E\+T\+\_\+\+T\+X\+\_\+\+N\+O\+T\+ES, S\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE, G\+E\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE, G\+E\+T\+\_\+\+T\+X\+\_\+\+K\+EY, C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+K\+EY, G\+E\+T\+\_\+\+T\+X\+\_\+\+P\+R\+O\+OF, C\+H\+E\+C\+K\+\_\+\+T\+X\+\_\+\+P\+R\+O\+OF, G\+E\+T\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+OF, C\+H\+E\+C\+K\+\_\+\+S\+P\+E\+N\+D\+\_\+\+P\+R\+O\+OF, G\+E\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+OF, C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+E\+R\+V\+E\+\_\+\+P\+R\+O\+OF, G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS, G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+\_\+\+C\+SV, G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+B\+Y\+\_\+\+T\+X\+ID, S\+I\+GN, V\+E\+R\+I\+FY, E\+X\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+TS, E\+X\+P\+O\+R\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS, I\+M\+P\+O\+R\+T\+\_\+\+O\+U\+T\+P\+U\+TS, E\+X\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+ES, I\+M\+P\+O\+R\+T\+\_\+\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+ES, M\+A\+K\+E\+\_\+\+U\+RI, P\+A\+R\+S\+E\+\_\+\+U\+RI, A\+D\+D\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY, E\+D\+I\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY, G\+E\+T\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY, D\+E\+L\+E\+T\+E\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+B\+O\+O\+K\+\_\+\+E\+N\+T\+RY, R\+E\+S\+C\+A\+N\+\_\+\+S\+P\+E\+NT, R\+E\+F\+R\+E\+SH, A\+U\+T\+O\+\_\+\+R\+E\+F\+R\+E\+SH, S\+T\+A\+R\+T\+\_\+\+M\+I\+N\+I\+NG, S\+T\+O\+P\+\_\+\+M\+I\+N\+I\+NG, G\+E\+T\+\_\+\+L\+A\+N\+G\+U\+A\+G\+ES, C\+R\+E\+A\+T\+E\+\_\+\+W\+A\+L\+L\+ET, O\+P\+E\+N\+\_\+\+W\+A\+L\+L\+ET, C\+L\+O\+S\+E\+\_\+\+W\+A\+L\+L\+ET, C\+H\+A\+N\+G\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+P\+A\+S\+S\+W\+O\+RD, G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+F\+R\+O\+M\+\_\+\+K\+E\+YS, R\+E\+S\+T\+O\+R\+E\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+I\+S\+T\+I\+C\+\_\+\+W\+A\+L\+L\+ET, I\+S\+\_\+\+M\+U\+L\+T\+I\+S\+IG, P\+R\+E\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG, M\+A\+K\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG, E\+X\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG, I\+M\+P\+O\+R\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG, F\+I\+N\+A\+L\+I\+Z\+E\+\_\+\+M\+U\+L\+T\+I\+S\+IG, E\+X\+C\+H\+A\+N\+G\+E\+\_\+\+M\+U\+L\+T\+I\+S\+I\+G\+\_\+\+K\+E\+YS, S\+I\+G\+N\+\_\+\+M\+U\+L\+T\+I\+S\+IG, S\+U\+B\+M\+I\+T\+\_\+\+M\+U\+L\+T\+I\+S\+IG, G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+ON, S\+T\+A\+KE, R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+DE, R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+CK, C\+A\+N\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+T\+A\+K\+E\+\_\+\+U\+N\+L\+O\+CK, V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+A\+D\+D\+R\+E\+SS, S\+E\+T\+\_\+\+D\+A\+E\+M\+ON, S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+L\+E\+V\+EL, S\+E\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+I\+ES, O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG, O\+N\+S\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+M\+A\+P\+P\+I\+NG, O\+N\+S\+\_\+\+R\+E\+N\+E\+W\+\_\+\+M\+A\+P\+P\+I\+NG, O\+N\+S\+\_\+\+M\+A\+K\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE, O\+N\+S\+\_\+\+H\+A\+S\+H\+\_\+\+N\+A\+ME, O\+N\+S\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES, O\+N\+S\+\_\+\+A\+D\+D\+\_\+\+K\+N\+O\+W\+N\+\_\+\+N\+A\+M\+ES, O\+N\+S\+\_\+\+D\+E\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+UE, O\+N\+S\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+\_\+\+V\+A\+L\+UE $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t... N$>$ }\\constexpr std\+::array$<$ std\+::string\+\_\+view, sizeof...(N)$>$ \mbox{\hyperlink{namespacetools_1_1wallet__rpc_1_1anonymous__namespace_02wallet__rpc__server__commands__defs_8h_03_a2062170f26c90bd0a485ecc1c2a5a690}{tools\+::wallet\+\_\+rpc\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\}\+::\+N\+A\+M\+ES}} (const char(\&...names)\mbox{[}N\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_a223b8016cba3093b0a3ca33162530b14}\label{wallet__rpc__server__commands__defs_8h_a223b8016cba3093b0a3ca33162530b14}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!MAKE\_WALLET\_RPC\_VERSION@{MAKE\_WALLET\_RPC\_VERSION}}
+\index{MAKE\_WALLET\_RPC\_VERSION@{MAKE\_WALLET\_RPC\_VERSION}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_WALLET\_RPC\_VERSION}{MAKE\_WALLET\_RPC\_VERSION}}
+{\footnotesize\ttfamily \#define M\+A\+K\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON(\begin{DoxyParamCaption}\item[{}]{major,  }\item[{}]{minor }\end{DoxyParamCaption})~(((major)$<$$<$16)$\vert$(minor))}
+
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_a8ef543be88c16b2511741de879579653}\label{wallet__rpc__server__commands__defs_8h_a8ef543be88c16b2511741de879579653}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!WALLET\_RPC\_STATUS\_BUSY@{WALLET\_RPC\_STATUS\_BUSY}}
+\index{WALLET\_RPC\_STATUS\_BUSY@{WALLET\_RPC\_STATUS\_BUSY}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{WALLET\_RPC\_STATUS\_BUSY}{WALLET\_RPC\_STATUS\_BUSY}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY~\char`\"{}B\+U\+SY\char`\"{}}
+
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_a076c5e193d6cd06370a1abdc472d8fb7}\label{wallet__rpc__server__commands__defs_8h_a076c5e193d6cd06370a1abdc472d8fb7}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!WALLET\_RPC\_STATUS\_OK@{WALLET\_RPC\_STATUS\_OK}}
+\index{WALLET\_RPC\_STATUS\_OK@{WALLET\_RPC\_STATUS\_OK}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{WALLET\_RPC\_STATUS\_OK}{WALLET\_RPC\_STATUS\_OK}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+OK~\char`\"{}OK\char`\"{}}
+
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_aec4655414f04aebdffa4fbc58a6ffd9d}\label{wallet__rpc__server__commands__defs_8h_aec4655414f04aebdffa4fbc58a6ffd9d}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!WALLET\_RPC\_VERSION@{WALLET\_RPC\_VERSION}}
+\index{WALLET\_RPC\_VERSION@{WALLET\_RPC\_VERSION}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{WALLET\_RPC\_VERSION}{WALLET\_RPC\_VERSION}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON~\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a223b8016cba3093b0a3ca33162530b14}{M\+A\+K\+E\+\_\+\+W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+ON}}(\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a169ac9eb6a26f67a1757a049b0f53d07}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR}}, \mbox{\hyperlink{wallet__rpc__server__commands__defs_8h_a499ab9b1e575868a8e3e7f2a74369222}{W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR}})}
+
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_a169ac9eb6a26f67a1757a049b0f53d07}\label{wallet__rpc__server__commands__defs_8h_a169ac9eb6a26f67a1757a049b0f53d07}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!WALLET\_RPC\_VERSION\_MAJOR@{WALLET\_RPC\_VERSION\_MAJOR}}
+\index{WALLET\_RPC\_VERSION\_MAJOR@{WALLET\_RPC\_VERSION\_MAJOR}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{WALLET\_RPC\_VERSION\_MAJOR}{WALLET\_RPC\_VERSION\_MAJOR}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR~1}
+
+\mbox{\Hypertarget{wallet__rpc__server__commands__defs_8h_a499ab9b1e575868a8e3e7f2a74369222}\label{wallet__rpc__server__commands__defs_8h_a499ab9b1e575868a8e3e7f2a74369222}} 
+\index{wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}!WALLET\_RPC\_VERSION\_MINOR@{WALLET\_RPC\_VERSION\_MINOR}}
+\index{WALLET\_RPC\_VERSION\_MINOR@{WALLET\_RPC\_VERSION\_MINOR}!wallet\_rpc\_server\_commands\_defs.h@{wallet\_rpc\_server\_commands\_defs.h}}
+\doxysubsubsection{\texorpdfstring{WALLET\_RPC\_VERSION\_MINOR}{WALLET\_RPC\_VERSION\_MINOR}}
+{\footnotesize\ttfamily \#define W\+A\+L\+L\+E\+T\+\_\+\+R\+P\+C\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR~17}
+

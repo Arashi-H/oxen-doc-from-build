@@ -1,0 +1,62 @@
+\hypertarget{api_2wallet_8cpp}{}\doxysection{src/wallet/api/wallet.cpp File Reference}
+\label{api_2wallet_8cpp}\index{src/wallet/api/wallet.cpp@{src/wallet/api/wallet.cpp}}
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pending\+\_\+transaction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unsigned\+\_\+transaction.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stake\+\_\+unlock\+\_\+result.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transaction\+\_\+history.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}address\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}subaddress.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}subaddress\+\_\+account.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common\+\_\+defines.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mnemonics/electrum-\/words.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mnemonics/english.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/format.\+hpp$>$}\newline
+{\ttfamily \#include $<$cinttypes$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Include dependency graph for wallet.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{api_2wallet_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1Wallet2CallbackImpl}{Wallet\+::\+Wallet2\+Callback\+Impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceWallet}{Wallet}}
+\item 
+ \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+fs\+::path \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_a2cda5e5d9a3bc72d9fc72d45a2b30de2}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::get\+\_\+default\+\_\+ringdb\+\_\+path}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+void \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_aca00243cf715c3c1ccff6c37ec21339a}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::check\+Multisig\+Wallet\+Ready}} (Locked\+Wallet \&wallet)
+\item 
+void \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_a99a0543d9b053a4b9e4631a8078bb0fd}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::check\+Multisig\+Wallet\+Not\+Ready}} (Locked\+Wallet \&wallet)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_ab4d5d2d8294c38eea9c3e379e2f9b8a1}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+I\+L\+L\+IS}} = 1000 $\ast$ 10
+\item 
+static const int \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_a895e9be9816375071d4a88165744dfca}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::\+M\+A\+X\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+I\+L\+L\+IS}} = 1000 $\ast$ 60 $\ast$ 1
+\item 
+static const int \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_a3acfe5d83545bbe2c39a6f4e7902714d}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+I\+L\+L\+IS}} = 1000 $\ast$ 10
+\item 
+static const int \mbox{\hyperlink{namespaceWallet_1_1anonymous__namespace_02wallet_8cpp_03_ae9839a4fdae237de8b7abd57eb171258}{Wallet\+::anonymous\+\_\+namespace\{wallet.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+M\+I\+L\+L\+IS}} = 1000 $\ast$ 30
+\end{DoxyCompactItemize}

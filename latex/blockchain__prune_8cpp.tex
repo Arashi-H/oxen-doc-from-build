@@ -1,0 +1,168 @@
+\hypertarget{blockchain__prune_8cpp}{}\doxysection{src/blockchain\+\_\+utilities/blockchain\+\_\+prune.cpp File Reference}
+\label{blockchain__prune_8cpp}\index{src/blockchain\_utilities/blockchain\_prune.cpp@{src/blockchain\_utilities/blockchain\_prune.cpp}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/lmdb/db\+\_\+lmdb.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+objects.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+Include dependency graph for blockchain\+\_\+prune.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__prune_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{blockchain__prune_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}{M\+D\+B\+\_\+val\+\_\+set}}(var,  val)~M\+D\+B\+\_\+val var = \{sizeof(val), (void $\ast$)\&val\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::error\+\_\+code \mbox{\hyperlink{blockchain__prune_8cpp_a77bdf5d97123b87f9a846f848b0ba07f}{replace\+\_\+file}} (const fs\+::path \&replacement\+\_\+name, const fs\+::path \&replaced\+\_\+name)
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}{open}} (M\+D\+B\+\_\+env $\ast$\&\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, const fs\+::path \&path, uint64\+\_\+t \mbox{\hyperlink{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}{db\+\_\+flags}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} readonly)
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_ac8fe9ee79b309811bc6dc0c472f573b6}{close}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}})
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_a0e8b6dca7402ef4d8fd96ba0ad301512}{add\+\_\+size}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, uint64\+\_\+t bytes)
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_aa7d91cf9d4d2896f153457c6e24e7da9}{check\+\_\+resize}} (M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, size\+\_\+t bytes)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__prune_8cpp_af6924b94a3f995795f042a4445810622}{resize\+\_\+point}} (size\+\_\+t nrecords, M\+D\+B\+\_\+env $\ast$\mbox{\hyperlink{blockchain__blackball_8cpp_a918ccf53b3802698223283af73096521}{env}}, M\+D\+B\+\_\+txn $\ast$$\ast$txn, size\+\_\+t \&bytes)
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_adc6e15e1c4950f2191fb37f332153e85}{copy\+\_\+table}} (M\+D\+B\+\_\+env $\ast$env0, M\+D\+B\+\_\+env $\ast$env1, const char $\ast$table, unsigned int flags, unsigned int putflags, int($\ast$cmp)(const M\+D\+B\+\_\+val $\ast$, const M\+D\+B\+\_\+val $\ast$)=0)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__prune_8cpp_a1f9b6d5fba8212ddc5699847eef306f2}{is\+\_\+v1\+\_\+tx}} (M\+D\+B\+\_\+cursor $\ast$c\+\_\+txs\+\_\+pruned, M\+D\+B\+\_\+val $\ast$tx\+\_\+id)
+\item 
+static void \mbox{\hyperlink{blockchain__prune_8cpp_add631b13970a6b15d2f87a7a6e49a02d}{prune}} (M\+D\+B\+\_\+env $\ast$env0, M\+D\+B\+\_\+env $\ast$env1)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{blockchain__prune_8cpp_a7a992d8c9433c7e929b60f27a8bf85e7}{parse\+\_\+db\+\_\+sync\+\_\+mode}} (std\+::string db\+\_\+sync\+\_\+mode, uint64\+\_\+t \&\mbox{\hyperlink{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}{db\+\_\+flags}})
+\item 
+int \mbox{\hyperlink{blockchain__prune_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{blockchain__prune_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}bcutil\char`\"{})
+\item 
+static fs\+::path \mbox{\hyperlink{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}{db\+\_\+path}}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{blockchain__prune_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}{records\+\_\+per\+\_\+sync}} = 128
+\item 
+static const size\+\_\+t \mbox{\hyperlink{blockchain__prune_8cpp_a583b47b8eb1404ef1079aacac077482c}{slack}} = 512 $\ast$ 1024 $\ast$ 1024
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{blockchain__prune_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}\label{blockchain__prune_8cpp_ada27a978cec9e0eb7f93cdfcb6f38612}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!MDB\_val\_set@{MDB\_val\_set}}
+\index{MDB\_val\_set@{MDB\_val\_set}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{MDB\_val\_set}{MDB\_val\_set}}
+{\footnotesize\ttfamily \#define M\+D\+B\+\_\+val\+\_\+set(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{val }\end{DoxyParamCaption})~M\+D\+B\+\_\+val var = \{sizeof(val), (void $\ast$)\&val\}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blockchain__prune_8cpp_a0e8b6dca7402ef4d8fd96ba0ad301512}\label{blockchain__prune_8cpp_a0e8b6dca7402ef4d8fd96ba0ad301512}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!add\_size@{add\_size}}
+\index{add\_size@{add\_size}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{add\_size()}{add\_size()}}
+{\footnotesize\ttfamily static void add\+\_\+size (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env,  }\item[{uint64\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_aa7d91cf9d4d2896f153457c6e24e7da9}\label{blockchain__prune_8cpp_aa7d91cf9d4d2896f153457c6e24e7da9}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!check\_resize@{check\_resize}}
+\index{check\_resize@{check\_resize}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_resize()}{check\_resize()}}
+{\footnotesize\ttfamily static void check\+\_\+resize (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_ac8fe9ee79b309811bc6dc0c472f573b6}\label{blockchain__prune_8cpp_ac8fe9ee79b309811bc6dc0c472f573b6}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!close@{close}}
+\index{close@{close}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily static void close (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_adc6e15e1c4950f2191fb37f332153e85}\label{blockchain__prune_8cpp_adc6e15e1c4950f2191fb37f332153e85}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!copy\_table@{copy\_table}}
+\index{copy\_table@{copy\_table}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{copy\_table()}{copy\_table()}}
+{\footnotesize\ttfamily static void copy\+\_\+table (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env0,  }\item[{M\+D\+B\+\_\+env $\ast$}]{env1,  }\item[{const char $\ast$}]{table,  }\item[{unsigned int}]{flags,  }\item[{unsigned int}]{putflags,  }\item[{int($\ast$)(const M\+D\+B\+\_\+val $\ast$, const M\+D\+B\+\_\+val $\ast$)}]{cmp = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a1f9b6d5fba8212ddc5699847eef306f2}\label{blockchain__prune_8cpp_a1f9b6d5fba8212ddc5699847eef306f2}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!is\_v1\_tx@{is\_v1\_tx}}
+\index{is\_v1\_tx@{is\_v1\_tx}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_v1\_tx()}{is\_v1\_tx()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+v1\+\_\+tx (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+cursor $\ast$}]{c\+\_\+txs\+\_\+pruned,  }\item[{M\+D\+B\+\_\+val $\ast$}]{tx\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{blockchain__prune_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!main@{main}}
+\index{main@{main}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}\label{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!open@{open}}
+\index{open@{open}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily static void open (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$\&}]{env,  }\item[{const fs\+::path \&}]{path,  }\item[{uint64\+\_\+t}]{db\+\_\+flags,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{readonly }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a7a992d8c9433c7e929b60f27a8bf85e7}\label{blockchain__prune_8cpp_a7a992d8c9433c7e929b60f27a8bf85e7}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!parse\_db\_sync\_mode@{parse\_db\_sync\_mode}}
+\index{parse\_db\_sync\_mode@{parse\_db\_sync\_mode}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_db\_sync\_mode()}{parse\_db\_sync\_mode()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} parse\+\_\+db\+\_\+sync\+\_\+mode (\begin{DoxyParamCaption}\item[{std\+::string}]{db\+\_\+sync\+\_\+mode,  }\item[{uint64\+\_\+t \&}]{db\+\_\+flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_add631b13970a6b15d2f87a7a6e49a02d}\label{blockchain__prune_8cpp_add631b13970a6b15d2f87a7a6e49a02d}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!prune@{prune}}
+\index{prune@{prune}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{prune()}{prune()}}
+{\footnotesize\ttfamily static void prune (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+env $\ast$}]{env0,  }\item[{M\+D\+B\+\_\+env $\ast$}]{env1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a77bdf5d97123b87f9a846f848b0ba07f}\label{blockchain__prune_8cpp_a77bdf5d97123b87f9a846f848b0ba07f}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!replace\_file@{replace\_file}}
+\index{replace\_file@{replace\_file}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{replace\_file()}{replace\_file()}}
+{\footnotesize\ttfamily static std\+::error\+\_\+code replace\+\_\+file (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{replacement\+\_\+name,  }\item[{const fs\+::path \&}]{replaced\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_af6924b94a3f995795f042a4445810622}\label{blockchain__prune_8cpp_af6924b94a3f995795f042a4445810622}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!resize\_point@{resize\_point}}
+\index{resize\_point@{resize\_point}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{resize\_point()}{resize\_point()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} resize\+\_\+point (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{nrecords,  }\item[{M\+D\+B\+\_\+env $\ast$}]{env,  }\item[{M\+D\+B\+\_\+txn $\ast$$\ast$}]{txn,  }\item[{size\+\_\+t \&}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}\label{blockchain__prune_8cpp_a4208c67f5d56352bc4fa9a3372ba2dc6}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!db\_path@{db\_path}}
+\index{db\_path@{db\_path}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{db\_path}{db\_path}}
+{\footnotesize\ttfamily fs\+::path db\+\_\+path\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{blockchain__prune_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}bcutil\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}\label{blockchain__prune_8cpp_a66bf4ddd309a5bc1d7f5b66dcda7a6b8}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!records\_per\_sync@{records\_per\_sync}}
+\index{records\_per\_sync@{records\_per\_sync}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{records\_per\_sync}{records\_per\_sync}}
+{\footnotesize\ttfamily uint64\+\_\+t records\+\_\+per\+\_\+sync = 128\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{blockchain__prune_8cpp_a583b47b8eb1404ef1079aacac077482c}\label{blockchain__prune_8cpp_a583b47b8eb1404ef1079aacac077482c}} 
+\index{blockchain\_prune.cpp@{blockchain\_prune.cpp}!slack@{slack}}
+\index{slack@{slack}!blockchain\_prune.cpp@{blockchain\_prune.cpp}}
+\doxysubsubsection{\texorpdfstring{slack}{slack}}
+{\footnotesize\ttfamily const size\+\_\+t slack = 512 $\ast$ 1024 $\ast$ 1024\hspace{0.3cm}{\ttfamily [static]}}
+

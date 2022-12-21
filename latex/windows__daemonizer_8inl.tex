@@ -1,0 +1,51 @@
+\hypertarget{windows__daemonizer_8inl}{}\doxysection{src/daemonizer/windows\+\_\+daemonizer.inl File Reference}
+\label{windows__daemonizer_8inl}\index{src/daemonizer/windows\_daemonizer.inl@{src/daemonizer/windows\_daemonizer.inl}}
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemonizer/windows\+\_\+service.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemonizer/windows\+\_\+service\+\_\+runner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$shlobj.\+h$>$}\newline
+Include dependency graph for windows\+\_\+daemonizer.\+inl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{windows__daemonizer_8inl__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedaemonizer}{daemonizer}}
+\item 
+ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_a8c1cb09c69b649ad94538d317ced039f}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::get\+\_\+argument\+\_\+string}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{namespacedaemonizer_a5452d5c035dd1972b6dc53bb57148b2f}{daemonizer\+::init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&hidden\+\_\+options, boost\+::program\+\_\+options\+::options\+\_\+description \&normal\+\_\+options)
+\item 
+fs\+::path \mbox{\hyperlink{namespacedaemonizer_a871b726d00e357c4035af87d50536c07}{daemonizer\+::get\+\_\+default\+\_\+data\+\_\+dir}} ()
+\item 
+fs\+::path \mbox{\hyperlink{namespacedaemonizer_a973aaf3d9635aecb410aa8041c749725}{daemonizer\+::get\+\_\+relative\+\_\+path\+\_\+base}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+{\footnotesize template$<$typename Application , typename... Args$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacedaemonizer_ae931d4a980c385b4aaf9fcb2c62ae0b0}{daemonizer\+::daemonize}} (const char $\ast$name, int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]}, boost\+::program\+\_\+options\+::variables\+\_\+map vm, Args \&\&... args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_ad50a4c3fc13d40870ab470fdf5954674}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+install\+\_\+service}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_ac084bfc7d24fb6dd07f0d85667baa4f6}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+uninstall\+\_\+service}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_a54198aae0b184ac1f1f6f9c60281a116}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+start\+\_\+service}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_ae07b5a3e22fc55160e06cb067875d0b9}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+stop\+\_\+service}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_a85d089dca4b83ff4b49e99939850113b}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+is\+\_\+service}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacedaemonizer_1_1anonymous__namespace_02windows__daemonizer_8inl_03_ab9072fef2002a7b273486732b5cf6f14}{daemonizer\+::anonymous\+\_\+namespace\{windows\+\_\+daemonizer.\+inl\}\+::arg\+\_\+non\+\_\+interactive}}
+\end{DoxyCompactItemize}

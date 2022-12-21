@@ -1,0 +1,126 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+TE Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE}\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+TE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+TE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_1_1quorum__for__height}{quorum\+\_\+for\+\_\+height}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_1_1quorum__t}{quorum\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ad4bea3251218d613af18cf2242cd90f1}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a077405f08a51d97effab63168e387d22}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ac6a7411f5f15d2a23056fc9ff0549489}{M\+A\+X\+\_\+\+C\+O\+U\+NT}} = 256
+\item 
+static constexpr uint64\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a89587f4b49f040d9f1c17e0f9d4234b4}{H\+E\+I\+G\+H\+T\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE}} = U\+I\+N\+T64\+\_\+\+M\+AX
+\item 
+static constexpr uint8\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a7afd2830e24f99f992daff30751c922c}{A\+L\+L\+\_\+\+Q\+U\+O\+R\+U\+M\+S\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE}} = 255
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Accesses the list of public keys of the nodes who are participating or being tested in a quorum.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily start\+\_\+height} (Optional)\+: Start height, omit both start and end height to request the latest quorum. Note that \char`\"{}latest\char`\"{} means different heights for different types of quorums as not all quorums exist at every block heights.
+\item {\ttfamily end\+\_\+height} (Optional)\+: End height, omit both start and end height to request the latest quorum
+\item {\ttfamily quorum\+\_\+type} (Optional)\+: Set value to request a specific quorum, 0 = Obligation, 1 = Checkpointing, 2 = Blink, 3 = Pulse, 255 = all quorums, default is all quorums. For Pulse quorums, requesting the blockchain height (or latest) returns the primary pulse quorum responsible for the next block; for heights with blocks this returns the actual quorum, which may be a backup quorum if the primary quorum did not produce in time.
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily quorums} An array of quorums associated with the requested height. Each element is structured with the following keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily service\+\_\+node\+\_\+pubkey} The public key of the Service Node, in hex (json) or binary (bt).
+\item {\ttfamily height} The height the quorums are relevant for
+\item {\ttfamily quorum\+\_\+type} The quorum type
+\item {\ttfamily quorum} Quorum of Service Nodes. Each element is structured with the following keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily validators} List of service node public keys in the quorum. For obligations quorums these are the testing nodes; for checkpoint and blink these are the participating nodes (there are no workers); for Pulse blink quorums these are the block signers. This is hex encoded, even for bt-\/encoded requests.
+\item {\ttfamily workers} Public key of the quorum workers. For obligations quorums these are the nodes being tested; for Pulse quorums this is the block producer. Checkpoint and Blink quorums do not populate this field. This is hex encoded, even for bt-\/encoded requests. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ad4bea3251218d613af18cf2242cd90f1}\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ad4bea3251218d613af18cf2242cd90f1}} 
+\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a7afd2830e24f99f992daff30751c922c}\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a7afd2830e24f99f992daff30751c922c}} 
+\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}!ALL\_QUORUMS\_SENTINEL\_VALUE@{ALL\_QUORUMS\_SENTINEL\_VALUE}}
+\index{ALL\_QUORUMS\_SENTINEL\_VALUE@{ALL\_QUORUMS\_SENTINEL\_VALUE}!cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+\doxysubsubsection{\texorpdfstring{ALL\_QUORUMS\_SENTINEL\_VALUE}{ALL\_QUORUMS\_SENTINEL\_VALUE}}
+{\footnotesize\ttfamily constexpr uint8\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::\+A\+L\+L\+\_\+\+Q\+U\+O\+R\+U\+M\+S\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE = 255\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a89587f4b49f040d9f1c17e0f9d4234b4}\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a89587f4b49f040d9f1c17e0f9d4234b4}} 
+\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}!HEIGHT\_SENTINEL\_VALUE@{HEIGHT\_SENTINEL\_VALUE}}
+\index{HEIGHT\_SENTINEL\_VALUE@{HEIGHT\_SENTINEL\_VALUE}!cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+\doxysubsubsection{\texorpdfstring{HEIGHT\_SENTINEL\_VALUE}{HEIGHT\_SENTINEL\_VALUE}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::\+H\+E\+I\+G\+H\+T\+\_\+\+S\+E\+N\+T\+I\+N\+E\+L\+\_\+\+V\+A\+L\+UE = U\+I\+N\+T64\+\_\+\+M\+AX\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ac6a7411f5f15d2a23056fc9ff0549489}\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_ac6a7411f5f15d2a23056fc9ff0549489}} 
+\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}!MAX\_COUNT@{MAX\_COUNT}}
+\index{MAX\_COUNT@{MAX\_COUNT}!cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+\doxysubsubsection{\texorpdfstring{MAX\_COUNT}{MAX\_COUNT}}
+{\footnotesize\ttfamily constexpr size\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::\+M\+A\+X\+\_\+\+C\+O\+U\+NT = 256\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a077405f08a51d97effab63168e387d22}\label{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_a077405f08a51d97effab63168e387d22}} 
+\index{cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_QUORUM\_STATE@{cryptonote::rpc::GET\_QUORUM\_STATE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__QUORUM__STATE_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+T\+A\+T\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

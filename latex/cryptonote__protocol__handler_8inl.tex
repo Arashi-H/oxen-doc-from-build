@@ -1,0 +1,84 @@
+\hypertarget{cryptonote__protocol__handler_8inl}{}\doxysection{src/cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+handler.inl File Reference}
+\label{cryptonote__protocol__handler_8inl}\index{src/cryptonote\_protocol/cryptonote\_protocol\_handler.inl@{src/cryptonote\_protocol/cryptonote\_protocol\_handler.inl}}
+
+
+This is the original cryptonote protocol network-\/events handler, modified by us.  
+
+
+{\ttfamily \#include $<$boost/uuid/uuid\+\_\+io.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/uuid/nil\+\_\+generator.\+hpp$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/verification\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/tx\+\_\+pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/network\+\_\+throttle-\/detail.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/pruning.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+Include dependency graph for cryptonote\+\_\+protocol\+\_\+handler.\+inl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__protocol__handler_8inl__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__protocol__handler_8inl__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a2e76a1d15ac826d5c0ba4b2db32cb72c}{cryptonote\+::seconds\+\_\+f}} = std\+::chrono\+::duration$<$ double $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}net.\+cn\char`\"{})
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a4774f72fc8aa94c1725237537a197f16}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+N\+S\+P\+A\+N\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 10
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecryptonote_af8d4f048786cea4c9fc4b73999a77161}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 100$\ast$1024$\ast$1024
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a1c6a7f56156b06738b84ec3188b5f4ca}{cryptonote\+::\+B\+L\+O\+C\+K\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+O\+W\+N\+L\+O\+A\+D\+\_\+\+N\+E\+A\+R\+\_\+\+B\+L\+O\+C\+KS}} = 1000
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_abd0f12d0f94d5b609a964edd41e94bf3}{cryptonote\+::\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+N\+E\+X\+T\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+D\+\_\+\+S\+P\+A\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+S\+T\+A\+N\+D\+BY}} = 5\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_aa8fe02e07ebd91530bfe3aecd0e2f512}{cryptonote\+::\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+N\+E\+X\+T\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+D\+\_\+\+S\+P\+A\+N\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_aecca498331aa807a683ed8620143dab9}{cryptonote\+::\+I\+D\+L\+E\+\_\+\+P\+E\+E\+R\+\_\+\+K\+I\+C\+K\+\_\+\+T\+I\+ME}} = 10min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_ae7ab56d9b698e32ab091e05cf937d557}{cryptonote\+::\+P\+A\+S\+S\+I\+V\+E\+\_\+\+P\+E\+E\+R\+\_\+\+K\+I\+C\+K\+\_\+\+T\+I\+ME}} = 1min
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a6f167534a948a7957c9bba594757b46f}{cryptonote\+::\+D\+R\+O\+P\+\_\+\+O\+N\+\_\+\+S\+Y\+N\+C\+\_\+\+W\+E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespacecryptonote_a5975563d406cc293139d7f33662a8982}{cryptonote\+::\+L\+A\+S\+T\+\_\+\+A\+C\+T\+I\+V\+I\+T\+Y\+\_\+\+S\+T\+A\+L\+L\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 2\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the original cryptonote protocol network-\/events handler, modified by us. 
+
+\begin{DoxyAuthor}{Author}
+rfree (current maintainer/user in monero.\+cc project -\/ most of code is from Crypto\+Note) 
+\end{DoxyAuthor}

@@ -1,0 +1,332 @@
+\hypertarget{classcryptonote_1_1blink__tx}{}\doxysection{cryptonote\+::blink\+\_\+tx Class Reference}
+\label{classcryptonote_1_1blink__tx}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+
+
+{\ttfamily \#include $<$tx\+\_\+blink.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::blink\+\_\+tx\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classcryptonote_1_1blink__tx__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1blink__tx_1_1quorum__signature}{quorum\+\_\+signature}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1blink__tx_1_1signature__verification__error}{signature\+\_\+verification\+\_\+error}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1blink__tx_1_1tx__hash__visitor}{tx\+\_\+hash\+\_\+visitor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ea593616de15330c0fb2d55e55410bf994}{subquorum\+::base}}, 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08eada907a1b8f74e6922d93b025eecfb852}{subquorum\+::future}}, 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ead69186af02738a9b3ced1bc5b652ba55}{subquorum\+::\+\_\+count}}
+ \}
+\item 
+enum \mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}{signature\+\_\+status}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a334c4a4c42fdb79d7ebc3e73b517e6f8}{signature\+\_\+status\+::none}}, 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52ac7537d6d48ecf261749c09a9f284bd45}{signature\+\_\+status\+::rejected}}, 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a787d5f05953ec39b108869dfdd7733e6}{signature\+\_\+status\+::approved}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a39296d6d6bdba4da00f1fd56fd60d77f}{get\+\_\+txhash}} () const
+\begin{DoxyCompactList}\small\item\em Returns the transaction hash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_abaf37ad86b9f246c0f17774d002c0ca1}{blink\+\_\+tx}} ()=delete
+\item 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_a3feab16c40b96d546f44f3e7b2b94576}{blink\+\_\+tx}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}{height}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} from just a height; constructs a default transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_a6e3b3535f087f6a147a7833da26787be}{blink\+\_\+tx}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}{height}}, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txhash)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} from a height and a hash. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \mbox{\hyperlink{classcryptonote_1_1blink__tx_a10f328af388c49786999cc113f0307d1}{unique\+\_\+lock}} (Args \&\&...args)
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\auto \mbox{\hyperlink{classcryptonote_1_1blink__tx_a191509b228b4fcb5591128b54cd18566}{shared\+\_\+lock}} (Args \&\&...args)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1blink__tx_ae9c8b1188b223b9ad5c35acc78fd1d0f}{limit\+\_\+signatures}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, size\+\_\+t max\+\_\+size)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_aa1f1164088c1527f65d3ab782996cd67}{add\+\_\+signature}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, int position, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved}}, const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a029e40217f3652b8b7227fc477e1aef3}{add\+\_\+signature}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, int position, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved}}, const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig, const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&snl)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a4669b4b83fb377f790aff9efdd4be2f2}{add\+\_\+prechecked\+\_\+signature}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, int position, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved}}, const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}{signature\+\_\+status}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a6745e39db876138441d8d92fe776f833}{get\+\_\+signature\+\_\+status}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, int position) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}{rejected}} () const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1blink__tx_abb8159ff8c90f493fa0772b2feb82ed6}{quorum\+\_\+height}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q) const
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a9bd005a5032621d33168988dac6ec843}{get\+\_\+sn\+\_\+pubkey}} (\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q, int position, const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&snl) const
+\begin{DoxyCompactList}\small\item\em Returns the pubkey of the referenced service node, or null if there is no such service node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_abaebdd1ccff130039cd97fa1690da0d4}{hash}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved}}) const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1blink__tx_acc777b068ecd304af3b4b70eaf84d3be}{fill\+\_\+serialization\+\_\+data}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}{height}}, std\+::vector$<$ uint8\+\_\+t $>$ \&\mbox{\hyperlink{structservice__nodes_1_1quorum}{quorum}}, std\+::vector$<$ uint8\+\_\+t $>$ \&position, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ \&signature) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcryptonote_1_1blink__tx_a0b031b407190eced8ad60ea3db5d97ca}{fill\+\_\+serialization\+\_\+data}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&data) const
+\begin{DoxyCompactList}\small\item\em Wrapper around the above that can be called with a \mbox{\hyperlink{structcryptonote_1_1serializable__blink__metadata}{serializable\+\_\+blink\+\_\+metadata}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1blink__tx_a80a6bc117aed1e1994d53aa20c28f181}{quorum\+\_\+height}} (uint64\+\_\+t h, \mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} q)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}{height}}
+\item 
+std\+::variant$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}}, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1blink__tx_af40ef5d77b960b7cce94f797250225f8}{tx}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1blink__tx_addb2519cf370cd3d293afc2556e6994b}{initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ std\+::array$<$ \mbox{\hyperlink{structcryptonote_1_1blink__tx_1_1quorum__signature}{quorum\+\_\+signature}}, \mbox{\hyperlink{namespaceservice__nodes_aea0be087b7c26a5184b8f955a42305ec}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+S\+U\+B\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}} $>$, \mbox{\hyperlink{namespacetools_a951acda786b12282a5cd8040354e4159}{tools\+::enum\+\_\+count}}$<$ \mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}} $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1blink__tx_aed4a7101b766e818d329043b53d036e1}{signatures\+\_\+}}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classcryptonote_1_1blink__tx_a770dcaaadb532b2885ff33cfcf2207f8}{mutex\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}\label{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!signature\_status@{signature\_status}}
+\index{signature\_status@{signature\_status}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{signature\_status}{signature\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}{cryptonote\+::blink\+\_\+tx\+::signature\+\_\+status}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!none@{none}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a334c4a4c42fdb79d7ebc3e73b517e6f8}\label{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a334c4a4c42fdb79d7ebc3e73b517e6f8}} 
+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rejected@{rejected}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!rejected@{rejected}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52ac7537d6d48ecf261749c09a9f284bd45}\label{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52ac7537d6d48ecf261749c09a9f284bd45}} 
+rejected&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{approved@{approved}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!approved@{approved}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a787d5f05953ec39b108869dfdd7733e6}\label{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52a787d5f05953ec39b108869dfdd7733e6}} 
+approved&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}\label{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!subquorum@{subquorum}}
+\index{subquorum@{subquorum}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{subquorum}{subquorum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{cryptonote\+::blink\+\_\+tx\+::subquorum}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{base@{base}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!base@{base}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ea593616de15330c0fb2d55e55410bf994}\label{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ea593616de15330c0fb2d55e55410bf994}} 
+base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{future@{future}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!future@{future}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08eada907a1b8f74e6922d93b025eecfb852}\label{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08eada907a1b8f74e6922d93b025eecfb852}} 
+future&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_count@{\_count}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!\_count@{\_count}}}\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ead69186af02738a9b3ced1bc5b652ba55}\label{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08ead69186af02738a9b3ced1bc5b652ba55}} 
+\+\_\+count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_abaf37ad86b9f246c0f17774d002c0ca1}\label{classcryptonote_1_1blink__tx_abaf37ad86b9f246c0f17774d002c0ca1}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!blink\_tx@{blink\_tx}}
+\index{blink\_tx@{blink\_tx}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{blink\_tx()}{blink\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cryptonote\+::blink\+\_\+tx\+::blink\+\_\+tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a3feab16c40b96d546f44f3e7b2b94576}\label{classcryptonote_1_1blink__tx_a3feab16c40b96d546f44f3e7b2b94576}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!blink\_tx@{blink\_tx}}
+\index{blink\_tx@{blink\_tx}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{blink\_tx()}{blink\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cryptonote\+::blink\+\_\+tx\+::blink\+\_\+tx (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} from just a height; constructs a default transaction. 
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a6e3b3535f087f6a147a7833da26787be}\label{classcryptonote_1_1blink__tx_a6e3b3535f087f6a147a7833da26787be}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!blink\_tx@{blink\_tx}}
+\index{blink\_tx@{blink\_tx}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{blink\_tx()}{blink\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cryptonote\+::blink\+\_\+tx\+::blink\+\_\+tx (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txhash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a new \mbox{\hyperlink{classcryptonote_1_1blink__tx}{blink\+\_\+tx}} from a height and a hash. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a4669b4b83fb377f790aff9efdd4be2f2}\label{classcryptonote_1_1blink__tx_a4669b4b83fb377f790aff9efdd4be2f2}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!add\_prechecked\_signature@{add\_prechecked\_signature}}
+\index{add\_prechecked\_signature@{add\_prechecked\_signature}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{add\_prechecked\_signature()}{add\_prechecked\_signature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::blink\+\_\+tx\+::add\+\_\+prechecked\+\_\+signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{int}]{position,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{approved,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+Adds a signature for the given quorum and position without checking it for validity (i.\+e. because it has already been checked with \mbox{\hyperlink{namespacecrypto_aa9d240b803db22c14272c092c9457187}{crypto\+::check\+\_\+signature}}). Returns true if added, false if a signature was already present. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_aa1f1164088c1527f65d3ab782996cd67}\label{classcryptonote_1_1blink__tx_aa1f1164088c1527f65d3ab782996cd67}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!add\_signature@{add\_signature}}
+\index{add\_signature@{add\_signature}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{add\_signature()}{add\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::blink\+\_\+tx\+::add\+\_\+signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{int}]{position,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{approved,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey }\end{DoxyParamCaption})}
+
+Adds a signature for the given quorum and position given an already-\/obtained blink subquorum validator pubkey. Returns true if the signature was accepted and stored, false if a signature was already present for the given quorum and position. Throws a {\ttfamily \mbox{\hyperlink{classcryptonote_1_1blink__tx_1_1signature__verification__error}{blink\+\_\+tx\+::signature\+\_\+verification\+\_\+error}}} if the signature fails validation. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a029e40217f3652b8b7227fc477e1aef3}\label{classcryptonote_1_1blink__tx_a029e40217f3652b8b7227fc477e1aef3}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!add\_signature@{add\_signature}}
+\index{add\_signature@{add\_signature}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{add\_signature()}{add\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::blink\+\_\+tx\+::add\+\_\+signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{int}]{position,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{approved,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig,  }\item[{const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{snl }\end{DoxyParamCaption})}
+
+Adds a signature for the given quorum and position. Returns false if a signature was already present; true if the signature was accepted and stored; and throws a {\ttfamily \mbox{\hyperlink{classcryptonote_1_1blink__tx_1_1signature__verification__error}{blink\+\_\+tx\+::signature\+\_\+verification\+\_\+error}}} if the signature fails validation. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}\label{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!approved@{approved}}
+\index{approved@{approved}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{approved()}{approved()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::blink\+\_\+tx\+::approved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns true if this blink tx is valid for inclusion in the blockchain, that is, has the required number of approval signatures in each quorum. (Note that it is possible for a blink tx to be neither \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved()}} nor \mbox{\hyperlink{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}{rejected()}}). \mbox{\Hypertarget{classcryptonote_1_1blink__tx_acc777b068ecd304af3b4b70eaf84d3be}\label{classcryptonote_1_1blink__tx_acc777b068ecd304af3b4b70eaf84d3be}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!fill\_serialization\_data@{fill\_serialization\_data}}
+\index{fill\_serialization\_data@{fill\_serialization\_data}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{fill\_serialization\_data()}{fill\_serialization\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void cryptonote\+::blink\+\_\+tx\+::fill\+\_\+serialization\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{uint64\+\_\+t \&}]{height,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{quorum,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{position,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ \&}]{signature }\end{DoxyParamCaption}) const}
+
+Fills the given blink serialization struct with the signature data. This is designed to work directly with the components of a \mbox{\hyperlink{structcryptonote_1_1serializable__blink__metadata}{serializable\+\_\+blink\+\_\+metadata}} (but we don\textquotesingle{}t want to have to link to cryptonote\+\_\+protocol where that is defined).
+
+A shared lock should be held by the caller. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a0b031b407190eced8ad60ea3db5d97ca}\label{classcryptonote_1_1blink__tx_a0b031b407190eced8ad60ea3db5d97ca}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!fill\_serialization\_data@{fill\_serialization\_data}}
+\index{fill\_serialization\_data@{fill\_serialization\_data}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{fill\_serialization\_data()}{fill\_serialization\_data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void cryptonote\+::blink\+\_\+tx\+::fill\+\_\+serialization\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{data }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper around the above that can be called with a \mbox{\hyperlink{structcryptonote_1_1serializable__blink__metadata}{serializable\+\_\+blink\+\_\+metadata}}. 
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a6745e39db876138441d8d92fe776f833}\label{classcryptonote_1_1blink__tx_a6745e39db876138441d8d92fe776f833}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!get\_signature\_status@{get\_signature\_status}}
+\index{get\_signature\_status@{get\_signature\_status}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{get\_signature\_status()}{get\_signature\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1blink__tx_af970b53e3831a39e57b9859c79982e52}{blink\+\_\+tx\+::signature\+\_\+status}} cryptonote\+::blink\+\_\+tx\+::get\+\_\+signature\+\_\+status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{int}]{position }\end{DoxyParamCaption}) const}
+
+Returns the signature status for the given subquorum and position. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a9bd005a5032621d33168988dac6ec843}\label{classcryptonote_1_1blink__tx_a9bd005a5032621d33168988dac6ec843}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!get\_sn\_pubkey@{get\_sn\_pubkey}}
+\index{get\_sn\_pubkey@{get\_sn\_pubkey}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{get\_sn\_pubkey()}{get\_sn\_pubkey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} cryptonote\+::blink\+\_\+tx\+::get\+\_\+sn\+\_\+pubkey (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{int}]{position,  }\item[{const \mbox{\hyperlink{classservice__nodes_1_1service__node__list}{service\+\_\+nodes\+::service\+\_\+node\+\_\+list}} \&}]{snl }\end{DoxyParamCaption}) const}
+
+
+
+Returns the pubkey of the referenced service node, or null if there is no such service node. 
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a39296d6d6bdba4da00f1fd56fd60d77f}\label{classcryptonote_1_1blink__tx_a39296d6d6bdba4da00f1fd56fd60d77f}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!get\_txhash@{get\_txhash}}
+\index{get\_txhash@{get\_txhash}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{get\_txhash()}{get\_txhash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::blink\+\_\+tx\+::get\+\_\+txhash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the transaction hash. 
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_abaebdd1ccff130039cd97fa1690da0d4}\label{classcryptonote_1_1blink__tx_abaebdd1ccff130039cd97fa1690da0d4}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!hash@{hash}}
+\index{hash@{hash}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::blink\+\_\+tx\+::hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{approved }\end{DoxyParamCaption}) const}
+
+Returns the hashed signing value for this blink TX for a tx with status {\ttfamily approved}. The result is a fast hash of the height + tx hash + approval value. Lock not required. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_addb2519cf370cd3d293afc2556e6994b}\label{classcryptonote_1_1blink__tx_addb2519cf370cd3d293afc2556e6994b}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!initialize@{initialize}}
+\index{initialize@{initialize}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void cryptonote\+::blink\+\_\+tx\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_ae9c8b1188b223b9ad5c35acc78fd1d0f}\label{classcryptonote_1_1blink__tx_ae9c8b1188b223b9ad5c35acc78fd1d0f}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!limit\_signatures@{limit\_signatures}}
+\index{limit\_signatures@{limit\_signatures}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{limit\_signatures()}{limit\_signatures()}}
+{\footnotesize\ttfamily void cryptonote\+::blink\+\_\+tx\+::limit\+\_\+signatures (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q,  }\item[{size\+\_\+t}]{max\+\_\+size }\end{DoxyParamCaption})}
+
+Sets the maximum number of signatures for the given subquorum type, if the given size is less than the ideal subquorum size. All signatures above the given count will be set to rejected. Throws a std\+::domain\+\_\+error if the given signatures count is too large.
+
+This should only be called immediately after construction (thus not needing a lock) and only called (at most) once per subquorum.
+
+You can safely omit calling this if you only care about approvals; this only affects the result of {\ttfamily \mbox{\hyperlink{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}{rejected()}}}. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_abb8159ff8c90f493fa0772b2feb82ed6}\label{classcryptonote_1_1blink__tx_abb8159ff8c90f493fa0772b2feb82ed6}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!quorum\_height@{quorum\_height}}
+\index{quorum\_height@{quorum\_height}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{quorum\_height()}{quorum\_height()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::blink\+\_\+tx\+::quorum\+\_\+height (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the height of the given subquorum (base or future) for this blink tx; returns 0 at the beginning of the chain (before there are enough blocks for a blink quorum). Lock not required. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a80a6bc117aed1e1994d53aa20c28f181}\label{classcryptonote_1_1blink__tx_a80a6bc117aed1e1994d53aa20c28f181}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!quorum\_height@{quorum\_height}}
+\index{quorum\_height@{quorum\_height}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{quorum\_height()}{quorum\_height()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static uint64\+\_\+t cryptonote\+::blink\+\_\+tx\+::quorum\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{h,  }\item[{\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns the quorum height for the given height and quorum (base or future); returns 0 at the beginning of the chain (before there are enough blocks for a blink quorum). \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}\label{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!rejected@{rejected}}
+\index{rejected@{rejected}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{rejected()}{rejected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::blink\+\_\+tx\+::rejected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns true if this blink tx has been definitively rejected, that is, has enough rejection signatures in at least one of the quorums that it is impossible for it to become \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved()}}. (Note that it is possible for a blink tx to be neither \mbox{\hyperlink{classcryptonote_1_1blink__tx_a1d85c97fac195c8554d3bed0a877facf}{approved()}} nor \mbox{\hyperlink{classcryptonote_1_1blink__tx_a684327adf90f8ef615fef3a90630697d}{rejected()}}). \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a191509b228b4fcb5591128b54cd18566}\label{classcryptonote_1_1blink__tx_a191509b228b4fcb5591128b54cd18566}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!shared\_lock@{shared\_lock}}
+\index{shared\_lock@{shared\_lock}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{shared\_lock()}{shared\_lock()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto cryptonote\+::blink\+\_\+tx\+::shared\+\_\+lock (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtains a shared lock on this blink tx; required for any signature-\/dependent method unless otherwise noted \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a10f328af388c49786999cc113f0307d1}\label{classcryptonote_1_1blink__tx_a10f328af388c49786999cc113f0307d1}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!unique\_lock@{unique\_lock}}
+\index{unique\_lock@{unique\_lock}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{unique\_lock()}{unique\_lock()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto cryptonote\+::blink\+\_\+tx\+::unique\+\_\+lock (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtains a unique lock on this blink tx; required for any signature-\/mutating method unless otherwise noted 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}\label{classcryptonote_1_1blink__tx_a5adade45269f67bf180ebfab8d61e293}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!height@{height}}
+\index{height@{height}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily const uint64\+\_\+t cryptonote\+::blink\+\_\+tx\+::height}
+
+The blink authorization height of this blink tx, i.\+e. the block height at the time the transaction was created. \mbox{\Hypertarget{classcryptonote_1_1blink__tx_a770dcaaadb532b2885ff33cfcf2207f8}\label{classcryptonote_1_1blink__tx_a770dcaaadb532b2885ff33cfcf2207f8}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex cryptonote\+::blink\+\_\+tx\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_aed4a7101b766e818d329043b53d036e1}\label{classcryptonote_1_1blink__tx_aed4a7101b766e818d329043b53d036e1}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!signatures\_@{signatures\_}}
+\index{signatures\_@{signatures\_}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{signatures\_}{signatures\_}}
+{\footnotesize\ttfamily std\+::array$<$std\+::array$<$\mbox{\hyperlink{structcryptonote_1_1blink__tx_1_1quorum__signature}{quorum\+\_\+signature}}, \mbox{\hyperlink{namespaceservice__nodes_aea0be087b7c26a5184b8f955a42305ec}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+S\+U\+B\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}}$>$, \mbox{\hyperlink{namespacetools_a951acda786b12282a5cd8040354e4159}{tools\+::enum\+\_\+count}}$<$\mbox{\hyperlink{classcryptonote_1_1blink__tx_af4280d7021ca9f5cd33ae3ed1ae6f08e}{subquorum}}$>$ $>$ cryptonote\+::blink\+\_\+tx\+::signatures\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1blink__tx_af40ef5d77b960b7cce94f797250225f8}\label{classcryptonote_1_1blink__tx_af40ef5d77b960b7cce94f797250225f8}} 
+\index{cryptonote::blink\_tx@{cryptonote::blink\_tx}!tx@{tx}}
+\index{tx@{tx}!cryptonote::blink\_tx@{cryptonote::blink\_tx}}
+\doxysubsubsection{\texorpdfstring{tx}{tx}}
+{\footnotesize\ttfamily std\+::variant$<$\mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}}, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::blink\+\_\+tx\+::tx}
+
+The blink transaction {\itshape or} hash. The transaction is present when building a blink tx for blink quorum signing; for regular blink txes received via \mbox{\hyperlink{namespacecryptonote_1_1p2p}{p2p}} this will contain the hash instead. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__blink_8h}{tx\+\_\+blink.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{tx__blink_8cpp}{tx\+\_\+blink.\+cpp}}\end{DoxyCompactItemize}

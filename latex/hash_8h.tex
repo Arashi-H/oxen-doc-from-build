@@ -1,0 +1,57 @@
+\hypertarget{hash_8h}{}\doxysection{src/crypto/hash.h File Reference}
+\label{hash_8h}\index{src/crypto/hash.h@{src/crypto/hash.h}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include \char`\"{}base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash-\/ops.\+h\char`\"{}}\newline
+Include dependency graph for hash.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01crypto_1_1hash_01_4}{std\+::hash$<$ crypto\+::hash $>$}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01crypto_1_1hash8_01_4}{std\+::hash$<$ crypto\+::hash8 $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}{crypto\+::cn\+\_\+slow\+\_\+hash\+\_\+type}} \{ \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a7c72c39b67fb65e21fba3a033fed8e12}{crypto\+::cn\+\_\+slow\+\_\+hash\+\_\+type\+::heavy\+\_\+v1}} = 3, 
+\mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a03b51822fd5a0548b3ec305a6a506748}{crypto\+::cn\+\_\+slow\+\_\+hash\+\_\+type\+::heavy\+\_\+v2}}, 
+\mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a3baf2f491a74e9a2c089dede538498a5}{crypto\+::cn\+\_\+slow\+\_\+hash\+\_\+type\+::turtle\+\_\+lite\+\_\+v2}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacecrypto_a085c360e57fa902d4150a39f7dded06f}{crypto\+::cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length, hash \&hash)
+\item 
+hash \mbox{\hyperlink{namespacecrypto_a1b30d838b560f963e6e3dfc9f0f8288c}{crypto\+::cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length)
+\item 
+void \mbox{\hyperlink{namespacecrypto_af7174f427e3be85addbe18bd4d74cf60}{crypto\+::cn\+\_\+slow\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length, hash \&hash, cn\+\_\+slow\+\_\+hash\+\_\+type type)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a4fb82beedb045b54e302c2282cd0f0ff}{crypto\+::tree\+\_\+hash}} (const hash $\ast$hashes, std\+::size\+\_\+t count, hash \&root\+\_\+hash)
+\end{DoxyCompactItemize}

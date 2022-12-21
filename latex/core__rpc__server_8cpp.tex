@@ -1,0 +1,154 @@
+\hypertarget{core__rpc__server_8cpp}{}\doxysection{src/rpc/core\+\_\+rpc\+\_\+server.cpp File Reference}
+\label{core__rpc__server_8cpp}\index{src/rpc/core\_rpc\_server.cpp@{src/rpc/core\_rpc\_server.cpp}}
+{\ttfamily \#include $<$boost/program\+\_\+options/options\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$oxenc/base64.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/pulse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/network\+\_\+throttle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server\+\_\+binary\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server\+\_\+command\+\_\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server\+\_\+error\+\_\+codes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/rpc\+\_\+args.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/sha256sum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/account.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/tx\+\_\+sanity\+\_\+check.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p/net\+\_\+node.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/json\+\_\+bt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/rpc\+\_\+command.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/core.\+h$>$}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+Include dependency graph for core\+\_\+rpc\+\_\+server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core__rpc__server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_1_1pruned__transaction}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::pruned\+\_\+transaction}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_1_1extra__extractor}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::extra\+\_\+extractor}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1tx__info}{cryptonote\+::rpc\+::tx\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1detail}{cryptonote\+::rpc\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{core__rpc__server_8cpp_aceffc7806561cbea1b774cf99cc0cdb0}{C\+H\+E\+C\+K\+\_\+\+C\+O\+R\+E\+\_\+\+R\+E\+A\+DY}}()~do \{ \mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}}(!check\+\_\+core\+\_\+ready())\{ res.\+status =  S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY; return res; \} \} while(0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_af6f6ef95c67dde335ed41a6d0e266ae1}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$$>$ \&regs)
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_afc66fe642d8d9cda55f2b60f19a87fab}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+binary\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$$>$ \&regs)
+\item 
+{\footnotesize template$<$typename... R\+PC, typename... Binary\+R\+PC$>$ }\\std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a86fff542b08101b1890ed961364baca5}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+commands}} (\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ R\+P\+C... $>$, \mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ Binary\+R\+P\+C... $>$)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab5f2ebd68423344dffd5988d25ff78b4}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::round\+\_\+up}} (uint64\+\_\+t value, uint64\+\_\+t quantum)
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a8ad2b9179a7e85d7d6283717a0b9aac5}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::microportion}} (uint64\+\_\+t portion)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aaaec5c49e86c7ea9f6fde495008a5a90}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::hexify}} (const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab3d32d368bdb1ef8af79f79729306232}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::load\+\_\+tx\+\_\+extra\+\_\+data}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&e, const transaction \&tx, network\+\_\+type nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+bt)
+\item 
+static std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, tx\+\_\+info $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_ac18a8f4c525be693052a806b8ad0ce39}{cryptonote\+::rpc\+::get\+\_\+pool\+\_\+txs\+\_\+impl}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_1_1rpc_a57b691b06fc314bfb0970a72d80637c5}{cryptonote\+::rpc\+::pool\+\_\+locks}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\item 
+static std\+::pair$<$ std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}, tx\+\_\+info $>$, tx\+\_\+memory\+\_\+pool\+::key\+\_\+images\+\_\+container $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_a9ace9837eaf94b8cf20d3d58d6015900}{cryptonote\+::rpc\+::get\+\_\+pool\+\_\+txs\+\_\+kis}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core)
+\item 
+static tx\+\_\+memory\+\_\+pool\+::key\+\_\+images\+\_\+container \mbox{\hyperlink{namespacecryptonote_1_1rpc_ac7b2efb669df99cb2aad6a963888e3b9}{cryptonote\+::rpc\+::get\+\_\+pool\+\_\+kis}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, std\+::function$<$ void(const transaction \&, tx\+\_\+info \&)$>$ post\+\_\+process=\{\})
+\item 
+static \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a4b7e5a2488ccace8d99b310f011cb759}{cryptonote\+::rpc\+::json\+\_\+peer\+\_\+info}} (const \mbox{\hyperlink{structnodetool_1_1peerlist__entry}{nodetool\+::peerlist\+\_\+entry}} \&peer)
+\item 
+static \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_adc94f482ae93868660641822a7a7c8dc}{cryptonote\+::rpc\+::json\+\_\+connection\+\_\+info}} (const connection\+\_\+info \&ci)
+\item 
+output\+\_\+distribution\+\_\+data \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aa3d34bed5297702b3a81742f3c01d8e6}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::process\+\_\+distribution}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cumulative, std\+::uint64\+\_\+t start\+\_\+height, std\+::vector$<$ std\+::uint64\+\_\+t $>$ distribution, std\+::uint64\+\_\+t \mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}})
+\item 
+std\+::optional$<$ output\+\_\+distribution\+\_\+data $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1detail_a35e2cb666f7f419c375efbee9532b8c9}{cryptonote\+::rpc\+::detail\+::get\+\_\+output\+\_\+distribution}} (const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t \&, std\+::vector$<$ uint64\+\_\+t $>$ \&, uint64\+\_\+t \&)$>$ \&f, uint64\+\_\+t amount, uint64\+\_\+t from\+\_\+height, uint64\+\_\+t to\+\_\+height, const std\+::function$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}(uint64\+\_\+t)$>$ \&get\+\_\+hash, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cumulative, uint64\+\_\+t blockchain\+\_\+height)
+\item 
+static time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_ad0cc246bd4aa1685fb3ab18d5fd97346}{cryptonote\+::rpc\+::reachable\+\_\+to\+\_\+time\+\_\+t}} (std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point t, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point system\+\_\+now, std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point steady\+\_\+now)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_ada3b5c739fec5dc522c0bd9360e11d6c}{cryptonote\+::rpc\+::requested}} (const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&requested, const std\+::string \&key)
+\item 
+{\footnotesize template$<$typename Dict , typename T , typename... More$>$ }\\static void \mbox{\hyperlink{namespacecryptonote_1_1rpc_abe11b07bc94bfd91fa52be2e7f18b910}{cryptonote\+::rpc\+::set\+\_\+if\+\_\+requested}} (const std\+::unordered\+\_\+set$<$ std\+::string $>$ \&reqed, Dict \&dict, const std\+::string \&key, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&value, More \&\&... more)
+\item 
+{\footnotesize template$<$typename Success $>$ }\\std\+::string \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ac4d7e0cc06879206800a229660786ed1}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::handle\+\_\+ping}} (core \&core, std\+::array$<$ uint16\+\_\+t, 3 $>$ cur\+\_\+version, std\+::array$<$ uint16\+\_\+t, 3 $>$ required, std\+::string\+\_\+view ed25519\+\_\+pubkey, std\+::string\+\_\+view \mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}}, std\+::string\+\_\+view name, std\+::atomic$<$ std\+::time\+\_\+t $>$ \&update, std\+::chrono\+::seconds lifetime, Success \mbox{\hyperlink{expect_8h_ad0e3773cdda67d358ebf4f8b3b8719f6}{success}})
+\item 
+static void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a52a3caad05fee1019273f0e1656afa96}{cryptonote\+::rpc\+::check\+\_\+quantity\+\_\+limit}} (size\+\_\+t count, size\+\_\+t max, char const $\ast$container\+\_\+name=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_1_1rpc_a17af0f5760772b847f981da675c76b9e}{cryptonote\+::rpc\+::logcat}} = log\+::\+Cat(\char`\"{}daemon.\+rpc\char`\"{})
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a7c9a0d427f36b601bd470354aa52e291}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::\+O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+C\+U\+T\+O\+F\+F\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+I\+ON}} = 3 $\ast$ 86400
+\item 
+const std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_a7cd094b57c486b7cd4c332bd215f7cb7}{cryptonote\+::rpc\+::rpc\+\_\+commands}} = register\+\_\+rpc\+\_\+commands(\mbox{\hyperlink{namespacecryptonote_1_1rpc_a86cdaa100c960f2e75fa7c731d338b56}{rpc\+::core\+\_\+rpc\+\_\+types}}\{\}, \mbox{\hyperlink{namespacecryptonote_1_1rpc_aa9779d7d21248b26b49abfb623f92d63}{rpc\+::core\+\_\+rpc\+\_\+binary\+\_\+types}}\{\})
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a5dda58571188a98edefdd32d163b6396}{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::half\+\_\+microportion}} = 9223372036855U\+LL
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::mutex \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a4470634399bf97d6b67af2649a4b9fba}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::mutex}}\\
+\>std::vector$<$ std::uint64\_t $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a74a392fe566464aceb68d1624ff83461}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_distribution}}\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab4e394e5cfbbb190998693cf001bcd9c}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_from}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a1b3d61c09d24c591fbf980a9b3beef44}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_to}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a01145730545963a7f6caf211de168777}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_start\_height}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a2c058940dde8eb804b7533ded9c10d15}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_base}} = 0\\
+\>\mbox{\hyperlink{structcrypto_1_1hash}{crypto::hash}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad61c72c85e672d66af20db00a3bcaf24}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_m10\_hash}} \{\}\\
+\>\mbox{\hyperlink{structcrypto_1_1hash}{crypto::hash}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a9b4c271f55a9ff1b20a833791b27c456}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_top\_hash}} \{\}\\
+\>\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad1ad6c0e50c84d57e0fccb260a98b0b0}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\\
+\} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab708aca017a7d148b5a516910cac9fa0}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::output\_dist\_cache}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{core__rpc__server_8cpp_aceffc7806561cbea1b774cf99cc0cdb0}\label{core__rpc__server_8cpp_aceffc7806561cbea1b774cf99cc0cdb0}} 
+\index{core\_rpc\_server.cpp@{core\_rpc\_server.cpp}!CHECK\_CORE\_READY@{CHECK\_CORE\_READY}}
+\index{CHECK\_CORE\_READY@{CHECK\_CORE\_READY}!core\_rpc\_server.cpp@{core\_rpc\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{CHECK\_CORE\_READY}{CHECK\_CORE\_READY}}
+{\footnotesize\ttfamily \#define C\+H\+E\+C\+K\+\_\+\+C\+O\+R\+E\+\_\+\+R\+E\+A\+DY(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ \mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}}(!check\+\_\+core\+\_\+ready())\{ res.\+status =  S\+T\+A\+T\+U\+S\+\_\+\+B\+U\+SY; return res; \} \} while(0)}
+

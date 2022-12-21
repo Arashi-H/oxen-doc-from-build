@@ -1,0 +1,248 @@
+\hypertarget{jh_8c}{}\doxysection{src/crypto/jh.c File Reference}
+\label{jh_8c}\index{src/crypto/jh.c@{src/crypto/jh.c}}
+{\ttfamily \#include \char`\"{}jh.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for jh.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jh_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhashState}{hash\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jh_8c_a09cd6ca2ce2992b5e14b201c7abcb85e}{D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16}}(x)~\+\_\+\+\_\+declspec(align(16)) x
+\item 
+\#define \mbox{\hyperlink{jh_8c_a3f904374989ebaa09f28b700dec40061}{S\+W\+A\+P1}}(x)~(x) = ((((x) \& 0x5555555555555555\+U\+LL) $<$$<$ 1) $\vert$ (((x) \& 0xaaaaaaaaaaaaaaaa\+U\+LL) $>$$>$ 1));
+\item 
+\#define \mbox{\hyperlink{jh_8c_af43b8a3b1b980b36b07ded4e3f4f322d}{S\+W\+A\+P2}}(x)~(x) = ((((x) \& 0x3333333333333333\+U\+LL) $<$$<$ 2) $\vert$ (((x) \& 0xcccccccccccccccc\+U\+LL) $>$$>$ 2));
+\item 
+\#define \mbox{\hyperlink{jh_8c_aa8de42bd4c7b9bec58163c664aa29e28}{S\+W\+A\+P4}}(x)~(x) = ((((x) \& 0x0f0f0f0f0f0f0f0f\+U\+LL) $<$$<$ 4) $\vert$ (((x) \& 0xf0f0f0f0f0f0f0f0\+U\+LL) $>$$>$ 4));
+\item 
+\#define \mbox{\hyperlink{jh_8c_a5229d89ff2d909df696cbe04830bb62a}{S\+W\+A\+P8}}(x)~(x) = ((((x) \& 0x00ff00ff00ff00ff\+U\+LL) $<$$<$ 8) $\vert$ (((x) \& 0xff00ff00ff00ff00\+U\+LL) $>$$>$ 8));
+\item 
+\#define \mbox{\hyperlink{jh_8c_aa38c686dee971828c5b639e5abf8f0dd}{S\+W\+A\+P16}}(x)~(x) = ((((x) \& 0x0000ffff0000ffff\+U\+LL) $<$$<$ 16) $\vert$ (((x) \& 0xffff0000ffff0000\+U\+LL) $>$$>$ 16));
+\item 
+\#define \mbox{\hyperlink{jh_8c_adc9df58399091716769c6ee1caf5e401}{S\+W\+A\+P32}}(x)~(x) = (((x) $<$$<$ 32) $\vert$ ((x) $>$$>$ 32));
+\item 
+\#define \mbox{\hyperlink{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}{L}}(m0,  m1,  m2,  m3,  m4,  m5,  m6,  m7)
+\item 
+\#define \mbox{\hyperlink{jh_8c_a961f912de4ef96d74a6cf69675805436}{SS}}(m0,  m1,  m2,  m3,  m4,  m5,  m6,  m7,  cc0,  cc1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \mbox{\hyperlink{jh_8c_abc0f5bc07737e498f287334775dff2b6}{uint64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{jh_8c_a9907a478661bd34d4b349e97c30193f5}{E8}} (\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$\mbox{\hyperlink{structstate}{state}})
+\item 
+static void \mbox{\hyperlink{jh_8c_af1306cf6d5a263f2249cef4b8d7809dd}{F8}} (\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$\mbox{\hyperlink{structstate}{state}})
+\item 
+static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} \mbox{\hyperlink{jh_8c_ae8f1a8a160bd7f22563c5459e4fc5566}{Init}} (\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$\mbox{\hyperlink{structstate}{state}}, int hashbitlen)
+\item 
+static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} \mbox{\hyperlink{jh_8c_a3f48304cfe51ee2fc1a808706668077b}{Update}} (\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$\mbox{\hyperlink{structstate}{state}}, const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$data, \mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}} databitlen)
+\item 
+static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} \mbox{\hyperlink{jh_8c_a16f6d3fb7ef89765fb1e7af68d0ba5ff}{Final}} (\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$\mbox{\hyperlink{structstate}{state}}, \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$hashval)
+\item 
+\mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} \mbox{\hyperlink{jh_8c_add2f4a43ce82c90e314921d265b4898c}{jh\+\_\+hash}} (int hashbitlen, const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$data, \mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}} databitlen, \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$hashval)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char \mbox{\hyperlink{jh_8c_adcba158e8ad66cd4c7d596460c1786f2}{J\+H224\+\_\+\+H0}} \mbox{[}128\mbox{]} =\{0x2d,0xfe,0xdd,0x62,0xf9,0x9a,0x98,0xac,0xae,0x7c,0xac,0xd6,0x19,0xd6,0x34,0xe7,0xa4,0x83,0x10,0x5,0xbc,0x30,0x12,0x16,0xb8,0x60,0x38,0xc6,0xc9,0x66,0x14,0x94,0x66,0xd9,0x89,0x9f,0x25,0x80,0x70,0x6f,0xce,0x9e,0xa3,0x1b,0x1d,0x9b,0x1a,0xdc,0x11,0xe8,0x32,0x5f,0x7b,0x36,0x6e,0x10,0xf9,0x94,0x85,0x7f,0x2,0xfa,0x6,0xc1,0x1b,0x4f,0x1b,0x5c,0xd8,0xc8,0x40,0xb3,0x97,0xf6,0xa1,0x7f,0x6e,0x73,0x80,0x99,0xdc,0xdf,0x93,0xa5,0xad,0xea,0xa3,0xd3,0xa4,0x31,0xe8,0xde,0xc9,0x53,0x9a,0x68,0x22,0xb4,0xa9,0x8a,0xec,0x86,0xa1,0xe4,0xd5,0x74,0xac,0x95,0x9c,0xe5,0x6c,0xf0,0x15,0x96,0xd,0xea,0xb5,0xab,0x2b,0xbf,0x96,0x11,0xdc,0xf0,0xdd,0x64,0xea,0x6e\}
+\item 
+const unsigned char \mbox{\hyperlink{jh_8c_a9484bf2935dd28260a6bb2b7d3355e01}{J\+H256\+\_\+\+H0}} \mbox{[}128\mbox{]} =\{0xeb,0x98,0xa3,0x41,0x2c,0x20,0xd3,0xeb,0x92,0xcd,0xbe,0x7b,0x9c,0xb2,0x45,0xc1,0x1c,0x93,0x51,0x91,0x60,0xd4,0xc7,0xfa,0x26,0x0,0x82,0xd6,0x7e,0x50,0x8a,0x3,0xa4,0x23,0x9e,0x26,0x77,0x26,0xb9,0x45,0xe0,0xfb,0x1a,0x48,0xd4,0x1a,0x94,0x77,0xcd,0xb5,0xab,0x26,0x2,0x6b,0x17,0x7a,0x56,0xf0,0x24,0x42,0xf,0xff,0x2f,0xa8,0x71,0xa3,0x96,0x89,0x7f,0x2e,0x4d,0x75,0x1d,0x14,0x49,0x8,0xf7,0x7d,0xe2,0x62,0x27,0x76,0x95,0xf7,0x76,0x24,0x8f,0x94,0x87,0xd5,0xb6,0x57,0x47,0x80,0x29,0x6c,0x5c,0x5e,0x27,0x2d,0xac,0x8e,0xd,0x6c,0x51,0x84,0x50,0xc6,0x57,0x5,0x7a,0xf,0x7b,0xe4,0xd3,0x67,0x70,0x24,0x12,0xea,0x89,0xe3,0xab,0x13,0xd3,0x1c,0xd7,0x69\}
+\item 
+const unsigned char \mbox{\hyperlink{jh_8c_a077e3c4bd04c906e99239251a49cbbee}{J\+H384\+\_\+\+H0}} \mbox{[}128\mbox{]} =\{0x48,0x1e,0x3b,0xc6,0xd8,0x13,0x39,0x8a,0x6d,0x3b,0x5e,0x89,0x4a,0xde,0x87,0x9b,0x63,0xfa,0xea,0x68,0xd4,0x80,0xad,0x2e,0x33,0x2c,0xcb,0x21,0x48,0xf,0x82,0x67,0x98,0xae,0xc8,0x4d,0x90,0x82,0xb9,0x28,0xd4,0x55,0xea,0x30,0x41,0x11,0x42,0x49,0x36,0xf5,0x55,0xb2,0x92,0x48,0x47,0xec,0xc7,0x25,0xa,0x93,0xba,0xf4,0x3c,0xe1,0x56,0x9b,0x7f,0x8a,0x27,0xdb,0x45,0x4c,0x9e,0xfc,0xbd,0x49,0x63,0x97,0xaf,0xe,0x58,0x9f,0xc2,0x7d,0x26,0xaa,0x80,0xcd,0x80,0xc0,0x8b,0x8c,0x9d,0xeb,0x2e,0xda,0x8a,0x79,0x81,0xe8,0xf8,0xd5,0x37,0x3a,0xf4,0x39,0x67,0xad,0xdd,0xd1,0x7a,0x71,0xa9,0xb4,0xd3,0xbd,0xa4,0x75,0xd3,0x94,0x97,0x6c,0x3f,0xba,0x98,0x42,0x73,0x7f\}
+\item 
+const unsigned char \mbox{\hyperlink{jh_8c_a60d594d51ed8fb46147e33e0468e7cdb}{J\+H512\+\_\+\+H0}} \mbox{[}128\mbox{]} =\{0x6f,0xd1,0x4b,0x96,0x3e,0x0,0xaa,0x17,0x63,0x6a,0x2e,0x5,0x7a,0x15,0xd5,0x43,0x8a,0x22,0x5e,0x8d,0xc,0x97,0xef,0xb,0xe9,0x34,0x12,0x59,0xf2,0xb3,0xc3,0x61,0x89,0x1d,0xa0,0xc1,0x53,0x6f,0x80,0x1e,0x2a,0xa9,0x5,0x6b,0xea,0x2b,0x6d,0x80,0x58,0x8e,0xcc,0xdb,0x20,0x75,0xba,0xa6,0xa9,0xf,0x3a,0x76,0xba,0xf8,0x3b,0xf7,0x1,0x69,0xe6,0x5,0x41,0xe3,0x4a,0x69,0x46,0xb5,0x8a,0x8e,0x2e,0x6f,0xe6,0x5a,0x10,0x47,0xa7,0xd0,0xc1,0x84,0x3c,0x24,0x3b,0x6e,0x71,0xb1,0x2d,0x5a,0xc1,0x99,0xcf,0x57,0xf6,0xec,0x9d,0xb1,0xf8,0x56,0xa7,0x6,0x88,0x7c,0x57,0x16,0xb1,0x56,0xe3,0xc2,0xfc,0xdf,0xe6,0x85,0x17,0xfb,0x54,0x5a,0x46,0x78,0xcc,0x8c,0xdd,0x4b\}
+\item 
+const unsigned char \mbox{\hyperlink{jh_8c_aa8ce07226a6f2a4718f68e0655348d5a}{E8\+\_\+bitslice\+\_\+roundconstant}} \mbox{[}42\mbox{]}\mbox{[}32\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{jh_8c_a09cd6ca2ce2992b5e14b201c7abcb85e}\label{jh_8c_a09cd6ca2ce2992b5e14b201c7abcb85e}} 
+\index{jh.c@{jh.c}!DATA\_ALIGN16@{DATA\_ALIGN16}}
+\index{DATA\_ALIGN16@{DATA\_ALIGN16}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{DATA\_ALIGN16}{DATA\_ALIGN16}}
+{\footnotesize\ttfamily \#define D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\+\_\+\+\_\+declspec(align(16)) x}
+
+\mbox{\Hypertarget{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}\label{jh_8c_a90d5704063a6391e6c463cc9d308ac8f}} 
+\index{jh.c@{jh.c}!L@{L}}
+\index{L@{L}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily \#define L(\begin{DoxyParamCaption}\item[{}]{m0,  }\item[{}]{m1,  }\item[{}]{m2,  }\item[{}]{m3,  }\item[{}]{m4,  }\item[{}]{m5,  }\item[{}]{m6,  }\item[{}]{m7 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      (m4) \string^= (m1);                \(\backslash\)}
+\DoxyCodeLine{      (m5) \string^= (m2);                \(\backslash\)}
+\DoxyCodeLine{      (m6) \string^= (m0) \string^ (m3);         \(\backslash\)}
+\DoxyCodeLine{      (m7) \string^= (m0);                \(\backslash\)}
+\DoxyCodeLine{      (m0) \string^= (m5);                \(\backslash\)}
+\DoxyCodeLine{      (m1) \string^= (m6);                \(\backslash\)}
+\DoxyCodeLine{      (m2) \string^= (m4) \string^ (m7);         \(\backslash\)}
+\DoxyCodeLine{      (m3) \string^= (m4);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{jh_8c_a961f912de4ef96d74a6cf69675805436}\label{jh_8c_a961f912de4ef96d74a6cf69675805436}} 
+\index{jh.c@{jh.c}!SS@{SS}}
+\index{SS@{SS}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SS}{SS}}
+{\footnotesize\ttfamily \#define SS(\begin{DoxyParamCaption}\item[{}]{m0,  }\item[{}]{m1,  }\item[{}]{m2,  }\item[{}]{m3,  }\item[{}]{m4,  }\item[{}]{m5,  }\item[{}]{m6,  }\item[{}]{m7,  }\item[{}]{cc0,  }\item[{}]{cc1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      m3  = \string~(m3);                  \(\backslash\)}
+\DoxyCodeLine{      m7  = \string~(m7);                  \(\backslash\)}
+\DoxyCodeLine{      m0 \string^= ((\string~(m2)) \& (cc0));      \(\backslash\)}
+\DoxyCodeLine{      m4 \string^= ((\string~(m6)) \& (cc1));      \(\backslash\)}
+\DoxyCodeLine{      temp0 = (cc0) \string^ ((m0) \& (m1));\(\backslash\)}
+\DoxyCodeLine{      temp1 = (cc1) \string^ ((m4) \& (m5));\(\backslash\)}
+\DoxyCodeLine{      m0 \string^= ((m2) \& (m3));          \(\backslash\)}
+\DoxyCodeLine{      m4 \string^= ((m6) \& (m7));          \(\backslash\)}
+\DoxyCodeLine{      m3 \string^= ((\string~(m1)) \& (m2));       \(\backslash\)}
+\DoxyCodeLine{      m7 \string^= ((\string~(m5)) \& (m6));       \(\backslash\)}
+\DoxyCodeLine{      m1 \string^= ((m0) \& (m2));          \(\backslash\)}
+\DoxyCodeLine{      m5 \string^= ((m4) \& (m6));          \(\backslash\)}
+\DoxyCodeLine{      m2 \string^= ((m0) \& (\string~(m3)));       \(\backslash\)}
+\DoxyCodeLine{      m6 \string^= ((m4) \& (\string~(m7)));       \(\backslash\)}
+\DoxyCodeLine{      m0 \string^= ((m1) | (m3));          \(\backslash\)}
+\DoxyCodeLine{      m4 \string^= ((m5) | (m7));          \(\backslash\)}
+\DoxyCodeLine{      m3 \string^= ((m1) \& (m2));          \(\backslash\)}
+\DoxyCodeLine{      m7 \string^= ((m5) \& (m6));          \(\backslash\)}
+\DoxyCodeLine{      m1 \string^= (temp0 \& (m0));         \(\backslash\)}
+\DoxyCodeLine{      m5 \string^= (temp1 \& (m4));         \(\backslash\)}
+\DoxyCodeLine{      m2 \string^= temp0;                  \(\backslash\)}
+\DoxyCodeLine{      m6 \string^= temp1;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{jh_8c_a3f904374989ebaa09f28b700dec40061}\label{jh_8c_a3f904374989ebaa09f28b700dec40061}} 
+\index{jh.c@{jh.c}!SWAP1@{SWAP1}}
+\index{SWAP1@{SWAP1}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP1}{SWAP1}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = ((((x) \& 0x5555555555555555\+U\+LL) $<$$<$ 1) $\vert$ (((x) \& 0xaaaaaaaaaaaaaaaa\+U\+LL) $>$$>$ 1));}
+
+\mbox{\Hypertarget{jh_8c_aa38c686dee971828c5b639e5abf8f0dd}\label{jh_8c_aa38c686dee971828c5b639e5abf8f0dd}} 
+\index{jh.c@{jh.c}!SWAP16@{SWAP16}}
+\index{SWAP16@{SWAP16}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP16}{SWAP16}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P16(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = ((((x) \& 0x0000ffff0000ffff\+U\+LL) $<$$<$ 16) $\vert$ (((x) \& 0xffff0000ffff0000\+U\+LL) $>$$>$ 16));}
+
+\mbox{\Hypertarget{jh_8c_af43b8a3b1b980b36b07ded4e3f4f322d}\label{jh_8c_af43b8a3b1b980b36b07ded4e3f4f322d}} 
+\index{jh.c@{jh.c}!SWAP2@{SWAP2}}
+\index{SWAP2@{SWAP2}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP2}{SWAP2}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P2(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = ((((x) \& 0x3333333333333333\+U\+LL) $<$$<$ 2) $\vert$ (((x) \& 0xcccccccccccccccc\+U\+LL) $>$$>$ 2));}
+
+\mbox{\Hypertarget{jh_8c_adc9df58399091716769c6ee1caf5e401}\label{jh_8c_adc9df58399091716769c6ee1caf5e401}} 
+\index{jh.c@{jh.c}!SWAP32@{SWAP32}}
+\index{SWAP32@{SWAP32}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP32}{SWAP32}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P32(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = (((x) $<$$<$ 32) $\vert$ ((x) $>$$>$ 32));}
+
+\mbox{\Hypertarget{jh_8c_aa8de42bd4c7b9bec58163c664aa29e28}\label{jh_8c_aa8de42bd4c7b9bec58163c664aa29e28}} 
+\index{jh.c@{jh.c}!SWAP4@{SWAP4}}
+\index{SWAP4@{SWAP4}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP4}{SWAP4}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P4(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = ((((x) \& 0x0f0f0f0f0f0f0f0f\+U\+LL) $<$$<$ 4) $\vert$ (((x) \& 0xf0f0f0f0f0f0f0f0\+U\+LL) $>$$>$ 4));}
+
+\mbox{\Hypertarget{jh_8c_a5229d89ff2d909df696cbe04830bb62a}\label{jh_8c_a5229d89ff2d909df696cbe04830bb62a}} 
+\index{jh.c@{jh.c}!SWAP8@{SWAP8}}
+\index{SWAP8@{SWAP8}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{SWAP8}{SWAP8}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P8(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x) = ((((x) \& 0x00ff00ff00ff00ff\+U\+LL) $<$$<$ 8) $\vert$ (((x) \& 0xff00ff00ff00ff00\+U\+LL) $>$$>$ 8));}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{jh_8c_abc0f5bc07737e498f287334775dff2b6}\label{jh_8c_abc0f5bc07737e498f287334775dff2b6}} 
+\index{jh.c@{jh.c}!uint64@{uint64}}
+\index{uint64@{uint64}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{uint64}{uint64}}
+{\footnotesize\ttfamily typedef uint64\+\_\+t \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jh_8c_a9907a478661bd34d4b349e97c30193f5}\label{jh_8c_a9907a478661bd34d4b349e97c30193f5}} 
+\index{jh.c@{jh.c}!E8@{E8}}
+\index{E8@{E8}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{E8()}{E8()}}
+{\footnotesize\ttfamily static void E8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{jh_8c_af1306cf6d5a263f2249cef4b8d7809dd}\label{jh_8c_af1306cf6d5a263f2249cef4b8d7809dd}} 
+\index{jh.c@{jh.c}!F8@{F8}}
+\index{F8@{F8}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{F8()}{F8()}}
+{\footnotesize\ttfamily static void F8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{jh_8c_a16f6d3fb7ef89765fb1e7af68d0ba5ff}\label{jh_8c_a16f6d3fb7ef89765fb1e7af68d0ba5ff}} 
+\index{jh.c@{jh.c}!Final@{Final}}
+\index{Final@{Final}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{Final()}{Final()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} Final (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{hashval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{jh_8c_ae8f1a8a160bd7f22563c5459e4fc5566}\label{jh_8c_ae8f1a8a160bd7f22563c5459e4fc5566}} 
+\index{jh.c@{jh.c}!Init@{Init}}
+\index{Init@{Init}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$}]{state,  }\item[{int}]{hashbitlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{jh_8c_add2f4a43ce82c90e314921d265b4898c}\label{jh_8c_add2f4a43ce82c90e314921d265b4898c}} 
+\index{jh.c@{jh.c}!jh\_hash@{jh\_hash}}
+\index{jh\_hash@{jh\_hash}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{jh\_hash()}{jh\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} jh\+\_\+hash (\begin{DoxyParamCaption}\item[{int}]{hashbitlen,  }\item[{const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}}]{databitlen,  }\item[{\mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{hashval }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{jh_8c_a3f48304cfe51ee2fc1a808706668077b}\label{jh_8c_a3f48304cfe51ee2fc1a808706668077b}} 
+\index{jh.c@{jh.c}!Update@{Update}}
+\index{Update@{Update}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{jh_8h_a8291024a9e890d5d4d60dc3c76d2b44c}{Hash\+Return}} Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashState}{hash\+State}} $\ast$}]{state,  }\item[{const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}}]{databitlen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{jh_8c_aa8ce07226a6f2a4718f68e0655348d5a}\label{jh_8c_aa8ce07226a6f2a4718f68e0655348d5a}} 
+\index{jh.c@{jh.c}!E8\_bitslice\_roundconstant@{E8\_bitslice\_roundconstant}}
+\index{E8\_bitslice\_roundconstant@{E8\_bitslice\_roundconstant}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{E8\_bitslice\_roundconstant}{E8\_bitslice\_roundconstant}}
+{\footnotesize\ttfamily const unsigned char E8\+\_\+bitslice\+\_\+roundconstant\mbox{[}42\mbox{]}\mbox{[}32\mbox{]}}
+
+\mbox{\Hypertarget{jh_8c_adcba158e8ad66cd4c7d596460c1786f2}\label{jh_8c_adcba158e8ad66cd4c7d596460c1786f2}} 
+\index{jh.c@{jh.c}!JH224\_H0@{JH224\_H0}}
+\index{JH224\_H0@{JH224\_H0}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{JH224\_H0}{JH224\_H0}}
+{\footnotesize\ttfamily const unsigned char J\+H224\+\_\+\+H0\mbox{[}128\mbox{]} =\{0x2d,0xfe,0xdd,0x62,0xf9,0x9a,0x98,0xac,0xae,0x7c,0xac,0xd6,0x19,0xd6,0x34,0xe7,0xa4,0x83,0x10,0x5,0xbc,0x30,0x12,0x16,0xb8,0x60,0x38,0xc6,0xc9,0x66,0x14,0x94,0x66,0xd9,0x89,0x9f,0x25,0x80,0x70,0x6f,0xce,0x9e,0xa3,0x1b,0x1d,0x9b,0x1a,0xdc,0x11,0xe8,0x32,0x5f,0x7b,0x36,0x6e,0x10,0xf9,0x94,0x85,0x7f,0x2,0xfa,0x6,0xc1,0x1b,0x4f,0x1b,0x5c,0xd8,0xc8,0x40,0xb3,0x97,0xf6,0xa1,0x7f,0x6e,0x73,0x80,0x99,0xdc,0xdf,0x93,0xa5,0xad,0xea,0xa3,0xd3,0xa4,0x31,0xe8,0xde,0xc9,0x53,0x9a,0x68,0x22,0xb4,0xa9,0x8a,0xec,0x86,0xa1,0xe4,0xd5,0x74,0xac,0x95,0x9c,0xe5,0x6c,0xf0,0x15,0x96,0xd,0xea,0xb5,0xab,0x2b,0xbf,0x96,0x11,0xdc,0xf0,0xdd,0x64,0xea,0x6e\}}
+
+\mbox{\Hypertarget{jh_8c_a9484bf2935dd28260a6bb2b7d3355e01}\label{jh_8c_a9484bf2935dd28260a6bb2b7d3355e01}} 
+\index{jh.c@{jh.c}!JH256\_H0@{JH256\_H0}}
+\index{JH256\_H0@{JH256\_H0}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{JH256\_H0}{JH256\_H0}}
+{\footnotesize\ttfamily const unsigned char J\+H256\+\_\+\+H0\mbox{[}128\mbox{]} =\{0xeb,0x98,0xa3,0x41,0x2c,0x20,0xd3,0xeb,0x92,0xcd,0xbe,0x7b,0x9c,0xb2,0x45,0xc1,0x1c,0x93,0x51,0x91,0x60,0xd4,0xc7,0xfa,0x26,0x0,0x82,0xd6,0x7e,0x50,0x8a,0x3,0xa4,0x23,0x9e,0x26,0x77,0x26,0xb9,0x45,0xe0,0xfb,0x1a,0x48,0xd4,0x1a,0x94,0x77,0xcd,0xb5,0xab,0x26,0x2,0x6b,0x17,0x7a,0x56,0xf0,0x24,0x42,0xf,0xff,0x2f,0xa8,0x71,0xa3,0x96,0x89,0x7f,0x2e,0x4d,0x75,0x1d,0x14,0x49,0x8,0xf7,0x7d,0xe2,0x62,0x27,0x76,0x95,0xf7,0x76,0x24,0x8f,0x94,0x87,0xd5,0xb6,0x57,0x47,0x80,0x29,0x6c,0x5c,0x5e,0x27,0x2d,0xac,0x8e,0xd,0x6c,0x51,0x84,0x50,0xc6,0x57,0x5,0x7a,0xf,0x7b,0xe4,0xd3,0x67,0x70,0x24,0x12,0xea,0x89,0xe3,0xab,0x13,0xd3,0x1c,0xd7,0x69\}}
+
+\mbox{\Hypertarget{jh_8c_a077e3c4bd04c906e99239251a49cbbee}\label{jh_8c_a077e3c4bd04c906e99239251a49cbbee}} 
+\index{jh.c@{jh.c}!JH384\_H0@{JH384\_H0}}
+\index{JH384\_H0@{JH384\_H0}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{JH384\_H0}{JH384\_H0}}
+{\footnotesize\ttfamily const unsigned char J\+H384\+\_\+\+H0\mbox{[}128\mbox{]} =\{0x48,0x1e,0x3b,0xc6,0xd8,0x13,0x39,0x8a,0x6d,0x3b,0x5e,0x89,0x4a,0xde,0x87,0x9b,0x63,0xfa,0xea,0x68,0xd4,0x80,0xad,0x2e,0x33,0x2c,0xcb,0x21,0x48,0xf,0x82,0x67,0x98,0xae,0xc8,0x4d,0x90,0x82,0xb9,0x28,0xd4,0x55,0xea,0x30,0x41,0x11,0x42,0x49,0x36,0xf5,0x55,0xb2,0x92,0x48,0x47,0xec,0xc7,0x25,0xa,0x93,0xba,0xf4,0x3c,0xe1,0x56,0x9b,0x7f,0x8a,0x27,0xdb,0x45,0x4c,0x9e,0xfc,0xbd,0x49,0x63,0x97,0xaf,0xe,0x58,0x9f,0xc2,0x7d,0x26,0xaa,0x80,0xcd,0x80,0xc0,0x8b,0x8c,0x9d,0xeb,0x2e,0xda,0x8a,0x79,0x81,0xe8,0xf8,0xd5,0x37,0x3a,0xf4,0x39,0x67,0xad,0xdd,0xd1,0x7a,0x71,0xa9,0xb4,0xd3,0xbd,0xa4,0x75,0xd3,0x94,0x97,0x6c,0x3f,0xba,0x98,0x42,0x73,0x7f\}}
+
+\mbox{\Hypertarget{jh_8c_a60d594d51ed8fb46147e33e0468e7cdb}\label{jh_8c_a60d594d51ed8fb46147e33e0468e7cdb}} 
+\index{jh.c@{jh.c}!JH512\_H0@{JH512\_H0}}
+\index{JH512\_H0@{JH512\_H0}!jh.c@{jh.c}}
+\doxysubsubsection{\texorpdfstring{JH512\_H0}{JH512\_H0}}
+{\footnotesize\ttfamily const unsigned char J\+H512\+\_\+\+H0\mbox{[}128\mbox{]} =\{0x6f,0xd1,0x4b,0x96,0x3e,0x0,0xaa,0x17,0x63,0x6a,0x2e,0x5,0x7a,0x15,0xd5,0x43,0x8a,0x22,0x5e,0x8d,0xc,0x97,0xef,0xb,0xe9,0x34,0x12,0x59,0xf2,0xb3,0xc3,0x61,0x89,0x1d,0xa0,0xc1,0x53,0x6f,0x80,0x1e,0x2a,0xa9,0x5,0x6b,0xea,0x2b,0x6d,0x80,0x58,0x8e,0xcc,0xdb,0x20,0x75,0xba,0xa6,0xa9,0xf,0x3a,0x76,0xba,0xf8,0x3b,0xf7,0x1,0x69,0xe6,0x5,0x41,0xe3,0x4a,0x69,0x46,0xb5,0x8a,0x8e,0x2e,0x6f,0xe6,0x5a,0x10,0x47,0xa7,0xd0,0xc1,0x84,0x3c,0x24,0x3b,0x6e,0x71,0xb1,0x2d,0x5a,0xc1,0x99,0xcf,0x57,0xf6,0xec,0x9d,0xb1,0xf8,0x56,0xa7,0x6,0x88,0x7c,0x57,0x16,0xb1,0x56,0xe3,0xc2,0xfc,0xdf,0xe6,0x85,0x17,0xfb,0x54,0x5a,0x46,0x78,0xcc,0x8c,0xdd,0x4b\}}
+

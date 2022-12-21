@@ -1,0 +1,302 @@
+\hypertarget{classcryptonote_1_1block__queue}{}\doxysection{cryptonote\+::block\+\_\+queue Class Reference}
+\label{classcryptonote_1_1block__queue}\index{cryptonote::block\_queue@{cryptonote::block\_queue}}
+
+
+{\ttfamily \#include $<$block\+\_\+queue.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1block__queue_1_1span}{span}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::set$<$ \mbox{\hyperlink{structcryptonote_1_1block__queue_1_1span}{span}} $>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}{block\+\_\+map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_ad0499d22c56e9b284cabfdec454aa1b8}{add\+\_\+blocks}} (uint64\+\_\+t height, std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{cryptonote\+::block\+\_\+complete\+\_\+entry}} $>$ bcel, const boost\+::uuids\+::uuid \&connection\+\_\+id, float rate, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a589d7781e39344bd0689e64ae17e01cf}{add\+\_\+blocks}} (uint64\+\_\+t height, uint64\+\_\+t nblocks, const boost\+::uuids\+::uuid \&connection\+\_\+id, std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point time)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_aa91abfd70e7aa8fb0c42f9619d468abf}{flush\+\_\+spans}} (const boost\+::uuids\+::uuid \&connection\+\_\+id, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} all=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a288aac5481d7b519bb9db5fdc9d33ceb}{flush\+\_\+stale\+\_\+spans}} (const std\+::set$<$ boost\+::uuids\+::uuid $>$ \&live\+\_\+connections)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a95827a73e21a0e7f578e1ecc60a0996f}{remove\+\_\+span}} (uint64\+\_\+t start\+\_\+block\+\_\+height, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $\ast$hashes=nullptr)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a12e1d84f6ed1ef268c2f1588dd81a32e}{remove\+\_\+spans}} (const boost\+::uuids\+::uuid \&connection\+\_\+id, uint64\+\_\+t start\+\_\+block\+\_\+height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1block__queue_ae5605cff9cc355ceec6950529dad7295}{get\+\_\+max\+\_\+block\+\_\+height}} () const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a61052948e2b97f3380fb80759d28445d}{print}} () const
+\item 
+std\+::string \mbox{\hyperlink{classcryptonote_1_1block__queue_acd13bf3ddfe4bdd8be06e9aa192fb7c4}{get\+\_\+overview}} (uint64\+\_\+t blockchain\+\_\+height) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_ad059f807bbbcc23d2de8e73090272efe}{has\+\_\+unpruned\+\_\+height}} (uint64\+\_\+t block\+\_\+height, uint64\+\_\+t blockchain\+\_\+height, uint32\+\_\+t pruning\+\_\+seed) const
+\item 
+std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a72461bd096239d37d1d70831f17d5d37}{reserve\+\_\+span}} (uint64\+\_\+t first\+\_\+block\+\_\+height, uint64\+\_\+t last\+\_\+block\+\_\+height, uint64\+\_\+t max\+\_\+blocks, const boost\+::uuids\+::uuid \&connection\+\_\+id, uint32\+\_\+t pruning\+\_\+seed, uint64\+\_\+t blockchain\+\_\+height, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&block\+\_\+hashes)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1block__queue_ae4a10533476e14d5676df9f336b697d6}{get\+\_\+next\+\_\+needed\+\_\+height}} (uint64\+\_\+t blockchain\+\_\+height) const
+\item 
+std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a785889313e0160884811f1d72c59cdb6}{get\+\_\+next\+\_\+span\+\_\+if\+\_\+scheduled}} (std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&hashes, boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_ae291f849553af00ec70e657e5a837656}{reset\+\_\+next\+\_\+span\+\_\+time}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a78b7b9ea0f6494a4799d3e73ed5ff66b}{set\+\_\+span\+\_\+hashes}} (uint64\+\_\+t start\+\_\+height, const boost\+::uuids\+::uuid \&connection\+\_\+id, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ hashes)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a172e256c01e1acbc660ce45de2df60da}{get\+\_\+next\+\_\+span}} (uint64\+\_\+t \&height, std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{cryptonote\+::block\+\_\+complete\+\_\+entry}} $>$ \&bcel, boost\+::uuids\+::uuid \&connection\+\_\+id, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} filled=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a6ef25c3b8592833e4badc1bdf9aac5da}{has\+\_\+next\+\_\+span}} (uint64\+\_\+t height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&filled, std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \&time, boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1block__queue_ae84264faa4cc13858e2ab40e8b378f92}{get\+\_\+data\+\_\+size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1block__queue_a7c8ff278e9369288942b7af3b82cb986}{get\+\_\+num\+\_\+filled\+\_\+spans}} () const
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a9e0f22eba6321d273b52a4c06030e91d}{get\+\_\+last\+\_\+known\+\_\+hash}} (const boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_abf4cc71f9dee21814b8bbbc7b636c9d4}{has\+\_\+spans}} (const boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+float \mbox{\hyperlink{classcryptonote_1_1block__queue_a78797fe39d271047381b0fbf4aa5622e}{get\+\_\+speed}} (const boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+float \mbox{\hyperlink{classcryptonote_1_1block__queue_a01a214bfec8271c6a4bd4609d8b32854}{get\+\_\+download\+\_\+rate}} (const boost\+::uuids\+::uuid \&connection\+\_\+id) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a8a3130b2287a4e19b9e0df3d6f6f6dd9}{foreach}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcryptonote_1_1block__queue_1_1span}{span}} \&)$>$ f) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a2f7c702f852401a01a4bbdfd4969f12c}{requested}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_af91f0888b95246d034feb890b751da32}{have}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1block__queue_a0447eed96065df5c20644ef9b4ef5cdd}{erase\+\_\+block}} (block\+\_\+map\+::iterator j)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1block__queue_ade80b03acc63f352998e08d118f75cab}{requested\+\_\+internal}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&hash) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}{block\+\_\+map}} \mbox{\hyperlink{classcryptonote_1_1block__queue_a38c802bb3954698f02506c9c66c37c92}{blocks}}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{classcryptonote_1_1block__queue_a8f36aa39ff6f7005e57575e0352076ee}{mutex}}
+\item 
+std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a0ca843e8ef206183c3bcac084dd423a0}{requested\+\_\+hashes}}
+\item 
+std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a4a4f982300318ea7d773ad28528ae9b5}{have\+\_\+blocks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}\label{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!block\_map@{block\_map}}
+\index{block\_map@{block\_map}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{block\_map}{block\_map}}
+{\footnotesize\ttfamily typedef std\+::set$<$\mbox{\hyperlink{structcryptonote_1_1block__queue_1_1span}{span}}$>$ \mbox{\hyperlink{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}{cryptonote\+::block\+\_\+queue\+::block\+\_\+map}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ad0499d22c56e9b284cabfdec454aa1b8}\label{classcryptonote_1_1block__queue_ad0499d22c56e9b284cabfdec454aa1b8}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!add\_blocks@{add\_blocks}}
+\index{add\_blocks@{add\_blocks}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{add\_blocks()}{add\_blocks()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::add\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{cryptonote\+::block\+\_\+complete\+\_\+entry}} $>$}]{bcel,  }\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{float}]{rate,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a589d7781e39344bd0689e64ae17e01cf}\label{classcryptonote_1_1block__queue_a589d7781e39344bd0689e64ae17e01cf}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!add\_blocks@{add\_blocks}}
+\index{add\_blocks@{add\_blocks}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{add\_blocks()}{add\_blocks()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::add\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t}]{nblocks,  }\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point}]{time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a0447eed96065df5c20644ef9b4ef5cdd}\label{classcryptonote_1_1block__queue_a0447eed96065df5c20644ef9b4ef5cdd}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!erase\_block@{erase\_block}}
+\index{erase\_block@{erase\_block}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{erase\_block()}{erase\_block()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::erase\+\_\+block (\begin{DoxyParamCaption}\item[{block\+\_\+map\+::iterator}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_aa91abfd70e7aa8fb0c42f9619d468abf}\label{classcryptonote_1_1block__queue_aa91abfd70e7aa8fb0c42f9619d468abf}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!flush\_spans@{flush\_spans}}
+\index{flush\_spans@{flush\_spans}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{flush\_spans()}{flush\_spans()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::flush\+\_\+spans (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{all = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a288aac5481d7b519bb9db5fdc9d33ceb}\label{classcryptonote_1_1block__queue_a288aac5481d7b519bb9db5fdc9d33ceb}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!flush\_stale\_spans@{flush\_stale\_spans}}
+\index{flush\_stale\_spans@{flush\_stale\_spans}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{flush\_stale\_spans()}{flush\_stale\_spans()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::flush\+\_\+stale\+\_\+spans (\begin{DoxyParamCaption}\item[{const std\+::set$<$ boost\+::uuids\+::uuid $>$ \&}]{live\+\_\+connections }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a8a3130b2287a4e19b9e0df3d6f6f6dd9}\label{classcryptonote_1_1block__queue_a8a3130b2287a4e19b9e0df3d6f6f6dd9}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!foreach@{foreach}}
+\index{foreach@{foreach}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{foreach()}{foreach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::foreach (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcryptonote_1_1block__queue_1_1span}{span}} \&)$>$}]{f }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ae84264faa4cc13858e2ab40e8b378f92}\label{classcryptonote_1_1block__queue_ae84264faa4cc13858e2ab40e8b378f92}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_data\_size@{get\_data\_size}}
+\index{get\_data\_size@{get\_data\_size}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_data\_size()}{get\_data\_size()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::block\+\_\+queue\+::get\+\_\+data\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a01a214bfec8271c6a4bd4609d8b32854}\label{classcryptonote_1_1block__queue_a01a214bfec8271c6a4bd4609d8b32854}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_download\_rate@{get\_download\_rate}}
+\index{get\_download\_rate@{get\_download\_rate}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_download\_rate()}{get\_download\_rate()}}
+{\footnotesize\ttfamily float cryptonote\+::block\+\_\+queue\+::get\+\_\+download\+\_\+rate (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a9e0f22eba6321d273b52a4c06030e91d}\label{classcryptonote_1_1block__queue_a9e0f22eba6321d273b52a4c06030e91d}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_last\_known\_hash@{get\_last\_known\_hash}}
+\index{get\_last\_known\_hash@{get\_last\_known\_hash}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_last\_known\_hash()}{get\_last\_known\_hash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::block\+\_\+queue\+::get\+\_\+last\+\_\+known\+\_\+hash (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ae5605cff9cc355ceec6950529dad7295}\label{classcryptonote_1_1block__queue_ae5605cff9cc355ceec6950529dad7295}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_max\_block\_height@{get\_max\_block\_height}}
+\index{get\_max\_block\_height@{get\_max\_block\_height}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_max\_block\_height()}{get\_max\_block\_height()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::block\+\_\+queue\+::get\+\_\+max\+\_\+block\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ae4a10533476e14d5676df9f336b697d6}\label{classcryptonote_1_1block__queue_ae4a10533476e14d5676df9f336b697d6}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_next\_needed\_height@{get\_next\_needed\_height}}
+\index{get\_next\_needed\_height@{get\_next\_needed\_height}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_next\_needed\_height()}{get\_next\_needed\_height()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::block\+\_\+queue\+::get\+\_\+next\+\_\+needed\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{blockchain\+\_\+height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a172e256c01e1acbc660ce45de2df60da}\label{classcryptonote_1_1block__queue_a172e256c01e1acbc660ce45de2df60da}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_next\_span@{get\_next\_span}}
+\index{get\_next\_span@{get\_next\_span}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_next\_span()}{get\_next\_span()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::get\+\_\+next\+\_\+span (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{height,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{cryptonote\+::block\+\_\+complete\+\_\+entry}} $>$ \&}]{bcel,  }\item[{boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{filled = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a785889313e0160884811f1d72c59cdb6}\label{classcryptonote_1_1block__queue_a785889313e0160884811f1d72c59cdb6}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_next\_span\_if\_scheduled@{get\_next\_span\_if\_scheduled}}
+\index{get\_next\_span\_if\_scheduled@{get\_next\_span\_if\_scheduled}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_next\_span\_if\_scheduled()}{get\_next\_span\_if\_scheduled()}}
+{\footnotesize\ttfamily std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ cryptonote\+::block\+\_\+queue\+::get\+\_\+next\+\_\+span\+\_\+if\+\_\+scheduled (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{hashes,  }\item[{boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a7c8ff278e9369288942b7af3b82cb986}\label{classcryptonote_1_1block__queue_a7c8ff278e9369288942b7af3b82cb986}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_num\_filled\_spans@{get\_num\_filled\_spans}}
+\index{get\_num\_filled\_spans@{get\_num\_filled\_spans}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_num\_filled\_spans()}{get\_num\_filled\_spans()}}
+{\footnotesize\ttfamily size\+\_\+t cryptonote\+::block\+\_\+queue\+::get\+\_\+num\+\_\+filled\+\_\+spans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_acd13bf3ddfe4bdd8be06e9aa192fb7c4}\label{classcryptonote_1_1block__queue_acd13bf3ddfe4bdd8be06e9aa192fb7c4}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_overview@{get\_overview}}
+\index{get\_overview@{get\_overview}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_overview()}{get\_overview()}}
+{\footnotesize\ttfamily std\+::string cryptonote\+::block\+\_\+queue\+::get\+\_\+overview (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{blockchain\+\_\+height }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a78797fe39d271047381b0fbf4aa5622e}\label{classcryptonote_1_1block__queue_a78797fe39d271047381b0fbf4aa5622e}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!get\_speed@{get\_speed}}
+\index{get\_speed@{get\_speed}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{get\_speed()}{get\_speed()}}
+{\footnotesize\ttfamily float cryptonote\+::block\+\_\+queue\+::get\+\_\+speed (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a6ef25c3b8592833e4badc1bdf9aac5da}\label{classcryptonote_1_1block__queue_a6ef25c3b8592833e4badc1bdf9aac5da}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!has\_next\_span@{has\_next\_span}}
+\index{has\_next\_span@{has\_next\_span}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{has\_next\_span()}{has\_next\_span()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::has\+\_\+next\+\_\+span (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{filled,  }\item[{std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \&}]{time,  }\item[{boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_abf4cc71f9dee21814b8bbbc7b636c9d4}\label{classcryptonote_1_1block__queue_abf4cc71f9dee21814b8bbbc7b636c9d4}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!has\_spans@{has\_spans}}
+\index{has\_spans@{has\_spans}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{has\_spans()}{has\_spans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::has\+\_\+spans (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ad059f807bbbcc23d2de8e73090272efe}\label{classcryptonote_1_1block__queue_ad059f807bbbcc23d2de8e73090272efe}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!has\_unpruned\_height@{has\_unpruned\_height}}
+\index{has\_unpruned\_height@{has\_unpruned\_height}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{has\_unpruned\_height()}{has\_unpruned\_height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::has\+\_\+unpruned\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{block\+\_\+height,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{uint32\+\_\+t}]{pruning\+\_\+seed }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_af91f0888b95246d034feb890b751da32}\label{classcryptonote_1_1block__queue_af91f0888b95246d034feb890b751da32}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!have@{have}}
+\index{have@{have}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{have()}{have()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::have (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a61052948e2b97f3380fb80759d28445d}\label{classcryptonote_1_1block__queue_a61052948e2b97f3380fb80759d28445d}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!print@{print}}
+\index{print@{print}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a95827a73e21a0e7f578e1ecc60a0996f}\label{classcryptonote_1_1block__queue_a95827a73e21a0e7f578e1ecc60a0996f}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!remove\_span@{remove\_span}}
+\index{remove\_span@{remove\_span}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{remove\_span()}{remove\_span()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::remove\+\_\+span (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+block\+\_\+height,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ $\ast$}]{hashes = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a12e1d84f6ed1ef268c2f1588dd81a32e}\label{classcryptonote_1_1block__queue_a12e1d84f6ed1ef268c2f1588dd81a32e}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!remove\_spans@{remove\_spans}}
+\index{remove\_spans@{remove\_spans}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{remove\_spans()}{remove\_spans()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::remove\+\_\+spans (\begin{DoxyParamCaption}\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{uint64\+\_\+t}]{start\+\_\+block\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a2f7c702f852401a01a4bbdfd4969f12c}\label{classcryptonote_1_1block__queue_a2f7c702f852401a01a4bbdfd4969f12c}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!requested@{requested}}
+\index{requested@{requested}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{requested()}{requested()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::requested (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ade80b03acc63f352998e08d118f75cab}\label{classcryptonote_1_1block__queue_ade80b03acc63f352998e08d118f75cab}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!requested\_internal@{requested\_internal}}
+\index{requested\_internal@{requested\_internal}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{requested\_internal()}{requested\_internal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::block\+\_\+queue\+::requested\+\_\+internal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a72461bd096239d37d1d70831f17d5d37}\label{classcryptonote_1_1block__queue_a72461bd096239d37d1d70831f17d5d37}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!reserve\_span@{reserve\_span}}
+\index{reserve\_span@{reserve\_span}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{reserve\_span()}{reserve\_span()}}
+{\footnotesize\ttfamily std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$ cryptonote\+::block\+\_\+queue\+::reserve\+\_\+span (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{first\+\_\+block\+\_\+height,  }\item[{uint64\+\_\+t}]{last\+\_\+block\+\_\+height,  }\item[{uint64\+\_\+t}]{max\+\_\+blocks,  }\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{uint32\+\_\+t}]{pruning\+\_\+seed,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{block\+\_\+hashes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_ae291f849553af00ec70e657e5a837656}\label{classcryptonote_1_1block__queue_ae291f849553af00ec70e657e5a837656}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!reset\_next\_span\_time@{reset\_next\_span\_time}}
+\index{reset\_next\_span\_time@{reset\_next\_span\_time}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{reset\_next\_span\_time()}{reset\_next\_span\_time()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::reset\+\_\+next\+\_\+span\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a78b7b9ea0f6494a4799d3e73ed5ff66b}\label{classcryptonote_1_1block__queue_a78b7b9ea0f6494a4799d3e73ed5ff66b}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!set\_span\_hashes@{set\_span\_hashes}}
+\index{set\_span\_hashes@{set\_span\_hashes}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{set\_span\_hashes()}{set\_span\_hashes()}}
+{\footnotesize\ttfamily void cryptonote\+::block\+\_\+queue\+::set\+\_\+span\+\_\+hashes (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{const boost\+::uuids\+::uuid \&}]{connection\+\_\+id,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$}]{hashes }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a38c802bb3954698f02506c9c66c37c92}\label{classcryptonote_1_1block__queue_a38c802bb3954698f02506c9c66c37c92}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!blocks@{blocks}}
+\index{blocks@{blocks}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{blocks}{blocks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1block__queue_a0e16912f54da72d8c75183fda6d83823}{block\+\_\+map}} cryptonote\+::block\+\_\+queue\+::blocks\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a4a4f982300318ea7d773ad28528ae9b5}\label{classcryptonote_1_1block__queue_a4a4f982300318ea7d773ad28528ae9b5}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!have\_blocks@{have\_blocks}}
+\index{have\_blocks@{have\_blocks}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{have\_blocks}{have\_blocks}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::block\+\_\+queue\+::have\+\_\+blocks\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a8f36aa39ff6f7005e57575e0352076ee}\label{classcryptonote_1_1block__queue_a8f36aa39ff6f7005e57575e0352076ee}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!mutex@{mutex}}
+\index{mutex@{mutex}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex cryptonote\+::block\+\_\+queue\+::mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1block__queue_a0ca843e8ef206183c3bcac084dd423a0}\label{classcryptonote_1_1block__queue_a0ca843e8ef206183c3bcac084dd423a0}} 
+\index{cryptonote::block\_queue@{cryptonote::block\_queue}!requested\_hashes@{requested\_hashes}}
+\index{requested\_hashes@{requested\_hashes}!cryptonote::block\_queue@{cryptonote::block\_queue}}
+\doxysubsubsection{\texorpdfstring{requested\_hashes}{requested\_hashes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::block\+\_\+queue\+::requested\+\_\+hashes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{block__queue_8h}{block\+\_\+queue.\+h}}\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{block__queue_8cpp}{block\+\_\+queue.\+cpp}}\end{DoxyCompactItemize}

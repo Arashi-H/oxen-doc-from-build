@@ -1,0 +1,89 @@
+\hypertarget{aligned_8c}{}\doxysection{src/common/aligned.c File Reference}
+\label{aligned_8c}\index{src/common/aligned.c@{src/common/aligned.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}aligned.\+h\char`\"{}}\newline
+Include dependency graph for aligned.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aligned_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcontrol}{control}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{aligned_8c_a94630370ae389fb1189282fa0742f310}{M\+A\+G\+IC}}~0xaa0817161500ff81
+\item 
+\#define \mbox{\hyperlink{aligned_8c_acb12082f4189dba91df55ef20316dcc1}{M\+A\+G\+I\+C\+\_\+\+F\+R\+E\+ED}}~0xaa0817161500ff82
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{aligned_8c_a0ef5805071af3e96069bc5a77e4f48fb}{is\+\_\+power\+\_\+of\+\_\+2}} (size\+\_\+t n)
+\item 
+static void \mbox{\hyperlink{aligned_8c_adcad57868932ca2f3b803f4f233001a7}{local\+\_\+abort}} (const char $\ast$msg)
+\item 
+void $\ast$ \mbox{\hyperlink{aligned_8c_a8c2171fab4af91d43c4ecfde5528fd36}{aligned\+\_\+malloc}} (size\+\_\+t bytes, size\+\_\+t align)
+\item 
+void $\ast$ \mbox{\hyperlink{aligned_8c_a7c321aef0b4a6b2188450c8ad6c6a857}{aligned\+\_\+realloc}} (void $\ast$ptr, size\+\_\+t bytes, size\+\_\+t align)
+\item 
+void \mbox{\hyperlink{aligned_8c_a274dd8714485eed9c9328973d44ec5dc}{aligned\+\_\+free}} (void $\ast$ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{aligned_8c_a94630370ae389fb1189282fa0742f310}\label{aligned_8c_a94630370ae389fb1189282fa0742f310}} 
+\index{aligned.c@{aligned.c}!MAGIC@{MAGIC}}
+\index{MAGIC@{MAGIC}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{MAGIC}{MAGIC}}
+{\footnotesize\ttfamily \#define M\+A\+G\+IC~0xaa0817161500ff81}
+
+\mbox{\Hypertarget{aligned_8c_acb12082f4189dba91df55ef20316dcc1}\label{aligned_8c_acb12082f4189dba91df55ef20316dcc1}} 
+\index{aligned.c@{aligned.c}!MAGIC\_FREED@{MAGIC\_FREED}}
+\index{MAGIC\_FREED@{MAGIC\_FREED}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{MAGIC\_FREED}{MAGIC\_FREED}}
+{\footnotesize\ttfamily \#define M\+A\+G\+I\+C\+\_\+\+F\+R\+E\+ED~0xaa0817161500ff82}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{aligned_8c_a274dd8714485eed9c9328973d44ec5dc}\label{aligned_8c_a274dd8714485eed9c9328973d44ec5dc}} 
+\index{aligned.c@{aligned.c}!aligned\_free@{aligned\_free}}
+\index{aligned\_free@{aligned\_free}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{aligned\_free()}{aligned\_free()}}
+{\footnotesize\ttfamily void aligned\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{aligned_8c_a8c2171fab4af91d43c4ecfde5528fd36}\label{aligned_8c_a8c2171fab4af91d43c4ecfde5528fd36}} 
+\index{aligned.c@{aligned.c}!aligned\_malloc@{aligned\_malloc}}
+\index{aligned\_malloc@{aligned\_malloc}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{aligned\_malloc()}{aligned\_malloc()}}
+{\footnotesize\ttfamily void$\ast$ aligned\+\_\+malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{bytes,  }\item[{size\+\_\+t}]{align }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{aligned_8c_a7c321aef0b4a6b2188450c8ad6c6a857}\label{aligned_8c_a7c321aef0b4a6b2188450c8ad6c6a857}} 
+\index{aligned.c@{aligned.c}!aligned\_realloc@{aligned\_realloc}}
+\index{aligned\_realloc@{aligned\_realloc}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{aligned\_realloc()}{aligned\_realloc()}}
+{\footnotesize\ttfamily void$\ast$ aligned\+\_\+realloc (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{bytes,  }\item[{size\+\_\+t}]{align }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{aligned_8c_a0ef5805071af3e96069bc5a77e4f48fb}\label{aligned_8c_a0ef5805071af3e96069bc5a77e4f48fb}} 
+\index{aligned.c@{aligned.c}!is\_power\_of\_2@{is\_power\_of\_2}}
+\index{is\_power\_of\_2@{is\_power\_of\_2}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{is\_power\_of\_2()}{is\_power\_of\_2()}}
+{\footnotesize\ttfamily static int is\+\_\+power\+\_\+of\+\_\+2 (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{aligned_8c_adcad57868932ca2f3b803f4f233001a7}\label{aligned_8c_adcad57868932ca2f3b803f4f233001a7}} 
+\index{aligned.c@{aligned.c}!local\_abort@{local\_abort}}
+\index{local\_abort@{local\_abort}!aligned.c@{aligned.c}}
+\doxysubsubsection{\texorpdfstring{local\_abort()}{local\_abort()}}
+{\footnotesize\ttfamily static void local\+\_\+abort (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

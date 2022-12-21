@@ -1,0 +1,112 @@
+\hypertarget{blockchain__import_8cpp}{}\doxysection{src/blockchain\+\_\+utilities/blockchain\+\_\+import.cpp File Reference}
+\label{blockchain__import_8cpp}\index{src/blockchain\_utilities/blockchain\_import.cpp@{src/blockchain\_utilities/blockchain\_import.cpp}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/quorumnet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/misc\+\_\+log\+\_\+ex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bootstrap\+\_\+file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bootstrap\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blocks/blocks.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/binary\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/uptime\+\_\+proof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/color.\+h$>$}\newline
+Include dependency graph for blockchain\+\_\+import.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{blockchain__import_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{blockchain__import_8cpp_a6236e60b02a197f623cb430f8c353741}{get\+\_\+db\+\_\+flags\+\_\+from\+\_\+mode}} (const std\+::string \&db\+\_\+mode)
+\item 
+int \mbox{\hyperlink{blockchain__import_8cpp_a7bae8c9873cda4c766ede6fabb3baf8f}{pop\+\_\+blocks}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&\mbox{\hyperlink{classcryptonote_1_1core}{core}}, int num\+\_\+blocks)
+\item 
+int \mbox{\hyperlink{blockchain__import_8cpp_a05f5cef655127cb00e2a6297bf7734b2}{check\+\_\+flush}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&\mbox{\hyperlink{classcryptonote_1_1core}{core}}, std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{block\+\_\+complete\+\_\+entry}} $>$ \&\mbox{\hyperlink{sha512-hash_8c_ac4149c53eb38ba392a888d9a333a4412}{blocks}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} force)
+\item 
+int \mbox{\hyperlink{blockchain__import_8cpp_a666a1b152cf598480437f3586e5a326e}{import\+\_\+from\+\_\+file}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&\mbox{\hyperlink{classcryptonote_1_1core}{core}}, const fs\+::path \&import\+\_\+file\+\_\+path, uint64\+\_\+t block\+\_\+stop=0)
+\item 
+int \mbox{\hyperlink{blockchain__import_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a0d92398f2a35189d038128fd7170b2f8}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::opt\+\_\+batch}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a8ed1aeffc37747ae5a92f20e34f5e4f5}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::opt\+\_\+verify}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a484866d661282a91c0423d5d7615f0f0}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::opt\+\_\+resume}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a78848f573664e93744463c4d48654dc7}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::opt\+\_\+testnet}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a148e024cab1782cd720934666e77c03f}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::opt\+\_\+devnet}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_a7e54f534d306cc1246e64cae97f1d6c4}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::db\+\_\+batch\+\_\+size}} = 20000
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_ac0c2a613390cd602cb6cd4aa909e1534}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::db\+\_\+batch\+\_\+size\+\_\+verify}} = 5000
+\item 
+std\+::string \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_acb9cd1d93f550f2c8030c1e7bae1110b}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::refresh\+\_\+string}} = \char`\"{}\textbackslash{}r \textbackslash{}r\char`\"{}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespaceanonymous__namespace_02blockchain__import_8cpp_03_abc0a9edacf075a6eb6c75f3ecc7b2cf8}{anonymous\+\_\+namespace\{blockchain\+\_\+import.\+cpp\}\+::arg\+\_\+recalculate\+\_\+difficulty}}
+\item 
+static auto \mbox{\hyperlink{blockchain__import_8cpp_a82188e39ed48f993edea1ca71fa3c464}{logcat}} = log\+::\+Cat(\char`\"{}bcutil\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{blockchain__import_8cpp_a05f5cef655127cb00e2a6297bf7734b2}\label{blockchain__import_8cpp_a05f5cef655127cb00e2a6297bf7734b2}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!check\_flush@{check\_flush}}
+\index{check\_flush@{check\_flush}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_flush()}{check\_flush()}}
+{\footnotesize\ttfamily int check\+\_\+flush (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block__complete__entry}{block\+\_\+complete\+\_\+entry}} $>$ \&}]{blocks,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{force }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__import_8cpp_a6236e60b02a197f623cb430f8c353741}\label{blockchain__import_8cpp_a6236e60b02a197f623cb430f8c353741}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!get\_db\_flags\_from\_mode@{get\_db\_flags\_from\_mode}}
+\index{get\_db\_flags\_from\_mode@{get\_db\_flags\_from\_mode}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_db\_flags\_from\_mode()}{get\_db\_flags\_from\_mode()}}
+{\footnotesize\ttfamily int get\+\_\+db\+\_\+flags\+\_\+from\+\_\+mode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+\_\+mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__import_8cpp_a666a1b152cf598480437f3586e5a326e}\label{blockchain__import_8cpp_a666a1b152cf598480437f3586e5a326e}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!import\_from\_file@{import\_from\_file}}
+\index{import\_from\_file@{import\_from\_file}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{import\_from\_file()}{import\_from\_file()}}
+{\footnotesize\ttfamily int import\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core,  }\item[{const fs\+::path \&}]{import\+\_\+file\+\_\+path,  }\item[{uint64\+\_\+t}]{block\+\_\+stop = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__import_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{blockchain__import_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!main@{main}}
+\index{main@{main}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{blockchain__import_8cpp_a7bae8c9873cda4c766ede6fabb3baf8f}\label{blockchain__import_8cpp_a7bae8c9873cda4c766ede6fabb3baf8f}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!pop\_blocks@{pop\_blocks}}
+\index{pop\_blocks@{pop\_blocks}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{pop\_blocks()}{pop\_blocks()}}
+{\footnotesize\ttfamily int pop\+\_\+blocks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core,  }\item[{int}]{num\+\_\+blocks }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{blockchain__import_8cpp_a82188e39ed48f993edea1ca71fa3c464}\label{blockchain__import_8cpp_a82188e39ed48f993edea1ca71fa3c464}} 
+\index{blockchain\_import.cpp@{blockchain\_import.cpp}!logcat@{logcat}}
+\index{logcat@{logcat}!blockchain\_import.cpp@{blockchain\_import.cpp}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto logcat = log\+::\+Cat(\char`\"{}bcutil\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

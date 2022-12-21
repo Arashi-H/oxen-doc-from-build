@@ -1,0 +1,77 @@
+\hypertarget{namespacetools_1_1detail}{}\doxysection{tools\+::detail Namespace Reference}
+\label{namespacetools_1_1detail}\index{tools::detail@{tools::detail}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1detail_1_1crypto__bytes__base__helper}{crypto\+\_\+bytes\+\_\+base\+\_\+helper}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1detail_1_1template__index__impl}{template\+\_\+index\+\_\+impl}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1detail_1_1template__index__impl_3_01T_00_01C_3_01Ts_8_8_8_01_4_01_4}{template\+\_\+index\+\_\+impl$<$ T, C$<$ Ts... $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename T1 , typename... Ts$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1detail_a52d73c194490cdea3a56363e3ae6bc13}{template\+\_\+index\+\_\+impl\+\_\+inner}} ()
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespacetools_1_1detail_ae9b8e232200fab35df93a0b28804c101}{memcpy\+\_\+one}} (char $\ast$\&dest, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} t)
+\item 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+crypto\+\_\+bytes\+\_\+derived$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespacetools_1_1detail_a6a658bc2d74883b43d1da9184d53f84f}{memcpy\+\_\+one}} (char $\ast$\&dest, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&t)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\void \mbox{\hyperlink{namespacetools_1_1detail_abb94633b9819fbf31f47c1e196c4a159}{memcpy\+\_\+one}} (char $\ast$\&dest, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}(\&arr)\mbox{[}N\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1detail_ae52188176785dddba88f4c01b4a29d1e}{is\+\_\+crypto\+\_\+bytes\+\_\+derived}} = decltype(\mbox{\hyperlink{structtools_1_1detail_1_1crypto__bytes__base__helper_a17938e306a0eeb33d784ef096929c569}{crypto\+\_\+bytes\+\_\+base\+\_\+helper\+::check}}((\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$\ast$) nullptr))\+::value
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacetools_1_1detail_a23dc151ca0fdb81ace03e15eba0aa5db}{memcpy\+\_\+size}} = sizeof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetools_1_1detail_a6a658bc2d74883b43d1da9184d53f84f}\label{namespacetools_1_1detail_a6a658bc2d74883b43d1da9184d53f84f}} 
+\index{tools::detail@{tools::detail}!memcpy\_one@{memcpy\_one}}
+\index{memcpy\_one@{memcpy\_one}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{memcpy\_one()}{memcpy\_one()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ is\+\_\+crypto\+\_\+bytes\+\_\+derived$<$ T $>$, int $>$  = 0$>$ \\
+void tools\+::detail\+::memcpy\+\_\+one (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{dest,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1detail_abb94633b9819fbf31f47c1e196c4a159}\label{namespacetools_1_1detail_abb94633b9819fbf31f47c1e196c4a159}} 
+\index{tools::detail@{tools::detail}!memcpy\_one@{memcpy\_one}}
+\index{memcpy\_one@{memcpy\_one}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{memcpy\_one()}{memcpy\_one()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
+void tools\+::detail\+::memcpy\+\_\+one (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{dest,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}(\&)}]{arr\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1detail_ae9b8e232200fab35df93a0b28804c101}\label{namespacetools_1_1detail_ae9b8e232200fab35df93a0b28804c101}} 
+\index{tools::detail@{tools::detail}!memcpy\_one@{memcpy\_one}}
+\index{memcpy\_one@{memcpy\_one}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{memcpy\_one()}{memcpy\_one()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, int $>$  = 0$>$ \\
+void tools\+::detail\+::memcpy\+\_\+one (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{dest,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetools_1_1detail_a52d73c194490cdea3a56363e3ae6bc13}\label{namespacetools_1_1detail_a52d73c194490cdea3a56363e3ae6bc13}} 
+\index{tools::detail@{tools::detail}!template\_index\_impl\_inner@{template\_index\_impl\_inner}}
+\index{template\_index\_impl\_inner@{template\_index\_impl\_inner}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{template\_index\_impl\_inner()}{template\_index\_impl\_inner()}}
+{\footnotesize\ttfamily template$<$typename T , typename T1 , typename... Ts$>$ \\
+constexpr size\+\_\+t tools\+::detail\+::template\+\_\+index\+\_\+impl\+\_\+inner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetools_1_1detail_ae52188176785dddba88f4c01b4a29d1e}\label{namespacetools_1_1detail_ae52188176785dddba88f4c01b4a29d1e}} 
+\index{tools::detail@{tools::detail}!is\_crypto\_bytes\_derived@{is\_crypto\_bytes\_derived}}
+\index{is\_crypto\_bytes\_derived@{is\_crypto\_bytes\_derived}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{is\_crypto\_bytes\_derived}{is\_crypto\_bytes\_derived}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} tools\+::detail\+::is\+\_\+crypto\+\_\+bytes\+\_\+derived = decltype(\mbox{\hyperlink{structtools_1_1detail_1_1crypto__bytes__base__helper_a17938e306a0eeb33d784ef096929c569}{crypto\+\_\+bytes\+\_\+base\+\_\+helper\+::check}}((\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$\ast$) nullptr))\+::value\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacetools_1_1detail_a23dc151ca0fdb81ace03e15eba0aa5db}\label{namespacetools_1_1detail_a23dc151ca0fdb81ace03e15eba0aa5db}} 
+\index{tools::detail@{tools::detail}!memcpy\_size@{memcpy\_size}}
+\index{memcpy\_size@{memcpy\_size}!tools::detail@{tools::detail}}
+\doxysubsubsection{\texorpdfstring{memcpy\_size}{memcpy\_size}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr size\+\_\+t tools\+::detail\+::memcpy\+\_\+size = sizeof(\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}})\hspace{0.3cm}{\ttfamily [constexpr]}}
+

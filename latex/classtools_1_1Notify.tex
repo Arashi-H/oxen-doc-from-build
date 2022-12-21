@@ -1,0 +1,91 @@
+\hypertarget{classtools_1_1Notify}{}\doxysection{tools\+::Notify Class Reference}
+\label{classtools_1_1Notify}\index{tools::Notify@{tools::Notify}}
+
+
+{\ttfamily \#include $<$notify.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtools_1_1Notify_a7b6c8cc282fccc51d90647a5ba26a226}{Notify}} (std\+::string\+\_\+view spec)
+\item 
+{\footnotesize template$<$typename T , typename... More\+Tags$>$ }\\int \mbox{\hyperlink{classtools_1_1Notify_af7f68aa1132abf42c5a70c65455ea24b}{notify}} (std\+::string\+\_\+view tag, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&value, More\+Tags \&\&... more) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classtools_1_1Notify_a70fb0282e6021c2a99214322f032d984}{spawn}} (const std\+::vector$<$ std\+::string $>$ \&margs) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... More\+Tags$>$ }\\static void \mbox{\hyperlink{classtools_1_1Notify_af5a4f45f9befa65435928f407fbe0c59}{replace\+\_\+tags}} (std\+::vector$<$ std\+::string $>$ \&margs, std\+::string\+\_\+view tag, const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&value, More\+Tags \&\&... more)
+\item 
+static void \mbox{\hyperlink{classtools_1_1Notify_ac99f7e94c80486cab850b57697a0653e}{replace\+\_\+tag}} (std\+::vector$<$ std\+::string $>$ \&margs, std\+::string\+\_\+view tag, std\+::string\+\_\+view value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+fs\+::path \mbox{\hyperlink{classtools_1_1Notify_aaebf634576120421af2168a59492888d}{filename}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtools_1_1Notify_a15729d7d71e8192a6a7226f6ca1dee41}{args}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtools_1_1Notify_a7b6c8cc282fccc51d90647a5ba26a226}\label{classtools_1_1Notify_a7b6c8cc282fccc51d90647a5ba26a226}} 
+\index{tools::Notify@{tools::Notify}!Notify@{Notify}}
+\index{Notify@{Notify}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily tools\+::\+Notify\+::\+Notify (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1Notify_af7f68aa1132abf42c5a70c65455ea24b}\label{classtools_1_1Notify_af7f68aa1132abf42c5a70c65455ea24b}} 
+\index{tools::Notify@{tools::Notify}!notify@{notify}}
+\index{notify@{notify}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily template$<$typename T , typename... More\+Tags$>$ \\
+int tools\+::\+Notify\+::notify (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{tag,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{value,  }\item[{More\+Tags \&\&...}]{more }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtools_1_1Notify_ac99f7e94c80486cab850b57697a0653e}\label{classtools_1_1Notify_ac99f7e94c80486cab850b57697a0653e}} 
+\index{tools::Notify@{tools::Notify}!replace\_tag@{replace\_tag}}
+\index{replace\_tag@{replace\_tag}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{replace\_tag()}{replace\_tag()}}
+{\footnotesize\ttfamily void tools\+::\+Notify\+::replace\+\_\+tag (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{margs,  }\item[{std\+::string\+\_\+view}]{tag,  }\item[{std\+::string\+\_\+view}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1Notify_af5a4f45f9befa65435928f407fbe0c59}\label{classtools_1_1Notify_af5a4f45f9befa65435928f407fbe0c59}} 
+\index{tools::Notify@{tools::Notify}!replace\_tags@{replace\_tags}}
+\index{replace\_tags@{replace\_tags}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{replace\_tags()}{replace\_tags()}}
+{\footnotesize\ttfamily template$<$typename T , typename... More\+Tags$>$ \\
+static void tools\+::\+Notify\+::replace\+\_\+tags (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{margs,  }\item[{std\+::string\+\_\+view}]{tag,  }\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{value,  }\item[{More\+Tags \&\&...}]{more }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1Notify_a70fb0282e6021c2a99214322f032d984}\label{classtools_1_1Notify_a70fb0282e6021c2a99214322f032d984}} 
+\index{tools::Notify@{tools::Notify}!spawn@{spawn}}
+\index{spawn@{spawn}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily int tools\+::\+Notify\+::spawn (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{margs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtools_1_1Notify_a15729d7d71e8192a6a7226f6ca1dee41}\label{classtools_1_1Notify_a15729d7d71e8192a6a7226f6ca1dee41}} 
+\index{tools::Notify@{tools::Notify}!args@{args}}
+\index{args@{args}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tools\+::\+Notify\+::args\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtools_1_1Notify_aaebf634576120421af2168a59492888d}\label{classtools_1_1Notify_aaebf634576120421af2168a59492888d}} 
+\index{tools::Notify@{tools::Notify}!filename@{filename}}
+\index{filename@{filename}!tools::Notify@{tools::Notify}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily fs\+::path tools\+::\+Notify\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/common/\mbox{\hyperlink{notify_8h}{notify.\+h}}\item 
+src/common/\mbox{\hyperlink{notify_8cpp}{notify.\+cpp}}\end{DoxyCompactItemize}

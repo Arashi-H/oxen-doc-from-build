@@ -1,0 +1,67 @@
+\hypertarget{classwallet_1_1TransactionScanner}{}\doxysection{wallet\+::Transaction\+Scanner Class Reference}
+\label{classwallet_1_1TransactionScanner}\index{wallet::TransactionScanner@{wallet::TransactionScanner}}
+
+
+{\ttfamily \#include $<$transaction\+\_\+scanner.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwallet_1_1TransactionScanner_ac965908775079f4bf13e90ee621c852a}{Transaction\+Scanner}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$ keys, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classdb_1_1Database}{db\+::\+Database}} $>$ \mbox{\hyperlink{classwallet_1_1TransactionScanner_a58ea06683c4c4404bf3e81ead1367bdc}{db}})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ \mbox{\hyperlink{classwallet_1_1TransactionScanner_a1e1e9a3e9eef966c0ecc911987955d2a}{scan\+\_\+received}} (const \mbox{\hyperlink{structwallet_1_1BlockTX}{Block\+TX}} \&tx, int64\+\_\+t height, int64\+\_\+t timestamp)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \mbox{\hyperlink{classwallet_1_1TransactionScanner_aee5a24852d45b02a26deda2fdeb87990}{scan\+\_\+spent}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$ \mbox{\hyperlink{classwallet_1_1TransactionScanner_a6cd3d20b4a387735b4be0e455e737538}{wallet\+\_\+keys}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classdb_1_1Database}{db\+::\+Database}} $>$ \mbox{\hyperlink{classwallet_1_1TransactionScanner_a58ea06683c4c4404bf3e81ead1367bdc}{db}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwallet_1_1TransactionScanner_ac965908775079f4bf13e90ee621c852a}\label{classwallet_1_1TransactionScanner_ac965908775079f4bf13e90ee621c852a}} 
+\index{wallet::TransactionScanner@{wallet::TransactionScanner}!TransactionScanner@{TransactionScanner}}
+\index{TransactionScanner@{TransactionScanner}!wallet::TransactionScanner@{wallet::TransactionScanner}}
+\doxysubsubsection{\texorpdfstring{TransactionScanner()}{TransactionScanner()}}
+{\footnotesize\ttfamily wallet\+::\+Transaction\+Scanner\+::\+Transaction\+Scanner (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}} $>$}]{keys,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classdb_1_1Database}{db\+::\+Database}} $>$}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwallet_1_1TransactionScanner_a1e1e9a3e9eef966c0ecc911987955d2a}\label{classwallet_1_1TransactionScanner_a1e1e9a3e9eef966c0ecc911987955d2a}} 
+\index{wallet::TransactionScanner@{wallet::TransactionScanner}!scan\_received@{scan\_received}}
+\index{scan\_received@{scan\_received}!wallet::TransactionScanner@{wallet::TransactionScanner}}
+\doxysubsubsection{\texorpdfstring{scan\_received()}{scan\_received()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ wallet\+::\+Transaction\+Scanner\+::scan\+\_\+received (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structwallet_1_1BlockTX}{Block\+TX}} \&}]{tx,  }\item[{int64\+\_\+t}]{height,  }\item[{int64\+\_\+t}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classwallet_1_1TransactionScanner_aee5a24852d45b02a26deda2fdeb87990}\label{classwallet_1_1TransactionScanner_aee5a24852d45b02a26deda2fdeb87990}} 
+\index{wallet::TransactionScanner@{wallet::TransactionScanner}!scan\_spent@{scan\_spent}}
+\index{scan\_spent@{scan\_spent}!wallet::TransactionScanner@{wallet::TransactionScanner}}
+\doxysubsubsection{\texorpdfstring{scan\_spent()}{scan\_spent()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ wallet\+::\+Transaction\+Scanner\+::scan\+\_\+spent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classwallet_1_1TransactionScanner_a58ea06683c4c4404bf3e81ead1367bdc}\label{classwallet_1_1TransactionScanner_a58ea06683c4c4404bf3e81ead1367bdc}} 
+\index{wallet::TransactionScanner@{wallet::TransactionScanner}!db@{db}}
+\index{db@{db}!wallet::TransactionScanner@{wallet::TransactionScanner}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classdb_1_1Database}{db\+::\+Database}}$>$ wallet\+::\+Transaction\+Scanner\+::db\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classwallet_1_1TransactionScanner_a6cd3d20b4a387735b4be0e455e737538}\label{classwallet_1_1TransactionScanner_a6cd3d20b4a387735b4be0e455e737538}} 
+\index{wallet::TransactionScanner@{wallet::TransactionScanner}!wallet\_keys@{wallet\_keys}}
+\index{wallet\_keys@{wallet\_keys}!wallet::TransactionScanner@{wallet::TransactionScanner}}
+\doxysubsubsection{\texorpdfstring{wallet\_keys}{wallet\_keys}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classwallet_1_1Keyring}{Keyring}}$>$ wallet\+::\+Transaction\+Scanner\+::wallet\+\_\+keys\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{transaction__scanner_8hpp}{transaction\+\_\+scanner.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{transaction__scanner_8cpp}{transaction\+\_\+scanner.\+cpp}}\end{DoxyCompactItemize}

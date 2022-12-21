@@ -1,0 +1,228 @@
+\hypertarget{classserialization_1_1binary__unarchiver}{}\doxysection{serialization\+::binary\+\_\+unarchiver Class Reference}
+\label{classserialization_1_1binary__unarchiver}\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+
+
+{\ttfamily \#include $<$binary\+\_\+archive.\+h$>$}
+
+
+
+Inheritance diagram for serialization\+::binary\+\_\+unarchiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classserialization_1_1binary__unarchiver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for serialization\+::binary\+\_\+unarchiver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classserialization_1_1binary__unarchiver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classserialization_1_1binary__unarchiver_aa7e0a9df550ece3a573ef315f5925fe9}{variant\+\_\+tag\+\_\+type}} = \mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{binary\+\_\+variant\+\_\+tag\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialization_1_1binary__unarchiver_af92ad43c71272d0dda92c2bc01230ab8}{binary\+\_\+unarchiver}} (std\+::istream \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+{\footnotesize template$<$class T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+signed\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}{serialize\+\_\+int}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Serializes a signed integer (by reinterpreting it as unsigned on the wire) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}{serialize\+\_\+int}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Serializes an unsigned integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_ae706787dc712cc70d619d110a52ec848}{serialize\+\_\+blob}} (void $\ast$buf, size\+\_\+t len, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} std\+::string\+\_\+view delimiter=\char`\"{}\char`\"{}sv)
+\begin{DoxyCompactList}\small\item\em Serializes binary data of a given size by reading it directly into the given buffer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_ad2d1d74791c2933e1903da4076b12135}{serialize\+\_\+varint}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Serializes an integer using varint encoding. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a9182d40b8dc66379e9230fe3928b752c}{serialize\+\_\+uvarint}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&v)
+\item 
+\mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{binary\+\_\+archive\+\_\+nested\+\_\+array}}$<$ \mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}} $>$ \mbox{\hyperlink{classserialization_1_1binary__unarchiver_aa7e0a8e71e73944a8bec094f79839120}{begin\+\_\+array}} (size\+\_\+t \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+\mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{binary\+\_\+archive\+\_\+nested\+\_\+array}}$<$ \mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}} $>$ \mbox{\hyperlink{classserialization_1_1binary__unarchiver_abd6509bf8421475097973eb18eabccbd}{begin\+\_\+array}} ()
+\item 
+void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a0af6b118963fee703025df2d84df985f}{tag}} (std\+::string\+\_\+view)
+\item 
+\mbox{\hyperlink{structserialization_1_1binary__archive__nested__object}{binary\+\_\+archive\+\_\+nested\+\_\+object}} \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a40c4db6c714775454128883ef1be54b4}{begin\+\_\+object}} ()
+\item 
+void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a6a9ad7db24baf241effaf2443c922981}{read\+\_\+variant\+\_\+tag}} (\mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{binary\+\_\+variant\+\_\+tag\+\_\+type}} \&t)
+\item 
+size\+\_\+t \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a32b8b0573f212fb254b8714ca72c8f7d}{remaining\+\_\+bytes}} (size\+\_\+t min\+\_\+required=0)
+\item 
+unsigned int \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a8ebe573bcbf07550e321f7e4118df687}{streampos}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserialization_1_1binary__unarchiver_a325ac3c58c505d0a2e6d0f938f431db4}{binary\+\_\+unarchiver}} (std\+::istream \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}, std\+::streamoff eof\+\_\+pos)
+\item 
+void \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a54569edb3fea096f4778d9a4b48fecc9}{enable\+\_\+stream\+\_\+exceptions}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a1646b13cf1143fdb741ad4c2116f2e4a}{stream\+\_\+}}
+\item 
+std\+::ios\+\_\+base\+::iostate \mbox{\hyperlink{classserialization_1_1binary__unarchiver_a55d8bdf1f5bf1646502f25621ea88594}{exc\+\_\+restore\+\_\+}}
+\item 
+std\+::streamoff \mbox{\hyperlink{classserialization_1_1binary__unarchiver_abfee6ee54d28aa58cdd38b07f83c7e7c}{eof\+\_\+pos\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_aa7e0a9df550ece3a573ef315f5925fe9}\label{classserialization_1_1binary__unarchiver_aa7e0a9df550ece3a573ef315f5925fe9}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!variant\_tag\_type@{variant\_tag\_type}}
+\index{variant\_tag\_type@{variant\_tag\_type}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{variant\_tag\_type}{variant\_tag\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classserialization_1_1binary__unarchiver_aa7e0a9df550ece3a573ef315f5925fe9}{serialization\+::binary\+\_\+unarchiver\+::variant\+\_\+tag\+\_\+type}} =  \mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{binary\+\_\+variant\+\_\+tag\+\_\+type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_af92ad43c71272d0dda92c2bc01230ab8}\label{classserialization_1_1binary__unarchiver_af92ad43c71272d0dda92c2bc01230ab8}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!binary\_unarchiver@{binary\_unarchiver}}
+\index{binary\_unarchiver@{binary\_unarchiver}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{binary\_unarchiver()}{binary\_unarchiver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily serialization\+::binary\+\_\+unarchiver\+::binary\+\_\+unarchiver (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a325ac3c58c505d0a2e6d0f938f431db4}\label{classserialization_1_1binary__unarchiver_a325ac3c58c505d0a2e6d0f938f431db4}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!binary\_unarchiver@{binary\_unarchiver}}
+\index{binary\_unarchiver@{binary\_unarchiver}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{binary\_unarchiver()}{binary\_unarchiver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily serialization\+::binary\+\_\+unarchiver\+::binary\+\_\+unarchiver (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{s,  }\item[{std\+::streamoff}]{eof\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_abd6509bf8421475097973eb18eabccbd}\label{classserialization_1_1binary__unarchiver_abd6509bf8421475097973eb18eabccbd}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!begin\_array@{begin\_array}}
+\index{begin\_array@{begin\_array}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{begin\_array()}{begin\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{binary\+\_\+archive\+\_\+nested\+\_\+array}}$<$\mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}}$>$ serialization\+::binary\+\_\+unarchiver\+::begin\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_aa7e0a8e71e73944a8bec094f79839120}\label{classserialization_1_1binary__unarchiver_aa7e0a8e71e73944a8bec094f79839120}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!begin\_array@{begin\_array}}
+\index{begin\_array@{begin\_array}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{begin\_array()}{begin\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{binary\+\_\+archive\+\_\+nested\+\_\+array}}$<$\mbox{\hyperlink{classserialization_1_1binary__unarchiver}{binary\+\_\+unarchiver}}$>$ serialization\+::binary\+\_\+unarchiver\+::begin\+\_\+array (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a40c4db6c714775454128883ef1be54b4}\label{classserialization_1_1binary__unarchiver_a40c4db6c714775454128883ef1be54b4}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!begin\_object@{begin\_object}}
+\index{begin\_object@{begin\_object}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{begin\_object()}{begin\_object()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserialization_1_1binary__archive__nested__object}{binary\+\_\+archive\+\_\+nested\+\_\+object}} serialization\+::binary\+\_\+unarchiver\+::begin\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a54569edb3fea096f4778d9a4b48fecc9}\label{classserialization_1_1binary__unarchiver_a54569edb3fea096f4778d9a4b48fecc9}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!enable\_stream\_exceptions@{enable\_stream\_exceptions}}
+\index{enable\_stream\_exceptions@{enable\_stream\_exceptions}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{enable\_stream\_exceptions()}{enable\_stream\_exceptions()}}
+{\footnotesize\ttfamily void serialization\+::binary\+\_\+unarchiver\+::enable\+\_\+stream\+\_\+exceptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a6a9ad7db24baf241effaf2443c922981}\label{classserialization_1_1binary__unarchiver_a6a9ad7db24baf241effaf2443c922981}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!read\_variant\_tag@{read\_variant\_tag}}
+\index{read\_variant\_tag@{read\_variant\_tag}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{read\_variant\_tag()}{read\_variant\_tag()}}
+{\footnotesize\ttfamily void serialization\+::binary\+\_\+unarchiver\+::read\+\_\+variant\+\_\+tag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{binary\+\_\+variant\+\_\+tag\+\_\+type}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a32b8b0573f212fb254b8714ca72c8f7d}\label{classserialization_1_1binary__unarchiver_a32b8b0573f212fb254b8714ca72c8f7d}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!remaining\_bytes@{remaining\_bytes}}
+\index{remaining\_bytes@{remaining\_bytes}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{remaining\_bytes()}{remaining\_bytes()}}
+{\footnotesize\ttfamily size\+\_\+t serialization\+::binary\+\_\+unarchiver\+::remaining\+\_\+bytes (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{min\+\_\+required = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of remaining serialization bytes. If the given {\ttfamily min\+\_\+required} is non-\/zero then we also ensure that at least that many bytes are available (and otherwise set the stream\textquotesingle{}s failbit to raise an exception). \mbox{\Hypertarget{classserialization_1_1binary__unarchiver_ae706787dc712cc70d619d110a52ec848}\label{classserialization_1_1binary__unarchiver_ae706787dc712cc70d619d110a52ec848}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!serialize\_blob@{serialize\_blob}}
+\index{serialize\_blob@{serialize\_blob}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_blob()}{serialize\_blob()}}
+{\footnotesize\ttfamily void serialization\+::binary\+\_\+unarchiver\+::serialize\+\_\+blob (\begin{DoxyParamCaption}\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{len,  }\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} std\+::string\+\_\+view}]{delimiter = {\ttfamily \char`\"{}\char`\"{}sv} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes binary data of a given size by reading it directly into the given buffer. 
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}\label{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!serialize\_int@{serialize\_int}}
+\index{serialize\_int@{serialize\_int}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_int()}{serialize\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+signed\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::binary\+\_\+unarchiver\+::serialize\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes a signed integer (by reinterpreting it as unsigned on the wire) 
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}\label{classserialization_1_1binary__unarchiver_ad5918e36ad87601fc6ff2a2372abf5ab}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!serialize\_int@{serialize\_int}}
+\index{serialize\_int@{serialize\_int}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_int()}{serialize\_int()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+unsigned\+\_\+v$<$ T $>$, int $>$  = 0$>$ \\
+void serialization\+::binary\+\_\+unarchiver\+::serialize\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes an unsigned integer. 
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a9182d40b8dc66379e9230fe3928b752c}\label{classserialization_1_1binary__unarchiver_a9182d40b8dc66379e9230fe3928b752c}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!serialize\_uvarint@{serialize\_uvarint}}
+\index{serialize\_uvarint@{serialize\_uvarint}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_uvarint()}{serialize\_uvarint()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void serialization\+::binary\+\_\+unarchiver\+::serialize\+\_\+uvarint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_ad2d1d74791c2933e1903da4076b12135}\label{classserialization_1_1binary__unarchiver_ad2d1d74791c2933e1903da4076b12135}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!serialize\_varint@{serialize\_varint}}
+\index{serialize\_varint@{serialize\_varint}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{serialize\_varint()}{serialize\_varint()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void serialization\+::binary\+\_\+unarchiver\+::serialize\+\_\+varint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes an integer using varint encoding. 
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a8ebe573bcbf07550e321f7e4118df687}\label{classserialization_1_1binary__unarchiver_a8ebe573bcbf07550e321f7e4118df687}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!streampos@{streampos}}
+\index{streampos@{streampos}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{streampos()}{streampos()}}
+{\footnotesize\ttfamily unsigned int serialization\+::binary\+\_\+unarchiver\+::streampos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a0af6b118963fee703025df2d84df985f}\label{classserialization_1_1binary__unarchiver_a0af6b118963fee703025df2d84df985f}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!tag@{tag}}
+\index{tag@{tag}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{tag()}{tag()}}
+{\footnotesize\ttfamily void serialization\+::binary\+\_\+unarchiver\+::tag (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_abfee6ee54d28aa58cdd38b07f83c7e7c}\label{classserialization_1_1binary__unarchiver_abfee6ee54d28aa58cdd38b07f83c7e7c}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!eof\_pos\_@{eof\_pos\_}}
+\index{eof\_pos\_@{eof\_pos\_}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{eof\_pos\_}{eof\_pos\_}}
+{\footnotesize\ttfamily std\+::streamoff serialization\+::binary\+\_\+unarchiver\+::eof\+\_\+pos\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a55d8bdf1f5bf1646502f25621ea88594}\label{classserialization_1_1binary__unarchiver_a55d8bdf1f5bf1646502f25621ea88594}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!exc\_restore\_@{exc\_restore\_}}
+\index{exc\_restore\_@{exc\_restore\_}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{exc\_restore\_}{exc\_restore\_}}
+{\footnotesize\ttfamily std\+::ios\+\_\+base\+::iostate serialization\+::binary\+\_\+unarchiver\+::exc\+\_\+restore\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classserialization_1_1binary__unarchiver_a1646b13cf1143fdb741ad4c2116f2e4a}\label{classserialization_1_1binary__unarchiver_a1646b13cf1143fdb741ad4c2116f2e4a}} 
+\index{serialization::binary\_unarchiver@{serialization::binary\_unarchiver}!stream\_@{stream\_}}
+\index{stream\_@{stream\_}!serialization::binary\_unarchiver@{serialization::binary\_unarchiver}}
+\doxysubsubsection{\texorpdfstring{stream\_}{stream\_}}
+{\footnotesize\ttfamily std\+::istream\& serialization\+::binary\+\_\+unarchiver\+::stream\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/serialization/\mbox{\hyperlink{binary__archive_8h}{binary\+\_\+archive.\+h}}\end{DoxyCompactItemize}

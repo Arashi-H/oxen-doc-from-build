@@ -1,0 +1,97 @@
+\hypertarget{c__threads_8h}{}\doxysection{src/crypto/c\+\_\+threads.h File Reference}
+\label{c__threads_8h}\index{src/crypto/c\_threads.h@{src/crypto/c\_threads.h}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+Include dependency graph for c\+\_\+threads.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{c__threads_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{c__threads_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE}}~pthread\+\_\+mutex\+\_\+t
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT}}~P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a367fee1b9280529f01d52aa63a9e862b}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+L\+O\+CK}}(x)~pthread\+\_\+mutex\+\_\+lock(\&x)
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a8825ec5bf4f9afc73c451b8f8c8820ba}{C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+U\+N\+L\+O\+CK}}(x)~pthread\+\_\+mutex\+\_\+unlock(\&x)
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a1f5461368af5e9064c83691cc39efaf2}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+T\+Y\+PE}}~pthread\+\_\+t
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a1eeb8a6406465c4724a1de486babfd02}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+T\+Y\+PE}}~void $\ast$
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_ac9094470448621729e9f0808ef8055dc}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+RN}}~return N\+U\+LL
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a574c532df6bbb75a5ab7a8e71fe1e6fc}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+TE}}(thr,  func,  arg)~pthread\+\_\+create(\&thr, N\+U\+LL, func, arg)
+\item 
+\#define \mbox{\hyperlink{c__threads_8h_a1e3f5bd606857cfea6caccc00521f14a}{C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+J\+O\+IN}}(thr)~pthread\+\_\+join(thr, N\+U\+LL)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}\label{c__threads_8h_a35d7b19ed4ad668e69c13666ff9bdaff}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_MUTEX\_INIT@{CTHR\_MUTEX\_INIT}}
+\index{CTHR\_MUTEX\_INIT@{CTHR\_MUTEX\_INIT}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_MUTEX\_INIT}{CTHR\_MUTEX\_INIT}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+IT~P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}
+
+\mbox{\Hypertarget{c__threads_8h_a367fee1b9280529f01d52aa63a9e862b}\label{c__threads_8h_a367fee1b9280529f01d52aa63a9e862b}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_MUTEX\_LOCK@{CTHR\_MUTEX\_LOCK}}
+\index{CTHR\_MUTEX\_LOCK@{CTHR\_MUTEX\_LOCK}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_MUTEX\_LOCK}{CTHR\_MUTEX\_LOCK}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~pthread\+\_\+mutex\+\_\+lock(\&x)}
+
+\mbox{\Hypertarget{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}\label{c__threads_8h_af41a517103fc8a43c7b7b9929e199c1d}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_MUTEX\_TYPE@{CTHR\_MUTEX\_TYPE}}
+\index{CTHR\_MUTEX\_TYPE@{CTHR\_MUTEX\_TYPE}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_MUTEX\_TYPE}{CTHR\_MUTEX\_TYPE}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+T\+Y\+PE~pthread\+\_\+mutex\+\_\+t}
+
+\mbox{\Hypertarget{c__threads_8h_a8825ec5bf4f9afc73c451b8f8c8820ba}\label{c__threads_8h_a8825ec5bf4f9afc73c451b8f8c8820ba}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_MUTEX\_UNLOCK@{CTHR\_MUTEX\_UNLOCK}}
+\index{CTHR\_MUTEX\_UNLOCK@{CTHR\_MUTEX\_UNLOCK}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_MUTEX\_UNLOCK}{CTHR\_MUTEX\_UNLOCK}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+M\+U\+T\+E\+X\+\_\+\+U\+N\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~pthread\+\_\+mutex\+\_\+unlock(\&x)}
+
+\mbox{\Hypertarget{c__threads_8h_a574c532df6bbb75a5ab7a8e71fe1e6fc}\label{c__threads_8h_a574c532df6bbb75a5ab7a8e71fe1e6fc}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_THREAD\_CREATE@{CTHR\_THREAD\_CREATE}}
+\index{CTHR\_THREAD\_CREATE@{CTHR\_THREAD\_CREATE}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_THREAD\_CREATE}{CTHR\_THREAD\_CREATE}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+C\+R\+E\+A\+TE(\begin{DoxyParamCaption}\item[{}]{thr,  }\item[{}]{func,  }\item[{}]{arg }\end{DoxyParamCaption})~pthread\+\_\+create(\&thr, N\+U\+LL, func, arg)}
+
+\mbox{\Hypertarget{c__threads_8h_a1e3f5bd606857cfea6caccc00521f14a}\label{c__threads_8h_a1e3f5bd606857cfea6caccc00521f14a}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_THREAD\_JOIN@{CTHR\_THREAD\_JOIN}}
+\index{CTHR\_THREAD\_JOIN@{CTHR\_THREAD\_JOIN}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_THREAD\_JOIN}{CTHR\_THREAD\_JOIN}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+J\+O\+IN(\begin{DoxyParamCaption}\item[{}]{thr }\end{DoxyParamCaption})~pthread\+\_\+join(thr, N\+U\+LL)}
+
+\mbox{\Hypertarget{c__threads_8h_ac9094470448621729e9f0808ef8055dc}\label{c__threads_8h_ac9094470448621729e9f0808ef8055dc}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_THREAD\_RETURN@{CTHR\_THREAD\_RETURN}}
+\index{CTHR\_THREAD\_RETURN@{CTHR\_THREAD\_RETURN}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_THREAD\_RETURN}{CTHR\_THREAD\_RETURN}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+E\+T\+U\+RN~return N\+U\+LL}
+
+\mbox{\Hypertarget{c__threads_8h_a1eeb8a6406465c4724a1de486babfd02}\label{c__threads_8h_a1eeb8a6406465c4724a1de486babfd02}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_THREAD\_RTYPE@{CTHR\_THREAD\_RTYPE}}
+\index{CTHR\_THREAD\_RTYPE@{CTHR\_THREAD\_RTYPE}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_THREAD\_RTYPE}{CTHR\_THREAD\_RTYPE}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+R\+T\+Y\+PE~void $\ast$}
+
+\mbox{\Hypertarget{c__threads_8h_a1f5461368af5e9064c83691cc39efaf2}\label{c__threads_8h_a1f5461368af5e9064c83691cc39efaf2}} 
+\index{c\_threads.h@{c\_threads.h}!CTHR\_THREAD\_TYPE@{CTHR\_THREAD\_TYPE}}
+\index{CTHR\_THREAD\_TYPE@{CTHR\_THREAD\_TYPE}!c\_threads.h@{c\_threads.h}}
+\doxysubsubsection{\texorpdfstring{CTHR\_THREAD\_TYPE}{CTHR\_THREAD\_TYPE}}
+{\footnotesize\ttfamily \#define C\+T\+H\+R\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+T\+Y\+PE~pthread\+\_\+t}
+

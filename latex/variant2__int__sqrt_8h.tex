@@ -1,0 +1,99 @@
+\hypertarget{variant2__int__sqrt_8h}{}\doxysection{src/crypto/variant2\+\_\+int\+\_\+sqrt.h File Reference}
+\label{variant2__int__sqrt_8h}\index{src/crypto/variant2\_int\_sqrt.h@{src/crypto/variant2\_int\_sqrt.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+Include dependency graph for variant2\+\_\+int\+\_\+sqrt.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{variant2__int__sqrt_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{variant2__int__sqrt_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{variant2__int__sqrt_8h_a85f317242615510daba7e6660bf76e04}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+S\+S\+E2}}()
+\item 
+\#define \mbox{\hyperlink{variant2__int__sqrt_8h_a88060e56ff163935ca660f04927c0a17}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+F\+P64}}()
+\item 
+\#define \mbox{\hyperlink{variant2__int__sqrt_8h_aa6a3c362edb22b59c9e63946cf41ed57}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+R\+EF}}()~sqrt\+\_\+result = \mbox{\hyperlink{variant2__int__sqrt_8h_a9159265f212dc63aa835a2d3a7ce8e6a}{integer\+\_\+square\+\_\+root\+\_\+v2}}(sqrt\+\_\+input)
+\item 
+\#define \mbox{\hyperlink{variant2__int__sqrt_8h_ad08e4ecc996b03ef9dce19302cf2960d}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+F\+I\+X\+UP}}(r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{variant2__int__sqrt_8h_a9159265f212dc63aa835a2d3a7ce8e6a}{integer\+\_\+square\+\_\+root\+\_\+v2}} (uint64\+\_\+t n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{variant2__int__sqrt_8h_ad08e4ecc996b03ef9dce19302cf2960d}\label{variant2__int__sqrt_8h_ad08e4ecc996b03ef9dce19302cf2960d}} 
+\index{variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}!VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP@{VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP}}
+\index{VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP@{VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP}!variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP}{VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+F\+I\+X\+UP(\begin{DoxyParamCaption}\item[{}]{r }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    const uint64\_t \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}} = r >> 1; \(\backslash\)}
+\DoxyCodeLine{    const uint64\_t \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} = r \& 1; \(\backslash\)}
+\DoxyCodeLine{    const uint64\_t r2 = (uint64\_t)(\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}) * (\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}} + \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}) + (r << 32); \(\backslash\)}
+\DoxyCodeLine{    r += ((r2 + \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} > sqrt\_input) ? -\/1 : 0) + ((r2 + (1ULL << 32) < sqrt\_input -\/ \mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}) ? 1 : 0); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{variant2__int__sqrt_8h_a88060e56ff163935ca660f04927c0a17}\label{variant2__int__sqrt_8h_a88060e56ff163935ca660f04927c0a17}} 
+\index{variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}!VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64}}
+\index{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64}!variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64}{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_FP64}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+F\+P64(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    sqrt\_result = sqrt(sqrt\_input + 18446744073709551616.0) * 2.0 -\/ 8589934592.0; \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{variant2__int__sqrt_8h_aa6a3c362edb22b59c9e63946cf41ed57}\label{variant2__int__sqrt_8h_aa6a3c362edb22b59c9e63946cf41ed57}} 
+\index{variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}!VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF}}
+\index{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF}!variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF}{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+R\+EF(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~sqrt\+\_\+result = \mbox{\hyperlink{variant2__int__sqrt_8h_a9159265f212dc63aa835a2d3a7ce8e6a}{integer\+\_\+square\+\_\+root\+\_\+v2}}(sqrt\+\_\+input)}
+
+\mbox{\Hypertarget{variant2__int__sqrt_8h_a85f317242615510daba7e6660bf76e04}\label{variant2__int__sqrt_8h_a85f317242615510daba7e6660bf76e04}} 
+\index{variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}!VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2}}
+\index{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2@{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2}!variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2}{VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+\+S\+T\+E\+P\+\_\+\+S\+S\+E2(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{    const \_\_m128i exp\_double\_bias = \_mm\_set\_epi64x(0, 1023ULL << 52); \(\backslash\)}
+\DoxyCodeLine{    \_\_m128d x = \_mm\_castsi128\_pd(\_mm\_add\_epi64(\_mm\_cvtsi64\_si128(sqrt\_input >> 12), exp\_double\_bias)); \(\backslash\)}
+\DoxyCodeLine{    x = \_mm\_sqrt\_sd(\_mm\_setzero\_pd(), x); \(\backslash\)}
+\DoxyCodeLine{    sqrt\_result = (uint64\_t)(\_mm\_cvtsi128\_si64(\_mm\_sub\_epi64(\_mm\_castpd\_si128(x), exp\_double\_bias))) >> 19; \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{variant2__int__sqrt_8h_a9159265f212dc63aa835a2d3a7ce8e6a}\label{variant2__int__sqrt_8h_a9159265f212dc63aa835a2d3a7ce8e6a}} 
+\index{variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}!integer\_square\_root\_v2@{integer\_square\_root\_v2}}
+\index{integer\_square\_root\_v2@{integer\_square\_root\_v2}!variant2\_int\_sqrt.h@{variant2\_int\_sqrt.h}}
+\doxysubsubsection{\texorpdfstring{integer\_square\_root\_v2()}{integer\_square\_root\_v2()}}
+{\footnotesize\ttfamily static uint32\+\_\+t integer\+\_\+square\+\_\+root\+\_\+v2 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+

@@ -1,0 +1,93 @@
+\hypertarget{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE}{}\doxysection{wallet\+::rpc\+::R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+DE Struct Reference}
+\label{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE}\index{wallet::rpc::REGISTER\_SERVICE\_NODE@{wallet::rpc::REGISTER\_SERVICE\_NODE}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+DE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+DE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_a74fc318079d90a3d3fe58ac2c92cef05}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_1_1REQUEST}{wallet\+::rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_aae53d6abacb6d1fda6aab126f535c025}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Register Service Node.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily register\+\_\+service\+\_\+node\+\_\+str} -- String supplied by the prepare\+\_\+registration command.
+\item {\ttfamily get\+\_\+tx\+\_\+key} -- (Optional) Return the transaction key after sending.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, the newly created transaction will not be relayed to the oxen network. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- Return the transaction as hex string after sending (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- Return the metadata needed to relay the transaction. (Defaults to false)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash} -- Publicly searchable transaction hash.
+\item {\ttfamily tx\+\_\+key} -- Transaction key if get\+\_\+tx\+\_\+key is true, otherwise, blank string.
+\item {\ttfamily amount} -- Amount transferred for the transaction in atomic units.
+\item {\ttfamily fee} -- Value in atomic units of the fee charged for the tx.
+\item {\ttfamily tx\+\_\+blob} -- Raw transaction represented as hex string, if get\+\_\+tx\+\_\+hex is true.
+\item {\ttfamily tx\+\_\+metadata} -- Set of transaction metadata needed to relay this transfer later, if {\ttfamily get\+\_\+tx\+\_\+metadata} is {\ttfamily true}.
+\item {\ttfamily multisig\+\_\+txset} -- Set of multisig transactions in the process of being signed (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_a74fc318079d90a3d3fe58ac2c92cef05}\label{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_a74fc318079d90a3d3fe58ac2c92cef05}} 
+\index{wallet::rpc::REGISTER\_SERVICE\_NODE@{wallet::rpc::REGISTER\_SERVICE\_NODE}!names@{names}}
+\index{names@{names}!wallet::rpc::REGISTER\_SERVICE\_NODE@{wallet::rpc::REGISTER\_SERVICE\_NODE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_aae53d6abacb6d1fda6aab126f535c025}\label{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_aae53d6abacb6d1fda6aab126f535c025}} 
+\index{wallet::rpc::REGISTER\_SERVICE\_NODE@{wallet::rpc::REGISTER\_SERVICE\_NODE}!request@{request}}
+\index{request@{request}!wallet::rpc::REGISTER\_SERVICE\_NODE@{wallet::rpc::REGISTER\_SERVICE\_NODE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1REGISTER__SERVICE__NODE_1_1REQUEST}{wallet\+::rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

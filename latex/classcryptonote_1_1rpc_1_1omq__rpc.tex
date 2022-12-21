@@ -1,0 +1,196 @@
+\hypertarget{classcryptonote_1_1rpc_1_1omq__rpc}{}\doxysection{cryptonote\+::rpc\+::omq\+\_\+rpc Class Reference}
+\label{classcryptonote_1_1rpc_1_1omq__rpc}\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+
+
+{\ttfamily \#include $<$lmq\+\_\+server.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::rpc\+::omq\+\_\+rpc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1rpc_1_1omq__rpc__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1block__sub}{block\+\_\+sub}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1mempool__sub}{mempool\+\_\+sub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a2141ff00110989b221af0540da22e988}{omq\+\_\+rpc}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&\mbox{\hyperlink{classcryptonote_1_1core}{core}}, \mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \&rpc, const boost\+::program\+\_\+options\+::variables\+\_\+map \&vm)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a39916510a78225901f4bec1b46f0cc2d}{send\+\_\+block\+\_\+notifications}} (const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&\mbox{\hyperlink{structcryptonote_1_1block}{block}})
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a184e0b38aa65facb24e0d9eb9dd60102}{send\+\_\+mempool\+\_\+notifications}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&id, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, const std\+::string \&blob, const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&opts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5}{mempool\+\_\+sub\+\_\+type}} \{ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5aa181a603769c1f98ad927e7367c7aa51}{mempool\+\_\+sub\+\_\+type\+::all}}, 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5a40652ee9ae143f1c1c830f01a5449ecb}{mempool\+\_\+sub\+\_\+type\+::blink}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_ae9265864e7a2796eb0cc1e63e5fccf0a}{on\+\_\+get\+\_\+blocks}} (oxenmq\+::\+Message \&m)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aefbc83d28e892e0296ce7b986379cc82}{on\+\_\+mempool\+\_\+sub\+\_\+request}} (oxenmq\+::\+Message \&m)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a34449ba8c0d372d22caa52e2ffefeb58}{on\+\_\+block\+\_\+sub\+\_\+request}} (oxenmq\+::\+Message \&m)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a3e69a6c8d29cf5cd558d6ee32371b101}{core\+\_\+}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_abdd4d57ff1e7f69bc0975f811f251624}{rpc\+\_\+}}
+\item 
+std\+::shared\+\_\+timed\+\_\+mutex \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a2f556dcaa8f85366ebe999038cc5a651}{subs\+\_\+mutex\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ oxenmq\+::\+Connection\+ID, \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1mempool__sub}{mempool\+\_\+sub}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aad5f63d2629682972a67c06076e94644}{mempool\+\_\+subs\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ oxenmq\+::\+Connection\+ID, \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1block__sub}{block\+\_\+sub}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_a4a1b326f94aec14a2b71e5f4d6af7e7a}{block\+\_\+subs\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+L\+MQ R\+PC server class. This doesn\textquotesingle{}t actually hold the Oxen\+MQ instance--that\textquotesingle{}s in cryptonote\+\_\+core--but it works with it to add R\+PC endpoints, make it listen on R\+PC ports, and handles R\+PC requests. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5}\label{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!mempool\_sub\_type@{mempool\_sub\_type}}
+\index{mempool\_sub\_type@{mempool\_sub\_type}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{mempool\_sub\_type}{mempool\_sub\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5}{cryptonote\+::rpc\+::omq\+\_\+rpc\+::mempool\+\_\+sub\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{all@{all}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!all@{all}}}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5aa181a603769c1f98ad927e7367c7aa51}\label{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5aa181a603769c1f98ad927e7367c7aa51}} 
+all&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blink@{blink}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!blink@{blink}}}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5a40652ee9ae143f1c1c830f01a5449ecb}\label{classcryptonote_1_1rpc_1_1omq__rpc_aa57067607f9dd7f713b854d9d40655e5a40652ee9ae143f1c1c830f01a5449ecb}} 
+blink&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a2141ff00110989b221af0540da22e988}\label{classcryptonote_1_1rpc_1_1omq__rpc_a2141ff00110989b221af0540da22e988}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!omq\_rpc@{omq\_rpc}}
+\index{omq\_rpc@{omq\_rpc}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{omq\_rpc()}{omq\_rpc()}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::omq\+\_\+rpc\+::omq\+\_\+rpc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&}]{core,  }\item[{\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \&}]{rpc,  }\item[{const boost\+::program\+\_\+options\+::variables\+\_\+map \&}]{vm }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a34449ba8c0d372d22caa52e2ffefeb58}\label{classcryptonote_1_1rpc_1_1omq__rpc_a34449ba8c0d372d22caa52e2ffefeb58}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!on\_block\_sub\_request@{on\_block\_sub\_request}}
+\index{on\_block\_sub\_request@{on\_block\_sub\_request}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{on\_block\_sub\_request()}{on\_block\_sub\_request()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::omq\+\_\+rpc\+::on\+\_\+block\+\_\+sub\+\_\+request (\begin{DoxyParamCaption}\item[{oxenmq\+::\+Message \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_ae9265864e7a2796eb0cc1e63e5fccf0a}\label{classcryptonote_1_1rpc_1_1omq__rpc_ae9265864e7a2796eb0cc1e63e5fccf0a}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!on\_get\_blocks@{on\_get\_blocks}}
+\index{on\_get\_blocks@{on\_get\_blocks}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{on\_get\_blocks()}{on\_get\_blocks()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::omq\+\_\+rpc\+::on\+\_\+get\+\_\+blocks (\begin{DoxyParamCaption}\item[{oxenmq\+::\+Message \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Get a set of blocks, their transactions, and their created outputs\textquotesingle{} global indices
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily start\+\_\+height} -- height of first requested block. Requesting past the end of the chain is valid; The resulting block list will be empty if this happens.
+\item {\ttfamily size\+\_\+limit} -- limit for the response message size. If a single block would go over this limit, status will indicate with \char`\"{}\+T\+O\+O B\+I\+G\char`\"{}
+\item {\ttfamily max\+\_\+count} -- maximum number of blocks to send
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} -- General R\+PC status string. \char`\"{}\+O\+K\char`\"{} means the request was ok. \char`\"{}\+E\+N\+D\char`\"{} means the request reached the end of the chain (still ok). Anything else indicates an error, specified by the string given.
+
+Blocks will be encoded based on the request parameters\textquotesingle{} encoding.
+\item {\ttfamily block} (top-\/level object/dict)\+:
+\begin{DoxyItemize}
+\item {\ttfamily hash} -- the block hash
+\item {\ttfamily height} -- the block height
+\item {\ttfamily timestamp} -- the block timestamp
+\item {\ttfamily transactions} -- list of the block\textquotesingle{}s transactions (including miner tx), each a dict as follows\+:
+\begin{DoxyItemize}
+\item {\ttfamily global\+\_\+indices} -- list of output indices for the transaction\textquotesingle{}s created outputs
+\item {\ttfamily hash} -- the transaction hash
+\item {\ttfamily tx} -- base64 string of raw transaction data \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]properly serialized transaction \end{DoxyRefDesc}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_aefbc83d28e892e0296ce7b986379cc82}\label{classcryptonote_1_1rpc_1_1omq__rpc_aefbc83d28e892e0296ce7b986379cc82}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!on\_mempool\_sub\_request@{on\_mempool\_sub\_request}}
+\index{on\_mempool\_sub\_request@{on\_mempool\_sub\_request}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{on\_mempool\_sub\_request()}{on\_mempool\_sub\_request()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::omq\+\_\+rpc\+::on\+\_\+mempool\+\_\+sub\+\_\+request (\begin{DoxyParamCaption}\item[{oxenmq\+::\+Message \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a39916510a78225901f4bec1b46f0cc2d}\label{classcryptonote_1_1rpc_1_1omq__rpc_a39916510a78225901f4bec1b46f0cc2d}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!send\_block\_notifications@{send\_block\_notifications}}
+\index{send\_block\_notifications@{send\_block\_notifications}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{send\_block\_notifications()}{send\_block\_notifications()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::omq\+\_\+rpc\+::send\+\_\+block\+\_\+notifications (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{block}} \&}]{block }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a184e0b38aa65facb24e0d9eb9dd60102}\label{classcryptonote_1_1rpc_1_1omq__rpc_a184e0b38aa65facb24e0d9eb9dd60102}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!send\_mempool\_notifications@{send\_mempool\_notifications}}
+\index{send\_mempool\_notifications@{send\_mempool\_notifications}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{send\_mempool\_notifications()}{send\_mempool\_notifications()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::omq\+\_\+rpc\+::send\+\_\+mempool\+\_\+notifications (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{id,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{const std\+::string \&}]{blob,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__pool__options}{tx\+\_\+pool\+\_\+options}} \&}]{opts }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a4a1b326f94aec14a2b71e5f4d6af7e7a}\label{classcryptonote_1_1rpc_1_1omq__rpc_a4a1b326f94aec14a2b71e5f4d6af7e7a}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!block\_subs\_@{block\_subs\_}}
+\index{block\_subs\_@{block\_subs\_}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{block\_subs\_}{block\_subs\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$oxenmq\+::\+Connection\+ID, \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1block__sub}{block\+\_\+sub}}$>$ cryptonote\+::rpc\+::omq\+\_\+rpc\+::block\+\_\+subs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a3e69a6c8d29cf5cd558d6ee32371b101}\label{classcryptonote_1_1rpc_1_1omq__rpc_a3e69a6c8d29cf5cd558d6ee32371b101}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!core\_@{core\_}}
+\index{core\_@{core\_}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{core\_}{core\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}}\& cryptonote\+::rpc\+::omq\+\_\+rpc\+::core\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_aad5f63d2629682972a67c06076e94644}\label{classcryptonote_1_1rpc_1_1omq__rpc_aad5f63d2629682972a67c06076e94644}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!mempool\_subs\_@{mempool\_subs\_}}
+\index{mempool\_subs\_@{mempool\_subs\_}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{mempool\_subs\_}{mempool\_subs\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$oxenmq\+::\+Connection\+ID, \mbox{\hyperlink{structcryptonote_1_1rpc_1_1omq__rpc_1_1mempool__sub}{mempool\+\_\+sub}}$>$ cryptonote\+::rpc\+::omq\+\_\+rpc\+::mempool\+\_\+subs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_abdd4d57ff1e7f69bc0975f811f251624}\label{classcryptonote_1_1rpc_1_1omq__rpc_abdd4d57ff1e7f69bc0975f811f251624}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!rpc\_@{rpc\_}}
+\index{rpc\_@{rpc\_}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{rpc\_}{rpc\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}}\& cryptonote\+::rpc\+::omq\+\_\+rpc\+::rpc\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1omq__rpc_a2f556dcaa8f85366ebe999038cc5a651}\label{classcryptonote_1_1rpc_1_1omq__rpc_a2f556dcaa8f85366ebe999038cc5a651}} 
+\index{cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}!subs\_mutex\_@{subs\_mutex\_}}
+\index{subs\_mutex\_@{subs\_mutex\_}!cryptonote::rpc::omq\_rpc@{cryptonote::rpc::omq\_rpc}}
+\doxysubsubsection{\texorpdfstring{subs\_mutex\_}{subs\_mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+timed\+\_\+mutex cryptonote\+::rpc\+::omq\+\_\+rpc\+::subs\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{lmq__server_8h}{lmq\+\_\+server.\+h}}\item 
+src/rpc/\mbox{\hyperlink{lmq__server_8cpp}{lmq\+\_\+server.\+cpp}}\end{DoxyCompactItemize}

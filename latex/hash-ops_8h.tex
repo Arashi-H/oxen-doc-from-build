@@ -1,0 +1,210 @@
+\hypertarget{hash-ops_8h}{}\doxysection{src/crypto/hash-\/ops.h File Reference}
+\label{hash-ops_8h}\index{src/crypto/hash-\/ops.h@{src/crypto/hash-\/ops.h}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for hash-\/ops.h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash-ops_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash-ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hash-ops_8h_abb8fddc15676787c6aec6bbadef8eb62}{C\+N\+\_\+\+T\+U\+R\+T\+L\+E\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}~262144
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a7c4a60f2cf37fef0651f30652297002d}{H\+A\+S\+H\+\_\+\+S\+I\+ZE}} = 32, 
+\mbox{\hyperlink{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57abb9e017452ec96078fc8d9ea78c1f772}{H\+A\+S\+H\+\_\+\+D\+A\+T\+A\+\_\+\+A\+R\+EA}} = 136
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hash-ops_8h_aa42b9bccaca7fce82a32874a00404ad2}{hash\+\_\+permutation}} (union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$\mbox{\hyperlink{structstate}{state}})
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a1d6f6be331e7750f56c17e6a43a2f949}{hash\+\_\+process}} (union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$\mbox{\hyperlink{structstate}{state}}, const uint8\+\_\+t $\ast$buf, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a2150fe174df46197ee921add9557b262}{cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a3cb9143c03520ab27af6d37f1193d065}{cn\+\_\+turtle\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int light, int variant, int prehashed, uint32\+\_\+t scratchpad, uint32\+\_\+t iterations)
+\begin{DoxyCompactList}\small\item\em the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hash-ops_8h_a62f1115b9aaa6d3a7e474cf906d32d24}{hash\+\_\+extra\+\_\+blake}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a56489b0aaead64cb53813e7fde45f624}{hash\+\_\+extra\+\_\+groestl}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_ac767f7f2c73702e51e3be44c02b74552}{hash\+\_\+extra\+\_\+jh}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a5bb2d6e926702f764f9ae51462998448}{hash\+\_\+extra\+\_\+skein}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_afe239129d98ae6f9928ff0de171adfc9}{tree\+\_\+hash}} (const unsigned char($\ast$hashes)\mbox{[}\mbox{\hyperlink{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a7c4a60f2cf37fef0651f30652297002d}{H\+A\+S\+H\+\_\+\+S\+I\+ZE}}\mbox{]}, size\+\_\+t count, unsigned char $\ast$root\+\_\+hash)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a75f13a4ab2898791278e2a7a2b07e4d0}{rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_abd361359b48326fbdc65dac3d7469f6a}{rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state}} (void)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{hash-ops_8h_a4c47c124ff41e4f0eb699cd15f19e387}{rx\+\_\+seedheight}} (const uint64\+\_\+t height)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a84854c19afab107beba668df64f387a9}{rx\+\_\+seedheights}} (const uint64\+\_\+t height, uint64\+\_\+t $\ast$seed\+\_\+height, uint64\+\_\+t $\ast$next\+\_\+height)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_aa617c601c8baa0dfc65d2278d7d14349}{rx\+\_\+slow\+\_\+hash}} (const uint64\+\_\+t mainheight, const uint64\+\_\+t seedheight, const unsigned char $\ast$seedhash, const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int miners, int is\+\_\+alt)
+\item 
+void \mbox{\hyperlink{hash-ops_8h_a48d23c81ab4f64d3e37dd5b7652910b2}{rx\+\_\+reorg}} (const uint64\+\_\+t split\+\_\+height)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hash-ops_8h_abb8fddc15676787c6aec6bbadef8eb62}\label{hash-ops_8h_abb8fddc15676787c6aec6bbadef8eb62}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!CN\_TURTLE\_PAGE\_SIZE@{CN\_TURTLE\_PAGE\_SIZE}}
+\index{CN\_TURTLE\_PAGE\_SIZE@{CN\_TURTLE\_PAGE\_SIZE}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{CN\_TURTLE\_PAGE\_SIZE}{CN\_TURTLE\_PAGE\_SIZE}}
+{\footnotesize\ttfamily \#define C\+N\+\_\+\+T\+U\+R\+T\+L\+E\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE~262144}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}\label{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HASH\_SIZE@{HASH\_SIZE}!hash-\/ops.h@{hash-\/ops.h}}\index{hash-\/ops.h@{hash-\/ops.h}!HASH\_SIZE@{HASH\_SIZE}}}\mbox{\Hypertarget{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a7c4a60f2cf37fef0651f30652297002d}\label{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a7c4a60f2cf37fef0651f30652297002d}} 
+H\+A\+S\+H\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HASH\_DATA\_AREA@{HASH\_DATA\_AREA}!hash-\/ops.h@{hash-\/ops.h}}\index{hash-\/ops.h@{hash-\/ops.h}!HASH\_DATA\_AREA@{HASH\_DATA\_AREA}}}\mbox{\Hypertarget{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57abb9e017452ec96078fc8d9ea78c1f772}\label{hash-ops_8h_ab04a0655cd1e3bcac5e8f48c18df1a57abb9e017452ec96078fc8d9ea78c1f772}} 
+H\+A\+S\+H\+\_\+\+D\+A\+T\+A\+\_\+\+A\+R\+EA&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hash-ops_8h_a2150fe174df46197ee921add9557b262}\label{hash-ops_8h_a2150fe174df46197ee921add9557b262}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!cn\_fast\_hash@{cn\_fast\_hash}}
+\index{cn\_fast\_hash@{cn\_fast\_hash}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{cn\_fast\_hash()}{cn\_fast\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+fast\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a3cb9143c03520ab27af6d37f1193d065}\label{hash-ops_8h_a3cb9143c03520ab27af6d37f1193d065}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!cn\_turtle\_hash@{cn\_turtle\_hash}}
+\index{cn\_turtle\_hash@{cn\_turtle\_hash}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{cn\_turtle\_hash()}{cn\_turtle\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+turtle\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{light,  }\item[{int}]{variant,  }\item[{int}]{prehashed,  }\item[{uint32\+\_\+t}]{scratchpad,  }\item[{uint32\+\_\+t}]{iterations }\end{DoxyParamCaption})}
+
+
+
+the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work 
+
+Computes the hash of $<$data$>$ (which consists of $<$length$>$ bytes), returning the hash in $<$hash$>$. The Crypto\+Night hash operates by first using Keccak 1600, the 1600 bit variant of the Keccak hash used in S\+H\+A-\/3, to create a 200 byte buffer of pseudorandom data by hashing the supplied data. It then uses this random data to fill a large 2MB buffer with pseudorandom data by iteratively encrypting it using 10 rounds of A\+ES per entry. After this initialization, it executes 524,288 rounds of mixing through the random 2MB buffer using A\+ES (typically provided in hardware on modern C\+P\+Us) and a 64 bit multiply. Finally, it re-\/mixes this large buffer back into the 200 byte \char`\"{}text\char`\"{} buffer, and then hashes this buffer using one of four pseudorandomly selected hash functions (Blake, Groestl, JH, or Skein) to populate the output.
+
+The 2MB buffer and choice of functions for mixing are designed to make the algorithm \char`\"{}\+C\+P\+U-\/friendly\char`\"{} (and thus, reduce the advantage of G\+PU, F\+P\+GA, or A\+S\+I\+C-\/based implementations)\+: the functions used are fast on modern C\+P\+Us, and the 2MB size matches the typical amount of L3 cache available per core on 2013-\/era C\+P\+Us. When available, this implementation will use hardware A\+ES support on x86 C\+P\+Us.
+
+A diagram of the inner loop of this function can be found at \href{https://www.cs.cmu.edu/~dga/crypto/xmr/cryptonight.png}{\texttt{ https\+://www.\+cs.\+cmu.\+edu/$\sim$dga/crypto/xmr/cryptonight.\+png}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data to hash \\
+\hline
+{\em length} & the length in bytes of the data \\
+\hline
+{\em hash} & a pointer to a buffer in which the final 256 bit hash will be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{hash-ops_8h_a62f1115b9aaa6d3a7e474cf906d32d24}\label{hash-ops_8h_a62f1115b9aaa6d3a7e474cf906d32d24}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_extra\_blake@{hash\_extra\_blake}}
+\index{hash\_extra\_blake@{hash\_extra\_blake}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_extra\_blake()}{hash\_extra\_blake()}}
+{\footnotesize\ttfamily void hash\+\_\+extra\+\_\+blake (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a56489b0aaead64cb53813e7fde45f624}\label{hash-ops_8h_a56489b0aaead64cb53813e7fde45f624}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_extra\_groestl@{hash\_extra\_groestl}}
+\index{hash\_extra\_groestl@{hash\_extra\_groestl}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_extra\_groestl()}{hash\_extra\_groestl()}}
+{\footnotesize\ttfamily void hash\+\_\+extra\+\_\+groestl (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_ac767f7f2c73702e51e3be44c02b74552}\label{hash-ops_8h_ac767f7f2c73702e51e3be44c02b74552}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_extra\_jh@{hash\_extra\_jh}}
+\index{hash\_extra\_jh@{hash\_extra\_jh}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_extra\_jh()}{hash\_extra\_jh()}}
+{\footnotesize\ttfamily void hash\+\_\+extra\+\_\+jh (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a5bb2d6e926702f764f9ae51462998448}\label{hash-ops_8h_a5bb2d6e926702f764f9ae51462998448}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_extra\_skein@{hash\_extra\_skein}}
+\index{hash\_extra\_skein@{hash\_extra\_skein}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_extra\_skein()}{hash\_extra\_skein()}}
+{\footnotesize\ttfamily void hash\+\_\+extra\+\_\+skein (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_aa42b9bccaca7fce82a32874a00404ad2}\label{hash-ops_8h_aa42b9bccaca7fce82a32874a00404ad2}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_permutation@{hash\_permutation}}
+\index{hash\_permutation@{hash\_permutation}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_permutation()}{hash\_permutation()}}
+{\footnotesize\ttfamily void hash\+\_\+permutation (\begin{DoxyParamCaption}\item[{union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a1d6f6be331e7750f56c17e6a43a2f949}\label{hash-ops_8h_a1d6f6be331e7750f56c17e6a43a2f949}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!hash\_process@{hash\_process}}
+\index{hash\_process@{hash\_process}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{hash\_process()}{hash\_process()}}
+{\footnotesize\ttfamily void hash\+\_\+process (\begin{DoxyParamCaption}\item[{union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} $\ast$}]{state,  }\item[{const uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a48d23c81ab4f64d3e37dd5b7652910b2}\label{hash-ops_8h_a48d23c81ab4f64d3e37dd5b7652910b2}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_reorg@{rx\_reorg}}
+\index{rx\_reorg@{rx\_reorg}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_reorg()}{rx\_reorg()}}
+{\footnotesize\ttfamily void rx\+\_\+reorg (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{split\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a4c47c124ff41e4f0eb699cd15f19e387}\label{hash-ops_8h_a4c47c124ff41e4f0eb699cd15f19e387}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_seedheight@{rx\_seedheight}}
+\index{rx\_seedheight@{rx\_seedheight}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_seedheight()}{rx\_seedheight()}}
+{\footnotesize\ttfamily uint64\+\_\+t rx\+\_\+seedheight (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a84854c19afab107beba668df64f387a9}\label{hash-ops_8h_a84854c19afab107beba668df64f387a9}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_seedheights@{rx\_seedheights}}
+\index{rx\_seedheights@{rx\_seedheights}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_seedheights()}{rx\_seedheights()}}
+{\footnotesize\ttfamily void rx\+\_\+seedheights (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{height,  }\item[{uint64\+\_\+t $\ast$}]{seed\+\_\+height,  }\item[{uint64\+\_\+t $\ast$}]{next\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_aa617c601c8baa0dfc65d2278d7d14349}\label{hash-ops_8h_aa617c601c8baa0dfc65d2278d7d14349}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_slow\_hash@{rx\_slow\_hash}}
+\index{rx\_slow\_hash@{rx\_slow\_hash}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash()}{rx\_slow\_hash()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{mainheight,  }\item[{const uint64\+\_\+t}]{seedheight,  }\item[{const unsigned char $\ast$}]{seedhash,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{miners,  }\item[{int}]{is\+\_\+alt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_a75f13a4ab2898791278e2a7a2b07e4d0}\label{hash-ops_8h_a75f13a4ab2898791278e2a7a2b07e4d0}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}}
+\index{rx\_slow\_hash\_allocate\_state@{rx\_slow\_hash\_allocate\_state}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_allocate\_state()}{rx\_slow\_hash\_allocate\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+allocate\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_abd361359b48326fbdc65dac3d7469f6a}\label{hash-ops_8h_abd361359b48326fbdc65dac3d7469f6a}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}}
+\index{rx\_slow\_hash\_free\_state@{rx\_slow\_hash\_free\_state}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{rx\_slow\_hash\_free\_state()}{rx\_slow\_hash\_free\_state()}}
+{\footnotesize\ttfamily void rx\+\_\+slow\+\_\+hash\+\_\+free\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{hash-ops_8h_afe239129d98ae6f9928ff0de171adfc9}\label{hash-ops_8h_afe239129d98ae6f9928ff0de171adfc9}} 
+\index{hash-\/ops.h@{hash-\/ops.h}!tree\_hash@{tree\_hash}}
+\index{tree\_hash@{tree\_hash}!hash-\/ops.h@{hash-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{tree\_hash()}{tree\_hash()}}
+{\footnotesize\ttfamily void tree\+\_\+hash (\begin{DoxyParamCaption}\item[{const unsigned char($\ast$)}]{hashes\mbox{[}\+H\+A\+S\+H\+\_\+\+S\+I\+Z\+E\mbox{]},  }\item[{size\+\_\+t}]{count,  }\item[{unsigned char $\ast$}]{root\+\_\+hash }\end{DoxyParamCaption})}
+

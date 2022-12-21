@@ -1,0 +1,294 @@
+\hypertarget{classcryptonote_1_1rpc_1_1http__server}{}\doxysection{cryptonote\+::rpc\+::http\+\_\+server Class Reference}
+\label{classcryptonote_1_1rpc_1_1http__server}\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+
+
+{\ttfamily \#include $<$http\+\_\+server.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::http\+\_\+server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classcryptonote_1_1rpc_1_1http__server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::http\+\_\+server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1rpc_1_1http__server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_abd02ea667af26af047c07c16a88e8317}{http\+\_\+server}} (\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \&server, \mbox{\hyperlink{structcryptonote_1_1rpc__args}{rpc\+\_\+args}} rpc\+\_\+config, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} restricted, std\+::vector$<$ std\+::tuple$<$ std\+::string, uint16\+\_\+t, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$$>$ bind)
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_aef45124a83c33b1b4d8ef81b9b0e2567}{$\sim$http\+\_\+server}} () override
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a50b1f377590f233e9799f88a1ffab499}{start}} ()
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a366db6dfc4ff62339bad37d2f4f6e095}{shutdown}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} join=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a728edcbed367cd3adda05e53a15a06e8}{init\+\_\+options}} (boost\+::program\+\_\+options\+::options\+\_\+description \&desc, boost\+::program\+\_\+options\+::options\+\_\+description \&hidden)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_ace8b45394f01c03a7a2aa39e8577e0b2}{arg\+\_\+rpc\+\_\+public}}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_ae6037da31e9d6aae4f5a0df326b4ccf1}{arg\+\_\+rpc\+\_\+admin}}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint16\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a5f824f14d69f704603d7067f7346ec24}{arg\+\_\+rpc\+\_\+bind\+\_\+port}}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint16\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a83299349e24d98974a7dc0e2adeb3779}{arg\+\_\+rpc\+\_\+restricted\+\_\+bind\+\_\+port}}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a769c25a9d50667825bb78978c1d0f50d}{arg\+\_\+restricted\+\_\+rpc}}
+\item 
+static const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_abc5007591c859b50c8e7c17fe409a151}{arg\+\_\+public\+\_\+node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_af1063bba81d0c155ba838464529bbd53}{create\+\_\+rpc\+\_\+endpoints}} (u\+W\+S\+::\+App \&http) override
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_ac438a107baeea3b33926ca9c87d18361}{handle\+\_\+base\+\_\+request}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res, \mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&req, const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} \&call)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a8ec17989207fe6cb3121cab0116848e6}{handle\+\_\+json\+\_\+rpc\+\_\+request}} (\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&res, \mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&req)
+\begin{DoxyCompactList}\small\item\em Handles a P\+O\+ST request to /json\+\_\+rpc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \& \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a079ecee2e423c6f6ecb4475e36570094}{m\+\_\+server}}
+\item 
+std\+::promise$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a2d2741e1da565087eb026144bdcd2161}{m\+\_\+startup\+\_\+promise}}
+\item 
+std\+::future$<$ std\+::vector$<$ us\+\_\+listen\+\_\+socket\+\_\+t $\ast$ $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a0a8e9a78a41a7e9551a55f296fe78387}{m\+\_\+startup\+\_\+success}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a68830e364dd2fc1659b7e3e7e72b7e7b}{m\+\_\+sent\+\_\+startup}} \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a97e37009ea924678f68b31835f58dfea}{m\+\_\+sent\+\_\+shutdown}} \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a00d316f132381ef800a0b0bbe504f7bd}{m\+\_\+restricted}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_abd02ea667af26af047c07c16a88e8317}\label{classcryptonote_1_1rpc_1_1http__server_abd02ea667af26af047c07c16a88e8317}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!http\_server@{http\_server}}
+\index{http\_server@{http\_server}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{http\_server()}{http\_server()}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::http\+\_\+server\+::http\+\_\+server (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}} \&}]{server,  }\item[{\mbox{\hyperlink{structcryptonote_1_1rpc__args}{rpc\+\_\+args}}}]{rpc\+\_\+config,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{restricted,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::string, uint16\+\_\+t, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$$>$}]{bind }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_aef45124a83c33b1b4d8ef81b9b0e2567}\label{classcryptonote_1_1rpc_1_1http__server_aef45124a83c33b1b4d8ef81b9b0e2567}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!````~http\_server@{$\sim$http\_server}}
+\index{````~http\_server@{$\sim$http\_server}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{$\sim$http\_server()}{~http\_server()}}
+{\footnotesize\ttfamily cryptonote\+::rpc\+::http\+\_\+server\+::$\sim$http\+\_\+server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_af1063bba81d0c155ba838464529bbd53}\label{classcryptonote_1_1rpc_1_1http__server_af1063bba81d0c155ba838464529bbd53}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!create\_rpc\_endpoints@{create\_rpc\_endpoints}}
+\index{create\_rpc\_endpoints@{create\_rpc\_endpoints}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{create\_rpc\_endpoints()}{create\_rpc\_endpoints()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::create\+\_\+rpc\+\_\+endpoints (\begin{DoxyParamCaption}\item[{u\+W\+S\+::\+App \&}]{http }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server__base_a5f0d79da820f8ac2459afe2bd2c28d75}{cryptonote\+::rpc\+::http\+\_\+server\+\_\+base}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_ac438a107baeea3b33926ca9c87d18361}\label{classcryptonote_1_1rpc_1_1http__server_ac438a107baeea3b33926ca9c87d18361}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!handle\_base\_request@{handle\_base\_request}}
+\index{handle\_base\_request@{handle\_base\_request}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{handle\_base\_request()}{handle\_base\_request()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::handle\+\_\+base\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res,  }\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&}]{req,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} \&}]{call }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Handles a request for a base url, e.\+g. /foo (but not /json\+\_\+rpc). {\ttfamily call} is the callback we\textquotesingle{}ve already mapped the request to; restricted commands have also already been rejected (unless the R\+PC is unrestricted). \mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a8ec17989207fe6cb3121cab0116848e6}\label{classcryptonote_1_1rpc_1_1http__server_a8ec17989207fe6cb3121cab0116848e6}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!handle\_json\_rpc\_request@{handle\_json\_rpc\_request}}
+\index{handle\_json\_rpc\_request@{handle\_json\_rpc\_request}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{handle\_json\_rpc\_request()}{handle\_json\_rpc\_request()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::handle\+\_\+json\+\_\+rpc\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a8ea74181af1690c49d22cdce14ff238e}{Http\+Response}} \&}]{res,  }\item[{\mbox{\hyperlink{namespacecryptonote_1_1rpc_a1ff559d257a7e8514fd66528d8f538e0}{Http\+Request}} \&}]{req }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles a P\+O\+ST request to /json\+\_\+rpc. 
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a728edcbed367cd3adda05e53a15a06e8}\label{classcryptonote_1_1rpc_1_1http__server_a728edcbed367cd3adda05e53a15a06e8}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!init\_options@{init\_options}}
+\index{init\_options@{init\_options}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{init\_options()}{init\_options()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::init\+\_\+options (\begin{DoxyParamCaption}\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{desc,  }\item[{boost\+::program\+\_\+options\+::options\+\_\+description \&}]{hidden }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a366db6dfc4ff62339bad37d2f4f6e095}\label{classcryptonote_1_1rpc_1_1http__server_a366db6dfc4ff62339bad37d2f4f6e095}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{join = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Closes the http server connection. Can safely be called multiple times, or to abort a startup if called before \mbox{\hyperlink{classcryptonote_1_1rpc_1_1http__server_a50b1f377590f233e9799f88a1ffab499}{start()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & -\/ if true, wait for the proxy thread to exit. If false then joining will occur during destruction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a50b1f377590f233e9799f88a1ffab499}\label{classcryptonote_1_1rpc_1_1http__server_a50b1f377590f233e9799f88a1ffab499}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!start@{start}}
+\index{start@{start}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::http\+\_\+server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts the event loop in the thread handling http requests. Core must have been initialized and Oxen\+MQ started. Will propagate an exception from the thread if startup fails. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_abc5007591c859b50c8e7c17fe409a151}\label{classcryptonote_1_1rpc_1_1http__server_abc5007591c859b50c8e7c17fe409a151}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_public\_node@{arg\_public\_node}}
+\index{arg\_public\_node@{arg\_public\_node}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_public\_node}{arg\_public\_node}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+public\+\_\+node\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"public-\/node"}}
+\DoxyCodeLine{    , \textcolor{stringliteral}{"Deprecated; use -\/-\/rpc-\/public option instead"}}
+\DoxyCodeLine{    , \textcolor{keyword}{false}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a769c25a9d50667825bb78978c1d0f50d}\label{classcryptonote_1_1rpc_1_1http__server_a769c25a9d50667825bb78978c1d0f50d}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_restricted\_rpc@{arg\_restricted\_rpc}}
+\index{arg\_restricted\_rpc@{arg\_restricted\_rpc}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_restricted\_rpc}{arg\_restricted\_rpc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+restricted\+\_\+rpc\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"restricted-\/rpc"}}
+\DoxyCodeLine{    , \textcolor{stringliteral}{"Deprecated, use -\/-\/rpc-\/public instead"}}
+\DoxyCodeLine{    , \textcolor{keyword}{false}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_ae6037da31e9d6aae4f5a0df326b4ccf1}\label{classcryptonote_1_1rpc_1_1http__server_ae6037da31e9d6aae4f5a0df326b4ccf1}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_rpc\_admin@{arg\_rpc\_admin}}
+\index{arg\_rpc\_admin@{arg\_rpc\_admin}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_rpc\_admin}{arg\_rpc\_admin}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+rpc\+\_\+admin\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"rpc-\/admin"},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Specifies an IP:PORT to listen on for admin (unrestricted) RPC requests; can be specified multiple times. Specify \(\backslash\)"none\(\backslash\)" to disable."},}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"127.0.0.1:"} + \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_a826d9e587c817318b41a3ddfa2f5bbac}{config::RPC\_DEFAULT\_PORT}}), \textcolor{stringliteral}{"[::1]:"} + \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(\mbox{\hyperlink{namespacecryptonote_1_1config_a826d9e587c817318b41a3ddfa2f5bbac}{config::RPC\_DEFAULT\_PORT}})\},}
+\DoxyCodeLine{    \{\{ \&\mbox{\hyperlink{namespacecryptonote_a6efc06bfd96ed447b2aff3b08c42b4d5}{cryptonote::arg\_testnet\_on}}, \&\mbox{\hyperlink{namespacecryptonote_adb4943fca61ebc24195f19b01806e3f5}{cryptonote::arg\_devnet\_on}} \}\},}
+\DoxyCodeLine{    [](std::array<bool, 2> testnet\_devnet, \textcolor{keywordtype}{bool} defaulted, std::vector<std::string> val) \{}
+\DoxyCodeLine{      \textcolor{keyword}{auto}\& [testnet, devnet] = testnet\_devnet;}
+\DoxyCodeLine{      \textcolor{keywordflow}{if} (defaulted \&\& (testnet || devnet)) \{}
+\DoxyCodeLine{        \textcolor{keyword}{auto} port = \mbox{\hyperlink{namespacecryptonote_a0c05f01d4767e2c1e25d9f7bbd910a47}{std::to\_string}}(testnet ? \mbox{\hyperlink{namespacecryptonote_1_1config_1_1testnet_a86c9fcd653d59a41baa92987ba3cd9c2}{config::testnet::RPC\_DEFAULT\_PORT}} : \mbox{\hyperlink{namespacecryptonote_1_1config_1_1devnet_aa61488e04f3575ce72a9c83bb50772d7}{config::devnet::RPC\_DEFAULT\_PORT}});}
+\DoxyCodeLine{        val = \{\textcolor{stringliteral}{"127.0.0.1:"} + port, \textcolor{stringliteral}{"[::1]:"} + port\};}
+\DoxyCodeLine{      \}}
+\DoxyCodeLine{      \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a5f824f14d69f704603d7067f7346ec24}\label{classcryptonote_1_1rpc_1_1http__server_a5f824f14d69f704603d7067f7346ec24}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_rpc\_bind\_port@{arg\_rpc\_bind\_port}}
+\index{arg\_rpc\_bind\_port@{arg\_rpc\_bind\_port}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_rpc\_bind\_port}{arg\_rpc\_bind\_port}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint16\+\_\+t $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+rpc\+\_\+bind\+\_\+port\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"rpc-\/bind-\/port"},}
+\DoxyCodeLine{      \textcolor{stringliteral}{"Port for RPC server; deprecated, use -\/-\/rpc-\/public or -\/-\/rpc-\/admin instead."},}
+\DoxyCodeLine{      0}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_ace8b45394f01c03a7a2aa39e8577e0b2}\label{classcryptonote_1_1rpc_1_1http__server_ace8b45394f01c03a7a2aa39e8577e0b2}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_rpc\_public@{arg\_rpc\_public}}
+\index{arg\_rpc\_public@{arg\_rpc\_public}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_rpc\_public}{arg\_rpc\_public}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+rpc\+\_\+public\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"rpc-\/public"},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"Specifies an IP:PORT to listen on for public (restricted) RPC requests; can be specified multiple times."}}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a83299349e24d98974a7dc0e2adeb3779}\label{classcryptonote_1_1rpc_1_1http__server_a83299349e24d98974a7dc0e2adeb3779}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!arg\_rpc\_restricted\_bind\_port@{arg\_rpc\_restricted\_bind\_port}}
+\index{arg\_rpc\_restricted\_bind\_port@{arg\_rpc\_restricted\_bind\_port}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{arg\_rpc\_restricted\_bind\_port}{arg\_rpc\_restricted\_bind\_port}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint16\+\_\+t $>$ cryptonote\+::rpc\+::http\+\_\+server\+::arg\+\_\+rpc\+\_\+restricted\+\_\+bind\+\_\+port\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \textcolor{stringliteral}{"rpc-\/restricted-\/bind-\/port"}}
+\DoxyCodeLine{    , \textcolor{stringliteral}{"Port for restricted RPC server; deprecated, use -\/-\/rpc-\/public instead"}}
+\DoxyCodeLine{    , 0}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a00d316f132381ef800a0b0bbe504f7bd}\label{classcryptonote_1_1rpc_1_1http__server_a00d316f132381ef800a0b0bbe504f7bd}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_restricted@{m\_restricted}}
+\index{m\_restricted@{m\_restricted}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_restricted}{m\_restricted}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+restricted\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a97e37009ea924678f68b31835f58dfea}\label{classcryptonote_1_1rpc_1_1http__server_a97e37009ea924678f68b31835f58dfea}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_sent\_shutdown@{m\_sent\_shutdown}}
+\index{m\_sent\_shutdown@{m\_sent\_shutdown}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_sent\_shutdown}{m\_sent\_shutdown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+sent\+\_\+shutdown \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a68830e364dd2fc1659b7e3e7e72b7e7b}\label{classcryptonote_1_1rpc_1_1http__server_a68830e364dd2fc1659b7e3e7e72b7e7b}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_sent\_startup@{m\_sent\_startup}}
+\index{m\_sent\_startup@{m\_sent\_startup}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_sent\_startup}{m\_sent\_startup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+sent\+\_\+startup \{\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a079ecee2e423c6f6ecb4475e36570094}\label{classcryptonote_1_1rpc_1_1http__server_a079ecee2e423c6f6ecb4475e36570094}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_server@{m\_server}}
+\index{m\_server@{m\_server}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_server}{m\_server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{core\+\_\+rpc\+\_\+server}}\& cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+server\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a2d2741e1da565087eb026144bdcd2161}\label{classcryptonote_1_1rpc_1_1http__server_a2d2741e1da565087eb026144bdcd2161}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_startup\_promise@{m\_startup\_promise}}
+\index{m\_startup\_promise@{m\_startup\_promise}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_startup\_promise}{m\_startup\_promise}}
+{\footnotesize\ttfamily std\+::promise$<$\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$>$ cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+startup\+\_\+promise\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1rpc_1_1http__server_a0a8e9a78a41a7e9551a55f296fe78387}\label{classcryptonote_1_1rpc_1_1http__server_a0a8e9a78a41a7e9551a55f296fe78387}} 
+\index{cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}!m\_startup\_success@{m\_startup\_success}}
+\index{m\_startup\_success@{m\_startup\_success}!cryptonote::rpc::http\_server@{cryptonote::rpc::http\_server}}
+\doxysubsubsection{\texorpdfstring{m\_startup\_success}{m\_startup\_success}}
+{\footnotesize\ttfamily std\+::future$<$std\+::vector$<$us\+\_\+listen\+\_\+socket\+\_\+t$\ast$$>$ $>$ cryptonote\+::rpc\+::http\+\_\+server\+::m\+\_\+startup\+\_\+success\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{http__server_8h}{http\+\_\+server.\+h}}\item 
+src/rpc/\mbox{\hyperlink{http__server_8cpp}{http\+\_\+server.\+cpp}}\end{DoxyCompactItemize}

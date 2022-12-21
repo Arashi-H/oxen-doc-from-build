@@ -1,0 +1,163 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+NS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS}\index{cryptonote::rpc::GET\_TRANSACTIONS@{cryptonote::rpc::GET\_TRANSACTIONS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+NS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+NS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a74f25e476fad09133e88fc0c141aeb7c}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a072fc10dc2e53f499bc04d325c76d4ab}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Look up one or more transactions by hash.
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} -- Generic R\+PC error code. \char`\"{}\+O\+K\char`\"{} is the success value.
+\item {\ttfamily missed\+\_\+tx} -- set of transaction hashes that were not found. If all were found then this field is omitted. There is no particular ordering of hashes in this list.
+\item {\ttfamily txs} -- list of transaction details; each element is a dict containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash} -- Transaction hash.
+\item {\ttfamily size} -- Size of the transaction, in bytes. Note that if the transaction has been pruned this is the post-\/pruning size, not the original size.
+\item {\ttfamily in\+\_\+pool} -- Will be set to true if the transaction is in the transaction pool ({\ttfamily true}) and omitted if mined into a block.
+\item {\ttfamily blink} -- True if this is an approved, blink transaction; this information is generally only available for approved in-\/pool transactions and txes in very recent blocks.
+\item {\ttfamily fee} -- the transaction fee (in atomic O\+X\+EN) incurred in this transaction (not including any burned amount).
+\item {\ttfamily burned} -- the amount of O\+X\+EN (in atomic units) burned by this transaction.
+\item {\ttfamily block\+\_\+height} -- Block height including the transaction. Omitted for tx pool transactions.
+\item {\ttfamily block\+\_\+timestamp} -- Unix time at which the block has been added to the blockchain. Omitted for tx pool transactions.
+\item {\ttfamily output\+\_\+indices} -- List of transaction indexes. Omitted for tx pool transactions.
+\item {\ttfamily relayed} -- For {\ttfamily in\+\_\+pool} transactions this field will be set to indicate whether the transaction has been relayed to the network.
+\item {\ttfamily double\+\_\+spend\+\_\+seen} -- Will be set to true for tx pool transactions that are double-\/spends (and thus cannot be added to the blockchain). Omitted for mined transactions.
+\item {\ttfamily received\+\_\+timestamp} -- Timestamp transaction was received in the pool. Omitted for mined blocks.
+\item {\ttfamily max\+\_\+used\+\_\+block} -- the hash of the highest block referenced by this transaction; only for mempool transactions.
+\item {\ttfamily max\+\_\+used\+\_\+height} -- the height of the highest block referenced by this transaction; only for mempool transactions.
+\item {\ttfamily last\+\_\+failed\+\_\+block} -- the hash of the last block where this transaction was attempted to be mined (but failed).
+\item {\ttfamily max\+\_\+used\+\_\+height} -- the height of the last block where this transaction failed to be acceptable for a block.
+\item {\ttfamily weight} -- the transaction \char`\"{}weight\char`\"{} which is the size of the transaction with padding removed. Only included for mempool transactions (for mined transactions the size and weight at the same and so only {\ttfamily size} is included).
+\item {\ttfamily kept\+\_\+by\+\_\+block} will be present and true if this is a mempool transaction that was added to the mempool after being popped off a block (e.\+g. because of a blockchain reorganization).
+\item {\ttfamily last\+\_\+relayed\+\_\+time} indicates the last time this block was relayed to the network; only for mempool transactions.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- set to true for mempool blocks that are marked \char`\"{}do not relay\char`\"{}
+\item {\ttfamily double\+\_\+spend\+\_\+seen} -- set to true if one or more outputs in this mempool transaction have already been spent (and thus the tx cannot currently be added to the blockchain).
+\item {\ttfamily data} -- Full, unpruned transaction data. For a json request this is hex-\/encoded; for a bt-\/encoded request this is raw bytes. This field is omitted if any of {\ttfamily decode\+\_\+as\+\_\+json}, {\ttfamily split}, or {\ttfamily prune} is requested; or if the transaction has been pruned in the database.
+\item {\ttfamily pruned} -- The non-\/prunable part of the transaction, encoded as hex (for json requests). Always included if {\ttfamily split} or {\ttfamily prune} are specified; without those options it will be included instead of {\ttfamily data} if the transaction has been pruned.
+\item {\ttfamily prunable} -- The prunable part of the transaction. Only included when {\ttfamily split} is specified, the transaction is prunable, and the tx has not been pruned from the database.
+\item {\ttfamily prunable\+\_\+hash} -- The hash of the prunable part of the transaction. Will be provided if either\+: the tx has been pruned; or the tx is prunable and either of {\ttfamily prune} or {\ttfamily split} are specified.
+\item {\ttfamily extra} -- Parsed \char`\"{}extra\char`\"{} transaction information; omitted unless specifically requested (via the {\ttfamily tx\+\_\+extra} request parameter). This is a dict containing one or more of the following keys.
+\begin{DoxyItemize}
+\item {\ttfamily pubkey} -- The tx extra public key
+\item {\ttfamily burn\+\_\+amount} -- The amount of O\+X\+EN that this transaction burns, if any.
+\item {\ttfamily extra\+\_\+nonce} -- Optional extra nonce value (in hex); will be empty if nonce is recognized as a payment id
+\item {\ttfamily payment\+\_\+id} -- The payment ID, if present. This is either a 16 hex character (8-\/byte) encrypted payment id, or a 64 hex character (32-\/byte) deprecated, unencrypted payment ID
+\item {\ttfamily mm\+\_\+depth} -- (Merge-\/mining) the merge-\/mined depth
+\item {\ttfamily mm\+\_\+root} -- (Merge-\/mining) the merge mining merkle root hash
+\item {\ttfamily additional\+\_\+pubkeys} -- Additional public keys
+\item {\ttfamily sn\+\_\+winner} -- Service node block reward winner public key
+\item {\ttfamily sn\+\_\+pubkey} -- Service node public key (e.\+g. for registrations, stakes, unlocks)
+\item {\ttfamily sn\+\_\+contributor} -- Service node contributor wallet address (for stakes)
+\item {\ttfamily tx\+\_\+secret\+\_\+key} -- The transaction secret key, included in registrations/stakes to decrypt transaction amounts and recipients
+\item {\ttfamily locked\+\_\+key\+\_\+images} -- Key image(s) locked by the transaction (for registrations, stakes)
+\item {\ttfamily key\+\_\+image\+\_\+unlock} -- A key image being unlocked in a stake unlock request (an unlock will be started for {\itshape all} key images locked in the same SN contributions).
+\item {\ttfamily sn\+\_\+registration} -- Service node registration details; this is a dict containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily fee} the operator fee expressed in millionths (i.\+e. 234567 == 23.\+4567\%)
+\item {\ttfamily expiry} the unix timestamp at which the registration signature expires
+\item {\ttfamily contributors\+:} dict of (wallet =$>$ portion) pairs indicating the staking portions reserved for the operator and any reserved contribution spots in the registration. Portion is expressed in millionths (i.\+e. 250000 = 25\% staking portion).
+\end{DoxyItemize}
+\item {\ttfamily sn\+\_\+state\+\_\+change} -- Information for a \char`\"{}state change\char`\"{} transaction such as a deregistration, decommission, recommission, or ip change reset transaction. This is a dict containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily old\+\_\+dereg} will be set to true if this is an \char`\"{}old\char`\"{} deregistration transaction (before the Loki 4 hardfork), omitted for more modern state change txes.
+\item {\ttfamily type} string indicating the state change type\+: \char`\"{}dereg\char`\"{}, \char`\"{}decomm\char`\"{}, \char`\"{}recomm\char`\"{}, or \char`\"{}ip\char`\"{} for a deregistration, decommission, recommission, or ip change penalty transaction.
+\item {\ttfamily height} the voting block height for the changing service node and voting service nodes that produced this state change transaction.
+\item {\ttfamily index} the position of the affected node in the random list of tested nodes for this {\ttfamily height}.
+\item {\ttfamily voters} the positions of validators in the testing quorum for this {\ttfamily height} who tested and voted for this state change. This typically contains the first 7 voters who voted for the state change (out of a possible set of 10).
+\item {\ttfamily reasons} list of reported reasons for a decommission or deregistration as reported by the voting quorum. This contains any reasons that all 7+ voters agreed on, and contains one or more of\+:
+\begin{DoxyItemize}
+\item {\ttfamily \char`\"{}uptime\char`\"{}} -- the service node was missing uptime proofs
+\item {\ttfamily \char`\"{}checkpoints\char`\"{}} -- the service node missed too many recent checkpoint votes
+\item {\ttfamily \char`\"{}pulse\char`\"{}} -- the service node missed too many recent pulse votes
+\item {\ttfamily \char`\"{}storage\char`\"{}} -- the service node\textquotesingle{}s storage server was unreachable for too long
+\item {\ttfamily \char`\"{}lokinet\char`\"{}} -- the service node\textquotesingle{}s lokinet router was unreachable for too long
+\item {\ttfamily \char`\"{}timecheck\char`\"{}} -- the service node\textquotesingle{}s oxend was not reachable for too many recent time synchronization checks. (This generally means oxend\textquotesingle{}s quorumnet port is not reachable).
+\item {\ttfamily \char`\"{}timesync\char`\"{}} -- the service node\textquotesingle{}s clock was too far out of sync The list is omitted entirely if there are no reasons at all or if there are no reasons that were agreed upon by all voting service nodes.
+\end{DoxyItemize}
+\item {\ttfamily reasons\+\_\+maybe} list of reported reasons that some but not all service nodes provided for the deregistration/decommission. Possible values are identical to the above. This list is omitted entirely if it would be empty (i.\+e. there are no reasons at all, or all voting service nodes agreed on all given reasons).
+\end{DoxyItemize}
+\item {\ttfamily ons} -- O\+NS registration or update transaction details. This contains keys\+:
+\begin{DoxyItemize}
+\item {\ttfamily buy} -- set to true if this is an O\+NS buy record; omitted otherwise.
+\item {\ttfamily update} -- set to true if this is an O\+NS record update; omitted otherwise.
+\item {\ttfamily renew} -- set to true if this is an O\+NS renewal; omitted otherwise.
+\item {\ttfamily type} -- the O\+NS request type string. For registrations\+: \char`\"{}lokinet\char`\"{}, \char`\"{}session\char`\"{}, \char`\"{}wallet\char`\"{}; for a record update\+: \char`\"{}update\char`\"{}.
+\item {\ttfamily blocks} -- The registration length in blocks; omitted for registrations (such as Session/\+Wallets) that do not expire.
+\item {\ttfamily name\+\_\+hash} -- The hashed name of the record being purchased/updated. Encoded in hex for json requests. Note that the actual name is not provided on the blockchain.
+\item {\ttfamily prev\+\_\+txid} -- For an update this field is set to the txid of the previous O\+NS update or registration (i.\+e. the most recent transaction that this record is updating).
+\item {\ttfamily value} -- The encrypted value of the record (in hex for json requests) being set/updated. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1ONS__RESOLVE}{O\+N\+S\+\_\+\+R\+E\+S\+O\+L\+VE}} \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} details on encryption/decryption.
+\end{DoxySeeAlso}
+
+\item {\ttfamily owner} -- the owner of this record being set in a registration or update; this can be a primary wallet address, wallet subaddress, or a plain public key.
+\item {\ttfamily backup\+\_\+owner} -- an optional backup owner who also has permission to edit the record.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\ttfamily stake\+\_\+amount} -- Set to the calculated transaction stake amount (only applicable if the transaction is a service node registration or stake).
+\end{DoxyItemize}
+\item {\ttfamily mempool\+\_\+key\+\_\+images} -- dict of spent key images of mempool transactions. Only included when {\ttfamily memory\+\_\+pool} is set to true. Each key is the key image (in hex, for json requests) and each value is a list of transaction hashes that spend that key image (typically just one, but in the case of conflicting transactions there can be multiple). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a74f25e476fad09133e88fc0c141aeb7c}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a74f25e476fad09133e88fc0c141aeb7c}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS@{cryptonote::rpc::GET\_TRANSACTIONS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_TRANSACTIONS@{cryptonote::rpc::GET\_TRANSACTIONS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a072fc10dc2e53f499bc04d325c76d4ab}\label{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_a072fc10dc2e53f499bc04d325c76d4ab}} 
+\index{cryptonote::rpc::GET\_TRANSACTIONS@{cryptonote::rpc::GET\_TRANSACTIONS}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_TRANSACTIONS@{cryptonote::rpc::GET\_TRANSACTIONS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__TRANSACTIONS_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

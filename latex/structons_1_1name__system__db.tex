@@ -1,0 +1,352 @@
+\hypertarget{structons_1_1name__system__db}{}\doxysection{ons\+::name\+\_\+system\+\_\+db Struct Reference}
+\label{structons_1_1name__system__db}\index{ons::name\_system\_db@{ons::name\_system\_db}}
+
+
+{\ttfamily \#include $<$oxen\+\_\+name\+\_\+system.\+h$>$}
+
+
+
+Collaboration diagram for ons\+::name\+\_\+system\+\_\+db\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{structons_1_1name__system__db__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_aeb4ece2927321ff93ce6cf921ab95abb}{init}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const $\ast$blockchain, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{structons_1_1name__system__db_a4bd4a24f8e7603ebd28b1b01630fdce3}{nettype}}, sqlite3 $\ast$\mbox{\hyperlink{structons_1_1name__system__db_af8150b76acb876aeb55c02261c9d3af8}{db}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_a32b43227e6fd8dae53751523981cd1cd}{add\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&block, const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&txs)
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{structons_1_1name__system__db_a496f0c1089fe0e52831c966291a95efa}{network\+\_\+type}} () const
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structons_1_1name__system__db_a64bf7a2e6fe254e473f1efffff480d22}{height}} () const
+\item 
+void \mbox{\hyperlink{structons_1_1name__system__db_aed17a6fa320a4f295287fe6a7ef06913}{block\+\_\+detach}} (\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&blockchain, uint64\+\_\+t new\+\_\+blockchain\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_a94ac66f031e5bc2074caffc361b43f8a}{save\+\_\+owner}} (\mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} const \&owner, int64\+\_\+t $\ast$row\+\_\+id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_aad09a96deab9a372de8eb32d1d43218a}{save\+\_\+mapping}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&tx\+\_\+hash, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&src, uint64\+\_\+t \mbox{\hyperlink{structons_1_1name__system__db_a64bf7a2e6fe254e473f1efffff480d22}{height}}, std\+::optional$<$ uint64\+\_\+t $>$ expiration\+\_\+height, int64\+\_\+t owner\+\_\+id, std\+::optional$<$ int64\+\_\+t $>$ backup\+\_\+owner\+\_\+id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_a07fd6960fd4a9e429a1df0765e54a85c}{save\+\_\+settings}} (uint64\+\_\+t top\+\_\+height, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&top\+\_\+hash, int version)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_aea9c381d4915b176b02d43b68af4376c}{prune\+\_\+db}} (uint64\+\_\+t \mbox{\hyperlink{structons_1_1name__system__db_a64bf7a2e6fe254e473f1efffff480d22}{height}})
+\item 
+\mbox{\hyperlink{structons_1_1owner__record}{owner\+\_\+record}} \mbox{\hyperlink{structons_1_1name__system__db_a767216f06585c123ab7bbb71518210f6}{get\+\_\+owner\+\_\+by\+\_\+key}} (\mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} const \&owner)
+\item 
+\mbox{\hyperlink{structons_1_1owner__record}{owner\+\_\+record}} \mbox{\hyperlink{structons_1_1name__system__db_aac30024152f71c9a59d0af813ed83715}{get\+\_\+owner\+\_\+by\+\_\+id}} (int64\+\_\+t owner\+\_\+id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_a66b380db0bc98d06a789c11c1a82ca6d}{get\+\_\+wallet\+\_\+mapping}} (std\+::string str, uint64\+\_\+t blockchain\+\_\+height, \mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} \&addr\+\_\+info)
+\item 
+\mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} \mbox{\hyperlink{structons_1_1name__system__db_a6d3536643e4f6fc9ca68ef04b01b245f}{get\+\_\+mapping}} (\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type, std\+::string\+\_\+view name\+\_\+base64\+\_\+hash, std\+::optional$<$ uint64\+\_\+t $>$ blockchain\+\_\+height=std\+::nullopt)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ \mbox{\hyperlink{structons_1_1name__system__db_a3521e851e3951b20fb2ca7e68ef3cb93}{get\+\_\+mappings}} (std\+::vector$<$ \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} $>$ const \&types, std\+::string\+\_\+view name\+\_\+base64\+\_\+hash, std\+::optional$<$ uint64\+\_\+t $>$ blockchain\+\_\+height=std\+::nullopt)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ \mbox{\hyperlink{structons_1_1name__system__db_a72fe49afff25485b9b83eef2dd0b87af}{get\+\_\+mappings\+\_\+by\+\_\+owner}} (\mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} const \&key, std\+::optional$<$ uint64\+\_\+t $>$ blockchain\+\_\+height=std\+::nullopt)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ \mbox{\hyperlink{structons_1_1name__system__db_a5c3e2abd0f79f12bf0ef76874ce077d6}{get\+\_\+mappings\+\_\+by\+\_\+owners}} (std\+::vector$<$ \mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} $>$ const \&keys, std\+::optional$<$ uint64\+\_\+t $>$ blockchain\+\_\+height=std\+::nullopt)
+\item 
+\mbox{\hyperlink{structons_1_1settings__record}{settings\+\_\+record}} \mbox{\hyperlink{structons_1_1name__system__db_a2c7e5ec49e8e12f63a662993fb83a7ad}{get\+\_\+settings}} ()
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}, int $>$ \mbox{\hyperlink{structons_1_1name__system__db_a8e78c8b168ed06a26891b67eac90e247}{get\+\_\+mapping\+\_\+counts}} (uint64\+\_\+t blockchain\+\_\+height)
+\item 
+std\+::optional$<$ \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $>$ \mbox{\hyperlink{structons_1_1name__system__db_a5ed5d5c7d4aa194b5f37de803703934c}{resolve}} (\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} type, std\+::string\+\_\+view name\+\_\+hash\+\_\+b64, uint64\+\_\+t blockchain\+\_\+height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_a0fa44b6bb4dbcdf93dfd80c96bfb9c88}{validate\+\_\+ons\+\_\+tx}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, uint64\+\_\+t blockchain\+\_\+height, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const \&tx, \mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} \&entry, std\+::string $\ast$reason)
+\item 
+\mbox{\hyperlink{structons_1_1name__system__db_afc357f6c5c26d48b2ba8895f733b37b8}{$\sim$name\+\_\+system\+\_\+db}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 $\ast$ \mbox{\hyperlink{structons_1_1name__system__db_af8150b76acb876aeb55c02261c9d3af8}{db}} = nullptr
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structons_1_1name__system__db_ac3c73914961ece3927be29a9ca421369}{transaction\+\_\+begun}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} \mbox{\hyperlink{structons_1_1name__system__db_a4bd4a24f8e7603ebd28b1b01630fdce3}{nettype}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structons_1_1name__system__db_a49fb0336d981f4cb1ae2ee1c7db3262a}{last\+\_\+processed\+\_\+height}} = 0
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{structons_1_1name__system__db_a380f655a4e5b686fbe68a1468f205dd0}{last\+\_\+processed\+\_\+hash}} \{\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_ab1062e900ddf738d3f3d408a2a401820}{save\+\_\+owner\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_aaba76d0d7d3bba59f55af1a994eb445d}{save\+\_\+mapping\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_afe1d03bac08709ca7a92b6866607aacd}{save\+\_\+settings\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a6589d342f5c36a00e3b09cc3ddba0b99}{get\+\_\+owner\+\_\+by\+\_\+key\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a132297836b45d157d5e02943bea2d704}{get\+\_\+owner\+\_\+by\+\_\+id\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a99211a8d3c3c2da6d4e773a3c67740d4}{get\+\_\+mapping\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a539bb55985ade25f049c6e0bc26606a9}{resolve\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_ac6fc0893c52f5ce7d5871ef462686bd7}{get\+\_\+settings\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_af593a991a08b95f92854d952e1086902}{prune\+\_\+mappings\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a83091775badafbcf0c259268b22e3782}{prune\+\_\+owners\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_ab2e844d3d391578f831565e0e6ef0482}{get\+\_\+mappings\+\_\+by\+\_\+owner\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a5eb0b79786b37e66be5e011aecd3f5ac}{get\+\_\+mapping\+\_\+counts\+\_\+sql}} \{$\ast$this\}
+\item 
+\mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} \mbox{\hyperlink{structons_1_1name__system__db_a4a2466236fad82579af8aba39312ce63}{get\+\_\+mappings\+\_\+on\+\_\+height\+\_\+and\+\_\+newer\+\_\+sql}} \{$\ast$this\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structons_1_1name__system__db_afc357f6c5c26d48b2ba8895f733b37b8}\label{structons_1_1name__system__db_afc357f6c5c26d48b2ba8895f733b37b8}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!````~name\_system\_db@{$\sim$name\_system\_db}}
+\index{````~name\_system\_db@{$\sim$name\_system\_db}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{$\sim$name\_system\_db()}{~name\_system\_db()}}
+{\footnotesize\ttfamily ons\+::name\+\_\+system\+\_\+db\+::$\sim$name\+\_\+system\+\_\+db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structons_1_1name__system__db_a32b43227e6fd8dae53751523981cd1cd}\label{structons_1_1name__system__db_a32b43227e6fd8dae53751523981cd1cd}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!add\_block@{add\_block}}
+\index{add\_block@{add\_block}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{add\_block()}{add\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::add\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{block,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \&}]{txs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aed17a6fa320a4f295287fe6a7ef06913}\label{structons_1_1name__system__db_aed17a6fa320a4f295287fe6a7ef06913}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!block\_detach@{block\_detach}}
+\index{block\_detach@{block\_detach}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{block\_detach()}{block\_detach()}}
+{\footnotesize\ttfamily void ons\+::name\+\_\+system\+\_\+db\+::block\+\_\+detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const \&}]{blockchain,  }\item[{uint64\+\_\+t}]{new\+\_\+blockchain\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a6d3536643e4f6fc9ca68ef04b01b245f}\label{structons_1_1name__system__db_a6d3536643e4f6fc9ca68ef04b01b245f}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mapping@{get\_mapping}}
+\index{get\_mapping@{get\_mapping}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mapping()}{get\_mapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type,  }\item[{std\+::string\+\_\+view}]{name\+\_\+base64\+\_\+hash,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{blockchain\+\_\+height = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a8e78c8b168ed06a26891b67eac90e247}\label{structons_1_1name__system__db_a8e78c8b168ed06a26891b67eac90e247}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mapping\_counts@{get\_mapping\_counts}}
+\index{get\_mapping\_counts@{get\_mapping\_counts}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mapping\_counts()}{get\_mapping\_counts()}}
+{\footnotesize\ttfamily std\+::map$<$ \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}, int $>$ ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mapping\+\_\+counts (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{blockchain\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a3521e851e3951b20fb2ca7e68ef3cb93}\label{structons_1_1name__system__db_a3521e851e3951b20fb2ca7e68ef3cb93}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mappings@{get\_mappings}}
+\index{get\_mappings@{get\_mappings}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mappings()}{get\_mappings()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mappings (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}} $>$ const \&}]{types,  }\item[{std\+::string\+\_\+view}]{name\+\_\+base64\+\_\+hash,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{blockchain\+\_\+height = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a72fe49afff25485b9b83eef2dd0b87af}\label{structons_1_1name__system__db_a72fe49afff25485b9b83eef2dd0b87af}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mappings\_by\_owner@{get\_mappings\_by\_owner}}
+\index{get\_mappings\_by\_owner@{get\_mappings\_by\_owner}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mappings\_by\_owner()}{get\_mappings\_by\_owner()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mappings\+\_\+by\+\_\+owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} const \&}]{key,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{blockchain\+\_\+height = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a5c3e2abd0f79f12bf0ef76874ce077d6}\label{structons_1_1name__system__db_a5c3e2abd0f79f12bf0ef76874ce077d6}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mappings\_by\_owners@{get\_mappings\_by\_owners}}
+\index{get\_mappings\_by\_owners@{get\_mappings\_by\_owners}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mappings\_by\_owners()}{get\_mappings\_by\_owners()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{structons_1_1mapping__record}{mapping\+\_\+record}} $>$ ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mappings\+\_\+by\+\_\+owners (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{structons_1_1generic__owner}{generic\+\_\+owner}} $>$ const \&}]{keys,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{blockchain\+\_\+height = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aac30024152f71c9a59d0af813ed83715}\label{structons_1_1name__system__db_aac30024152f71c9a59d0af813ed83715}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_owner\_by\_id@{get\_owner\_by\_id}}
+\index{get\_owner\_by\_id@{get\_owner\_by\_id}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_owner\_by\_id()}{get\_owner\_by\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1owner__record}{owner\+\_\+record}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+owner\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{owner\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a767216f06585c123ab7bbb71518210f6}\label{structons_1_1name__system__db_a767216f06585c123ab7bbb71518210f6}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_owner\_by\_key@{get\_owner\_by\_key}}
+\index{get\_owner\_by\_key@{get\_owner\_by\_key}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_owner\_by\_key()}{get\_owner\_by\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1owner__record}{owner\+\_\+record}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+owner\+\_\+by\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&}]{owner }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a2c7e5ec49e8e12f63a662993fb83a7ad}\label{structons_1_1name__system__db_a2c7e5ec49e8e12f63a662993fb83a7ad}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_settings@{get\_settings}}
+\index{get\_settings@{get\_settings}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_settings()}{get\_settings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structons_1_1settings__record}{settings\+\_\+record}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a66b380db0bc98d06a789c11c1a82ca6d}\label{structons_1_1name__system__db_a66b380db0bc98d06a789c11c1a82ca6d}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_wallet\_mapping@{get\_wallet\_mapping}}
+\index{get\_wallet\_mapping@{get\_wallet\_mapping}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_wallet\_mapping()}{get\_wallet\_mapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+wallet\+\_\+mapping (\begin{DoxyParamCaption}\item[{std\+::string}]{str,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{\mbox{\hyperlink{structcryptonote_1_1address__parse__info}{cryptonote\+::address\+\_\+parse\+\_\+info}} \&}]{addr\+\_\+info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a64bf7a2e6fe254e473f1efffff480d22}\label{structons_1_1name__system__db_a64bf7a2e6fe254e473f1efffff480d22}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!height@{height}}
+\index{height@{height}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily uint64\+\_\+t ons\+::name\+\_\+system\+\_\+db\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aeb4ece2927321ff93ce6cf921ab95abb}\label{structons_1_1name__system__db_aeb4ece2927321ff93ce6cf921ab95abb}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!init@{init}}
+\index{init@{init}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} const $\ast$}]{blockchain,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{nettype,  }\item[{sqlite3 $\ast$}]{db }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a496f0c1089fe0e52831c966291a95efa}\label{structons_1_1name__system__db_a496f0c1089fe0e52831c966291a95efa}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!network\_type@{network\_type}}
+\index{network\_type@{network\_type}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{network\_type()}{network\_type()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} ons\+::name\+\_\+system\+\_\+db\+::network\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aea9c381d4915b176b02d43b68af4376c}\label{structons_1_1name__system__db_aea9c381d4915b176b02d43b68af4376c}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!prune\_db@{prune\_db}}
+\index{prune\_db@{prune\_db}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{prune\_db()}{prune\_db()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::prune\+\_\+db (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a5ed5d5c7d4aa194b5f37de803703934c}\label{structons_1_1name__system__db_a5ed5d5c7d4aa194b5f37de803703934c}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!resolve@{resolve}}
+\index{resolve@{resolve}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{structons_1_1mapping__value}{mapping\+\_\+value}} $>$ ons\+::name\+\_\+system\+\_\+db\+::resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceons_a989f87ee353ac9602436d32d83698b93}{mapping\+\_\+type}}}]{type,  }\item[{std\+::string\+\_\+view}]{name\+\_\+hash\+\_\+b64,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aad09a96deab9a372de8eb32d1d43218a}\label{structons_1_1name__system__db_aad09a96deab9a372de8eb32d1d43218a}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_mapping@{save\_mapping}}
+\index{save\_mapping@{save\_mapping}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_mapping()}{save\_mapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{tx\+\_\+hash,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} const \&}]{src,  }\item[{uint64\+\_\+t}]{height,  }\item[{std\+::optional$<$ uint64\+\_\+t $>$}]{expiration\+\_\+height,  }\item[{int64\+\_\+t}]{owner\+\_\+id,  }\item[{std\+::optional$<$ int64\+\_\+t $>$}]{backup\+\_\+owner\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a94ac66f031e5bc2074caffc361b43f8a}\label{structons_1_1name__system__db_a94ac66f031e5bc2074caffc361b43f8a}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_owner@{save\_owner}}
+\index{save\_owner@{save\_owner}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_owner()}{save\_owner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+owner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structons_1_1generic__owner}{ons\+::generic\+\_\+owner}} const \&}]{owner,  }\item[{int64\+\_\+t $\ast$}]{row\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a07fd6960fd4a9e429a1df0765e54a85c}\label{structons_1_1name__system__db_a07fd6960fd4a9e429a1df0765e54a85c}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_settings@{save\_settings}}
+\index{save\_settings@{save\_settings}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_settings()}{save\_settings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+settings (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{top\+\_\+height,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&}]{top\+\_\+hash,  }\item[{int}]{version }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a0fa44b6bb4dbcdf93dfd80c96bfb9c88}\label{structons_1_1name__system__db_a0fa44b6bb4dbcdf93dfd80c96bfb9c88}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!validate\_ons\_tx@{validate\_ons\_tx}}
+\index{validate\_ons\_tx@{validate\_ons\_tx}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{validate\_ons\_tx()}{validate\_ons\_tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::validate\+\_\+ons\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}}}]{hf\+\_\+version,  }\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} const \&}]{tx,  }\item[{\mbox{\hyperlink{structcryptonote_1_1tx__extra__oxen__name__system}{cryptonote\+::tx\+\_\+extra\+\_\+oxen\+\_\+name\+\_\+system}} \&}]{entry,  }\item[{std\+::string $\ast$}]{reason }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structons_1_1name__system__db_af8150b76acb876aeb55c02261c9d3af8}\label{structons_1_1name__system__db_af8150b76acb876aeb55c02261c9d3af8}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!db@{db}}
+\index{db@{db}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily sqlite3$\ast$ ons\+::name\+\_\+system\+\_\+db\+::db = nullptr}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a5eb0b79786b37e66be5e011aecd3f5ac}\label{structons_1_1name__system__db_a5eb0b79786b37e66be5e011aecd3f5ac}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mapping\_counts\_sql@{get\_mapping\_counts\_sql}}
+\index{get\_mapping\_counts\_sql@{get\_mapping\_counts\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mapping\_counts\_sql}{get\_mapping\_counts\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mapping\+\_\+counts\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a99211a8d3c3c2da6d4e773a3c67740d4}\label{structons_1_1name__system__db_a99211a8d3c3c2da6d4e773a3c67740d4}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mapping\_sql@{get\_mapping\_sql}}
+\index{get\_mapping\_sql@{get\_mapping\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mapping\_sql}{get\_mapping\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mapping\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_ab2e844d3d391578f831565e0e6ef0482}\label{structons_1_1name__system__db_ab2e844d3d391578f831565e0e6ef0482}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mappings\_by\_owner\_sql@{get\_mappings\_by\_owner\_sql}}
+\index{get\_mappings\_by\_owner\_sql@{get\_mappings\_by\_owner\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mappings\_by\_owner\_sql}{get\_mappings\_by\_owner\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mappings\+\_\+by\+\_\+owner\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a4a2466236fad82579af8aba39312ce63}\label{structons_1_1name__system__db_a4a2466236fad82579af8aba39312ce63}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_mappings\_on\_height\_and\_newer\_sql@{get\_mappings\_on\_height\_and\_newer\_sql}}
+\index{get\_mappings\_on\_height\_and\_newer\_sql@{get\_mappings\_on\_height\_and\_newer\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_mappings\_on\_height\_and\_newer\_sql}{get\_mappings\_on\_height\_and\_newer\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+mappings\+\_\+on\+\_\+height\+\_\+and\+\_\+newer\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a132297836b45d157d5e02943bea2d704}\label{structons_1_1name__system__db_a132297836b45d157d5e02943bea2d704}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_owner\_by\_id\_sql@{get\_owner\_by\_id\_sql}}
+\index{get\_owner\_by\_id\_sql@{get\_owner\_by\_id\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_owner\_by\_id\_sql}{get\_owner\_by\_id\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+owner\+\_\+by\+\_\+id\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a6589d342f5c36a00e3b09cc3ddba0b99}\label{structons_1_1name__system__db_a6589d342f5c36a00e3b09cc3ddba0b99}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_owner\_by\_key\_sql@{get\_owner\_by\_key\_sql}}
+\index{get\_owner\_by\_key\_sql@{get\_owner\_by\_key\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_owner\_by\_key\_sql}{get\_owner\_by\_key\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+owner\+\_\+by\+\_\+key\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_ac6fc0893c52f5ce7d5871ef462686bd7}\label{structons_1_1name__system__db_ac6fc0893c52f5ce7d5871ef462686bd7}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!get\_settings\_sql@{get\_settings\_sql}}
+\index{get\_settings\_sql@{get\_settings\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{get\_settings\_sql}{get\_settings\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::get\+\_\+settings\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a380f655a4e5b686fbe68a1468f205dd0}\label{structons_1_1name__system__db_a380f655a4e5b686fbe68a1468f205dd0}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!last\_processed\_hash@{last\_processed\_hash}}
+\index{last\_processed\_hash@{last\_processed\_hash}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{last\_processed\_hash}{last\_processed\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} ons\+::name\+\_\+system\+\_\+db\+::last\+\_\+processed\+\_\+hash \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a49fb0336d981f4cb1ae2ee1c7db3262a}\label{structons_1_1name__system__db_a49fb0336d981f4cb1ae2ee1c7db3262a}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!last\_processed\_height@{last\_processed\_height}}
+\index{last\_processed\_height@{last\_processed\_height}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{last\_processed\_height}{last\_processed\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t ons\+::name\+\_\+system\+\_\+db\+::last\+\_\+processed\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a4bd4a24f8e7603ebd28b1b01630fdce3}\label{structons_1_1name__system__db_a4bd4a24f8e7603ebd28b1b01630fdce3}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!nettype@{nettype}}
+\index{nettype@{nettype}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{nettype}{nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} ons\+::name\+\_\+system\+\_\+db\+::nettype\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_af593a991a08b95f92854d952e1086902}\label{structons_1_1name__system__db_af593a991a08b95f92854d952e1086902}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!prune\_mappings\_sql@{prune\_mappings\_sql}}
+\index{prune\_mappings\_sql@{prune\_mappings\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{prune\_mappings\_sql}{prune\_mappings\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::prune\+\_\+mappings\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a83091775badafbcf0c259268b22e3782}\label{structons_1_1name__system__db_a83091775badafbcf0c259268b22e3782}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!prune\_owners\_sql@{prune\_owners\_sql}}
+\index{prune\_owners\_sql@{prune\_owners\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{prune\_owners\_sql}{prune\_owners\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::prune\+\_\+owners\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_a539bb55985ade25f049c6e0bc26606a9}\label{structons_1_1name__system__db_a539bb55985ade25f049c6e0bc26606a9}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!resolve\_sql@{resolve\_sql}}
+\index{resolve\_sql@{resolve\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{resolve\_sql}{resolve\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::resolve\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_aaba76d0d7d3bba59f55af1a994eb445d}\label{structons_1_1name__system__db_aaba76d0d7d3bba59f55af1a994eb445d}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_mapping\_sql@{save\_mapping\_sql}}
+\index{save\_mapping\_sql@{save\_mapping\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_mapping\_sql}{save\_mapping\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+mapping\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_ab1062e900ddf738d3f3d408a2a401820}\label{structons_1_1name__system__db_ab1062e900ddf738d3f3d408a2a401820}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_owner\_sql@{save\_owner\_sql}}
+\index{save\_owner\_sql@{save\_owner\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_owner\_sql}{save\_owner\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+owner\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_afe1d03bac08709ca7a92b6866607aacd}\label{structons_1_1name__system__db_afe1d03bac08709ca7a92b6866607aacd}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!save\_settings\_sql@{save\_settings\_sql}}
+\index{save\_settings\_sql@{save\_settings\_sql}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{save\_settings\_sql}{save\_settings\_sql}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classons_1_1sql__compiled__statement}{sql\+\_\+compiled\+\_\+statement}} ons\+::name\+\_\+system\+\_\+db\+::save\+\_\+settings\+\_\+sql \{$\ast$this\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structons_1_1name__system__db_ac3c73914961ece3927be29a9ca421369}\label{structons_1_1name__system__db_ac3c73914961ece3927be29a9ca421369}} 
+\index{ons::name\_system\_db@{ons::name\_system\_db}!transaction\_begun@{transaction\_begun}}
+\index{transaction\_begun@{transaction\_begun}!ons::name\_system\_db@{ons::name\_system\_db}}
+\doxysubsubsection{\texorpdfstring{transaction\_begun}{transaction\_begun}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} ons\+::name\+\_\+system\+\_\+db\+::transaction\+\_\+begun = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8h}{oxen\+\_\+name\+\_\+system.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{oxen__name__system_8cpp}{oxen\+\_\+name\+\_\+system.\+cpp}}\end{DoxyCompactItemize}

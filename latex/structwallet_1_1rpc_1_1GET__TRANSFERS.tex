@@ -1,0 +1,113 @@
+\hypertarget{structwallet_1_1rpc_1_1GET__TRANSFERS}{}\doxysection{wallet\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS Struct Reference}
+\label{structwallet_1_1rpc_1_1GET__TRANSFERS}\index{wallet::rpc::GET\_TRANSFERS@{wallet::rpc::GET\_TRANSFERS}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1GET__TRANSFERS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+RS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1GET__TRANSFERS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__TRANSFERS_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__TRANSFERS_adfe0834fb01a5432d2a7ac7f88e3f212}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__TRANSFERS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__TRANSFERS_a1531f5b53760f2efb75cba2fce39a2df}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Returns a list of transfers, by default all transfer types are included. If all requested type fields are false, then all transfers will be queried.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily in} -- (Optional) Include incoming transfers.
+\item {\ttfamily out} -- (Optional) Include outgoing transfers.
+\item {\ttfamily stake} -- (Optional) Include outgoing stakes.
+\item {\ttfamily pending} -- (Optional) Include pending transfers.
+\item {\ttfamily failed} -- (Optional) Include failed transfers.
+\item {\ttfamily pool} -- (Optional) Include transfers from the daemon\textquotesingle{}s transaction pool.
+\item {\ttfamily coinbase} -- (Optional) Include transfers from the daemon\textquotesingle{}s transaction pool.
+\item {\ttfamily filter\+\_\+by\+\_\+height} -- (Optional) Filter transfers by block height.
+\item {\ttfamily min\+\_\+height} -- (Optional) Minimum block height to scan for transfers, if filtering by height is enabled.
+\item {\ttfamily max\+\_\+height} -- (Optional) Maximum block height to scan for transfers, if filtering by height is enabled (defaults to max block height).
+\item {\ttfamily account\+\_\+index} -- (Optional) Index of the account to query for transfers. (defaults to 0)
+\item {\ttfamily subaddr\+\_\+indices} -- (Optional) List of subaddress indices to query for transfers. (defaults to 0)
+\item {\ttfamily all\+\_\+accounts} -- If true, return transfers for all accounts, subaddr\+\_\+indices and account\+\_\+index are ignored
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily in} --
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1transfer__view}{transfer\+\_\+view}}
+\end{DoxyItemize}
+\item {\ttfamily out} --
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1transfer__view}{transfer\+\_\+view}}
+\end{DoxyItemize}
+\item {\ttfamily pending} --
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1transfer__view}{transfer\+\_\+view}}
+\end{DoxyItemize}
+\item {\ttfamily failed} --
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1transfer__view}{transfer\+\_\+view}}
+\end{DoxyItemize}
+\item {\ttfamily pool} --
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1transfer__view}{transfer\+\_\+view}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__TRANSFERS_adfe0834fb01a5432d2a7ac7f88e3f212}\label{structwallet_1_1rpc_1_1GET__TRANSFERS_adfe0834fb01a5432d2a7ac7f88e3f212}} 
+\index{wallet::rpc::GET\_TRANSFERS@{wallet::rpc::GET\_TRANSFERS}!names@{names}}
+\index{names@{names}!wallet::rpc::GET\_TRANSFERS@{wallet::rpc::GET\_TRANSFERS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__TRANSFERS_a1531f5b53760f2efb75cba2fce39a2df}\label{structwallet_1_1rpc_1_1GET__TRANSFERS_a1531f5b53760f2efb75cba2fce39a2df}} 
+\index{wallet::rpc::GET\_TRANSFERS@{wallet::rpc::GET\_TRANSFERS}!request@{request}}
+\index{request@{request}!wallet::rpc::GET\_TRANSFERS@{wallet::rpc::GET\_TRANSFERS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__TRANSFERS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+G\+E\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

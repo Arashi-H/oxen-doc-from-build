@@ -1,0 +1,174 @@
+\hypertarget{sha512-blocks_8c}{}\doxysection{src/crypto/crypto\+\_\+ops\+\_\+builder/sha512-\/blocks.c File Reference}
+\label{sha512-blocks_8c}\index{src/crypto/crypto\_ops\_builder/sha512-\/blocks.c@{src/crypto/crypto\_ops\_builder/sha512-\/blocks.c}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}{S\+HR}}(x,  c)~((x) $>$$>$ (c))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,  c)~(((x) $>$$>$ (c)) $\vert$ ((x) $<$$<$ (64 -\/ (c))))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_ab0a0d1ad13c7e4d3cb38c89f7127c85a}{Ch}}(x,  y,  z)~((x \& y) $^\wedge$ ($\sim$x \& z))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a447cd1d7fb703b62666400976be24bf3}{Maj}}(x,  y,  z)~((x \& y) $^\wedge$ (x \& z) $^\wedge$ (y \& z))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a613f88ad88919b6ed21ff223070f9a21}{Sigma0}}(x)~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,28) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,34) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,39))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a6d34508d6d962274083fcd992fb4e340}{Sigma1}}(x)~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,14) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,18) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,41))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a672bd39bdf2f6dc295a23ddd109175ff}{sigma0}}(x)~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x, 1) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x, 8) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}{S\+HR}}(x,7))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a0347251dc63b7abe5d4c500544c24a97}{sigma1}}(x)~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,19) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,61) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}{S\+HR}}(x,6))
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a87f13a68d6d4a33a0660cc51d33e80e5}{M}}(\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}},  w14,  w9,  \mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}})~\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} = \mbox{\hyperlink{sha512-blocks_8c_a0347251dc63b7abe5d4c500544c24a97}{sigma1}}(w14) + w9 + \mbox{\hyperlink{sha512-blocks_8c_a672bd39bdf2f6dc295a23ddd109175ff}{sigma0}}(\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}}) + \mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}};
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a4e1ead0ea3ebe3b9eb9dc9564c524ccc}{E\+X\+P\+A\+ND}}
+\item 
+\#define \mbox{\hyperlink{sha512-blocks_8c_a20803a0202b8f389aabfa5bea2b6585d}{F}}(w,  k)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned long long \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}} \mbox{\hyperlink{sha512-blocks_8c_a740223d1e2aee5627604869ada357e00}{load\+\_\+bigendian}} (const unsigned char $\ast$x)
+\item 
+static void \mbox{\hyperlink{sha512-blocks_8c_a9961b6856cccd277606a804b0b18d48b}{store\+\_\+bigendian}} (unsigned char $\ast$x, \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}} u)
+\item 
+int \mbox{\hyperlink{sha512-blocks_8c_a020efdec0e96b501411b9b185a8939e7}{crypto\+\_\+hashblocks}} (unsigned char $\ast$statebytes, const unsigned char $\ast$in, unsigned long long inlen)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sha512-blocks_8c_ab0a0d1ad13c7e4d3cb38c89f7127c85a}\label{sha512-blocks_8c_ab0a0d1ad13c7e4d3cb38c89f7127c85a}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!Ch@{Ch}}
+\index{Ch@{Ch}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{Ch}{Ch}}
+{\footnotesize\ttfamily \#define Ch(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z }\end{DoxyParamCaption})~((x \& y) $^\wedge$ ($\sim$x \& z))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a4e1ead0ea3ebe3b9eb9dc9564c524ccc}\label{sha512-blocks_8c_a4e1ead0ea3ebe3b9eb9dc9564c524ccc}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!EXPAND@{EXPAND}}
+\index{EXPAND@{EXPAND}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{EXPAND}{EXPAND}}
+{\footnotesize\ttfamily \#define E\+X\+P\+A\+ND}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{sha512-blocks_8c_a87f13a68d6d4a33a0660cc51d33e80e5}{M}}(\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} ,w14,w9 ,\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}} ) \(\backslash\)}
+\DoxyCodeLine{  M(\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}} ,w15,w10,\mbox{\hyperlink{aesb_8c_ad5b637cded8ed65f156770f3e04fa25e}{w2}} ) \(\backslash\)}
+\DoxyCodeLine{  M(\mbox{\hyperlink{aesb_8c_ad5b637cded8ed65f156770f3e04fa25e}{w2}} ,\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} ,w11,\mbox{\hyperlink{aesb_8c_a97b7f7c87e48ef12076649ce6624e453}{w3}} ) \(\backslash\)}
+\DoxyCodeLine{  M(\mbox{\hyperlink{aesb_8c_a97b7f7c87e48ef12076649ce6624e453}{w3}} ,\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}} ,w12,w4 ) \(\backslash\)}
+\DoxyCodeLine{  M(w4 ,\mbox{\hyperlink{aesb_8c_ad5b637cded8ed65f156770f3e04fa25e}{w2}} ,w13,w5 ) \(\backslash\)}
+\DoxyCodeLine{  M(w5 ,\mbox{\hyperlink{aesb_8c_a97b7f7c87e48ef12076649ce6624e453}{w3}} ,w14,w6 ) \(\backslash\)}
+\DoxyCodeLine{  M(w6 ,w4 ,w15,w7 ) \(\backslash\)}
+\DoxyCodeLine{  M(w7 ,w5 ,\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} ,w8 ) \(\backslash\)}
+\DoxyCodeLine{  M(w8 ,w6 ,\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}} ,w9 ) \(\backslash\)}
+\DoxyCodeLine{  M(w9 ,w7 ,\mbox{\hyperlink{aesb_8c_ad5b637cded8ed65f156770f3e04fa25e}{w2}} ,w10) \(\backslash\)}
+\DoxyCodeLine{  M(w10,w8 ,\mbox{\hyperlink{aesb_8c_a97b7f7c87e48ef12076649ce6624e453}{w3}} ,w11) \(\backslash\)}
+\DoxyCodeLine{  M(w11,w9 ,w4 ,w12) \(\backslash\)}
+\DoxyCodeLine{  M(w12,w10,w5 ,w13) \(\backslash\)}
+\DoxyCodeLine{  M(w13,w11,w6 ,w14) \(\backslash\)}
+\DoxyCodeLine{  M(w14,w12,w7 ,w15) \(\backslash\)}
+\DoxyCodeLine{  M(w15,w13,w8 ,\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha512-blocks_8c_a20803a0202b8f389aabfa5bea2b6585d}\label{sha512-blocks_8c_a20803a0202b8f389aabfa5bea2b6585d}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!F@{F}}
+\index{F@{F}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{F}{F}}
+{\footnotesize\ttfamily \#define F(\begin{DoxyParamCaption}\item[{}]{w,  }\item[{}]{k }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  T1 = h + \mbox{\hyperlink{sha512-blocks_8c_a6d34508d6d962274083fcd992fb4e340}{Sigma1}}(e) + \mbox{\hyperlink{sha512-blocks_8c_ab0a0d1ad13c7e4d3cb38c89f7127c85a}{Ch}}(e,f,g) + k + w; \(\backslash\)}
+\DoxyCodeLine{  T2 = \mbox{\hyperlink{sha512-blocks_8c_a613f88ad88919b6ed21ff223070f9a21}{Sigma0}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}) + \mbox{\hyperlink{sha512-blocks_8c_a447cd1d7fb703b62666400976be24bf3}{Maj}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}},c); \(\backslash\)}
+\DoxyCodeLine{  h = g; \(\backslash\)}
+\DoxyCodeLine{  g = f; \(\backslash\)}
+\DoxyCodeLine{  f = e; \(\backslash\)}
+\DoxyCodeLine{  e = \mbox{\hyperlink{namespaced}{d}} + T1; \(\backslash\)}
+\DoxyCodeLine{  d = c; \(\backslash\)}
+\DoxyCodeLine{  c = \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}; \(\backslash\)}
+\DoxyCodeLine{  b = \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}; \(\backslash\)}
+\DoxyCodeLine{  a = T1 + T2;}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{sha512-blocks_8c_a87f13a68d6d4a33a0660cc51d33e80e5}\label{sha512-blocks_8c_a87f13a68d6d4a33a0660cc51d33e80e5}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!M@{M}}
+\index{M@{M}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \#define M(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}},  }\item[{}]{w14,  }\item[{}]{w9,  }\item[{}]{\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}} }\end{DoxyParamCaption})~\mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}} = \mbox{\hyperlink{sha512-blocks_8c_a0347251dc63b7abe5d4c500544c24a97}{sigma1}}(w14) + w9 + \mbox{\hyperlink{sha512-blocks_8c_a672bd39bdf2f6dc295a23ddd109175ff}{sigma0}}(\mbox{\hyperlink{aesb_8c_a0e5fbad442e8182b00106e5c55e3197a}{w1}}) + \mbox{\hyperlink{aesb_8c_a29f84b4304656d05c7a5192e1b0761d9}{w0}};}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a447cd1d7fb703b62666400976be24bf3}\label{sha512-blocks_8c_a447cd1d7fb703b62666400976be24bf3}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!Maj@{Maj}}
+\index{Maj@{Maj}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{Maj}{Maj}}
+{\footnotesize\ttfamily \#define Maj(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z }\end{DoxyParamCaption})~((x \& y) $^\wedge$ (x \& z) $^\wedge$ (y \& z))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}\label{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!ROTR@{ROTR}}
+\index{ROTR@{ROTR}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{ROTR}{ROTR}}
+{\footnotesize\ttfamily \#define R\+O\+TR(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{c }\end{DoxyParamCaption})~(((x) $>$$>$ (c)) $\vert$ ((x) $<$$<$ (64 -\/ (c))))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}\label{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!SHR@{SHR}}
+\index{SHR@{SHR}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{SHR}{SHR}}
+{\footnotesize\ttfamily \#define S\+HR(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{c }\end{DoxyParamCaption})~((x) $>$$>$ (c))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a613f88ad88919b6ed21ff223070f9a21}\label{sha512-blocks_8c_a613f88ad88919b6ed21ff223070f9a21}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!Sigma0@{Sigma0}}
+\index{Sigma0@{Sigma0}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{Sigma0}{Sigma0}}
+{\footnotesize\ttfamily \#define Sigma0(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,28) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,34) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,39))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a672bd39bdf2f6dc295a23ddd109175ff}\label{sha512-blocks_8c_a672bd39bdf2f6dc295a23ddd109175ff}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!sigma0@{sigma0}}
+\index{sigma0@{sigma0}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{sigma0}{sigma0}}
+{\footnotesize\ttfamily \#define sigma0(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x, 1) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x, 8) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}{S\+HR}}(x,7))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a6d34508d6d962274083fcd992fb4e340}\label{sha512-blocks_8c_a6d34508d6d962274083fcd992fb4e340}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!Sigma1@{Sigma1}}
+\index{Sigma1@{Sigma1}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{Sigma1}{Sigma1}}
+{\footnotesize\ttfamily \#define Sigma1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,14) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,18) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,41))}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a0347251dc63b7abe5d4c500544c24a97}\label{sha512-blocks_8c_a0347251dc63b7abe5d4c500544c24a97}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!sigma1@{sigma1}}
+\index{sigma1@{sigma1}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{sigma1}{sigma1}}
+{\footnotesize\ttfamily \#define sigma1(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,19) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_ac578824f5c642aead2ac6ef1b38b4f31}{R\+O\+TR}}(x,61) $^\wedge$ \mbox{\hyperlink{sha512-blocks_8c_a58cc3bd202b2a9a9f001602787d09191}{S\+HR}}(x,6))}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}\label{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!uint64@{uint64}}
+\index{uint64@{uint64}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{uint64}{uint64}}
+{\footnotesize\ttfamily typedef unsigned long long \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sha512-blocks_8c_a020efdec0e96b501411b9b185a8939e7}\label{sha512-blocks_8c_a020efdec0e96b501411b9b185a8939e7}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!crypto\_hashblocks@{crypto\_hashblocks}}
+\index{crypto\_hashblocks@{crypto\_hashblocks}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{crypto\_hashblocks()}{crypto\_hashblocks()}}
+{\footnotesize\ttfamily int crypto\+\_\+hashblocks (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{statebytes,  }\item[{const unsigned char $\ast$}]{in,  }\item[{unsigned long long}]{inlen }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a740223d1e2aee5627604869ada357e00}\label{sha512-blocks_8c_a740223d1e2aee5627604869ada357e00}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!load\_bigendian@{load\_bigendian}}
+\index{load\_bigendian@{load\_bigendian}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{load\_bigendian()}{load\_bigendian()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}} load\+\_\+bigendian (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{sha512-blocks_8c_a9961b6856cccd277606a804b0b18d48b}\label{sha512-blocks_8c_a9961b6856cccd277606a804b0b18d48b}} 
+\index{sha512-\/blocks.c@{sha512-\/blocks.c}!store\_bigendian@{store\_bigendian}}
+\index{store\_bigendian@{store\_bigendian}!sha512-\/blocks.c@{sha512-\/blocks.c}}
+\doxysubsubsection{\texorpdfstring{store\_bigendian()}{store\_bigendian()}}
+{\footnotesize\ttfamily static void store\+\_\+bigendian (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{x,  }\item[{\mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+

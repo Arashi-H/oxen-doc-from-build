@@ -1,0 +1,109 @@
+\hypertarget{namespacehw_1_1trezor_1_1protocol}{}\doxysection{hw\+::trezor\+::protocol Namespace Reference}
+\label{namespacehw_1_1trezor_1_1protocol}\index{hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1crypto}{crypto}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki}{ki}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1tx}{tx}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_adf461eea1828ff5504d617dcd0079cf1}{key\+\_\+to\+\_\+string}} (const \+::\mbox{\hyperlink{structcrypto_1_1ec__point}{crypto\+::ec\+\_\+point}} \&key)
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_a683825284aaf5cc7f2faf83b1dd58920}{key\+\_\+to\+\_\+string}} (const \+::\mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&key)
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_a37915e93ac47cbd24f1cc8a52524876a}{key\+\_\+to\+\_\+string}} (const \+::\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&key)
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_aa531b6f3b84875c1c06ca470bef6cd62}{key\+\_\+to\+\_\+string}} (const \+::\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&key)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_a94c0f38845254ab8dd3c9216ff6cb2cd}{string\+\_\+to\+\_\+key}} (\+::\mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&key, const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_ad7cc4bd47ebe975dd23d03c0f04e72de}{string\+\_\+to\+\_\+key}} (\+::\mbox{\hyperlink{structcrypto_1_1ec__point}{crypto\+::ec\+\_\+point}} \&key, const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_a031dc191e156bfad7c76a36a00027f76}{string\+\_\+to\+\_\+key}} (\+::\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&key, const std\+::string \&str)
+\item 
+{\footnotesize template$<$class sub\+\_\+t , class Input\+Iterator $>$ }\\void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_abf78ba9017465c00704332e7a3265b6b}{assign\+\_\+to\+\_\+repeatable}} (\+::google\+::protobuf\+::\+Repeated\+Field$<$ sub\+\_\+t $>$ $\ast$dst, const Input\+Iterator begin, const Input\+Iterator end)
+\item 
+{\footnotesize template$<$class sub\+\_\+t , class Input\+Iterator $>$ }\\void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_a2021ca936bb9c0d325cfcd975222996d}{assign\+\_\+from\+\_\+repeatable}} (std\+::vector$<$ sub\+\_\+t $>$ $\ast$dst, const Input\+Iterator begin, const Input\+Iterator end)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_ab0f86986f809f215836f99b029b58a63}{cn\+\_\+deserialize}} (const std\+::string\+\_\+view buff, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&dst)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_af10a3133d34028ed9ab93bede078397b}{cn\+\_\+serialize}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_a2021ca936bb9c0d325cfcd975222996d}\label{namespacehw_1_1trezor_1_1protocol_a2021ca936bb9c0d325cfcd975222996d}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!assign\_from\_repeatable@{assign\_from\_repeatable}}
+\index{assign\_from\_repeatable@{assign\_from\_repeatable}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{assign\_from\_repeatable()}{assign\_from\_repeatable()}}
+{\footnotesize\ttfamily template$<$class sub\+\_\+t , class Input\+Iterator $>$ \\
+void hw\+::trezor\+::protocol\+::assign\+\_\+from\+\_\+repeatable (\begin{DoxyParamCaption}\item[{std\+::vector$<$ sub\+\_\+t $>$ $\ast$}]{dst,  }\item[{const Input\+Iterator}]{begin,  }\item[{const Input\+Iterator}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_abf78ba9017465c00704332e7a3265b6b}\label{namespacehw_1_1trezor_1_1protocol_abf78ba9017465c00704332e7a3265b6b}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!assign\_to\_repeatable@{assign\_to\_repeatable}}
+\index{assign\_to\_repeatable@{assign\_to\_repeatable}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{assign\_to\_repeatable()}{assign\_to\_repeatable()}}
+{\footnotesize\ttfamily template$<$class sub\+\_\+t , class Input\+Iterator $>$ \\
+void hw\+::trezor\+::protocol\+::assign\+\_\+to\+\_\+repeatable (\begin{DoxyParamCaption}\item[{\+::google\+::protobuf\+::\+Repeated\+Field$<$ sub\+\_\+t $>$ $\ast$}]{dst,  }\item[{const Input\+Iterator}]{begin,  }\item[{const Input\+Iterator}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_ab0f86986f809f215836f99b029b58a63}\label{namespacehw_1_1trezor_1_1protocol_ab0f86986f809f215836f99b029b58a63}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!cn\_deserialize@{cn\_deserialize}}
+\index{cn\_deserialize@{cn\_deserialize}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{cn\_deserialize()}{cn\_deserialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::cn\+\_\+deserialize (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{buff,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{dst }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_af10a3133d34028ed9ab93bede078397b}\label{namespacehw_1_1trezor_1_1protocol_af10a3133d34028ed9ab93bede078397b}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!cn\_serialize@{cn\_serialize}}
+\index{cn\_serialize@{cn\_serialize}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{cn\_serialize()}{cn\_serialize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string hw\+::trezor\+::protocol\+::cn\+\_\+serialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{obj }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_adf461eea1828ff5504d617dcd0079cf1}\label{namespacehw_1_1trezor_1_1protocol_adf461eea1828ff5504d617dcd0079cf1}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!key\_to\_string@{key\_to\_string}}
+\index{key\_to\_string@{key\_to\_string}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{key\_to\_string()}{key\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::key\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{structcrypto_1_1ec__point}{crypto\+::ec\+\_\+point}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_a683825284aaf5cc7f2faf83b1dd58920}\label{namespacehw_1_1trezor_1_1protocol_a683825284aaf5cc7f2faf83b1dd58920}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!key\_to\_string@{key\_to\_string}}
+\index{key\_to\_string@{key\_to\_string}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{key\_to\_string()}{key\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::key\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_a37915e93ac47cbd24f1cc8a52524876a}\label{namespacehw_1_1trezor_1_1protocol_a37915e93ac47cbd24f1cc8a52524876a}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!key\_to\_string@{key\_to\_string}}
+\index{key\_to\_string@{key\_to\_string}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{key\_to\_string()}{key\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::key\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_aa531b6f3b84875c1c06ca470bef6cd62}\label{namespacehw_1_1trezor_1_1protocol_aa531b6f3b84875c1c06ca470bef6cd62}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!key\_to\_string@{key\_to\_string}}
+\index{key\_to\_string@{key\_to\_string}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{key\_to\_string()}{key\_to\_string()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::key\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_ad7cc4bd47ebe975dd23d03c0f04e72de}\label{namespacehw_1_1trezor_1_1protocol_ad7cc4bd47ebe975dd23d03c0f04e72de}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!string\_to\_key@{string\_to\_key}}
+\index{string\_to\_key@{string\_to\_key}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{string\_to\_key()}{string\_to\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::string\+\_\+to\+\_\+key (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{structcrypto_1_1ec__point}{crypto\+::ec\+\_\+point}} \&}]{key,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_a94c0f38845254ab8dd3c9216ff6cb2cd}\label{namespacehw_1_1trezor_1_1protocol_a94c0f38845254ab8dd3c9216ff6cb2cd}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!string\_to\_key@{string\_to\_key}}
+\index{string\_to\_key@{string\_to\_key}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{string\_to\_key()}{string\_to\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::string\+\_\+to\+\_\+key (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&}]{key,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_a031dc191e156bfad7c76a36a00027f76}\label{namespacehw_1_1trezor_1_1protocol_a031dc191e156bfad7c76a36a00027f76}} 
+\index{hw::trezor::protocol@{hw::trezor::protocol}!string\_to\_key@{string\_to\_key}}
+\index{string\_to\_key@{string\_to\_key}!hw::trezor::protocol@{hw::trezor::protocol}}
+\doxysubsubsection{\texorpdfstring{string\_to\_key()}{string\_to\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::string\+\_\+to\+\_\+key (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{key,  }\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+

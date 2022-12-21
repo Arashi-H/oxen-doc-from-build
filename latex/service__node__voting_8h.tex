@@ -1,0 +1,95 @@
+\hypertarget{service__node__voting_8h}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+voting.h File Reference}
+\label{service__node__voting_8h}\index{src/cryptonote\_core/service\_node\_voting.h@{src/cryptonote\_core/service\_node\_voting.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/tx\+\_\+extra.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/periodic\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/serialization/base\+\_\+object.\+hpp$>$}\newline
+Include dependency graph for service\+\_\+node\+\_\+voting.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__voting_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__voting_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1checkpoint__vote}{service\+\_\+nodes\+::checkpoint\+\_\+vote}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1state__change__vote}{service\+\_\+nodes\+::state\+\_\+change\+\_\+vote}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1pool__vote__entry}{service\+\_\+nodes\+::pool\+\_\+vote\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1voting__pool}{service\+\_\+nodes\+::voting\+\_\+pool}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1obligations__pool__entry}{service\+\_\+nodes\+::voting\+\_\+pool\+::obligations\+\_\+pool\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1voting__pool_1_1checkpoint__pool__entry}{service\+\_\+nodes\+::voting\+\_\+pool\+::checkpoint\+\_\+pool\+\_\+entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{service\+\_\+nodes\+::quorum\+\_\+type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52a8ad227215390a63934abc20fed39722f}{service\+\_\+nodes\+::quorum\+\_\+type\+::obligations}} = 0, 
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52a05304abc5ec69431ecc6730a302f2a37}{service\+\_\+nodes\+::quorum\+\_\+type\+::checkpointing}}, 
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52a40652ee9ae143f1c1c830f01a5449ecb}{service\+\_\+nodes\+::quorum\+\_\+type\+::blink}}, 
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52a02a8dc4cf01fed584c6423f577c0b0d7}{service\+\_\+nodes\+::quorum\+\_\+type\+::pulse}}, 
+\newline
+\mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52ad69186af02738a9b3ced1bc5b652ba55}{service\+\_\+nodes\+::quorum\+\_\+type\+::\+\_\+count}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5db}{service\+\_\+nodes\+::quorum\+\_\+group}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5dbafedb2d84cafe20862cb4399751a8a7e3}{service\+\_\+nodes\+::quorum\+\_\+group\+::invalid}}, 
+\mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5dba8d6c391e7cb39133c91b73281a24f21f}{service\+\_\+nodes\+::quorum\+\_\+group\+::validator}}, 
+\mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5dbab61822e8357dcaff77eaaccf348d9134}{service\+\_\+nodes\+::quorum\+\_\+group\+::worker}}, 
+\mbox{\hyperlink{namespaceservice__nodes_aa7176de863f4aeb4ccab74873462d5dbad69186af02738a9b3ced1bc5b652ba55}{service\+\_\+nodes\+::quorum\+\_\+group\+::\+\_\+count}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::string\+\_\+view \mbox{\hyperlink{namespaceservice__nodes_a919e2ee4174bd0f05c7b9131173691ae}{service\+\_\+nodes\+::to\+\_\+string}} (const quorum\+\_\+type \&q)
+\item 
+quorum\+\_\+vote\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a8e7452fd8ca2f1faedf092d04bcd98a7}{service\+\_\+nodes\+::make\+\_\+state\+\_\+change\+\_\+vote}} (uint64\+\_\+t block\+\_\+height, uint16\+\_\+t validator\+\_\+index, uint16\+\_\+t worker\+\_\+index, new\+\_\+state \mbox{\hyperlink{structstate}{state}}, uint16\+\_\+t reason, const service\+\_\+node\+\_\+keys \&keys)
+\item 
+quorum\+\_\+vote\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ae1cc7c47511d5e9ad4850ef4130bd5ea}{service\+\_\+nodes\+::make\+\_\+checkpointing\+\_\+vote}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&block\+\_\+hash, uint64\+\_\+t block\+\_\+height, uint16\+\_\+t index\+\_\+in\+\_\+quorum, const service\+\_\+node\+\_\+keys \&keys)
+\item 
+\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} \mbox{\hyperlink{namespaceservice__nodes_adcee3007c73941187832904257ca1230}{service\+\_\+nodes\+::make\+\_\+empty\+\_\+service\+\_\+node\+\_\+checkpoint}} (\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&block\+\_\+hash, uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ac29c5de146651357bf0f78959fe4e962}{service\+\_\+nodes\+::verify\+\_\+checkpoint}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} const \&checkpoint, \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ab39d452334aa703574f9511246764300}{service\+\_\+nodes\+::verify\+\_\+tx\+\_\+state\+\_\+change}} (const \mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__state__change}{cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+state\+\_\+change}} \&state\+\_\+change, uint64\+\_\+t latest\+\_\+height, \mbox{\hyperlink{structcryptonote_1_1tx__verification__context}{cryptonote\+::tx\+\_\+verification\+\_\+context}} \&vvc, const \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} \&quorum, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a9ea675f9c02a0360f8c87c0c544992cb}{service\+\_\+nodes\+::verify\+\_\+vote\+\_\+age}} (const quorum\+\_\+vote\+\_\+t \&vote, uint64\+\_\+t latest\+\_\+height, \mbox{\hyperlink{structcryptonote_1_1vote__verification__context}{cryptonote\+::vote\+\_\+verification\+\_\+context}} \&vvc)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_acca88cffdece317dfed38e087515c4fe}{service\+\_\+nodes\+::verify\+\_\+vote\+\_\+signature}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, const quorum\+\_\+vote\+\_\+t \&vote, \mbox{\hyperlink{structcryptonote_1_1vote__verification__context}{cryptonote\+::vote\+\_\+verification\+\_\+context}} \&vvc, const \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} \&quorum)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_aac5130c7932bf2d564cc5ad13a64fd8e}{service\+\_\+nodes\+::verify\+\_\+quorum\+\_\+signatures}} (\mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum, \mbox{\hyperlink{namespaceservice__nodes_a720216004c8195ad817756b4312abd52}{service\+\_\+nodes\+::quorum\+\_\+type}} type, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, uint64\+\_\+t height, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} const \&hash, std\+::vector$<$ quorum\+\_\+signature $>$ const \&signatures, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} $\ast$block=nullptr)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ad70fe65b8cf87a4e0b61a5531e118bc8}{service\+\_\+nodes\+::verify\+\_\+pulse\+\_\+quorum\+\_\+sizes}} (\mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum)
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \mbox{\hyperlink{namespaceservice__nodes_aa065cfe9120397522e34531c8be03a2a}{service\+\_\+nodes\+::make\+\_\+signature\+\_\+from\+\_\+vote}} (quorum\+\_\+vote\+\_\+t const \&vote, const service\+\_\+node\+\_\+keys \&keys)
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \mbox{\hyperlink{namespaceservice__nodes_acd1847d18f9031288f71f3110d7d6741}{service\+\_\+nodes\+::make\+\_\+signature\+\_\+from\+\_\+tx\+\_\+state\+\_\+change}} (\mbox{\hyperlink{structcryptonote_1_1tx__extra__service__node__state__change}{cryptonote\+::tx\+\_\+extra\+\_\+service\+\_\+node\+\_\+state\+\_\+change}} const \&state\+\_\+change, const service\+\_\+node\+\_\+keys \&keys)
+\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{container_8h}{}\doxysection{src/serialization/container.h File Reference}
+\label{container_8h}\index{src/serialization/container.h@{src/serialization/container.h}}
+{\ttfamily \#include \char`\"{}serialization.\+h\char`\"{}}\newline
+Include dependency graph for container.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{container_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{container_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserialization}{serialization}}
+\item 
+ \mbox{\hyperlink{namespaceserialization_1_1detail}{serialization\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive , typename Container , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_ad8d9c765bf335b1c7225481ea045f6ff}{serialization\+::deserialize\+\_\+all}} (Archive \&ar, Container \&c)
+\item 
+{\footnotesize template$<$typename Archive , class T $>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_a3e83d9ef8b4de50983ab038745d924b5}{serialization\+::detail\+::serialize\+\_\+container\+\_\+element}} (Archive \&ar, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&e)
+\item 
+{\footnotesize template$<$class Archive , typename C , std\+::enable\+\_\+if\+\_\+t$<$ Archive\+::is\+\_\+deserializer, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespaceserialization_1_1detail_a46b8617e07431c6cdfbe2cf874402451}{serialization\+::detail\+::serialize\+\_\+container}} (Archive \&ar, C \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a910f9047e1e99112dd28d65d0dc1fd50}{serialization\+::detail\+::has\+\_\+reserve}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily val.\+reserve(0)} exists for {\ttfamily T val}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_af8e662806d3dbec0c7aeb837e4dbb3bf}{serialization\+::detail\+::has\+\_\+emplace\+\_\+back}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_1_1detail_a0845d365f0fa25814a989b621f62572a}{serialization\+::detail\+::has\+\_\+value\+\_\+insert}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\begin{DoxyCompactList}\small\item\em True if {\ttfamily val.\+insert(V\{\})} exists for {\ttfamily T val} and {\ttfamily using V = T\+::value\+\_\+type}. \end{DoxyCompactList}\end{DoxyCompactItemize}

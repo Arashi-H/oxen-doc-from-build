@@ -1,0 +1,185 @@
+\hypertarget{classquorumnet_1_1quorum__conn__iterator}{}\doxysection{quorumnet\+::quorum\+\_\+conn\+\_\+iterator Class Reference}
+\label{classquorumnet_1_1quorum__conn__iterator}\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+
+
+{\ttfamily \#include $<$quorumnet\+\_\+conn\+\_\+matrix.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_aa87d8bfb07c08f81f529be58b4e0db43}{iterator\+\_\+category}} = std\+::forward\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a8d498038db417b02c162e303e0e3de9a}{value\+\_\+type}} = int
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a8f9b436ed902a9cda8892e46892b2ce9}{difference\+\_\+type}} = int
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a26fc5bcb82bea61676c619233986ad6d}{pointer\+\_\+type}} = const int $\ast$
+\item 
+using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}{reference}} = const int \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a0394facf67e85cdea94ea0a322bd8958}{quorum\+\_\+conn\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}{reference}} \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_ab100194a7a5212a40e9dbeffd75d6960}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a412d7c350669253b393e32a28453cc88}{operator==}} (const \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \&it) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a7a1c148e5bd78995de96848110d5c903}{operator!=}} (const \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \&it) const
+\item 
+\mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \& \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a292cd607261d393828494ff3cc77bd02}{operator++}} ()
+\item 
+\mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a6f1e6964f068ba388cea464c7f97e815}{operator++}} (int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a436b90392c44d4afb9c68f795d5a0fbe}{quorum\+\_\+conn\+\_\+iterator}} (const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$flags\+\_\+, int N\+\_\+, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} outgoing\+\_\+=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$const \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_ad5f583b3b8838252aaa4a713e76f8536}{flags}}
+\item 
+int \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a7066387dbe68ec4c3838abd7642f106e}{i}}
+\item 
+const int \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a6e807bc458df92854f08a9cdfd19211e}{N}}
+\item 
+const int \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a33b75a110ef96b5c1784df75381e9b64}{step}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a38baff6447a84b1a63d6915c0ef98ce0}{quorum\+\_\+outgoing\+\_\+conns}}
+\item 
+class \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a3125a27ae4ebf4e473c84ec56f3bd390}{quorum\+\_\+incoming\+\_\+conns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a8f9b436ed902a9cda8892e46892b2ce9}\label{classquorumnet_1_1quorum__conn__iterator_a8f9b436ed902a9cda8892e46892b2ce9}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a8f9b436ed902a9cda8892e46892b2ce9}{quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::difference\+\_\+type}} =  int}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_aa87d8bfb07c08f81f529be58b4e0db43}\label{classquorumnet_1_1quorum__conn__iterator_aa87d8bfb07c08f81f529be58b4e0db43}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_aa87d8bfb07c08f81f529be58b4e0db43}{quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::iterator\+\_\+category}} =  std\+::forward\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a26fc5bcb82bea61676c619233986ad6d}\label{classquorumnet_1_1quorum__conn__iterator_a26fc5bcb82bea61676c619233986ad6d}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!pointer\_type@{pointer\_type}}
+\index{pointer\_type@{pointer\_type}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{pointer\_type}{pointer\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a26fc5bcb82bea61676c619233986ad6d}{quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::pointer\+\_\+type}} =  const int $\ast$}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}\label{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!reference@{reference}}
+\index{reference@{reference}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}{quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::reference}} =  const int \&}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a8d498038db417b02c162e303e0e3de9a}\label{classquorumnet_1_1quorum__conn__iterator_a8d498038db417b02c162e303e0e3de9a}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a8d498038db417b02c162e303e0e3de9a}{quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::value\+\_\+type}} =  int}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a436b90392c44d4afb9c68f795d5a0fbe}\label{classquorumnet_1_1quorum__conn__iterator_a436b90392c44d4afb9c68f795d5a0fbe}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!quorum\_conn\_iterator@{quorum\_conn\_iterator}}
+\index{quorum\_conn\_iterator@{quorum\_conn\_iterator}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{quorum\_conn\_iterator()}{quorum\_conn\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::quorum\+\_\+conn\+\_\+iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$}]{flags\+\_\+,  }\item[{int}]{N\+\_\+,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{outgoing\+\_\+ = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a0394facf67e85cdea94ea0a322bd8958}\label{classquorumnet_1_1quorum__conn__iterator_a0394facf67e85cdea94ea0a322bd8958}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!quorum\_conn\_iterator@{quorum\_conn\_iterator}}
+\index{quorum\_conn\_iterator@{quorum\_conn\_iterator}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{quorum\_conn\_iterator()}{quorum\_conn\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::quorum\+\_\+conn\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a7a1c148e5bd78995de96848110d5c903}\label{classquorumnet_1_1quorum__conn__iterator_a7a1c148e5bd78995de96848110d5c903}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_ab100194a7a5212a40e9dbeffd75d6960}\label{classquorumnet_1_1quorum__conn__iterator_ab100194a7a5212a40e9dbeffd75d6960}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator_a63ecd41ca1fbd2ccf9d6152623bb4a48}{reference}} quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a292cd607261d393828494ff3cc77bd02}\label{classquorumnet_1_1quorum__conn__iterator_a292cd607261d393828494ff3cc77bd02}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}}\& quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a6f1e6964f068ba388cea464c7f97e815}\label{classquorumnet_1_1quorum__conn__iterator_a6f1e6964f068ba388cea464c7f97e815}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a412d7c350669253b393e32a28453cc88}\label{classquorumnet_1_1quorum__conn__iterator_a412d7c350669253b393e32a28453cc88}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classquorumnet_1_1quorum__conn__iterator}{quorum\+\_\+conn\+\_\+iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a3125a27ae4ebf4e473c84ec56f3bd390}\label{classquorumnet_1_1quorum__conn__iterator_a3125a27ae4ebf4e473c84ec56f3bd390}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!quorum\_incoming\_conns@{quorum\_incoming\_conns}}
+\index{quorum\_incoming\_conns@{quorum\_incoming\_conns}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{quorum\_incoming\_conns}{quorum\_incoming\_conns}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classquorumnet_1_1quorum__incoming__conns}{quorum\+\_\+incoming\+\_\+conns}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a38baff6447a84b1a63d6915c0ef98ce0}\label{classquorumnet_1_1quorum__conn__iterator_a38baff6447a84b1a63d6915c0ef98ce0}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!quorum\_outgoing\_conns@{quorum\_outgoing\_conns}}
+\index{quorum\_outgoing\_conns@{quorum\_outgoing\_conns}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{quorum\_outgoing\_conns}{quorum\_outgoing\_conns}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classquorumnet_1_1quorum__outgoing__conns}{quorum\+\_\+outgoing\+\_\+conns}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_ad5f583b3b8838252aaa4a713e76f8536}\label{classquorumnet_1_1quorum__conn__iterator_ad5f583b3b8838252aaa4a713e76f8536}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!flags@{flags}}
+\index{flags@{flags}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}$\ast$ const quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::flags\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a7066387dbe68ec4c3838abd7642f106e}\label{classquorumnet_1_1quorum__conn__iterator_a7066387dbe68ec4c3838abd7642f106e}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!i@{i}}
+\index{i@{i}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::i\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a6e807bc458df92854f08a9cdfd19211e}\label{classquorumnet_1_1quorum__conn__iterator_a6e807bc458df92854f08a9cdfd19211e}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!N@{N}}
+\index{N@{N}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily const int quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::N\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classquorumnet_1_1quorum__conn__iterator_a33b75a110ef96b5c1784df75381e9b64}\label{classquorumnet_1_1quorum__conn__iterator_a33b75a110ef96b5c1784df75381e9b64}} 
+\index{quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}!step@{step}}
+\index{step@{step}!quorumnet::quorum\_conn\_iterator@{quorumnet::quorum\_conn\_iterator}}
+\doxysubsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily const int quorumnet\+::quorum\+\_\+conn\+\_\+iterator\+::step\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+protocol/\mbox{\hyperlink{quorumnet__conn__matrix_8h}{quorumnet\+\_\+conn\+\_\+matrix.\+h}}\end{DoxyCompactItemize}

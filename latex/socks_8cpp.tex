@@ -1,0 +1,63 @@
+\hypertarget{socks_8cpp}{}\doxysection{src/net/socks.cpp File Reference}
+\label{socks_8cpp}\index{src/net/socks.cpp@{src/net/socks.cpp}}
+{\ttfamily \#include \char`\"{}socks.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$boost/asio/buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/read.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/write.\+hpp$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}epee/net/net\+\_\+utils\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/tor\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/i2p\+\_\+address.\+h\char`\"{}}\newline
+Include dependency graph for socks.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{socks_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_1_1v4__header}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::v4\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_1_1socks__category}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::socks\+\_\+category}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1completed}{net\+::socks\+::client\+::completed}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1read}{net\+::socks\+::client\+::read}}
+\item 
+struct \mbox{\hyperlink{structnet_1_1socks_1_1client_1_1write}{net\+::socks\+::client\+::write}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenet}{net}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1socks}{net\+::socks}}
+\item 
+ \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_a2927a5357bfc58855a0ff0f254855a11}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::write\+\_\+domain\+\_\+header}} (epee\+::span$<$ std\+::uint8\+\_\+t $>$ out, const std\+::uint8\+\_\+t command, const std\+::uint16\+\_\+t port, std\+::string\+\_\+view domain)
+\item 
+const boost\+::system\+::error\+\_\+category \& \mbox{\hyperlink{namespacenet_1_1socks_a667dc291afc4bf2fe752ff0514df437e}{net\+::socks\+::error\+\_\+category}} () noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const unsigned \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_abeda02d602497db251217ba54afa8b05}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::v4\+\_\+reply\+\_\+size}} = 8
+\item 
+constexpr const std\+::uint8\+\_\+t \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_a4d2aa2dfe11f9cc28adfaa10bb88ee29}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::v4\+\_\+connect\+\_\+command}} = 1
+\item 
+constexpr const std\+::uint8\+\_\+t \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_ac5569c1e250505617557a2d21bb6ae77}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::v4tor\+\_\+resolve\+\_\+command}} = 0xf0
+\item 
+constexpr const std\+::uint8\+\_\+t \mbox{\hyperlink{namespacenet_1_1socks_1_1anonymous__namespace_02socks_8cpp_03_a0cf41fc8283eecf68f71a4aa5089ef49}{net\+::socks\+::anonymous\+\_\+namespace\{socks.\+cpp\}\+::v4\+\_\+request\+\_\+granted}} = 90
+\end{DoxyCompactItemize}

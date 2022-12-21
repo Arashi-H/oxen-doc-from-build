@@ -1,0 +1,92 @@
+\hypertarget{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03}{}\doxysection{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.cpp\} Namespace Reference}
+\label{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03}\index{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a06831687dba2f89440aa420dbe81cbe4}{create\+\_\+checksum\+\_\+index}} (const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&word\+\_\+list, const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$language)
+\begin{DoxyCompactList}\small\item\em Creates a checksum index in the word list array on the list of words. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a3f432550987b0f831aae4bda6a072723}{checksum\+\_\+test}} (std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ seed, const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$language)
+\begin{DoxyCompactList}\small\item\em Does the checksum test on the seed passed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_ae4816951edd40fd247e3bbddc075507a}{find\+\_\+seed\+\_\+language}} (const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&seed, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} has\+\_\+checksum, std\+::vector$<$ uint32\+\_\+t $>$ \&matched\+\_\+indices, \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$$\ast$language)
+\begin{DoxyCompactList}\small\item\em Finds the word list that contains the seed words and puts the indices where matches occured in matched\+\_\+indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a7845c2e6e7cfff0df25f317fefb771a6}{logcat}} = log\+::\+Cat(\char`\"{}mnemonic\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a3f432550987b0f831aae4bda6a072723}\label{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a3f432550987b0f831aae4bda6a072723}} 
+\index{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}!checksum\_test@{checksum\_test}}
+\index{checksum\_test@{checksum\_test}!crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{checksum\_test()}{checksum\_test()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} anonymous\+\_\+namespace electrum words crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::crypto\+::cpp\+::checksum\+\_\+test (\begin{DoxyParamCaption}\item[{std\+::vector$<$ epee\+::wipeable\+\_\+string $>$}]{seed,  }\item[{const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$}]{language }\end{DoxyParamCaption})}
+
+
+
+Does the checksum test on the seed passed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Vector of seed words \\
+\hline
+{\em unique\+\_\+prefix\+\_\+length} & the prefix length of each word to use for checksum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the test passed false if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a06831687dba2f89440aa420dbe81cbe4}\label{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a06831687dba2f89440aa420dbe81cbe4}} 
+\index{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}!create\_checksum\_index@{create\_checksum\_index}}
+\index{create\_checksum\_index@{create\_checksum\_index}!crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{create\_checksum\_index()}{create\_checksum\_index()}}
+{\footnotesize\ttfamily uint32\+\_\+t anonymous\+\_\+namespace electrum words crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::crypto\+::cpp\+::create\+\_\+checksum\+\_\+index (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&}]{word\+\_\+list,  }\item[{const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$}]{language }\end{DoxyParamCaption})}
+
+
+
+Creates a checksum index in the word list array on the list of words. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word\+\_\+list} & Vector of words \\
+\hline
+{\em unique\+\_\+prefix\+\_\+length} & the prefix length of each word to use for checksum \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Checksum index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_ae4816951edd40fd247e3bbddc075507a}\label{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_ae4816951edd40fd247e3bbddc075507a}} 
+\index{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}!find\_seed\_language@{find\_seed\_language}}
+\index{find\_seed\_language@{find\_seed\_language}!crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{find\_seed\_language()}{find\_seed\_language()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::find\+\_\+seed\+\_\+language (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&}]{seed,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{has\+\_\+checksum,  }\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{matched\+\_\+indices,  }\item[{\mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$$\ast$}]{language }\end{DoxyParamCaption})}
+
+
+
+Finds the word list that contains the seed words and puts the indices where matches occured in matched\+\_\+indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & List of words to match. \\
+\hline
+{\em has\+\_\+checksum} & The seed has a checksum word (maybe not checked). \\
+\hline
+{\em matched\+\_\+indices} & The indices where the seed words were found are added to this. \\
+\hline
+{\em language} & \mbox{\hyperlink{namespaceLanguage}{Language}} instance pointer to write to after it is found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all the words were present in some language false if not. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a7845c2e6e7cfff0df25f317fefb771a6}\label{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a7845c2e6e7cfff0df25f317fefb771a6}} 
+\index{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}!logcat@{logcat}}
+\index{logcat@{logcat}!crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}@{crypto::anonymous\_namespace\lcurly{}electrum-\/words.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}}
+{\footnotesize\ttfamily auto crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::logcat = log\+::\+Cat(\char`\"{}mnemonic\char`\"{})}
+

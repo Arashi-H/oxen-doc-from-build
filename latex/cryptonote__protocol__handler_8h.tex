@@ -1,0 +1,78 @@
+\hypertarget{cryptonote__protocol__handler_8h}{}\doxysection{src/cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+handler.h File Reference}
+\label{cryptonote__protocol__handler_8h}\index{src/cryptonote\_protocol/cryptonote\_protocol\_handler.h@{src/cryptonote\_protocol/cryptonote\_protocol\_handler.h}}
+
+
+This is the original cryptonote protocol network-\/events handler, modified by us.  
+
+
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}common/periodic\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/levin\+\_\+abstract\+\_\+invoke2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol\+\_\+handler\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}block\+\_\+queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/meta.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/connection\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/circular\+\_\+buffer.\+hpp$>$}\newline
+Include dependency graph for cryptonote\+\_\+protocol\+\_\+handler.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__protocol__handler_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__protocol__handler_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfmt_1_1formatter_3_01cryptonote_1_1cryptonote__connection__context_01_4}{fmt\+::formatter$<$ cryptonote\+::cryptonote\+\_\+connection\+\_\+context $>$}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler$<$ t\+\_\+core $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cryptonote__protocol__handler_8h_a0e0476aa0a3e524dd75eb0805a14814f}{C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+O\+U\+NT}}~500
+\item 
+\#define \mbox{\hyperlink{cryptonote__protocol__handler_8h_ae5f12c72c5851598524776a434ac812b}{C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+A\+X\+\_\+\+T\+X\+S\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+O\+U\+NT}}~5000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the original cryptonote protocol network-\/events handler, modified by us. 
+
+\begin{DoxyAuthor}{Author}
+rfree (current maintainer/user in monero.\+cc project -\/ most of code is from Crypto\+Note) 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cryptonote__protocol__handler_8h_a0e0476aa0a3e524dd75eb0805a14814f}\label{cryptonote__protocol__handler_8h_a0e0476aa0a3e524dd75eb0805a14814f}} 
+\index{cryptonote\_protocol\_handler.h@{cryptonote\_protocol\_handler.h}!CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT@{CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT}}
+\index{CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT@{CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT}!cryptonote\_protocol\_handler.h@{cryptonote\_protocol\_handler.h}}
+\doxysubsubsection{\texorpdfstring{CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT}{CURRENCY\_PROTOCOL\_MAX\_OBJECT\_REQUEST\_COUNT}}
+{\footnotesize\ttfamily \#define C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+A\+X\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+O\+U\+NT~500}
+
+\mbox{\Hypertarget{cryptonote__protocol__handler_8h_ae5f12c72c5851598524776a434ac812b}\label{cryptonote__protocol__handler_8h_ae5f12c72c5851598524776a434ac812b}} 
+\index{cryptonote\_protocol\_handler.h@{cryptonote\_protocol\_handler.h}!CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT@{CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT}}
+\index{CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT@{CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT}!cryptonote\_protocol\_handler.h@{cryptonote\_protocol\_handler.h}}
+\doxysubsubsection{\texorpdfstring{CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT}{CURRENCY\_PROTOCOL\_MAX\_TXS\_REQUEST\_COUNT}}
+{\footnotesize\ttfamily \#define C\+U\+R\+R\+E\+N\+C\+Y\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+M\+A\+X\+\_\+\+T\+X\+S\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+O\+U\+NT~5000}
+

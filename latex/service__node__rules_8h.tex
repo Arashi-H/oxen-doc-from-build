@@ -1,0 +1,212 @@
+\hypertarget{service__node__rules_8h}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.h File Reference}
+\label{service__node__rules_8h}\index{src/cryptonote\_core/service\_node\_rules.h@{src/cryptonote\_core/service\_node\_rules.h}}
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for service\+\_\+node\+\_\+rules.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__rules_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__rules_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1invalid__registration}{service\+\_\+nodes\+::invalid\+\_\+registration}}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1proof__version}{service\+\_\+nodes\+::proof\+\_\+version}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_a6ee77bc8b6bf09851397bad24893e2fe}{service\+\_\+nodes\+::swarm\+\_\+id\+\_\+t}} = uint64\+\_\+t
+\item 
+using \mbox{\hyperlink{namespaceservice__nodes_a4567dc99de9ed40aa19f27985dc3e214}{service\+\_\+nodes\+::\+S\+M\+A\+L\+L\+\_\+\+C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+R\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = std\+::ratio$<$ 2499, 10000 $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a9036b1384967572d1e4699d1179eefe1}{service\+\_\+nodes\+::pulse\+\_\+min\+\_\+service\+\_\+nodes}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+constexpr uint16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_af126b9952e9024bbc009e7e60ff6b104}{service\+\_\+nodes\+::pulse\+\_\+validator\+\_\+bit\+\_\+mask}} ()
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aa0eb333f14adf010ab81324de1dcc19c}{service\+\_\+nodes\+::\+R\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+R\+E\+D\+IT}} (int64\+\_\+t credit\+\_\+at\+\_\+decomm, int64\+\_\+t decomm\+\_\+blocks)
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a43bcac3ca080f197c26d23149befce69}{service\+\_\+nodes\+::min\+\_\+votes\+\_\+for\+\_\+quorum\+\_\+type}} (quorum\+\_\+type q)
+\item 
+constexpr quorum\+\_\+type \mbox{\hyperlink{namespaceservice__nodes_a5a9c4bc935229938d1a1971112ed1971}{service\+\_\+nodes\+::max\+\_\+quorum\+\_\+type\+\_\+for\+\_\+hf}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a2e2df97c5e7240ab85506fa91ff293e3}{service\+\_\+nodes\+::staking\+\_\+num\+\_\+lock\+\_\+blocks}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ae7f248d08b6b462eedfe16c131128b23}{service\+\_\+nodes\+::get\+\_\+min\+\_\+node\+\_\+contribution}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved, size\+\_\+t num\+\_\+contributions)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a8e2d084c0d6342fff3c0937eb3b54b74}{service\+\_\+nodes\+::get\+\_\+min\+\_\+node\+\_\+contribution\+\_\+in\+\_\+portions}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved, size\+\_\+t num\+\_\+contributions)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a835098860f85ad1e54bad2bae8c6c757}{service\+\_\+nodes\+::get\+\_\+max\+\_\+node\+\_\+contribution}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_af27e6bf932b991119bd0415ce7ac1afd}{service\+\_\+nodes\+::get\+\_\+staking\+\_\+requirement}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aa026b1a7caaae7ee17542e33cdc4e0f1}{service\+\_\+nodes\+::get\+\_\+staking\+\_\+requirement}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, \mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hardfork)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_afba38f786460d3a87da85828d8405123}{service\+\_\+nodes\+::portions\+\_\+to\+\_\+amount}} (uint64\+\_\+t portions, uint64\+\_\+t staking\+\_\+requirement)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a315382d8da9e0422a7eed1eb553f765c}{service\+\_\+nodes\+::check\+\_\+service\+\_\+node\+\_\+portions}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} version, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}, uint64\+\_\+t $>$$>$ \&portions)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a2ca73437054895550e7925dce2008753}{service\+\_\+nodes\+::check\+\_\+service\+\_\+node\+\_\+stakes}} (\mbox{\hyperlink{namespacecryptonote_a884c13f6c17c6ce8dd15f2e9bc4c75ef}{cryptonote\+::hf}} hf\+\_\+version, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t staking\+\_\+requirement, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}, uint64\+\_\+t $>$$>$ \&stakes)
+\begin{DoxyCompactList}\small\item\em Check service node contribution amounts, for H\+F19+ registrations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceservice__nodes_a39375dcbac5c905eeb9e4604b2458013}{service\+\_\+nodes\+::generate\+\_\+request\+\_\+stake\+\_\+unlock\+\_\+hash}} (uint32\+\_\+t nonce)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a41686f2c897f6f8972c221653a4d1562}{service\+\_\+nodes\+::get\+\_\+locked\+\_\+key\+\_\+image\+\_\+unlock\+\_\+height}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t node\+\_\+register\+\_\+height, uint64\+\_\+t curr\+\_\+height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a459f06c1c3bc526051a1ed8844532c37}{service\+\_\+nodes\+::get\+\_\+portions\+\_\+to\+\_\+make\+\_\+amount}} (uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t amount, uint64\+\_\+t max\+\_\+portions)
+\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{namespaceservice__nodes_ae8818286fddb85de5d2a05cd6cfacfbd}{service\+\_\+nodes\+::parse\+\_\+fee\+\_\+percent}} (std\+::string\+\_\+view fee)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a191d5e68b2c27e3758e45b6652724628}{service\+\_\+nodes\+::percent\+\_\+to\+\_\+basis\+\_\+points}} (std\+::string percent\+\_\+string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a0f07c95f79d1ae1fb3e397216d5362ed}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+E\+N\+T\+R\+O\+P\+Y\+\_\+\+L\+AG}} = 21
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a47bc4da9cc36ea7cf79f1f2e486c0f89}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+R\+O\+U\+N\+D\+\_\+\+T\+I\+ME}} = 60s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a60db44fd0e2fcbf49efc7a743f066b0e}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+H\+A\+N\+D\+S\+H\+A\+K\+E\+S\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a01e3e155b070e1dfe5fa67a0e9723913}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+O\+T\+H\+E\+R\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+R\+\_\+\+H\+A\+N\+D\+S\+H\+A\+K\+E\+S\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a07081991516ee3a02830fc3bd6d96523}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a9fd616c407c56a73a7a79dca6f9437f3}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+H\+A\+S\+H\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a92bbde11842d086caffabd211eafd13f}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+R\+A\+N\+D\+O\+M\+\_\+\+V\+A\+L\+U\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a98a1f2be1acde395d9f2a5a990215ccd}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+S\+I\+G\+N\+E\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+D\+U\+R\+A\+T\+I\+ON}} = 10s
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ae9cbd0134985b8fafe837ef380787484}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+N\+U\+M\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+RS}} = 11
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a86ce306f257ea837cf348431499c113d}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+S\+I\+G\+N\+A\+T\+U\+R\+ES}} = 7
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_ae6e46bedb332be0cb43ce55424000ad6}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+M\+I\+N\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} = \mbox{\hyperlink{namespacecryptonote_a182234d3f9d96df72dd598b5009492aa}{cryptonote\+::\+T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} -\/ 30s
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a8610a75114eaef731ecc13a673b01232}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+M\+A\+X\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} = \mbox{\hyperlink{namespacecryptonote_a182234d3f9d96df72dd598b5009492aa}{cryptonote\+::\+T\+A\+R\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+I\+ME}} + 30s
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a1cf578ffab6e1e354d992a08a1fa427e}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}} = P\+U\+L\+S\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+N\+U\+M\+\_\+\+V\+A\+L\+I\+D\+A\+T\+O\+RS + 1
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a92b6929c3e6ce53be58cd91034a21226}{service\+\_\+nodes\+::\+D\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+\_\+\+C\+R\+E\+D\+I\+T\+\_\+\+P\+E\+R\+\_\+\+D\+AY}} = \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}} / 30
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a255749fdc9666895b4c0b25e31f185a5}{service\+\_\+nodes\+::\+D\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+\_\+\+I\+N\+I\+T\+I\+A\+L\+\_\+\+C\+R\+E\+D\+IT}} = \mbox{\hyperlink{namespacecryptonote_a3d1634490c31f415a14adba978858289}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+H\+O\+UR}} $\ast$ 2
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a022a78097b1a0c39685709bb55c8d03e}{service\+\_\+nodes\+::\+D\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+\_\+\+M\+A\+X\+\_\+\+C\+R\+E\+D\+IT}} = \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}} $\ast$ 2
+\item 
+constexpr int64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a2374ddc6886b694a6f4cd55b0d329471}{service\+\_\+nodes\+::\+D\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+\_\+\+M\+I\+N\+I\+M\+UM}} = \mbox{\hyperlink{namespacecryptonote_a3d1634490c31f415a14adba978858289}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+H\+O\+UR}} $\ast$ 2
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a19d8c278b6458da4d8fb4392356dd611}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+\_\+\+F\+O\+R\+\_\+\+C\+H\+A\+I\+N\+\_\+\+F\+I\+N\+A\+L\+I\+TY}} = 2
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ac6ef3aa5377899d88316c68d94f175e2}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 4
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aa2749b02c6f1f5df3f17745725d912f8}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+T\+L\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 60
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a985ed8271d87efaae6e3893676d74b8e}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+V\+O\+T\+E\+\_\+\+L\+I\+F\+E\+T\+I\+ME}} = C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+S\+T\+O\+R\+E\+\_\+\+P\+E\+R\+S\+I\+S\+T\+E\+N\+T\+L\+Y\+\_\+\+I\+N\+T\+E\+R\+V\+AL
+\item 
+constexpr int16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a84e0b4526989f78e89c5c3296544a4e6}{service\+\_\+nodes\+::\+Q\+U\+O\+R\+U\+M\+\_\+\+V\+O\+T\+E\+\_\+\+C\+H\+E\+C\+K\+\_\+\+C\+O\+U\+NT}} = 8
+\item 
+constexpr int16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_abfaf5931c6b2e51ee9051b0dcd09eede}{service\+\_\+nodes\+::\+P\+U\+L\+S\+E\+\_\+\+M\+A\+X\+\_\+\+M\+I\+S\+S\+A\+B\+L\+E\+\_\+\+V\+O\+T\+ES}} = 4
+\item 
+constexpr int16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a10b803bda399c40f235f4529abf488b2}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+M\+A\+X\+\_\+\+M\+I\+S\+S\+A\+B\+L\+E\+\_\+\+V\+O\+T\+ES}} = 4
+\item 
+constexpr int16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a013c724493c1d56e40aa4785cb1342d0}{service\+\_\+nodes\+::\+T\+I\+M\+E\+S\+T\+A\+M\+P\+\_\+\+M\+A\+X\+\_\+\+M\+I\+S\+S\+A\+B\+L\+E\+\_\+\+V\+O\+T\+ES}} = 4
+\item 
+constexpr int16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a9c5101956d6cf097d97b8ad317dbda1a}{service\+\_\+nodes\+::\+T\+I\+M\+E\+S\+Y\+N\+C\+\_\+\+M\+A\+X\+\_\+\+U\+N\+S\+Y\+N\+C\+E\+D\+\_\+\+V\+O\+T\+ES}} = 4
+\item 
+constexpr int \mbox{\hyperlink{namespaceservice__nodes_a4757d4f381fd4f81b8521154e198f20f}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+I\+N\+T\+E\+R\+V\+AL}} = 5
+\item 
+constexpr int \mbox{\hyperlink{namespaceservice__nodes_a6f90f78f0830db68a4ed8913ccd1239f}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+L\+AG}} = 7 $\ast$ B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+I\+N\+T\+E\+R\+V\+AL
+\item 
+constexpr int \mbox{\hyperlink{namespaceservice__nodes_a0145831c0a4c9a7603a39491931ff4c8}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+E\+X\+P\+I\+R\+Y\+\_\+\+B\+U\+F\+F\+ER}} = B\+L\+I\+N\+K\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+L\+AG + 10
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a2e32a525f7b1c135ac130385db6f1efc}{service\+\_\+nodes\+::\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+N\+T\+H\+\_\+\+O\+F\+\_\+\+T\+H\+E\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+T\+O\+\_\+\+T\+E\+ST}} = 100
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ac809e4b748aa8764a75a1efd76beca25}{service\+\_\+nodes\+::\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+M\+I\+N\+\_\+\+N\+O\+D\+E\+S\+\_\+\+T\+O\+\_\+\+T\+E\+ST}} = 50
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a2745e344755e6b64f12c2a6282e944d3}{service\+\_\+nodes\+::\+V\+O\+T\+E\+\_\+\+L\+I\+F\+E\+T\+I\+ME}} = \mbox{\hyperlink{namespacecryptonote_a3d1634490c31f415a14adba978858289}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+H\+O\+UR}} $\ast$ 2
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a7b836faff33d7e2a05395c65724592cf}{service\+\_\+nodes\+::\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+M\+I\+N\+\_\+\+V\+O\+T\+E\+S\+\_\+\+T\+O\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+S\+T\+A\+TE}} = 7
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aa5db295637f03714766b939f78de2f86}{service\+\_\+nodes\+::\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}} = 10
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ac667cde95a97bc86f5c00fa757efc38f}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}} = 20
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab95da2223071aaebfd7150ec35dc2c82}{service\+\_\+nodes\+::\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+M\+I\+N\+\_\+\+V\+O\+T\+ES}} = 13
+\item 
+constexpr int \mbox{\hyperlink{namespaceservice__nodes_aea0be087b7c26a5184b8f955a42305ec}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+S\+U\+B\+Q\+U\+O\+R\+U\+M\+\_\+\+S\+I\+ZE}} = 10
+\item 
+constexpr int \mbox{\hyperlink{namespaceservice__nodes_a81c685b10d90e18fef5f5168c86aa29c}{service\+\_\+nodes\+::\+B\+L\+I\+N\+K\+\_\+\+M\+I\+N\+\_\+\+V\+O\+T\+ES}} = 7
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a67a661f02128bcd5147585417ce761bd}{service\+\_\+nodes\+::\+R\+E\+O\+R\+G\+\_\+\+S\+A\+F\+E\+T\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+P\+O\+S\+T\+\_\+\+H\+F12}} = (C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL $\ast$ C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+N\+U\+M\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+S\+\_\+\+F\+O\+R\+\_\+\+C\+H\+A\+I\+N\+\_\+\+F\+I\+N\+A\+L\+I\+TY) + (C\+H\+E\+C\+K\+P\+O\+I\+N\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL -\/ 1)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab7f38da7587f68465586d52ff8782d69}{service\+\_\+nodes\+::\+R\+E\+O\+R\+G\+\_\+\+S\+A\+F\+E\+T\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+B\+L\+O\+C\+K\+S\+\_\+\+P\+R\+E\+\_\+\+H\+F12}} = 20
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a4337d4727e7f7a84e3383c7a25d4e934}{service\+\_\+nodes\+::\+I\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+W\+I\+N\+D\+OW}} = 24h
+\item 
+constexpr auto \mbox{\hyperlink{namespaceservice__nodes_a5eabba3ef0283a14fbae04508a800392}{service\+\_\+nodes\+::\+I\+P\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+B\+U\+F\+F\+ER}} = 2h
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a942e6ad598eeb38a07f89d466f64b3c2}{service\+\_\+nodes\+::\+M\+A\+X\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE}} = 10
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a3fb1e856c0996b92b2eafa6ba2076454}{service\+\_\+nodes\+::\+S\+W\+A\+R\+M\+\_\+\+B\+U\+F\+F\+ER}} = 5
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_adcf8f4080b8a6e2c0621a0aeec921d87}{service\+\_\+nodes\+::\+M\+I\+N\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE}} = 5
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ad3f3b480e3139eeb83c466650b8b1e80}{service\+\_\+nodes\+::\+I\+D\+E\+A\+L\+\_\+\+S\+W\+A\+R\+M\+\_\+\+M\+A\+R\+G\+IN}} = 2
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab3ca230cb0f260887777d9da87c4e831}{service\+\_\+nodes\+::\+I\+D\+E\+A\+L\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE}} = M\+I\+N\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE + I\+D\+E\+A\+L\+\_\+\+S\+W\+A\+R\+M\+\_\+\+M\+A\+R\+G\+IN
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_afd56adf1d701636284eea8f71a99098d}{service\+\_\+nodes\+::\+E\+X\+C\+E\+S\+S\+\_\+\+B\+A\+SE}} = M\+I\+N\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a5a1d0bcb5cc3453296036089ed4d641a}{service\+\_\+nodes\+::\+N\+E\+W\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE}} = I\+D\+E\+A\+L\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a90124f1d6e6879e4b083eb2e202b1e30}{service\+\_\+nodes\+::\+F\+I\+L\+L\+\_\+\+S\+W\+A\+R\+M\+\_\+\+L\+O\+W\+E\+R\+\_\+\+P\+E\+R\+C\+E\+N\+T\+I\+LE}} = 25
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_acb0c8dcf11b7c540582502b415111e35}{service\+\_\+nodes\+::\+D\+E\+C\+O\+M\+M\+I\+S\+S\+I\+O\+N\+E\+D\+\_\+\+R\+E\+D\+I\+S\+T\+R\+I\+B\+U\+T\+I\+O\+N\+\_\+\+L\+O\+W\+E\+R\+\_\+\+P\+E\+R\+C\+E\+N\+T\+I\+LE}} = 0
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ae477b23a28f0e2a0dac012da9f7cb37b}{service\+\_\+nodes\+::\+S\+T\+E\+A\+L\+I\+N\+G\+\_\+\+S\+W\+A\+R\+M\+\_\+\+U\+P\+P\+E\+R\+\_\+\+P\+E\+R\+C\+E\+N\+T\+I\+LE}} = 75
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a544decf5e2f18c5b9aac9f3d3063c5d2}{service\+\_\+nodes\+::\+K\+E\+Y\+\_\+\+I\+M\+A\+G\+E\+\_\+\+A\+W\+A\+I\+T\+I\+N\+G\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+H\+E\+I\+G\+HT}} = 0
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a253a695061b67e1fec86c53303b5f2c4}{service\+\_\+nodes\+::\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+T\+X\+\_\+\+L\+I\+F\+E\+T\+I\+M\+E\+\_\+\+I\+N\+\_\+\+B\+L\+O\+C\+KS}} = V\+O\+T\+E\+\_\+\+L\+I\+F\+E\+T\+I\+ME
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_aee4d2fcf78b3f7264cc046e30f6c1128}{service\+\_\+nodes\+::\+V\+O\+T\+E\+\_\+\+O\+R\+\_\+\+T\+X\+\_\+\+V\+E\+R\+I\+F\+Y\+\_\+\+H\+E\+I\+G\+H\+T\+\_\+\+B\+U\+F\+F\+ER}} = 5
+\item 
+constexpr std\+::array$<$ uint16\+\_\+t, 3 $>$ \mbox{\hyperlink{namespaceservice__nodes_a71186eab52b20d8e5656aadf11049837}{service\+\_\+nodes\+::\+M\+I\+N\+\_\+\+S\+T\+O\+R\+A\+G\+E\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}} \{\{2, 4, 0\}\}
+\item 
+constexpr std\+::array$<$ uint16\+\_\+t, 3 $>$ \mbox{\hyperlink{namespaceservice__nodes_a8c2ea1f8e9b24f4df92fba98c5202718}{service\+\_\+nodes\+::\+M\+I\+N\+\_\+\+L\+O\+K\+I\+N\+E\+T\+\_\+\+V\+E\+R\+S\+I\+ON}} \{\{0, 9, 9\}\}
+\item 
+constexpr std\+::array \mbox{\hyperlink{namespaceservice__nodes_a1d198db110af4f110570209600c505d9}{service\+\_\+nodes\+::\+M\+I\+N\+\_\+\+U\+P\+T\+I\+M\+E\+\_\+\+P\+R\+O\+O\+F\+\_\+\+V\+E\+R\+S\+I\+O\+NS}}
+\item 
+constexpr swarm\+\_\+id\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a65d5c18b4d5808a7c21ea9893a77fe93}{service\+\_\+nodes\+::\+U\+N\+A\+S\+S\+I\+G\+N\+E\+D\+\_\+\+S\+W\+A\+R\+M\+\_\+\+ID}} = U\+I\+N\+T64\+\_\+\+M\+AX
+\item 
+constexpr uint8\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ad352cecb0b9f0e27ac99a6a468ad5694}{service\+\_\+nodes\+::\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+S\+Y\+NC}} = 30
+\item 
+constexpr uint8\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a53c6a162f7757c785a4ca9f8e5121774}{service\+\_\+nodes\+::\+M\+A\+X\+I\+M\+U\+M\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+S\+Y\+NC}} = 80
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a58bdf2810e4410d79e1e7ec94a890418}{service\+\_\+nodes\+::\+M\+I\+N\+I\+M\+U\+M\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+P\+O\+R\+T\+I\+ON}} = \mbox{\hyperlink{namespacecryptonote_1_1old_aff49d5bd41207b3e4a8c406c053261be}{cryptonote\+::old\+::\+S\+T\+A\+K\+I\+N\+G\+\_\+\+P\+O\+R\+T\+I\+O\+NS}} / \mbox{\hyperlink{namespaceoxen_a0e8389e6ea468a802ddefc7af77bbe27}{oxen\+::\+M\+A\+X\+\_\+\+C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+R\+S\+\_\+\+V1}}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ac62dc8c88fd49c6733d6a48114e93cb8}{service\+\_\+nodes\+::\+S\+M\+A\+L\+L\+\_\+\+C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+R\+\_\+\+U\+N\+L\+O\+C\+K\+\_\+\+T\+I\+M\+ER}} = \mbox{\hyperlink{namespacecryptonote_aeb4bfc2bef985eb2011fab463ad6e966}{cryptonote\+::\+B\+L\+O\+C\+K\+S\+\_\+\+P\+E\+R\+\_\+\+D\+AY}} $\ast$ 30
+\end{DoxyCompactItemize}

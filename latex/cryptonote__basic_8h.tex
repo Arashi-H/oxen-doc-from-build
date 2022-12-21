@@ -1,0 +1,212 @@
+\hypertarget{cryptonote__basic_8h}{}\doxysection{src/cryptonote\+\_\+basic/cryptonote\+\_\+basic.h File Reference}
+\label{cryptonote__basic_8h}\index{src/cryptonote\_basic/cryptonote\_basic.h@{src/cryptonote\_basic/cryptonote\_basic.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include \char`\"{}serialization/variant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/vector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/binary\+\_\+archive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/json\+\_\+archive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/serialization/keyvalue\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ringct/rct\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}device/device.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}txtypes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/format.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fmt/format.\+h$>$}\newline
+Include dependency graph for cryptonote\+\_\+basic.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__basic_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__basic_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1quorum__signature}{service\+\_\+nodes\+::quorum\+\_\+signature}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txout__to__script}{cryptonote\+::txout\+\_\+to\+\_\+script}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txin__gen}{cryptonote\+::txin\+\_\+gen}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txin__to__script}{cryptonote\+::txin\+\_\+to\+\_\+script}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txin__to__scripthash}{cryptonote\+::txin\+\_\+to\+\_\+scripthash}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1txin__to__key}{cryptonote\+::txin\+\_\+to\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1tx__out}{cryptonote\+::tx\+\_\+out}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1pulse__random__value}{cryptonote\+::pulse\+\_\+random\+\_\+value}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1pulse__header}{cryptonote\+::pulse\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1block__header}{cryptonote\+::block\+\_\+header}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01cryptonote_1_1account__public__address_01_4}{std\+::hash$<$ cryptonote\+::account\+\_\+public\+\_\+address $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1hack}{cryptonote\+::hack}}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a0f1a94719ee72fc091fd7a4c62f50ffc}{cryptonote\+::txin\+\_\+v}} = std\+::variant$<$ txin\+\_\+gen, txin\+\_\+to\+\_\+script, txin\+\_\+to\+\_\+scripthash, txin\+\_\+to\+\_\+key $>$
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a073389ac12cbf0fde00865061da538f0}{cryptonote\+::txout\+\_\+target\+\_\+v}} = std\+::variant$<$ txout\+\_\+to\+\_\+script, txout\+\_\+to\+\_\+scripthash, txout\+\_\+to\+\_\+key $>$
+\item 
+using \mbox{\hyperlink{namespacecryptonote_af37f245483e045f6ffb814fa60271d20}{cryptonote\+::byte\+\_\+and\+\_\+output\+\_\+fees}} = std\+::pair$<$ uint64\+\_\+t, uint64\+\_\+t $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445}{cryptonote\+::blink\+\_\+result}} \{ \mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445a334c4a4c42fdb79d7ebc3e73b517e6f8}{cryptonote\+::blink\+\_\+result\+::none}} = 0, 
+\mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445ac7537d6d48ecf261749c09a9f284bd45}{cryptonote\+::blink\+\_\+result\+::rejected}}, 
+\mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445a3e4d891a5df3d6d0d7dd9432a1bc6470}{cryptonote\+::blink\+\_\+result\+::accepted}}, 
+\mbox{\hyperlink{namespacecryptonote_ada2a97376590a84d5810eb114911a445a90272dda245ae1fb3cf197e91a8689dc}{cryptonote\+::blink\+\_\+result\+::timeout}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\void \mbox{\hyperlink{namespacecryptonote_a8fbc2363ede9e1503c1a9482426776e2}{cryptonote\+::serialize\+\_\+value}} (Archive \&ar, pulse\+\_\+header \&p)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespacecryptonote_acfe67a4ef907e070abd4b92f217fc4d9}{cryptonote\+::serialize\+\_\+value}} (Archive \&ar, block\+\_\+header \&b)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespacecryptonote_a946b2fba16fa8d8f471f1302b310f46a}{cryptonote\+::serialize\+\_\+value}} (Archive \&ar, block \&b)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespacecryptonote_ab2968186026116856e4d5aca5179e610}{cryptonote\+::serialize\+\_\+value}} (Archive \&ar, hf \&x)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a4eef65dbd2800d8d7c57ce298b3c4d2e}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}})
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a88779f331d3b05c8dee057ed9e5e83d9}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}})
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a8f7361783fc619b0aaa9c7e0a690169c}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txin__gen}{cryptonote\+::txin\+\_\+gen}}, \char`\"{}gen\char`\"{}, 0xff)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a13ad88e35acad9e18cb4d6b83e332562}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txin__to__script}{cryptonote\+::txin\+\_\+to\+\_\+script}}, \char`\"{}script\char`\"{}, 0x0)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a9575624257b542563ca1cce7fb22ebdf}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txin__to__scripthash}{cryptonote\+::txin\+\_\+to\+\_\+scripthash}}, \char`\"{}scripthash\char`\"{}, 0x1)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a241ab75deadc2601926aef0e136deb88}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txin__to__key}{cryptonote\+::txin\+\_\+to\+\_\+key}}, \char`\"{}key\char`\"{}, 0x2)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a188dd3b2f83aad3faf1fb3faffb0a918}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txout__to__script}{cryptonote\+::txout\+\_\+to\+\_\+script}}, \char`\"{}script\char`\"{}, 0x0)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a41002a75c505fd4277a0def99288fda2}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}}, \char`\"{}scripthash\char`\"{}, 0x1)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a598b54c6439a797a3c3e7bbd15984e9c}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}}, \char`\"{}key\char`\"{}, 0x2)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_a3224782693b90b2e274265c6271b9af8}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}, \char`\"{}tx\char`\"{}, 0xcc)
+\item 
+\mbox{\hyperlink{cryptonote__basic_8h_ac3ef63ab5c4511b483d3e4fced3e1815}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}}, \char`\"{}block\char`\"{}, 0xbb)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr account\+\_\+public\+\_\+address \mbox{\hyperlink{namespacecryptonote_aa7cc93bf154f0bb86dcf3d4e1279e76e}{cryptonote\+::null\+\_\+address}} \{\}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1hack_aadfa9744c9b5042d30390ad4b82de466}{cryptonote\+::hack\+::test\+\_\+suite\+\_\+permissive\+\_\+txes}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cryptonote__basic_8h_a4eef65dbd2800d8d7c57ce298b3c4d2e}\label{cryptonote__basic_8h_a4eef65dbd2800d8d7c57ce298b3c4d2e}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a88779f331d3b05c8dee057ed9e5e83d9}\label{cryptonote__basic_8h_a88779f331d3b05c8dee057ed9e5e83d9}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_ac3ef63ab5c4511b483d3e4fced3e1815}\label{cryptonote__basic_8h_ac3ef63ab5c4511b483d3e4fced3e1815}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}}}]{,  }\item[{\char`\"{}block\char`\"{}}]{,  }\item[{0xbb}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a3224782693b90b2e274265c6271b9af8}\label{cryptonote__basic_8h_a3224782693b90b2e274265c6271b9af8}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}}]{,  }\item[{\char`\"{}tx\char`\"{}}]{,  }\item[{0xcc}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a8f7361783fc619b0aaa9c7e0a690169c}\label{cryptonote__basic_8h_a8f7361783fc619b0aaa9c7e0a690169c}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txin__gen}{cryptonote\+::txin\+\_\+gen}}}]{,  }\item[{\char`\"{}gen\char`\"{}}]{,  }\item[{0xff}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a241ab75deadc2601926aef0e136deb88}\label{cryptonote__basic_8h_a241ab75deadc2601926aef0e136deb88}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txin__to__key}{cryptonote\+::txin\+\_\+to\+\_\+key}}}]{,  }\item[{\char`\"{}key\char`\"{}}]{,  }\item[{0x2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a13ad88e35acad9e18cb4d6b83e332562}\label{cryptonote__basic_8h_a13ad88e35acad9e18cb4d6b83e332562}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txin__to__script}{cryptonote\+::txin\+\_\+to\+\_\+script}}}]{,  }\item[{\char`\"{}script\char`\"{}}]{,  }\item[{0x0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a9575624257b542563ca1cce7fb22ebdf}\label{cryptonote__basic_8h_a9575624257b542563ca1cce7fb22ebdf}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txin__to__scripthash}{cryptonote\+::txin\+\_\+to\+\_\+scripthash}}}]{,  }\item[{\char`\"{}scripthash\char`\"{}}]{,  }\item[{0x1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a598b54c6439a797a3c3e7bbd15984e9c}\label{cryptonote__basic_8h_a598b54c6439a797a3c3e7bbd15984e9c}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txout__to__key}{cryptonote\+::txout\+\_\+to\+\_\+key}}}]{,  }\item[{\char`\"{}key\char`\"{}}]{,  }\item[{0x2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a188dd3b2f83aad3faf1fb3faffb0a918}\label{cryptonote__basic_8h_a188dd3b2f83aad3faf1fb3faffb0a918}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txout__to__script}{cryptonote\+::txout\+\_\+to\+\_\+script}}}]{,  }\item[{\char`\"{}script\char`\"{}}]{,  }\item[{0x0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cryptonote__basic_8h_a41002a75c505fd4277a0def99288fda2}\label{cryptonote__basic_8h_a41002a75c505fd4277a0def99288fda2}} 
+\index{cryptonote\_basic.h@{cryptonote\_basic.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!cryptonote\_basic.h@{cryptonote\_basic.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1txout__to__scripthash}{cryptonote\+::txout\+\_\+to\+\_\+scripthash}}}]{,  }\item[{\char`\"{}scripthash\char`\"{}}]{,  }\item[{0x1}]{ }\end{DoxyParamCaption})}
+

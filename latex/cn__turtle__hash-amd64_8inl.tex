@@ -1,0 +1,333 @@
+\hypertarget{cn__turtle__hash-amd64_8inl}{}\doxysection{src/crypto/cn\+\_\+turtle\+\_\+hash-\/amd64.inl File Reference}
+\label{cn__turtle__hash-amd64_8inl}\index{src/crypto/cn\_turtle\_hash-\/amd64.inl@{src/crypto/cn\_turtle\_hash-\/amd64.inl}}
+{\ttfamily \#include $<$emmintrin.\+h$>$}\newline
+{\ttfamily \#include $<$wmmintrin.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+Include dependency graph for cn\+\_\+turtle\+\_\+hash-\/amd64.inl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{cn__turtle__hash-amd64_8inl__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unioncn__turtle__hash__state}{cn\+\_\+turtle\+\_\+hash\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_aa4490105d639938ba5c00b4e9e647e27}{A\+SM}}~\+\_\+\+\_\+asm\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}}~static
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}}~\mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}}
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a080d43cd5f5c7057b75c179971de794e}{R\+D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16}}~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((aligned(16)))
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(x)~((uint64\+\_\+t $\ast$) (x))
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}{R128}}(x)~((\+\_\+\+\_\+m128i $\ast$) (x))
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a89118be7b71e0f3e547f3778e4d668f7}{state\+\_\+index}}(x,  div)~((($\ast$((uint64\+\_\+t $\ast$)x) $>$$>$ 4) \& (T\+O\+T\+A\+L\+B\+L\+O\+C\+KS /(div) -\/ 1)) $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_adcbc11e288816f6cb73df58964fa54d9}{\+\_\+\+\_\+mul}}()~lo = mul128(c\mbox{[}0\mbox{]}, b\mbox{[}0\mbox{]}, \&hi);
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a4cee6c40f081978081f061e7040975b3}{pre\+\_\+aes}}()
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a4337be83d54104479e7c240720fcb067}{post\+\_\+aes}}()
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}}~\+\_\+\+\_\+thread
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}{xor\+\_\+blocks}} (uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b)
+\begin{DoxyCompactList}\small\item\em a = (a xor b), where a and b point to 128 bit values \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a2f15c2e23d7248fb6563014b87741378}{xor64}} (uint64\+\_\+t $\ast$a, const uint64\+\_\+t b)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_ab27a45a08bb943019168002c623208f3}{aes\+\_\+256\+\_\+assist1}} (\+\_\+\+\_\+m128i $\ast$\mbox{\hyperlink{ommentedCombined_2pow225521_8h_a469994e78f66a44815c015b7f4b8b2f8}{t1}}, \+\_\+\+\_\+m128i $\ast$\mbox{\hyperlink{ommentedCombined_2pow225521_8h_a24aeadb733f27244ec14e4cba82eeee9}{t2}})
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a1f8d1fbf309217c290e650a8d4345582}{aes\+\_\+256\+\_\+assist2}} (\+\_\+\+\_\+m128i $\ast$\mbox{\hyperlink{ommentedCombined_2pow225521_8h_a469994e78f66a44815c015b7f4b8b2f8}{t1}}, \+\_\+\+\_\+m128i $\ast$\mbox{\hyperlink{ommentedCombined_2pow225521_8h_ad63ffee70a630b49aa4e5677ad59c3a9}{t3}})
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_ac7c71504d7397b6cd48d20f305da939c}{aes\+\_\+expand\+\_\+key}} (const uint8\+\_\+t $\ast$key, uint8\+\_\+t $\ast$expanded\+Key)
+\begin{DoxyCompactList}\small\item\em expands \textquotesingle{}key\textquotesingle{} into a form it can be used for A\+ES encryption. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a240a42dcb4e04a9e68961d624a477bb7}{aes\+\_\+pseudo\+\_\+round}} (const uint8\+\_\+t $\ast$in, uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$expanded\+Key, int nblocks)
+\begin{DoxyCompactList}\small\item\em a \char`\"{}pseudo\char`\"{} round of A\+ES (similar to but slightly different from normal A\+ES encryption) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_ae623801f274e32962d10a8bbe4474088}{aes\+\_\+pseudo\+\_\+round\+\_\+xor}} (const uint8\+\_\+t $\ast$in, uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$expanded\+Key, const uint8\+\_\+t $\ast$xor, int nblocks)
+\begin{DoxyCompactList}\small\item\em aes\+\_\+pseudo\+\_\+round that loads data from $\ast$in and xors it with $\ast$xor first \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_ab80d53d937bb876b285a67613c64b845}{slow\+\_\+hash\+\_\+allocate\+\_\+state}} (uint32\+\_\+t page\+\_\+size)
+\begin{DoxyCompactList}\small\item\em allocate the 2MB scratch buffer using OS support for huge pages, if available \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a2f4f4a5b333eee3124d919107a5f6e70}{slow\+\_\+hash\+\_\+free\+\_\+state}} (uint32\+\_\+t page\+\_\+size)
+\begin{DoxyCompactList}\small\item\em frees the state allocated by slow\+\_\+hash\+\_\+allocate\+\_\+state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a3cb9143c03520ab27af6d37f1193d065}{cn\+\_\+turtle\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int light, int variant, int prehashed, uint32\+\_\+t scratchpad, uint32\+\_\+t iterations)
+\begin{DoxyCompactList}\small\item\em the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} uint8\+\_\+t $\ast$ \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\+\_\+state}} = N\+U\+LL
+\item 
+\mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} int \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_add93b7fc0a17dd573bdf766c978a4098}{hp\+\_\+allocated}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_adcbc11e288816f6cb73df58964fa54d9}\label{cn__turtle__hash-amd64_8inl_adcbc11e288816f6cb73df58964fa54d9}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!\_\_mul@{\_\_mul}}
+\index{\_\_mul@{\_\_mul}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{\_\_mul}{\_\_mul}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+mul(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~lo = mul128(c\mbox{[}0\mbox{]}, b\mbox{[}0\mbox{]}, \&hi);}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_aa4490105d639938ba5c00b4e9e647e27}\label{cn__turtle__hash-amd64_8inl_aa4490105d639938ba5c00b4e9e647e27}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!ASM@{ASM}}
+\index{ASM@{ASM}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{ASM}{ASM}}
+{\footnotesize\ttfamily \#define A\+SM~\+\_\+\+\_\+asm\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}\label{cn__turtle__hash-amd64_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!INLINE@{INLINE}}
+\index{INLINE@{INLINE}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{INLINE}{INLINE}}
+{\footnotesize\ttfamily \#define I\+N\+L\+I\+NE~\mbox{\hyperlink{inline__c_8h_a00d24c7231be28dbaf71f5408f30e44c}{inline}}}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a4337be83d54104479e7c240720fcb067}\label{cn__turtle__hash-amd64_8inl_a4337be83d54104479e7c240720fcb067}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!post\_aes@{post\_aes}}
+\index{post\_aes@{post\_aes}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{post\_aes}{post\_aes}}
+{\footnotesize\ttfamily \#define post\+\_\+aes(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{cn__monero__slow__hash_8c_ae52490d820ea01941012ed33e07119ff}{VARIANT2\_SHUFFLE\_ADD\_SSE2}}(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}, j); \(\backslash\)}
+\DoxyCodeLine{  \_mm\_store\_si128(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}{R128}}(c), \_c); \(\backslash\)}
+\DoxyCodeLine{  \_mm\_store\_si128(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}{R128}}(\&\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}[j]), \_mm\_xor\_si128(\_b, \_c)); \(\backslash\)}
+\DoxyCodeLine{  VARIANT1\_1(\&\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}[j]); \(\backslash\)}
+\DoxyCodeLine{  j = \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a89118be7b71e0f3e547f3778e4d668f7}{state\_index}}(c,lightFlag); \(\backslash\)}
+\DoxyCodeLine{  p = \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\&\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}[j]); \(\backslash\)}
+\DoxyCodeLine{  b[0] = p[0]; \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}[1] = p[1]; \(\backslash\)}
+\DoxyCodeLine{  VARIANT2\_INTEGER\_MATH\_SSE2(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}, c); \(\backslash\)}
+\DoxyCodeLine{  \_\_mul(); \(\backslash\)}
+\DoxyCodeLine{  VARIANT2\_2(); \(\backslash\)}
+\DoxyCodeLine{  VARIANT2\_SHUFFLE\_ADD\_SSE2(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}, j); \(\backslash\)}
+\DoxyCodeLine{  a[0] += hi; \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}[1] += lo; \(\backslash\)}
+\DoxyCodeLine{  p = \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\&\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}[j]); \(\backslash\)}
+\DoxyCodeLine{  p[0] = \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}[0];  p[1] = \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}[1]; \(\backslash\)}
+\DoxyCodeLine{  a[0] \string^= \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}[0]; \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}[1] \string^= \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}[1]; \(\backslash\)}
+\DoxyCodeLine{  VARIANT1\_2(p + 1); \(\backslash\)}
+\DoxyCodeLine{  \_b1 = \_b; \(\backslash\)}
+\DoxyCodeLine{  \_b = \_c; \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a4cee6c40f081978081f061e7040975b3}\label{cn__turtle__hash-amd64_8inl_a4cee6c40f081978081f061e7040975b3}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!pre\_aes@{pre\_aes}}
+\index{pre\_aes@{pre\_aes}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{pre\_aes}{pre\_aes}}
+{\footnotesize\ttfamily \#define pre\+\_\+aes(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  j = \mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a89118be7b71e0f3e547f3778e4d668f7}{state\_index}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},lightFlag); \(\backslash\)}
+\DoxyCodeLine{  \_c = \_mm\_load\_si128(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}{R128}}(\&\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}}[j])); \(\backslash\)}
+\DoxyCodeLine{  \_a = \_mm\_load\_si128(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}{R128}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}})); \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}\label{cn__turtle__hash-amd64_8inl_a447db02b2d628c76c0171b42c57d7d6d}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!R128@{R128}}
+\index{R128@{R128}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{R128}{R128}}
+{\footnotesize\ttfamily \#define R128(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((\+\_\+\+\_\+m128i $\ast$) (x))}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a080d43cd5f5c7057b75c179971de794e}\label{cn__turtle__hash-amd64_8inl_a080d43cd5f5c7057b75c179971de794e}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!RDATA\_ALIGN16@{RDATA\_ALIGN16}}
+\index{RDATA\_ALIGN16@{RDATA\_ALIGN16}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{RDATA\_ALIGN16}{RDATA\_ALIGN16}}
+{\footnotesize\ttfamily \#define R\+D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16~\+\_\+\+\_\+attribute\+\_\+\+\_\+ ((aligned(16)))}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a89118be7b71e0f3e547f3778e4d668f7}\label{cn__turtle__hash-amd64_8inl_a89118be7b71e0f3e547f3778e4d668f7}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!state\_index@{state\_index}}
+\index{state\_index@{state\_index}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{state\_index}{state\_index}}
+{\footnotesize\ttfamily \#define state\+\_\+index(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{div }\end{DoxyParamCaption})~((($\ast$((uint64\+\_\+t $\ast$)x) $>$$>$ 4) \& (T\+O\+T\+A\+L\+B\+L\+O\+C\+KS /(div) -\/ 1)) $<$$<$ 4)}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}\label{cn__turtle__hash-amd64_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!STATIC@{STATIC}}
+\index{STATIC@{STATIC}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{STATIC}{STATIC}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+IC~static}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a3892b5161fc184e418de283ff62f00aa}\label{cn__turtle__hash-amd64_8inl_a3892b5161fc184e418de283ff62f00aa}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!THREADV@{THREADV}}
+\index{THREADV@{THREADV}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{THREADV}{THREADV}}
+{\footnotesize\ttfamily \#define T\+H\+R\+E\+A\+DV~\+\_\+\+\_\+thread}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a07eb808f20dd529e9acb42d417fbfaad}\label{cn__turtle__hash-amd64_8inl_a07eb808f20dd529e9acb42d417fbfaad}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!U64@{U64}}
+\index{U64@{U64}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{U64}{U64}}
+{\footnotesize\ttfamily \#define U64(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((uint64\+\_\+t $\ast$) (x))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_ab27a45a08bb943019168002c623208f3}\label{cn__turtle__hash-amd64_8inl_ab27a45a08bb943019168002c623208f3}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!aes\_256\_assist1@{aes\_256\_assist1}}
+\index{aes\_256\_assist1@{aes\_256\_assist1}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{aes\_256\_assist1()}{aes\_256\_assist1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void aes\+\_\+256\+\_\+assist1 (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+m128i $\ast$}]{t1,  }\item[{\+\_\+\+\_\+m128i $\ast$}]{t2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a1f8d1fbf309217c290e650a8d4345582}\label{cn__turtle__hash-amd64_8inl_a1f8d1fbf309217c290e650a8d4345582}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!aes\_256\_assist2@{aes\_256\_assist2}}
+\index{aes\_256\_assist2@{aes\_256\_assist2}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{aes\_256\_assist2()}{aes\_256\_assist2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void aes\+\_\+256\+\_\+assist2 (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+m128i $\ast$}]{t1,  }\item[{\+\_\+\+\_\+m128i $\ast$}]{t3 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_ac7c71504d7397b6cd48d20f305da939c}\label{cn__turtle__hash-amd64_8inl_ac7c71504d7397b6cd48d20f305da939c}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!aes\_expand\_key@{aes\_expand\_key}}
+\index{aes\_expand\_key@{aes\_expand\_key}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{aes\_expand\_key()}{aes\_expand\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void aes\+\_\+expand\+\_\+key (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{key,  }\item[{uint8\+\_\+t $\ast$}]{expanded\+Key }\end{DoxyParamCaption})}
+
+
+
+expands \textquotesingle{}key\textquotesingle{} into a form it can be used for A\+ES encryption. 
+
+This is an S\+S\+E-\/optimized implementation of A\+ES key schedule generation. It expands the key into multiple round keys, each of which is used in one round of the A\+ES encryption used to fill (and later, extract randomness from) the large 2MB buffer. Note that Crypto\+Night does not use a completely standard A\+ES encryption for its buffer expansion, so do not copy this function outside of Monero without caution! This version uses the hardware A\+E\+S\+K\+E\+Y\+G\+E\+N\+A\+S\+S\+I\+ST instruction to speed key generation, and thus requires C\+PU A\+ES support. For more information about these functions, see page 19 of Intel\textquotesingle{}s A\+ES instructions white paper\+: \href{https://www.intel.com/content/dam/doc/white-paper/advanced-encryption-standard-new-instructions-set-paper.pdf}{\texttt{ https\+://www.\+intel.\+com/content/dam/doc/white-\/paper/advanced-\/encryption-\/standard-\/new-\/instructions-\/set-\/paper.\+pdf}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the input 128 bit key \\
+\hline
+{\em expanded\+Key} & An output buffer to hold the generated key schedule \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a240a42dcb4e04a9e68961d624a477bb7}\label{cn__turtle__hash-amd64_8inl_a240a42dcb4e04a9e68961d624a477bb7}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!aes\_pseudo\_round@{aes\_pseudo\_round}}
+\index{aes\_pseudo\_round@{aes\_pseudo\_round}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{aes\_pseudo\_round()}{aes\_pseudo\_round()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void aes\+\_\+pseudo\+\_\+round (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{expanded\+Key,  }\item[{int}]{nblocks }\end{DoxyParamCaption})}
+
+
+
+a \char`\"{}pseudo\char`\"{} round of A\+ES (similar to but slightly different from normal A\+ES encryption) 
+
+To fill its 2MB scratch buffer, Crypto\+Night uses a nonstandard implementation of A\+ES encryption\+: It applies 10 rounds of the basic A\+ES encryption operation to an input 128 bit chunk of data $<$in$>$. Unlike normal A\+ES, however, this is all it does; it does not perform the initial Add\+Round\+Key step (this is done in subsequent steps by aesenc\+\_\+si128), and it does not use the simpler final round. Hence, this is a \char`\"{}pseudo\char`\"{} round -\/ though the function actually implements 10 rounds together.
+
+Note that unlike aesb\+\_\+pseudo\+\_\+round, this function works on multiple data chunks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & a pointer to nblocks $\ast$ 128 bits of data to be encrypted \\
+\hline
+{\em out} & a pointer to an nblocks $\ast$ 128 bit buffer where the output will be stored \\
+\hline
+{\em expanded\+Key} & the expanded A\+ES key \\
+\hline
+{\em nblocks} & the number of 128 blocks of data to be encrypted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_ae623801f274e32962d10a8bbe4474088}\label{cn__turtle__hash-amd64_8inl_ae623801f274e32962d10a8bbe4474088}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!aes\_pseudo\_round\_xor@{aes\_pseudo\_round\_xor}}
+\index{aes\_pseudo\_round\_xor@{aes\_pseudo\_round\_xor}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{aes\_pseudo\_round\_xor()}{aes\_pseudo\_round\_xor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void aes\+\_\+pseudo\+\_\+round\+\_\+xor (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{expanded\+Key,  }\item[{const uint8\+\_\+t $\ast$}]{xor,  }\item[{int}]{nblocks }\end{DoxyParamCaption})}
+
+
+
+aes\+\_\+pseudo\+\_\+round that loads data from $\ast$in and xors it with $\ast$xor first 
+
+This function performs the same operations as aes\+\_\+pseudo\+\_\+round, but before performing the encryption of each 128 bit block from $<$in$>$, it xors it with the corresponding block from $<$xor$>$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & a pointer to nblocks $\ast$ 128 bits of data to be encrypted \\
+\hline
+{\em out} & a pointer to an nblocks $\ast$ 128 bit buffer where the output will be stored \\
+\hline
+{\em expanded\+Key} & the expanded A\+ES key \\
+\hline
+{\em xor} & a pointer to an nblocks $\ast$ 128 bit buffer that is xored into in before encryption (in is left unmodified) \\
+\hline
+{\em nblocks} & the number of 128 blocks of data to be encrypted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a3cb9143c03520ab27af6d37f1193d065}\label{cn__turtle__hash-amd64_8inl_a3cb9143c03520ab27af6d37f1193d065}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!cn\_turtle\_hash@{cn\_turtle\_hash}}
+\index{cn\_turtle\_hash@{cn\_turtle\_hash}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{cn\_turtle\_hash()}{cn\_turtle\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+turtle\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{light,  }\item[{int}]{variant,  }\item[{int}]{prehashed,  }\item[{uint32\+\_\+t}]{scratchpad,  }\item[{uint32\+\_\+t}]{iterations }\end{DoxyParamCaption})}
+
+
+
+the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work 
+
+Computes the hash of $<$data$>$ (which consists of $<$length$>$ bytes), returning the hash in $<$hash$>$. The Crypto\+Night hash operates by first using Keccak 1600, the 1600 bit variant of the Keccak hash used in S\+H\+A-\/3, to create a 200 byte buffer of pseudorandom data by hashing the supplied data. It then uses this random data to fill a large 2MB buffer with pseudorandom data by iteratively encrypting it using 10 rounds of A\+ES per entry. After this initialization, it executes 524,288 rounds of mixing through the random 2MB buffer using A\+ES (typically provided in hardware on modern C\+P\+Us) and a 64 bit multiply. Finally, it re-\/mixes this large buffer back into the 200 byte \char`\"{}text\char`\"{} buffer, and then hashes this buffer using one of four pseudorandomly selected hash functions (Blake, Groestl, JH, or Skein) to populate the output.
+
+The 2MB buffer and choice of functions for mixing are designed to make the algorithm \char`\"{}\+C\+P\+U-\/friendly\char`\"{} (and thus, reduce the advantage of G\+PU, F\+P\+GA, or A\+S\+I\+C-\/based implementations)\+: the functions used are fast on modern C\+P\+Us, and the 2MB size matches the typical amount of L3 cache available per core on 2013-\/era C\+P\+Us. When available, this implementation will use hardware A\+ES support on x86 C\+P\+Us.
+
+A diagram of the inner loop of this function can be found at \href{https://www.cs.cmu.edu/~dga/crypto/xmr/cryptonight.png}{\texttt{ https\+://www.\+cs.\+cmu.\+edu/$\sim$dga/crypto/xmr/cryptonight.\+png}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data to hash \\
+\hline
+{\em length} & the length in bytes of the data \\
+\hline
+{\em hash} & a pointer to a buffer in which the final 256 bit hash will be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_ab80d53d937bb876b285a67613c64b845}\label{cn__turtle__hash-amd64_8inl_ab80d53d937bb876b285a67613c64b845}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!slow\_hash\_allocate\_state@{slow\_hash\_allocate\_state}}
+\index{slow\_hash\_allocate\_state@{slow\_hash\_allocate\_state}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{slow\_hash\_allocate\_state()}{slow\_hash\_allocate\_state()}}
+{\footnotesize\ttfamily void slow\+\_\+hash\+\_\+allocate\+\_\+state (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{page\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+allocate the 2MB scratch buffer using OS support for huge pages, if available 
+
+This function tries to allocate the 2MB scratch buffer using a single 2MB \char`\"{}huge page\char`\"{} (instead of the usual 4KB page sizes) to reduce T\+LB misses during the random accesses to the scratch buffer. This is one of the important speed optimizations needed to make Crypto\+Night faster.
+
+No parameters. Updates a thread-\/local pointer, hp\+\_\+state, to point to the allocated buffer. \mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a2f4f4a5b333eee3124d919107a5f6e70}\label{cn__turtle__hash-amd64_8inl_a2f4f4a5b333eee3124d919107a5f6e70}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!slow\_hash\_free\_state@{slow\_hash\_free\_state}}
+\index{slow\_hash\_free\_state@{slow\_hash\_free\_state}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{slow\_hash\_free\_state()}{slow\_hash\_free\_state()}}
+{\footnotesize\ttfamily void slow\+\_\+hash\+\_\+free\+\_\+state (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{page\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+frees the state allocated by slow\+\_\+hash\+\_\+allocate\+\_\+state 
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a2f15c2e23d7248fb6563014b87741378}\label{cn__turtle__hash-amd64_8inl_a2f15c2e23d7248fb6563014b87741378}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!xor64@{xor64}}
+\index{xor64@{xor64}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{xor64()}{xor64()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void xor64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{a,  }\item[{const uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}\label{cn__turtle__hash-amd64_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!xor\_blocks@{xor\_blocks}}
+\index{xor\_blocks@{xor\_blocks}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{xor\_blocks()}{xor\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void xor\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+a = (a xor b), where a and b point to 128 bit values 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_add93b7fc0a17dd573bdf766c978a4098}\label{cn__turtle__hash-amd64_8inl_add93b7fc0a17dd573bdf766c978a4098}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!hp\_allocated@{hp\_allocated}}
+\index{hp\_allocated@{hp\_allocated}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{hp\_allocated}{hp\_allocated}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} int hp\+\_\+allocated = 0}
+
+\mbox{\Hypertarget{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}\label{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}} 
+\index{cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}!hp\_state@{hp\_state}}
+\index{hp\_state@{hp\_state}!cn\_turtle\_hash-\/amd64.inl@{cn\_turtle\_hash-\/amd64.inl}}
+\doxysubsubsection{\texorpdfstring{hp\_state}{hp\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rx-slow-hash_8c_a3892b5161fc184e418de283ff62f00aa}{T\+H\+R\+E\+A\+DV}} uint8\+\_\+t$\ast$ hp\+\_\+state = N\+U\+LL}
+

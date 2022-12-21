@@ -1,0 +1,153 @@
+\hypertarget{classnodetool_1_1peerlist__storage}{}\doxysection{nodetool\+::peerlist\+\_\+storage Class Reference}
+\label{classnodetool_1_1peerlist__storage}\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+
+
+{\ttfamily \#include $<$net\+\_\+peerlist.\+h$>$}
+
+
+
+Collaboration diagram for nodetool\+::peerlist\+\_\+storage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classnodetool_1_1peerlist__storage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage_af8ff4be124ff46c3ab3be086c52feb8c}{peerlist\+\_\+storage}} ()
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage_aa77c5bafed8172757263486951f2b0e2}{peerlist\+\_\+storage}} (\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&\&)=default
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage_ace4a5a58a43dd0aab02b0ae047f1dde2}{peerlist\+\_\+storage}} (const \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&)=delete
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage_af0b4a03d1574886934f293112e5429fb}{$\sim$peerlist\+\_\+storage}} () noexcept
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \& \mbox{\hyperlink{classnodetool_1_1peerlist__storage_a8f4a7f35f5bc1fdaedcc25a59c7f6f58}{operator=}} (\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&\&)=default
+\item 
+\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \& \mbox{\hyperlink{classnodetool_1_1peerlist__storage_a71623cdbed64aad8ce06eb122876c75a}{operator=}} (const \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&)=delete
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__storage_ab2371118c98a900cc2b76b78981892f9}{store}} (std\+::ostream \&dest, const \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&other) const
+\begin{DoxyCompactList}\small\item\em Save peers from {\ttfamily this} and {\ttfamily other} in stream {\ttfamily dest}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classnodetool_1_1peerlist__storage_ad99bd64813b8784f20c19d5d3490bb5b}{store}} (const fs\+::path \&path, const \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&other) const
+\begin{DoxyCompactList}\small\item\em Save peers from {\ttfamily this} and {\ttfamily other} in one file at {\ttfamily path}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \mbox{\hyperlink{classnodetool_1_1peerlist__storage_aef484a036347336665d65e80c080a13a}{take\+\_\+zone}} (epee\+::net\+\_\+utils\+::zone zone)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::optional$<$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage_a0dd291e9708af80a64e01158b3bd365c}{open}} (std\+::istream \&src, const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} new\+\_\+format)
+\item 
+static std\+::optional$<$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} $>$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage_a75d7bbafd6b5d42e4cc010b5f46a3cf2}{open}} (const fs\+::path \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \mbox{\hyperlink{classnodetool_1_1peerlist__storage_a55cbed99846bdc949c6b0cfd3486d28e}{m\+\_\+types}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_af8ff4be124ff46c3ab3be086c52feb8c}\label{classnodetool_1_1peerlist__storage_af8ff4be124ff46c3ab3be086c52feb8c}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!peerlist\_storage@{peerlist\_storage}}
+\index{peerlist\_storage@{peerlist\_storage}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{peerlist\_storage()}{peerlist\_storage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily nodetool\+::peerlist\+\_\+storage\+::peerlist\+\_\+storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_aa77c5bafed8172757263486951f2b0e2}\label{classnodetool_1_1peerlist__storage_aa77c5bafed8172757263486951f2b0e2}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!peerlist\_storage@{peerlist\_storage}}
+\index{peerlist\_storage@{peerlist\_storage}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{peerlist\_storage()}{peerlist\_storage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily nodetool\+::peerlist\+\_\+storage\+::peerlist\+\_\+storage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_ace4a5a58a43dd0aab02b0ae047f1dde2}\label{classnodetool_1_1peerlist__storage_ace4a5a58a43dd0aab02b0ae047f1dde2}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!peerlist\_storage@{peerlist\_storage}}
+\index{peerlist\_storage@{peerlist\_storage}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{peerlist\_storage()}{peerlist\_storage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily nodetool\+::peerlist\+\_\+storage\+::peerlist\+\_\+storage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_af0b4a03d1574886934f293112e5429fb}\label{classnodetool_1_1peerlist__storage_af0b4a03d1574886934f293112e5429fb}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!````~peerlist\_storage@{$\sim$peerlist\_storage}}
+\index{````~peerlist\_storage@{$\sim$peerlist\_storage}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{$\sim$peerlist\_storage()}{~peerlist\_storage()}}
+{\footnotesize\ttfamily nodetool\+::peerlist\+\_\+storage\+::$\sim$peerlist\+\_\+storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_a75d7bbafd6b5d42e4cc010b5f46a3cf2}\label{classnodetool_1_1peerlist__storage_a75d7bbafd6b5d42e4cc010b5f46a3cf2}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!open@{open}}
+\index{open@{open}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} $>$ nodetool\+::peerlist\+\_\+storage\+::open (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Peers stored in file at {\ttfamily path} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_a0dd291e9708af80a64e01158b3bd365c}\label{classnodetool_1_1peerlist__storage_a0dd291e9708af80a64e01158b3bd365c}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!open@{open}}
+\index{open@{open}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} $>$ nodetool\+::peerlist\+\_\+storage\+::open (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{src,  }\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{new\+\_\+format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Peers stored in stream {\ttfamily src} in {\ttfamily new\+\_\+format} (portable archive or older non-\/portable). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_a71623cdbed64aad8ce06eb122876c75a}\label{classnodetool_1_1peerlist__storage_a71623cdbed64aad8ce06eb122876c75a}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!operator=@{operator=}}
+\index{operator=@{operator=}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}}\& nodetool\+::peerlist\+\_\+storage\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_a8f4a7f35f5bc1fdaedcc25a59c7f6f58}\label{classnodetool_1_1peerlist__storage_a8f4a7f35f5bc1fdaedcc25a59c7f6f58}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!operator=@{operator=}}
+\index{operator=@{operator=}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}}\& nodetool\+::peerlist\+\_\+storage\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodetool_1_1peerlist__storage}{peerlist\+\_\+storage}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_ad99bd64813b8784f20c19d5d3490bb5b}\label{classnodetool_1_1peerlist__storage_ad99bd64813b8784f20c19d5d3490bb5b}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!store@{store}}
+\index{store@{store}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+storage\+::store (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{path,  }\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Save peers from {\ttfamily this} and {\ttfamily other} in one file at {\ttfamily path}. 
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_ab2371118c98a900cc2b76b78981892f9}\label{classnodetool_1_1peerlist__storage_ab2371118c98a900cc2b76b78981892f9}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!store@{store}}
+\index{store@{store}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} nodetool\+::peerlist\+\_\+storage\+::store (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{dest,  }\item[{const \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Save peers from {\ttfamily this} and {\ttfamily other} in stream {\ttfamily dest}. 
+
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_aef484a036347336665d65e80c080a13a}\label{classnodetool_1_1peerlist__storage_aef484a036347336665d65e80c080a13a}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!take\_zone@{take\_zone}}
+\index{take\_zone@{take\_zone}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{take\_zone()}{take\_zone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} nodetool\+::peerlist\+\_\+storage\+::take\+\_\+zone (\begin{DoxyParamCaption}\item[{epee\+::net\+\_\+utils\+::zone}]{zone }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Peers in {\ttfamily zone} and from remove from {\ttfamily this}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnodetool_1_1peerlist__storage_a55cbed99846bdc949c6b0cfd3486d28e}\label{classnodetool_1_1peerlist__storage_a55cbed99846bdc949c6b0cfd3486d28e}} 
+\index{nodetool::peerlist\_storage@{nodetool::peerlist\_storage}!m\_types@{m\_types}}
+\index{m\_types@{m\_types}!nodetool::peerlist\_storage@{nodetool::peerlist\_storage}}
+\doxysubsubsection{\texorpdfstring{m\_types}{m\_types}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structnodetool_1_1peerlist__types}{peerlist\+\_\+types}} nodetool\+::peerlist\+\_\+storage\+::m\+\_\+types\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/p2p/\mbox{\hyperlink{net__peerlist_8h}{net\+\_\+peerlist.\+h}}\item 
+src/p2p/\mbox{\hyperlink{net__peerlist_8cpp}{net\+\_\+peerlist.\+cpp}}\end{DoxyCompactItemize}

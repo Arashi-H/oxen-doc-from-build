@@ -1,0 +1,107 @@
+\hypertarget{net__node_8cpp}{}\doxysection{src/p2p/net\+\_\+node.cpp File Reference}
+\label{net__node_8cpp}\index{src/p2p/net\_node.cpp@{src/p2p/net\_node.cpp}}
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net\+\_\+node.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/net\+\_\+utils\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/socks.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/parse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/tor\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}net/i2p\+\_\+address.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p/p2p\+\_\+protocol\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+Include dependency graph for net\+\_\+node.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{net__node_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacenodetool}{nodetool}}
+\item 
+ \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::int64\+\_\+t \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03_a8461f89d454133c466f8a3a86ac19701}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}\+::get\+\_\+max\+\_\+connections}} (const std\+::string\+\_\+view value) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\epee\+::net\+\_\+utils\+::network\+\_\+address \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03_a4d17966da273ecd47253fc4ea5c78740}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}\+::get\+\_\+address}} (std\+::string\+\_\+view value)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03_aee0fb7db1bb0ab0bc44731d502972c8d}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}\+::start\+\_\+socks}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnet_1_1socks_1_1client}{net\+::socks\+::client}} $>$ client, const boost\+::asio\+::ip\+::tcp\+::endpoint \&proxy, const epee\+::net\+\_\+utils\+::network\+\_\+address \&remote)
+\item 
+std\+::optional$<$ std\+::vector$<$ proxy $>$ $>$ \mbox{\hyperlink{namespacenodetool_a6a73bbc18c2c9bd173814bb5da760647}{nodetool\+::get\+\_\+proxies}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+std\+::optional$<$ std\+::vector$<$ anonymous\+\_\+inbound $>$ $>$ \mbox{\hyperlink{namespacenodetool_a98a2d31ce90dc5b190338095f269f545}{nodetool\+::get\+\_\+anonymous\+\_\+inbounds}} (boost\+::program\+\_\+options\+::variables\+\_\+map const \&vm)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacenodetool_a14f9b9f859e8362e20e818b823a20546}{nodetool\+::is\+\_\+filtered\+\_\+command}} (const epee\+::net\+\_\+utils\+::network\+\_\+address \&address, int command)
+\item 
+std\+::optional$<$ boost\+::asio\+::ip\+::tcp\+::socket $>$ \mbox{\hyperlink{namespacenodetool_a8b3c1de4475dc1a6e318d7f3fec820a4}{nodetool\+::socks\+\_\+connect\+\_\+internal}} (const std\+::atomic$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \&stop\+\_\+signal, boost\+::asio\+::io\+\_\+service \&service, const boost\+::asio\+::ip\+::tcp\+::endpoint \&proxy, const epee\+::net\+\_\+utils\+::network\+\_\+address \&remote)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const std\+::chrono\+::milliseconds \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03_a9117d32fe76a9271bf1349b50020b5de}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}\+::future\+\_\+poll\+\_\+interval}} = 500ms
+\item 
+constexpr const std\+::chrono\+::seconds \mbox{\hyperlink{namespacenodetool_1_1anonymous__namespace_02net__node_8cpp_03_a15d1ff997712c594169161a920fcd80e}{nodetool\+::anonymous\+\_\+namespace\{net\+\_\+node.\+cpp\}\+::socks\+\_\+connect\+\_\+timeout}} \{\mbox{\hyperlink{namespacecryptonote_1_1p2p_ad685be93db3ad4fb32b23559d3af12e1}{cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+O\+C\+K\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+T\+I\+M\+E\+O\+UT}}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_a98cca054b036f78d94ab17dbe9703378}{nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+ip}} = \{\char`\"{}p2p-\/bind-\/ip\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv4)\char`\"{}, \char`\"{}0.\+0.\+0.\+0\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_ab6ea6aebc74dd853fe539969c114ab1c}{nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+ipv6\+\_\+address}} = \{\char`\"{}p2p-\/bind-\/ipv6-\/address\char`\"{}, \char`\"{}Interface \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (I\+Pv6)\char`\"{}, \char`\"{}\+::\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ \mbox{\hyperlink{namespacenodetool_a5e7c990554f759bcb3cf814d367e31a1}{nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+port}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string, \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}, 2 $>$ \mbox{\hyperlink{namespacenodetool_ab8edd80efc0d9c61880703224b0862e3}{nodetool\+::arg\+\_\+p2p\+\_\+bind\+\_\+port\+\_\+ipv6}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a26b36b1d298ae4c3531a666faa098ec5}{nodetool\+::arg\+\_\+p2p\+\_\+external\+\_\+port}} = \{\char`\"{}p2p-\/external-\/port\char`\"{}, \char`\"{}External port \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p network protocol (\mbox{\hyperlink{CMakeLists_8txt_af10d802c1e70fdd7eec03a951f7170a9}{if}} port forwarding used with N\+AT)\char`\"{}, 0\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a8b8b8897cc0a9edc880db3dbd06d7f0b}{nodetool\+::arg\+\_\+p2p\+\_\+allow\+\_\+local\+\_\+ip}} = \{\char`\"{}allow-\/local-\/ip\char`\"{}, \char`\"{}Allow local ip add to peer list, mostly in debug purposes\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_af4e8feaa715ebe4d9353734e5758ab14}{nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+peer}} = \{\char`\"{}add-\/peer\char`\"{}, \char`\"{}Manually add peer to local peerlist\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_a0947f93bce867be82bef6ad491bfd2a2}{nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+priority\+\_\+node}} = \{\char`\"{}add-\/priority-\/node\char`\"{}, \char`\"{}Specify list of peers to connect to and attempt to keep the connection \mbox{\hyperlink{blockchain__prune_8cpp_ab8b7168c9d01d151d20efa80fd118fa9}{open}}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_afeba6dded72414c0010bb7a3f02be672}{nodetool\+::arg\+\_\+p2p\+\_\+add\+\_\+exclusive\+\_\+node}}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_aeb51026a051e5d5929efe0d7ff0eb9d6}{nodetool\+::arg\+\_\+p2p\+\_\+seed\+\_\+node}} = \{\char`\"{}seed-\/node\char`\"{}, \char`\"{}Connect to a node to retrieve peer addresses, and disconnect\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_a52e9f47f76f61f85461bf28441dd882b}{nodetool\+::arg\+\_\+tx\+\_\+proxy}} = \{\char`\"{}tx-\/proxy\char`\"{}, \char`\"{}Send local txes through proxy\+: $<$network-\/type$>$,$<$socks-\/ip\+:port$>$\mbox{[},max\+\_\+connections\mbox{]}\mbox{[},disable\+\_\+noise\mbox{]} i.\+e. \textbackslash{}\char`\"{}tor,127.\+0.\+0.\+1\+:9050,100,disable\+\_\+noise\textbackslash{}\char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacenodetool_aad89321d651fe9d9deed2381c70e2bf4}{nodetool\+::arg\+\_\+anonymous\+\_\+inbound}} = \{\char`\"{}anonymous-\/inbound\char`\"{}, \char`\"{}$<$hidden-\/service-\/address$>$,$<$\mbox{[}bind-\/ip\+:\mbox{]}port$>$\mbox{[},max\+\_\+connections\mbox{]} i.\+e. \textbackslash{}\char`\"{}x.\+onion,127.\+0.\+0.\+1\+:18083,100\textbackslash{}\char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_abb1ebf6698fb85a4fdfb14a9980acab9}{nodetool\+::arg\+\_\+p2p\+\_\+hide\+\_\+my\+\_\+port}} = \{\char`\"{}hide-\/my-\/port\char`\"{}, \char`\"{}Do not announce yourself as peerlist candidate\char`\"{}, false, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a612d217340851779ae52933343745951}{nodetool\+::arg\+\_\+no\+\_\+sync}} = \{\char`\"{}no-\/sync\char`\"{}, \char`\"{}Don\textquotesingle{}t synchronize the blockchain with other peers\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a496a6f567359c35550fddc645a29f2af}{nodetool\+::arg\+\_\+no\+\_\+igd}} = \{\char`\"{}no-\/igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacenodetool_acc79ccd38eff9496e4882f0ebedcf86b}{nodetool\+::arg\+\_\+igd}} = \{\char`\"{}igd\char`\"{}, \char`\"{}Deprecated option; ignored\char`\"{}, \char`\"{}\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_a6fae1026a1cc6bff9f216c355992a943}{nodetool\+::arg\+\_\+p2p\+\_\+use\+\_\+ipv6}} = \{\char`\"{}p2p-\/use-\/ipv6\char`\"{}, \char`\"{}Enable I\+Pv6 \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacenodetool_abb31865f18191a75181846f661cab49f}{nodetool\+::arg\+\_\+p2p\+\_\+ignore\+\_\+ipv4}} = \{\char`\"{}p2p-\/ignore-\/ipv4\char`\"{}, \char`\"{}Ignore unsuccessful I\+Pv4 bind \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} p2p\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_ab6f136cba233c65333f3926651d14c42}{nodetool\+::arg\+\_\+out\+\_\+peers}} = \{\char`\"{}out-\/peers\char`\"{}, \char`\"{}set max number of out peers\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_acffcbbfe1907ac04b0a97fdbdeab57de}{nodetool\+::arg\+\_\+in\+\_\+peers}} = \{\char`\"{}in-\/peers\char`\"{}, \char`\"{}set max number of in peers\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int $>$ \mbox{\hyperlink{namespacenodetool_a1d4310f98ca38e530c7f3ab8392d7b0c}{nodetool\+::arg\+\_\+tos\+\_\+flag}} = \{\char`\"{}tos-\/flag\char`\"{}, \char`\"{}set T\+OS flag\char`\"{}, -\/1\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a99004fc103d8d58b34e258c9f9611286}{nodetool\+::arg\+\_\+limit\+\_\+rate\+\_\+up}} = \{\char`\"{}limit-\/rate-\/up\char`\"{}, \char`\"{}set limit-\/rate-\/up \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+UP\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a914dbd25213aa3c0dc14f821156e72a9}{nodetool\+::arg\+\_\+limit\+\_\+rate\+\_\+down}} = \{\char`\"{}limit-\/rate-\/down\char`\"{}, \char`\"{}set limit-\/rate-\/down \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, cryptonote\+::p2p\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+I\+M\+I\+T\+\_\+\+R\+A\+T\+E\+\_\+\+D\+O\+WN\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ int64\+\_\+t $>$ \mbox{\hyperlink{namespacenodetool_a57ac7ce88f3d1a23b31d0172f2cfd039}{nodetool\+::arg\+\_\+limit\+\_\+rate}} = \{\char`\"{}limit-\/rate\char`\"{}, \char`\"{}set limit-\/rate \mbox{[}kB/\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}}\mbox{]}\char`\"{}, -\/1\}
+\end{DoxyCompactItemize}

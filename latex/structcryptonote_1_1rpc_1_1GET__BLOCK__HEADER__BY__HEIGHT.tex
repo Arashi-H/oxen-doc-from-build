@@ -1,0 +1,87 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+HT Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT}\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+HT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+HT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a225c9ee3b1238824f4f06e1e143de332}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+H\+T\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a7f0dd0fdb156b0ddb28a89b13573ec7a}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Similar to get\+\_\+block\+\_\+header\+\_\+by\+\_\+hash above, this method includes a block\textquotesingle{}s height as an input parameter to retrieve basic information about the block.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily height} A block height to look up; returned in {\ttfamily \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}}}
+\item {\ttfamily heights} Block heights to retrieve; returned in {\ttfamily block\+\_\+headers}
+\item {\ttfamily fill\+\_\+pow\+\_\+hash} Tell the daemon if it should fill out pow\+\_\+hash field.
+\item {\ttfamily get\+\_\+tx\+\_\+hashes} If true (default false) then include the hashes of non-\/coinbase transactions
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}}} Block header information for the requested {\ttfamily height} block
+\item {\ttfamily block\+\_\+headers} Block header information for the requested {\ttfamily heights} blocks 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a225c9ee3b1238824f4f06e1e143de332}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a225c9ee3b1238824f4f06e1e143de332}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+H\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a7f0dd0fdb156b0ddb28a89b13573ec7a}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_a7f0dd0fdb156b0ddb28a89b13573ec7a}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT@{cryptonote::rpc::GET\_BLOCK\_HEADER\_BY\_HEIGHT}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HEADER__BY__HEIGHT_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+H\+T\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+B\+Y\+\_\+\+H\+E\+I\+G\+H\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

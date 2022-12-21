@@ -1,0 +1,33 @@
+\hypertarget{hex_8h}{}\doxysection{src/common/hex.h File Reference}
+\label{hex_8h}\index{src/common/hex.h@{src/common/hex.h}}
+{\ttfamily \#include $<$oxenc/hex.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for hex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{hex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$    !std\+::is\+\_\+const\+\_\+v$<$\+T$>$ \&\& (std\+::is\+\_\+trivially\+\_\+copyable\+\_\+v$<$\+T$>$ $\vert$$\vert$ epee\+::is\+\_\+byte\+\_\+spannable$<$\+T$>$)  $>$$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_af30a50922a7754ab3d5a72c9883cbc46}{tools\+::hex\+\_\+to\+\_\+type}} (std\+::string\+\_\+view hex, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&x)
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$      (std\+::is\+\_\+standard\+\_\+layout\+\_\+v$<$\+T$>$ \&\& std\+::has\+\_\+unique\+\_\+object\+\_\+representations\+\_\+v$<$\+T$>$)      $\vert$$\vert$ epee\+::is\+\_\+byte\+\_\+spannable$<$\+T$>$  $>$$>$ }\\std\+::string \mbox{\hyperlink{namespacetools_a4810f462e9c67eb3e0e2e0e5988660ba}{tools\+::type\+\_\+to\+\_\+hex}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\begin{DoxyCompactList}\small\item\em Converts a standard layout, padding-\/free type into a hex string of its contents. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\hypertarget{structservice__nodes_1_1service__node__keys}{}\doxysection{service\+\_\+nodes\+::service\+\_\+node\+\_\+keys Struct Reference}
+\label{structservice__nodes_1_1service__node__keys}\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+
+
+Collection of keys used by a service node.  
+
+
+
+
+{\ttfamily \#include $<$service\+\_\+node\+\_\+list.\+h$>$}
+
+
+
+Collaboration diagram for service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structservice__nodes_1_1service__node__keys__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_acf0d8363cdec7c8d12affc7928bfe633}{key}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_a855baa22d8c871d15745e4d6ead29974}{pub}}
+\item 
+\mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{crypto\+::ed25519\+\_\+secret\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_a9ebe31c9eba3e7b4572cee842c04d1dc}{key\+\_\+ed25519}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_a9c75ef29531a6ce4befaa09e66084776}{pub\+\_\+ed25519}}
+\item 
+\mbox{\hyperlink{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}{crypto\+::x25519\+\_\+secret\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_a69b9200f17a36afc9dc09daead4b07ef}{key\+\_\+x25519}}
+\item 
+\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1service__node__keys_a7dc49780a80da1654722056c66879e52}{pub\+\_\+x25519}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collection of keys used by a service node. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_acf0d8363cdec7c8d12affc7928bfe633}\label{structservice__nodes_1_1service__node__keys_acf0d8363cdec7c8d12affc7928bfe633}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!key@{key}}
+\index{key@{key}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::key}
+
+The service node key pair used for registration-\/related data on the chain; is curve25519-\/based but with Monero-\/specific changes that make it useless for external tools supporting standard ed25519 or x25519 keys. T\+O\+D\+O(oxen) -\/ eventually drop this key and just do everything with the ed25519 key. \mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_a9ebe31c9eba3e7b4572cee842c04d1dc}\label{structservice__nodes_1_1service__node__keys_a9ebe31c9eba3e7b4572cee842c04d1dc}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!key\_ed25519@{key\_ed25519}}
+\index{key\_ed25519@{key\_ed25519}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{key\_ed25519}{key\_ed25519}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{crypto\+::ed25519\+\_\+secret\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::key\+\_\+ed25519}
+
+A secondary SN key pair used for ancillary operations by tools (e.\+g. libsodium) that rely on standard cryptography keypair signatures. \mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_a69b9200f17a36afc9dc09daead4b07ef}\label{structservice__nodes_1_1service__node__keys_a69b9200f17a36afc9dc09daead4b07ef}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!key\_x25519@{key\_x25519}}
+\index{key\_x25519@{key\_x25519}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{key\_x25519}{key\_x25519}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}{crypto\+::x25519\+\_\+secret\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::key\+\_\+x25519}
+
+A x25519 key computed from the ed25519 key, above, that is used for S\+N-\/to-\/\+SN encryption. (Unlike this above two keys this is not stored to disk; it is generated on the fly from the ed25519 key). \mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_a855baa22d8c871d15745e4d6ead29974}\label{structservice__nodes_1_1service__node__keys_a855baa22d8c871d15745e4d6ead29974}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!pub@{pub}}
+\index{pub@{pub}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{pub}{pub}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::pub}
+
+\mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_a9c75ef29531a6ce4befaa09e66084776}\label{structservice__nodes_1_1service__node__keys_a9c75ef29531a6ce4befaa09e66084776}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!pub\_ed25519@{pub\_ed25519}}
+\index{pub\_ed25519@{pub\_ed25519}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{pub\_ed25519}{pub\_ed25519}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::pub\+\_\+ed25519}
+
+\mbox{\Hypertarget{structservice__nodes_1_1service__node__keys_a7dc49780a80da1654722056c66879e52}\label{structservice__nodes_1_1service__node__keys_a7dc49780a80da1654722056c66879e52}} 
+\index{service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}!pub\_x25519@{pub\_x25519}}
+\index{pub\_x25519@{pub\_x25519}!service\_nodes::service\_node\_keys@{service\_nodes::service\_node\_keys}}
+\doxysubsubsection{\texorpdfstring{pub\_x25519}{pub\_x25519}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} service\+\_\+nodes\+::service\+\_\+node\+\_\+keys\+::pub\+\_\+x25519}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__list_8h}{service\+\_\+node\+\_\+list.\+h}}\end{DoxyCompactItemize}

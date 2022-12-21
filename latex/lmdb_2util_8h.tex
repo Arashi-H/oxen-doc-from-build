@@ -1,0 +1,106 @@
+\hypertarget{lmdb_2util_8h}{}\doxysection{src/lmdb/util.h File Reference}
+\label{lmdb_2util_8h}\index{src/lmdb/util.h@{src/lmdb/util.h}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$lmdb.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}epee/span.\+h\char`\"{}}\newline
+Include dependency graph for util.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lmdb_2util_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lmdb_2util_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlmdb_1_1identity}{lmdb\+::identity$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Prevent instantiation of {\ttfamily std\+::underlying\+\_\+type$<$T$>$} when {\ttfamily T} is not enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacelmdb}{lmdb}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}{M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+LD}}(obj,  field)~obj , decltype(std\+::declval$<$obj$>$().field) , offsetof(obj, field)
+\item 
+\#define \mbox{\hyperlink{lmdb_2util_8h_a822dbfa4f39b418e892f937b07b1ad1e}{M\+O\+N\+E\+R\+O\+\_\+\+S\+O\+R\+T\+\_\+\+BY}}(obj,  field)
+\begin{DoxyCompactList}\small\item\em Expands to {\ttfamily \mbox{\hyperlink{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}{lmdb\+::less}}} for the value {\ttfamily field} within {\ttfamily obj}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lmdb_2util_8h_a843743dbba7547d8f72c99532718d993}{M\+O\+N\+E\+R\+O\+\_\+\+C\+O\+M\+P\+A\+RE}}(obj,  field)
+\begin{DoxyCompactList}\small\item\em Expands to {\ttfamily \mbox{\hyperlink{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}{lmdb\+::compare}}} for the value {\ttfamily field} within {\ttfamily obj}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacelmdb_aeebb53d9dbbf45d588fbe8f45d26dd0a}{lmdb\+::native\+\_\+type}} = typename std\+::conditional$<$ std\+::is\+\_\+enum$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value, std\+::underlying\+\_\+type$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$, identity$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ $>$\+::type\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename U  = typename std\+::underlying\+\_\+type$<$\+T$>$\+::type$>$ }\\constexpr U \mbox{\hyperlink{namespacelmdb_a5eb88648d6b1060407f7a0928e5aa838}{lmdb\+::to\+\_\+native}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} value) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\M\+D\+B\+\_\+val \mbox{\hyperlink{namespacelmdb_a656cf7fc6437627278337f1a81e3588b}{lmdb\+::to\+\_\+val}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&value) noexcept
+\item 
+constexpr epee\+::span$<$ const std\+::uint8\+\_\+t $>$ \mbox{\hyperlink{namespacelmdb_a87ced9b8ad026a4831fc1b7b590e5b5f}{lmdb\+::to\+\_\+byte\+\_\+span}} (M\+D\+B\+\_\+val value) noexcept
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t offset = 0$>$ }\\int \mbox{\hyperlink{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}{lmdb\+::less}} (M\+D\+B\+\_\+val const $\ast$left, M\+D\+B\+\_\+val const $\ast$right) noexcept
+\item 
+{\footnotesize template$<$typename T , std\+::size\+\_\+t offset = 0$>$ }\\int \mbox{\hyperlink{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}{lmdb\+::compare}} (M\+D\+B\+\_\+val const $\ast$left, M\+D\+B\+\_\+val const $\ast$right) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lmdb_2util_8h_a843743dbba7547d8f72c99532718d993}\label{lmdb_2util_8h_a843743dbba7547d8f72c99532718d993}} 
+\index{util.h@{util.h}!MONERO\_COMPARE@{MONERO\_COMPARE}}
+\index{MONERO\_COMPARE@{MONERO\_COMPARE}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{MONERO\_COMPARE}{MONERO\_COMPARE}}
+{\footnotesize\ttfamily \#define M\+O\+N\+E\+R\+O\+\_\+\+C\+O\+M\+P\+A\+RE(\begin{DoxyParamCaption}\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \&\mbox{\hyperlink{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}{::lmdb::compare}}<                        \(\backslash\)}
+\DoxyCodeLine{        decltype(std::declval<obj>().\mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{field}}), \(\backslash\)}
+\DoxyCodeLine{        offsetof(obj, \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{field}})                 \(\backslash\)}
+\DoxyCodeLine{    >}
+
+\end{DoxyCode}
+
+
+Expands to {\ttfamily \mbox{\hyperlink{namespacelmdb_a47bd906ede9660754d2f8e5ed904187d}{lmdb\+::compare}}} for the value {\ttfamily field} within {\ttfamily obj}. 
+
+\mbox{\Hypertarget{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}\label{lmdb_2util_8h_a1a1cf76bee46710a454a9bc256600f1d}} 
+\index{util.h@{util.h}!MONERO\_FIELD@{MONERO\_FIELD}}
+\index{MONERO\_FIELD@{MONERO\_FIELD}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{MONERO\_FIELD}{MONERO\_FIELD}}
+{\footnotesize\ttfamily \#define M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})~obj , decltype(std\+::declval$<$obj$>$().field) , offsetof(obj, field)}
+
+Calculates types and offset of struct field. Use in template arguments for {\ttfamily table\+::get\+\_\+value}, {\ttfamily value\+\_\+iterator\+::get\+\_\+value}, {\ttfamily value\+\_\+stream\+::make\+\_\+iterator}, or {\ttfamily value\+\_\+stream\+::make\+\_\+range}. \mbox{\Hypertarget{lmdb_2util_8h_a822dbfa4f39b418e892f937b07b1ad1e}\label{lmdb_2util_8h_a822dbfa4f39b418e892f937b07b1ad1e}} 
+\index{util.h@{util.h}!MONERO\_SORT\_BY@{MONERO\_SORT\_BY}}
+\index{MONERO\_SORT\_BY@{MONERO\_SORT\_BY}!util.h@{util.h}}
+\doxysubsubsection{\texorpdfstring{MONERO\_SORT\_BY}{MONERO\_SORT\_BY}}
+{\footnotesize\ttfamily \#define M\+O\+N\+E\+R\+O\+\_\+\+S\+O\+R\+T\+\_\+\+BY(\begin{DoxyParamCaption}\item[{}]{obj,  }\item[{}]{field }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \&\mbox{\hyperlink{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}{::lmdb::less}}<                                              \(\backslash\)}
+\DoxyCodeLine{        lmdb::native\_type<decltype(std::declval<obj>().field)>, \(\backslash\)}
+\DoxyCodeLine{        offsetof(obj, \mbox{\hyperlink{namespaceserialization_a7477e8943eef74e01f4ba2aa46109bc8}{field}})                                    \(\backslash\)}
+\DoxyCodeLine{    >}
+
+\end{DoxyCode}
+
+
+Expands to {\ttfamily \mbox{\hyperlink{namespacelmdb_a568f36afdd2209de8ce68126cffa0dde}{lmdb\+::less}}} for the value {\ttfamily field} within {\ttfamily obj}. 
+

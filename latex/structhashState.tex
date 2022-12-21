@@ -1,0 +1,171 @@
+\hypertarget{structhashState}{}\doxysection{hash\+State Struct Reference}
+\label{structhashState}\index{hashState@{hashState}}
+
+
+{\ttfamily \#include $<$groestl.\+h$>$}
+
+
+
+Collaboration diagram for hash\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structhashState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structhashState_ade514ed23f721db8b1b6bb40b4ec1fa2}{D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16}} (\mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}} x\mbox{[}8\mbox{]}\mbox{[}2\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhashState_a0623d124ac2bed90c3cbbeda5901c754}{chaining}} \mbox{[}\mbox{\hyperlink{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}{S\+I\+Z\+E512}}/sizeof(uint32\+\_\+t)\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhashState_a4864622e7793db31fd7850a7cf8d5a79}{block\+\_\+counter1}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structhashState_a637630e91dd6a2063c940f531495a99c}{block\+\_\+counter2}}
+\item 
+\mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} \mbox{\hyperlink{structhashState_adc626b591149ea42b0c61a0021d5cee4}{buffer}} \mbox{[}\mbox{\hyperlink{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}{S\+I\+Z\+E512}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structhashState_abe6f6473e480824283d3cbc86a62adf8}{buf\+\_\+ptr}}
+\item 
+int \mbox{\hyperlink{structhashState_a17bbd91fd719f566baf192c0a7faf2b5}{bits\+\_\+in\+\_\+last\+\_\+byte}}
+\item 
+int \mbox{\hyperlink{structhashState_a21ff1852ce2fd35f6a71fb92316274f5}{hashbitlen}}
+\item 
+unsigned long long \mbox{\hyperlink{structhashState_a89df500a144ef7bed4f39f5555341987}{databitlen}}
+\item 
+unsigned long long \mbox{\hyperlink{structhashState_ad6c80152e8a842543790f58cc4ebfd20}{datasize\+\_\+in\+\_\+buffer}}
+\item 
+unsigned char \mbox{\hyperlink{structhashState_a71e6439958246b4e5185e81defc6fb1d}{buffer}} \mbox{[}64\mbox{]}
+\item 
+\mbox{\hyperlink{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}{uint\+\_\+t}} \mbox{\hyperlink{structhashState_a3e92849ff80c884f04b949cf0a928bcc}{statebits}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structSkein__Ctxt__Hdr__t}{Skein\_Ctxt\_Hdr\_t}} \mbox{\hyperlink{structhashState_ab4c009faeaba28562c52b44aeb326bd9}{h}}\\
+\>\mbox{\hyperlink{structSkein__256__Ctxt__t}{Skein\_256\_Ctxt\_t}} \mbox{\hyperlink{structhashState_a6c2c8c0c45fb30350e6168e4e14e7cfb}{ctx\_256}}\\
+\>\mbox{\hyperlink{structSkein__512__Ctxt__t}{Skein\_512\_Ctxt\_t}} \mbox{\hyperlink{structhashState_acfc4cfa7aef3f32fd4a6e12ed0d47a78}{ctx\_512}}\\
+\>\mbox{\hyperlink{structSkein1024__Ctxt__t}{Skein1024\_Ctxt\_t}} \mbox{\hyperlink{structhashState_a71a1fc6f507800de3d9eaf6af0bd28af}{ctx1024}}\\
+\} \mbox{\hyperlink{structhashState_a51d72f64b6071a0ab534a03cbef98d01}{u}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structhashState_ade514ed23f721db8b1b6bb40b4ec1fa2}\label{structhashState_ade514ed23f721db8b1b6bb40b4ec1fa2}} 
+\index{hashState@{hashState}!DATA\_ALIGN16@{DATA\_ALIGN16}}
+\index{DATA\_ALIGN16@{DATA\_ALIGN16}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{DATA\_ALIGN16()}{DATA\_ALIGN16()}}
+{\footnotesize\ttfamily hash\+State\+::\+D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{sha512-blocks_8c_a29940ae63ec06c9998bba873e25407ad}{uint64}}}]{x\mbox{[}8\mbox{]}\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structhashState_a17bbd91fd719f566baf192c0a7faf2b5}\label{structhashState_a17bbd91fd719f566baf192c0a7faf2b5}} 
+\index{hashState@{hashState}!bits\_in\_last\_byte@{bits\_in\_last\_byte}}
+\index{bits\_in\_last\_byte@{bits\_in\_last\_byte}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{bits\_in\_last\_byte}{bits\_in\_last\_byte}}
+{\footnotesize\ttfamily int hash\+State\+::bits\+\_\+in\+\_\+last\+\_\+byte}
+
+\mbox{\Hypertarget{structhashState_a4864622e7793db31fd7850a7cf8d5a79}\label{structhashState_a4864622e7793db31fd7850a7cf8d5a79}} 
+\index{hashState@{hashState}!block\_counter1@{block\_counter1}}
+\index{block\_counter1@{block\_counter1}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{block\_counter1}{block\_counter1}}
+{\footnotesize\ttfamily uint32\+\_\+t hash\+State\+::block\+\_\+counter1}
+
+\mbox{\Hypertarget{structhashState_a637630e91dd6a2063c940f531495a99c}\label{structhashState_a637630e91dd6a2063c940f531495a99c}} 
+\index{hashState@{hashState}!block\_counter2@{block\_counter2}}
+\index{block\_counter2@{block\_counter2}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{block\_counter2}{block\_counter2}}
+{\footnotesize\ttfamily uint32\+\_\+t hash\+State\+::block\+\_\+counter2}
+
+\mbox{\Hypertarget{structhashState_abe6f6473e480824283d3cbc86a62adf8}\label{structhashState_abe6f6473e480824283d3cbc86a62adf8}} 
+\index{hashState@{hashState}!buf\_ptr@{buf\_ptr}}
+\index{buf\_ptr@{buf\_ptr}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{buf\_ptr}{buf\_ptr}}
+{\footnotesize\ttfamily int hash\+State\+::buf\+\_\+ptr}
+
+\mbox{\Hypertarget{structhashState_a71e6439958246b4e5185e81defc6fb1d}\label{structhashState_a71e6439958246b4e5185e81defc6fb1d}} 
+\index{hashState@{hashState}!buffer@{buffer}}
+\index{buffer@{buffer}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned char hash\+State\+::buffer\mbox{[}64\mbox{]}}
+
+\mbox{\Hypertarget{structhashState_adc626b591149ea42b0c61a0021d5cee4}\label{structhashState_adc626b591149ea42b0c61a0021d5cee4}} 
+\index{hashState@{hashState}!buffer@{buffer}}
+\index{buffer@{buffer}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} hash\+State\+::buffer\mbox{[}\mbox{\hyperlink{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}{S\+I\+Z\+E512}}\mbox{]}}
+
+\mbox{\Hypertarget{structhashState_a0623d124ac2bed90c3cbbeda5901c754}\label{structhashState_a0623d124ac2bed90c3cbbeda5901c754}} 
+\index{hashState@{hashState}!chaining@{chaining}}
+\index{chaining@{chaining}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{chaining}{chaining}}
+{\footnotesize\ttfamily uint32\+\_\+t hash\+State\+::chaining\mbox{[}\mbox{\hyperlink{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}{S\+I\+Z\+E512}}/sizeof(uint32\+\_\+t)\mbox{]}}
+
+\mbox{\Hypertarget{structhashState_a71a1fc6f507800de3d9eaf6af0bd28af}\label{structhashState_a71a1fc6f507800de3d9eaf6af0bd28af}} 
+\index{hashState@{hashState}!ctx1024@{ctx1024}}
+\index{ctx1024@{ctx1024}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{ctx1024}{ctx1024}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkein1024__Ctxt__t}{Skein1024\+\_\+\+Ctxt\+\_\+t}} hash\+State\+::ctx1024}
+
+\mbox{\Hypertarget{structhashState_a6c2c8c0c45fb30350e6168e4e14e7cfb}\label{structhashState_a6c2c8c0c45fb30350e6168e4e14e7cfb}} 
+\index{hashState@{hashState}!ctx\_256@{ctx\_256}}
+\index{ctx\_256@{ctx\_256}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{ctx\_256}{ctx\_256}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkein__256__Ctxt__t}{Skein\+\_\+256\+\_\+\+Ctxt\+\_\+t}} hash\+State\+::ctx\+\_\+256}
+
+\mbox{\Hypertarget{structhashState_acfc4cfa7aef3f32fd4a6e12ed0d47a78}\label{structhashState_acfc4cfa7aef3f32fd4a6e12ed0d47a78}} 
+\index{hashState@{hashState}!ctx\_512@{ctx\_512}}
+\index{ctx\_512@{ctx\_512}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{ctx\_512}{ctx\_512}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkein__512__Ctxt__t}{Skein\+\_\+512\+\_\+\+Ctxt\+\_\+t}} hash\+State\+::ctx\+\_\+512}
+
+\mbox{\Hypertarget{structhashState_a89df500a144ef7bed4f39f5555341987}\label{structhashState_a89df500a144ef7bed4f39f5555341987}} 
+\index{hashState@{hashState}!databitlen@{databitlen}}
+\index{databitlen@{databitlen}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{databitlen}{databitlen}}
+{\footnotesize\ttfamily unsigned long long hash\+State\+::databitlen}
+
+\mbox{\Hypertarget{structhashState_ad6c80152e8a842543790f58cc4ebfd20}\label{structhashState_ad6c80152e8a842543790f58cc4ebfd20}} 
+\index{hashState@{hashState}!datasize\_in\_buffer@{datasize\_in\_buffer}}
+\index{datasize\_in\_buffer@{datasize\_in\_buffer}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{datasize\_in\_buffer}{datasize\_in\_buffer}}
+{\footnotesize\ttfamily unsigned long long hash\+State\+::datasize\+\_\+in\+\_\+buffer}
+
+\mbox{\Hypertarget{structhashState_ab4c009faeaba28562c52b44aeb326bd9}\label{structhashState_ab4c009faeaba28562c52b44aeb326bd9}} 
+\index{hashState@{hashState}!h@{h}}
+\index{h@{h}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSkein__Ctxt__Hdr__t}{Skein\+\_\+\+Ctxt\+\_\+\+Hdr\+\_\+t}} hash\+State\+::h}
+
+\mbox{\Hypertarget{structhashState_a21ff1852ce2fd35f6a71fb92316274f5}\label{structhashState_a21ff1852ce2fd35f6a71fb92316274f5}} 
+\index{hashState@{hashState}!hashbitlen@{hashbitlen}}
+\index{hashbitlen@{hashbitlen}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{hashbitlen}{hashbitlen}}
+{\footnotesize\ttfamily int hash\+State\+::hashbitlen}
+
+\mbox{\Hypertarget{structhashState_a3e92849ff80c884f04b949cf0a928bcc}\label{structhashState_a3e92849ff80c884f04b949cf0a928bcc}} 
+\index{hashState@{hashState}!statebits@{statebits}}
+\index{statebits@{statebits}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{statebits}{statebits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{skein__port_8h_a12a1e9b3ce141648783a82445d02b58d}{uint\+\_\+t}} hash\+State\+::statebits}
+
+\mbox{\Hypertarget{structhashState_a51d72f64b6071a0ab534a03cbef98d01}\label{structhashState_a51d72f64b6071a0ab534a03cbef98d01}} 
+\index{hashState@{hashState}!u@{u}}
+\index{u@{u}!hashState@{hashState}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily union \{ ... \}  hash\+State\+::u}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/crypto/\mbox{\hyperlink{groestl_8h}{groestl.\+h}}\item 
+src/crypto/\mbox{\hyperlink{jh_8c}{jh.\+c}}\item 
+src/crypto/\mbox{\hyperlink{skein_8c}{skein.\+c}}\end{DoxyCompactItemize}

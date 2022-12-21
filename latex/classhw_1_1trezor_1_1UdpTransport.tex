@@ -1,0 +1,314 @@
+\hypertarget{classhw_1_1trezor_1_1UdpTransport}{}\doxysection{hw\+::trezor\+::Udp\+Transport Class Reference}
+\label{classhw_1_1trezor_1_1UdpTransport}\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+
+
+{\ttfamily \#include $<$transport.\+hpp$>$}
+
+
+
+Inheritance diagram for hw\+::trezor\+::Udp\+Transport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classhw_1_1trezor_1_1UdpTransport__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for hw\+::trezor\+::Udp\+Transport\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classhw_1_1trezor_1_1UdpTransport__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_af88d042e17461ab30286da5d02b593e4}{Udp\+Transport}} (std\+::optional$<$ std\+::string $>$ device\+\_\+path=std\+::nullopt, std\+::optional$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Protocol}{Protocol}} $>$$>$ proto=std\+::nullopt)
+\item 
+virtual \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a8eeb562154b9d29e94a272863fb74286}{$\sim$\+Udp\+Transport}} ()=default
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a0c0d14a740d45d78242bfc19d676f276}{ping}} () override
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_ab3dcc25d7418148228e75d2be27778c5}{get\+\_\+path}} () const override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a3a81962dad220c582b3d40bac5f770bf}{enumerate}} (\mbox{\hyperlink{namespacehw_1_1trezor_ae32a860e5eaaf8f617e60fbb0134db96}{t\+\_\+transport\+\_\+vect}} \&res) override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a4b1c816c9d443586ff17f86bb1ba3acf}{open}} () override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a84ea87b7df203d6e1d1104c7b976681b}{close}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}} $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_ae649cf9ec551e7e18b176907220123da}{find\+\_\+debug}} () override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a0d43b6528cbb7f9daa5aa52803e16a26}{write}} (const google\+::protobuf\+::\+Message \&req) override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_afb738d7c0d28a0a86ca56f7ea0679670}{read}} (std\+::shared\+\_\+ptr$<$ google\+::protobuf\+::\+Message $>$ \&msg, messages\+::\+Message\+Type $\ast$msg\+\_\+type=nullptr) override
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a4dc69741a19b7ee86e57d6e9b29cf760}{write\+\_\+chunk}} (const void $\ast$buff, size\+\_\+t size) override
+\item 
+size\+\_\+t \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a63f29ad112f5a282aba5816cc7584657}{read\+\_\+chunk}} (void $\ast$buff, size\+\_\+t size) override
+\item 
+std\+::ostream \& \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a3b5a5d1c8f7471e7d7ebd91cf0436f52}{dump}} (std\+::ostream \&o) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_ac96de1d2bfc1cab545d8b726ba43e6af}{P\+A\+T\+H\+\_\+\+P\+R\+E\+F\+IX}} = \char`\"{}udp\+:\char`\"{}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a323edd496c4bf24a3607002bf1b4cb0d}{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST}} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+static constexpr int \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a78c043ad1599deba94fe66ecf7410646}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}} = 21324
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a66001bcab75efdb20499b96968b0286f}{require\+\_\+socket}} ()
+\item 
+ssize\+\_\+t \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_adb51488a6b20a88c23b0a613e66c13cf}{receive}} (void $\ast$buff, size\+\_\+t size, boost\+::system\+::error\+\_\+code $\ast$error\+\_\+code=nullptr, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} no\+\_\+throw=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, std\+::chrono\+::milliseconds timeout=10s)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a41778865452c201831818b9385a16063}{check\+\_\+deadline}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_adf00c55231d8117df34011fa7453bdcb}{ping\+\_\+int}} (std\+::chrono\+::milliseconds timeout=1500ms)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Protocol}{Protocol}} $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a1262d6670bd05c2769b6933b351a577d}{m\+\_\+proto}}
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a97465c9894a12b1bbe50215a0ff65284}{m\+\_\+device\+\_\+host}}
+\item 
+int \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a05d6dd3dd04d983e66509612def052a1}{m\+\_\+device\+\_\+port}}
+\item 
+std\+::unique\+\_\+ptr$<$ udp\+::socket $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a9f61042db67e36611bb411289e5e3051}{m\+\_\+socket}}
+\item 
+boost\+::asio\+::io\+\_\+service \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a09e6bae501ca14fd9d083697f1c93182}{m\+\_\+io\+\_\+service}}
+\item 
+boost\+::asio\+::steady\+\_\+timer \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_aa82ff4c0a0411da4f9f7661f4ff24339}{m\+\_\+deadline}}
+\item 
+udp\+::endpoint \mbox{\hyperlink{classhw_1_1trezor_1_1UdpTransport_a328f730a48feea81095cf1c08e319deb}{m\+\_\+endpoint}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_af88d042e17461ab30286da5d02b593e4}\label{classhw_1_1trezor_1_1UdpTransport_af88d042e17461ab30286da5d02b593e4}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!UdpTransport@{UdpTransport}}
+\index{UdpTransport@{UdpTransport}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{UdpTransport()}{UdpTransport()}}
+{\footnotesize\ttfamily hw\+::trezor\+::\+Udp\+Transport\+::\+Udp\+Transport (\begin{DoxyParamCaption}\item[{std\+::optional$<$ std\+::string $>$}]{device\+\_\+path = {\ttfamily std\+:\+:nullopt},  }\item[{std\+::optional$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Protocol}{Protocol}} $>$$>$}]{proto = {\ttfamily std\+:\+:nullopt} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a8eeb562154b9d29e94a272863fb74286}\label{classhw_1_1trezor_1_1UdpTransport_a8eeb562154b9d29e94a272863fb74286}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!````~UdpTransport@{$\sim$UdpTransport}}
+\index{````~UdpTransport@{$\sim$UdpTransport}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{$\sim$UdpTransport()}{~UdpTransport()}}
+{\footnotesize\ttfamily virtual hw\+::trezor\+::\+Udp\+Transport\+::$\sim$\+Udp\+Transport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a41778865452c201831818b9385a16063}\label{classhw_1_1trezor_1_1UdpTransport_a41778865452c201831818b9385a16063}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!check\_deadline@{check\_deadline}}
+\index{check\_deadline@{check\_deadline}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{check\_deadline()}{check\_deadline()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::check\+\_\+deadline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a84ea87b7df203d6e1d1104c7b976681b}\label{classhw_1_1trezor_1_1UdpTransport_a84ea87b7df203d6e1d1104c7b976681b}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!close@{close}}
+\index{close@{close}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a1cbb8d1a2312ec9598a5141d3a2f5c98}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a3b5a5d1c8f7471e7d7ebd91cf0436f52}\label{classhw_1_1trezor_1_1UdpTransport_a3b5a5d1c8f7471e7d7ebd91cf0436f52}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!dump@{dump}}
+\index{dump@{dump}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily std\+::ostream \& hw\+::trezor\+::\+Udp\+Transport\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a6d88be83e238e7d1580b7de7505446ac}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a3a81962dad220c582b3d40bac5f770bf}\label{classhw_1_1trezor_1_1UdpTransport_a3a81962dad220c582b3d40bac5f770bf}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!enumerate@{enumerate}}
+\index{enumerate@{enumerate}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{enumerate()}{enumerate()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::enumerate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehw_1_1trezor_ae32a860e5eaaf8f617e60fbb0134db96}{t\+\_\+transport\+\_\+vect}} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a4b0ad0bcceb423e1bb2174cf1c4ccc87}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_ae649cf9ec551e7e18b176907220123da}\label{classhw_1_1trezor_1_1UdpTransport_ae649cf9ec551e7e18b176907220123da}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!find\_debug@{find\_debug}}
+\index{find\_debug@{find\_debug}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{find\_debug()}{find\_debug()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhw_1_1trezor_1_1Transport}{Transport}} $>$ hw\+::trezor\+::\+Udp\+Transport\+::find\+\_\+debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a11144bb11df9df04c21e50adfb086749}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_ab3dcc25d7418148228e75d2be27778c5}\label{classhw_1_1trezor_1_1UdpTransport_ab3dcc25d7418148228e75d2be27778c5}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::\+Udp\+Transport\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a8cf555a0c0c7bd749a26640f20c82289}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a4b1c816c9d443586ff17f86bb1ba3acf}\label{classhw_1_1trezor_1_1UdpTransport_a4b1c816c9d443586ff17f86bb1ba3acf}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!open@{open}}
+\index{open@{open}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_aa313b73197b02b8e787584323d14895a}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a0c0d14a740d45d78242bfc19d676f276}\label{classhw_1_1trezor_1_1UdpTransport_a0c0d14a740d45d78242bfc19d676f276}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!ping@{ping}}
+\index{ping@{ping}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::\+Udp\+Transport\+::ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_ab7f76cba6bb531889c5ba33b438347b5}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_adf00c55231d8117df34011fa7453bdcb}\label{classhw_1_1trezor_1_1UdpTransport_adf00c55231d8117df34011fa7453bdcb}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!ping\_int@{ping\_int}}
+\index{ping\_int@{ping\_int}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{ping\_int()}{ping\_int()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::\+Udp\+Transport\+::ping\+\_\+int (\begin{DoxyParamCaption}\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily 1500ms} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_afb738d7c0d28a0a86ca56f7ea0679670}\label{classhw_1_1trezor_1_1UdpTransport_afb738d7c0d28a0a86ca56f7ea0679670}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!read@{read}}
+\index{read@{read}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::read (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ google\+::protobuf\+::\+Message $>$ \&}]{msg,  }\item[{messages\+::\+Message\+Type $\ast$}]{msg\+\_\+type = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a5336c1b8883e22fff52bdda072435ec1}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a63f29ad112f5a282aba5816cc7584657}\label{classhw_1_1trezor_1_1UdpTransport_a63f29ad112f5a282aba5816cc7584657}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!read\_chunk@{read\_chunk}}
+\index{read\_chunk@{read\_chunk}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{read\_chunk()}{read\_chunk()}}
+{\footnotesize\ttfamily size\+\_\+t hw\+::trezor\+::\+Udp\+Transport\+::read\+\_\+chunk (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a577d42147d964920bdb5ff615a78ba9d}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_adb51488a6b20a88c23b0a613e66c13cf}\label{classhw_1_1trezor_1_1UdpTransport_adb51488a6b20a88c23b0a613e66c13cf}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!receive@{receive}}
+\index{receive@{receive}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily ssize\+\_\+t hw\+::trezor\+::\+Udp\+Transport\+::receive (\begin{DoxyParamCaption}\item[{void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size,  }\item[{boost\+::system\+::error\+\_\+code $\ast$}]{error\+\_\+code = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{no\+\_\+throw = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{std\+::chrono\+::milliseconds}]{timeout = {\ttfamily 10s} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a66001bcab75efdb20499b96968b0286f}\label{classhw_1_1trezor_1_1UdpTransport_a66001bcab75efdb20499b96968b0286f}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!require\_socket@{require\_socket}}
+\index{require\_socket@{require\_socket}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{require\_socket()}{require\_socket()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::require\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a0d43b6528cbb7f9daa5aa52803e16a26}\label{classhw_1_1trezor_1_1UdpTransport_a0d43b6528cbb7f9daa5aa52803e16a26}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!write@{write}}
+\index{write@{write}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::write (\begin{DoxyParamCaption}\item[{const google\+::protobuf\+::\+Message \&}]{req }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_ace42566ce5c8b95ecde015323c76c572}{hw\+::trezor\+::\+Transport}}.
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a4dc69741a19b7ee86e57d6e9b29cf760}\label{classhw_1_1trezor_1_1UdpTransport_a4dc69741a19b7ee86e57d6e9b29cf760}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!write\_chunk@{write\_chunk}}
+\index{write\_chunk@{write\_chunk}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{write\_chunk()}{write\_chunk()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::\+Udp\+Transport\+::write\+\_\+chunk (\begin{DoxyParamCaption}\item[{const void $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classhw_1_1trezor_1_1Transport_a56879e8a8a19c40a7a31aea5e035b109}{hw\+::trezor\+::\+Transport}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a323edd496c4bf24a3607002bf1b4cb0d}\label{classhw_1_1trezor_1_1UdpTransport_a323edd496c4bf24a3607002bf1b4cb0d}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!DEFAULT\_HOST@{DEFAULT\_HOST}}
+\index{DEFAULT\_HOST@{DEFAULT\_HOST}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_HOST}{DEFAULT\_HOST}}
+{\footnotesize\ttfamily constexpr const char$\ast$ hw\+::trezor\+::\+Udp\+Transport\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+O\+ST = \char`\"{}127.\+0.\+0.\+1\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a78c043ad1599deba94fe66ecf7410646}\label{classhw_1_1trezor_1_1UdpTransport_a78c043ad1599deba94fe66ecf7410646}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!DEFAULT\_PORT@{DEFAULT\_PORT}}
+\index{DEFAULT\_PORT@{DEFAULT\_PORT}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PORT}{DEFAULT\_PORT}}
+{\footnotesize\ttfamily constexpr int hw\+::trezor\+::\+Udp\+Transport\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT = 21324\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_aa82ff4c0a0411da4f9f7661f4ff24339}\label{classhw_1_1trezor_1_1UdpTransport_aa82ff4c0a0411da4f9f7661f4ff24339}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_deadline@{m\_deadline}}
+\index{m\_deadline@{m\_deadline}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_deadline}{m\_deadline}}
+{\footnotesize\ttfamily boost\+::asio\+::steady\+\_\+timer hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+deadline\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a97465c9894a12b1bbe50215a0ff65284}\label{classhw_1_1trezor_1_1UdpTransport_a97465c9894a12b1bbe50215a0ff65284}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_device\_host@{m\_device\_host}}
+\index{m\_device\_host@{m\_device\_host}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_device\_host}{m\_device\_host}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+device\+\_\+host\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a05d6dd3dd04d983e66509612def052a1}\label{classhw_1_1trezor_1_1UdpTransport_a05d6dd3dd04d983e66509612def052a1}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_device\_port@{m\_device\_port}}
+\index{m\_device\_port@{m\_device\_port}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_device\_port}{m\_device\_port}}
+{\footnotesize\ttfamily int hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+device\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a328f730a48feea81095cf1c08e319deb}\label{classhw_1_1trezor_1_1UdpTransport_a328f730a48feea81095cf1c08e319deb}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_endpoint@{m\_endpoint}}
+\index{m\_endpoint@{m\_endpoint}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_endpoint}{m\_endpoint}}
+{\footnotesize\ttfamily udp\+::endpoint hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+endpoint\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a09e6bae501ca14fd9d083697f1c93182}\label{classhw_1_1trezor_1_1UdpTransport_a09e6bae501ca14fd9d083697f1c93182}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_io\_service@{m\_io\_service}}
+\index{m\_io\_service@{m\_io\_service}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_io\_service}{m\_io\_service}}
+{\footnotesize\ttfamily boost\+::asio\+::io\+\_\+service hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+io\+\_\+service\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a1262d6670bd05c2769b6933b351a577d}\label{classhw_1_1trezor_1_1UdpTransport_a1262d6670bd05c2769b6933b351a577d}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_proto@{m\_proto}}
+\index{m\_proto@{m\_proto}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_proto}{m\_proto}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classhw_1_1trezor_1_1Protocol}{Protocol}}$>$ hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+proto\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_a9f61042db67e36611bb411289e5e3051}\label{classhw_1_1trezor_1_1UdpTransport_a9f61042db67e36611bb411289e5e3051}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$udp\+::socket$>$ hw\+::trezor\+::\+Udp\+Transport\+::m\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1UdpTransport_ac96de1d2bfc1cab545d8b726ba43e6af}\label{classhw_1_1trezor_1_1UdpTransport_ac96de1d2bfc1cab545d8b726ba43e6af}} 
+\index{hw::trezor::UdpTransport@{hw::trezor::UdpTransport}!PATH\_PREFIX@{PATH\_PREFIX}}
+\index{PATH\_PREFIX@{PATH\_PREFIX}!hw::trezor::UdpTransport@{hw::trezor::UdpTransport}}
+\doxysubsubsection{\texorpdfstring{PATH\_PREFIX}{PATH\_PREFIX}}
+{\footnotesize\ttfamily constexpr const char$\ast$ hw\+::trezor\+::\+Udp\+Transport\+::\+P\+A\+T\+H\+\_\+\+P\+R\+E\+F\+IX = \char`\"{}udp\+:\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{transport_8hpp}{transport.\+hpp}}\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{transport_8cpp}{transport.\+cpp}}\end{DoxyCompactItemize}

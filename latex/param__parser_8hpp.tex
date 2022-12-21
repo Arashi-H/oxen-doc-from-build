@@ -1,0 +1,83 @@
+\hypertarget{param__parser_8hpp}{}\doxysection{src/rpc/common/param\+\_\+parser.hpp File Reference}
+\label{param__parser_8hpp}\index{src/rpc/common/param\_parser.hpp@{src/rpc/common/param\_parser.hpp}}
+{\ttfamily \#include \char`\"{}rpc/common/rpc\+\_\+binary.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$oxenc/bt\+\_\+serialize.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for param\+\_\+parser.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{param__parser_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{param__parser_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1required}{cryptonote\+::rpc\+::required$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1ignore__empty__string}{cryptonote\+::rpc\+::ignore\+\_\+empty\+\_\+string$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_1_1rpc_a8a473b7f3e02d5e8b4a8a2553a682e7b}{cryptonote\+::rpc\+::rpc\+\_\+input}} = std\+::variant$<$ std\+::monostate, \mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{json}}, bt\+\_\+dict\+\_\+consumer $>$
+\item 
+using \mbox{\hyperlink{namespacecryptonote_1_1rpc_a220cada912cf1de0d01b86ec87003f59}{cryptonote\+::rpc\+::json\+\_\+range}} = std\+::pair$<$ json\+::const\+\_\+iterator, json\+::const\+\_\+iterator $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Ignore$>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_ae688e76ff6d730c05f3bec4fdb79a177}{cryptonote\+::rpc\+::check\+\_\+ascending\+\_\+names}} (std\+::string\+\_\+view name1, std\+::string\+\_\+view name2, const Ignore \&...)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a4cecaea14ada58228d8384064903cd92}{cryptonote\+::rpc\+::skip\+\_\+until}} (bt\+\_\+dict\+\_\+consumer \&\mbox{\hyperlink{ommentedCombined_2ge__frombytes_8c_a0974daefcc79bbbd354f3a30f3150dba}{d}}, std\+::string\+\_\+view name)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a84c5fcccb51a5f4ef6d9da26d235dfbd}{cryptonote\+::rpc\+::skip\+\_\+until}} (json\+\_\+range \&it\+\_\+range, std\+::string\+\_\+view name)
+\item 
+{\footnotesize template$<$typename Tuple\+Like , size\+\_\+t... Is$>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a96512739dbff3ec9f05f1a5451149568}{cryptonote\+::rpc\+::load\+\_\+tuple\+\_\+values}} (bt\+\_\+list\+\_\+consumer \&, Tuple\+Like \&, std\+::index\+\_\+sequence$<$ Is... $>$)
+\item 
+{\footnotesize template$<$typename B\+T\+Consumer , typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ B\+T\+Consumer, bt\+\_\+dict\+\_\+consumer $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ B\+T\+Consumer, bt\+\_\+list\+\_\+consumer $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a77eef3b038f94fc50aef2389cf3cb761}{cryptonote\+::rpc\+::load\+\_\+value}} (B\+T\+Consumer \&c, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a328802f184de58dd12ac0ff44095d79c}{cryptonote\+::rpc\+::load\+\_\+value}} (json\+\_\+range \&r, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename In , typename T $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_a57dc25217ff50c31f66149aa4125fb7c}{cryptonote\+::rpc\+::load\+\_\+curr\+\_\+value}} (In \&in, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename In , typename T $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_aa5209bf9055fe8e7448e7fee7d2633f3}{cryptonote\+::rpc\+::get\+\_\+next\+\_\+value}} (In \&in, \mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]}std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename Input , typename T , typename... More$>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_aaadaad0800c5fd7166f13a8bf435b058}{cryptonote\+::rpc\+::get\+\_\+values}} (Input \&in, std\+::string\+\_\+view name, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&\&val, More \&\&... more)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_ae0efa724b844b3eb576bed7f30a9b84b}{cryptonote\+::rpc\+::is\+\_\+required\+\_\+wrapper}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_ac8b7a633231c7e5eada689ef06eea833}{cryptonote\+::rpc\+::is\+\_\+required\+\_\+wrapper$<$ required$<$ T $>$ $>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a76e2f9eee848e37edd002cc58def016e}{cryptonote\+::rpc\+::is\+\_\+std\+\_\+optional}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_aa06cfd5305f9f139cab609aa1d0f2f02}{cryptonote\+::rpc\+::is\+\_\+ignore\+\_\+empty\+\_\+string\+\_\+wrapper}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_aab905253482ff4fbc3ddcdc055c912ff}{cryptonote\+::rpc\+::is\+\_\+ignore\+\_\+empty\+\_\+string\+\_\+wrapper$<$ ignore\+\_\+empty\+\_\+string$<$ T $>$ $>$}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_a6df044d87bbf2483a90bb32c3e39c2d1}{cryptonote\+::rpc\+::is\+\_\+expandable\+\_\+list}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_adf16240371658d408fdff285ac34afc6}{cryptonote\+::rpc\+::is\+\_\+tuple\+\_\+like}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}

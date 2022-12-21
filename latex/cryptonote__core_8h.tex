@@ -1,0 +1,67 @@
+\hypertarget{cryptonote__core_8h}{}\doxysection{src/cryptonote\+\_\+core/cryptonote\+\_\+core.h File Reference}
+\label{cryptonote__core_8h}\index{src/cryptonote\_core/cryptonote\_core.h@{src/cryptonote\_core/cryptonote\_core.h}}
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/options\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include $<$oxenmq/oxenmq.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+handler\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/storages/portable\+\_\+storage\+\_\+template\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tx\+\_\+pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+quorum\+\_\+cop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pulse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/miner.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/connection\+\_\+context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/quorumnet.\+h\char`\"{}}\newline
+Include dependency graph for cryptonote\+\_\+core.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__core_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__core_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1test__options}{cryptonote\+::test\+\_\+options}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}}
+\begin{DoxyCompactList}\small\item\em handles core cryptonote functionality \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a876ef32d7c7d04d13e48cdd7f9fda827}{cryptonote\+::quorumnet\+\_\+new\+\_\+proc}} = void $\ast$(core \&core)
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a0a6dd0e998ec72a13301e6fa6aeae26a}{cryptonote\+::quorumnet\+\_\+init\+\_\+proc}} = void(core \&core, void $\ast$self)
+\item 
+using \mbox{\hyperlink{namespacecryptonote_abb8e759d1f8404244f6431c65a77b213}{cryptonote\+::quorumnet\+\_\+delete\+\_\+proc}} = void(void $\ast$\&self)
+\item 
+using \mbox{\hyperlink{namespacecryptonote_abe9562fba53ab6c8bdd27e21e8959e32}{cryptonote\+::quorumnet\+\_\+relay\+\_\+obligation\+\_\+votes\+\_\+proc}} = void(void $\ast$self, const std\+::vector$<$ \mbox{\hyperlink{structservice__nodes_1_1quorum__vote__t}{service\+\_\+nodes\+::quorum\+\_\+vote\+\_\+t}} $>$ \&votes)
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a247247b72e263e895deb65f4c2f32223}{cryptonote\+::quorumnet\+\_\+send\+\_\+blink\+\_\+proc}} = std\+::future$<$ std\+::pair$<$ blink\+\_\+result, std\+::string $>$ $>$(core \&core, const std\+::string \&tx\+\_\+blob)
+\item 
+using \mbox{\hyperlink{namespacecryptonote_a88cd83b16855aa72f88e8cfdfde8efde}{cryptonote\+::quorumnet\+\_\+pulse\+\_\+relay\+\_\+message\+\_\+to\+\_\+quorum\+\_\+proc}} = void(void $\ast$, \mbox{\hyperlink{structpulse_1_1message}{pulse\+::message}} const \&msg, \mbox{\hyperlink{structservice__nodes_1_1quorum}{service\+\_\+nodes\+::quorum}} const \&quorum, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} block\+\_\+producer)
+\end{DoxyCompactItemize}

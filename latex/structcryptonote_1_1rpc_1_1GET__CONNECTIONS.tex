@@ -1,0 +1,87 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__CONNECTIONS}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__CONNECTIONS}\index{cryptonote::rpc::GET\_CONNECTIONS@{cryptonote::rpc::GET\_CONNECTIONS}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structcryptonote_1_1rpc_1_1GET__CONNECTIONS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+NS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{structcryptonote_1_1rpc_1_1GET__CONNECTIONS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__CONNECTIONS_a64a7e3701e91ab0deb06e67842fc2830}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Retrieve information about incoming and outgoing P2P connections to your node.
+
+Inputs\+: none
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily connections} List of all connections and their info; each element is a dict containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily incoming} bool of whether this connection was established by the remote to us (true) or by us to the remove (false).
+\item {\ttfamily ip} address of the remote peer
+\item {\ttfamily port} the remote port of the peer connection
+\item {\ttfamily address\+\_\+type} -\/ 1/2/3/4 for ipv4/ipv6/i2p/tor, respectively.
+\item {\ttfamily peer\+\_\+id} a string that uniquely identifies a peer node
+\item {\ttfamily recv\+\_\+count} number of bytes of data received from this peer
+\item {\ttfamily recv\+\_\+idle\+\_\+ms} number of milliseconds since we last received data from this peer
+\item {\ttfamily send\+\_\+count} number of bytes of data send to this peer
+\item {\ttfamily send\+\_\+idle\+\_\+ms} number of milliseconds since we last sent data to this peer
+\item {\ttfamily state} returns the current state of the connection with this peer as a string, one of\+:
+\begin{DoxyItemize}
+\item {\ttfamily before\+\_\+handshake} -\/ the connection is still being established/negotiated
+\item {\ttfamily synchronizing} -\/ we are synchronizing the blockchain with this peer
+\item {\ttfamily standby} -\/ the peer is available for synchronizing but we are not currently using it
+\item {\ttfamily normal} -\/ this is a regular, synchronized peer
+\end{DoxyItemize}
+\item {\ttfamily live\+\_\+ms} -\/ number of milliseconds since this connection was initiated
+\item {\ttfamily avg\+\_\+download} -\/ the average download speed from this peer in bytes per second
+\item {\ttfamily current\+\_\+download} -\/ the current (i.\+e. average over a very recent period) download speed from this peer in bytes per second.
+\item {\ttfamily avg\+\_\+upload} -\/ the average upload speed to this peer in bytes per second
+\item {\ttfamily current\+\_\+upload} -\/ the current upload speed to this peer in bytes per second
+\item {\ttfamily connection\+\_\+id} -\/ a unique random string identifying this connection
+\item {\ttfamily height} -\/ the height of the peer
+\item {\ttfamily host} -\/ the hostname for this peer; only included if != {\ttfamily ip} 
+\item {\ttfamily localhost} -\/ set to true if the peer is a localhost connection; omitted otherwise.
+\item {\ttfamily local\+\_\+ip} -\/ set to true if the peer is a non-\/public, local network connection; omitted otherwise. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__CONNECTIONS_a64a7e3701e91ab0deb06e67842fc2830}\label{structcryptonote_1_1rpc_1_1GET__CONNECTIONS_a64a7e3701e91ab0deb06e67842fc2830}} 
+\index{cryptonote::rpc::GET\_CONNECTIONS@{cryptonote::rpc::GET\_CONNECTIONS}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_CONNECTIONS@{cryptonote::rpc::GET\_CONNECTIONS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

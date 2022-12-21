@@ -1,0 +1,918 @@
+\hypertarget{classhw_1_1device}{}\doxysection{hw\+::device Class Reference}
+\label{classhw_1_1device}\index{hw::device@{hw::device}}
+
+
+{\ttfamily \#include $<$device.\+hpp$>$}
+
+
+
+Inheritance diagram for hw\+::device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classhw_1_1device__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} \{ \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74ab50339a10e1de285ac99d4c3990b8693}{mode\+::\+N\+O\+NE}}, 
+\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a8f58e28d5dadd53d7353d1c7565cf17a}{mode\+::\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+E\+AL}}, 
+\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74aa841a8fc8aa712448f0a778e34905e2e}{mode\+::\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+A\+KE}}, 
+\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a7346c56552d0a00a6f1a2331c1fc30c2}{mode\+::\+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+A\+R\+SE}}
+ \}
+\item 
+enum \mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}{type}} \{ \mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaaaea541d7f9574587656dc5125116e548}{type\+::\+S\+O\+F\+T\+W\+A\+RE}} = 0, 
+\mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaa90edd2c2f8e60f79a1b54485b1efdba1}{type\+::\+L\+E\+D\+G\+ER}} = 1, 
+\mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaab6cc5aa6361e60113b6d4c43c4c07ac3}{type\+::\+T\+R\+E\+Z\+OR}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}{protocol}} \{ \mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca5b39c8b553c821e7cddc6da64b5bd2ee}{protocol\+::\+D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fcae69e6446e892e3922e76c82e96837920}{protocol\+::\+P\+R\+O\+XY}}, 
+\mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca3f7ff4daa99912d1b0c8c64340edb9fb}{protocol\+::\+C\+O\+LD}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1device_a0fb73e50e3c9cb186fcc0b8aba42b54f}{device}} ()=default
+\item 
+\mbox{\hyperlink{classhw_1_1device_a03ed320af3cbe52d9207a08b20c3dbdd}{device}} (const \mbox{\hyperlink{classhw_1_1device}{device}} \&)=delete
+\item 
+\mbox{\hyperlink{classhw_1_1device}{device}} \& \mbox{\hyperlink{classhw_1_1device_a5cee6ad7590590b48346a99ee4edb088}{operator=}} (const \mbox{\hyperlink{classhw_1_1device}{device}} \&)=delete
+\item 
+\mbox{\hyperlink{classhw_1_1device_ac3c4c702f769597cf91a755439ccfd1e}{device}} (\mbox{\hyperlink{classhw_1_1device}{device}} \&\&)=default
+\item 
+\mbox{\hyperlink{classhw_1_1device}{device}} \& \mbox{\hyperlink{classhw_1_1device_a00eb9ee5c9586051f2e22723826857d0}{operator=}} (\mbox{\hyperlink{classhw_1_1device}{device}} \&\&)=default
+\item 
+virtual \mbox{\hyperlink{classhw_1_1device_af39a85b4734eb4139e53dbac6cdb644b}{$\sim$device}} ()=default
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_aff240cae41e884095a1327c46d3e871e}{is\+\_\+hardware\+\_\+device}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a54269ad0d0f67f3416e51e626673046f}{set\+\_\+name}} (std\+::string\+\_\+view \mbox{\hyperlink{classhw_1_1device_a3c75c4cdf900c0628e43726de56d55b4}{name}})=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classhw_1_1device_ab58d9a511ae616aee71bdf820cc5f86f}{get\+\_\+name}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a967d2ac932ce1e63e740666ede322978}{set\+\_\+address}} (std\+::string\+\_\+view address)
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a17e0f5634db7f9d1b8b57154400afbf0}{init}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a5a204a04dfd096aa36991e05f8b1de8a}{release}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a7434ae35fe366c83a4015ac102eb9e15}{connect}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a266adca208120fe053d7ea0978cde0c5}{disconnect}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_ae02c83e388eff482d9adb502b491a5a2}{set\+\_\+mode}} (\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} m)
+\item 
+virtual \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} \mbox{\hyperlink{classhw_1_1device_a141b9a4c87476286ef8744f069182199}{get\+\_\+mode}} () const
+\item 
+virtual \mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}{type}} \mbox{\hyperlink{classhw_1_1device_a51d8d971c036bc47c961b6d86892097f}{get\+\_\+type}} () const =0
+\item 
+virtual \mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}{protocol}} \mbox{\hyperlink{classhw_1_1device_a1c90b580545acfa2eff2e976c08eedd7}{device\+\_\+protocol}} () const
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a6254bd0b527f438e47a695704820c7e4}{set\+\_\+callback}} (\mbox{\hyperlink{classhw_1_1i__device__callback}{i\+\_\+device\+\_\+callback}} $\ast$callback)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a80d343e81459fd95505cae61fb2eea80}{set\+\_\+derivation\+\_\+path}} (const std\+::string \&derivation\+\_\+path)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a0c56432a75fda2a4d6db3f9fc407821a}{set\+\_\+pin}} (const epee\+::wipeable\+\_\+string \&pin)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a7d0299f8f0b0996016b6813f0c780c07}{set\+\_\+passphrase}} (const epee\+::wipeable\+\_\+string \&passphrase)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a10e45810f93c1ee3ab00acaa47ed54d4}{lock}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_ab9528828bae43a813605cf1650746834}{unlock}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_af94399cb67127ad715c5f2369f99cafb}{try\+\_\+lock}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_af629b2a978de17974c635c4435c6ef10}{get\+\_\+public\+\_\+address}} (\mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&pubkey)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a4e2c17f66882aa937f01355c915f9433}{get\+\_\+secret\+\_\+keys}} (\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&viewkey, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&spendkey)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_ab4682f514c95f4ef98cb2fed390c3a07}{generate\+\_\+chacha\+\_\+key}} (const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&keys, crypto\+::chacha\+\_\+key \&key, uint64\+\_\+t kdf\+\_\+rounds)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_acd63f183790a9d1e78cb3ab906207bdb}{derive\+\_\+subaddress\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const std\+::size\+\_\+t output\+\_\+index, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&derived\+\_\+pub)=0
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \mbox{\hyperlink{classhw_1_1device_a5bd6431b127c7e1683466a8267e01b52}{get\+\_\+subaddress\+\_\+spend\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&keys, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&index)=0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \mbox{\hyperlink{classhw_1_1device_aad71be5732043a1530bc7287b7ddc60e}{get\+\_\+subaddress\+\_\+spend\+\_\+public\+\_\+keys}} (const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&keys, uint32\+\_\+t account, uint32\+\_\+t begin, uint32\+\_\+t end)=0
+\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \mbox{\hyperlink{classhw_1_1device_af5b53cba25ef50d1022047c1353478a5}{get\+\_\+subaddress}} (const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&keys, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&index)=0
+\item 
+virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classhw_1_1device_a886548b51daac72e051eab69c7af580c}{get\+\_\+subaddress\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&index)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_abcd5dafb46d1bc29d39e27278a557ad0}{verify\+\_\+keys}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&secret\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&public\+\_\+key)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_aff1fb74f3edcf3edbea8d15ac9454536}{scalarmult\+Key}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&aP, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&P, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a7f0927b2a1d1bc8a81af26977eee5f94}{scalarmult\+Base}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&aG, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a1a51e9d2bf023e16c451a8a3e910a517}{sc\+\_\+secret\+\_\+add}} (\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&r, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&a, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&b)=0
+\item 
+virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \mbox{\hyperlink{classhw_1_1device_aa12d98179d6fd4f127b494ebb37451c7}{generate\+\_\+keys}} (\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&recovery\+\_\+key=\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}(), \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} recover=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})=0
+\item 
+virtual \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \mbox{\hyperlink{classhw_1_1device_aa8f6251ec35ef7b97b2dff707b14b5bb}{generate\+\_\+key\+\_\+derivation}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a62eec2f0f826d6da1ab43145204807b1}{generate\+\_\+key\+\_\+derivation}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a251165b392cd0e0464f6a79d67fb21ba}{conceal\+\_\+derivation}} (\mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&tx\+\_\+pub\+\_\+key, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+pub\+\_\+keys, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&main\+\_\+derivation, const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} $>$ \&additional\+\_\+derivations)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a44b90f07cea49fa0dc8158acc05c1e05}{derivation\+\_\+to\+\_\+scalar}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const size\+\_\+t output\+\_\+index, \mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&res)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a9fddcfb816779c7c7e8edf80a0dc5a95}{derive\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const std\+::size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&derived\+\_\+sec)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a69914b9e95c8c686286d0e76e24d3d95}{derive\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&derivation, const std\+::size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&derived\+\_\+pub)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a8d032cbdf8c4a595f33647f17862b69b}{secret\+\_\+key\+\_\+to\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a40e63871ec4947d1b5b18e691955c4f5}{generate\+\_\+key\+\_\+image}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&image)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a6845f196fce506844b06004ad0d97877}{generate\+\_\+key\+\_\+image\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&image, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a42ab4ecb54290744f2b7ff89ba42f1f3}{generate\+\_\+unlock\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a6ea23af11ac5b2fd0e8c75a5549fe296}{generate\+\_\+ons\+\_\+signature}} (std\+::string\+\_\+view signature\+\_\+data, const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&keys, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&index, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig)=0
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{classhw_1_1device_ae9af021b836f72a953181eb5c0c10aac}{scalarmult\+Key}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&P, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a)
+\item 
+\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{classhw_1_1device_ad6bc8410ad99c82dbe619e81df9c146f}{scalarmult\+Base}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a6a78043230cd9552171f304e8f1c1b3b}{generate\+\_\+tx\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&R, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&A, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&B, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&D, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&r, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&sig)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a292cb587708b13d150b79fd49d31dee3}{open\+\_\+tx}} (\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, \mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736}{cryptonote\+::txversion}} txversion, \mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913e}{cryptonote\+::txtype}} txtype)=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_ad9e8b8a99acbb34463ced52daf66cc1e}{get\+\_\+transaction\+\_\+prefix\+\_\+hash}} (const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&tx, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a5d8ffbb326ec1eefa1190100832a76a4}{encrypt\+\_\+payment\+\_\+id}} (\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&payment\+\_\+id, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&public\+\_\+key, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&secret\+\_\+key)=0
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_aa6a19ac9be03eae5afe6d7c5125c99c0}{decrypt\+\_\+payment\+\_\+id}} (\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&payment\+\_\+id, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&public\+\_\+key, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&secret\+\_\+key)
+\item 
+virtual \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \mbox{\hyperlink{classhw_1_1device_af55d477d601eeba8c33757e097cb5fe4}{gen\+Commitment\+Mask}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&amount\+\_\+key)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a4ec750d8fbc2968518d3dceb0e06d957}{ecdh\+Encode}} (\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}} \&unmasked, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&shared\+Sec, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} short\+\_\+amount)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a24ca2c64936fab87aacef0eb16478262}{ecdh\+Decode}} (\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}} \&masked, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&shared\+Sec, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} short\+\_\+amount)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a04659820ad288764eda86cdb12b5f363}{generate\+\_\+output\+\_\+ephemeral\+\_\+keys}} (size\+\_\+t tx\+\_\+version, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&found\+\_\+change, const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&sender\+\_\+account\+\_\+keys, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&txkey\+\_\+pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&tx\+\_\+key, const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&dst\+\_\+entr, const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&change\+\_\+addr, size\+\_\+t output\+\_\+index, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} need\+\_\+additional\+\_\+txkeys, const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+keys, std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&additional\+\_\+tx\+\_\+public\+\_\+keys, std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&amount\+\_\+keys, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+eph\+\_\+public\+\_\+key)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a64dc2663f186c9b1983f87d12824f276}{clsag\+\_\+prehash}} (const std\+::string \&blob, size\+\_\+t inputs\+\_\+size, size\+\_\+t outputs\+\_\+size, const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&hashes, const \mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}} \&out\+Pk, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&prehash)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a64a7ab01a309a6d357a753f6ef7a759d}{clsag\+\_\+prepare}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&p, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&z, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&I, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&D, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&H, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&aG, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&aH)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_ab0e8205d56ce609e959a85f9dfc53552}{clsag\+\_\+hash}} (const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&data, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&hash)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a8bf69d5d073d4ce17c0739787f2c45a4}{clsag\+\_\+sign}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&c, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&a, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&p, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&z, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mu\+\_\+P, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&mu\+\_\+C, \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a24067082fc6d66849261027ce681b0ec}{update\+\_\+staking\+\_\+tx\+\_\+secret\+\_\+key}} (\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&key)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_aab12a9573782995085aab65c720da18b}{close\+\_\+tx}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_ae6cf82b9a4383a98c4b9e01747795ba4}{has\+\_\+ki\+\_\+cold\+\_\+sync}} () const
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_a092c723582095c1c2466b08a71abfeb4}{has\+\_\+tx\+\_\+cold\+\_\+sign}} () const
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_ad806c23ab7b38d2d5fa3dc2fb8b69847}{has\+\_\+ki\+\_\+live\+\_\+refresh}} () const
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device_acb58adf2ec39408c09607ca31bb98ce4}{compute\+\_\+key\+\_\+image}} (const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&ack, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&recv\+\_\+derivation, size\+\_\+t real\+\_\+output\+\_\+index, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&received\+\_\+index, \mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&in\+\_\+ephemeral, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_acb2e9344dd0c1a98268e50b965ac749a}{computing\+\_\+key\+\_\+images}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} started)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a33a74ae1ea310647d5b37424df9fe857}{set\+\_\+network\+\_\+type}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} network\+\_\+type)
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device_a0f21ba058adb1139f01659cc3df8142d}{display\+\_\+address}} (const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&index, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} $>$ \&payment\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1device_a3c75c4cdf900c0628e43726de56d55b4}{name}}
+\item 
+\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} \mbox{\hyperlink{classhw_1_1device_a577746c59d118681a5fd193e35ad74a8}{mode\+\_\+}} = \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74ab50339a10e1de285ac99d4c3990b8693}{mode\+::\+N\+O\+NE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}\label{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}} 
+\index{hw::device@{hw::device}!mode@{mode}}
+\index{mode@{mode}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{hw\+::device\+::mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!hw::device@{hw::device}}\index{hw::device@{hw::device}!NONE@{NONE}}}\mbox{\Hypertarget{classhw_1_1device_a3544f6d308707631a05dcdade3903d74ab50339a10e1de285ac99d4c3990b8693}\label{classhw_1_1device_a3544f6d308707631a05dcdade3903d74ab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSACTION\_CREATE\_REAL@{TRANSACTION\_CREATE\_REAL}!hw::device@{hw::device}}\index{hw::device@{hw::device}!TRANSACTION\_CREATE\_REAL@{TRANSACTION\_CREATE\_REAL}}}\mbox{\Hypertarget{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a8f58e28d5dadd53d7353d1c7565cf17a}\label{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a8f58e28d5dadd53d7353d1c7565cf17a}} 
+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+R\+E\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSACTION\_CREATE\_FAKE@{TRANSACTION\_CREATE\_FAKE}!hw::device@{hw::device}}\index{hw::device@{hw::device}!TRANSACTION\_CREATE\_FAKE@{TRANSACTION\_CREATE\_FAKE}}}\mbox{\Hypertarget{classhw_1_1device_a3544f6d308707631a05dcdade3903d74aa841a8fc8aa712448f0a778e34905e2e}\label{classhw_1_1device_a3544f6d308707631a05dcdade3903d74aa841a8fc8aa712448f0a778e34905e2e}} 
+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+F\+A\+KE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSACTION\_PARSE@{TRANSACTION\_PARSE}!hw::device@{hw::device}}\index{hw::device@{hw::device}!TRANSACTION\_PARSE@{TRANSACTION\_PARSE}}}\mbox{\Hypertarget{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a7346c56552d0a00a6f1a2331c1fc30c2}\label{classhw_1_1device_a3544f6d308707631a05dcdade3903d74a7346c56552d0a00a6f1a2331c1fc30c2}} 
+T\+R\+A\+N\+S\+A\+C\+T\+I\+O\+N\+\_\+\+P\+A\+R\+SE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}\label{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}} 
+\index{hw::device@{hw::device}!protocol@{protocol}}
+\index{protocol@{protocol}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{protocol}{protocol}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}{hw\+::device\+::protocol}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT@{DEFAULT}!hw::device@{hw::device}}\index{hw::device@{hw::device}!DEFAULT@{DEFAULT}}}\mbox{\Hypertarget{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca5b39c8b553c821e7cddc6da64b5bd2ee}\label{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca5b39c8b553c821e7cddc6da64b5bd2ee}} 
+D\+E\+F\+A\+U\+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROXY@{PROXY}!hw::device@{hw::device}}\index{hw::device@{hw::device}!PROXY@{PROXY}}}\mbox{\Hypertarget{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fcae69e6446e892e3922e76c82e96837920}\label{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fcae69e6446e892e3922e76c82e96837920}} 
+P\+R\+O\+XY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLD@{COLD}!hw::device@{hw::device}}\index{hw::device@{hw::device}!COLD@{COLD}}}\mbox{\Hypertarget{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca3f7ff4daa99912d1b0c8c64340edb9fb}\label{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fca3f7ff4daa99912d1b0c8c64340edb9fb}} 
+C\+O\+LD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}\label{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}} 
+\index{hw::device@{hw::device}!type@{type}}
+\index{type@{type}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}{hw\+::device\+::type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOFTWARE@{SOFTWARE}!hw::device@{hw::device}}\index{hw::device@{hw::device}!SOFTWARE@{SOFTWARE}}}\mbox{\Hypertarget{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaaaea541d7f9574587656dc5125116e548}\label{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaaaea541d7f9574587656dc5125116e548}} 
+S\+O\+F\+T\+W\+A\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEDGER@{LEDGER}!hw::device@{hw::device}}\index{hw::device@{hw::device}!LEDGER@{LEDGER}}}\mbox{\Hypertarget{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaa90edd2c2f8e60f79a1b54485b1efdba1}\label{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaa90edd2c2f8e60f79a1b54485b1efdba1}} 
+L\+E\+D\+G\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TREZOR@{TREZOR}!hw::device@{hw::device}}\index{hw::device@{hw::device}!TREZOR@{TREZOR}}}\mbox{\Hypertarget{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaab6cc5aa6361e60113b6d4c43c4c07ac3}\label{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daaab6cc5aa6361e60113b6d4c43c4c07ac3}} 
+T\+R\+E\+Z\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1device_a0fb73e50e3c9cb186fcc0b8aba42b54f}\label{classhw_1_1device_a0fb73e50e3c9cb186fcc0b8aba42b54f}} 
+\index{hw::device@{hw::device}!device@{device}}
+\index{device@{device}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{device()}{device()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily hw\+::device\+::device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a03ed320af3cbe52d9207a08b20c3dbdd}\label{classhw_1_1device_a03ed320af3cbe52d9207a08b20c3dbdd}} 
+\index{hw::device@{hw::device}!device@{device}}
+\index{device@{device}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{device()}{device()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily hw\+::device\+::device (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhw_1_1device}{device}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhw_1_1device_ac3c4c702f769597cf91a755439ccfd1e}\label{classhw_1_1device_ac3c4c702f769597cf91a755439ccfd1e}} 
+\index{hw::device@{hw::device}!device@{device}}
+\index{device@{device}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{device()}{device()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily hw\+::device\+::device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1device}{device}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhw_1_1device_af39a85b4734eb4139e53dbac6cdb644b}\label{classhw_1_1device_af39a85b4734eb4139e53dbac6cdb644b}} 
+\index{hw::device@{hw::device}!````~device@{$\sim$device}}
+\index{````~device@{$\sim$device}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{$\sim$device()}{~device()}}
+{\footnotesize\ttfamily virtual hw\+::device\+::$\sim$device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1device_aab12a9573782995085aab65c720da18b}\label{classhw_1_1device_aab12a9573782995085aab65c720da18b}} 
+\index{hw::device@{hw::device}!close\_tx@{close\_tx}}
+\index{close\_tx@{close\_tx}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{close\_tx()}{close\_tx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::close\+\_\+tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a5337b440ab9edab5a6728dd69e7f6f0b}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ab0e8205d56ce609e959a85f9dfc53552}\label{classhw_1_1device_ab0e8205d56ce609e959a85f9dfc53552}} 
+\index{hw::device@{hw::device}!clsag\_hash@{clsag\_hash}}
+\index{clsag\_hash@{clsag\_hash}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{clsag\_hash()}{clsag\_hash()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::clsag\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&}]{data,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_afbb3ed2d652d41e00a3132d27e83f718}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a64dc2663f186c9b1983f87d12824f276}\label{classhw_1_1device_a64dc2663f186c9b1983f87d12824f276}} 
+\index{hw::device@{hw::device}!clsag\_prehash@{clsag\_prehash}}
+\index{clsag\_prehash@{clsag\_prehash}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{clsag\_prehash()}{clsag\_prehash()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::clsag\+\_\+prehash (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{blob,  }\item[{size\+\_\+t}]{inputs\+\_\+size,  }\item[{size\+\_\+t}]{outputs\+\_\+size,  }\item[{const \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}} \&}]{hashes,  }\item[{const \mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}} \&}]{out\+Pk,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{prehash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a26b2ea6379e32f656ef4010b7c46cf5a}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a64a7ab01a309a6d357a753f6ef7a759d}\label{classhw_1_1device_a64a7ab01a309a6d357a753f6ef7a759d}} 
+\index{hw::device@{hw::device}!clsag\_prepare@{clsag\_prepare}}
+\index{clsag\_prepare@{clsag\_prepare}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{clsag\_prepare()}{clsag\_prepare()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::clsag\+\_\+prepare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{p,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{z,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{I,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{D,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{H,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{aG,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{aH }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a48b857ae195db7ac8472ff8a8ee0e4d9}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a8bf69d5d073d4ce17c0739787f2c45a4}\label{classhw_1_1device_a8bf69d5d073d4ce17c0739787f2c45a4}} 
+\index{hw::device@{hw::device}!clsag\_sign@{clsag\_sign}}
+\index{clsag\_sign@{clsag\_sign}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{clsag\_sign()}{clsag\_sign()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::clsag\+\_\+sign (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{c,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{p,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{z,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{mu\+\_\+P,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{mu\+\_\+C,  }\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a3151ded2c73dc2d33c36b7ae42ec2509}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_acb58adf2ec39408c09607ca31bb98ce4}\label{classhw_1_1device_acb58adf2ec39408c09607ca31bb98ce4}} 
+\index{hw::device@{hw::device}!compute\_key\_image@{compute\_key\_image}}
+\index{compute\_key\_image@{compute\_key\_image}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{compute\_key\_image()}{compute\_key\_image()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::compute\+\_\+key\+\_\+image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{ack,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{out\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{recv\+\_\+derivation,  }\item[{size\+\_\+t}]{real\+\_\+output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{received\+\_\+index,  }\item[{\mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&}]{in\+\_\+ephemeral,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_acb2e9344dd0c1a98268e50b965ac749a}\label{classhw_1_1device_acb2e9344dd0c1a98268e50b965ac749a}} 
+\index{hw::device@{hw::device}!computing\_key\_images@{computing\_key\_images}}
+\index{computing\_key\_images@{computing\_key\_images}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{computing\_key\_images()}{computing\_key\_images()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::computing\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{started }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a251165b392cd0e0464f6a79d67fb21ba}\label{classhw_1_1device_a251165b392cd0e0464f6a79d67fb21ba}} 
+\index{hw::device@{hw::device}!conceal\_derivation@{conceal\_derivation}}
+\index{conceal\_derivation@{conceal\_derivation}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{conceal\_derivation()}{conceal\_derivation()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::conceal\+\_\+derivation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{tx\+\_\+pub\+\_\+key,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{additional\+\_\+tx\+\_\+pub\+\_\+keys,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{main\+\_\+derivation,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} $>$ \&}]{additional\+\_\+derivations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_acbb8dade9ecf3dc0060891f662977ca4}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a7434ae35fe366c83a4015ac102eb9e15}\label{classhw_1_1device_a7434ae35fe366c83a4015ac102eb9e15}} 
+\index{hw::device@{hw::device}!connect@{connect}}
+\index{connect@{connect}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a384bb6e22c5924de3d23a85a6c6f8f34}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_aa6a19ac9be03eae5afe6d7c5125c99c0}\label{classhw_1_1device_aa6a19ac9be03eae5afe6d7c5125c99c0}} 
+\index{hw::device@{hw::device}!decrypt\_payment\_id@{decrypt\_payment\_id}}
+\index{decrypt\_payment\_id@{decrypt\_payment\_id}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{decrypt\_payment\_id()}{decrypt\_payment\_id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::decrypt\+\_\+payment\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&}]{payment\+\_\+id,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{public\+\_\+key,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{secret\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a44b90f07cea49fa0dc8158acc05c1e05}\label{classhw_1_1device_a44b90f07cea49fa0dc8158acc05c1e05}} 
+\index{hw::device@{hw::device}!derivation\_to\_scalar@{derivation\_to\_scalar}}
+\index{derivation\_to\_scalar@{derivation\_to\_scalar}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{derivation\_to\_scalar()}{derivation\_to\_scalar()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::derivation\+\_\+to\+\_\+scalar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const size\+\_\+t}]{output\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1ec__scalar}{crypto\+::ec\+\_\+scalar}} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_acbd6075c67f44f2bcc6f3ff9dc5ade3c}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a69914b9e95c8c686286d0e76e24d3d95}\label{classhw_1_1device_a69914b9e95c8c686286d0e76e24d3d95}} 
+\index{hw::device@{hw::device}!derive\_public\_key@{derive\_public\_key}}
+\index{derive\_public\_key@{derive\_public\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{derive\_public\_key()}{derive\_public\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::derive\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{derived\+\_\+pub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a3ab61f06e5c011702464968c63dd923a}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a9fddcfb816779c7c7e8edf80a0dc5a95}\label{classhw_1_1device_a9fddcfb816779c7c7e8edf80a0dc5a95}} 
+\index{hw::device@{hw::device}!derive\_secret\_key@{derive\_secret\_key}}
+\index{derive\_secret\_key@{derive\_secret\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{derive\_secret\_key()}{derive\_secret\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::derive\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{derived\+\_\+sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_ad13c1c92688b4fc4c04c49544a23d3c8}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_acd63f183790a9d1e78cb3ab906207bdb}\label{classhw_1_1device_acd63f183790a9d1e78cb3ab906207bdb}} 
+\index{hw::device@{hw::device}!derive\_subaddress\_public\_key@{derive\_subaddress\_public\_key}}
+\index{derive\_subaddress\_public\_key@{derive\_subaddress\_public\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{derive\_subaddress\_public\_key()}{derive\_subaddress\_public\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::derive\+\_\+subaddress\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation,  }\item[{const std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{derived\+\_\+pub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_ae3888e8b8896695095eea882112f3b07}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a1c90b580545acfa2eff2e976c08eedd7}\label{classhw_1_1device_a1c90b580545acfa2eff2e976c08eedd7}} 
+\index{hw::device@{hw::device}!device\_protocol@{device\_protocol}}
+\index{device\_protocol@{device\_protocol}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{device\_protocol()}{device\_protocol()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classhw_1_1device_a32f65d153acb6d51a7bb63a3eeba13fc}{protocol}} hw\+::device\+::device\+\_\+protocol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a266adca208120fe053d7ea0978cde0c5}\label{classhw_1_1device_a266adca208120fe053d7ea0978cde0c5}} 
+\index{hw::device@{hw::device}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a6ac1de931c9ffce12838322afb36c6a7}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a0f21ba058adb1139f01659cc3df8142d}\label{classhw_1_1device_a0f21ba058adb1139f01659cc3df8142d}} 
+\index{hw::device@{hw::device}!display\_address@{display\_address}}
+\index{display\_address@{display\_address}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{display\_address()}{display\_address()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::display\+\_\+address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{index,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} $>$ \&}]{payment\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a24ca2c64936fab87aacef0eb16478262}\label{classhw_1_1device_a24ca2c64936fab87aacef0eb16478262}} 
+\index{hw::device@{hw::device}!ecdhDecode@{ecdhDecode}}
+\index{ecdhDecode@{ecdhDecode}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{ecdhDecode()}{ecdhDecode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::ecdh\+Decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}} \&}]{masked,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{shared\+Sec,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{short\+\_\+amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a381de9b9403001d05ccc148947858c9d}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a4ec750d8fbc2968518d3dceb0e06d957}\label{classhw_1_1device_a4ec750d8fbc2968518d3dceb0e06d957}} 
+\index{hw::device@{hw::device}!ecdhEncode@{ecdhEncode}}
+\index{ecdhEncode@{ecdhEncode}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{ecdhEncode()}{ecdhEncode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::ecdh\+Encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}} \&}]{unmasked,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{shared\+Sec,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{short\+\_\+amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a61777ccd1fbedb412ed483fd433e6828}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a5d8ffbb326ec1eefa1190100832a76a4}\label{classhw_1_1device_a5d8ffbb326ec1eefa1190100832a76a4}} 
+\index{hw::device@{hw::device}!encrypt\_payment\_id@{encrypt\_payment\_id}}
+\index{encrypt\_payment\_id@{encrypt\_payment\_id}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{encrypt\_payment\_id()}{encrypt\_payment\_id()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::encrypt\+\_\+payment\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} \&}]{payment\+\_\+id,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{public\+\_\+key,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{secret\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a30a4a0abc57132cda50dab92ea9f94c8}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_af55d477d601eeba8c33757e097cb5fe4}\label{classhw_1_1device_af55d477d601eeba8c33757e097cb5fe4}} 
+\index{hw::device@{hw::device}!genCommitmentMask@{genCommitmentMask}}
+\index{genCommitmentMask@{genCommitmentMask}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{genCommitmentMask()}{genCommitmentMask()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} hw\+::device\+::gen\+Commitment\+Mask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{amount\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a7fc33d4456493e89ee222c97878a3b6c}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ab4682f514c95f4ef98cb2fed390c3a07}\label{classhw_1_1device_ab4682f514c95f4ef98cb2fed390c3a07}} 
+\index{hw::device@{hw::device}!generate\_chacha\_key@{generate\_chacha\_key}}
+\index{generate\_chacha\_key@{generate\_chacha\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_chacha\_key()}{generate\_chacha\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+chacha\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{keys,  }\item[{crypto\+::chacha\+\_\+key \&}]{key,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a9a8127199dc9aff4abe9df9a69730d55}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_aa8f6251ec35ef7b97b2dff707b14b5bb}\label{classhw_1_1device_aa8f6251ec35ef7b97b2dff707b14b5bb}} 
+\index{hw::device@{hw::device}!generate\_key\_derivation@{generate\_key\_derivation}}
+\index{generate\_key\_derivation@{generate\_key\_derivation}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivation()}{generate\_key\_derivation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} hw\+::device\+::generate\+\_\+key\+\_\+derivation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_ad0dccdd6758add9cac0e8bc62cbb3811}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a62eec2f0f826d6da1ab43145204807b1}\label{classhw_1_1device_a62eec2f0f826d6da1ab43145204807b1}} 
+\index{hw::device@{hw::device}!generate\_key\_derivation@{generate\_key\_derivation}}
+\index{generate\_key\_derivation@{generate\_key\_derivation}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivation()}{generate\_key\_derivation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+key\+\_\+derivation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{derivation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a4dcd9f73d88158202f8f63c3ff6991fb}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a40e63871ec4947d1b5b18e691955c4f5}\label{classhw_1_1device_a40e63871ec4947d1b5b18e691955c4f5}} 
+\index{hw::device@{hw::device}!generate\_key\_image@{generate\_key\_image}}
+\index{generate\_key\_image@{generate\_key\_image}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_image()}{generate\_key\_image()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+key\+\_\+image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a78bcbd66cec630e0a873fc1709dcab5c}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a6845f196fce506844b06004ad0d97877}\label{classhw_1_1device_a6845f196fce506844b06004ad0d97877}} 
+\index{hw::device@{hw::device}!generate\_key\_image\_signature@{generate\_key\_image\_signature}}
+\index{generate\_key\_image\_signature@{generate\_key\_image\_signature}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_image\_signature()}{generate\_key\_image\_signature()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+key\+\_\+image\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{image,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a64c47bf7b607aeaa7154db0b90fb86eb}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_aa12d98179d6fd4f127b494ebb37451c7}\label{classhw_1_1device_aa12d98179d6fd4f127b494ebb37451c7}} 
+\index{hw::device@{hw::device}!generate\_keys@{generate\_keys}}
+\index{generate\_keys@{generate\_keys}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_keys()}{generate\_keys()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} hw\+::device\+::generate\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{recovery\+\_\+key = {\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}}()},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{recover = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a5f7f68687650648764b6964cefbe1402}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a6ea23af11ac5b2fd0e8c75a5549fe296}\label{classhw_1_1device_a6ea23af11ac5b2fd0e8c75a5549fe296}} 
+\index{hw::device@{hw::device}!generate\_ons\_signature@{generate\_ons\_signature}}
+\index{generate\_ons\_signature@{generate\_ons\_signature}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_ons\_signature()}{generate\_ons\_signature()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+ons\+\_\+signature (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{signature\+\_\+data,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{keys,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{index,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a45a600f2c77cab904af7d9e037bfc32c}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a04659820ad288764eda86cdb12b5f363}\label{classhw_1_1device_a04659820ad288764eda86cdb12b5f363}} 
+\index{hw::device@{hw::device}!generate\_output\_ephemeral\_keys@{generate\_output\_ephemeral\_keys}}
+\index{generate\_output\_ephemeral\_keys@{generate\_output\_ephemeral\_keys}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_output\_ephemeral\_keys()}{generate\_output\_ephemeral\_keys()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+output\+\_\+ephemeral\+\_\+keys (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{tx\+\_\+version,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \&}]{found\+\_\+change,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{sender\+\_\+account\+\_\+keys,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{txkey\+\_\+pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{tx\+\_\+key,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \&}]{dst\+\_\+entr,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&}]{change\+\_\+addr,  }\item[{size\+\_\+t}]{output\+\_\+index,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{need\+\_\+additional\+\_\+txkeys,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&}]{additional\+\_\+tx\+\_\+keys,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{additional\+\_\+tx\+\_\+public\+\_\+keys,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $>$ \&}]{amount\+\_\+keys,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{out\+\_\+eph\+\_\+public\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a3c6a8bc56ccf0241dd4cc483e4a55a4f}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a6a78043230cd9552171f304e8f1c1b3b}\label{classhw_1_1device_a6a78043230cd9552171f304e8f1c1b3b}} 
+\index{hw::device@{hw::device}!generate\_tx\_proof@{generate\_tx\_proof}}
+\index{generate\_tx\_proof@{generate\_tx\_proof}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_tx\_proof()}{generate\_tx\_proof()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::generate\+\_\+tx\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{R,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{A,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&}]{B,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{D,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{r,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_acd24ff8844352e8c0e81fdfb3437d1b6}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a42ab4ecb54290744f2b7ff89ba42f1f3}\label{classhw_1_1device_a42ab4ecb54290744f2b7ff89ba42f1f3}} 
+\index{hw::device@{hw::device}!generate\_unlock\_signature@{generate\_unlock\_signature}}
+\index{generate\_unlock\_signature@{generate\_unlock\_signature}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{generate\_unlock\_signature()}{generate\_unlock\_signature()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::generate\+\_\+unlock\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} \&}]{sig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a5382558932e0a407ccf9ece5ae5a23ae}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a141b9a4c87476286ef8744f069182199}\label{classhw_1_1device_a141b9a4c87476286ef8744f069182199}} 
+\index{hw::device@{hw::device}!get\_mode@{get\_mode}}
+\index{get\_mode@{get\_mode}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_mode()}{get\_mode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} hw\+::device\+::get\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_ab58d9a511ae616aee71bdf820cc5f86f}\label{classhw_1_1device_ab58d9a511ae616aee71bdf820cc5f86f}} 
+\index{hw::device@{hw::device}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily virtual std\+::string hw\+::device\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a93d4288e78b0c76934755a18c2ac22d9}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_af629b2a978de17974c635c4435c6ef10}\label{classhw_1_1device_af629b2a978de17974c635c4435c6ef10}} 
+\index{hw::device@{hw::device}!get\_public\_address@{get\_public\_address}}
+\index{get\_public\_address@{get\_public\_address}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_public\_address()}{get\_public\_address()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::get\+\_\+public\+\_\+address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} \&}]{pubkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_aa01a2c4a8610aa9d5ca1965c66e7846c}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a4e2c17f66882aa937f01355c915f9433}\label{classhw_1_1device_a4e2c17f66882aa937f01355c915f9433}} 
+\index{hw::device@{hw::device}!get\_secret\_keys@{get\_secret\_keys}}
+\index{get\_secret\_keys@{get\_secret\_keys}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_secret\_keys()}{get\_secret\_keys()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::get\+\_\+secret\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{viewkey,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{spendkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a08cdf119e4516a63905dcc69b89065c2}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_af5b53cba25ef50d1022047c1353478a5}\label{classhw_1_1device_af5b53cba25ef50d1022047c1353478a5}} 
+\index{hw::device@{hw::device}!get\_subaddress@{get\_subaddress}}
+\index{get\_subaddress@{get\_subaddress}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_subaddress()}{get\_subaddress()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}} hw\+::device\+::get\+\_\+subaddress (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{keys,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_add2d27fd693775a0581b6ee941ce3561}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a886548b51daac72e051eab69c7af580c}\label{classhw_1_1device_a886548b51daac72e051eab69c7af580c}} 
+\index{hw::device@{hw::device}!get\_subaddress\_secret\_key@{get\_subaddress\_secret\_key}}
+\index{get\_subaddress\_secret\_key@{get\_subaddress\_secret\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_subaddress\_secret\_key()}{get\_subaddress\_secret\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} hw\+::device\+::get\+\_\+subaddress\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_ac7df6d6170655fc061edaeb5a581a144}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a5bd6431b127c7e1683466a8267e01b52}\label{classhw_1_1device_a5bd6431b127c7e1683466a8267e01b52}} 
+\index{hw::device@{hw::device}!get\_subaddress\_spend\_public\_key@{get\_subaddress\_spend\_public\_key}}
+\index{get\_subaddress\_spend\_public\_key@{get\_subaddress\_spend\_public\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_subaddress\_spend\_public\_key()}{get\_subaddress\_spend\_public\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} hw\+::device\+::get\+\_\+subaddress\+\_\+spend\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{keys,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a6936321564047e77c0609e3635b118e4}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_aad71be5732043a1530bc7287b7ddc60e}\label{classhw_1_1device_aad71be5732043a1530bc7287b7ddc60e}} 
+\index{hw::device@{hw::device}!get\_subaddress\_spend\_public\_keys@{get\_subaddress\_spend\_public\_keys}}
+\index{get\_subaddress\_spend\_public\_keys@{get\_subaddress\_spend\_public\_keys}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_subaddress\_spend\_public\_keys()}{get\_subaddress\_spend\_public\_keys()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}$>$ hw\+::device\+::get\+\_\+subaddress\+\_\+spend\+\_\+public\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1account__keys}{cryptonote\+::account\+\_\+keys}} \&}]{keys,  }\item[{uint32\+\_\+t}]{account,  }\item[{uint32\+\_\+t}]{begin,  }\item[{uint32\+\_\+t}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a31bfaaaf102b24b88a61e2ca7c2782f4}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ad9e8b8a99acbb34463ced52daf66cc1e}\label{classhw_1_1device_ad9e8b8a99acbb34463ced52daf66cc1e}} 
+\index{hw::device@{hw::device}!get\_transaction\_prefix\_hash@{get\_transaction\_prefix\_hash}}
+\index{get\_transaction\_prefix\_hash@{get\_transaction\_prefix\_hash}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_transaction\_prefix\_hash()}{get\_transaction\_prefix\_hash()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::get\+\_\+transaction\+\_\+prefix\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction__prefix}{cryptonote\+::transaction\+\_\+prefix}} \&}]{tx,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_adb608051c0bef70cff4e30660861cf66}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a51d8d971c036bc47c961b6d86892097f}\label{classhw_1_1device_a51d8d971c036bc47c961b6d86892097f}} 
+\index{hw::device@{hw::device}!get\_type@{get\_type}}
+\index{get\_type@{get\_type}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{get\_type()}{get\_type()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classhw_1_1device_a877b60c6a0cd9c63a53600bde2ac7daa}{type}} hw\+::device\+::get\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_afbf108b498668fc968f6c3c60d4e2f5e}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ae6cf82b9a4383a98c4b9e01747795ba4}\label{classhw_1_1device_ae6cf82b9a4383a98c4b9e01747795ba4}} 
+\index{hw::device@{hw::device}!has\_ki\_cold\_sync@{has\_ki\_cold\_sync}}
+\index{has\_ki\_cold\_sync@{has\_ki\_cold\_sync}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{has\_ki\_cold\_sync()}{has\_ki\_cold\_sync()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::has\+\_\+ki\+\_\+cold\+\_\+sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_ad806c23ab7b38d2d5fa3dc2fb8b69847}\label{classhw_1_1device_ad806c23ab7b38d2d5fa3dc2fb8b69847}} 
+\index{hw::device@{hw::device}!has\_ki\_live\_refresh@{has\_ki\_live\_refresh}}
+\index{has\_ki\_live\_refresh@{has\_ki\_live\_refresh}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{has\_ki\_live\_refresh()}{has\_ki\_live\_refresh()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::has\+\_\+ki\+\_\+live\+\_\+refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a092c723582095c1c2466b08a71abfeb4}\label{classhw_1_1device_a092c723582095c1c2466b08a71abfeb4}} 
+\index{hw::device@{hw::device}!has\_tx\_cold\_sign@{has\_tx\_cold\_sign}}
+\index{has\_tx\_cold\_sign@{has\_tx\_cold\_sign}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{has\_tx\_cold\_sign()}{has\_tx\_cold\_sign()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::has\+\_\+tx\+\_\+cold\+\_\+sign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a17e0f5634db7f9d1b8b57154400afbf0}\label{classhw_1_1device_a17e0f5634db7f9d1b8b57154400afbf0}} 
+\index{hw::device@{hw::device}!init@{init}}
+\index{init@{init}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a7d645a302535d736df29c704087fa5d3}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_aff240cae41e884095a1327c46d3e871e}\label{classhw_1_1device_aff240cae41e884095a1327c46d3e871e}} 
+\index{hw::device@{hw::device}!is\_hardware\_device@{is\_hardware\_device}}
+\index{is\_hardware\_device@{is\_hardware\_device}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{is\_hardware\_device()}{is\_hardware\_device()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::is\+\_\+hardware\+\_\+device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_af284a7ab55e5ce4c9b4b3a38b5941ab3}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a10e45810f93c1ee3ab00acaa47ed54d4}\label{classhw_1_1device_a10e45810f93c1ee3ab00acaa47ed54d4}} 
+\index{hw::device@{hw::device}!lock@{lock}}
+\index{lock@{lock}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_afa0be3f4abd1357ca1d3ecba4980f90f}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a292cb587708b13d150b79fd49d31dee3}\label{classhw_1_1device_a292cb587708b13d150b79fd49d31dee3}} 
+\index{hw::device@{hw::device}!open\_tx@{open\_tx}}
+\index{open\_tx@{open\_tx}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{open\_tx()}{open\_tx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::open\+\_\+tx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{tx\+\_\+key,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1a54033f59e8f2090b07ed7765a9a736}{cryptonote\+::txversion}}}]{txversion,  }\item[{\mbox{\hyperlink{namespacecryptonote_ad85a93439d4fe0ec50cac84b46df913e}{cryptonote\+::txtype}}}]{txtype }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a88f57eed90cceebd59f9fab7b5f7e77e}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a5cee6ad7590590b48346a99ee4edb088}\label{classhw_1_1device_a5cee6ad7590590b48346a99ee4edb088}} 
+\index{hw::device@{hw::device}!operator=@{operator=}}
+\index{operator=@{operator=}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device}{device}}\& hw\+::device\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhw_1_1device}{device}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a00eb9ee5c9586051f2e22723826857d0}\label{classhw_1_1device_a00eb9ee5c9586051f2e22723826857d0}} 
+\index{hw::device@{hw::device}!operator=@{operator=}}
+\index{operator=@{operator=}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device}{device}}\& hw\+::device\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1device}{device}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a5a204a04dfd096aa36991e05f8b1de8a}\label{classhw_1_1device_a5a204a04dfd096aa36991e05f8b1de8a}} 
+\index{hw::device@{hw::device}!release@{release}}
+\index{release@{release}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a75de778c493c9dd73ddac67deaec33dc}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a1a51e9d2bf023e16c451a8a3e910a517}\label{classhw_1_1device_a1a51e9d2bf023e16c451a8a3e910a517}} 
+\index{hw::device@{hw::device}!sc\_secret\_add@{sc\_secret\_add}}
+\index{sc\_secret\_add@{sc\_secret\_add}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{sc\_secret\_add()}{sc\_secret\_add()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::sc\+\_\+secret\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{r,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{a,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a2be3ef41e99bf768d5ac5a7c4c6aacec}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ad6bc8410ad99c82dbe619e81df9c146f}\label{classhw_1_1device_ad6bc8410ad99c82dbe619e81df9c146f}} 
+\index{hw::device@{hw::device}!scalarmultBase@{scalarmultBase}}
+\index{scalarmultBase@{scalarmultBase}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{scalarmultBase()}{scalarmultBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} hw\+::device\+::scalarmult\+Base (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a7f0927b2a1d1bc8a81af26977eee5f94}\label{classhw_1_1device_a7f0927b2a1d1bc8a81af26977eee5f94}} 
+\index{hw::device@{hw::device}!scalarmultBase@{scalarmultBase}}
+\index{scalarmultBase@{scalarmultBase}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{scalarmultBase()}{scalarmultBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::scalarmult\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{aG,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_aa924d4cfd3cd0ad5512315cb8a945630}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ae9af021b836f72a953181eb5c0c10aac}\label{classhw_1_1device_ae9af021b836f72a953181eb5c0c10aac}} 
+\index{hw::device@{hw::device}!scalarmultKey@{scalarmultKey}}
+\index{scalarmultKey@{scalarmultKey}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{scalarmultKey()}{scalarmultKey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} hw\+::device\+::scalarmult\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{P,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1device_aff1fb74f3edcf3edbea8d15ac9454536}\label{classhw_1_1device_aff1fb74f3edcf3edbea8d15ac9454536}} 
+\index{hw::device@{hw::device}!scalarmultKey@{scalarmultKey}}
+\index{scalarmultKey@{scalarmultKey}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{scalarmultKey()}{scalarmultKey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::scalarmult\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{aP,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{P,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a413ebc5081b86fb5a87090be6aaf7160}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a8d032cbdf8c4a595f33647f17862b69b}\label{classhw_1_1device_a8d032cbdf8c4a595f33647f17862b69b}} 
+\index{hw::device@{hw::device}!secret\_key\_to\_public\_key@{secret\_key\_to\_public\_key}}
+\index{secret\_key\_to\_public\_key@{secret\_key\_to\_public\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{secret\_key\_to\_public\_key()}{secret\_key\_to\_public\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::secret\+\_\+key\+\_\+to\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a49222113bd7619d60106be06be6d25c2}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a967d2ac932ce1e63e740666ede322978}\label{classhw_1_1device_a967d2ac932ce1e63e740666ede322978}} 
+\index{hw::device@{hw::device}!set\_address@{set\_address}}
+\index{set\_address@{set\_address}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_address()}{set\_address()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+address (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a6254bd0b527f438e47a695704820c7e4}\label{classhw_1_1device_a6254bd0b527f438e47a695704820c7e4}} 
+\index{hw::device@{hw::device}!set\_callback@{set\_callback}}
+\index{set\_callback@{set\_callback}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_callback()}{set\_callback()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1i__device__callback}{i\+\_\+device\+\_\+callback}} $\ast$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a80d343e81459fd95505cae61fb2eea80}\label{classhw_1_1device_a80d343e81459fd95505cae61fb2eea80}} 
+\index{hw::device@{hw::device}!set\_derivation\_path@{set\_derivation\_path}}
+\index{set\_derivation\_path@{set\_derivation\_path}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_derivation\_path()}{set\_derivation\_path()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+derivation\+\_\+path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{derivation\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_ae02c83e388eff482d9adb502b491a5a2}\label{classhw_1_1device_ae02c83e388eff482d9adb502b491a5a2}} 
+\index{hw::device@{hw::device}!set\_mode@{set\_mode}}
+\index{set\_mode@{set\_mode}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_mode()}{set\_mode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::set\+\_\+mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a54269ad0d0f67f3416e51e626673046f}\label{classhw_1_1device_a54269ad0d0f67f3416e51e626673046f}} 
+\index{hw::device@{hw::device}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_aad16b1a17420f292d34c5eb932f4ca7b}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a33a74ae1ea310647d5b37424df9fe857}\label{classhw_1_1device_a33a74ae1ea310647d5b37424df9fe857}} 
+\index{hw::device@{hw::device}!set\_network\_type@{set\_network\_type}}
+\index{set\_network\_type@{set\_network\_type}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_network\_type()}{set\_network\_type()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+network\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}}}]{network\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a7d0299f8f0b0996016b6813f0c780c07}\label{classhw_1_1device_a7d0299f8f0b0996016b6813f0c780c07}} 
+\index{hw::device@{hw::device}!set\_passphrase@{set\_passphrase}}
+\index{set\_passphrase@{set\_passphrase}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_passphrase()}{set\_passphrase()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+passphrase (\begin{DoxyParamCaption}\item[{const epee\+::wipeable\+\_\+string \&}]{passphrase }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a0c56432a75fda2a4d6db3f9fc407821a}\label{classhw_1_1device_a0c56432a75fda2a4d6db3f9fc407821a}} 
+\index{hw::device@{hw::device}!set\_pin@{set\_pin}}
+\index{set\_pin@{set\_pin}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{set\_pin()}{set\_pin()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::set\+\_\+pin (\begin{DoxyParamCaption}\item[{const epee\+::wipeable\+\_\+string \&}]{pin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classhw_1_1device_af94399cb67127ad715c5f2369f99cafb}\label{classhw_1_1device_af94399cb67127ad715c5f2369f99cafb}} 
+\index{hw::device@{hw::device}!try\_lock@{try\_lock}}
+\index{try\_lock@{try\_lock}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{try\_lock()}{try\_lock()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::try\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a238b2c150bfa5a5d59892e79191347b5}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_ab9528828bae43a813605cf1650746834}\label{classhw_1_1device_ab9528828bae43a813605cf1650746834}} 
+\index{hw::device@{hw::device}!unlock@{unlock}}
+\index{unlock@{unlock}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_a6d5900c9fa3478b1b3eaa97b977da5d5}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_a24067082fc6d66849261027ce681b0ec}\label{classhw_1_1device_a24067082fc6d66849261027ce681b0ec}} 
+\index{hw::device@{hw::device}!update\_staking\_tx\_secret\_key@{update\_staking\_tx\_secret\_key}}
+\index{update\_staking\_tx\_secret\_key@{update\_staking\_tx\_secret\_key}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{update\_staking\_tx\_secret\_key()}{update\_staking\_tx\_secret\_key()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::update\+\_\+staking\+\_\+tx\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_ae06e3a4c1424cfbd0058147f4ac30f59}{hw\+::core\+::device\+\_\+default}}.
+
+\mbox{\Hypertarget{classhw_1_1device_abcd5dafb46d1bc29d39e27278a557ad0}\label{classhw_1_1device_abcd5dafb46d1bc29d39e27278a557ad0}} 
+\index{hw::device@{hw::device}!verify\_keys@{verify\_keys}}
+\index{verify\_keys@{verify\_keys}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{verify\_keys()}{verify\_keys()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+::verify\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{secret\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{public\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classhw_1_1core_1_1device__default_af8340cb52192b99c43b10c841cea0284}{hw\+::core\+::device\+\_\+default}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhw_1_1device_a577746c59d118681a5fd193e35ad74a8}\label{classhw_1_1device_a577746c59d118681a5fd193e35ad74a8}} 
+\index{hw::device@{hw::device}!mode\_@{mode\_}}
+\index{mode\_@{mode\_}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{mode\_}{mode\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74}{mode}} hw\+::device\+::mode\+\_\+ = \mbox{\hyperlink{classhw_1_1device_a3544f6d308707631a05dcdade3903d74ab50339a10e1de285ac99d4c3990b8693}{mode\+::\+N\+O\+NE}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classhw_1_1device_a3c75c4cdf900c0628e43726de56d55b4}\label{classhw_1_1device_a3c75c4cdf900c0628e43726de56d55b4}} 
+\index{hw::device@{hw::device}!name@{name}}
+\index{name@{name}!hw::device@{hw::device}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string hw\+::device\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/device/\mbox{\hyperlink{device_8hpp}{device.\+hpp}}\end{DoxyCompactItemize}

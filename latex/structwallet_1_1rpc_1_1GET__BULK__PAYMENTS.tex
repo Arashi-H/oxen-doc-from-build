@@ -1,0 +1,88 @@
+\hypertarget{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS}{}\doxysection{wallet\+::rpc\+::G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+TS Struct Reference}
+\label{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS}\index{wallet::rpc::GET\_BULK\_PAYMENTS@{wallet::rpc::GET\_BULK\_PAYMENTS}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+TS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_abaee888b450fc1285865fe6a86d16b09}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_a984623e81725cb413d997f7b92da91b1}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get a list of incoming payments using a given payment id, or a list of payments ids, from a given height.
+
+This method is the preferred method over get\+\_\+payments because it has the same functionality but is more extendable. Either is fine for looking up transactions by a single payment ID.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily payment\+\_\+ids} -- Payment I\+Ds used to find the payments (16 characters hex).
+\item {\ttfamily min\+\_\+block\+\_\+height} -- The block height at which to start looking for payments.
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily payments} -- List of payment details\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{structwallet_1_1rpc_1_1payment__details}{payment\+\_\+details}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_abaee888b450fc1285865fe6a86d16b09}\label{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_abaee888b450fc1285865fe6a86d16b09}} 
+\index{wallet::rpc::GET\_BULK\_PAYMENTS@{wallet::rpc::GET\_BULK\_PAYMENTS}!names@{names}}
+\index{names@{names}!wallet::rpc::GET\_BULK\_PAYMENTS@{wallet::rpc::GET\_BULK\_PAYMENTS}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_a984623e81725cb413d997f7b92da91b1}\label{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_a984623e81725cb413d997f7b92da91b1}} 
+\index{wallet::rpc::GET\_BULK\_PAYMENTS@{wallet::rpc::GET\_BULK\_PAYMENTS}!request@{request}}
+\index{request@{request}!wallet::rpc::GET\_BULK\_PAYMENTS@{wallet::rpc::GET\_BULK\_PAYMENTS}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1GET__BULK__PAYMENTS_1_1REQUEST}{wallet\+::rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+G\+E\+T\+\_\+\+B\+U\+L\+K\+\_\+\+P\+A\+Y\+M\+E\+N\+T\+S\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

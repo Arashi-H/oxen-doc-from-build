@@ -1,0 +1,147 @@
+\hypertarget{classWallet_1_1TransactionHistoryImpl}{}\doxysection{Wallet\+::Transaction\+History\+Impl Class Reference}
+\label{classWallet_1_1TransactionHistoryImpl}\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+
+
+{\ttfamily \#include $<$transaction\+\_\+history.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Transaction\+History\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classWallet_1_1TransactionHistoryImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Wallet\+::Transaction\+History\+Impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classWallet_1_1TransactionHistoryImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a954804d6fdc847b02a017fc134286f38}{Transaction\+History\+Impl}} (\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$wallet)
+\item 
+\mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a09c919f3757b3cfa38667ec96ff1beef}{$\sim$\+Transaction\+History\+Impl}} ()
+\item 
+int \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a69ffaed053be25455832176cd24b68b1}{count}} () const override
+\item 
+\mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_af9308f778f1d1c6dde062edac84307f3}{transaction}} (int index) const override
+\item 
+\mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a6c7cd02e4044a89be26422dfbfb45858}{transaction}} (std\+::string\+\_\+view id) const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ $>$ \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a0a85454f87fc4b6dffa412fea2a160c1}{get\+All}} () const override
+\item 
+void \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_aaac34044cb8a7ee34508e03413560236}{refresh}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ $>$ \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_af47fa3d02ede8dd8591707b084968d2d}{m\+\_\+history}}
+\item 
+\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$ \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_ae308e5f4a960f52914b14bbdb567105b}{m\+\_\+wallet}}
+\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classWallet_1_1TransactionHistoryImpl_a358ba20b46fe72f0d9016f5b4fa1dfaa}{m\+\_\+history\+Mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a954804d6fdc847b02a017fc134286f38}\label{classWallet_1_1TransactionHistoryImpl_a954804d6fdc847b02a017fc134286f38}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!TransactionHistoryImpl@{TransactionHistoryImpl}}
+\index{TransactionHistoryImpl@{TransactionHistoryImpl}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{TransactionHistoryImpl()}{TransactionHistoryImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Transaction\+History\+Impl\+::\+Transaction\+History\+Impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}} $\ast$}]{wallet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a09c919f3757b3cfa38667ec96ff1beef}\label{classWallet_1_1TransactionHistoryImpl_a09c919f3757b3cfa38667ec96ff1beef}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!````~TransactionHistoryImpl@{$\sim$TransactionHistoryImpl}}
+\index{````~TransactionHistoryImpl@{$\sim$TransactionHistoryImpl}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{$\sim$TransactionHistoryImpl()}{~TransactionHistoryImpl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Transaction\+History\+Impl\+::$\sim$\+Transaction\+History\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a69ffaed053be25455832176cd24b68b1}\label{classWallet_1_1TransactionHistoryImpl_a69ffaed053be25455832176cd24b68b1}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!count@{count}}
+\index{count@{count}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} int Wallet\+::\+Transaction\+History\+Impl\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1TransactionHistory_a114586b69bab948866ba78fe6ad6d349}{Wallet\+::\+Transaction\+History}}.
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a0a85454f87fc4b6dffa412fea2a160c1}\label{classWallet_1_1TransactionHistoryImpl_a0a85454f87fc4b6dffa412fea2a160c1}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!getAll@{getAll}}
+\index{getAll@{getAll}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ $>$ Wallet\+::\+Transaction\+History\+Impl\+::get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1TransactionHistory_ae1a4949220e7842dc6b5bb580609b9fa}{Wallet\+::\+Transaction\+History}}.
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_aaac34044cb8a7ee34508e03413560236}\label{classWallet_1_1TransactionHistoryImpl_aaac34044cb8a7ee34508e03413560236}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!refresh@{refresh}}
+\index{refresh@{refresh}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} void Wallet\+::\+Transaction\+History\+Impl\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1TransactionHistory_ab77859fc87f85283ee844fa6f095b095}{Wallet\+::\+Transaction\+History}}.
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_af9308f778f1d1c6dde062edac84307f3}\label{classWallet_1_1TransactionHistoryImpl_af9308f778f1d1c6dde062edac84307f3}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!transaction@{transaction}}
+\index{transaction@{transaction}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{transaction()}{transaction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ Wallet\+::\+Transaction\+History\+Impl\+::transaction (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1TransactionHistory_a83c0e0f00a3496b34f9542f723ded6a7}{Wallet\+::\+Transaction\+History}}.
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a6c7cd02e4044a89be26422dfbfb45858}\label{classWallet_1_1TransactionHistoryImpl_a6c7cd02e4044a89be26422dfbfb45858}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!transaction@{transaction}}
+\index{transaction@{transaction}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{transaction()}{transaction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} $\ast$ Wallet\+::\+Transaction\+History\+Impl\+::transaction (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{structWallet_1_1TransactionHistory_a75d5d432877a32b9307a03a86ee4e504}{Wallet\+::\+Transaction\+History}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_af47fa3d02ede8dd8591707b084968d2d}\label{classWallet_1_1TransactionHistoryImpl_af47fa3d02ede8dd8591707b084968d2d}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!m\_history@{m\_history}}
+\index{m\_history@{m\_history}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{m\_history}{m\_history}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}}$\ast$$>$ Wallet\+::\+Transaction\+History\+Impl\+::m\+\_\+history\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_a358ba20b46fe72f0d9016f5b4fa1dfaa}\label{classWallet_1_1TransactionHistoryImpl_a358ba20b46fe72f0d9016f5b4fa1dfaa}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!m\_historyMutex@{m\_historyMutex}}
+\index{m\_historyMutex@{m\_historyMutex}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{m\_historyMutex}{m\_historyMutex}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex Wallet\+::\+Transaction\+History\+Impl\+::m\+\_\+history\+Mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWallet_1_1TransactionHistoryImpl_ae308e5f4a960f52914b14bbdb567105b}\label{classWallet_1_1TransactionHistoryImpl_ae308e5f4a960f52914b14bbdb567105b}} 
+\index{Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}!m\_wallet@{m\_wallet}}
+\index{m\_wallet@{m\_wallet}!Wallet::TransactionHistoryImpl@{Wallet::TransactionHistoryImpl}}
+\doxysubsubsection{\texorpdfstring{m\_wallet}{m\_wallet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWallet_1_1WalletImpl}{Wallet\+Impl}}$\ast$ Wallet\+::\+Transaction\+History\+Impl\+::m\+\_\+wallet\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{transaction__history_8h}{transaction\+\_\+history.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{transaction__history_8cpp}{transaction\+\_\+history.\+cpp}}\end{DoxyCompactItemize}

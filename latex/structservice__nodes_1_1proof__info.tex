@@ -1,0 +1,170 @@
+\hypertarget{structservice__nodes_1_1proof__info}{}\doxysection{service\+\_\+nodes\+::proof\+\_\+info Struct Reference}
+\label{structservice__nodes_1_1proof__info}\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+
+
+{\ttfamily \#include $<$service\+\_\+node\+\_\+list.\+h$>$}
+
+
+
+Collaboration diagram for service\+\_\+nodes\+::proof\+\_\+info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structservice__nodes_1_1proof__info__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{reachable\+\_\+stats}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1proof__info_ac594d086df8b76f15d63072a3710e5bf}{proof\+\_\+info}} ()
+\item 
+void \mbox{\hyperlink{structservice__nodes_1_1proof__info_a8608acf03b1a4a10eb59eced0911f614}{update\+\_\+pubkey}} (const \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} \&pk)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structservice__nodes_1_1proof__info_aaf792aed2933671f09beab8e5828877b}{update}} (uint64\+\_\+t \mbox{\hyperlink{skein_8c_ac1850015a7cbc80b3bd16b0dce08ef6c}{ts}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} $>$ new\+\_\+proof, const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&pk\+\_\+x2)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structservice__nodes_1_1proof__info_a9d34619c058672980f1957b9bd29b3b4}{update}} (uint64\+\_\+t \mbox{\hyperlink{skein_8c_ac1850015a7cbc80b3bd16b0dce08ef6c}{ts}}, uint32\+\_\+t ip, uint16\+\_\+t s\+\_\+https\+\_\+port, uint16\+\_\+t s\+\_\+omq\+\_\+port, uint16\+\_\+t q\+\_\+port, std\+::array$<$ uint16\+\_\+t, 3 $>$ ver, const \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} \&pk\+\_\+ed, const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&pk\+\_\+x2)
+\item 
+void \mbox{\hyperlink{structservice__nodes_1_1proof__info_a9b0d62e26fba515162292f78a15bd753}{store}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, \mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&blockchain)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$ \mbox{\hyperlink{structservice__nodes_1_1pulse__participation__entry}{pulse\+\_\+participation\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_aae38074c657a939bf71fcde54c087d86}{pulse\+\_\+participation}}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$ \mbox{\hyperlink{structservice__nodes_1_1checkpoint__participation__entry}{checkpoint\+\_\+participation\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_a308545693958d6676bb350554e3111a6}{checkpoint\+\_\+participation}}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$ \mbox{\hyperlink{structservice__nodes_1_1timestamp__participation__entry}{timestamp\+\_\+participation\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_ac2a019be217550f0d2653cb705a2e9e5}{timestamp\+\_\+participation}}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$ \mbox{\hyperlink{structservice__nodes_1_1timesync__entry}{timesync\+\_\+entry}} $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_a7e2dbfb8b5e36b1dbc6b5bee231dbbbf}{timesync\+\_\+status}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structservice__nodes_1_1proof__info_a30c2ccf854aa01cbdf30dd1000793f3e}{timestamp}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structservice__nodes_1_1proof__info_a444670a13008e0501bd405e7fe7de8b9}{effective\+\_\+timestamp}} = 0
+\item 
+std\+::array$<$ std\+::pair$<$ uint32\+\_\+t, uint64\+\_\+t $>$, 2 $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_a8b0b5506fdb9aab0c6cb48a502d9963d}{public\+\_\+ips}} = \{\}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{reachable\+\_\+stats}} \mbox{\hyperlink{structservice__nodes_1_1proof__info_af6ca9a44e17c03a0342686086473bc06}{ss\+\_\+reachable}} \{\}
+\item 
+\mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{reachable\+\_\+stats}} \mbox{\hyperlink{structservice__nodes_1_1proof__info_a3298f51080156b1e4c106e79b23092a0}{lokinet\+\_\+reachable}} \{\}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} $>$ \mbox{\hyperlink{structservice__nodes_1_1proof__info_a5d66cf718eb681b40f365d8d33680391}{proof}} \{\}
+\item 
+\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \mbox{\hyperlink{structservice__nodes_1_1proof__info_a660f2919392ce6a11cfcce81559ed244}{pubkey\+\_\+x25519}} = \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}$>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_ac594d086df8b76f15d63072a3710e5bf}\label{structservice__nodes_1_1proof__info_ac594d086df8b76f15d63072a3710e5bf}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!proof\_info@{proof\_info}}
+\index{proof\_info@{proof\_info}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{proof\_info()}{proof\_info()}}
+{\footnotesize\ttfamily service\+\_\+nodes\+::proof\+\_\+info\+::proof\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a9b0d62e26fba515162292f78a15bd753}\label{structservice__nodes_1_1proof__info_a9b0d62e26fba515162292f78a15bd753}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!store@{store}}
+\index{store@{store}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::proof\+\_\+info\+::store (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{\mbox{\hyperlink{classcryptonote_1_1Blockchain}{cryptonote\+::\+Blockchain}} \&}]{blockchain }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_aaf792aed2933671f09beab8e5828877b}\label{structservice__nodes_1_1proof__info_aaf792aed2933671f09beab8e5828877b}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!update@{update}}
+\index{update@{update}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::proof\+\_\+info\+::update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ts,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}} $>$}]{new\+\_\+proof,  }\item[{const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&}]{pk\+\_\+x2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a9d34619c058672980f1957b9bd29b3b4}\label{structservice__nodes_1_1proof__info_a9d34619c058672980f1957b9bd29b3b4}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!update@{update}}
+\index{update@{update}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} service\+\_\+nodes\+::proof\+\_\+info\+::update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ts,  }\item[{uint32\+\_\+t}]{ip,  }\item[{uint16\+\_\+t}]{s\+\_\+https\+\_\+port,  }\item[{uint16\+\_\+t}]{s\+\_\+omq\+\_\+port,  }\item[{uint16\+\_\+t}]{q\+\_\+port,  }\item[{std\+::array$<$ uint16\+\_\+t, 3 $>$}]{ver,  }\item[{const \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} \&}]{pk\+\_\+ed,  }\item[{const \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} \&}]{pk\+\_\+x2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a8608acf03b1a4a10eb59eced0911f614}\label{structservice__nodes_1_1proof__info_a8608acf03b1a4a10eb59eced0911f614}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!update\_pubkey@{update\_pubkey}}
+\index{update\_pubkey@{update\_pubkey}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{update\_pubkey()}{update\_pubkey()}}
+{\footnotesize\ttfamily void service\+\_\+nodes\+::proof\+\_\+info\+::update\+\_\+pubkey (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{crypto\+::ed25519\+\_\+public\+\_\+key}} \&}]{pk }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a308545693958d6676bb350554e3111a6}\label{structservice__nodes_1_1proof__info_a308545693958d6676bb350554e3111a6}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!checkpoint\_participation@{checkpoint\_participation}}
+\index{checkpoint\_participation@{checkpoint\_participation}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{checkpoint\_participation}{checkpoint\_participation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$\mbox{\hyperlink{structservice__nodes_1_1checkpoint__participation__entry}{checkpoint\+\_\+participation\+\_\+entry}}$>$ service\+\_\+nodes\+::proof\+\_\+info\+::checkpoint\+\_\+participation}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a444670a13008e0501bd405e7fe7de8b9}\label{structservice__nodes_1_1proof__info_a444670a13008e0501bd405e7fe7de8b9}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!effective\_timestamp@{effective\_timestamp}}
+\index{effective\_timestamp@{effective\_timestamp}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{effective\_timestamp}{effective\_timestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t service\+\_\+nodes\+::proof\+\_\+info\+::effective\+\_\+timestamp = 0}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a3298f51080156b1e4c106e79b23092a0}\label{structservice__nodes_1_1proof__info_a3298f51080156b1e4c106e79b23092a0}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!lokinet\_reachable@{lokinet\_reachable}}
+\index{lokinet\_reachable@{lokinet\_reachable}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{lokinet\_reachable}{lokinet\_reachable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{reachable\+\_\+stats}} service\+\_\+nodes\+::proof\+\_\+info\+::lokinet\+\_\+reachable \{\}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a5d66cf718eb681b40f365d8d33680391}\label{structservice__nodes_1_1proof__info_a5d66cf718eb681b40f365d8d33680391}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!proof@{proof}}
+\index{proof@{proof}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{proof}{proof}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classuptime__proof_1_1Proof}{uptime\+\_\+proof\+::\+Proof}}$>$ service\+\_\+nodes\+::proof\+\_\+info\+::proof \{\}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a660f2919392ce6a11cfcce81559ed244}\label{structservice__nodes_1_1proof__info_a660f2919392ce6a11cfcce81559ed244}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!pubkey\_x25519@{pubkey\_x25519}}
+\index{pubkey\_x25519@{pubkey\_x25519}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{pubkey\_x25519}{pubkey\_x25519}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}} service\+\_\+nodes\+::proof\+\_\+info\+::pubkey\+\_\+x25519 = \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$\mbox{\hyperlink{structcrypto_1_1x25519__public__key}{crypto\+::x25519\+\_\+public\+\_\+key}}$>$}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a8b0b5506fdb9aab0c6cb48a502d9963d}\label{structservice__nodes_1_1proof__info_a8b0b5506fdb9aab0c6cb48a502d9963d}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!public\_ips@{public\_ips}}
+\index{public\_ips@{public\_ips}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{public\_ips}{public\_ips}}
+{\footnotesize\ttfamily std\+::array$<$std\+::pair$<$uint32\+\_\+t, uint64\+\_\+t$>$, 2$>$ service\+\_\+nodes\+::proof\+\_\+info\+::public\+\_\+ips = \{\}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_aae38074c657a939bf71fcde54c087d86}\label{structservice__nodes_1_1proof__info_aae38074c657a939bf71fcde54c087d86}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!pulse\_participation@{pulse\_participation}}
+\index{pulse\_participation@{pulse\_participation}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{pulse\_participation}{pulse\_participation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$\mbox{\hyperlink{structservice__nodes_1_1pulse__participation__entry}{pulse\+\_\+participation\+\_\+entry}}$>$ service\+\_\+nodes\+::proof\+\_\+info\+::pulse\+\_\+participation}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_af6ca9a44e17c03a0342686086473bc06}\label{structservice__nodes_1_1proof__info_af6ca9a44e17c03a0342686086473bc06}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!ss\_reachable@{ss\_reachable}}
+\index{ss\_reachable@{ss\_reachable}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{ss\_reachable}{ss\_reachable}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1proof__info_1_1reachable__stats}{reachable\+\_\+stats}} service\+\_\+nodes\+::proof\+\_\+info\+::ss\+\_\+reachable \{\}}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a30c2ccf854aa01cbdf30dd1000793f3e}\label{structservice__nodes_1_1proof__info_a30c2ccf854aa01cbdf30dd1000793f3e}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily uint64\+\_\+t service\+\_\+nodes\+::proof\+\_\+info\+::timestamp = 0}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_ac2a019be217550f0d2653cb705a2e9e5}\label{structservice__nodes_1_1proof__info_ac2a019be217550f0d2653cb705a2e9e5}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!timestamp\_participation@{timestamp\_participation}}
+\index{timestamp\_participation@{timestamp\_participation}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{timestamp\_participation}{timestamp\_participation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$\mbox{\hyperlink{structservice__nodes_1_1timestamp__participation__entry}{timestamp\+\_\+participation\+\_\+entry}}$>$ service\+\_\+nodes\+::proof\+\_\+info\+::timestamp\+\_\+participation}
+
+\mbox{\Hypertarget{structservice__nodes_1_1proof__info_a7e2dbfb8b5e36b1dbc6b5bee231dbbbf}\label{structservice__nodes_1_1proof__info_a7e2dbfb8b5e36b1dbc6b5bee231dbbbf}} 
+\index{service\_nodes::proof\_info@{service\_nodes::proof\_info}!timesync\_status@{timesync\_status}}
+\index{timesync\_status@{timesync\_status}!service\_nodes::proof\_info@{service\_nodes::proof\_info}}
+\doxysubsubsection{\texorpdfstring{timesync\_status}{timesync\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structservice__nodes_1_1participation__history}{participation\+\_\+history}}$<$\mbox{\hyperlink{structservice__nodes_1_1timesync__entry}{timesync\+\_\+entry}}$>$ service\+\_\+nodes\+::proof\+\_\+info\+::timesync\+\_\+status}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__list_8h}{service\+\_\+node\+\_\+list.\+h}}\item 
+src/cryptonote\+\_\+core/\mbox{\hyperlink{service__node__list_8cpp}{service\+\_\+node\+\_\+list.\+cpp}}\end{DoxyCompactItemize}

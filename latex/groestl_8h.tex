@@ -1,0 +1,152 @@
+\hypertarget{groestl_8h}{}\doxysection{src/crypto/groestl.h File Reference}
+\label{groestl_8h}\index{src/crypto/groestl.h@{src/crypto/groestl.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for groestl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{groestl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{groestl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhashState}{hash\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}~8
+\item 
+\#define \mbox{\hyperlink{groestl_8h_af13030af08f5c765ecfda3fe0afd6c09}{L\+E\+N\+G\+T\+H\+F\+I\+E\+L\+D\+L\+EN}}~\mbox{\hyperlink{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}
+\item 
+\#define \mbox{\hyperlink{groestl_8h_ac28fabcbde58427f873469ea0f770283}{C\+O\+L\+S512}}~8
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}{S\+I\+Z\+E512}}~(\mbox{\hyperlink{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}$\ast$\mbox{\hyperlink{groestl_8h_ac28fabcbde58427f873469ea0f770283}{C\+O\+L\+S512}})
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a84b8dc9723473efcd4df92fd65910dea}{R\+O\+U\+N\+D\+S512}}~10
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a3d1c6ef7c8bef30a3cd8036e77c5098d}{H\+A\+S\+H\+\_\+\+B\+I\+T\+\_\+\+L\+EN}}~256
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a453d6c05303385256d9893904b125483}{R\+O\+T\+L32}}(v,  n)~((((v)$<$$<$(n))$\vert$((v)$>$$>$(32-\/(n))))\&\mbox{\hyperlink{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}{li\+\_\+32}}(ffffffff))
+\item 
+\#define \mbox{\hyperlink{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}{li\+\_\+32}}(h)~0x\#\#h\#\#u
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a0daac828c8e7ebab2922e731bf46ad69}{E\+X\+T\+\_\+\+B\+Y\+TE}}(var,  n)~((uint8\+\_\+t)((uint32\+\_\+t)(var) $>$$>$ (8$\ast$n)))
+\item 
+\#define \mbox{\hyperlink{groestl_8h_a04a40a0451ddb426b5ed5dcbaf1fbdf0}{u32\+B\+IG}}(a)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}}
+\item 
+typedef unsigned long long \mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{groestl_8h_a637c797c61cc6291857b233070f86ad4}{groestl}} (const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$, \mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}, \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{groestl_8h_ac28fabcbde58427f873469ea0f770283}\label{groestl_8h_ac28fabcbde58427f873469ea0f770283}} 
+\index{groestl.h@{groestl.h}!COLS512@{COLS512}}
+\index{COLS512@{COLS512}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{COLS512}{COLS512}}
+{\footnotesize\ttfamily \#define C\+O\+L\+S512~8}
+
+\mbox{\Hypertarget{groestl_8h_a0daac828c8e7ebab2922e731bf46ad69}\label{groestl_8h_a0daac828c8e7ebab2922e731bf46ad69}} 
+\index{groestl.h@{groestl.h}!EXT\_BYTE@{EXT\_BYTE}}
+\index{EXT\_BYTE@{EXT\_BYTE}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{EXT\_BYTE}{EXT\_BYTE}}
+{\footnotesize\ttfamily \#define E\+X\+T\+\_\+\+B\+Y\+TE(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{n }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint32\+\_\+t)(var) $>$$>$ (8$\ast$n)))}
+
+\mbox{\Hypertarget{groestl_8h_a3d1c6ef7c8bef30a3cd8036e77c5098d}\label{groestl_8h_a3d1c6ef7c8bef30a3cd8036e77c5098d}} 
+\index{groestl.h@{groestl.h}!HASH\_BIT\_LEN@{HASH\_BIT\_LEN}}
+\index{HASH\_BIT\_LEN@{HASH\_BIT\_LEN}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{HASH\_BIT\_LEN}{HASH\_BIT\_LEN}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+B\+I\+T\+\_\+\+L\+EN~256}
+
+\mbox{\Hypertarget{groestl_8h_af13030af08f5c765ecfda3fe0afd6c09}\label{groestl_8h_af13030af08f5c765ecfda3fe0afd6c09}} 
+\index{groestl.h@{groestl.h}!LENGTHFIELDLEN@{LENGTHFIELDLEN}}
+\index{LENGTHFIELDLEN@{LENGTHFIELDLEN}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{LENGTHFIELDLEN}{LENGTHFIELDLEN}}
+{\footnotesize\ttfamily \#define L\+E\+N\+G\+T\+H\+F\+I\+E\+L\+D\+L\+EN~\mbox{\hyperlink{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}}
+
+\mbox{\Hypertarget{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}\label{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}} 
+\index{groestl.h@{groestl.h}!li\_32@{li\_32}}
+\index{li\_32@{li\_32}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{li\_32}{li\_32}}
+{\footnotesize\ttfamily \#define li\+\_\+32(\begin{DoxyParamCaption}\item[{}]{h }\end{DoxyParamCaption})~0x\#\#h\#\#u}
+
+\mbox{\Hypertarget{groestl_8h_a453d6c05303385256d9893904b125483}\label{groestl_8h_a453d6c05303385256d9893904b125483}} 
+\index{groestl.h@{groestl.h}!ROTL32@{ROTL32}}
+\index{ROTL32@{ROTL32}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{ROTL32}{ROTL32}}
+{\footnotesize\ttfamily \#define R\+O\+T\+L32(\begin{DoxyParamCaption}\item[{}]{v,  }\item[{}]{n }\end{DoxyParamCaption})~((((v)$<$$<$(n))$\vert$((v)$>$$>$(32-\/(n))))\&\mbox{\hyperlink{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}{li\+\_\+32}}(ffffffff))}
+
+\mbox{\Hypertarget{groestl_8h_a84b8dc9723473efcd4df92fd65910dea}\label{groestl_8h_a84b8dc9723473efcd4df92fd65910dea}} 
+\index{groestl.h@{groestl.h}!ROUNDS512@{ROUNDS512}}
+\index{ROUNDS512@{ROUNDS512}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{ROUNDS512}{ROUNDS512}}
+{\footnotesize\ttfamily \#define R\+O\+U\+N\+D\+S512~10}
+
+\mbox{\Hypertarget{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}\label{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}} 
+\index{groestl.h@{groestl.h}!ROWS@{ROWS}}
+\index{ROWS@{ROWS}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
+{\footnotesize\ttfamily \#define R\+O\+WS~8}
+
+\mbox{\Hypertarget{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}\label{groestl_8h_a11a83fb1f003909dc61b3347346d2f0f}} 
+\index{groestl.h@{groestl.h}!SIZE512@{SIZE512}}
+\index{SIZE512@{SIZE512}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{SIZE512}{SIZE512}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E512~(\mbox{\hyperlink{groestl_8h_a3cfd3aa62338d12609f6d65bce97e9cd}{R\+O\+WS}}$\ast$\mbox{\hyperlink{groestl_8h_ac28fabcbde58427f873469ea0f770283}{C\+O\+L\+S512}})}
+
+\mbox{\Hypertarget{groestl_8h_a04a40a0451ddb426b5ed5dcbaf1fbdf0}\label{groestl_8h_a04a40a0451ddb426b5ed5dcbaf1fbdf0}} 
+\index{groestl.h@{groestl.h}!u32BIG@{u32BIG}}
+\index{u32BIG@{u32BIG}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{u32BIG}{u32BIG}}
+{\footnotesize\ttfamily \#define u32\+B\+IG(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((\mbox{\hyperlink{groestl_8h_a453d6c05303385256d9893904b125483}{ROTL32}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},8) \& \mbox{\hyperlink{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}{li\_32}}(00FF00FF)) |        \(\backslash\)}
+\DoxyCodeLine{   (\mbox{\hyperlink{groestl_8h_a453d6c05303385256d9893904b125483}{ROTL32}}(\mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}},24) \& \mbox{\hyperlink{groestl_8h_af00e8b90adf7118908dde4c4d241d3c9}{li\_32}}(FF00FF00)))}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}\label{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}} 
+\index{groestl.h@{groestl.h}!BitSequence@{BitSequence}}
+\index{BitSequence@{BitSequence}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{BitSequence}{BitSequence}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}}}
+
+\mbox{\Hypertarget{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}\label{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}} 
+\index{groestl.h@{groestl.h}!DataLength@{DataLength}}
+\index{DataLength@{DataLength}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{DataLength}{DataLength}}
+{\footnotesize\ttfamily typedef unsigned long long \mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{groestl_8h_a637c797c61cc6291857b233070f86ad4}\label{groestl_8h_a637c797c61cc6291857b233070f86ad4}} 
+\index{groestl.h@{groestl.h}!groestl@{groestl}}
+\index{groestl@{groestl}!groestl.h@{groestl.h}}
+\doxysubsubsection{\texorpdfstring{groestl()}{groestl()}}
+{\footnotesize\ttfamily void groestl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{,  }\item[{\mbox{\hyperlink{groestl_8h_aa1c06fb4773a4b043c077daf86fb9d87}{Data\+Length}}}]{,  }\item[{\mbox{\hyperlink{groestl_8h_ac7449f64e35526a4e70f37cbc40ecc65}{Bit\+Sequence}} $\ast$}]{ }\end{DoxyParamCaption})}
+

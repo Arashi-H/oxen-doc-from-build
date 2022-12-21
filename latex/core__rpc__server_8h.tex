@@ -1,0 +1,87 @@
+\hypertarget{core__rpc__server_8h}{}\doxysection{src/rpc/core\+\_\+rpc\+\_\+server.h File Reference}
+\label{core__rpc__server_8h}\index{src/rpc/core\_rpc\_server.h@{src/rpc/core\_rpc\_server.h}}
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/options\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options/variables\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}core\+\_\+rpc\+\_\+server\+\_\+binary\+\_\+commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}p2p/net\+\_\+node.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+protocol/cryptonote\+\_\+protocol\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/rpc\+\_\+command.\+h\char`\"{}}\newline
+Include dependency graph for core\+\_\+rpc\+\_\+server.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core__rpc__server_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core__rpc__server_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1FIXME__has__nested__response}{cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response$<$ T, typename $>$}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1FIXME__has__nested__response_3_01RPC_00_01std_1_1void__t_3_01typename_01RPC_1_1response_01_4_01_4}{cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response$<$ R\+P\+C, std\+::void\+\_\+t$<$ typename R\+P\+C\+::response $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{cryptonote\+::rpc\+::rpc\+\_\+command}}
+\begin{DoxyCompactList}\small\item\em Stores an R\+PC command callback. These are set up in \mbox{\hyperlink{core__rpc__server_8cpp}{core\+\_\+rpc\+\_\+server.\+cpp}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classcryptonote_1_1rpc_1_1core__rpc__server}{cryptonote\+::rpc\+::core\+\_\+rpc\+\_\+server}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1program__options}{boost\+::program\+\_\+options}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc}{cryptonote\+::rpc}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1detail}{cryptonote\+::rpc\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{core__rpc__server_8h_a64b4149f4edb8c9655ee3c07c6415a83}{O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY}}~\char`\"{}daemon.\+rpc\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ output\+\_\+distribution\+\_\+data $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1detail_a35e2cb666f7f419c375efbee9532b8c9}{cryptonote\+::rpc\+::detail\+::get\+\_\+output\+\_\+distribution}} (const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t \&, std\+::vector$<$ uint64\+\_\+t $>$ \&, uint64\+\_\+t \&)$>$ \&f, uint64\+\_\+t amount, uint64\+\_\+t from\+\_\+height, uint64\+\_\+t to\+\_\+height, const std\+::function$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}(uint64\+\_\+t)$>$ \&get\+\_\+hash, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cumulative, uint64\+\_\+t blockchain\+\_\+height)
+\item 
+\mbox{\hyperlink{core__rpc__server_8h_a555e7db4cc8b7c14236c1384a2416945}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON}} (\mbox{\hyperlink{classnodetool_1_1node__server}{nodetool\+::node\+\_\+server}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} $>$ $>$, 1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_ae5542b0fe1ccb3b6381f932b99f8c8fa}{cryptonote\+::rpc\+::\+F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response\+\_\+v}} = F\+I\+X\+M\+E\+\_\+has\+\_\+nested\+\_\+response$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::value
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{core__rpc__server_8h_a64b4149f4edb8c9655ee3c07c6415a83}\label{core__rpc__server_8h_a64b4149f4edb8c9655ee3c07c6415a83}} 
+\index{core\_rpc\_server.h@{core\_rpc\_server.h}!OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+\index{OXEN\_DEFAULT\_LOG\_CATEGORY@{OXEN\_DEFAULT\_LOG\_CATEGORY}!core\_rpc\_server.h@{core\_rpc\_server.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_DEFAULT\_LOG\_CATEGORY}{OXEN\_DEFAULT\_LOG\_CATEGORY}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+RY~\char`\"{}daemon.\+rpc\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{core__rpc__server_8h_a555e7db4cc8b7c14236c1384a2416945}\label{core__rpc__server_8h_a555e7db4cc8b7c14236c1384a2416945}} 
+\index{core\_rpc\_server.h@{core\_rpc\_server.h}!BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}}
+\index{BOOST\_CLASS\_VERSION@{BOOST\_CLASS\_VERSION}!core\_rpc\_server.h@{core\_rpc\_server.h}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_VERSION()}{BOOST\_CLASS\_VERSION()}}
+{\footnotesize\ttfamily B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+V\+E\+R\+S\+I\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodetool_1_1node__server}{nodetool\+::node\+\_\+server}}$<$ \mbox{\hyperlink{classcryptonote_1_1t__cryptonote__protocol__handler}{cryptonote\+::t\+\_\+cryptonote\+\_\+protocol\+\_\+handler}}$<$ \mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} $>$ $>$}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,58 @@
+\hypertarget{binary__archive_8h}{}\doxysection{src/serialization/binary\+\_\+archive.h File Reference}
+\label{binary__archive_8h}\index{src/serialization/binary\_archive.h@{src/serialization/binary\_archive.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$istream$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string\+\_\+view$>$}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/varint.\+h\char`\"{}}\newline
+Include dependency graph for binary\+\_\+archive.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{binary__archive_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{binary__archive_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1binary__archive__nested__array}{serialization\+::binary\+\_\+archive\+\_\+nested\+\_\+array$<$ Archive $>$}}
+\item 
+struct \mbox{\hyperlink{structserialization_1_1binary__archive__nested__object}{serialization\+::binary\+\_\+archive\+\_\+nested\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__unarchiver}{serialization\+::binary\+\_\+unarchiver}}
+\item 
+class \mbox{\hyperlink{classserialization_1_1binary__archiver}{serialization\+::binary\+\_\+archiver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserialization}{serialization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceserialization_aa32f06fc698dc80cf8c3a5bd09f72aa9}{serialization\+::binary\+\_\+variant\+\_\+tag\+\_\+type}} = uint8\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Archive $>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceserialization_a59fa46e7f2b6d08143fcfeac8a012a5d}{serialization\+::is\+\_\+binary}} = std\+::is\+\_\+base\+\_\+of\+\_\+v$<$binary\+\_\+archiver, Archive$>$ $\vert$$\vert$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$binary\+\_\+unarchiver, Archive$>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Portable, little-\/endian binary archive 

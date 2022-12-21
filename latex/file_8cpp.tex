@@ -1,0 +1,47 @@
+\hypertarget{file_8cpp}{}\doxysection{src/common/file.cpp File Reference}
+\label{file_8cpp}\index{src/common/file.cpp@{src/common/file.cpp}}
+{\ttfamily \#include \char`\"{}file.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sys/file.\+h$>$}\newline
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+Include dependency graph for file.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{namespacetools_a3d265e83c89fcabad93a085d5180315e}{tools\+::flock\+\_\+exnb}} (int \mbox{\hyperlink{aesb_8c_a78eca4dcca91c6f7a65890d87d4795c5}{fd}})
+\item 
+static fs\+::path \mbox{\hyperlink{namespacetools_a0212bc898aa8f7ffa44c14c93f266619}{tools\+::get\+\_\+default\+\_\+parent\+\_\+dir}} ()
+\item 
+fs\+::path \mbox{\hyperlink{namespacetools_a2f6c201eed2a27d6fed5c59ef9085f55}{tools\+::get\+\_\+default\+\_\+data\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Returns the default data directory. \end{DoxyCompactList}\item 
+fs\+::path \mbox{\hyperlink{namespacetools_ad10ad2f8ad2acbb8af9e5bdcb715b8b1}{tools\+::get\+\_\+depreciated\+\_\+default\+\_\+data\+\_\+dir}} ()
+\item 
+void \mbox{\hyperlink{namespacetools_a4c473913d209e8f4f935691c9490eb14}{tools\+::set\+\_\+strict\+\_\+default\+\_\+file\+\_\+permissions}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} strict)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a029b755a4f57d9dde02a2fc934857faa}{tools\+::slurp\+\_\+file}} (const fs\+::path \&filename, std\+::string \&contents)
+\begin{DoxyCompactList}\small\item\em Reads a (binary) file from disk into the string {\ttfamily contents}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a0b3cb93fe139420afd4a1dcaf3f6f1f6}{tools\+::dump\+\_\+file}} (const fs\+::path \&filename, std\+::string\+\_\+view contents)
+\begin{DoxyCompactList}\small\item\em Dumps (binary) string contents to disk. The file is overwritten if it already exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacetools_a65fb8c9740374ed493638184ee9cdea9}{tools\+::logcat}} = log\+::\+Cat(\char`\"{}util\char`\"{})
+\end{DoxyCompactItemize}

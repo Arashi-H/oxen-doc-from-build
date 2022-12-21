@@ -1,0 +1,43 @@
+\hypertarget{service__node__quorum__cop_8cpp}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+quorum\+\_\+cop.cpp File Reference}
+\label{service__node__quorum__cop_8cpp}\index{src/cryptonote\_core/service\_node\_quorum\_cop.cpp@{src/cryptonote\_core/service\_node\_quorum\_cop.cpp}}
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+quorum\+\_\+cop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+voting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uptime\+\_\+proof.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/net/local\+\_\+ip.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+Include dependency graph for service\+\_\+node\+\_\+quorum\+\_\+cop.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__quorum__cop_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceservice__nodes_a748f177e13f74d233a7383ea12b6b676}{service\+\_\+nodes\+::find\+\_\+index\+\_\+in\+\_\+quorum\+\_\+group}} (std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ const \&group, \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} const \&my\+\_\+pubkey)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_ac067d5d6b2f7ae3421b02af971696f69}{service\+\_\+nodes\+::handle\+\_\+obligations\+\_\+vote}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, const quorum\+\_\+vote\+\_\+t \&vote, const std\+::vector$<$ pool\+\_\+vote\+\_\+entry $>$ \&votes, const quorum \&quorum)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a6f25b8c375764770388f0ef0d29a83ea}{service\+\_\+nodes\+::handle\+\_\+checkpoint\+\_\+vote}} (\mbox{\hyperlink{classcryptonote_1_1core}{cryptonote\+::core}} \&core, const quorum\+\_\+vote\+\_\+t \&vote, const std\+::vector$<$ pool\+\_\+vote\+\_\+entry $>$ \&votes, const quorum \&quorum)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ace17ff5e64e8f1177aa11e824a7d2756}{service\+\_\+nodes\+::quorum\+\_\+checksum}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&pubkeys, size\+\_\+t offset)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceservice__nodes_a4db1f85edb5655543da43d1f2ec60dd3}{service\+\_\+nodes\+::logcat}} = log\+::\+Cat(\char`\"{}quorum\+\_\+cop\char`\"{})
+\end{DoxyCompactItemize}

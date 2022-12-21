@@ -1,0 +1,57 @@
+\hypertarget{transfer__view_8h}{}\doxysection{src/wallet/transfer\+\_\+view.h File Reference}
+\label{transfer__view_8h}\index{src/wallet/transfer\_view.h@{src/wallet/transfer\_view.h}}
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/subaddress\+\_\+index.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transfer\+\_\+destination.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+Include dependency graph for transfer\+\_\+view.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transfer__view_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transfer__view_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1transfer__view}{wallet\+::transfer\+\_\+view}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacewallet}{wallet}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaa}{wallet\+::pay\+\_\+type}} \{ \newline
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaad415f0e30c471dfdd9bc4f827329ef48}{wallet\+::pay\+\_\+type\+::unspecified}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaa13b5bfe96f3e2fe411c9f66f4a582adf}{wallet\+::pay\+\_\+type\+::in}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaac68271a63ddbc431c307beb7d2918275}{wallet\+::pay\+\_\+type\+::out}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaa37437c6e58976fb891456aa08ff8c4b1}{wallet\+::pay\+\_\+type\+::stake}}, 
+\newline
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaaab4fc8c0800e170782a31ab6b09d0176}{wallet\+::pay\+\_\+type\+::miner}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaaa76a696cd10aac56690b0ebdf55dd43c}{wallet\+::pay\+\_\+type\+::service\+\_\+node}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaadad9f12ed70a0e454b09efd43581ce78}{wallet\+::pay\+\_\+type\+::governance}}, 
+\mbox{\hyperlink{namespacewallet_adc8b1beccea1faf9a8f2f3426a71baaaaf034787ff1936f7ff3d29be4fcb21878}{wallet\+::pay\+\_\+type\+::ons}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{namespacewallet_a6a8aad9a25fdaeecd4008e7cce49f650}{wallet\+::pay\+\_\+type\+\_\+string}} (pay\+\_\+type type)
+\item 
+pay\+\_\+type \mbox{\hyperlink{namespacewallet_a24c947953e712d1e4015c5f9fa5b8c46}{wallet\+::pay\+\_\+type\+\_\+from\+\_\+tx}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} tx)
+\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+CK Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__BLOCK}\index{cryptonote::rpc::GET\_BLOCK@{cryptonote::rpc::GET\_BLOCK}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+CK\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+CK\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK_ab53fae01505e0361a13f9790ab5da0e3}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK_af5759c56844b3a62092d8effda92c74f}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Full block information can be retrieved by either block height or hash, like with the above block header calls. For full block information, both lookups use the same method, but with different input parameters.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily hash} The block\textquotesingle{}s hash.
+\item {\ttfamily height} A block height to look up; returned in {\ttfamily \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}}}
+\item {\ttfamily fill\+\_\+pow\+\_\+hash} Tell the daemon if it should fill out pow\+\_\+hash field.
+\end{DoxyItemize}
+
+Output values available from a public R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily \mbox{\hyperlink{structcryptonote_1_1block__header}{block\+\_\+header}}} Block header information for the requested {\ttfamily height} block
+\item {\ttfamily tx\+\_\+hashes} List of hashes of non-\/coinbase transactions in the block. If there are no other transactions, this will be an empty list.
+\item {\ttfamily blob} Hexadecimal blob of block information.
+\item {\ttfamily json} J\+S\+ON formatted block details. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK_ab53fae01505e0361a13f9790ab5da0e3}\label{structcryptonote_1_1rpc_1_1GET__BLOCK_ab53fae01505e0361a13f9790ab5da0e3}} 
+\index{cryptonote::rpc::GET\_BLOCK@{cryptonote::rpc::GET\_BLOCK}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_BLOCK@{cryptonote::rpc::GET\_BLOCK}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK_af5759c56844b3a62092d8effda92c74f}\label{structcryptonote_1_1rpc_1_1GET__BLOCK_af5759c56844b3a62092d8effda92c74f}} 
+\index{cryptonote::rpc::GET\_BLOCK@{cryptonote::rpc::GET\_BLOCK}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_BLOCK@{cryptonote::rpc::GET\_BLOCK}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

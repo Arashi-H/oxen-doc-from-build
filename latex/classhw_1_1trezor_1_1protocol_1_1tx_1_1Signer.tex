@@ -1,0 +1,424 @@
+\hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer}{}\doxysection{hw\+::trezor\+::protocol\+::tx\+::Signer Class Reference}
+\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer}\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+
+
+{\ttfamily \#include $<$protocol.\+hpp$>$}
+
+
+
+Collaboration diagram for hw\+::trezor\+::protocol\+::tx\+::Signer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8e6df224fcf5e531d6ce30ee18f6217f}{Signer}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$wallet2, const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}} $\ast$unsigned\+\_\+tx, size\+\_\+t tx\+\_\+idx=0, \mbox{\hyperlink{classhw_1_1tx__aux__data}{hw\+::tx\+\_\+aux\+\_\+data}} $\ast$aux\+\_\+data=nullptr)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Init\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad3bc3bc9a1cbfbe66c688e3ff4cb485b}{step\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa2f1ab46020d6a118dce2748c5cfec3b}{step\+\_\+init\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Init\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Input\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a59539f59a4a9b719d3ba04e863f21f26}{step\+\_\+set\+\_\+input}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a98c4ed7174ddf8ebaf60f81c6a98426f}{step\+\_\+set\+\_\+input\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Input\+Ack $>$ ack)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5326def74548c3ac7931f028b0316f5e}{sort\+\_\+ki}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Inputs\+Permutation\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5d4d2262208be5f662d26f5c695f7401}{step\+\_\+permutation}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4a98a8f72e695e0291328bf3c9ecd81a}{step\+\_\+permutation\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Inputs\+Permutation\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Input\+Vini\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8ed7dd3499b46646aadab20aa2d4de57}{step\+\_\+set\+\_\+vini\+\_\+input}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ae7aaa496c9cffb9d7ca213331ebcf054}{step\+\_\+set\+\_\+vini\+\_\+input\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Input\+Vini\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+All\+Inputs\+Set\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a6affdea8671086fc2e56be14362b8f44}{step\+\_\+all\+\_\+inputs\+\_\+set}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a895be799836713055cb65cfabc704c91}{step\+\_\+all\+\_\+inputs\+\_\+set\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+All\+Inputs\+Set\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa9f92c09c86ee77fdcc046a6fbe8c996}{step\+\_\+set\+\_\+output}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a835d882946cc778252c894898f6a90fd}{step\+\_\+set\+\_\+output\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aeab60f542d9e3448e54da2843006c58e}{step\+\_\+rsig}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4c150c76320c6616e946c73cb807df62}{step\+\_\+set\+\_\+rsig\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+All\+Out\+Set\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac23874fa197fddad6963c5810cfef8a5}{step\+\_\+all\+\_\+outs\+\_\+set}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a78439273cffdd0dfcf8f0ffab875fd85}{step\+\_\+all\+\_\+outs\+\_\+set\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+All\+Out\+Set\+Ack $>$ ack, \mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&hwdev)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Sign\+Input\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aad80db420f2adb6eb797e397a9378ddd}{step\+\_\+sign\+\_\+input}} (size\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a867cc6a4573b6420cf3ef94c6e48309a}{step\+\_\+sign\+\_\+input\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Sign\+Input\+Ack $>$ ack)
+\item 
+std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Final\+Request $>$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a02c66789ce0f22d8a683a68f40ae289f}{step\+\_\+final}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab8abebbd5bc08ff87f251576c5c6b441}{step\+\_\+final\+\_\+ack}} (std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Final\+Ack $>$ ack)
+\item 
+std\+::string \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a79ac190b5768797e481275d17ad012f0}{store\+\_\+tx\+\_\+aux\+\_\+info}} ()
+\item 
+unsigned \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1b7f8d9c3c0d9b32cc70decfe68a9c70}{client\+\_\+version}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_adf4d2758aeda2d2966140fd1da5d87b5}{is\+\_\+simple}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab39953507e80826450a5fc08da0129ff}{is\+\_\+req\+\_\+bulletproof}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa6b8df21b74cbaf11fad937093025aab}{is\+\_\+bulletproof}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a40a64e0ee7724d8d37c9755fb57985ed}{is\+\_\+offloading}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac845f6363eb417421db9cf024d88a105}{num\+\_\+outputs}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a68cef7851c28b80a04a2e529a5e79471}{num\+\_\+inputs}} () const
+\item 
+const \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1TData}{T\+Data}} \& \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af719b6fdf0b2e7be5e536d6a5a55498e}{tdata}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \& \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1a4bcce0c6db4ecf9d4eb85d06d15f03}{cur\+\_\+src\+\_\+tx}} () const
+\item 
+const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}} \& \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a579417a80dcebc73ab0e666baf1268b2}{cur\+\_\+tx}} () const
+\item 
+const \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} \& \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a3bc7491b78710e462f0b6043fe6626bb}{get\+\_\+transfer}} (size\+\_\+t idx) const
+\item 
+const \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} \& \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_acaa5ff7761b8a8854e12cc58006b5446}{get\+\_\+source\+\_\+transfer}} (size\+\_\+t idx) const
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a699679eee37053dfc143f81f17399fc5}{extract\+\_\+payment\+\_\+id}} ()
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a978f42709fcdc05b59daaa57149189ab}{compute\+\_\+integrated\+\_\+indices}} (\mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1tx_a2b859fc54234f4564aaeb7999f013e2a}{Tsx\+Data}} $\ast$tsx\+\_\+data)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a2aa2d1d33e630d2fe46a006838d0cced}{should\+\_\+compute\+\_\+bp\+\_\+now}} () const
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad69789d2f858717954a9b48568473ba9}{compute\+\_\+bproof}} (messages\+::monero\+::\+Monero\+Transaction\+Rsig\+Data \&rsig\+\_\+data)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a63357d3a69d8cd5f20835278b3946aea}{process\+\_\+bproof}} (\mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}} \&bproof)
+\item 
+void \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a42f545ed11e99fa585a41a2cf6e7b4bd}{set\+\_\+tx\+\_\+input}} (\mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1tx_aa60c52f1b22399776ae6b2b1cbb57e6b}{Monero\+Transaction\+Source\+Entry}} $\ast$dst, size\+\_\+t idx, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} need\+\_\+ring\+\_\+keys=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} need\+\_\+ring\+\_\+indices=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1TData}{T\+Data}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1988eaf1814041bb6a262659b032f9f3}{m\+\_\+ct}}
+\item 
+\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af25b252ec704be465df63aebfb98d5b4}{m\+\_\+wallet2}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af930226d38a980f728904e126221c6a1}{m\+\_\+tx\+\_\+idx}}
+\item 
+const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}} $\ast$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa068789582a08b4503510193edf859ef}{m\+\_\+unsigned\+\_\+tx}}
+\item 
+\mbox{\hyperlink{classhw_1_1tx__aux__data}{hw\+::tx\+\_\+aux\+\_\+data}} $\ast$ \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a7c63dc43e4524f3641d9b3a7d5cce703}{m\+\_\+aux\+\_\+data}}
+\item 
+unsigned \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab90c4b342f595f2cde8b6d2ca2a80b28}{m\+\_\+client\+\_\+version}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5cdc4aa878fad0afffdd5653b10b0559}{m\+\_\+multisig}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8e6df224fcf5e531d6ce30ee18f6217f}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8e6df224fcf5e531d6ce30ee18f6217f}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!Signer@{Signer}}
+\index{Signer@{Signer}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{Signer()}{Signer()}}
+{\footnotesize\ttfamily hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::\+Signer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$}]{wallet2,  }\item[{const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}} $\ast$}]{unsigned\+\_\+tx,  }\item[{size\+\_\+t}]{tx\+\_\+idx = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classhw_1_1tx__aux__data}{hw\+::tx\+\_\+aux\+\_\+data}} $\ast$}]{aux\+\_\+data = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1b7f8d9c3c0d9b32cc70decfe68a9c70}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1b7f8d9c3c0d9b32cc70decfe68a9c70}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!client\_version@{client\_version}}
+\index{client\_version@{client\_version}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{client\_version()}{client\_version()}}
+{\footnotesize\ttfamily unsigned hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::client\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad69789d2f858717954a9b48568473ba9}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad69789d2f858717954a9b48568473ba9}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!compute\_bproof@{compute\_bproof}}
+\index{compute\_bproof@{compute\_bproof}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{compute\_bproof()}{compute\_bproof()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::compute\+\_\+bproof (\begin{DoxyParamCaption}\item[{messages\+::monero\+::\+Monero\+Transaction\+Rsig\+Data \&}]{rsig\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a978f42709fcdc05b59daaa57149189ab}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a978f42709fcdc05b59daaa57149189ab}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!compute\_integrated\_indices@{compute\_integrated\_indices}}
+\index{compute\_integrated\_indices@{compute\_integrated\_indices}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{compute\_integrated\_indices()}{compute\_integrated\_indices()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::compute\+\_\+integrated\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1tx_a2b859fc54234f4564aaeb7999f013e2a}{Tsx\+Data}} $\ast$}]{tsx\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1a4bcce0c6db4ecf9d4eb85d06d15f03}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1a4bcce0c6db4ecf9d4eb85d06d15f03}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!cur\_src\_tx@{cur\_src\_tx}}
+\index{cur\_src\_tx@{cur\_src\_tx}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{cur\_src\_tx()}{cur\_src\_tx()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}}\& hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::cur\+\_\+src\+\_\+tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a579417a80dcebc73ab0e666baf1268b2}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a579417a80dcebc73ab0e666baf1268b2}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!cur\_tx@{cur\_tx}}
+\index{cur\_tx@{cur\_tx}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{cur\_tx()}{cur\_tx()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structwallet_1_1tx__construction__data}{wallet\+::tx\+\_\+construction\+\_\+data}}\& hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::cur\+\_\+tx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a699679eee37053dfc143f81f17399fc5}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a699679eee37053dfc143f81f17399fc5}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!extract\_payment\_id@{extract\_payment\_id}}
+\index{extract\_payment\_id@{extract\_payment\_id}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{extract\_payment\_id()}{extract\_payment\_id()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::extract\+\_\+payment\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_acaa5ff7761b8a8854e12cc58006b5446}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_acaa5ff7761b8a8854e12cc58006b5446}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!get\_source\_transfer@{get\_source\_transfer}}
+\index{get\_source\_transfer@{get\_source\_transfer}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{get\_source\_transfer()}{get\_source\_transfer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}}\& hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::get\+\_\+source\+\_\+transfer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a3bc7491b78710e462f0b6043fe6626bb}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a3bc7491b78710e462f0b6043fe6626bb}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!get\_transfer@{get\_transfer}}
+\index{get\_transfer@{get\_transfer}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{get\_transfer()}{get\_transfer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}}\& hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::get\+\_\+transfer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa6b8df21b74cbaf11fad937093025aab}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa6b8df21b74cbaf11fad937093025aab}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!is\_bulletproof@{is\_bulletproof}}
+\index{is\_bulletproof@{is\_bulletproof}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{is\_bulletproof()}{is\_bulletproof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::is\+\_\+bulletproof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a40a64e0ee7724d8d37c9755fb57985ed}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a40a64e0ee7724d8d37c9755fb57985ed}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!is\_offloading@{is\_offloading}}
+\index{is\_offloading@{is\_offloading}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{is\_offloading()}{is\_offloading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::is\+\_\+offloading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab39953507e80826450a5fc08da0129ff}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab39953507e80826450a5fc08da0129ff}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!is\_req\_bulletproof@{is\_req\_bulletproof}}
+\index{is\_req\_bulletproof@{is\_req\_bulletproof}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{is\_req\_bulletproof()}{is\_req\_bulletproof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::is\+\_\+req\+\_\+bulletproof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_adf4d2758aeda2d2966140fd1da5d87b5}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_adf4d2758aeda2d2966140fd1da5d87b5}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!is\_simple@{is\_simple}}
+\index{is\_simple@{is\_simple}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{is\_simple()}{is\_simple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::is\+\_\+simple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a68cef7851c28b80a04a2e529a5e79471}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a68cef7851c28b80a04a2e529a5e79471}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!num\_inputs@{num\_inputs}}
+\index{num\_inputs@{num\_inputs}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{num\_inputs()}{num\_inputs()}}
+{\footnotesize\ttfamily size\+\_\+t hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::num\+\_\+inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac845f6363eb417421db9cf024d88a105}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac845f6363eb417421db9cf024d88a105}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!num\_outputs@{num\_outputs}}
+\index{num\_outputs@{num\_outputs}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{num\_outputs()}{num\_outputs()}}
+{\footnotesize\ttfamily size\+\_\+t hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::num\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a63357d3a69d8cd5f20835278b3946aea}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a63357d3a69d8cd5f20835278b3946aea}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!process\_bproof@{process\_bproof}}
+\index{process\_bproof@{process\_bproof}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{process\_bproof()}{process\_bproof()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::process\+\_\+bproof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}} \&}]{bproof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a42f545ed11e99fa585a41a2cf6e7b4bd}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a42f545ed11e99fa585a41a2cf6e7b4bd}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!set\_tx\_input@{set\_tx\_input}}
+\index{set\_tx\_input@{set\_tx\_input}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{set\_tx\_input()}{set\_tx\_input()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::set\+\_\+tx\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1tx_aa60c52f1b22399776ae6b2b1cbb57e6b}{Monero\+Transaction\+Source\+Entry}} $\ast$}]{dst,  }\item[{size\+\_\+t}]{idx,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{need\+\_\+ring\+\_\+keys = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{need\+\_\+ring\+\_\+indices = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a2aa2d1d33e630d2fe46a006838d0cced}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a2aa2d1d33e630d2fe46a006838d0cced}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!should\_compute\_bp\_now@{should\_compute\_bp\_now}}
+\index{should\_compute\_bp\_now@{should\_compute\_bp\_now}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{should\_compute\_bp\_now()}{should\_compute\_bp\_now()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::should\+\_\+compute\+\_\+bp\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5326def74548c3ac7931f028b0316f5e}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5326def74548c3ac7931f028b0316f5e}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!sort\_ki@{sort\_ki}}
+\index{sort\_ki@{sort\_ki}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{sort\_ki()}{sort\_ki()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::sort\+\_\+ki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a6affdea8671086fc2e56be14362b8f44}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a6affdea8671086fc2e56be14362b8f44}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_all\_inputs\_set@{step\_all\_inputs\_set}}
+\index{step\_all\_inputs\_set@{step\_all\_inputs\_set}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_all\_inputs\_set()}{step\_all\_inputs\_set()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+All\+Inputs\+Set\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+all\+\_\+inputs\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a895be799836713055cb65cfabc704c91}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a895be799836713055cb65cfabc704c91}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_all\_inputs\_set\_ack@{step\_all\_inputs\_set\_ack}}
+\index{step\_all\_inputs\_set\_ack@{step\_all\_inputs\_set\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_all\_inputs\_set\_ack()}{step\_all\_inputs\_set\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+all\+\_\+inputs\+\_\+set\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+All\+Inputs\+Set\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac23874fa197fddad6963c5810cfef8a5}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ac23874fa197fddad6963c5810cfef8a5}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_all\_outs\_set@{step\_all\_outs\_set}}
+\index{step\_all\_outs\_set@{step\_all\_outs\_set}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_all\_outs\_set()}{step\_all\_outs\_set()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+All\+Out\+Set\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+all\+\_\+outs\+\_\+set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a78439273cffdd0dfcf8f0ffab875fd85}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a78439273cffdd0dfcf8f0ffab875fd85}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_all\_outs\_set\_ack@{step\_all\_outs\_set\_ack}}
+\index{step\_all\_outs\_set\_ack@{step\_all\_outs\_set\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_all\_outs\_set\_ack()}{step\_all\_outs\_set\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+all\+\_\+outs\+\_\+set\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+All\+Out\+Set\+Ack $>$}]{ack,  }\item[{\mbox{\hyperlink{classhw_1_1device}{hw\+::device}} \&}]{hwdev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a02c66789ce0f22d8a683a68f40ae289f}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a02c66789ce0f22d8a683a68f40ae289f}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_final@{step\_final}}
+\index{step\_final@{step\_final}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_final()}{step\_final()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Final\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+final (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab8abebbd5bc08ff87f251576c5c6b441}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab8abebbd5bc08ff87f251576c5c6b441}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_final\_ack@{step\_final\_ack}}
+\index{step\_final\_ack@{step\_final\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_final\_ack()}{step\_final\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+final\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Final\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad3bc3bc9a1cbfbe66c688e3ff4cb485b}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ad3bc3bc9a1cbfbe66c688e3ff4cb485b}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_init@{step\_init}}
+\index{step\_init@{step\_init}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_init()}{step\_init()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Init\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa2f1ab46020d6a118dce2748c5cfec3b}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa2f1ab46020d6a118dce2748c5cfec3b}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_init\_ack@{step\_init\_ack}}
+\index{step\_init\_ack@{step\_init\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_init\_ack()}{step\_init\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+init\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Init\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5d4d2262208be5f662d26f5c695f7401}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5d4d2262208be5f662d26f5c695f7401}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_permutation@{step\_permutation}}
+\index{step\_permutation@{step\_permutation}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_permutation()}{step\_permutation()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Inputs\+Permutation\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+permutation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4a98a8f72e695e0291328bf3c9ecd81a}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4a98a8f72e695e0291328bf3c9ecd81a}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_permutation\_ack@{step\_permutation\_ack}}
+\index{step\_permutation\_ack@{step\_permutation\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_permutation\_ack()}{step\_permutation\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+permutation\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Inputs\+Permutation\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aeab60f542d9e3448e54da2843006c58e}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aeab60f542d9e3448e54da2843006c58e}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_rsig@{step\_rsig}}
+\index{step\_rsig@{step\_rsig}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_rsig()}{step\_rsig()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+rsig (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a59539f59a4a9b719d3ba04e863f21f26}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a59539f59a4a9b719d3ba04e863f21f26}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_input@{step\_set\_input}}
+\index{step\_set\_input@{step\_set\_input}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_input()}{step\_set\_input()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Input\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+input (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a98c4ed7174ddf8ebaf60f81c6a98426f}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a98c4ed7174ddf8ebaf60f81c6a98426f}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_input\_ack@{step\_set\_input\_ack}}
+\index{step\_set\_input\_ack@{step\_set\_input\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_input\_ack()}{step\_set\_input\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+input\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Input\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa9f92c09c86ee77fdcc046a6fbe8c996}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa9f92c09c86ee77fdcc046a6fbe8c996}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_output@{step\_set\_output}}
+\index{step\_set\_output@{step\_set\_output}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_output()}{step\_set\_output()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+output (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a835d882946cc778252c894898f6a90fd}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a835d882946cc778252c894898f6a90fd}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_output\_ack@{step\_set\_output\_ack}}
+\index{step\_set\_output\_ack@{step\_set\_output\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_output\_ack()}{step\_set\_output\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+output\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4c150c76320c6616e946c73cb807df62}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a4c150c76320c6616e946c73cb807df62}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_rsig\_ack@{step\_set\_rsig\_ack}}
+\index{step\_set\_rsig\_ack@{step\_set\_rsig\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_rsig\_ack()}{step\_set\_rsig\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+rsig\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Set\+Output\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8ed7dd3499b46646aadab20aa2d4de57}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a8ed7dd3499b46646aadab20aa2d4de57}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_vini\_input@{step\_set\_vini\_input}}
+\index{step\_set\_vini\_input@{step\_set\_vini\_input}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_vini\_input()}{step\_set\_vini\_input()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Input\+Vini\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+vini\+\_\+input (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ae7aaa496c9cffb9d7ca213331ebcf054}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ae7aaa496c9cffb9d7ca213331ebcf054}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_set\_vini\_input\_ack@{step\_set\_vini\_input\_ack}}
+\index{step\_set\_vini\_input\_ack@{step\_set\_vini\_input\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_set\_vini\_input\_ack()}{step\_set\_vini\_input\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+set\+\_\+vini\+\_\+input\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Input\+Vini\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aad80db420f2adb6eb797e397a9378ddd}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aad80db420f2adb6eb797e397a9378ddd}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_sign\_input@{step\_sign\_input}}
+\index{step\_sign\_input@{step\_sign\_input}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_sign\_input()}{step\_sign\_input()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Transaction\+Sign\+Input\+Request $>$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+sign\+\_\+input (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a867cc6a4573b6420cf3ef94c6e48309a}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a867cc6a4573b6420cf3ef94c6e48309a}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!step\_sign\_input\_ack@{step\_sign\_input\_ack}}
+\index{step\_sign\_input\_ack@{step\_sign\_input\_ack}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{step\_sign\_input\_ack()}{step\_sign\_input\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::step\+\_\+sign\+\_\+input\+\_\+ack (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const messages\+::monero\+::\+Monero\+Transaction\+Sign\+Input\+Ack $>$}]{ack }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a79ac190b5768797e481275d17ad012f0}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a79ac190b5768797e481275d17ad012f0}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!store\_tx\_aux\_info@{store\_tx\_aux\_info}}
+\index{store\_tx\_aux\_info@{store\_tx\_aux\_info}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{store\_tx\_aux\_info()}{store\_tx\_aux\_info()}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::store\+\_\+tx\+\_\+aux\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af719b6fdf0b2e7be5e536d6a5a55498e}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af719b6fdf0b2e7be5e536d6a5a55498e}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!tdata@{tdata}}
+\index{tdata@{tdata}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{tdata()}{tdata()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1TData}{T\+Data}}\& hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::tdata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a7c63dc43e4524f3641d9b3a7d5cce703}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a7c63dc43e4524f3641d9b3a7d5cce703}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_aux\_data@{m\_aux\_data}}
+\index{m\_aux\_data@{m\_aux\_data}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_aux\_data}{m\_aux\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1tx__aux__data}{hw\+::tx\+\_\+aux\+\_\+data}}$\ast$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+aux\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab90c4b342f595f2cde8b6d2ca2a80b28}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_ab90c4b342f595f2cde8b6d2ca2a80b28}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_client\_version@{m\_client\_version}}
+\index{m\_client\_version@{m\_client\_version}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_client\_version}{m\_client\_version}}
+{\footnotesize\ttfamily unsigned hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+client\+\_\+version\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1988eaf1814041bb6a262659b032f9f3}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a1988eaf1814041bb6a262659b032f9f3}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_ct@{m\_ct}}
+\index{m\_ct@{m\_ct}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_ct}{m\_ct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1trezor_1_1protocol_1_1tx_1_1TData}{T\+Data}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+ct\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5cdc4aa878fad0afffdd5653b10b0559}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_a5cdc4aa878fad0afffdd5653b10b0559}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_multisig@{m\_multisig}}
+\index{m\_multisig@{m\_multisig}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_multisig}{m\_multisig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+multisig\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af930226d38a980f728904e126221c6a1}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af930226d38a980f728904e126221c6a1}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_tx\_idx@{m\_tx\_idx}}
+\index{m\_tx\_idx@{m\_tx\_idx}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_tx\_idx}{m\_tx\_idx}}
+{\footnotesize\ttfamily size\+\_\+t hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+tx\+\_\+idx\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa068789582a08b4503510193edf859ef}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_aa068789582a08b4503510193edf859ef}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_unsigned\_tx@{m\_unsigned\_tx}}
+\index{m\_unsigned\_tx@{m\_unsigned\_tx}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_unsigned\_tx}{m\_unsigned\_tx}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}}$\ast$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+unsigned\+\_\+tx\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af25b252ec704be465df63aebfb98d5b4}\label{classhw_1_1trezor_1_1protocol_1_1tx_1_1Signer_af25b252ec704be465df63aebfb98d5b4}} 
+\index{hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}!m\_wallet2@{m\_wallet2}}
+\index{m\_wallet2@{m\_wallet2}!hw::trezor::protocol::tx::Signer@{hw::trezor::protocol::tx::Signer}}
+\doxysubsubsection{\texorpdfstring{m\_wallet2}{m\_wallet2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}}$\ast$ hw\+::trezor\+::protocol\+::tx\+::\+Signer\+::m\+\_\+wallet2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{protocol_8hpp}{protocol.\+hpp}}\item 
+src/device\+\_\+trezor/trezor/\mbox{\hyperlink{protocol_8cpp}{protocol.\+cpp}}\end{DoxyCompactItemize}

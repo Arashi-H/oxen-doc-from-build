@@ -1,0 +1,104 @@
+\hypertarget{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER}{}\doxysection{wallet\+::rpc\+::D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER Struct Reference}
+\label{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER}\index{wallet::rpc::DESCRIBE\_TRANSFER@{wallet::rpc::DESCRIBE\_TRANSFER}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_1_1recipient}{recipient}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_1_1transfer__description}{transfer\+\_\+description}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ab2a7c80193fc1d0139fa3ccd3d6e4205}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_1_1REQUEST}{wallet\+::rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ae2757ff4fa085def1a9ca06deec5e138}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Get the details of an unsigned transaction blob
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx returned by \char`\"{}transfer\char`\"{} or \char`\"{}transfer\+\_\+split\char`\"{} methods.
+\item {\ttfamily multisig\+\_\+txset} -- Set of unsigned multisig txes returned by \char`\"{}transfer\char`\"{} or \char`\"{}transfer\+\_\+split\char`\"{} methods
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily desc} -- List of information of transfers.
+\begin{DoxyItemize}
+\item {\ttfamily amount\+\_\+in} -- Amount in, in atomic units.
+\item {\ttfamily amount\+\_\+out} -- amount out, in atomic units.
+\item {\ttfamily ring\+\_\+size} -- Ring size of transfer.
+\item {\ttfamily unlock\+\_\+time} -- Number of blocks before the oxen can be spent (0 represents the default network lock time).
+\item {\ttfamily recipients} -- List of addresses and amounts.
+\begin{DoxyItemize}
+\item {\ttfamily address} -- Destination public address.
+\item {\ttfamily amount} -- Amount in atomic units.
+\end{DoxyItemize}
+\item {\ttfamily payment\+\_\+id} -- Payment ID matching the input parameter.
+\item {\ttfamily change\+\_\+amount} -- Change received from transaction in atomic units.
+\item {\ttfamily change\+\_\+address} -- Address the change was sent to.
+\item {\ttfamily fee} -- Fee of the transaction in atomic units.
+\item {\ttfamily dummy\+\_\+outputs} -- how many of the created outputs are \char`\"{}dummies\char`\"{}
+\item {\ttfamily extra} -- Data stored in the tx extra represented in hex. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ab2a7c80193fc1d0139fa3ccd3d6e4205}\label{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ab2a7c80193fc1d0139fa3ccd3d6e4205}} 
+\index{wallet::rpc::DESCRIBE\_TRANSFER@{wallet::rpc::DESCRIBE\_TRANSFER}!names@{names}}
+\index{names@{names}!wallet::rpc::DESCRIBE\_TRANSFER@{wallet::rpc::DESCRIBE\_TRANSFER}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ae2757ff4fa085def1a9ca06deec5e138}\label{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_ae2757ff4fa085def1a9ca06deec5e138}} 
+\index{wallet::rpc::DESCRIBE\_TRANSFER@{wallet::rpc::DESCRIBE\_TRANSFER}!request@{request}}
+\index{request@{request}!wallet::rpc::DESCRIBE\_TRANSFER@{wallet::rpc::DESCRIBE\_TRANSFER}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1DESCRIBE__TRANSFER_1_1REQUEST}{wallet\+::rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+D\+E\+S\+C\+R\+I\+B\+E\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

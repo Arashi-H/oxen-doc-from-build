@@ -1,0 +1,302 @@
+\hypertarget{structWallet_1_1TransactionInfo}{}\doxysection{Wallet\+::Transaction\+Info Struct Reference}
+\label{structWallet_1_1TransactionInfo}\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+
+
+The \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} -\/ interface for displaying transaction information.  
+
+
+
+
+{\ttfamily \#include $<$wallet2\+\_\+api.\+h$>$}
+
+
+
+Inheritance diagram for Wallet\+::Transaction\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{structWallet_1_1TransactionInfo__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWallet_1_1TransactionInfo_1_1Transfer}{Transfer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6}{Direction}} \{ \mbox{\hyperlink{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4719ddc09f15943f293897ad2815db0e}{Direction\+\_\+\+In}}, 
+\mbox{\hyperlink{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4a72cd654da0cecec7ff46a5f5d096ff}{Direction\+\_\+\+Out}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structWallet_1_1TransactionInfo_a940b205ef50eb954faedf0ae277c7f29}{$\sim$\+Transaction\+Info}} ()=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1TransactionInfo_a448d349eda9fe9516ad94201326fe7b2}{is\+Service\+Node\+Reward}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1TransactionInfo_a0bf6d2c7bfe79c7afffb8e7e3b804796}{is\+Miner\+Reward}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1TransactionInfo_a98fce3dd95655093af5aaf868c745f1d}{is\+Stake}} () const =0
+\item 
+virtual int \mbox{\hyperlink{structWallet_1_1TransactionInfo_a723b8e9f950392f26555f4b332708df9}{direction}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1TransactionInfo_adf5f5c236bc060be07ffea7181b2e9a4}{is\+Pending}} () const =0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structWallet_1_1TransactionInfo_a00f60cbdcd623f8a70d485d9d17b62f7}{is\+Failed}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a9fa91c207bfaa3dc5866e6c7ee8b92c2}{amount}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a39f193c2af115791739f4e23eeb9dea0}{fee}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a402a8c3e3b7d35390ae9ca4d3c561af6}{block\+Height}} () const =0
+\item 
+virtual std\+::set$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structWallet_1_1TransactionInfo_a8e2fd2df1395dd98298517356e08c491}{subaddr\+Index}} () const =0
+\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a97309c02e1a31d8d347b39b2a64f9a72}{subaddr\+Account}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1TransactionInfo_a944ca1b71d09f9fa99c63aa0b5ccfe0e}{label}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a7192946ab4ef7e48f2723e77278a58be}{confirmations}} () const =0
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a918f11092f8a03445bac2daf4782f7f0}{unlock\+Time}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1TransactionInfo_a83b4148904a7c8b91c5cf77b14399e1c}{hash}} () const =0
+\begin{DoxyCompactList}\small\item\em transaction\+\_\+id \end{DoxyCompactList}\item 
+virtual std\+::time\+\_\+t \mbox{\hyperlink{structWallet_1_1TransactionInfo_a15f955f224f2efc915e44dacd6c4173e}{timestamp}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{structWallet_1_1TransactionInfo_af58918b310f0bf4e984660c0b3654f58}{payment\+Id}} () const =0
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{structWallet_1_1TransactionInfo_1_1Transfer}{Transfer}} $>$ \& \mbox{\hyperlink{structWallet_1_1TransactionInfo_a1b2cc49379d98e7d0fc4864ed58d5d53}{transfers}} () const =0
+\begin{DoxyCompactList}\small\item\em only applicable for output transactions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structWallet_1_1TransactionInfo}{Transaction\+Info}} -\/ interface for displaying transaction information. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6}\label{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!Direction@{Direction}}
+\index{Direction@{Direction}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6}{Wallet\+::\+Transaction\+Info\+::\+Direction}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Direction\_In@{Direction\_In}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!Direction\_In@{Direction\_In}}}\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4719ddc09f15943f293897ad2815db0e}\label{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4719ddc09f15943f293897ad2815db0e}} 
+Direction\+\_\+\+In&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Direction\_Out@{Direction\_Out}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!Direction\_Out@{Direction\_Out}}}\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4a72cd654da0cecec7ff46a5f5d096ff}\label{structWallet_1_1TransactionInfo_a32bc2c8d2f9920513179f9221a2e5ad6a4a72cd654da0cecec7ff46a5f5d096ff}} 
+Direction\+\_\+\+Out&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a940b205ef50eb954faedf0ae277c7f29}\label{structWallet_1_1TransactionInfo_a940b205ef50eb954faedf0ae277c7f29}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!````~TransactionInfo@{$\sim$TransactionInfo}}
+\index{````~TransactionInfo@{$\sim$TransactionInfo}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$TransactionInfo()}{~TransactionInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{common__defines_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} Wallet\+::\+Transaction\+Info\+::$\sim$\+Transaction\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a9fa91c207bfaa3dc5866e6c7ee8b92c2}\label{structWallet_1_1TransactionInfo_a9fa91c207bfaa3dc5866e6c7ee8b92c2}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!amount@{amount}}
+\index{amount@{amount}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{amount()}{amount()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Transaction\+Info\+::amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a68f3f90bd97fe08fb90631163adf2a04}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a402a8c3e3b7d35390ae9ca4d3c561af6}\label{structWallet_1_1TransactionInfo_a402a8c3e3b7d35390ae9ca4d3c561af6}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!blockHeight@{blockHeight}}
+\index{blockHeight@{blockHeight}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{blockHeight()}{blockHeight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Transaction\+Info\+::block\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a6ca83cf1b6f6640edd51c96f9f425ceb}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a7192946ab4ef7e48f2723e77278a58be}\label{structWallet_1_1TransactionInfo_a7192946ab4ef7e48f2723e77278a58be}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!confirmations@{confirmations}}
+\index{confirmations@{confirmations}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{confirmations()}{confirmations()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Transaction\+Info\+::confirmations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a8603235bb332de9135d8656c68b4258a}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a723b8e9f950392f26555f4b332708df9}\label{structWallet_1_1TransactionInfo_a723b8e9f950392f26555f4b332708df9}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!direction@{direction}}
+\index{direction@{direction}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily virtual int Wallet\+::\+Transaction\+Info\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a5cafa8762810bbff254f550d9b91751f}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a39f193c2af115791739f4e23eeb9dea0}\label{structWallet_1_1TransactionInfo_a39f193c2af115791739f4e23eeb9dea0}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!fee@{fee}}
+\index{fee@{fee}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{fee()}{fee()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Transaction\+Info\+::fee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_abc5b1c7fc2b2fd2897e32c5b05a81dda}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a83b4148904a7c8b91c5cf77b14399e1c}\label{structWallet_1_1TransactionInfo_a83b4148904a7c8b91c5cf77b14399e1c}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!hash@{hash}}
+\index{hash@{hash}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Transaction\+Info\+::hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+transaction\+\_\+id 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_ab8db7b2414dc3f8e75f454c8d1413f2e}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a00f60cbdcd623f8a70d485d9d17b62f7}\label{structWallet_1_1TransactionInfo_a00f60cbdcd623f8a70d485d9d17b62f7}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!isFailed@{isFailed}}
+\index{isFailed@{isFailed}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{isFailed()}{isFailed()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Transaction\+Info\+::is\+Failed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a1a3b743de35b6eeee022ac91f443a9c5}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a0bf6d2c7bfe79c7afffb8e7e3b804796}\label{structWallet_1_1TransactionInfo_a0bf6d2c7bfe79c7afffb8e7e3b804796}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!isMinerReward@{isMinerReward}}
+\index{isMinerReward@{isMinerReward}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{isMinerReward()}{isMinerReward()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Transaction\+Info\+::is\+Miner\+Reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a19193635272d33878ec0f98ad55fac67}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_adf5f5c236bc060be07ffea7181b2e9a4}\label{structWallet_1_1TransactionInfo_adf5f5c236bc060be07ffea7181b2e9a4}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!isPending@{isPending}}
+\index{isPending@{isPending}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{isPending()}{isPending()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Transaction\+Info\+::is\+Pending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a066918c6720f439dfa9138c7cca7ada9}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a448d349eda9fe9516ad94201326fe7b2}\label{structWallet_1_1TransactionInfo_a448d349eda9fe9516ad94201326fe7b2}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!isServiceNodeReward@{isServiceNodeReward}}
+\index{isServiceNodeReward@{isServiceNodeReward}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{isServiceNodeReward()}{isServiceNodeReward()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Transaction\+Info\+::is\+Service\+Node\+Reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a93158fb9c0b914b77da9cb0b842b0655}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a98fce3dd95655093af5aaf868c745f1d}\label{structWallet_1_1TransactionInfo_a98fce3dd95655093af5aaf868c745f1d}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!isStake@{isStake}}
+\index{isStake@{isStake}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{isStake()}{isStake()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} Wallet\+::\+Transaction\+Info\+::is\+Stake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a0c1373f4dd1242fc2671ce24f6804550}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a944ca1b71d09f9fa99c63aa0b5ccfe0e}\label{structWallet_1_1TransactionInfo_a944ca1b71d09f9fa99c63aa0b5ccfe0e}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!label@{label}}
+\index{label@{label}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Transaction\+Info\+::label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_aee6f4ab2fd3dcda39090a438eb96c349}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_af58918b310f0bf4e984660c0b3654f58}\label{structWallet_1_1TransactionInfo_af58918b310f0bf4e984660c0b3654f58}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!paymentId@{paymentId}}
+\index{paymentId@{paymentId}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{paymentId()}{paymentId()}}
+{\footnotesize\ttfamily virtual std\+::string Wallet\+::\+Transaction\+Info\+::payment\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a8b2ead3544d61c92371ecb73dd973085}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a97309c02e1a31d8d347b39b2a64f9a72}\label{structWallet_1_1TransactionInfo_a97309c02e1a31d8d347b39b2a64f9a72}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!subaddrAccount@{subaddrAccount}}
+\index{subaddrAccount@{subaddrAccount}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{subaddrAccount()}{subaddrAccount()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t Wallet\+::\+Transaction\+Info\+::subaddr\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a1ba6b622c6e90c81fcf4eae0f979e58c}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a8e2fd2df1395dd98298517356e08c491}\label{structWallet_1_1TransactionInfo_a8e2fd2df1395dd98298517356e08c491}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!subaddrIndex@{subaddrIndex}}
+\index{subaddrIndex@{subaddrIndex}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{subaddrIndex()}{subaddrIndex()}}
+{\footnotesize\ttfamily virtual std\+::set$<$uint32\+\_\+t$>$ Wallet\+::\+Transaction\+Info\+::subaddr\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a4c0c3e4ee5fac4a713ccb3efcd36520a}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a15f955f224f2efc915e44dacd6c4173e}\label{structWallet_1_1TransactionInfo_a15f955f224f2efc915e44dacd6c4173e}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{timestamp()}{timestamp()}}
+{\footnotesize\ttfamily virtual std\+::time\+\_\+t Wallet\+::\+Transaction\+Info\+::timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a91da2960810416f36e6cbe3ccd40bafc}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a1b2cc49379d98e7d0fc4864ed58d5d53}\label{structWallet_1_1TransactionInfo_a1b2cc49379d98e7d0fc4864ed58d5d53}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!transfers@{transfers}}
+\index{transfers@{transfers}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{transfers()}{transfers()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{structWallet_1_1TransactionInfo_1_1Transfer}{Transfer}}$>$\& Wallet\+::\+Transaction\+Info\+::transfers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+only applicable for output transactions 
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a8b8739b0a43b77bee8e20aed619b30c9}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+\mbox{\Hypertarget{structWallet_1_1TransactionInfo_a918f11092f8a03445bac2daf4782f7f0}\label{structWallet_1_1TransactionInfo_a918f11092f8a03445bac2daf4782f7f0}} 
+\index{Wallet::TransactionInfo@{Wallet::TransactionInfo}!unlockTime@{unlockTime}}
+\index{unlockTime@{unlockTime}!Wallet::TransactionInfo@{Wallet::TransactionInfo}}
+\doxysubsubsection{\texorpdfstring{unlockTime()}{unlockTime()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t Wallet\+::\+Transaction\+Info\+::unlock\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classWallet_1_1TransactionInfoImpl_a7f88dbe2d3da25fec3ea275507c4f570}{Wallet\+::\+Transaction\+Info\+Impl}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/api/\mbox{\hyperlink{wallet2__api_8h}{wallet2\+\_\+api.\+h}}\item 
+src/wallet/api/\mbox{\hyperlink{transaction__info_8cpp}{transaction\+\_\+info.\+cpp}}\end{DoxyCompactItemize}

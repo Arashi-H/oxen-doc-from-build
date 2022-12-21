@@ -1,0 +1,612 @@
+\hypertarget{namespacecrypto}{}\doxysection{crypto Namespace Reference}
+\label{namespacecrypto}\index{crypto@{crypto}}
+
+
+crypto namespace.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03}{anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}}}
+\item 
+ \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords}{Electrum\+Words}}
+\begin{DoxyCompactList}\small\item\em Mnemonic seed word generation and wallet restoration helper functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1bytes}{bytes}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1ec__point}{ec\+\_\+point}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1ed25519__public__key}{ed25519\+\_\+public\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1ed25519__secret__key__}{ed25519\+\_\+secret\+\_\+key\+\_\+}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1ed25519__signature}{ed25519\+\_\+signature}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1hash}{hash}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1hash8}{hash8}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1random__device}{random\+\_\+device}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1raw__hasher}{raw\+\_\+hasher}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1rs__comm}{rs\+\_\+comm}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1s__comm}{s\+\_\+comm}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1s__comm__2}{s\+\_\+comm\+\_\+2}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1secret__key__}{secret\+\_\+key\+\_\+}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1signature}{signature}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1x25519__public__key}{x25519\+\_\+public\+\_\+key}}
+\item 
+struct \mbox{\hyperlink{structcrypto_1_1x25519__secret__key__}{x25519\+\_\+secret\+\_\+key\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} = epee\+::mlocked$<$ tools\+::scrubbed$<$ \mbox{\hyperlink{structcrypto_1_1secret__key__}{secret\+\_\+key\+\_\+}} $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{ed25519\+\_\+secret\+\_\+key}} = epee\+::mlocked$<$ tools\+::scrubbed$<$ \mbox{\hyperlink{structcrypto_1_1ed25519__secret__key__}{ed25519\+\_\+secret\+\_\+key\+\_\+}} $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}{x25519\+\_\+secret\+\_\+key}} = epee\+::mlocked$<$ tools\+::scrubbed$<$ \mbox{\hyperlink{structcrypto_1_1x25519__secret__key__}{x25519\+\_\+secret\+\_\+key\+\_\+}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}{cn\+\_\+slow\+\_\+hash\+\_\+type}} \{ \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a7c72c39b67fb65e21fba3a033fed8e12}{cn\+\_\+slow\+\_\+hash\+\_\+type\+::heavy\+\_\+v1}} = 3, 
+\mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a03b51822fd5a0548b3ec305a6a506748}{cn\+\_\+slow\+\_\+hash\+\_\+type\+::heavy\+\_\+v2}}, 
+\mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a3baf2f491a74e9a2c089dede538498a5}{cn\+\_\+slow\+\_\+hash\+\_\+type\+::turtle\+\_\+lite\+\_\+v2}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a15166b48315ec1b2f3c758692e192806}{operator==}} (const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_ab367f36d15085cd90429f32c8643b2f8}{operator!=}} (const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a59deaa47be9b0c7639a8e063413930e1}{operator$<$}} (const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&left, const R \&right)
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$has\+\_\+compare\+\_\+hash\+\_\+hex$<$\+T$>$$>$$>$ }\\std\+::string \mbox{\hyperlink{namespacecrypto_afe3d9380c5aebaf594113d2ffd7576e6}{to\+\_\+hex\+\_\+string}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+void \mbox{\hyperlink{namespacecrypto_ab5956bb4c81cd1af0dc77f584be5de40}{chacha8}} (const void $\ast$data, std\+::size\+\_\+t length, const chacha\+\_\+key \&key, const chacha\+\_\+iv \&\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a9ec210696edadbd2d7c90f0e6e97b99a}{chacha20}} (const void $\ast$data, std\+::size\+\_\+t length, const chacha\+\_\+key \&key, const chacha\+\_\+iv \&\mbox{\hyperlink{sha512-hash_8c_a842bfd7e2b0ffc1718dbff5269121aa1}{iv}}, char $\ast$cipher)
+\item 
+void \mbox{\hyperlink{namespacecrypto_aa1625b7690672ea34769a5201d0f1e51}{generate\+\_\+chacha\+\_\+key}} (std\+::string password, chacha\+\_\+key \&key, uint64\+\_\+t kdf\+\_\+rounds)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a8bdeadd1065195ed4f82cfe49ced0cb4}{generate\+\_\+chacha\+\_\+key}} (const void $\ast$data, size\+\_\+t size, chacha\+\_\+key \&key, uint64\+\_\+t kdf\+\_\+rounds)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a912a42a62027f8e3563a1660e214666c}{generate\+\_\+chacha\+\_\+key\+\_\+prehashed}} (const void $\ast$data, size\+\_\+t size, chacha\+\_\+key \&key, uint64\+\_\+t kdf\+\_\+rounds)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a1550cf25f2aebaf6dc33db1d7bc91958}{generate\+\_\+random\+\_\+bytes\+\_\+thread\+\_\+safe}} (size\+\_\+t N, uint8\+\_\+t $\ast$\mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+void \mbox{\hyperlink{namespacecrypto_a001bf17b07412f27d556b3f937c144bb}{add\+\_\+extra\+\_\+entropy\+\_\+thread\+\_\+safe}} (const void $\ast$ptr, size\+\_\+t \mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a824b077894ce582708984710305ae668}{sc\+\_\+is\+\_\+canonical}} (const unsigned char $\ast$a)
+\item 
+void \mbox{\hyperlink{namespacecrypto_ac8015c4c3519492dcfeacc5cc1e9bc4d}{random\+\_\+scalar}} (unsigned char $\ast$\mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+void \mbox{\hyperlink{namespacecrypto_adb12e306f5e662e79803b29e0c2b99f1}{random\+\_\+scalar}} (\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&res)
+\item 
+\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \mbox{\hyperlink{namespacecrypto_a42b2a81ec9abdee3494b4a72697cba9a}{random\+\_\+scalar}} ()
+\item 
+void \mbox{\hyperlink{namespacecrypto_ad91deb84b3eac266145c5329598f282a}{hash\+\_\+to\+\_\+scalar}} (const void $\ast$data, size\+\_\+t length, \mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&res)
+\item 
+\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \mbox{\hyperlink{namespacecrypto_a17d4fed21f6cd99e09c04318b1dca8ae}{hash\+\_\+to\+\_\+scalar}} (const void $\ast$data, size\+\_\+t length)
+\item 
+\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \mbox{\hyperlink{namespacecrypto_a4cfb16d15839aee35fbf7e30aa49e2dd}{generate\+\_\+keys}} (\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&recovery\+\_\+key, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} recover)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a0ea5e169709b097e7868684aeb1a9a37}{check\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&key)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_accad1ff5d9765b632ed9bd75e76e6d43}{secret\+\_\+key\+\_\+to\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub)
+\item 
+\mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \mbox{\hyperlink{namespacecrypto_a829861e5b3c015c323cbda547190055d}{generate\+\_\+key\+\_\+derivation}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&key1, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&key2)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a7bfac2282fcc342589c521e646e73ce1}{generate\+\_\+key\+\_\+derivation}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&key1, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&key2, \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation)
+\item 
+void \mbox{\hyperlink{namespacecrypto_afb4ba722c59e935c7a15d81f93c1560c}{derivation\+\_\+to\+\_\+scalar}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, size\+\_\+t output\+\_\+index, \mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&res)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a5afa607436148c43b0682fbb63fca7c7}{derive\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&derived\+\_\+key)
+\item 
+void \mbox{\hyperlink{namespacecrypto_ad52cebfd5eeaab09a39314115bfccf6f}{derive\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&derived\+\_\+key)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a342de1d43c4f9cc51f267469284f73b9}{derive\+\_\+subaddress\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&out\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, std\+::size\+\_\+t output\+\_\+index, \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&derived\+\_\+key)
+\item 
+\mbox{\hyperlink{structcrypto_1_1signature}{signature}} \mbox{\hyperlink{namespacecrypto_a700c2f43b09780ce0f8b6d00cec1bdc9}{generate\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a0599cd9988fcc0a12b8d7360dd1527e6}{generate\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+static constexpr \mbox{\hyperlink{structcrypto_1_1ec__point}{ec\+\_\+point}} \mbox{\hyperlink{namespacecrypto_aa5e3d184ac91596c0ee6b95fca57f31c}{get\+\_\+infinity}} ()
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_aa9d240b803db22c14272c092c9457187}{check\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a25f16695c9edd5985e8be3c51a7eaa80}{generate\+\_\+tx\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&R, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&A, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $>$ \&B, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&D, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&r, \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_acf0fb297d00922e3e9f966901289614f}{check\+\_\+tx\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&R, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&A, const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $>$ \&B, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&D, const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+static void \mbox{\hyperlink{namespacecrypto_aa2bca4a07f98d435aa77c4160f17d834}{hash\+\_\+to\+\_\+ec}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&key, \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&res)
+\item 
+void \mbox{\hyperlink{namespacecrypto_adf9614e5996e9f8f06ac7f973f41309b}{generate\+\_\+key\+\_\+image}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a1f564d1f52041158240882d1c33d46e8}{generate\+\_\+ring\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image, const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&pubs, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, size\+\_\+t sec\+\_\+index, \mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$sig)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a1b2e4deebf88db010fd67219bd1b4424}{check\+\_\+ring\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image, const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&pubs, const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$sig)
+\item 
+void \mbox{\hyperlink{namespacecrypto_adcc8ca49ecba0d52f35606830b4d7747}{generate\+\_\+key\+\_\+image\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_adb13a99a1f49080b052860a56a5cc69c}{check\+\_\+key\+\_\+image\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&pub, const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&sig)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a9d13de4bc0185a688e9a78b752ff2a1f}{rand}} (size\+\_\+t N, uint8\+\_\+t $\ast$\mbox{\hyperlink{structcrypto_1_1bytes}{bytes}})
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+pod$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::type \mbox{\hyperlink{namespacecrypto_afe67f2aa382532376a749cc91402ebe3}{rand}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::type \mbox{\hyperlink{namespacecrypto_a5dbb69c6a4a5276a98142e36f63bbb0b}{rand\+\_\+range}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} range\+\_\+min, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} range\+\_\+max)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+unsigned$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$\+::type \mbox{\hyperlink{namespacecrypto_acdb7a135ca10ba49bd82912186ebb19b}{rand\+\_\+idx}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} sz)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a9745416f03f6ee8489ed666230d9f719}{derive\+\_\+public\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, std\+::size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&derived\+\_\+key)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a753e59ec115764f164e8bb0dbf585ad5}{derive\+\_\+secret\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&derivation, std\+::size\+\_\+t output\+\_\+index, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&derived\+\_\+key)
+\item 
+void \mbox{\hyperlink{namespacecrypto_ab12026a280c5af8e92c8f469513328c7}{generate\+\_\+ring\+\_\+signature}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&prefix\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&image, const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&pubs, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&sec, std\+::size\+\_\+t sec\+\_\+index, \mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$sig)
+\item 
+void \mbox{\hyperlink{namespacecrypto_af7174f427e3be85addbe18bd4d74cf60}{cn\+\_\+slow\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length, \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}}, \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}{cn\+\_\+slow\+\_\+hash\+\_\+type}} type)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a085c360e57fa902d4150a39f7dded06f}{cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length, \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&\mbox{\hyperlink{structcrypto_1_1hash}{hash}})
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{hash}} \mbox{\hyperlink{namespacecrypto_a1b30d838b560f963e6e3dfc9f0f8288c}{cn\+\_\+fast\+\_\+hash}} (const void $\ast$data, std\+::size\+\_\+t length)
+\item 
+void \mbox{\hyperlink{namespacecrypto_a4fb82beedb045b54e302c2282cd0f0ff}{tree\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} $\ast$hashes, std\+::size\+\_\+t count, \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&root\+\_\+hash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+standard\+\_\+layout\+\_\+v$<$\+T$>$ \&\& std\+::is\+\_\+default\+\_\+constructible\+\_\+v$<$\+T$>$$>$$>$ }\\constexpr \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{null}} \{\}
+\begin{DoxyCompactList}\small\item\em constexpr null (all-\/0) value for various crypto types; use as {\ttfamily \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$crypto\+::whatever$>$}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_a168c57159a74ea270aca5f6528832a4d}{has\+\_\+compare\+\_\+hash\+\_\+hex}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+{\footnotesize template$<$typename Left , typename Right , typename  = void$>$ }\\constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_aff0d1f2881c0e68844dc1c9b470c7948}{are\+\_\+comparable\+\_\+v}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\item 
+static std\+::mutex \mbox{\hyperlink{namespacecrypto_a90a12f1b4e3d229da186794439c95c66}{random\+\_\+mutex}}
+\item 
+static constexpr unsigned char \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \mbox{[}32\mbox{]}
+\item 
+constexpr \mbox{\hyperlink{structcrypto_1_1ec__point}{ec\+\_\+point}} \mbox{\hyperlink{namespacecrypto_a7a60b14701fbb46548e6b42ef54e91e7}{infinity}} = \mbox{\hyperlink{namespacecrypto_aa5e3d184ac91596c0ee6b95fca57f31c}{get\+\_\+infinity}}()
+\item 
+template$<$$>$ const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \mbox{\hyperlink{namespacecrypto_a4ae124b7833ddd01cfd9ef6a47c902f4}{null$<$ secret\+\_\+key $>$}} \{\}
+\item 
+constexpr size\+\_\+t \mbox{\hyperlink{namespacecrypto_aa282f845f79c51cca04f0885b4bcf58f}{S\+I\+Z\+E\+\_\+\+T\+S\+\_\+\+I\+N\+\_\+\+H\+A\+SH}} = \mbox{\hyperlink{structcrypto_1_1bytes_a8b621ff07b94c26f75c69378f6cae351}{crypto\+::hash\+::size}}() / sizeof(size\+\_\+t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+crypto namespace. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}\label{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}} 
+\index{crypto@{crypto}!ed25519\_secret\_key@{ed25519\_secret\_key}}
+\index{ed25519\_secret\_key@{ed25519\_secret\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{ed25519\_secret\_key}{ed25519\_secret\_key}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecrypto_a075f95a5c71c1122b5f77074c4fc23b4}{crypto\+::ed25519\+\_\+secret\+\_\+key}} = typedef epee\+::mlocked$<$tools\+::scrubbed$<$\mbox{\hyperlink{structcrypto_1_1ed25519__secret__key__}{ed25519\+\_\+secret\+\_\+key\+\_\+}}$>$ $>$}
+
+\mbox{\Hypertarget{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}\label{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}} 
+\index{crypto@{crypto}!secret\_key@{secret\_key}}
+\index{secret\_key@{secret\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{secret\_key}{secret\_key}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} = typedef epee\+::mlocked$<$tools\+::scrubbed$<$\mbox{\hyperlink{structcrypto_1_1secret__key__}{secret\+\_\+key\+\_\+}}$>$ $>$}
+
+\mbox{\Hypertarget{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}\label{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}} 
+\index{crypto@{crypto}!x25519\_secret\_key@{x25519\_secret\_key}}
+\index{x25519\_secret\_key@{x25519\_secret\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{x25519\_secret\_key}{x25519\_secret\_key}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacecrypto_ac56b84b74a2730200de5932b1e9b3d5a}{crypto\+::x25519\+\_\+secret\+\_\+key}} = typedef epee\+::mlocked$<$tools\+::scrubbed$<$\mbox{\hyperlink{structcrypto_1_1x25519__secret__key__}{x25519\+\_\+secret\+\_\+key\+\_\+}}$>$ $>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}\label{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}} 
+\index{crypto@{crypto}!cn\_slow\_hash\_type@{cn\_slow\_hash\_type}}
+\index{cn\_slow\_hash\_type@{cn\_slow\_hash\_type}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{cn\_slow\_hash\_type}{cn\_slow\_hash\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}{crypto\+::cn\+\_\+slow\+\_\+hash\+\_\+type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{heavy\_v1@{heavy\_v1}!crypto@{crypto}}\index{crypto@{crypto}!heavy\_v1@{heavy\_v1}}}\mbox{\Hypertarget{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a7c72c39b67fb65e21fba3a033fed8e12}\label{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a7c72c39b67fb65e21fba3a033fed8e12}} 
+heavy\+\_\+v1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{heavy\_v2@{heavy\_v2}!crypto@{crypto}}\index{crypto@{crypto}!heavy\_v2@{heavy\_v2}}}\mbox{\Hypertarget{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a03b51822fd5a0548b3ec305a6a506748}\label{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a03b51822fd5a0548b3ec305a6a506748}} 
+heavy\+\_\+v2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{turtle\_lite\_v2@{turtle\_lite\_v2}!crypto@{crypto}}\index{crypto@{crypto}!turtle\_lite\_v2@{turtle\_lite\_v2}}}\mbox{\Hypertarget{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a3baf2f491a74e9a2c089dede538498a5}\label{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1a3baf2f491a74e9a2c089dede538498a5}} 
+turtle\+\_\+lite\+\_\+v2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecrypto_a001bf17b07412f27d556b3f937c144bb}\label{namespacecrypto_a001bf17b07412f27d556b3f937c144bb}} 
+\index{crypto@{crypto}!add\_extra\_entropy\_thread\_safe@{add\_extra\_entropy\_thread\_safe}}
+\index{add\_extra\_entropy\_thread\_safe@{add\_extra\_entropy\_thread\_safe}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{add\_extra\_entropy\_thread\_safe()}{add\_extra\_entropy\_thread\_safe()}}
+{\footnotesize\ttfamily void crypto\+::add\+\_\+extra\+\_\+entropy\+\_\+thread\+\_\+safe (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a9ec210696edadbd2d7c90f0e6e97b99a}\label{namespacecrypto_a9ec210696edadbd2d7c90f0e6e97b99a}} 
+\index{crypto@{crypto}!chacha20@{chacha20}}
+\index{chacha20@{chacha20}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{chacha20()}{chacha20()}}
+{\footnotesize\ttfamily void crypto\+::chacha20 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{length,  }\item[{const chacha\+\_\+key \&}]{key,  }\item[{const chacha\+\_\+iv \&}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ab5956bb4c81cd1af0dc77f584be5de40}\label{namespacecrypto_ab5956bb4c81cd1af0dc77f584be5de40}} 
+\index{crypto@{crypto}!chacha8@{chacha8}}
+\index{chacha8@{chacha8}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{chacha8()}{chacha8()}}
+{\footnotesize\ttfamily void crypto\+::chacha8 (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{length,  }\item[{const chacha\+\_\+key \&}]{key,  }\item[{const chacha\+\_\+iv \&}]{iv,  }\item[{char $\ast$}]{cipher }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a0ea5e169709b097e7868684aeb1a9a37}\label{namespacecrypto_a0ea5e169709b097e7868684aeb1a9a37}} 
+\index{crypto@{crypto}!check\_key@{check\_key}}
+\index{check\_key@{check\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{check\_key()}{check\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::check\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_adb13a99a1f49080b052860a56a5cc69c}\label{namespacecrypto_adb13a99a1f49080b052860a56a5cc69c}} 
+\index{crypto@{crypto}!check\_key\_image\_signature@{check\_key\_image\_signature}}
+\index{check\_key\_image\_signature@{check\_key\_image\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{check\_key\_image\_signature()}{check\_key\_image\_signature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::check\+\_\+key\+\_\+image\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a1b2e4deebf88db010fd67219bd1b4424}\label{namespacecrypto_a1b2e4deebf88db010fd67219bd1b4424}} 
+\index{crypto@{crypto}!check\_ring\_signature@{check\_ring\_signature}}
+\index{check\_ring\_signature@{check\_ring\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{check\_ring\_signature()}{check\_ring\_signature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::check\+\_\+ring\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image,  }\item[{const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&}]{pubs,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_aa9d240b803db22c14272c092c9457187}\label{namespacecrypto_aa9d240b803db22c14272c092c9457187}} 
+\index{crypto@{crypto}!check\_signature@{check\_signature}}
+\index{check\_signature@{check\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{check\_signature()}{check\_signature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::check\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_acf0fb297d00922e3e9f966901289614f}\label{namespacecrypto_acf0fb297d00922e3e9f966901289614f}} 
+\index{crypto@{crypto}!check\_tx\_proof@{check\_tx\_proof}}
+\index{check\_tx\_proof@{check\_tx\_proof}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{check\_tx\_proof()}{check\_tx\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::check\+\_\+tx\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{R,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{A,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $>$ \&}]{B,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{D,  }\item[{const \mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a1b30d838b560f963e6e3dfc9f0f8288c}\label{namespacecrypto_a1b30d838b560f963e6e3dfc9f0f8288c}} 
+\index{crypto@{crypto}!cn\_fast\_hash@{cn\_fast\_hash}}
+\index{cn\_fast\_hash@{cn\_fast\_hash}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{cn\_fast\_hash()}{cn\_fast\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{hash}} crypto\+::cn\+\_\+fast\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacecrypto_a085c360e57fa902d4150a39f7dded06f}\label{namespacecrypto_a085c360e57fa902d4150a39f7dded06f}} 
+\index{crypto@{crypto}!cn\_fast\_hash@{cn\_fast\_hash}}
+\index{cn\_fast\_hash@{cn\_fast\_hash}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{cn\_fast\_hash()}{cn\_fast\_hash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::cn\+\_\+fast\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacecrypto_af7174f427e3be85addbe18bd4d74cf60}\label{namespacecrypto_af7174f427e3be85addbe18bd4d74cf60}} 
+\index{crypto@{crypto}!cn\_slow\_hash@{cn\_slow\_hash}}
+\index{cn\_slow\_hash@{cn\_slow\_hash}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{cn\_slow\_hash()}{cn\_slow\_hash()}}
+{\footnotesize\ttfamily void crypto\+::cn\+\_\+slow\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{std\+::size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{hash,  }\item[{\mbox{\hyperlink{namespacecrypto_a4ebdc9cea75dd0b7dab906024bd574c1}{cn\+\_\+slow\+\_\+hash\+\_\+type}}}]{type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_afb4ba722c59e935c7a15d81f93c1560c}\label{namespacecrypto_afb4ba722c59e935c7a15d81f93c1560c}} 
+\index{crypto@{crypto}!derivation\_to\_scalar@{derivation\_to\_scalar}}
+\index{derivation\_to\_scalar@{derivation\_to\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derivation\_to\_scalar()}{derivation\_to\_scalar()}}
+{\footnotesize\ttfamily void crypto\+::derivation\+\_\+to\+\_\+scalar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{size\+\_\+t}]{output\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a5afa607436148c43b0682fbb63fca7c7}\label{namespacecrypto_a5afa607436148c43b0682fbb63fca7c7}} 
+\index{crypto@{crypto}!derive\_public\_key@{derive\_public\_key}}
+\index{derive\_public\_key@{derive\_public\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derive\_public\_key()}{derive\_public\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::derive\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{base,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{derived\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a9745416f03f6ee8489ed666230d9f719}\label{namespacecrypto_a9745416f03f6ee8489ed666230d9f719}} 
+\index{crypto@{crypto}!derive\_public\_key@{derive\_public\_key}}
+\index{derive\_public\_key@{derive\_public\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derive\_public\_key()}{derive\_public\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::derive\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{base,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{derived\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ad52cebfd5eeaab09a39314115bfccf6f}\label{namespacecrypto_ad52cebfd5eeaab09a39314115bfccf6f}} 
+\index{crypto@{crypto}!derive\_secret\_key@{derive\_secret\_key}}
+\index{derive\_secret\_key@{derive\_secret\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derive\_secret\_key()}{derive\_secret\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void crypto\+::derive\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{base,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{derived\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a753e59ec115764f164e8bb0dbf585ad5}\label{namespacecrypto_a753e59ec115764f164e8bb0dbf585ad5}} 
+\index{crypto@{crypto}!derive\_secret\_key@{derive\_secret\_key}}
+\index{derive\_secret\_key@{derive\_secret\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derive\_secret\_key()}{derive\_secret\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::derive\+\_\+secret\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{base,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{derived\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a342de1d43c4f9cc51f267469284f73b9}\label{namespacecrypto_a342de1d43c4f9cc51f267469284f73b9}} 
+\index{crypto@{crypto}!derive\_subaddress\_public\_key@{derive\_subaddress\_public\_key}}
+\index{derive\_subaddress\_public\_key@{derive\_subaddress\_public\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{derive\_subaddress\_public\_key()}{derive\_subaddress\_public\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::derive\+\_\+subaddress\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{out\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation,  }\item[{std\+::size\+\_\+t}]{output\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{derived\+\_\+key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a8bdeadd1065195ed4f82cfe49ced0cb4}\label{namespacecrypto_a8bdeadd1065195ed4f82cfe49ced0cb4}} 
+\index{crypto@{crypto}!generate\_chacha\_key@{generate\_chacha\_key}}
+\index{generate\_chacha\_key@{generate\_chacha\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_chacha\_key()}{generate\_chacha\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+chacha\+\_\+key (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{chacha\+\_\+key \&}]{key,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_aa1625b7690672ea34769a5201d0f1e51}\label{namespacecrypto_aa1625b7690672ea34769a5201d0f1e51}} 
+\index{crypto@{crypto}!generate\_chacha\_key@{generate\_chacha\_key}}
+\index{generate\_chacha\_key@{generate\_chacha\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_chacha\_key()}{generate\_chacha\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+chacha\+\_\+key (\begin{DoxyParamCaption}\item[{std\+::string}]{password,  }\item[{chacha\+\_\+key \&}]{key,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a912a42a62027f8e3563a1660e214666c}\label{namespacecrypto_a912a42a62027f8e3563a1660e214666c}} 
+\index{crypto@{crypto}!generate\_chacha\_key\_prehashed@{generate\_chacha\_key\_prehashed}}
+\index{generate\_chacha\_key\_prehashed@{generate\_chacha\_key\_prehashed}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_chacha\_key\_prehashed()}{generate\_chacha\_key\_prehashed()}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+chacha\+\_\+key\+\_\+prehashed (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{chacha\+\_\+key \&}]{key,  }\item[{uint64\+\_\+t}]{kdf\+\_\+rounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a829861e5b3c015c323cbda547190055d}\label{namespacecrypto_a829861e5b3c015c323cbda547190055d}} 
+\index{crypto@{crypto}!generate\_key\_derivation@{generate\_key\_derivation}}
+\index{generate\_key\_derivation@{generate\_key\_derivation}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivation()}{generate\_key\_derivation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} crypto\+::generate\+\_\+key\+\_\+derivation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{key1,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{key2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a7bfac2282fcc342589c521e646e73ce1}\label{namespacecrypto_a7bfac2282fcc342589c521e646e73ce1}} 
+\index{crypto@{crypto}!generate\_key\_derivation@{generate\_key\_derivation}}
+\index{generate\_key\_derivation@{generate\_key\_derivation}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_derivation()}{generate\_key\_derivation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::generate\+\_\+key\+\_\+derivation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{key1,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{key2,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__derivation}{key\+\_\+derivation}} \&}]{derivation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_adf9614e5996e9f8f06ac7f973f41309b}\label{namespacecrypto_adf9614e5996e9f8f06ac7f973f41309b}} 
+\index{crypto@{crypto}!generate\_key\_image@{generate\_key\_image}}
+\index{generate\_key\_image@{generate\_key\_image}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_image()}{generate\_key\_image()}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+key\+\_\+image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_adcc8ca49ecba0d52f35606830b4d7747}\label{namespacecrypto_adcc8ca49ecba0d52f35606830b4d7747}} 
+\index{crypto@{crypto}!generate\_key\_image\_signature@{generate\_key\_image\_signature}}
+\index{generate\_key\_image\_signature@{generate\_key\_image\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_key\_image\_signature()}{generate\_key\_image\_signature()}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+key\+\_\+image\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a4cfb16d15839aee35fbf7e30aa49e2dd}\label{namespacecrypto_a4cfb16d15839aee35fbf7e30aa49e2dd}} 
+\index{crypto@{crypto}!generate\_keys@{generate\_keys}}
+\index{generate\_keys@{generate\_keys}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_keys()}{generate\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} crypto\+::generate\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{recovery\+\_\+key,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{recover }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a1550cf25f2aebaf6dc33db1d7bc91958}\label{namespacecrypto_a1550cf25f2aebaf6dc33db1d7bc91958}} 
+\index{crypto@{crypto}!generate\_random\_bytes\_thread\_safe@{generate\_random\_bytes\_thread\_safe}}
+\index{generate\_random\_bytes\_thread\_safe@{generate\_random\_bytes\_thread\_safe}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_random\_bytes\_thread\_safe()}{generate\_random\_bytes\_thread\_safe()}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+random\+\_\+bytes\+\_\+thread\+\_\+safe (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{N,  }\item[{uint8\+\_\+t $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a1f564d1f52041158240882d1c33d46e8}\label{namespacecrypto_a1f564d1f52041158240882d1c33d46e8}} 
+\index{crypto@{crypto}!generate\_ring\_signature@{generate\_ring\_signature}}
+\index{generate\_ring\_signature@{generate\_ring\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_ring\_signature()}{generate\_ring\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+ring\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image,  }\item[{const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&}]{pubs,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{size\+\_\+t}]{sec\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ab12026a280c5af8e92c8f469513328c7}\label{namespacecrypto_ab12026a280c5af8e92c8f469513328c7}} 
+\index{crypto@{crypto}!generate\_ring\_signature@{generate\_ring\_signature}}
+\index{generate\_ring\_signature@{generate\_ring\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_ring\_signature()}{generate\_ring\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+ring\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{key\+\_\+image}} \&}]{image,  }\item[{const std\+::vector$<$ const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $\ast$ $>$ \&}]{pubs,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{std\+::size\+\_\+t}]{sec\+\_\+index,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{signature}} $\ast$}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a700c2f43b09780ce0f8b6d00cec1bdc9}\label{namespacecrypto_a700c2f43b09780ce0f8b6d00cec1bdc9}} 
+\index{crypto@{crypto}!generate\_signature@{generate\_signature}}
+\index{generate\_signature@{generate\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_signature()}{generate\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1signature}{signature}} crypto\+::generate\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a0599cd9988fcc0a12b8d7360dd1527e6}\label{namespacecrypto_a0599cd9988fcc0a12b8d7360dd1527e6}} 
+\index{crypto@{crypto}!generate\_signature@{generate\_signature}}
+\index{generate\_signature@{generate\_signature}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_signature()}{generate\_signature()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+signature (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a25f16695c9edd5985e8be3c51a7eaa80}\label{namespacecrypto_a25f16695c9edd5985e8be3c51a7eaa80}} 
+\index{crypto@{crypto}!generate\_tx\_proof@{generate\_tx\_proof}}
+\index{generate\_tx\_proof@{generate\_tx\_proof}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{generate\_tx\_proof()}{generate\_tx\_proof()}}
+{\footnotesize\ttfamily void crypto\+::generate\+\_\+tx\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{prefix\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{R,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{A,  }\item[{const std\+::optional$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} $>$ \&}]{B,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{D,  }\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{r,  }\item[{\mbox{\hyperlink{structcrypto_1_1signature}{signature}} \&}]{sig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_aa5e3d184ac91596c0ee6b95fca57f31c}\label{namespacecrypto_aa5e3d184ac91596c0ee6b95fca57f31c}} 
+\index{crypto@{crypto}!get\_infinity@{get\_infinity}}
+\index{get\_infinity@{get\_infinity}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{get\_infinity()}{get\_infinity()}}
+{\footnotesize\ttfamily static constexpr \mbox{\hyperlink{structcrypto_1_1ec__point}{ec\+\_\+point}} crypto\+::get\+\_\+infinity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecrypto_aa2bca4a07f98d435aa77c4160f17d834}\label{namespacecrypto_aa2bca4a07f98d435aa77c4160f17d834}} 
+\index{crypto@{crypto}!hash\_to\_ec@{hash\_to\_ec}}
+\index{hash\_to\_ec@{hash\_to\_ec}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{hash\_to\_ec()}{hash\_to\_ec()}}
+{\footnotesize\ttfamily static void crypto\+::hash\+\_\+to\+\_\+ec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{key,  }\item[{\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacecrypto_a17d4fed21f6cd99e09c04318b1dca8ae}\label{namespacecrypto_a17d4fed21f6cd99e09c04318b1dca8ae}} 
+\index{crypto@{crypto}!hash\_to\_scalar@{hash\_to\_scalar}}
+\index{hash\_to\_scalar@{hash\_to\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{hash\_to\_scalar()}{hash\_to\_scalar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} crypto\+::hash\+\_\+to\+\_\+scalar (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ad91deb84b3eac266145c5329598f282a}\label{namespacecrypto_ad91deb84b3eac266145c5329598f282a}} 
+\index{crypto@{crypto}!hash\_to\_scalar@{hash\_to\_scalar}}
+\index{hash\_to\_scalar@{hash\_to\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{hash\_to\_scalar()}{hash\_to\_scalar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::hash\+\_\+to\+\_\+scalar (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ab367f36d15085cd90429f32c8643b2f8}\label{namespacecrypto_ab367f36d15085cd90429f32c8643b2f8}} 
+\index{crypto@{crypto}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&}]{left,  }\item[{const R \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a59deaa47be9b0c7639a8e063413930e1}\label{namespacecrypto_a59deaa47be9b0c7639a8e063413930e1}} 
+\index{crypto@{crypto}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&}]{left,  }\item[{const R \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a15166b48315ec1b2f3c758692e192806}\label{namespacecrypto_a15166b48315ec1b2f3c758692e192806}} 
+\index{crypto@{crypto}!operator==@{operator==}}
+\index{operator==@{operator==}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename L , typename R , std\+::enable\+\_\+if\+\_\+t$<$ are\+\_\+comparable\+\_\+v$<$ L, R $>$, int $>$  = 0$>$ \\
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_affffc08e76ddef048f5df8e87c739791}{L}} \&}]{left,  }\item[{const R \&}]{right }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_afe67f2aa382532376a749cc91402ebe3}\label{namespacecrypto_afe67f2aa382532376a749cc91402ebe3}} 
+\index{crypto@{crypto}!rand@{rand}}
+\index{rand@{rand}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{rand()}{rand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+pod$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::type crypto\+::rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a9d13de4bc0185a688e9a78b752ff2a1f}\label{namespacecrypto_a9d13de4bc0185a688e9a78b752ff2a1f}} 
+\index{crypto@{crypto}!rand@{rand}}
+\index{rand@{rand}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{rand()}{rand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void crypto\+::rand (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{N,  }\item[{uint8\+\_\+t $\ast$}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacecrypto_acdb7a135ca10ba49bd82912186ebb19b}\label{namespacecrypto_acdb7a135ca10ba49bd82912186ebb19b}} 
+\index{crypto@{crypto}!rand\_idx@{rand\_idx}}
+\index{rand\_idx@{rand\_idx}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{rand\_idx()}{rand\_idx()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+unsigned$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::type crypto\+::rand\+\_\+idx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{sz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a5dbb69c6a4a5276a98142e36f63bbb0b}\label{namespacecrypto_a5dbb69c6a4a5276a98142e36f63bbb0b}} 
+\index{crypto@{crypto}!rand\_range@{rand\_range}}
+\index{rand\_range@{rand\_range}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{rand\_range()}{rand\_range()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::value, \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}$>$\+::type crypto\+::rand\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{range\+\_\+min,  }\item[{\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}}]{range\+\_\+max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a42b2a81ec9abdee3494b4a72697cba9a}\label{namespacecrypto_a42b2a81ec9abdee3494b4a72697cba9a}} 
+\index{crypto@{crypto}!random\_scalar@{random\_scalar}}
+\index{random\_scalar@{random\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{random\_scalar()}{random\_scalar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} crypto\+::random\+\_\+scalar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_adb12e306f5e662e79803b29e0c2b99f1}\label{namespacecrypto_adb12e306f5e662e79803b29e0c2b99f1}} 
+\index{crypto@{crypto}!random\_scalar@{random\_scalar}}
+\index{random\_scalar@{random\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{random\_scalar()}{random\_scalar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void crypto\+::random\+\_\+scalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcrypto_1_1ec__scalar}{ec\+\_\+scalar}} \&}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_ac8015c4c3519492dcfeacc5cc1e9bc4d}\label{namespacecrypto_ac8015c4c3519492dcfeacc5cc1e9bc4d}} 
+\index{crypto@{crypto}!random\_scalar@{random\_scalar}}
+\index{random\_scalar@{random\_scalar}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{random\_scalar()}{random\_scalar()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void crypto\+::random\+\_\+scalar (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a824b077894ce582708984710305ae668}\label{namespacecrypto_a824b077894ce582708984710305ae668}} 
+\index{crypto@{crypto}!sc\_is\_canonical@{sc\_is\_canonical}}
+\index{sc\_is\_canonical@{sc\_is\_canonical}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{sc\_is\_canonical()}{sc\_is\_canonical()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::sc\+\_\+is\+\_\+canonical (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacecrypto_accad1ff5d9765b632ed9bd75e76e6d43}\label{namespacecrypto_accad1ff5d9765b632ed9bd75e76e6d43}} 
+\index{crypto@{crypto}!secret\_key\_to\_public\_key@{secret\_key\_to\_public\_key}}
+\index{secret\_key\_to\_public\_key@{secret\_key\_to\_public\_key}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{secret\_key\_to\_public\_key()}{secret\_key\_to\_public\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::secret\+\_\+key\+\_\+to\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \&}]{sec,  }\item[{\mbox{\hyperlink{structcrypto_1_1public__key}{public\+\_\+key}} \&}]{pub }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_afe3d9380c5aebaf594113d2ffd7576e6}\label{namespacecrypto_afe3d9380c5aebaf594113d2ffd7576e6}} 
+\index{crypto@{crypto}!to\_hex\_string@{to\_hex\_string}}
+\index{to\_hex\_string@{to\_hex\_string}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{to\_hex\_string()}{to\_hex\_string()}}
+{\footnotesize\ttfamily template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$has\+\_\+compare\+\_\+hash\+\_\+hex$<$\+T$>$$>$$>$ \\
+std\+::string crypto\+::to\+\_\+hex\+\_\+string (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&}]{val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecrypto_a4fb82beedb045b54e302c2282cd0f0ff}\label{namespacecrypto_a4fb82beedb045b54e302c2282cd0f0ff}} 
+\index{crypto@{crypto}!tree\_hash@{tree\_hash}}
+\index{tree\_hash@{tree\_hash}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{tree\_hash()}{tree\_hash()}}
+{\footnotesize\ttfamily void crypto\+::tree\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{hash}} $\ast$}]{hashes,  }\item[{std\+::size\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{hash}} \&}]{root\+\_\+hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecrypto_aff0d1f2881c0e68844dc1c9b470c7948}\label{namespacecrypto_aff0d1f2881c0e68844dc1c9b470c7948}} 
+\index{crypto@{crypto}!are\_comparable\_v@{are\_comparable\_v}}
+\index{are\_comparable\_v@{are\_comparable\_v}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{are\_comparable\_v}{are\_comparable\_v}}
+{\footnotesize\ttfamily template$<$typename Left , typename Right , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::are\+\_\+comparable\+\_\+v = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecrypto_a168c57159a74ea270aca5f6528832a4d}\label{namespacecrypto_a168c57159a74ea270aca5f6528832a4d}} 
+\index{crypto@{crypto}!has\_compare\_hash\_hex@{has\_compare\_hash\_hex}}
+\index{has\_compare\_hash\_hex@{has\_compare\_hash\_hex}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{has\_compare\_hash\_hex}{has\_compare\_hash\_hex}}
+{\footnotesize\ttfamily template$<$typename T , typename  = void$>$ \\
+constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} crypto\+::has\+\_\+compare\+\_\+hash\+\_\+hex = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecrypto_a7a60b14701fbb46548e6b42ef54e91e7}\label{namespacecrypto_a7a60b14701fbb46548e6b42ef54e91e7}} 
+\index{crypto@{crypto}!infinity@{infinity}}
+\index{infinity@{infinity}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{infinity}{infinity}}
+{\footnotesize\ttfamily constexpr \mbox{\hyperlink{structcrypto_1_1ec__point}{ec\+\_\+point}} crypto\+::infinity = \mbox{\hyperlink{namespacecrypto_aa5e3d184ac91596c0ee6b95fca57f31c}{get\+\_\+infinity}}()\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecrypto_affffc08e76ddef048f5df8e87c739791}\label{namespacecrypto_affffc08e76ddef048f5df8e87c739791}} 
+\index{crypto@{crypto}!L@{L}}
+\index{L@{L}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily constexpr unsigned char crypto\+::L\mbox{[}32\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    0xed, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14,}
+\DoxyCodeLine{    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}\label{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}} 
+\index{crypto@{crypto}!null@{null}}
+\index{null@{null}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{null}{null}}
+{\footnotesize\ttfamily template$<$typename T , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+standard\+\_\+layout\+\_\+v$<$\+T$>$ \&\& std\+::is\+\_\+default\+\_\+constructible\+\_\+v$<$\+T$>$$>$$>$ \\
+constexpr \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} crypto\+::null \{\}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+constexpr null (all-\/0) value for various crypto types; use as {\ttfamily \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$crypto\+::whatever$>$}. 
+
+\mbox{\Hypertarget{namespacecrypto_a4ae124b7833ddd01cfd9ef6a47c902f4}\label{namespacecrypto_a4ae124b7833ddd01cfd9ef6a47c902f4}} 
+\index{crypto@{crypto}!null$<$ secret\_key $>$@{null$<$ secret\_key $>$}}
+\index{null$<$ secret\_key $>$@{null$<$ secret\_key $>$}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{null$<$ secret\_key $>$}{null< secret\_key >}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} \mbox{\hyperlink{namespacecrypto_a61da38b6360448f2aa8ad1fab99f592b}{crypto\+::null}}$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{secret\+\_\+key}} $>$ \{\}\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacecrypto_a90a12f1b4e3d229da186794439c95c66}\label{namespacecrypto_a90a12f1b4e3d229da186794439c95c66}} 
+\index{crypto@{crypto}!random\_mutex@{random\_mutex}}
+\index{random\_mutex@{random\_mutex}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{random\_mutex}{random\_mutex}}
+{\footnotesize\ttfamily std\+::mutex crypto\+::random\+\_\+mutex\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacecrypto_aa282f845f79c51cca04f0885b4bcf58f}\label{namespacecrypto_aa282f845f79c51cca04f0885b4bcf58f}} 
+\index{crypto@{crypto}!SIZE\_TS\_IN\_HASH@{SIZE\_TS\_IN\_HASH}}
+\index{SIZE\_TS\_IN\_HASH@{SIZE\_TS\_IN\_HASH}!crypto@{crypto}}
+\doxysubsubsection{\texorpdfstring{SIZE\_TS\_IN\_HASH}{SIZE\_TS\_IN\_HASH}}
+{\footnotesize\ttfamily constexpr size\+\_\+t crypto\+::\+S\+I\+Z\+E\+\_\+\+T\+S\+\_\+\+I\+N\+\_\+\+H\+A\+SH = \mbox{\hyperlink{structcrypto_1_1bytes_a8b621ff07b94c26f75c69378f6cae351}{crypto\+::hash\+::size}}() / sizeof(size\+\_\+t)\hspace{0.3cm}{\ttfamily [constexpr]}}
+

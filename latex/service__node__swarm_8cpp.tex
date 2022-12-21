@@ -1,0 +1,59 @@
+\hypertarget{service__node__swarm_8cpp}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+swarm.cpp File Reference}
+\label{service__node__swarm_8cpp}\index{src/cryptonote\_core/service\_node\_swarm.cpp@{src/cryptonote\_core/service\_node\_swarm.cpp}}
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+swarm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/random.\+h\char`\"{}}\newline
+Include dependency graph for service\+\_\+node\+\_\+swarm.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__swarm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}}~static
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab1abfb41883960ea3170243426b1bd4d}{service\+\_\+nodes\+::get\+\_\+new\+\_\+swarm\+\_\+id}} (const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a6e3e030cf4501d88173a69569a1334de}{service\+\_\+nodes\+::calc\+\_\+excess}} (const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes)
+\begin{DoxyCompactList}\small\item\em The excess is calculated as the total number of snodes above M\+I\+N\+\_\+\+S\+W\+A\+R\+M\+\_\+\+S\+I\+ZE across all swarms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} size\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a7a8b3c32d56f2b1bf23d8cf3ba86a5d9}{service\+\_\+nodes\+::calc\+\_\+threshold}} (const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes)
+\item 
+const \mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} excess\+\_\+pool\+\_\+snode \& \mbox{\hyperlink{namespaceservice__nodes_a49d5b7e03c0428f979a78aa949205a8c}{service\+\_\+nodes\+::pick\+\_\+from\+\_\+excess\+\_\+pool}} (const std\+::vector$<$ excess\+\_\+pool\+\_\+snode $>$ \&excess\+\_\+pool, std\+::mt19937\+\_\+64 \&mt)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} void \mbox{\hyperlink{namespaceservice__nodes_ab783963fa74fa09daac44477c4f10002}{service\+\_\+nodes\+::remove\+\_\+excess\+\_\+snode\+\_\+from\+\_\+swarm}} (const excess\+\_\+pool\+\_\+snode \&excess\+\_\+snode, swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} void \mbox{\hyperlink{namespaceservice__nodes_a2aadfe01ee63a8782ce10affdf2696fe}{service\+\_\+nodes\+::get\+\_\+excess\+\_\+pool}} (size\+\_\+t threshold, const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, std\+::vector$<$ excess\+\_\+pool\+\_\+snode $>$ \&pool\+\_\+snodes, size\+\_\+t \&excess)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} void \mbox{\hyperlink{namespaceservice__nodes_a821e5f4929301f12d7c3f0b944c37347}{service\+\_\+nodes\+::create\+\_\+new\+\_\+swarm\+\_\+from\+\_\+excess}} (swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, std\+::mt19937\+\_\+64 \&mt)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} void \mbox{\hyperlink{namespaceservice__nodes_a976369d301b8ae986f9a8eeaf3fcd032}{service\+\_\+nodes\+::calc\+\_\+swarm\+\_\+sizes}} (const swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, std\+::vector$<$ swarm\+\_\+size $>$ \&sorted\+\_\+swarm\+\_\+sizes)
+\item 
+\mbox{\hyperlink{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}{prod\+\_\+static}} void \mbox{\hyperlink{namespaceservice__nodes_a8c16160f63f93858d132de02c5105b32}{service\+\_\+nodes\+::assign\+\_\+snodes}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} $>$ \&snode\+\_\+pubkeys, swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, std\+::mt19937\+\_\+64 \&mt, size\+\_\+t percentile)
+\item 
+void \mbox{\hyperlink{namespaceservice__nodes_abf146bcfc31ce7759ad1ddba8d20eb61}{service\+\_\+nodes\+::calc\+\_\+swarm\+\_\+changes}} (swarm\+\_\+snode\+\_\+map\+\_\+t \&swarm\+\_\+to\+\_\+snodes, uint64\+\_\+t seed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceservice__nodes_a4db1f85edb5655543da43d1f2ec60dd3}{service\+\_\+nodes\+::logcat}} = log\+::\+Cat(\char`\"{}service\+\_\+nodes\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}\label{service__node__swarm_8cpp_a466b4c485feac93d468e5db20e098ebf}} 
+\index{service\_node\_swarm.cpp@{service\_node\_swarm.cpp}!prod\_static@{prod\_static}}
+\index{prod\_static@{prod\_static}!service\_node\_swarm.cpp@{service\_node\_swarm.cpp}}
+\doxysubsubsection{\texorpdfstring{prod\_static}{prod\_static}}
+{\footnotesize\ttfamily \#define prod\+\_\+static~static}
+

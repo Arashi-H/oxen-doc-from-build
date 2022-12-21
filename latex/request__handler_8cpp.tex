@@ -1,0 +1,42 @@
+\hypertarget{request__handler_8cpp}{}\doxysection{src/wallet3/rpc/request\+\_\+handler.cpp File Reference}
+\label{request__handler_8cpp}\index{src/wallet3/rpc/request\_handler.cpp@{src/wallet3/rpc/request\_handler.cpp}}
+{\ttfamily \#include \char`\"{}request\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}commands.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command\+\_\+parser.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$wallet3/wallet.\+hpp$>$}\newline
+{\ttfamily \#include $<$wallet3/db\+\_\+schema.\+hpp$>$}\newline
+{\ttfamily \#include $<$version.\+h$>$}\newline
+{\ttfamily \#include $<$cryptonote\+\_\+core/cryptonote\+\_\+tx\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$common/hex.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mnemonics/electrum-\/words.\+h\char`\"{}}\newline
+Include dependency graph for request\+\_\+handler.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{request__handler_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacewallet}{wallet}}
+\item 
+ \mbox{\hyperlink{namespacewallet_1_1rpc}{wallet\+::rpc}}
+\item 
+ \mbox{\hyperlink{namespacewallet_1_1rpc_1_1anonymous__namespace_02request__handler_8cpp_03}{wallet\+::rpc\+::anonymous\+\_\+namespace\{request\+\_\+handler.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\void \mbox{\hyperlink{namespacewallet_1_1rpc_1_1anonymous__namespace_02request__handler_8cpp_03_a718bb06e92feaa62ffcf6b3d8bb7f5cf}{wallet\+::rpc\+::anonymous\+\_\+namespace\{request\+\_\+handler.\+cpp\}\+::register\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$$>$ \&regs)
+\item 
+{\footnotesize template$<$typename... R\+PC, typename... Binary\+R\+PC$>$ }\\std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$ $>$ \mbox{\hyperlink{namespacewallet_1_1rpc_1_1anonymous__namespace_02request__handler_8cpp_03_a773f4f3ff61e6cc47939e21360fd9fe4}{wallet\+::rpc\+::anonymous\+\_\+namespace\{request\+\_\+handler.\+cpp\}\+::register\+\_\+rpc\+\_\+commands}} (\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ R\+P\+C... $>$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const rpc\+\_\+command $>$ $>$ \mbox{\hyperlink{namespacewallet_1_1rpc_a7b03a159d4daa537a61148628cf6a28e}{wallet\+::rpc\+::rpc\+\_\+commands}} = register\+\_\+rpc\+\_\+commands(wallet\+\_\+rpc\+\_\+types\{\})
+\end{DoxyCompactItemize}

@@ -1,0 +1,390 @@
+\hypertarget{rctTypes_8h}{}\doxysection{src/ringct/rct\+Types.h File Reference}
+\label{rctTypes_8h}\index{src/ringct/rctTypes.h@{src/ringct/rctTypes.h}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$sodium/crypto\+\_\+verify\+\_\+32.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/random.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/keccak.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/crypto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/variant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+Include dependency graph for rct\+Types.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rctTypes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rctTypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrct_1_1key}{rct\+::key}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1geDsmp}{rct\+::ge\+Dsmp}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1mgSig}{rct\+::mg\+Sig}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1clsag}{rct\+::clsag}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1rangeSig}{rct\+::range\+Sig}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1RCTConfig}{rct\+::\+R\+C\+T\+Config}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1rctSigBase}{rct\+::rct\+Sig\+Base}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1rctSigPrunable}{rct\+::rct\+Sig\+Prunable}}
+\item 
+struct \mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01rct_1_1key_01_4}{std\+::hash$<$ rct\+::key $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacerct}{rct}}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rctTypes_8h_ad318491593a53b4c93f2cd401c2ec199}{DP}}(x)
+\item 
+\#define \mbox{\hyperlink{rctTypes_8h_a75c5bb5998f3826fc59001eb551e1732}{A\+T\+O\+MS}}~64
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char $\ast$ \mbox{\hyperlink{namespacerct_af9f4914237a0864290978fefe68743df}{rct\+::\+Bytes}}
+\item 
+typedef std\+::vector$<$ key $>$ \mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}}
+\item 
+typedef std\+::vector$<$ keyV $>$ \mbox{\hyperlink{namespacerct_a3aca4244f5ddc7cf96ebf6f8e6a513f3}{rct\+::keyM}}
+\item 
+typedef std\+::vector$<$ ctkey $>$ \mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}}
+\item 
+typedef std\+::vector$<$ ctkeyV $>$ \mbox{\hyperlink{namespacerct_a3ec55816534bf8e42080a8dd330a5ce9}{rct\+::ctkeyM}}
+\item 
+using \mbox{\hyperlink{namespacerct_abe478b26d5a99e66d4151b1fba4c7859}{rct\+::xmr\+\_\+amount}} = uint64\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacerct_a8fc0aea171c0779f22dada4818bf1798}{rct\+::bits}} = unsigned int\mbox{[}\mbox{\hyperlink{rctTypes_8h_a75c5bb5998f3826fc59001eb551e1732}{A\+T\+O\+MS}}\mbox{]}
+\item 
+using \mbox{\hyperlink{namespacerct_aa8126b95eb8f39f9f3dd18c282512f8d}{rct\+::key64}} = key\mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0}{rct\+::\+R\+C\+T\+Type}} \+: uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0abbb93ef26e3c101ff11cdd21cab08a94}{rct\+::\+R\+C\+T\+Type\+::\+Null}} = 0, 
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0abbd47109890259c0127154db1af26c75}{rct\+::\+R\+C\+T\+Type\+::\+Full}} = 1, 
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0a1fbb1e3943c2c6c560247ac8f9289780}{rct\+::\+R\+C\+T\+Type\+::\+Simple}} = 2, 
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0a365c1b1a450a5c63dbd8046cac68aabc}{rct\+::\+R\+C\+T\+Type\+::\+Bulletproof}} = 3, 
+\newline
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0a5608c64bb6b136005914b49a0e158aee}{rct\+::\+R\+C\+T\+Type\+::\+Bulletproof2}} = 4, 
+\mbox{\hyperlink{namespacerct_a379ef3cef7b4b1097b6a28b5117519d0aa2b7568ed960adcf8a6a23ad8512094b}{rct\+::\+R\+C\+T\+Type\+::\+C\+L\+S\+AG}} = 5
+ \}
+\item 
+enum \mbox{\hyperlink{namespacerct_acd3932e4cc7acd40430b3ac02b0b7e70}{rct\+::\+Range\+Proof\+Type}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{namespacerct_acd3932e4cc7acd40430b3ac02b0b7e70a2839c3ebf6471e7c62670e6fd908e1bd}{rct\+::\+Range\+Proof\+Type\+::\+Borromean}} = 0, 
+\mbox{\hyperlink{namespacerct_acd3932e4cc7acd40430b3ac02b0b7e70a365c1b1a450a5c63dbd8046cac68aabc}{rct\+::\+Range\+Proof\+Type\+::\+Bulletproof}} = 1, 
+\mbox{\hyperlink{namespacerct_acd3932e4cc7acd40430b3ac02b0b7e70abcfd2365db214409732c22853d2eb503}{rct\+::\+Range\+Proof\+Type\+::\+Multi\+Output\+Bulletproof}} = 2, 
+\mbox{\hyperlink{namespacerct_acd3932e4cc7acd40430b3ac02b0b7e70aac4d8353ea50c8339b47c1c93a473686}{rct\+::\+Range\+Proof\+Type\+::\+Padded\+Bulletproof}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_a532c5c9de2398643c1c0c324da0bae61}{rct\+::n\+\_\+bulletproof\+\_\+amounts}} (const Bulletproof \&proof)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_af5344e3714ba0991775029058c15cfde}{rct\+::n\+\_\+bulletproof\+\_\+max\+\_\+amounts}} (const Bulletproof \&proof)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_a708ac2873cd3f3330dfeb8765d8035bc}{rct\+::n\+\_\+bulletproof\+\_\+amounts}} (const std\+::vector$<$ Bulletproof $>$ \&proofs)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacerct_a687f4bcdaebb4a406783a54b3920229f}{rct\+::n\+\_\+bulletproof\+\_\+max\+\_\+amounts}} (const std\+::vector$<$ Bulletproof $>$ \&proofs)
+\item 
+{\footnotesize template$<$typename Archive , typename T $>$ }\\auto \mbox{\hyperlink{namespacerct_a7df45bb91b6fbcd55a571107c675a809}{rct\+::start\+\_\+array}} (Archive \&ar, std\+::string\+\_\+view tag, std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v, size\+\_\+t size)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_af495478cf823406a5842bdf3b8cd2b89}{rct\+::is\+\_\+rct\+\_\+simple}} (R\+C\+T\+Type type)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a03e9606ad23884d0e906aeb54fe4176b}{rct\+::is\+\_\+rct\+\_\+bulletproof}} (R\+C\+T\+Type type)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a46dd7843bd2cefb058181c963e2a67ad}{rct\+::is\+\_\+rct\+\_\+borromean}} (R\+C\+T\+Type type)
+\item 
+void \mbox{\hyperlink{namespacerct_afb7999e36232c6eeb5ce11424228f07c}{rct\+::dp}} (key a)
+\item 
+void \mbox{\hyperlink{namespacerct_a345a75c99fd0dd9f37fc96dd8b47a586}{rct\+::dp}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} a)
+\item 
+void \mbox{\hyperlink{namespacerct_a2bf66cfc07d6a0b3e9dd4c1ee8f4b5a0}{rct\+::dp}} (const char $\ast$a, int l)
+\item 
+void \mbox{\hyperlink{namespacerct_a1b815b5d7bae28f523f5d7435b9daf76}{rct\+::dp}} (keyV a)
+\item 
+void \mbox{\hyperlink{namespacerct_aa457e11afc12542748f5246a5cfb0fc8}{rct\+::dp}} (keyM a)
+\item 
+void \mbox{\hyperlink{namespacerct_a3229b937d0c85efed9c67c7a25c65a9e}{rct\+::dp}} (xmr\+\_\+amount vali)
+\item 
+void \mbox{\hyperlink{namespacerct_a101c51599f29de9785191ba99a0e0b19}{rct\+::dp}} (bits amountb)
+\item 
+void \mbox{\hyperlink{namespacerct_accd7af87286cbc192cc681b1e6abf918}{rct\+::dp}} (const char $\ast$st)
+\item 
+void \mbox{\hyperlink{namespacerct_a071daeda082c074bd2bd80f0694914c6}{rct\+::d2h}} (key \&amounth, const xmr\+\_\+amount in)
+\item 
+key \mbox{\hyperlink{namespacerct_a2a8cf481a32346555efc139404378c83}{rct\+::d2h}} (const xmr\+\_\+amount in)
+\item 
+void \mbox{\hyperlink{namespacerct_afe21746806b2a5915cf94be59717b964}{rct\+::d2b}} (bits amountb, xmr\+\_\+amount val)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_a86ce41363e956c180e3a6548f5e846b1}{rct\+::h2d}} (const key \&test)
+\item 
+void \mbox{\hyperlink{namespacerct_ae6536017a8b6b40a15bac88171c32b1a}{rct\+::h2b}} (bits amountb2, const key \&test)
+\item 
+void \mbox{\hyperlink{namespacerct_a314fe47c522feb25bd0c8a36f161917c}{rct\+::b2h}} (key \&amountdh, const bits amountb2)
+\item 
+xmr\+\_\+amount \mbox{\hyperlink{namespacerct_a0aa0b4135d9662e9b0d82b941650d984}{rct\+::b2d}} (bits amountb)
+\item 
+const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \& \mbox{\hyperlink{namespacerct_afa05f712027135d8c32de9705c010cba}{rct\+::pk2rct}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pk)
+\item 
+const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \& \mbox{\hyperlink{namespacerct_abdfb6fe2b9808a6b2199affadcfff2f2}{rct\+::sk2rct}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&sk)
+\item 
+const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \& \mbox{\hyperlink{namespacerct_ae9f5f5b8eb09301bcd544a1693983bc9}{rct\+::ki2rct}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\item 
+const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \& \mbox{\hyperlink{namespacerct_a3abb68c9c9d58587775adb1ef4f080ea}{rct\+::hash2rct}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h)
+\item 
+const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \& \mbox{\hyperlink{namespacerct_a365e352484e5f4703c1541aca0728077}{rct\+::rct2pk}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k)
+\item 
+const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \& \mbox{\hyperlink{namespacerct_ae0ff5fd8b9c2865ca55d367565724a27}{rct\+::rct2sk}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k)
+\item 
+const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \& \mbox{\hyperlink{namespacerct_aaaf2ac9f4a4fa632cb421a18ccebec66}{rct\+::rct2ki}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k)
+\item 
+const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \& \mbox{\hyperlink{namespacerct_aca7ec62f7670af26dce40d1a5a039b9f}{rct\+::rct2hash}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a89b9a22694412a620cc350444aa88683}{rct\+::operator==}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k0, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&k1)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacerct_a8a55fcc9e92a1d369f15ecc1ff345a09}{rct\+::operator!=}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k0, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&k1)
+\item 
+std\+::string \mbox{\hyperlink{namespacerct_a38ea8c871b40861a2e8222dda871848e}{rct\+::to\+\_\+hex\+\_\+string}} (const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&v)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a7060b2bd9269c7a0da6bbae4d01f88c3}{cryptonote\+::operator==}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&k0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k1)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ac9ad5049642133bcc22ebd47762cf5f7}{cryptonote\+::operator!=}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&k0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k1)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ab23ef8eaaef3327ebb756d70c28c85f9}{cryptonote\+::operator==}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&k0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k1)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a85bd8a708e6a4597e6c8c5261feaf809}{cryptonote\+::operator!=}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&k0, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} \&k1)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a9eec4ec9dd4792bcace951316cd5e707}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}})
+\item 
+\mbox{\hyperlink{rctTypes_8h_af214305cf1ec5ceea82dacac1386550b}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{namespacerct_aa8126b95eb8f39f9f3dd18c282512f8d}{rct\+::key64}})
+\item 
+\mbox{\hyperlink{rctTypes_8h_a7094742a2c45a01683c79f6603533364}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}})
+\item 
+\mbox{\hyperlink{rctTypes_8h_aa2439f027e8468eac290340497e14b99}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}})
+\item 
+\mbox{\hyperlink{rctTypes_8h_aeb032921c847ddf1f4dabf764f901f90}{B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER}} (\mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}})
+\item 
+\mbox{\hyperlink{rctTypes_8h_ad38d24ae4af422b0fdcca7376c3846a1}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1key}{rct\+::key}}, \char`\"{}rct\+\_\+key\char`\"{}, 0x90)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a872c254d6d4df536e58496e3664f7373}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{namespacerct_aa8126b95eb8f39f9f3dd18c282512f8d}{rct\+::key64}}, \char`\"{}rct\+\_\+key64\char`\"{}, 0x91)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a88f3d5f527479710184da2765806a162}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}}, \char`\"{}rct\+\_\+keyV\char`\"{}, 0x92)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a618e3edeed613b4ef8f4e1a78d415bcb}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{namespacerct_a3aca4244f5ddc7cf96ebf6f8e6a513f3}{rct\+::keyM}}, \char`\"{}rct\+\_\+keyM\char`\"{}, 0x93)
+\item 
+\mbox{\hyperlink{rctTypes_8h_ab62774540a00128695e5d64a7d28c630}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}}, \char`\"{}rct\+\_\+ctkey\char`\"{}, 0x94)
+\item 
+\mbox{\hyperlink{rctTypes_8h_aec4be9a837deabd909b82d914e8d90fb}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}}, \char`\"{}rct\+\_\+ctkeyV\char`\"{}, 0x95)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a6454bc0577c208cc080af9f5bfa8ccb1}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{namespacerct_a3ec55816534bf8e42080a8dd330a5ce9}{rct\+::ctkeyM}}, \char`\"{}rct\+\_\+ctkeyM\char`\"{}, 0x96)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a2fe887e921129cc5f5a232d7f9c3af9d}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}}, \char`\"{}rct\+\_\+ecdh\+Tuple\char`\"{}, 0x97)
+\item 
+\mbox{\hyperlink{rctTypes_8h_aa06cd54b69cf6fbbf794e370e9155a3c}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1mgSig}{rct\+::mg\+Sig}}, \char`\"{}rct\+\_\+mg\+Sig\char`\"{}, 0x98)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a2525b7e3684e4da78420ba8c06e1a561}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1rangeSig}{rct\+::range\+Sig}}, \char`\"{}rct\+\_\+range\+Sig\char`\"{}, 0x99)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a8ac78b46c3ea0bd6e83c08035272c21f}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}}, \char`\"{}rct\+\_\+boro\+Sig\char`\"{}, 0x9a)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a8c5c5d9a259f8545bf003417b21b5082}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}}, \char`\"{}rct\+\_\+rct\+Sig\char`\"{}, 0x9b)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a4fc27d227686e9fd2f554790894d05ab}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}}, \char`\"{}rct\+\_\+bulletproof\char`\"{}, 0x9c)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a8882fae6461125cb5cb16a0ddcef0658}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}}, \char`\"{}rct\+\_\+multisig\+\_\+k\+LR\char`\"{}, 0x9d)
+\item 
+\mbox{\hyperlink{rctTypes_8h_a5e7cde4d7ce361f25aa4c7e38ffb0d97}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}}, \char`\"{}rct\+\_\+multisig\+\_\+out\char`\"{}, 0x9e)
+\item 
+\mbox{\hyperlink{rctTypes_8h_abef230c490c92f90f71e879a62d1ae97}{V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG}} (\mbox{\hyperlink{structrct_1_1clsag}{rct\+::clsag}}, \char`\"{}rct\+\_\+clsag\char`\"{}, 0x9f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr key \mbox{\hyperlink{namespacerct_a6a26fc923ca4e57ea9758ac35fec5bf3}{rct\+::H}} = \{ \{0x8b, 0x65, 0x59, 0x70, 0x15, 0x37, 0x99, 0xaf, 0x2a, 0xea, 0xdc, 0x9f, 0xf1, 0xad, 0xd0, 0xea, 0x6c, 0x72, 0x51, 0xd5, 0x41, 0x54, 0xcf, 0xa9, 0x2c, 0x17, 0x3a, 0x0d, 0xd3, 0x9c, 0x1f, 0x94\} \}
+\item 
+constexpr key64 \mbox{\hyperlink{namespacerct_aa1feb2c7c19513c3b73682565ac33979}{rct\+::\+H2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rctTypes_8h_a75c5bb5998f3826fc59001eb551e1732}\label{rctTypes_8h_a75c5bb5998f3826fc59001eb551e1732}} 
+\index{rctTypes.h@{rctTypes.h}!ATOMS@{ATOMS}}
+\index{ATOMS@{ATOMS}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{ATOMS}{ATOMS}}
+{\footnotesize\ttfamily \#define A\+T\+O\+MS~64}
+
+\mbox{\Hypertarget{rctTypes_8h_ad318491593a53b4c93f2cd401c2ec199}\label{rctTypes_8h_ad318491593a53b4c93f2cd401c2ec199}} 
+\index{rctTypes.h@{rctTypes.h}!DP@{DP}}
+\index{DP@{DP}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{DP}{DP}}
+{\footnotesize\ttfamily \#define DP(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rctTypes_8h_aeb032921c847ddf1f4dabf764f901f90}\label{rctTypes_8h_aeb032921c847ddf1f4dabf764f901f90}} 
+\index{rctTypes.h@{rctTypes.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a7094742a2c45a01683c79f6603533364}\label{rctTypes_8h_a7094742a2c45a01683c79f6603533364}} 
+\index{rctTypes.h@{rctTypes.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a9eec4ec9dd4792bcace951316cd5e707}\label{rctTypes_8h_a9eec4ec9dd4792bcace951316cd5e707}} 
+\index{rctTypes.h@{rctTypes.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_af214305cf1ec5ceea82dacac1386550b}\label{rctTypes_8h_af214305cf1ec5ceea82dacac1386550b}} 
+\index{rctTypes.h@{rctTypes.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_aa8126b95eb8f39f9f3dd18c282512f8d}{rct\+::key64}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_aa2439f027e8468eac290340497e14b99}\label{rctTypes_8h_aa2439f027e8468eac290340497e14b99}} 
+\index{rctTypes.h@{rctTypes.h}!BLOB\_SERIALIZER@{BLOB\_SERIALIZER}}
+\index{BLOB\_SERIALIZER@{BLOB\_SERIALIZER}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{BLOB\_SERIALIZER()}{BLOB\_SERIALIZER()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily B\+L\+O\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a8ac78b46c3ea0bd6e83c08035272c21f}\label{rctTypes_8h_a8ac78b46c3ea0bd6e83c08035272c21f}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1boroSig}{rct\+::boro\+Sig}}}]{,  }\item[{\char`\"{}rct\+\_\+boro\+Sig\char`\"{}}]{,  }\item[{0x9a}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a4fc27d227686e9fd2f554790894d05ab}\label{rctTypes_8h_a4fc27d227686e9fd2f554790894d05ab}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1Bulletproof}{rct\+::\+Bulletproof}}}]{,  }\item[{\char`\"{}rct\+\_\+bulletproof\char`\"{}}]{,  }\item[{0x9c}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_abef230c490c92f90f71e879a62d1ae97}\label{rctTypes_8h_abef230c490c92f90f71e879a62d1ae97}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1clsag}{rct\+::clsag}}}]{,  }\item[{\char`\"{}rct\+\_\+clsag\char`\"{}}]{,  }\item[{0x9f}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_ab62774540a00128695e5d64a7d28c630}\label{rctTypes_8h_ab62774540a00128695e5d64a7d28c630}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1ctkey}{rct\+::ctkey}}}]{,  }\item[{\char`\"{}rct\+\_\+ctkey\char`\"{}}]{,  }\item[{0x94}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a6454bc0577c208cc080af9f5bfa8ccb1}\label{rctTypes_8h_a6454bc0577c208cc080af9f5bfa8ccb1}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_a3ec55816534bf8e42080a8dd330a5ce9}{rct\+::ctkeyM}}}]{,  }\item[{\char`\"{}rct\+\_\+ctkeyM\char`\"{}}]{,  }\item[{0x96}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_aec4be9a837deabd909b82d914e8d90fb}\label{rctTypes_8h_aec4be9a837deabd909b82d914e8d90fb}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_aa2f0df969f008f77b9e80ec4eaba3c2b}{rct\+::ctkeyV}}}]{,  }\item[{\char`\"{}rct\+\_\+ctkeyV\char`\"{}}]{,  }\item[{0x95}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a2fe887e921129cc5f5a232d7f9c3af9d}\label{rctTypes_8h_a2fe887e921129cc5f5a232d7f9c3af9d}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1ecdhTuple}{rct\+::ecdh\+Tuple}}}]{,  }\item[{\char`\"{}rct\+\_\+ecdh\+Tuple\char`\"{}}]{,  }\item[{0x97}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_ad38d24ae4af422b0fdcca7376c3846a1}\label{rctTypes_8h_ad38d24ae4af422b0fdcca7376c3846a1}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1key}{rct\+::key}}}]{,  }\item[{\char`\"{}rct\+\_\+key\char`\"{}}]{,  }\item[{0x90}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a872c254d6d4df536e58496e3664f7373}\label{rctTypes_8h_a872c254d6d4df536e58496e3664f7373}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_aa8126b95eb8f39f9f3dd18c282512f8d}{rct\+::key64}}}]{,  }\item[{\char`\"{}rct\+\_\+key64\char`\"{}}]{,  }\item[{0x91}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a618e3edeed613b4ef8f4e1a78d415bcb}\label{rctTypes_8h_a618e3edeed613b4ef8f4e1a78d415bcb}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_a3aca4244f5ddc7cf96ebf6f8e6a513f3}{rct\+::keyM}}}]{,  }\item[{\char`\"{}rct\+\_\+keyM\char`\"{}}]{,  }\item[{0x93}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a88f3d5f527479710184da2765806a162}\label{rctTypes_8h_a88f3d5f527479710184da2765806a162}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacerct_a34ae9f575886774af6c6b21e715d84b7}{rct\+::keyV}}}]{,  }\item[{\char`\"{}rct\+\_\+keyV\char`\"{}}]{,  }\item[{0x92}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_aa06cd54b69cf6fbbf794e370e9155a3c}\label{rctTypes_8h_aa06cd54b69cf6fbbf794e370e9155a3c}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1mgSig}{rct\+::mg\+Sig}}}]{,  }\item[{\char`\"{}rct\+\_\+mg\+Sig\char`\"{}}]{,  }\item[{0x98}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a8882fae6461125cb5cb16a0ddcef0658}\label{rctTypes_8h_a8882fae6461125cb5cb16a0ddcef0658}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1multisig__kLRki}{rct\+::multisig\+\_\+k\+L\+Rki}}}]{,  }\item[{\char`\"{}rct\+\_\+multisig\+\_\+k\+LR\char`\"{}}]{,  }\item[{0x9d}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a5e7cde4d7ce361f25aa4c7e38ffb0d97}\label{rctTypes_8h_a5e7cde4d7ce361f25aa4c7e38ffb0d97}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1multisig__out}{rct\+::multisig\+\_\+out}}}]{,  }\item[{\char`\"{}rct\+\_\+multisig\+\_\+out\char`\"{}}]{,  }\item[{0x9e}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a2525b7e3684e4da78420ba8c06e1a561}\label{rctTypes_8h_a2525b7e3684e4da78420ba8c06e1a561}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1rangeSig}{rct\+::range\+Sig}}}]{,  }\item[{\char`\"{}rct\+\_\+range\+Sig\char`\"{}}]{,  }\item[{0x99}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{rctTypes_8h_a8c5c5d9a259f8545bf003417b21b5082}\label{rctTypes_8h_a8c5c5d9a259f8545bf003417b21b5082}} 
+\index{rctTypes.h@{rctTypes.h}!VARIANT\_TAG@{VARIANT\_TAG}}
+\index{VARIANT\_TAG@{VARIANT\_TAG}!rctTypes.h@{rctTypes.h}}
+\doxysubsubsection{\texorpdfstring{VARIANT\_TAG()}{VARIANT\_TAG()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
+{\footnotesize\ttfamily V\+A\+R\+I\+A\+N\+T\+\_\+\+T\+AG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrct_1_1rctSig}{rct\+::rct\+Sig}}}]{,  }\item[{\char`\"{}rct\+\_\+rct\+Sig\char`\"{}}]{,  }\item[{0x9b}]{ }\end{DoxyParamCaption})}
+

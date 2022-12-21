@@ -1,0 +1,2633 @@
+\hypertarget{classcryptonote_1_1BaseTestDB}{}\doxysection{cryptonote\+::Base\+Test\+DB Class Reference}
+\label{classcryptonote_1_1BaseTestDB}\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+
+
+{\ttfamily \#include $<$testdb.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::Base\+Test\+DB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classcryptonote_1_1BaseTestDB__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::Base\+Test\+DB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classcryptonote_1_1BaseTestDB__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_afd36c1b896f25938a4970f9f51edaa8e}{Base\+Test\+DB}} ()
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae4461cab4501c316056d5a8b2a43b3b9}{open}} (const fs\+::path \&filename, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype=\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aaa45f009ef381c3bc198dd0f352e08a2e}{network\+\_\+type\+::\+F\+A\+K\+E\+C\+H\+A\+IN}}, const int \mbox{\hyperlink{blockchain__blackball_8cpp_a1f30c0b350a9c342e27014c9f59d91f8}{db\+\_\+flags}}=0) override
+\begin{DoxyCompactList}\small\item\em open a db, or create it if necessary. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ab12388f967df979126f3dd52a6195722}{close}} () override
+\begin{DoxyCompactList}\small\item\em close the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a25a3ec7cb757565383ecd8f35316e436}{sync}} () override
+\begin{DoxyCompactList}\small\item\em sync the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} with disk \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_acb7f5c2762eda1de04f287cb06a06e37}{safesyncmode}} (const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} onoff) override
+\begin{DoxyCompactList}\small\item\em toggle safe syncs for the DB \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3a3ed5583d05599cde2b321662ec7528}{reset}} () override
+\begin{DoxyCompactList}\small\item\em Remove everything from the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ fs\+::path $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2e68d6b77c863e9633f9281736c36b83}{get\+\_\+filenames}} () const override
+\begin{DoxyCompactList}\small\item\em get all files used by the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} (if any) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_acc690faba9818e3632d7453400369986}{remove\+\_\+data\+\_\+file}} (const fs\+::path \&folder) const override
+\begin{DoxyCompactList}\small\item\em remove file(s) storing the database \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a98590a58265a48ff0ce91c63875b3807}{get\+\_\+db\+\_\+name}} () const override
+\begin{DoxyCompactList}\small\item\em gets the name of the folder the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}\textquotesingle{}s file(s) should be in \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a09a296d8bd1408eb286e257e927581b6}{lock}} () override
+\begin{DoxyCompactList}\small\item\em acquires the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ab58cede55da866577d8c2e116d2004a3}{try\+\_\+lock}} () override
+\begin{DoxyCompactList}\small\item\em tries to acquire the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock without blocking; returns true if the lock was acquired, false if acquiring it would block. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a6b51901a6e3db83806842c123d9fc7ec}{unlock}} () override
+\begin{DoxyCompactList}\small\item\em This function releases the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a26365994b639da0151bcdfed73471f71}{batch\+\_\+start}} (uint64\+\_\+t batch\+\_\+num\+\_\+blocks=0, uint64\+\_\+t batch\+\_\+bytes=0) override
+\begin{DoxyCompactList}\small\item\em tells the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} to start a new \char`\"{}batch\char`\"{} of blocks \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad64c7b59348a2b2841a7fe600b2177a4}{batch\+\_\+stop}} () override
+\begin{DoxyCompactList}\small\item\em ends a batch transaction \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac5899092ec252fafd9a28d340377decc}{batch\+\_\+abort}} () override
+\begin{DoxyCompactList}\small\item\em aborts a batch transaction \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2823f3cf9ab28dde9c8e5da7235d19e9}{set\+\_\+batch\+\_\+transactions}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}) override
+\begin{DoxyCompactList}\small\item\em sets whether or not to batch transactions \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a6c730225143791cfccc6b304eb6d5508}{block\+\_\+wtxn\+\_\+start}} () override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aa7679a4c2a8da8d119b9e02246915b9b}{block\+\_\+wtxn\+\_\+stop}} () override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a8e7a96178929bcfacaf5ddaaf8bf28a4}{block\+\_\+wtxn\+\_\+abort}} () override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af4cff8bc1026e6d86e79e0dd3432c2af}{block\+\_\+rtxn\+\_\+start}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aa8f54657539e39885ea9a961a14a7443}{block\+\_\+rtxn\+\_\+stop}} () const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae19bc13b607556e7311baed2fad4def8}{block\+\_\+rtxn\+\_\+abort}} () const override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a4f15852a7cdee18e21227b0cd69fcfde}{block\+\_\+exists}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, uint64\+\_\+t $\ast$\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em checks if a block exists \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a850414871d2db13e2e023d22227a1012}{get\+\_\+block\+\_\+blob\+\_\+from\+\_\+height}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block blob by height \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a1a690ff10eb8efbb301b73a1149ab5c8}{get\+\_\+block\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h) const override
+\begin{DoxyCompactList}\small\item\em fetches the block with the given hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1block__header}{cryptonote\+::block\+\_\+header}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a92521f86a07880025e1026fb5bcf888a}{get\+\_\+block\+\_\+header\+\_\+from\+\_\+height}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block header with height \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a028825df754f5f1c1d56f6ec6a782b34}{get\+\_\+tx\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, std\+::string \&tx) const override
+\begin{DoxyCompactList}\small\item\em fetches the transaction blob with the given hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aeb65375bb0123046787cae5cc20e44b5}{get\+\_\+pruned\+\_\+tx\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, std\+::string \&tx) const override
+\begin{DoxyCompactList}\small\item\em fetches the pruned transaction blob with the given hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a500e8450e339cddb599a6abbf7e600ff}{get\+\_\+pruned\+\_\+tx\+\_\+blobs\+\_\+from}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, size\+\_\+t count, std\+::vector$<$ std\+::string $>$ \&bd) const override
+\begin{DoxyCompactList}\small\item\em fetches a number of pruned transaction blob from the given hash, in canonical blockchain order \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af42ad0eef700a5f2f9bc3d6289febdbd}{get\+\_\+prunable\+\_\+tx\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, std\+::string \&tx) const override
+\begin{DoxyCompactList}\small\item\em fetches the prunable transaction blob with the given hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a7a23ef9fe1d12d974a21e80d8a98df95}{get\+\_\+prunable\+\_\+tx\+\_\+hash}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&prunable\+\_\+hash) const override
+\begin{DoxyCompactList}\small\item\em fetches the prunable transaction hash \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3bea3674e4db131a30fd938a263ba807}{get\+\_\+block\+\_\+height}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h) const override
+\begin{DoxyCompactList}\small\item\em gets the height of the block with a given hash \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a5b1e3fdb03bcb86821c9fb2506fb85b1}{get\+\_\+block\+\_\+timestamp}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s timestamp \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae11bc4f77d9a6186f2f1937b9be1dc91}{get\+\_\+block\+\_\+cumulative\+\_\+rct\+\_\+outputs}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&heights) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s cumulative number of rct outputs \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a365c544ef3a791b22db93222697faa7f}{get\+\_\+top\+\_\+block\+\_\+timestamp}} () const override
+\begin{DoxyCompactList}\small\item\em fetch the top block\textquotesingle{}s timestamp \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a7b2d1fb4e19ab3974597dc94d41d9a86}{get\+\_\+block\+\_\+weight}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s weight \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a517edb688094622364d11058df323ad2}{get\+\_\+block\+\_\+weights}} (uint64\+\_\+t start\+\_\+height, size\+\_\+t count) const override
+\begin{DoxyCompactList}\small\item\em fetch the last N blocks\textquotesingle{} weights \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2411ceb81e417caf52cbefb560a19246}{get\+\_\+block\+\_\+cumulative\+\_\+difficulty}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s cumulative difficulty \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3dec8698e68c402a514e0540a1e0aebd}{get\+\_\+block\+\_\+difficulty}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s difficulty \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a9a4fdb156499b1fd2a2ad6fee7b14c22}{get\+\_\+block\+\_\+already\+\_\+generated\+\_\+coins}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s already generated coins \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_abb4828e3e4e46ed5f1d3ddf53a09cacf}{get\+\_\+block\+\_\+long\+\_\+term\+\_\+weight}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s long term weight \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a7fbc64d3d2cd0666579382a053d72d3c}{get\+\_\+long\+\_\+term\+\_\+block\+\_\+weights}} (uint64\+\_\+t start\+\_\+height, size\+\_\+t count) const override
+\begin{DoxyCompactList}\small\item\em fetch the last N blocks\textquotesingle{} long term weights \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a10dbfa0d721350a0aae55d81e31f29b8}{get\+\_\+block\+\_\+hash\+\_\+from\+\_\+height}} (const uint64\+\_\+t \&\mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block\textquotesingle{}s hash \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aad49646ef5deaa9454ec69c9da71485a}{get\+\_\+blocks\+\_\+range}} (const uint64\+\_\+t \&h1, const uint64\+\_\+t \&h2) const override
+\begin{DoxyCompactList}\small\item\em fetch a list of blocks \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af6f1a2a76a89e7c4a280c41def6d0bf0}{get\+\_\+hashes\+\_\+range}} (const uint64\+\_\+t \&h1, const uint64\+\_\+t \&h2) const override
+\begin{DoxyCompactList}\small\item\em fetch a list of block hashes \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3054d3a0ce0ed01c028175cf4f20498f}{top\+\_\+block\+\_\+hash}} (uint64\+\_\+t $\ast$block\+\_\+height=N\+U\+LL) const override
+\begin{DoxyCompactList}\small\item\em fetch the top block\textquotesingle{}s hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_afea7edaad5c4372baa786929a2ea97ff}{get\+\_\+top\+\_\+block}} () const override
+\begin{DoxyCompactList}\small\item\em fetch the top block \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}} () const override
+\begin{DoxyCompactList}\small\item\em fetch the current blockchain height \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_acc06a5b2038aaa1a9415192c776c20af}{tx\+\_\+exists}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h) const override
+\begin{DoxyCompactList}\small\item\em check if a transaction with a given hash exists \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a63db70cf066f58aa600e089900a153ee}{tx\+\_\+exists}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, uint64\+\_\+t \&tx\+\_\+index) const override
+\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a6c83a1cd205c17affa70add9aa48ddda}{get\+\_\+tx\+\_\+unlock\+\_\+time}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h) const override
+\begin{DoxyCompactList}\small\item\em fetch a transaction\textquotesingle{}s unlock time/height \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a80b72bc4001927ecb6475818f7a8165b}{get\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h) const override
+\begin{DoxyCompactList}\small\item\em fetches the transaction with the given hash \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a5ae35d41da9ab8f28745f94fa228e844}{get\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx) const override
+\begin{DoxyCompactList}\small\item\em fetches the transaction with the given hash \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a106a86a197818278bd9e2cc353251488}{get\+\_\+tx\+\_\+count}} () const override
+\begin{DoxyCompactList}\small\item\em fetches the total number of transactions ever \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aa51fc1b9afdaf73a8aaf22722235ca7b}{get\+\_\+tx\+\_\+list}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&hlist) const override
+\begin{DoxyCompactList}\small\item\em fetches a list of transactions based on their hashes \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a9693ae5903853bb135fd20e187bfba5a}{get\+\_\+tx\+\_\+block\+\_\+heights}} (const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&h) const override
+\begin{DoxyCompactList}\small\item\em fetches the height of multiple transactions\textquotesingle{} blocks \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac427c665bb99da6644277aeec172edd2}{get\+\_\+num\+\_\+outputs}} (const uint64\+\_\+t \&amount) const override
+\begin{DoxyCompactList}\small\item\em fetches the number of outputs of a given amount \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a1ed03729aed557d35be9eb47e9688095}{get\+\_\+indexing\+\_\+base}} () const override
+\begin{DoxyCompactList}\small\item\em return index of the first element (should be hidden, but isn\textquotesingle{}t) \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1output__data__t}{cryptonote\+::output\+\_\+data\+\_\+t}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a1dd4a3e31c36553716241878a717a98f}{get\+\_\+output\+\_\+key}} (const uint64\+\_\+t \&amount, const uint64\+\_\+t \&index, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+commitmemt) const override
+\begin{DoxyCompactList}\small\item\em get some of an output\textquotesingle{}s data \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aac4c57c16a0930a85cd76dad6d3b30ee}{get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index\+\_\+from\+\_\+global}} (const uint64\+\_\+t \&index) const override
+\begin{DoxyCompactList}\small\item\em gets an output\textquotesingle{}s tx hash and index \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a049def5f464f6f6fcd7df4783219ac64}{get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index}} (const uint64\+\_\+t \&amount, const uint64\+\_\+t \&index) const override
+\begin{DoxyCompactList}\small\item\em gets an output\textquotesingle{}s tx hash and index \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a5a93758da007718f3befe484df3458e3}{get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index}} (const uint64\+\_\+t \&amount, const std\+::vector$<$ uint64\+\_\+t $>$ \&offsets, std\+::vector$<$ \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} $>$ \&indices) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a44865f21a09200e21181f33f2a9a1b25}{get\+\_\+output\+\_\+key}} (const epee\+::span$<$ const uint64\+\_\+t $>$ \&amounts, const std\+::vector$<$ uint64\+\_\+t $>$ \&offsets, std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1output__data__t}{cryptonote\+::output\+\_\+data\+\_\+t}} $>$ \&outputs, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} allow\+\_\+partial=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}) const override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a551c6ac8cf8e43a7f5bc74bfc52b7821}{can\+\_\+thread\+\_\+bulk\+\_\+indices}} () const override
+\item 
+virtual std\+::vector$<$ std\+::vector$<$ uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac66ee2b39b3373b58c41ddc18a4ab477}{get\+\_\+tx\+\_\+amount\+\_\+output\+\_\+indices}} (const uint64\+\_\+t tx\+\_\+index, size\+\_\+t n\+\_\+txes) const override
+\begin{DoxyCompactList}\small\item\em gets output indices (amount-\/specific) for a transaction\textquotesingle{}s outputs \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a5ca5dc11a72864e89abaa2f9e60e7a5f}{has\+\_\+key\+\_\+image}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&img) const override
+\begin{DoxyCompactList}\small\item\em check if a key image is stored as spent \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a5724494420b9418cdea8678c9b283f27}{remove\+\_\+block}} () override
+\begin{DoxyCompactList}\small\item\em remove data about the top block \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a30ebbb77596c32bc02971eac486838dd}{add\+\_\+transaction\+\_\+data}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blk\+\_\+hash, const std\+::pair$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}, std\+::string $>$ \&tx, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+prunable\+\_\+hash) override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a1a8613e0648f5520bb5a085fe128bc36}{remove\+\_\+transaction\+\_\+data}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&tx) override
+\begin{DoxyCompactList}\small\item\em remove data about a transaction \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae931ffa28554b61bccf2b26b25c381ee}{add\+\_\+output}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, const \mbox{\hyperlink{structcryptonote_1_1tx__out}{cryptonote\+::tx\+\_\+out}} \&tx\+\_\+output, const uint64\+\_\+t \&local\+\_\+index, const uint64\+\_\+t unlock\+\_\+time, const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $\ast$commitment) override
+\begin{DoxyCompactList}\small\item\em store an output \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a4b742c599f2f25e41c7b5eea02a8b547}{add\+\_\+tx\+\_\+amount\+\_\+output\+\_\+indices}} (const uint64\+\_\+t tx\+\_\+index, const std\+::vector$<$ uint64\+\_\+t $>$ \&amount\+\_\+output\+\_\+indices) override
+\begin{DoxyCompactList}\small\item\em store amount output indices for a tx\textquotesingle{}s outputs \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad3a2b410edc3f80452ab825b4aa908ce}{add\+\_\+spent\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&k\+\_\+image) override
+\begin{DoxyCompactList}\small\item\em store a spent key \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aebfb9771df8cc0d3187132e1d8d6ecb4}{remove\+\_\+spent\+\_\+key}} (const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&k\+\_\+image) override
+\begin{DoxyCompactList}\small\item\em remove a spent key \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aafe963c0da7b7d3902861c2138b0af14}{for\+\_\+all\+\_\+key\+\_\+images}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&)$>$) const override
+\begin{DoxyCompactList}\small\item\em runs a function over all key images stored \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2b2b8a25f39a159f56c6b0f842cb4780}{for\+\_\+blocks\+\_\+range}} (const uint64\+\_\+t \&, const uint64\+\_\+t \&, std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&)$>$) const override
+\begin{DoxyCompactList}\small\item\em runs a function over a range of blocks \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_abf6c75886c116bdded381d2f16b53a32}{for\+\_\+all\+\_\+transactions}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&)$>$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} pruned) const override
+\begin{DoxyCompactList}\small\item\em runs a function over all transactions stored \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a74d6fc746e44342fdd1dc71c71802a9e}{for\+\_\+all\+\_\+outputs}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t amount, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}, size\+\_\+t tx\+\_\+idx)$>$ f) const override
+\begin{DoxyCompactList}\small\item\em runs a function over all outputs stored \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af37f1284ddadba1d8b6f92249402f245}{for\+\_\+all\+\_\+outputs}} (uint64\+\_\+t amount, const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}})$>$ \&f) const override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a006f2687fa947b1bd1b6b37aa4dba884}{is\+\_\+read\+\_\+only}} () const override
+\begin{DoxyCompactList}\small\item\em is \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} in read-\/only mode? \end{DoxyCompactList}\item 
+virtual std\+::map$<$ uint64\+\_\+t, std\+::tuple$<$ uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a51bd717af2bc2824e759059aae5782df}{get\+\_\+output\+\_\+histogram}} (const std\+::vector$<$ uint64\+\_\+t $>$ \&amounts, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} unlocked, uint64\+\_\+t recent\+\_\+cutoff, uint64\+\_\+t min\+\_\+count) const override
+\begin{DoxyCompactList}\small\item\em return a histogram of outputs on the blockchain \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a32aa978ae3b82cdfbb9c24a4529afbc6}{get\+\_\+output\+\_\+distribution}} (uint64\+\_\+t amount, uint64\+\_\+t from\+\_\+height, uint64\+\_\+t to\+\_\+height, std\+::vector$<$ uint64\+\_\+t $>$ \&distribution, uint64\+\_\+t \&\mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}}) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a044aac89923b90d5c295c40b67a269a6}{add\+\_\+txpool\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const std\+::string \&blob, const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&details) override
+\begin{DoxyCompactList}\small\item\em add a txpool transaction \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a91368d676946b232b92ff92737308454}{update\+\_\+txpool\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&details) override
+\begin{DoxyCompactList}\small\item\em update a txpool transaction\textquotesingle{}s metadata \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a734963dc56baed4adb2883189bf37147}{get\+\_\+txpool\+\_\+tx\+\_\+count}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}) const override
+\begin{DoxyCompactList}\small\item\em get the number of transactions in the txpool \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3c2b9159f5499272d93365fc6ea78e3d}{txpool\+\_\+has\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid) const override
+\begin{DoxyCompactList}\small\item\em check whether a txid is in the txpool \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a08950849a2ecc748944a03b8abc3ef74}{remove\+\_\+txpool\+\_\+tx}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid) override
+\begin{DoxyCompactList}\small\item\em remove a txpool transaction \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad48ce984fd171012a3e6729ddbab39a1}{get\+\_\+txpool\+\_\+tx\+\_\+meta}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&meta) const override
+\begin{DoxyCompactList}\small\item\em get a txpool transaction\textquotesingle{}s metadata \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac5ba84db0d1d7590eb0302e54366ad8b}{get\+\_\+txpool\+\_\+tx\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid, std\+::string \&bd) const override
+\begin{DoxyCompactList}\small\item\em get a txpool transaction\textquotesingle{}s blob \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a20f44a791e3676305061bcd68012e0a4}{get\+\_\+database\+\_\+size}} () const override
+\begin{DoxyCompactList}\small\item\em get disk space requirements \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a23817d976a37c5be9981797a237b6853}{get\+\_\+txpool\+\_\+tx\+\_\+blob}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&txid) const override
+\begin{DoxyCompactList}\small\item\em get a txpool transaction\textquotesingle{}s blob \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a388fea22527ef747a08dc526d9888877}{for\+\_\+all\+\_\+txpool\+\_\+txes}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&, const std\+::string $\ast$)$>$, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+blob=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+unrelayed\+\_\+txes=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a05b028fe07e0edc63154de9320516a97}{add\+\_\+block}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&blk, size\+\_\+t block\+\_\+weight, uint64\+\_\+t long\+\_\+term\+\_\+block\+\_\+weight, const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} \&cumulative\+\_\+difficulty, const uint64\+\_\+t \&coins\+\_\+generated, uint64\+\_\+t num\+\_\+rct\+\_\+outs, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blk\+\_\+hash) override
+\begin{DoxyCompactList}\small\item\em add the block and metadata to the db \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af67fbddeb82ee2c1b625999b78be2bb5}{get\+\_\+block\+\_\+from\+\_\+height}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) const override
+\begin{DoxyCompactList}\small\item\em fetch a block by height \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_abc84a94769e720c22137ac8dbcf906da}{get\+\_\+blockchain\+\_\+pruning\+\_\+seed}} () const override
+\begin{DoxyCompactList}\small\item\em get the blockchain pruning seed \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ab5b57389304b664da0827490ea30922a}{prune\+\_\+blockchain}} (uint32\+\_\+t pruning\+\_\+seed=0) override
+\begin{DoxyCompactList}\small\item\em prunes the blockchain \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a4ce71822db869d21a1aa78460f85843c}{update\+\_\+pruning}} () override
+\begin{DoxyCompactList}\small\item\em prunes recent blockchain changes as needed, iff pruning is enabled \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ab53991882e4d05a698a0019b7ecf865f}{check\+\_\+pruning}} () override
+\begin{DoxyCompactList}\small\item\em checks pruning was done correctly, iff enabled \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac2445a50acf30f7fd982b5944b84a415}{prune\+\_\+outputs}} (uint64\+\_\+t amount) override
+\begin{DoxyCompactList}\small\item\em prune output data for the given amount \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a58d6910e3159d6871320630197c768f9}{get\+\_\+max\+\_\+block\+\_\+size}} () override
+\begin{DoxyCompactList}\small\item\em get the max block size \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aac949402b83768a2c8ba4583fa22514c}{add\+\_\+max\+\_\+block\+\_\+size}} (uint64\+\_\+t sz) override
+\begin{DoxyCompactList}\small\item\em add a new max block size \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a1a87ee8748e5913e0ae5509ebc687c6b}{update\+\_\+block\+\_\+checkpoint}} (struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} const \&checkpoint) override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a49e1d572d1883bd8ef42bec176a7aa07}{get\+\_\+block\+\_\+checkpoint}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}, struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&checkpoint) const override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_af24ae0276a3686cad0b08b9c6aaec2c2}{get\+\_\+top\+\_\+checkpoint}} (struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&checkpoint) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a62ad445ea4ab43e4e6944730b2cd64ec}{remove\+\_\+block\+\_\+checkpoint}} (uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}) override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}} $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a06b306d6fe1e711d7f5d787058531a81}{get\+\_\+checkpoints\+\_\+range}} (uint64\+\_\+t start, uint64\+\_\+t end, size\+\_\+t num\+\_\+desired\+\_\+checkpoints=\mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a70de9903897a1a603f420a15a57cbd14}{Blockchain\+D\+B\+::\+G\+E\+T\+\_\+\+A\+L\+L\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS}}) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ac0987ec60f99bf375048c5b6525a076b}{get\+\_\+output\+\_\+blacklist}} (std\+::vector$<$ uint64\+\_\+t $>$ \&blacklist) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ab5ddfb374dbba339c073203565099837}{add\+\_\+output\+\_\+blacklist}} (std\+::vector$<$ uint64\+\_\+t $>$ const \&blacklist) override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a91ce6a4e6e9f9e11109659d65bdf1620}{set\+\_\+service\+\_\+node\+\_\+data}} (const std\+::string \&data, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} long\+\_\+term) override
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2c26407a4dae0870e498021451f6ae57}{get\+\_\+service\+\_\+node\+\_\+data}} (std\+::string \&data, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} long\+\_\+term) const override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aa91a0e8cd65c6aa45279ec2c18c3c10c}{clear\+\_\+service\+\_\+node\+\_\+data}} () override
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a44f27a210db87a7dabed0f14606b10f2}{get\+\_\+service\+\_\+node\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}} \&proof) const override
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}} $>$ \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a70697421632e7e70089f1fc54cb6e267}{get\+\_\+all\+\_\+service\+\_\+node\+\_\+proofs}} () const override
+\begin{DoxyCompactList}\small\item\em Returns pubkeys and proof data for all currently stored service nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aae2eacf7f5714d90f10109553739a800}{set\+\_\+service\+\_\+node\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey, const \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}} \&proof) override
+\begin{DoxyCompactList}\small\item\em Creates or updates the proof data for a service node from a proof. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a6a1b54ee176dd62ecde1ef228ec091e3}{remove\+\_\+service\+\_\+node\+\_\+proof}} (const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&pubkey) override
+\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a96128b847d875897f2095c4b38278223}{add\+\_\+alt\+\_\+block}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blkid, const \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{cryptonote\+::alt\+\_\+block\+\_\+data\+\_\+t}} \&data, const std\+::string \&blob, const std\+::string $\ast$checkpoint) override
+\begin{DoxyCompactList}\small\item\em add a new alternative block \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_acd14ad57bc2a3d9353acad8ad898c839}{get\+\_\+alt\+\_\+block}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blkid, \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{alt\+\_\+block\+\_\+data\+\_\+t}} $\ast$data, std\+::string $\ast$blob, std\+::string $\ast$checkpoint) const override
+\begin{DoxyCompactList}\small\item\em get an alternative block by hash \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad74521f323ee926866c7a8504ac60f39}{remove\+\_\+alt\+\_\+block}} (const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blkid) override
+\begin{DoxyCompactList}\small\item\em remove an alternative block \end{DoxyCompactList}\item 
+virtual uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_aa3233da792c3ead0b7aed26c6a2a0e80}{get\+\_\+alt\+\_\+block\+\_\+count}} () override
+\begin{DoxyCompactList}\small\item\em get the number of alternative blocks stored \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad416949ff84da862f990d9d02416adfa}{drop\+\_\+alt\+\_\+blocks}} () override
+\begin{DoxyCompactList}\small\item\em drop all alternative blocks \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a7ae6ba46369df6bc66f01d3fc817afeb}{for\+\_\+all\+\_\+alt\+\_\+blocks}} (std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blkid, const \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{alt\+\_\+block\+\_\+data\+\_\+t}} \&data, const std\+::string $\ast$block\+\_\+blob, const std\+::string $\ast$checkpoint\+\_\+blob)$>$ f, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} include\+\_\+blob=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}) const override
+\begin{DoxyCompactList}\small\item\em runs a function over all alternative blocks stored \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_afd36c1b896f25938a4970f9f51edaa8e}\label{classcryptonote_1_1BaseTestDB_afd36c1b896f25938a4970f9f51edaa8e}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!BaseTestDB@{BaseTestDB}}
+\index{BaseTestDB@{BaseTestDB}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{BaseTestDB()}{BaseTestDB()}}
+{\footnotesize\ttfamily cryptonote\+::\+Base\+Test\+D\+B\+::\+Base\+Test\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a96128b847d875897f2095c4b38278223}\label{classcryptonote_1_1BaseTestDB_a96128b847d875897f2095c4b38278223}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_alt\_block@{add\_alt\_block}}
+\index{add\_alt\_block@{add\_alt\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_alt\_block()}{add\_alt\_block()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+alt\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{blkid,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{cryptonote\+::alt\+\_\+block\+\_\+data\+\_\+t}} \&}]{data,  }\item[{const std\+::string \&}]{blob,  }\item[{const std\+::string $\ast$}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+add a new alternative block 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & blkid the block hash \\
+\hline
+{\em } & data\+: the metadata for the block \\
+\hline
+{\em } & blob\+: the block\textquotesingle{}s blob \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a791b7af852f387c91b3d804f6a03c438}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a05b028fe07e0edc63154de9320516a97}\label{classcryptonote_1_1BaseTestDB_a05b028fe07e0edc63154de9320516a97}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_block@{add\_block}}
+\index{add\_block@{add\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_block()}{add\_block()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&}]{blk,  }\item[{size\+\_\+t}]{block\+\_\+weight,  }\item[{uint64\+\_\+t}]{long\+\_\+term\+\_\+block\+\_\+weight,  }\item[{const \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} \&}]{cumulative\+\_\+difficulty,  }\item[{const uint64\+\_\+t \&}]{coins\+\_\+generated,  }\item[{uint64\+\_\+t}]{num\+\_\+rct\+\_\+outs,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{blk\+\_\+hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+add the block and metadata to the db 
+
+The subclass implementing this will add the specified block and block metadata to its backing store. This does not include its transactions, those are added in a separate step.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blk} & the block to be added \\
+\hline
+{\em block\+\_\+weight} & the weight of the block (transactions and all) \\
+\hline
+{\em long\+\_\+term\+\_\+block\+\_\+weight} & the long term block weight of the block (transactions and all) \\
+\hline
+{\em cumulative\+\_\+difficulty} & the accumulated difficulty after this block \\
+\hline
+{\em coins\+\_\+generated} & the number of coins generated total after this block \\
+\hline
+{\em blk\+\_\+hash} & the hash of the block \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a01f5fefccc7a121f8c6044942ccba927}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aac949402b83768a2c8ba4583fa22514c}\label{classcryptonote_1_1BaseTestDB_aac949402b83768a2c8ba4583fa22514c}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_max\_block\_size@{add\_max\_block\_size}}
+\index{add\_max\_block\_size@{add\_max\_block\_size}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_max\_block\_size()}{add\_max\_block\_size()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+max\+\_\+block\+\_\+size (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+add a new max block size 
+
+The max block size will be the maximum of sz and the current block size
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & sz the block size \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aa84a571effea0b94917656448a410554}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ae931ffa28554b61bccf2b26b25c381ee}\label{classcryptonote_1_1BaseTestDB_ae931ffa28554b61bccf2b26b25c381ee}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_output@{add\_output}}
+\index{add\_output@{add\_output}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_output()}{add\_output()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+output (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1tx__out}{cryptonote\+::tx\+\_\+out}} \&}]{tx\+\_\+output,  }\item[{const uint64\+\_\+t \&}]{local\+\_\+index,  }\item[{const uint64\+\_\+t}]{unlock\+\_\+time,  }\item[{const \mbox{\hyperlink{structrct_1_1key}{rct\+::key}} $\ast$}]{commitment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+store an output 
+
+The subclass implementing this will add the output data passed to its backing store in a suitable manner. In addition, the subclass is responsible for keeping track of the global output count in some manner, so that outputs may be indexed by the order in which they were created. In the future, this tracking (of the number, at least) should be moved to this class, as it is necessary and the same among all \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}.
+
+It returns an amount output index, which is the index of the output for its specified amount.
+
+This data should be stored in such a manner that the only thing needed to reverse the process is the \mbox{\hyperlink{structcryptonote_1_1tx__out}{tx\+\_\+out}}.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+hash} & hash of the transaction the output was created by \\
+\hline
+{\em tx\+\_\+output} & the output \\
+\hline
+{\em local\+\_\+index} & index of the output in its transaction \\
+\hline
+{\em unlock\+\_\+time} & unlock time/height of the output \\
+\hline
+{\em commitment} & the rct commitment to the output amount \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount output index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a4b5e7bed5f737eed43b85ba58419c9e8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ab5ddfb374dbba339c073203565099837}\label{classcryptonote_1_1BaseTestDB_ab5ddfb374dbba339c073203565099837}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_output\_blacklist@{add\_output\_blacklist}}
+\index{add\_output\_blacklist@{add\_output\_blacklist}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_output\_blacklist()}{add\_output\_blacklist()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+output\+\_\+blacklist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint64\+\_\+t $>$ const \&}]{blacklist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac18183a4ea41298176a7ccbe115deea8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ad3a2b410edc3f80452ab825b4aa908ce}\label{classcryptonote_1_1BaseTestDB_ad3a2b410edc3f80452ab825b4aa908ce}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_spent\_key@{add\_spent\_key}}
+\index{add\_spent\_key@{add\_spent\_key}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_spent\_key()}{add\_spent\_key()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+spent\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{k\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+store a spent key 
+
+The subclass implementing this will store the spent key image.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+image} & the spent key image to store \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad046923f905835acadd722afcaa077c7}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a30ebbb77596c32bc02971eac486838dd}\label{classcryptonote_1_1BaseTestDB_a30ebbb77596c32bc02971eac486838dd}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_transaction\_data@{add\_transaction\_data}}
+\index{add\_transaction\_data@{add\_transaction\_data}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_transaction\_data()}{add\_transaction\_data()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+transaction\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{blk\+\_\+hash,  }\item[{const std\+::pair$<$ \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}, std\+::string $>$ \&}]{tx,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+prunable\+\_\+hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a4b742c599f2f25e41c7b5eea02a8b547}\label{classcryptonote_1_1BaseTestDB_a4b742c599f2f25e41c7b5eea02a8b547}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_tx\_amount\_output\_indices@{add\_tx\_amount\_output\_indices}}
+\index{add\_tx\_amount\_output\_indices@{add\_tx\_amount\_output\_indices}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_tx\_amount\_output\_indices()}{add\_tx\_amount\_output\_indices()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+tx\+\_\+amount\+\_\+output\+\_\+indices (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{tx\+\_\+id,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{amount\+\_\+output\+\_\+indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+store amount output indices for a tx\textquotesingle{}s outputs 
+
+The subclass implementing this will add the amount output indices to its backing store in a suitable manner. The tx\+\_\+id will be the same one that was returned from \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae931ffa28554b61bccf2b26b25c381ee}{add\+\_\+output()}}.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+id} & ID of the transaction containing these outputs \\
+\hline
+{\em amount\+\_\+output\+\_\+indices} & the amount output indices of the transaction \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae9bb1065d56d144e6157fd2258bec6aa}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a044aac89923b90d5c295c40b67a269a6}\label{classcryptonote_1_1BaseTestDB_a044aac89923b90d5c295c40b67a269a6}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!add\_txpool\_tx@{add\_txpool\_tx}}
+\index{add\_txpool\_tx@{add\_txpool\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{add\_txpool\_tx()}{add\_txpool\_tx()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::add\+\_\+txpool\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const std\+::string \&}]{blob,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&}]{details }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+add a txpool transaction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em details} & the details of the transaction to add \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a6e1da4f66dff85adac98a5d936ddf2b1}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac5899092ec252fafd9a28d340377decc}\label{classcryptonote_1_1BaseTestDB_ac5899092ec252fafd9a28d340377decc}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!batch\_abort@{batch\_abort}}
+\index{batch\_abort@{batch\_abort}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{batch\_abort()}{batch\_abort()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::batch\+\_\+abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+aborts a batch transaction 
+
+If the subclass implements batching, this function should abort the batch it is currently on.
+
+If no batch is in-\/progress, this function should throw a \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}}. This exception may change in the future if it is deemed necessary to have a more granular exception type for this scenario.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_abd6cd04f021cd399537ecded8f4a19c4}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a26365994b639da0151bcdfed73471f71}\label{classcryptonote_1_1BaseTestDB_a26365994b639da0151bcdfed73471f71}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!batch\_start@{batch\_start}}
+\index{batch\_start@{batch\_start}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{batch\_start()}{batch\_start()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::batch\+\_\+start (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{batch\+\_\+num\+\_\+blocks = {\ttfamily 0},  }\item[{uint64\+\_\+t}]{batch\+\_\+bytes = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+tells the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} to start a new \char`\"{}batch\char`\"{} of blocks 
+
+If the subclass implements a batching method of caching blocks in R\+AM to be added to a backing store in groups, it should start a batch which will end either when $<$batch\+\_\+num\+\_\+blocks$>$ has been added or \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad64c7b59348a2b2841a7fe600b2177a4}{batch\+\_\+stop()}} has been called. In either case, it should end the batch and write to its backing store.
+
+If a batch is already in-\/progress, this function must return false. If a batch was started by this call, it must return true.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+\_\+num\+\_\+blocks} & number of blocks to batch together\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if we started the batch, false if already started 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_abd978eaad5b93ffce845cbc8218d3120}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ad64c7b59348a2b2841a7fe600b2177a4}\label{classcryptonote_1_1BaseTestDB_ad64c7b59348a2b2841a7fe600b2177a4}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!batch\_stop@{batch\_stop}}
+\index{batch\_stop@{batch\_stop}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{batch\_stop()}{batch\_stop()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::batch\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ends a batch transaction 
+
+If the subclass implements batching, this function should store the batch it is currently on and mark it finished.
+
+If no batch is in-\/progress, this function should throw a \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}}. This exception may change in the future if it is deemed necessary to have a more granular exception type for this scenario.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3cbe654e1c4a7fbc4e4d617abbe7a3de}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a4f15852a7cdee18e21227b0cd69fcfde}\label{classcryptonote_1_1BaseTestDB_a4f15852a7cdee18e21227b0cd69fcfde}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_exists@{block\_exists}}
+\index{block\_exists@{block\_exists}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_exists()}{block\_exists()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{uint64\+\_\+t $\ast$}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+checks if a block exists 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash of the requested block \\
+\hline
+{\em height} & if non N\+U\+LL, returns the block\textquotesingle{}s height if found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true of the block exists, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ab4377742c7421c3d4f6bb7547ea91a2b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ae19bc13b607556e7311baed2fad4def8}\label{classcryptonote_1_1BaseTestDB_ae19bc13b607556e7311baed2fad4def8}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_rtxn\_abort@{block\_rtxn\_abort}}
+\index{block\_rtxn\_abort@{block\_rtxn\_abort}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_rtxn\_abort()}{block\_rtxn\_abort()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+rtxn\+\_\+abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae09feed0f8305e2d8f93bb14ef31d62d}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af4cff8bc1026e6d86e79e0dd3432c2af}\label{classcryptonote_1_1BaseTestDB_af4cff8bc1026e6d86e79e0dd3432c2af}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_rtxn\_start@{block\_rtxn\_start}}
+\index{block\_rtxn\_start@{block\_rtxn\_start}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_rtxn\_start()}{block\_rtxn\_start()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+rtxn\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a5afbaafb4f005a4e3542201a68a5c2bf}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aa8f54657539e39885ea9a961a14a7443}\label{classcryptonote_1_1BaseTestDB_aa8f54657539e39885ea9a961a14a7443}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_rtxn\_stop@{block\_rtxn\_stop}}
+\index{block\_rtxn\_stop@{block\_rtxn\_stop}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_rtxn\_stop()}{block\_rtxn\_stop()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+rtxn\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad93bb793144ac8f24d2a17c7800e5dba}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a8e7a96178929bcfacaf5ddaaf8bf28a4}\label{classcryptonote_1_1BaseTestDB_a8e7a96178929bcfacaf5ddaaf8bf28a4}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_wtxn\_abort@{block\_wtxn\_abort}}
+\index{block\_wtxn\_abort@{block\_wtxn\_abort}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_wtxn\_abort()}{block\_wtxn\_abort()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+wtxn\+\_\+abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_af2412ee39009c0bacc2d5bd01d2e6478}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a6c730225143791cfccc6b304eb6d5508}\label{classcryptonote_1_1BaseTestDB_a6c730225143791cfccc6b304eb6d5508}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_wtxn\_start@{block\_wtxn\_start}}
+\index{block\_wtxn\_start@{block\_wtxn\_start}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_wtxn\_start()}{block\_wtxn\_start()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+wtxn\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7490f685a94ea6e4d7bc750b635d49e2}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aa7679a4c2a8da8d119b9e02246915b9b}\label{classcryptonote_1_1BaseTestDB_aa7679a4c2a8da8d119b9e02246915b9b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!block\_wtxn\_stop@{block\_wtxn\_stop}}
+\index{block\_wtxn\_stop@{block\_wtxn\_stop}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{block\_wtxn\_stop()}{block\_wtxn\_stop()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::block\+\_\+wtxn\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a46cc97f10f812e1368d8f402477755f5}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a551c6ac8cf8e43a7f5bc74bfc52b7821}\label{classcryptonote_1_1BaseTestDB_a551c6ac8cf8e43a7f5bc74bfc52b7821}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!can\_thread\_bulk\_indices@{can\_thread\_bulk\_indices}}
+\index{can\_thread\_bulk\_indices@{can\_thread\_bulk\_indices}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{can\_thread\_bulk\_indices()}{can\_thread\_bulk\_indices()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::can\+\_\+thread\+\_\+bulk\+\_\+indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7aff4e007e700f131c7ac0109d277e75}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ab53991882e4d05a698a0019b7ecf865f}\label{classcryptonote_1_1BaseTestDB_ab53991882e4d05a698a0019b7ecf865f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!check\_pruning@{check\_pruning}}
+\index{check\_pruning@{check\_pruning}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{check\_pruning()}{check\_pruning()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::check\+\_\+pruning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+checks pruning was done correctly, iff enabled 
+
+\begin{DoxyReturn}{Returns}
+success iff true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ab800cf2bb2ae218ddc914d09474c4f08}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aa91a0e8cd65c6aa45279ec2c18c3c10c}\label{classcryptonote_1_1BaseTestDB_aa91a0e8cd65c6aa45279ec2c18c3c10c}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!clear\_service\_node\_data@{clear\_service\_node\_data}}
+\index{clear\_service\_node\_data@{clear\_service\_node\_data}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{clear\_service\_node\_data()}{clear\_service\_node\_data()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::clear\+\_\+service\+\_\+node\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_adc2e087da421c1434756c8db8a896062}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ab12388f967df979126f3dd52a6195722}\label{classcryptonote_1_1BaseTestDB_ab12388f967df979126f3dd52a6195722}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!close@{close}}
+\index{close@{close}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+close the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} 
+
+At minimum, this call ensures that further use of the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} instance will not have effect. In any case where it is necessary to do so, a subclass implementing this will sync with disk.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3448e4bfc25a0a9f97457d7e1ff3921a}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ad416949ff84da862f990d9d02416adfa}\label{classcryptonote_1_1BaseTestDB_ad416949ff84da862f990d9d02416adfa}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!drop\_alt\_blocks@{drop\_alt\_blocks}}
+\index{drop\_alt\_blocks@{drop\_alt\_blocks}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{drop\_alt\_blocks()}{drop\_alt\_blocks()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::drop\+\_\+alt\+\_\+blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+drop all alternative blocks 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a90b45061b40e34d47e591f8638306312}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a7ae6ba46369df6bc66f01d3fc817afeb}\label{classcryptonote_1_1BaseTestDB_a7ae6ba46369df6bc66f01d3fc817afeb}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_alt\_blocks@{for\_all\_alt\_blocks}}
+\index{for\_all\_alt\_blocks@{for\_all\_alt\_blocks}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_alt\_blocks()}{for\_all\_alt\_blocks()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+alt\+\_\+blocks (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&blkid, const \mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{alt\+\_\+block\+\_\+data\+\_\+t}} \&data, const std\+::string $\ast$block\+\_\+blob, const std\+::string $\ast$checkpoint\+\_\+blob)$>$}]{f,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+blob = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+runs a function over all alternative blocks stored 
+
+The subclass should run the passed function for each alt block it has stored, passing (blkid, data, blob) as its parameters.
+
+If any call to the function returns false, the subclass should return false. Otherwise, the subclass returns true.
+
+The subclass should throw \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}} if any of the expected values are not found. Current implementations simply return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::function} & f the function to run\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function returns false for any output, otherwise true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a95cd17e0b581c8e927c4e8cc0bc37a69}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aafe963c0da7b7d3902861c2138b0af14}\label{classcryptonote_1_1BaseTestDB_aafe963c0da7b7d3902861c2138b0af14}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_key\_images@{for\_all\_key\_images}}
+\index{for\_all\_key\_images@{for\_all\_key\_images}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_key\_images()}{for\_all\_key\_images()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+key\+\_\+images (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&)$>$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+runs a function over all key images stored 
+
+The subclass should run the passed function for each key image it has stored, passing the key image as its parameter.
+
+If any call to the function returns false, the subclass should return false. Otherwise, the subclass returns true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::function} & fn the function to run\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function returns false for any key image, otherwise true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a0991d43b7676ea54202551c5bc4bf722}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a74d6fc746e44342fdd1dc71c71802a9e}\label{classcryptonote_1_1BaseTestDB_a74d6fc746e44342fdd1dc71c71802a9e}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_outputs@{for\_all\_outputs}}
+\index{for\_all\_outputs@{for\_all\_outputs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_outputs()}{for\_all\_outputs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+outputs (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t amount, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&tx\+\_\+hash, uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}}, size\+\_\+t tx\+\_\+idx)$>$}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+runs a function over all outputs stored 
+
+The subclass should run the passed function for each output it has stored, passing (amount, transaction\+\_\+hash, tx\+\_\+local\+\_\+output\+\_\+index) as its parameters.
+
+If any call to the function returns false, the subclass should return false. Otherwise, the subclass returns true.
+
+The subclass should throw \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}} if any of the expected values are not found. Current implementations simply return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::function} & f the function to run\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function returns false for any output, otherwise true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac6d01b8385998549751a9d9b1079f1a0}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af37f1284ddadba1d8b6f92249402f245}\label{classcryptonote_1_1BaseTestDB_af37f1284ddadba1d8b6f92249402f245}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_outputs@{for\_all\_outputs}}
+\index{for\_all\_outputs@{for\_all\_outputs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_outputs()}{for\_all\_outputs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+outputs (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{amount,  }\item[{const std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}{height}})$>$ \&}]{f }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a946b7fbcd7cc72a04dbea2b174c6b9d4}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_abf6c75886c116bdded381d2f16b53a32}\label{classcryptonote_1_1BaseTestDB_abf6c75886c116bdded381d2f16b53a32}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_transactions@{for\_all\_transactions}}
+\index{for\_all\_transactions@{for\_all\_transactions}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_transactions()}{for\_all\_transactions()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+transactions (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&)$>$}]{,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{pruned }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+runs a function over all transactions stored 
+
+The subclass should run the passed function for each transaction it has stored, passing (transaction\+\_\+hash, transaction) as its parameters.
+
+If any call to the function returns false, the subclass should return false. Otherwise, the subclass returns true.
+
+The subclass should throw \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}} if any of the expected values are not found. Current implementations simply return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::function} & fn the function to run \\
+\hline
+{\em bool} & pruned whether to only get pruned tx data, or the whole\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function returns false for any transaction, otherwise true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a692b378a22e08cf925c9b5b559c81ddd}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a388fea22527ef747a08dc526d9888877}\label{classcryptonote_1_1BaseTestDB_a388fea22527ef747a08dc526d9888877}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_all\_txpool\_txes@{for\_all\_txpool\_txes}}
+\index{for\_all\_txpool\_txes@{for\_all\_txpool\_txes}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_all\_txpool\_txes()}{for\_all\_txpool\_txes()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+all\+\_\+txpool\+\_\+txes (\begin{DoxyParamCaption}\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&, const std\+::string $\ast$)$>$}]{,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+blob = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2b2b8a25f39a159f56c6b0f842cb4780}\label{classcryptonote_1_1BaseTestDB_a2b2b8a25f39a159f56c6b0f842cb4780}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!for\_blocks\_range@{for\_blocks\_range}}
+\index{for\_blocks\_range@{for\_blocks\_range}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{for\_blocks\_range()}{for\_blocks\_range()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::for\+\_\+blocks\+\_\+range (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{h1,  }\item[{const uint64\+\_\+t \&}]{h2,  }\item[{std\+::function$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}(uint64\+\_\+t, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&)$>$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+runs a function over a range of blocks 
+
+The subclass should run the passed function for each block in the specified range, passing (block\+\_\+height, block\+\_\+hash, block) as its parameters.
+
+If any call to the function returns false, the subclass should return false. Otherwise, the subclass returns true.
+
+The subclass should throw \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}} if any of the expected values are not found. Current implementations simply return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h1} & the start height \\
+\hline
+{\em h2} & the end height (inclusive) \\
+\hline
+{\em std\+::function} & fn the function to run\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the function returns false for any block, otherwise true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac1b2d8c76f830d1337a23b9c16e5da34}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a70697421632e7e70089f1fc54cb6e267}\label{classcryptonote_1_1BaseTestDB_a70697421632e7e70089f1fc54cb6e267}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_all\_service\_node\_proofs@{get\_all\_service\_node\_proofs}}
+\index{get\_all\_service\_node\_proofs@{get\_all\_service\_node\_proofs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_all\_service\_node\_proofs()}{get\_all\_service\_node\_proofs()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}}, \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}}$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+all\+\_\+service\+\_\+node\+\_\+proofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns pubkeys and proof data for all currently stored service nodes. 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a84a54b1b8974f5a96f569aef6271b426}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_acd14ad57bc2a3d9353acad8ad898c839}\label{classcryptonote_1_1BaseTestDB_acd14ad57bc2a3d9353acad8ad898c839}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_alt\_block@{get\_alt\_block}}
+\index{get\_alt\_block@{get\_alt\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_alt\_block()}{get\_alt\_block()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+alt\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{blkid,  }\item[{\mbox{\hyperlink{structcryptonote_1_1alt__block__data__t}{alt\+\_\+block\+\_\+data\+\_\+t}} $\ast$}]{data,  }\item[{std\+::string $\ast$}]{blob,  }\item[{std\+::string $\ast$}]{checkpoint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get an alternative block by hash 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & blkid the block hash \\
+\hline
+{\em } & data\+: the metadata for the block \\
+\hline
+{\em } & blob\+: the block\textquotesingle{}s blob\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the block was found in the alternative blocks list, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad93fe8b9fc11066ba66803c1f68af236}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aa3233da792c3ead0b7aed26c6a2a0e80}\label{classcryptonote_1_1BaseTestDB_aa3233da792c3ead0b7aed26c6a2a0e80}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_alt\_block\_count@{get\_alt\_block\_count}}
+\index{get\_alt\_block\_count@{get\_alt\_block\_count}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_alt\_block\_count()}{get\_alt\_block\_count()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+alt\+\_\+block\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the number of alternative blocks stored 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_acc111c1ee02ad714093cc55248df62cc}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a9a4fdb156499b1fd2a2ad6fee7b14c22}\label{classcryptonote_1_1BaseTestDB_a9a4fdb156499b1fd2a2ad6fee7b14c22}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_already\_generated\_coins@{get\_block\_already\_generated\_coins}}
+\index{get\_block\_already\_generated\_coins@{get\_block\_already\_generated\_coins}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_already\_generated\_coins()}{get\_block\_already\_generated\_coins()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+already\+\_\+generated\+\_\+coins (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s already generated coins 
+
+The subclass should return the total coins generated as of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the already generated coins 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a857ef0027e28136d36fdf87b6840b98a}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a1a690ff10eb8efbb301b73a1149ab5c8}\label{classcryptonote_1_1BaseTestDB_a1a690ff10eb8efbb301b73a1149ab5c8}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_blob@{get\_block\_blob}}
+\index{get\_block\_blob@{get\_block\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_blob()}{get\_block\_blob()}}
+{\footnotesize\ttfamily virtual std\+::string cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the block with the given hash 
+
+The subclass should return the requested block.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block requested 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a42996ce32cb1bc99f4866b243284cde0}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a850414871d2db13e2e023d22227a1012}\label{classcryptonote_1_1BaseTestDB_a850414871d2db13e2e023d22227a1012}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_blob\_from\_height@{get\_block\_blob\_from\_height}}
+\index{get\_block\_blob\_from\_height@{get\_block\_blob\_from\_height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_blob\_from\_height()}{get\_block\_blob\_from\_height()}}
+{\footnotesize\ttfamily virtual std\+::string cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+blob\+\_\+from\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block blob by height 
+
+The subclass should return the block at the given height.
+
+If the block does not exist, that is to say if the blockchain is not that high, then the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block blob 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a50143c7b141aace7e9503e2dbb90ec20}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a49e1d572d1883bd8ef42bec176a7aa07}\label{classcryptonote_1_1BaseTestDB_a49e1d572d1883bd8ef42bec176a7aa07}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_checkpoint@{get\_block\_checkpoint}}
+\index{get\_block\_checkpoint@{get\_block\_checkpoint}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_checkpoint()}{get\_block\_checkpoint()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&}]{checkpoint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a53a5ee660518ec8931475d2cef93e90b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2411ceb81e417caf52cbefb560a19246}\label{classcryptonote_1_1BaseTestDB_a2411ceb81e417caf52cbefb560a19246}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_cumulative\_difficulty@{get\_block\_cumulative\_difficulty}}
+\index{get\_block\_cumulative\_difficulty@{get\_block\_cumulative\_difficulty}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_cumulative\_difficulty()}{get\_block\_cumulative\_difficulty()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+cumulative\+\_\+difficulty (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s cumulative difficulty 
+
+The subclass should return the cumulative difficulty of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cumulative difficulty 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a974de4802b1a27443a01415075cbe5de}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ae11bc4f77d9a6186f2f1937b9be1dc91}\label{classcryptonote_1_1BaseTestDB_ae11bc4f77d9a6186f2f1937b9be1dc91}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_cumulative\_rct\_outputs@{get\_block\_cumulative\_rct\_outputs}}
+\index{get\_block\_cumulative\_rct\_outputs@{get\_block\_cumulative\_rct\_outputs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_cumulative\_rct\_outputs()}{get\_block\_cumulative\_rct\_outputs()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$uint64\+\_\+t$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+cumulative\+\_\+rct\+\_\+outputs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{heights }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s cumulative number of rct outputs 
+
+The subclass should return the numer of rct outputs in the blockchain up to the block with the given height (inclusive).
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the cumulative number of rct outputs 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a98d784cdf244a6827dd5f9afbe3ef1a2}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a3dec8698e68c402a514e0540a1e0aebd}\label{classcryptonote_1_1BaseTestDB_a3dec8698e68c402a514e0540a1e0aebd}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_difficulty@{get\_block\_difficulty}}
+\index{get\_block\_difficulty@{get\_block\_difficulty}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_difficulty()}{get\_block\_difficulty()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecryptonote_afa000315dc9cabb236f0b077dc812d6e}{cryptonote\+::difficulty\+\_\+type}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+difficulty (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s difficulty 
+
+The subclass should return the difficulty of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the difficulty 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad3a53da9a61b8a9a9e8a04e62880169d}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af67fbddeb82ee2c1b625999b78be2bb5}\label{classcryptonote_1_1BaseTestDB_af67fbddeb82ee2c1b625999b78be2bb5}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_from\_height@{get\_block\_from\_height}}
+\index{get\_block\_from\_height@{get\_block\_from\_height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_from\_height()}{get\_block\_from\_height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+from\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block by height 
+
+If the block does not exist, that is to say if the blockchain is not that high, then the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aab956fbb07fa7b46c8e137a75357f0f7}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a10dbfa0d721350a0aae55d81e31f29b8}\label{classcryptonote_1_1BaseTestDB_a10dbfa0d721350a0aae55d81e31f29b8}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_hash\_from\_height@{get\_block\_hash\_from\_height}}
+\index{get\_block\_hash\_from\_height@{get\_block\_hash\_from\_height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_hash\_from\_height()}{get\_block\_hash\_from\_height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+hash\+\_\+from\+\_\+height (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s hash 
+
+The subclass should return hash of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the hash 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae5bdebba8e8372815db8c42af1cde25f}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a92521f86a07880025e1026fb5bcf888a}\label{classcryptonote_1_1BaseTestDB_a92521f86a07880025e1026fb5bcf888a}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_header\_from\_height@{get\_block\_header\_from\_height}}
+\index{get\_block\_header\_from\_height@{get\_block\_header\_from\_height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_header\_from\_height()}{get\_block\_header\_from\_height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcryptonote_1_1block__header}{cryptonote\+::block\+\_\+header}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+header\+\_\+from\+\_\+height (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block header with height 
+
+The subclass should return the block header from the block with the given hash.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the height to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the block header 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a767aa5b8c0698c66ff9884ffe86e55f0}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a3bea3674e4db131a30fd938a263ba807}\label{classcryptonote_1_1BaseTestDB_a3bea3674e4db131a30fd938a263ba807}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_height@{get\_block\_height}}
+\index{get\_block\_height@{get\_block\_height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_height()}{get\_block\_height()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+gets the height of the block with a given hash 
+
+The subclass should return the requested height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the height 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3fd7014d6fe3ed4cca74401dd98cb771}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_abb4828e3e4e46ed5f1d3ddf53a09cacf}\label{classcryptonote_1_1BaseTestDB_abb4828e3e4e46ed5f1d3ddf53a09cacf}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_long\_term\_weight@{get\_block\_long\_term\_weight}}
+\index{get\_block\_long\_term\_weight@{get\_block\_long\_term\_weight}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_long\_term\_weight()}{get\_block\_long\_term\_weight()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+long\+\_\+term\+\_\+weight (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s long term weight 
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the long term weight 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad3af37563e431371074942355a2d79f4}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a5b1e3fdb03bcb86821c9fb2506fb85b1}\label{classcryptonote_1_1BaseTestDB_a5b1e3fdb03bcb86821c9fb2506fb85b1}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_timestamp@{get\_block\_timestamp}}
+\index{get\_block\_timestamp@{get\_block\_timestamp}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_timestamp()}{get\_block\_timestamp()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+timestamp (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s timestamp 
+
+The subclass should return the timestamp of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the timestamp 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae0b7135ab594b2685568748576c478d9}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a7b2d1fb4e19ab3974597dc94d41d9a86}\label{classcryptonote_1_1BaseTestDB_a7b2d1fb4e19ab3974597dc94d41d9a86}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_weight@{get\_block\_weight}}
+\index{get\_block\_weight@{get\_block\_weight}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_weight()}{get\_block\_weight()}}
+{\footnotesize\ttfamily virtual size\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+weight (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a block\textquotesingle{}s weight 
+
+The subclass should return the weight of the block with the given height.
+
+If the block does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the weight 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aa45d0a5c8e1fd2a31a634754fcca618d}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a517edb688094622364d11058df323ad2}\label{classcryptonote_1_1BaseTestDB_a517edb688094622364d11058df323ad2}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_block\_weights@{get\_block\_weights}}
+\index{get\_block\_weights@{get\_block\_weights}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_block\_weights()}{get\_block\_weights()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$uint64\+\_\+t$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+block\+\_\+weights (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the last N blocks\textquotesingle{} weights 
+
+If there are fewer than N blocks, the returned array will be smaller than N
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & the number of blocks requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the weights 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a70a29664ff4687d6bce957a3afd4bb23}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_abc84a94769e720c22137ac8dbcf906da}\label{classcryptonote_1_1BaseTestDB_abc84a94769e720c22137ac8dbcf906da}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_blockchain\_pruning\_seed@{get\_blockchain\_pruning\_seed}}
+\index{get\_blockchain\_pruning\_seed@{get\_blockchain\_pruning\_seed}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_blockchain\_pruning\_seed()}{get\_blockchain\_pruning\_seed()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+blockchain\+\_\+pruning\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the blockchain pruning seed 
+
+\begin{DoxyReturn}{Returns}
+the blockchain pruning seed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a895755473aef6f558f290ad34a9c58b8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aad49646ef5deaa9454ec69c9da71485a}\label{classcryptonote_1_1BaseTestDB_aad49646ef5deaa9454ec69c9da71485a}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_blocks\_range@{get\_blocks\_range}}
+\index{get\_blocks\_range@{get\_blocks\_range}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_blocks\_range()}{get\_blocks\_range()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}}$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+blocks\+\_\+range (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{h1,  }\item[{const uint64\+\_\+t \&}]{h2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a list of blocks 
+
+The subclass should return a vector of blocks with heights starting at h1 and ending at h2, inclusively.
+
+If the height range requested goes past the end of the blockchain, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}. (current implementations simply don\textquotesingle{}t catch this exception as thrown by methods called within)
+
+
+\begin{DoxyParams}{Parameters}
+{\em h1} & the start height \\
+\hline
+{\em h2} & the end height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of blocks 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a78105c7f37ecd91f74404434e858a832}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a06b306d6fe1e711d7f5d787058531a81}\label{classcryptonote_1_1BaseTestDB_a06b306d6fe1e711d7f5d787058531a81}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_checkpoints\_range@{get\_checkpoints\_range}}
+\index{get\_checkpoints\_range@{get\_checkpoints\_range}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_checkpoints\_range()}{get\_checkpoints\_range()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{cryptonote\+::checkpoint\+\_\+t}}$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+checkpoints\+\_\+range (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start,  }\item[{uint64\+\_\+t}]{end,  }\item[{size\+\_\+t}]{num\+\_\+desired\+\_\+checkpoints = {\ttfamily \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a70de9903897a1a603f420a15a57cbd14}{Blockchain\+D\+B\+::\+G\+E\+T\+\_\+\+A\+L\+L\+\_\+\+C\+H\+E\+C\+K\+P\+O\+I\+N\+TS}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae3cc4175208f0832764e4255b95e7b6a}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a20f44a791e3676305061bcd68012e0a4}\label{classcryptonote_1_1BaseTestDB_a20f44a791e3676305061bcd68012e0a4}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_database\_size@{get\_database\_size}}
+\index{get\_database\_size@{get\_database\_size}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_database\_size()}{get\_database\_size()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+database\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get disk space requirements 
+
+\begin{DoxyReturn}{Returns}
+the size required 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a279ad4f2b7d59b799ca6823451293357}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a98590a58265a48ff0ce91c63875b3807}\label{classcryptonote_1_1BaseTestDB_a98590a58265a48ff0ce91c63875b3807}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_db\_name@{get\_db\_name}}
+\index{get\_db\_name@{get\_db\_name}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_db\_name()}{get\_db\_name()}}
+{\footnotesize\ttfamily virtual std\+::string cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+db\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+gets the name of the folder the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}\textquotesingle{}s file(s) should be in 
+
+The subclass implementation should return the name of the folder in which it stores files, or an empty string if there is none.
+
+\begin{DoxyReturn}{Returns}
+the name of the folder with the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}\textquotesingle{}s files, if any. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7bd482e1a1e5dcb581437c998f91689d}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2e68d6b77c863e9633f9281736c36b83}\label{classcryptonote_1_1BaseTestDB_a2e68d6b77c863e9633f9281736c36b83}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_filenames@{get\_filenames}}
+\index{get\_filenames@{get\_filenames}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_filenames()}{get\_filenames()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$fs\+::path$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+filenames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get all files used by the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} (if any) 
+
+This function is largely for ease of automation, namely for unit tests.
+
+The subclass implementation should return all filenames it uses.
+
+\begin{DoxyReturn}{Returns}
+a list of filenames 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a68498c1a8845625b3abd3108384d3df8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af6f1a2a76a89e7c4a280c41def6d0bf0}\label{classcryptonote_1_1BaseTestDB_af6f1a2a76a89e7c4a280c41def6d0bf0}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_hashes\_range@{get\_hashes\_range}}
+\index{get\_hashes\_range@{get\_hashes\_range}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_hashes\_range()}{get\_hashes\_range()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}}$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+hashes\+\_\+range (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{h1,  }\item[{const uint64\+\_\+t \&}]{h2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a list of block hashes 
+
+The subclass should return a vector of block hashes from blocks with heights starting at h1 and ending at h2, inclusively.
+
+If the height range requested goes past the end of the blockchain, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1BLOCK__DNE}{B\+L\+O\+C\+K\+\_\+\+D\+NE}}. (current implementations simply don\textquotesingle{}t catch this exception as thrown by methods called within)
+
+
+\begin{DoxyParams}{Parameters}
+{\em h1} & the start height \\
+\hline
+{\em h2} & the end height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of block hashes 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a1664a041ad54b95ad24a76a68a82ed89}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a1ed03729aed557d35be9eb47e9688095}\label{classcryptonote_1_1BaseTestDB_a1ed03729aed557d35be9eb47e9688095}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_indexing\_base@{get\_indexing\_base}}
+\index{get\_indexing\_base@{get\_indexing\_base}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_indexing\_base()}{get\_indexing\_base()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+indexing\+\_\+base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return index of the first element (should be hidden, but isn\textquotesingle{}t) 
+
+\begin{DoxyReturn}{Returns}
+the index 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac063909edcc2bb826297b2fd3f1fed72}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a7fbc64d3d2cd0666579382a053d72d3c}\label{classcryptonote_1_1BaseTestDB_a7fbc64d3d2cd0666579382a053d72d3c}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_long\_term\_block\_weights@{get\_long\_term\_block\_weights}}
+\index{get\_long\_term\_block\_weights@{get\_long\_term\_block\_weights}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_long\_term\_block\_weights()}{get\_long\_term\_block\_weights()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$uint64\+\_\+t$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+long\+\_\+term\+\_\+block\+\_\+weights (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{start\+\_\+height,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the last N blocks\textquotesingle{} long term weights 
+
+If there are fewer than N blocks, the returned array will be smaller than N
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & the number of blocks requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the weights 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac4fb16efa9e65d5ca0848d3b95d372ca}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a58d6910e3159d6871320630197c768f9}\label{classcryptonote_1_1BaseTestDB_a58d6910e3159d6871320630197c768f9}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_max\_block\_size@{get\_max\_block\_size}}
+\index{get\_max\_block\_size@{get\_max\_block\_size}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_max\_block\_size()}{get\_max\_block\_size()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+max\+\_\+block\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the max block size 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a076abb45426def4aa530eb3b3440f8be}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac427c665bb99da6644277aeec172edd2}\label{classcryptonote_1_1BaseTestDB_ac427c665bb99da6644277aeec172edd2}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_num\_outputs@{get\_num\_outputs}}
+\index{get\_num\_outputs@{get\_num\_outputs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_num\_outputs()}{get\_num\_outputs()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+num\+\_\+outputs (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{amount }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the number of outputs of a given amount 
+
+The subclass should return a count of outputs of the given amount, or zero if there are none.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & the output amount being looked up\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of outputs of the given amount 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a827c727d888d3bbfd6ba20b0615c78ba}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac0987ec60f99bf375048c5b6525a076b}\label{classcryptonote_1_1BaseTestDB_ac0987ec60f99bf375048c5b6525a076b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_blacklist@{get\_output\_blacklist}}
+\index{get\_output\_blacklist@{get\_output\_blacklist}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_blacklist()}{get\_output\_blacklist()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+blacklist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint64\+\_\+t $>$ \&}]{blacklist }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a37e7744aed509893c6c7ccc2d1cb383b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a32aa978ae3b82cdfbb9c24a4529afbc6}\label{classcryptonote_1_1BaseTestDB_a32aa978ae3b82cdfbb9c24a4529afbc6}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_distribution@{get\_output\_distribution}}
+\index{get\_output\_distribution@{get\_output\_distribution}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_distribution()}{get\_output\_distribution()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+distribution (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{amount,  }\item[{uint64\+\_\+t}]{from\+\_\+height,  }\item[{uint64\+\_\+t}]{to\+\_\+height,  }\item[{std\+::vector$<$ uint64\+\_\+t $>$ \&}]{distribution,  }\item[{uint64\+\_\+t \&}]{base }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a6906d045d1a1f0c94d6e2dbd2361ef0e}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a51bd717af2bc2824e759059aae5782df}\label{classcryptonote_1_1BaseTestDB_a51bd717af2bc2824e759059aae5782df}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_histogram@{get\_output\_histogram}}
+\index{get\_output\_histogram@{get\_output\_histogram}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_histogram()}{get\_output\_histogram()}}
+{\footnotesize\ttfamily virtual std\+::map$<$uint64\+\_\+t, std\+::tuple$<$uint64\+\_\+t, uint64\+\_\+t, uint64\+\_\+t$>$ $>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+histogram (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{amounts,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{unlocked,  }\item[{uint64\+\_\+t}]{recent\+\_\+cutoff,  }\item[{uint64\+\_\+t}]{min\+\_\+count }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+return a histogram of outputs on the blockchain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amounts} & optional set of amounts to lookup \\
+\hline
+{\em unlocked} & whether to restrict count to unlocked outputs \\
+\hline
+{\em recent\+\_\+cutoff} & timestamp to determine whether an output is recent \\
+\hline
+{\em min\+\_\+count} & return only amounts with at least that many instances\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of amount/instances 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a1e17e2e13e5e9c9a12e732d0b9772dcb}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a44865f21a09200e21181f33f2a9a1b25}\label{classcryptonote_1_1BaseTestDB_a44865f21a09200e21181f33f2a9a1b25}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_key@{get\_output\_key}}
+\index{get\_output\_key@{get\_output\_key}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_key()}{get\_output\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+key (\begin{DoxyParamCaption}\item[{const epee\+::span$<$ const uint64\+\_\+t $>$ \&}]{amounts,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{offsets,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1output__data__t}{cryptonote\+::output\+\_\+data\+\_\+t}} $>$ \&}]{outputs,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{allow\+\_\+partial = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a1dd4a3e31c36553716241878a717a98f}\label{classcryptonote_1_1BaseTestDB_a1dd4a3e31c36553716241878a717a98f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_key@{get\_output\_key}}
+\index{get\_output\_key@{get\_output\_key}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_key()}{get\_output\_key()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcryptonote_1_1output__data__t}{cryptonote\+::output\+\_\+data\+\_\+t}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+key (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{amount,  }\item[{const uint64\+\_\+t \&}]{index,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+commitmemt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get some of an output\textquotesingle{}s data 
+
+The subclass should return the public key, unlock time, and block height for the output with the given amount and index, collected in a struct.
+
+If the output cannot be found, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1OUTPUT__DNE}{O\+U\+T\+P\+U\+T\+\_\+\+D\+NE}}.
+
+If any of these parts cannot be found, but some are, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1DB__ERROR}{D\+B\+\_\+\+E\+R\+R\+OR}} with a message stating as much.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & the output amount \\
+\hline
+{\em index} & the output\textquotesingle{}s index (indexed by amount)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested output data 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac8b65f0f5d3d227a3fd30dfac0e49b0e}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a5a93758da007718f3befe484df3458e3}\label{classcryptonote_1_1BaseTestDB_a5a93758da007718f3befe484df3458e3}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_tx\_and\_index@{get\_output\_tx\_and\_index}}
+\index{get\_output\_tx\_and\_index@{get\_output\_tx\_and\_index}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_tx\_and\_index()}{get\_output\_tx\_and\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{amount,  }\item[{const std\+::vector$<$ uint64\+\_\+t $>$ \&}]{offsets,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} $>$ \&}]{indices }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a049def5f464f6f6fcd7df4783219ac64}\label{classcryptonote_1_1BaseTestDB_a049def5f464f6f6fcd7df4783219ac64}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_tx\_and\_index@{get\_output\_tx\_and\_index}}
+\index{get\_output\_tx\_and\_index@{get\_output\_tx\_and\_index}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_tx\_and\_index()}{get\_output\_tx\_and\_index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{amount,  }\item[{const uint64\+\_\+t \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+gets an output\textquotesingle{}s tx hash and index 
+
+The subclass should return the hash of the transaction which created the output with the amount and index given, as well as its index in that transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & an output amount \\
+\hline
+{\em index} & an output\textquotesingle{}s amount-\/specific index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tx hash and output index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a8a596514a464b819fa2b0187b8ae2b2b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aac4c57c16a0930a85cd76dad6d3b30ee}\label{classcryptonote_1_1BaseTestDB_aac4c57c16a0930a85cd76dad6d3b30ee}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_output\_tx\_and\_index\_from\_global@{get\_output\_tx\_and\_index\_from\_global}}
+\index{get\_output\_tx\_and\_index\_from\_global@{get\_output\_tx\_and\_index\_from\_global}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_output\_tx\_and\_index\_from\_global()}{get\_output\_tx\_and\_index\_from\_global()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacecryptonote_ab982387d5cfb1211fdef0fd7e5fb1266}{cryptonote\+::tx\+\_\+out\+\_\+index}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+output\+\_\+tx\+\_\+and\+\_\+index\+\_\+from\+\_\+global (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+gets an output\textquotesingle{}s tx hash and index 
+
+The subclass should return the hash of the transaction which created the output with the global index given, as well as its index in that transaction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & an output\textquotesingle{}s global index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tx hash and output index 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a25a299c1d0f10875d4027b7582c039f3}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af42ad0eef700a5f2f9bc3d6289febdbd}\label{classcryptonote_1_1BaseTestDB_af42ad0eef700a5f2f9bc3d6289febdbd}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_prunable\_tx\_blob@{get\_prunable\_tx\_blob}}
+\index{get\_prunable\_tx\_blob@{get\_prunable\_tx\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_prunable\_tx\_blob()}{get\_prunable\_tx\_blob()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+prunable\+\_\+tx\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{std\+::string \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the prunable transaction blob with the given hash 
+
+The subclass should return the prunable transaction stored which has the given hash.
+
+If the transaction does not exist, or if we do not have that prunable data, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transaction was found and we have its prunable data 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3def9ec77af8a5bdb92da301d2f9478c}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a7a23ef9fe1d12d974a21e80d8a98df95}\label{classcryptonote_1_1BaseTestDB_a7a23ef9fe1d12d974a21e80d8a98df95}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_prunable\_tx\_hash@{get\_prunable\_tx\_hash}}
+\index{get\_prunable\_tx\_hash@{get\_prunable\_tx\_hash}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_prunable\_tx\_hash()}{get\_prunable\_tx\_hash()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+prunable\+\_\+tx\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{prunable\+\_\+hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the prunable transaction hash 
+
+The subclass should return the hash of the prunable transaction data.
+
+If the transaction hash does not exist, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the tx hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transaction was found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a19fba67e7cbcd0ce969571b086d0f62b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aeb65375bb0123046787cae5cc20e44b5}\label{classcryptonote_1_1BaseTestDB_aeb65375bb0123046787cae5cc20e44b5}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_pruned\_tx\_blob@{get\_pruned\_tx\_blob}}
+\index{get\_pruned\_tx\_blob@{get\_pruned\_tx\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_pruned\_tx\_blob()}{get\_pruned\_tx\_blob()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+pruned\+\_\+tx\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{std\+::string \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the pruned transaction blob with the given hash 
+
+The subclass should return the pruned transaction stored which has the given hash.
+
+If the transaction does not exist, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transaction was found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_acfc499282ccf3e69958a42dd2471e481}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a500e8450e339cddb599a6abbf7e600ff}\label{classcryptonote_1_1BaseTestDB_a500e8450e339cddb599a6abbf7e600ff}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_pruned\_tx\_blobs\_from@{get\_pruned\_tx\_blobs\_from}}
+\index{get\_pruned\_tx\_blobs\_from@{get\_pruned\_tx\_blobs\_from}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_pruned\_tx\_blobs\_from()}{get\_pruned\_tx\_blobs\_from()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+pruned\+\_\+tx\+\_\+blobs\+\_\+from (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{size\+\_\+t}]{count,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{bd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches a number of pruned transaction blob from the given hash, in canonical blockchain order 
+
+The subclass should return the pruned transactions stored from the one with the given hash.
+
+If the first transaction does not exist, the subclass should return false. If the first transaction exists, but there are fewer transactions starting with it than requested, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transactions were found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a23155b82179607fc332c470d8bea80fd}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2c26407a4dae0870e498021451f6ae57}\label{classcryptonote_1_1BaseTestDB_a2c26407a4dae0870e498021451f6ae57}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_service\_node\_data@{get\_service\_node\_data}}
+\index{get\_service\_node\_data@{get\_service\_node\_data}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_service\_node\_data()}{get\_service\_node\_data()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+service\+\_\+node\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string \&}]{data,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{long\+\_\+term }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3a6891ce166e6939094b126a6a779462}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a44f27a210db87a7dabed0f14606b10f2}\label{classcryptonote_1_1BaseTestDB_a44f27a210db87a7dabed0f14606b10f2}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_service\_node\_proof@{get\_service\_node\_proof}}
+\index{get\_service\_node\_proof@{get\_service\_node\_proof}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_service\_node\_proof()}{get\_service\_node\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+service\+\_\+node\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{\mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}} \&}]{proof }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Updates the given proof data with the latest stored info for the given service node. Returns true if found (and fields updated), false otherwise. 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a40e209fbf58ac8fa83e5ef12707fb7ff}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_afea7edaad5c4372baa786929a2ea97ff}\label{classcryptonote_1_1BaseTestDB_afea7edaad5c4372baa786929a2ea97ff}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_top\_block@{get\_top\_block}}
+\index{get\_top\_block@{get\_top\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_top\_block()}{get\_top\_block()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+top\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the top block 
+
+The subclass should return most recent block
+
+\begin{DoxyReturn}{Returns}
+the top block 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a800d8a35b0a3d8c67284946b7419362c}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a365c544ef3a791b22db93222697faa7f}\label{classcryptonote_1_1BaseTestDB_a365c544ef3a791b22db93222697faa7f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_top\_block\_timestamp@{get\_top\_block\_timestamp}}
+\index{get\_top\_block\_timestamp@{get\_top\_block\_timestamp}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_top\_block\_timestamp()}{get\_top\_block\_timestamp()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+top\+\_\+block\+\_\+timestamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the top block\textquotesingle{}s timestamp 
+
+The subclass should return the timestamp of the most recent block.
+
+\begin{DoxyReturn}{Returns}
+the top block\textquotesingle{}s timestamp 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7c2fb815dffffd9c33f67a76b8cfff4f}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_af24ae0276a3686cad0b08b9c6aaec2c2}\label{classcryptonote_1_1BaseTestDB_af24ae0276a3686cad0b08b9c6aaec2c2}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_top\_checkpoint@{get\_top\_checkpoint}}
+\index{get\_top\_checkpoint@{get\_top\_checkpoint}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_top\_checkpoint()}{get\_top\_checkpoint()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+top\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&}]{checkpoint }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a41ae92f79d6964b453180cf42117e077}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a80b72bc4001927ecb6475818f7a8165b}\label{classcryptonote_1_1BaseTestDB_a80b72bc4001927ecb6475818f7a8165b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx@{get\_tx}}
+\index{get\_tx@{get\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx()}{get\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the transaction with the given hash 
+
+If the transaction does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{T\+X\+\_\+\+D\+NE}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the transaction with the given hash 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aef33e0b205c54d6ec167e534e74dae3f}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a5ae35d41da9ab8f28745f94fa228e844}\label{classcryptonote_1_1BaseTestDB_a5ae35d41da9ab8f28745f94fa228e844}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx@{get\_tx}}
+\index{get\_tx@{get\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx()}{get\_tx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the transaction with the given hash 
+
+If the transaction does not exist, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transaction was found 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a13c76e345bc32f4a61140bf85d697bc8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac66ee2b39b3373b58c41ddc18a4ab477}\label{classcryptonote_1_1BaseTestDB_ac66ee2b39b3373b58c41ddc18a4ab477}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_amount\_output\_indices@{get\_tx\_amount\_output\_indices}}
+\index{get\_tx\_amount\_output\_indices@{get\_tx\_amount\_output\_indices}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_amount\_output\_indices()}{get\_tx\_amount\_output\_indices()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::vector$<$uint64\+\_\+t$>$ $>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+amount\+\_\+output\+\_\+indices (\begin{DoxyParamCaption}\item[{const uint64\+\_\+t}]{tx\+\_\+id,  }\item[{size\+\_\+t}]{n\+\_\+txes }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+gets output indices (amount-\/specific) for a transaction\textquotesingle{}s outputs 
+
+The subclass should fetch the amount-\/specific output indices for each output in the transaction with the given ID.
+
+If the transaction does not exist, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{T\+X\+\_\+\+D\+NE}}.
+
+If an output cannot be found, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1OUTPUT__DNE}{O\+U\+T\+P\+U\+T\+\_\+\+D\+NE}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+id} & a transaction ID \\
+\hline
+{\em n\+\_\+txes} & how many txes to get data for, starting with tx\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of amount-\/specific output indices 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aa66aff4bea56ff6bbd2778d9f7c7d566}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a028825df754f5f1c1d56f6ec6a782b34}\label{classcryptonote_1_1BaseTestDB_a028825df754f5f1c1d56f6ec6a782b34}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_blob@{get\_tx\_blob}}
+\index{get\_tx\_blob@{get\_tx\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_blob()}{get\_tx\_blob()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{std\+::string \&}]{tx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the transaction blob with the given hash 
+
+The subclass should return the transaction stored which has the given hash.
+
+If the transaction does not exist, the subclass should return false.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to look for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the transaction was found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ab8b7e48714a19ed9827ce3b90954860c}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a9693ae5903853bb135fd20e187bfba5a}\label{classcryptonote_1_1BaseTestDB_a9693ae5903853bb135fd20e187bfba5a}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_block\_heights@{get\_tx\_block\_heights}}
+\index{get\_tx\_block\_heights@{get\_tx\_block\_heights}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_block\_heights()}{get\_tx\_block\_heights()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$uint64\+\_\+t$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+block\+\_\+heights (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the height of multiple transactions\textquotesingle{} blocks 
+
+Any transactions not found in the database will have a value of std\+::numeric\+\_\+limits$<$uint64\+\_\+t$>$\+::max() set (unlike get\+\_\+tx\+\_\+block\+\_\+height, which throws \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{T\+X\+\_\+\+D\+NE}}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & vector of hashes of the desired transactions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of heights corresponding to each hash, or (uint64\+\_\+t)-\/1 if not found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aa28ad5b5920b8761353b209c2fc02806}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a106a86a197818278bd9e2cc353251488}\label{classcryptonote_1_1BaseTestDB_a106a86a197818278bd9e2cc353251488}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_count@{get\_tx\_count}}
+\index{get\_tx\_count@{get\_tx\_count}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_count()}{get\_tx\_count()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches the total number of transactions ever 
+
+The subclass should return a count of all the transactions from all blocks.
+
+\begin{DoxyReturn}{Returns}
+the number of transactions in the blockchain 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3b7e9c6cb8e4519fae153f7f59e3a022}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aa51fc1b9afdaf73a8aaf22722235ca7b}\label{classcryptonote_1_1BaseTestDB_aa51fc1b9afdaf73a8aaf22722235ca7b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_list@{get\_tx\_list}}
+\index{get\_tx\_list@{get\_tx\_list}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_list()}{get\_tx\_list()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}}$>$ cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+list (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} $>$ \&}]{hlist }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetches a list of transactions based on their hashes 
+
+The subclass should attempt to fetch each transaction referred to by the hashes passed.
+
+Currently, if any of the transactions is not in \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}, the call to get\+\_\+tx in the implementation will throw \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{T\+X\+\_\+\+D\+NE}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hlist} & a list of hashes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list of transactions 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a5cd3cd4f01c06662a281fa22e645d725}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a6c83a1cd205c17affa70add9aa48ddda}\label{classcryptonote_1_1BaseTestDB_a6c83a1cd205c17affa70add9aa48ddda}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_tx\_unlock\_time@{get\_tx\_unlock\_time}}
+\index{get\_tx\_unlock\_time@{get\_tx\_unlock\_time}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_unlock\_time()}{get\_tx\_unlock\_time()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+tx\+\_\+unlock\+\_\+time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch a transaction\textquotesingle{}s unlock time/height 
+
+The subclass should return the stored unlock time for the transaction with the given hash.
+
+If no such transaction exists, the subclass should throw \mbox{\hyperlink{classcryptonote_1_1TX__DNE}{T\+X\+\_\+\+D\+NE}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash of the requested transaction\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the unlock time/height 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aab00f8eac85a50dd051cc1ced7d7e27c}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a23817d976a37c5be9981797a237b6853}\label{classcryptonote_1_1BaseTestDB_a23817d976a37c5be9981797a237b6853}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_txpool\_tx\_blob@{get\_txpool\_tx\_blob}}
+\index{get\_txpool\_tx\_blob@{get\_txpool\_tx\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_txpool\_tx\_blob()}{get\_txpool\_tx\_blob()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual std\+::string cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+txpool\+\_\+tx\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get a txpool transaction\textquotesingle{}s blob 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the transaction id of the transation to lookup\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the blob for that transaction 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3ace19ff71dcb5ce6742054ddb2cfe17}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac5ba84db0d1d7590eb0302e54366ad8b}\label{classcryptonote_1_1BaseTestDB_ac5ba84db0d1d7590eb0302e54366ad8b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_txpool\_tx\_blob@{get\_txpool\_tx\_blob}}
+\index{get\_txpool\_tx\_blob@{get\_txpool\_tx\_blob}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_txpool\_tx\_blob()}{get\_txpool\_tx\_blob()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+txpool\+\_\+tx\+\_\+blob (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{std\+::string \&}]{bd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get a txpool transaction\textquotesingle{}s blob 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the transaction id of the transation to lookup \\
+\hline
+{\em bd} & the blob to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the txid was in the txpool, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a820c3da66755d5165dd9b9c5b7f13dad}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a734963dc56baed4adb2883189bf37147}\label{classcryptonote_1_1BaseTestDB_a734963dc56baed4adb2883189bf37147}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_txpool\_tx\_count@{get\_txpool\_tx\_count}}
+\index{get\_txpool\_tx\_count@{get\_txpool\_tx\_count}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_txpool\_tx\_count()}{get\_txpool\_tx\_count()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+txpool\+\_\+tx\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{include\+\_\+unrelayed\+\_\+txes = {\ttfamily \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get the number of transactions in the txpool 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a31f61bd83a8cd12479348baf5fb204b3}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ad48ce984fd171012a3e6729ddbab39a1}\label{classcryptonote_1_1BaseTestDB_ad48ce984fd171012a3e6729ddbab39a1}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!get\_txpool\_tx\_meta@{get\_txpool\_tx\_meta}}
+\index{get\_txpool\_tx\_meta@{get\_txpool\_tx\_meta}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{get\_txpool\_tx\_meta()}{get\_txpool\_tx\_meta()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::get\+\_\+txpool\+\_\+tx\+\_\+meta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{\mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&}]{meta }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get a txpool transaction\textquotesingle{}s metadata 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the transaction id of the transation to lookup \\
+\hline
+{\em meta} & the metadata to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tx meta was found, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a63e7b05e2eaddd2a1f08fc1696beb3a1}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a5ca5dc11a72864e89abaa2f9e60e7a5f}\label{classcryptonote_1_1BaseTestDB_a5ca5dc11a72864e89abaa2f9e60e7a5f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!has\_key\_image@{has\_key\_image}}
+\index{has\_key\_image@{has\_key\_image}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{has\_key\_image()}{has\_key\_image()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::has\+\_\+key\+\_\+image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{img }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if a key image is stored as spent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & the key image to check for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the image is present, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a9d182826e5989e0ada89c739052dbb21}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}\label{classcryptonote_1_1BaseTestDB_a2660b5025a85ed71d65c48a94ffbbe3f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!height@{height}}
+\index{height@{height}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily virtual uint64\+\_\+t cryptonote\+::\+Base\+Test\+D\+B\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the current blockchain height 
+
+The subclass should return the current blockchain height
+
+\begin{DoxyReturn}{Returns}
+the current blockchain height 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a773326d5cb3812078751ec77e37f85f6}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a006f2687fa947b1bd1b6b37aa4dba884}\label{classcryptonote_1_1BaseTestDB_a006f2687fa947b1bd1b6b37aa4dba884}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!is\_read\_only@{is\_read\_only}}
+\index{is\_read\_only@{is\_read\_only}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{is\_read\_only()}{is\_read\_only()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::is\+\_\+read\+\_\+only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} in read-\/only mode? 
+
+\begin{DoxyReturn}{Returns}
+true if in read-\/only mode, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a712a41de3896baa2ffb7e41dca20ab91}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a09a296d8bd1408eb286e257e927581b6}\label{classcryptonote_1_1BaseTestDB_a09a296d8bd1408eb286e257e927581b6}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!lock@{lock}}
+\index{lock@{lock}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+acquires the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock 
+
+This lock ensures that there is only one database reader or writer, and is intended only for critical operations such as flushing the database to disk.
+
+The subclass implementation should do a blocking acquire of some lock, if appropriate.
+
+Callers should generally prefer to use a R\+A\+II wrapper rather than calling this directly\+:
+
+\{ std\+::lock\+\_\+guard db\+\_\+lock\{db\}; // do some critical db operation \} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ac0811e2c65dd853e0130a63fbb1e31fd}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ae4461cab4501c316056d5a8b2a43b3b9}\label{classcryptonote_1_1BaseTestDB_ae4461cab4501c316056d5a8b2a43b3b9}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!open@{open}}
+\index{open@{open}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::open (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{filename,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype = {\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aaa45f009ef381c3bc198dd0f352e08a2e}{network\+\_\+type\+::\+F\+A\+K\+E\+C\+H\+A\+IN}}},  }\item[{const int}]{db\+\_\+flags = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+open a db, or create it if necessary. 
+
+This function opens an existing database or creates it if it does not exist.
+
+The subclass implementing this will handle all file opening/creation, and is responsible for maintaining its state.
+
+For now, db\+\_\+flags are specific to the subclass being instantiated. This is subject to change, and the db\+\_\+flags parameter may be deprecated.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & a path referring to the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} to open \\
+\hline
+{\em db\+\_\+flags} & flags relevant to how to open/use the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_abefe89ff405cc3c577e8f247616b0d77}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ab5b57389304b664da0827490ea30922a}\label{classcryptonote_1_1BaseTestDB_ab5b57389304b664da0827490ea30922a}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!prune\_blockchain@{prune\_blockchain}}
+\index{prune\_blockchain@{prune\_blockchain}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{prune\_blockchain()}{prune\_blockchain()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::prune\+\_\+blockchain (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{pruning\+\_\+seed = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+prunes the blockchain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pruning\+\_\+seed} & the seed to use, 0 for default (highly recommended) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+success iff true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae26a77df233d6baf1ca8bf27b1675842}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ac2445a50acf30f7fd982b5944b84a415}\label{classcryptonote_1_1BaseTestDB_ac2445a50acf30f7fd982b5944b84a415}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!prune\_outputs@{prune\_outputs}}
+\index{prune\_outputs@{prune\_outputs}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{prune\_outputs()}{prune\_outputs()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::prune\+\_\+outputs (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+prune output data for the given amount 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & the amount for which to prune data \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a0ea4d4666ec1e6846548ed7186174e3c}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ad74521f323ee926866c7a8504ac60f39}\label{classcryptonote_1_1BaseTestDB_ad74521f323ee926866c7a8504ac60f39}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_alt\_block@{remove\_alt\_block}}
+\index{remove\_alt\_block@{remove\_alt\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_alt\_block()}{remove\_alt\_block()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+alt\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{blkid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove an alternative block 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & blkid the block hash \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a4ea2d418b0cc3cae07394c9c6dde7581}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a5724494420b9418cdea8678c9b283f27}\label{classcryptonote_1_1BaseTestDB_a5724494420b9418cdea8678c9b283f27}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_block@{remove\_block}}
+\index{remove\_block@{remove\_block}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_block()}{remove\_block()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove data about the top block 
+
+The subclass implementing this will remove the block data from the top block in the chain. The data to be removed is that which was added in Blockchain\+D\+B\+::add\+\_\+block(const block\& blk, size\+\_\+t block\+\_\+weight, uint64\+\_\+t long\+\_\+term\+\_\+block\+\_\+weight, const difficulty\+\_\+type\& cumulative\+\_\+difficulty, const uint64\+\_\+t\& coins\+\_\+generated, const crypto\+::hash\& blk\+\_\+hash)
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_afc0cd9e5d5d92fb346768eabcfbafa6a}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a62ad445ea4ab43e4e6944730b2cd64ec}\label{classcryptonote_1_1BaseTestDB_a62ad445ea4ab43e4e6944730b2cd64ec}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_block\_checkpoint@{remove\_block\_checkpoint}}
+\index{remove\_block\_checkpoint@{remove\_block\_checkpoint}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_block\_checkpoint()}{remove\_block\_checkpoint()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+block\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a0121411dd9be54fb437f73e55da06b5b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_acc690faba9818e3632d7453400369986}\label{classcryptonote_1_1BaseTestDB_acc690faba9818e3632d7453400369986}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_data\_file@{remove\_data\_file}}
+\index{remove\_data\_file@{remove\_data\_file}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_data\_file()}{remove\_data\_file()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+data\+\_\+file (\begin{DoxyParamCaption}\item[{const fs\+::path \&}]{folder }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove file(s) storing the database 
+
+This function is for resetting the database (for core tests, functional tests, etc). The function \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a3a3ed5583d05599cde2b321662ec7528}{reset()}} is not usable because it needs to open the database file first which can fail if the existing database file is in an incompatible format. As such, this function needs to be called before calling \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ae4461cab4501c316056d5a8b2a43b3b9}{open()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder} & The path of the folder containing the database file(s) which must not end with slash \textquotesingle{}/\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation is succesfull 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a2ebcf8ae990b9076e55e8d8abbee9661}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a6a1b54ee176dd62ecde1ef228ec091e3}\label{classcryptonote_1_1BaseTestDB_a6a1b54ee176dd62ecde1ef228ec091e3}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_service\_node\_proof@{remove\_service\_node\_proof}}
+\index{remove\_service\_node\_proof@{remove\_service\_node\_proof}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_service\_node\_proof()}{remove\_service\_node\_proof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+service\+\_\+node\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Removes stored serialized proof sn data associated with the given pubkey. Returns true if found, false if not found. 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad658fd1b94de70af306313f469c58fe8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aebfb9771df8cc0d3187132e1d8d6ecb4}\label{classcryptonote_1_1BaseTestDB_aebfb9771df8cc0d3187132e1d8d6ecb4}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_spent\_key@{remove\_spent\_key}}
+\index{remove\_spent\_key@{remove\_spent\_key}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_spent\_key()}{remove\_spent\_key()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+spent\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{k\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove a spent key 
+
+The subclass implementing this will remove the key image.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+image} & the spent key image to remove \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a1123e8e9ebe6eb83dd5a3cb17bb45a8b}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a1a8613e0648f5520bb5a085fe128bc36}\label{classcryptonote_1_1BaseTestDB_a1a8613e0648f5520bb5a085fe128bc36}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_transaction\_data@{remove\_transaction\_data}}
+\index{remove\_transaction\_data@{remove\_transaction\_data}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_transaction\_data()}{remove\_transaction\_data()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+transaction\+\_\+data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{tx\+\_\+hash,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&}]{tx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove data about a transaction 
+
+The subclass implementing this will remove the transaction data for the passed transaction. The data to be removed was added in \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_a30ebbb77596c32bc02971eac486838dd}{add\+\_\+transaction\+\_\+data()}}. Additionally, current subclasses have behavior which requires the transaction itself as a parameter here. Future implementations should note that this parameter is subject to be removed at a later time.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+hash} & the hash of the transaction to be removed \\
+\hline
+{\em tx} & the transaction \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a3678260fb38cb19c8affd1ffcaeed414}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a08950849a2ecc748944a03b8abc3ef74}\label{classcryptonote_1_1BaseTestDB_a08950849a2ecc748944a03b8abc3ef74}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!remove\_txpool\_tx@{remove\_txpool\_tx}}
+\index{remove\_txpool\_tx@{remove\_txpool\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{remove\_txpool\_tx()}{remove\_txpool\_tx()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::remove\+\_\+txpool\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+remove a txpool transaction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the transaction id of the transation to remove \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7d465f59b4c42ef08dde724ce7cf0834}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a3a3ed5583d05599cde2b321662ec7528}\label{classcryptonote_1_1BaseTestDB_a3a3ed5583d05599cde2b321662ec7528}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!reset@{reset}}
+\index{reset@{reset}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove everything from the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}. 
+
+This function should completely remove all data from a \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}.
+
+Use with caution!
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_aac857989dd8e08e8662804cb73e067ea}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_acb7f5c2762eda1de04f287cb06a06e37}\label{classcryptonote_1_1BaseTestDB_acb7f5c2762eda1de04f287cb06a06e37}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!safesyncmode@{safesyncmode}}
+\index{safesyncmode@{safesyncmode}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{safesyncmode()}{safesyncmode()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::safesyncmode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{onoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+toggle safe syncs for the DB 
+
+Used to switch D\+B\+F\+\_\+\+S\+A\+FE on or off after starting up with D\+B\+F\+\_\+\+F\+A\+ST. 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a7d2e475422bc7cae4b9796ef2dccf791}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a2823f3cf9ab28dde9c8e5da7235d19e9}\label{classcryptonote_1_1BaseTestDB_a2823f3cf9ab28dde9c8e5da7235d19e9}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!set\_batch\_transactions@{set\_batch\_transactions}}
+\index{set\_batch\_transactions@{set\_batch\_transactions}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{set\_batch\_transactions()}{set\_batch\_transactions()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::set\+\_\+batch\+\_\+transactions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sets whether or not to batch transactions 
+
+If the subclass implements batching, this function tells it to begin batching automatically.
+
+If the subclass implements batching and has a batch in-\/progress, a parameter of false should disable batching and call \mbox{\hyperlink{classcryptonote_1_1BaseTestDB_ad64c7b59348a2b2841a7fe600b2177a4}{batch\+\_\+stop()}} to store the current batch.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & batch whether or not to use batch transactions. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ae56573c54c4a8361b7b23c7036765062}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a91ce6a4e6e9f9e11109659d65bdf1620}\label{classcryptonote_1_1BaseTestDB_a91ce6a4e6e9f9e11109659d65bdf1620}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!set\_service\_node\_data@{set\_service\_node\_data}}
+\index{set\_service\_node\_data@{set\_service\_node\_data}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{set\_service\_node\_data()}{set\_service\_node\_data()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::set\+\_\+service\+\_\+node\+\_\+data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{long\+\_\+term }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a4dba0223214f67c72345773d3bc04160}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_aae2eacf7f5714d90f10109553739a800}\label{classcryptonote_1_1BaseTestDB_aae2eacf7f5714d90f10109553739a800}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!set\_service\_node\_proof@{set\_service\_node\_proof}}
+\index{set\_service\_node\_proof@{set\_service\_node\_proof}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{set\_service\_node\_proof()}{set\_service\_node\_proof()}}
+{\footnotesize\ttfamily void cryptonote\+::\+Base\+Test\+D\+B\+::set\+\_\+service\+\_\+node\+\_\+proof (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{pubkey,  }\item[{const \mbox{\hyperlink{structservice__nodes_1_1proof__info}{service\+\_\+nodes\+::proof\+\_\+info}} \&}]{proof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates or updates the proof data for a service node from a proof. 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a9b9ab0c11238126efc1b5d442e14bce7}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a25a3ec7cb757565383ecd8f35316e436}\label{classcryptonote_1_1BaseTestDB_a25a3ec7cb757565383ecd8f35316e436}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!sync@{sync}}
+\index{sync@{sync}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{sync()}{sync()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sync the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} with disk 
+
+This function should write any changes to whatever permanent backing store the subclass uses. Example\+: a \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} instance which keeps the whole blockchain in R\+AM won\textquotesingle{}t need to regularly access a disk, but should write out its state when this is called.
+
+If any of this cannot be done, the subclass should throw the corresponding subclass of \mbox{\hyperlink{classcryptonote_1_1DB__EXCEPTION}{D\+B\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a8f1d5dc457664e47d43662b9f979e2ed}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a3054d3a0ce0ed01c028175cf4f20498f}\label{classcryptonote_1_1BaseTestDB_a3054d3a0ce0ed01c028175cf4f20498f}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!top\_block\_hash@{top\_block\_hash}}
+\index{top\_block\_hash@{top\_block\_hash}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{top\_block\_hash()}{top\_block\_hash()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::\+Base\+Test\+D\+B\+::top\+\_\+block\+\_\+hash (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{block\+\_\+height = {\ttfamily NULL} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+fetch the top block\textquotesingle{}s hash 
+
+The subclass should return the hash of the most recent block
+
+
+\begin{DoxyParams}{Parameters}
+{\em block\+\_\+height} & if non N\+U\+LL, returns the height of that block (ie, the blockchain height minus 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the top block\textquotesingle{}s hash 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a18756eb0d54ee237006dc82d5a7dcf8e}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_ab58cede55da866577d8c2e116d2004a3}\label{classcryptonote_1_1BaseTestDB_ab58cede55da866577d8c2e116d2004a3}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!try\_lock@{try\_lock}}
+\index{try\_lock@{try\_lock}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{try\_lock()}{try\_lock()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::try\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+tries to acquire the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock without blocking; returns true if the lock was acquired, false if acquiring it would block. 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a5b4837afdba0c82abfc9d213e54cc6f9}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_acc06a5b2038aaa1a9415192c776c20af}\label{classcryptonote_1_1BaseTestDB_acc06a5b2038aaa1a9415192c776c20af}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!tx\_exists@{tx\_exists}}
+\index{tx\_exists@{tx\_exists}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{tx\_exists()}{tx\_exists()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::tx\+\_\+exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check if a transaction with a given hash exists 
+
+The subclass should check if a transaction is stored which has the given hash and return true if so, false otherwise.
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & the hash to check against \\
+\hline
+{\em tx\+\_\+id} & (optional) returns the tx\+\_\+id for the tx hash\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the transaction exists, otherwise false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a9fd80244596d43f903c9d63267d271b7}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a63db70cf066f58aa600e089900a153ee}\label{classcryptonote_1_1BaseTestDB_a63db70cf066f58aa600e089900a153ee}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!tx\_exists@{tx\_exists}}
+\index{tx\_exists@{tx\_exists}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{tx\_exists()}{tx\_exists()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::tx\+\_\+exists (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{uint64\+\_\+t \&}]{tx\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a802fafdead610b0cd687f2aec738a9d8}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a3c2b9159f5499272d93365fc6ea78e3d}\label{classcryptonote_1_1BaseTestDB_a3c2b9159f5499272d93365fc6ea78e3d}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!txpool\_has\_tx@{txpool\_has\_tx}}
+\index{txpool\_has\_tx@{txpool\_has\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{txpool\_has\_tx()}{txpool\_has\_tx()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::txpool\+\_\+has\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+check whether a txid is in the txpool 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a4910d723c4c6ae6f71fdd556e399faff}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a6b51901a6e3db83806842c123d9fc7ec}\label{classcryptonote_1_1BaseTestDB_a6b51901a6e3db83806842c123d9fc7ec}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!unlock@{unlock}}
+\index{unlock@{unlock}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This function releases the \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} lock. 
+
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ade6171f4348b546146d141dff4c90b5e}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a1a87ee8748e5913e0ae5509ebc687c6b}\label{classcryptonote_1_1BaseTestDB_a1a87ee8748e5913e0ae5509ebc687c6b}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!update\_block\_checkpoint@{update\_block\_checkpoint}}
+\index{update\_block\_checkpoint@{update\_block\_checkpoint}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{update\_block\_checkpoint()}{update\_block\_checkpoint()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::update\+\_\+block\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} const \&}]{checkpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a4ce71822db869d21a1aa78460f85843c}\label{classcryptonote_1_1BaseTestDB_a4ce71822db869d21a1aa78460f85843c}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!update\_pruning@{update\_pruning}}
+\index{update\_pruning@{update\_pruning}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{update\_pruning()}{update\_pruning()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::\+Base\+Test\+D\+B\+::update\+\_\+pruning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+prunes recent blockchain changes as needed, iff pruning is enabled 
+
+\begin{DoxyReturn}{Returns}
+success iff true 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_ad3de7d8d1d2aaa75a69d8961776aee76}{cryptonote\+::\+Blockchain\+DB}}.
+
+\mbox{\Hypertarget{classcryptonote_1_1BaseTestDB_a91368d676946b232b92ff92737308454}\label{classcryptonote_1_1BaseTestDB_a91368d676946b232b92ff92737308454}} 
+\index{cryptonote::BaseTestDB@{cryptonote::BaseTestDB}!update\_txpool\_tx@{update\_txpool\_tx}}
+\index{update\_txpool\_tx@{update\_txpool\_tx}!cryptonote::BaseTestDB@{cryptonote::BaseTestDB}}
+\doxysubsubsection{\texorpdfstring{update\_txpool\_tx()}{update\_txpool\_tx()}}
+{\footnotesize\ttfamily virtual void cryptonote\+::\+Base\+Test\+D\+B\+::update\+\_\+txpool\+\_\+tx (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{txid,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1txpool__tx__meta__t}{cryptonote\+::txpool\+\_\+tx\+\_\+meta\+\_\+t}} \&}]{details }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update a txpool transaction\textquotesingle{}s metadata 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txid} & the txid of the transaction to update \\
+\hline
+{\em details} & the details of the transaction to update \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcryptonote_1_1BlockchainDB_a38ec6a38ead3bb7d6a030931a34896d3}{cryptonote\+::\+Blockchain\+DB}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/blockchain\+\_\+db/\mbox{\hyperlink{testdb_8h}{testdb.\+h}}\end{DoxyCompactItemize}

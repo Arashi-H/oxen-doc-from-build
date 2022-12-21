@@ -1,0 +1,150 @@
+\hypertarget{cn__turtle__hash-arm_8inl}{}\doxysection{src/crypto/cn\+\_\+turtle\+\_\+hash-\/arm.inl File Reference}
+\label{cn__turtle__hash-arm_8inl}\index{src/crypto/cn\_turtle\_hash-\/arm.inl@{src/crypto/cn\_turtle\_hash-\/arm.inl}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unioncn__turtle__hash__state}{cn\+\_\+turtle\+\_\+hash\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a080d43cd5f5c7057b75c179971de794e}{R\+D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16}}
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}}~static
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}}
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(x)~((uint64\+\_\+t $\ast$) (x))
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_adf42e2c4f81b2ddfd2e35c5df9b65106}{mul}}(a,  b,  c)~\mbox{\hyperlink{cn__turtle__hash-arm_8inl_ac44bc4bc7625eb1a62e0068942757b3c}{cn\+\_\+mul128}}((const uint32\+\_\+t $\ast$)a, (const uint32\+\_\+t $\ast$)b, (uint32\+\_\+t $\ast$)c)
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_abdd6572db3ee058d3aa3cd8a13fb7526}{M\+A\+SK}}(div)~((uint32\+\_\+t)(((\mbox{\hyperlink{hash-ops_8h_abb8fddc15676787c6aec6bbadef8eb62}{C\+N\+\_\+\+T\+U\+R\+T\+L\+E\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}} / \mbox{\hyperlink{cn__turtle__hash_8c_af19ab913a847ad1e91c5291215116de1}{A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}) / (div) -\/ 1) $<$$<$ 4))
+\item 
+\#define \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a89118be7b71e0f3e547f3778e4d668f7}{state\+\_\+index}}(x,  div)~(($\ast$(uint32\+\_\+t $\ast$) x) \& \mbox{\hyperlink{cn__turtle__hash-arm_8inl_abdd6572db3ee058d3aa3cd8a13fb7526}{M\+A\+SK}}(div))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2f15c2e23d7248fb6563014b87741378}{xor64}} (uint64\+\_\+t $\ast$a, const uint64\+\_\+t b)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_ac44bc4bc7625eb1a62e0068942757b3c}{cn\+\_\+mul128}} (const uint32\+\_\+t $\ast$aa, const uint32\+\_\+t $\ast$bb, uint32\+\_\+t $\ast$r)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a98d76b4beae6e995b0a9165c406beb6b}{copy\+\_\+block}} (uint8\+\_\+t $\ast$dst, const uint8\+\_\+t $\ast$src)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_af8e99c2d6a4466f24368da92c518d864}{sum\+\_\+half\+\_\+blocks}} (uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2fef1e0305da2beba1dc69f0739e6cb0}{swap\+\_\+blocks}} (uint8\+\_\+t $\ast$a, uint8\+\_\+t $\ast$b)
+\item 
+\mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}{xor\+\_\+blocks}} (uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b)
+\item 
+void \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a3cb9143c03520ab27af6d37f1193d065}{cn\+\_\+turtle\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int light, int variant, int prehashed, uint32\+\_\+t scratchpad, uint32\+\_\+t iterations)
+\begin{DoxyCompactList}\small\item\em the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}\label{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!INLINE@{INLINE}}
+\index{INLINE@{INLINE}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{INLINE}{INLINE}}
+{\footnotesize\ttfamily \#define I\+N\+L\+I\+NE}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_abdd6572db3ee058d3aa3cd8a13fb7526}\label{cn__turtle__hash-arm_8inl_abdd6572db3ee058d3aa3cd8a13fb7526}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!MASK@{MASK}}
+\index{MASK@{MASK}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{MASK}{MASK}}
+{\footnotesize\ttfamily \#define M\+A\+SK(\begin{DoxyParamCaption}\item[{}]{div }\end{DoxyParamCaption})~((uint32\+\_\+t)(((\mbox{\hyperlink{hash-ops_8h_abb8fddc15676787c6aec6bbadef8eb62}{C\+N\+\_\+\+T\+U\+R\+T\+L\+E\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}} / \mbox{\hyperlink{cn__turtle__hash_8c_af19ab913a847ad1e91c5291215116de1}{A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}) / (div) -\/ 1) $<$$<$ 4))}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_adf42e2c4f81b2ddfd2e35c5df9b65106}\label{cn__turtle__hash-arm_8inl_adf42e2c4f81b2ddfd2e35c5df9b65106}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!mul@{mul}}
+\index{mul@{mul}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{mul}{mul}}
+{\footnotesize\ttfamily \#define mul(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{c }\end{DoxyParamCaption})~\mbox{\hyperlink{cn__turtle__hash-arm_8inl_ac44bc4bc7625eb1a62e0068942757b3c}{cn\+\_\+mul128}}((const uint32\+\_\+t $\ast$)a, (const uint32\+\_\+t $\ast$)b, (uint32\+\_\+t $\ast$)c)}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a080d43cd5f5c7057b75c179971de794e}\label{cn__turtle__hash-arm_8inl_a080d43cd5f5c7057b75c179971de794e}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!RDATA\_ALIGN16@{RDATA\_ALIGN16}}
+\index{RDATA\_ALIGN16@{RDATA\_ALIGN16}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{RDATA\_ALIGN16}{RDATA\_ALIGN16}}
+{\footnotesize\ttfamily \#define R\+D\+A\+T\+A\+\_\+\+A\+L\+I\+G\+N16}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a89118be7b71e0f3e547f3778e4d668f7}\label{cn__turtle__hash-arm_8inl_a89118be7b71e0f3e547f3778e4d668f7}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!state\_index@{state\_index}}
+\index{state\_index@{state\_index}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{state\_index}{state\_index}}
+{\footnotesize\ttfamily \#define state\+\_\+index(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{div }\end{DoxyParamCaption})~(($\ast$(uint32\+\_\+t $\ast$) x) \& \mbox{\hyperlink{cn__turtle__hash-arm_8inl_abdd6572db3ee058d3aa3cd8a13fb7526}{M\+A\+SK}}(div))}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}\label{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!STATIC@{STATIC}}
+\index{STATIC@{STATIC}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{STATIC}{STATIC}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+IC~static}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a07eb808f20dd529e9acb42d417fbfaad}\label{cn__turtle__hash-arm_8inl_a07eb808f20dd529e9acb42d417fbfaad}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!U64@{U64}}
+\index{U64@{U64}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{U64}{U64}}
+{\footnotesize\ttfamily \#define U64(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((uint64\+\_\+t $\ast$) (x))}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_ac44bc4bc7625eb1a62e0068942757b3c}\label{cn__turtle__hash-arm_8inl_ac44bc4bc7625eb1a62e0068942757b3c}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!cn\_mul128@{cn\_mul128}}
+\index{cn\_mul128@{cn\_mul128}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{cn\_mul128()}{cn\_mul128()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} void cn\+\_\+mul128 (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t $\ast$}]{aa,  }\item[{const uint32\+\_\+t $\ast$}]{bb,  }\item[{uint32\+\_\+t $\ast$}]{r }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a3cb9143c03520ab27af6d37f1193d065}\label{cn__turtle__hash-arm_8inl_a3cb9143c03520ab27af6d37f1193d065}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!cn\_turtle\_hash@{cn\_turtle\_hash}}
+\index{cn\_turtle\_hash@{cn\_turtle\_hash}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{cn\_turtle\_hash()}{cn\_turtle\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+turtle\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{light,  }\item[{int}]{variant,  }\item[{int}]{prehashed,  }\item[{uint32\+\_\+t}]{scratchpad,  }\item[{uint32\+\_\+t}]{iterations }\end{DoxyParamCaption})}
+
+
+
+the hash function implementing Crypto\+Night, used for the Monero proof-\/of-\/work 
+
+Computes the hash of $<$data$>$ (which consists of $<$length$>$ bytes), returning the hash in $<$hash$>$. The Crypto\+Night hash operates by first using Keccak 1600, the 1600 bit variant of the Keccak hash used in S\+H\+A-\/3, to create a 200 byte buffer of pseudorandom data by hashing the supplied data. It then uses this random data to fill a large 2MB buffer with pseudorandom data by iteratively encrypting it using 10 rounds of A\+ES per entry. After this initialization, it executes 524,288 rounds of mixing through the random 2MB buffer using A\+ES (typically provided in hardware on modern C\+P\+Us) and a 64 bit multiply. Finally, it re-\/mixes this large buffer back into the 200 byte \char`\"{}text\char`\"{} buffer, and then hashes this buffer using one of four pseudorandomly selected hash functions (Blake, Groestl, JH, or Skein) to populate the output.
+
+The 2MB buffer and choice of functions for mixing are designed to make the algorithm \char`\"{}\+C\+P\+U-\/friendly\char`\"{} (and thus, reduce the advantage of G\+PU, F\+P\+GA, or A\+S\+I\+C-\/based implementations)\+: the functions used are fast on modern C\+P\+Us, and the 2MB size matches the typical amount of L3 cache available per core on 2013-\/era C\+P\+Us. When available, this implementation will use hardware A\+ES support on x86 C\+P\+Us.
+
+A diagram of the inner loop of this function can be found at \href{https://www.cs.cmu.edu/~dga/crypto/xmr/cryptonight.png}{\texttt{ https\+://www.\+cs.\+cmu.\+edu/$\sim$dga/crypto/xmr/cryptonight.\+png}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data to hash \\
+\hline
+{\em length} & the length in bytes of the data \\
+\hline
+{\em hash} & a pointer to a buffer in which the final 256 bit hash will be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a98d76b4beae6e995b0a9165c406beb6b}\label{cn__turtle__hash-arm_8inl_a98d76b4beae6e995b0a9165c406beb6b}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!copy\_block@{copy\_block}}
+\index{copy\_block@{copy\_block}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{copy\_block()}{copy\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void copy\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dst,  }\item[{const uint8\+\_\+t $\ast$}]{src }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_af8e99c2d6a4466f24368da92c518d864}\label{cn__turtle__hash-arm_8inl_af8e99c2d6a4466f24368da92c518d864}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!sum\_half\_blocks@{sum\_half\_blocks}}
+\index{sum\_half\_blocks@{sum\_half\_blocks}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{sum\_half\_blocks()}{sum\_half\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void sum\+\_\+half\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a2fef1e0305da2beba1dc69f0739e6cb0}\label{cn__turtle__hash-arm_8inl_a2fef1e0305da2beba1dc69f0739e6cb0}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!swap\_blocks@{swap\_blocks}}
+\index{swap\_blocks@{swap\_blocks}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{swap\_blocks()}{swap\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void swap\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_a2f15c2e23d7248fb6563014b87741378}\label{cn__turtle__hash-arm_8inl_a2f15c2e23d7248fb6563014b87741378}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!xor64@{xor64}}
+\index{xor64@{xor64}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{xor64()}{xor64()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void xor64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{a,  }\item[{const uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__turtle__hash-arm_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}\label{cn__turtle__hash-arm_8inl_ac1796281d2ba5f9038bc7081c9d5b0a2}} 
+\index{cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}!xor\_blocks@{xor\_blocks}}
+\index{xor\_blocks@{xor\_blocks}!cn\_turtle\_hash-\/arm.inl@{cn\_turtle\_hash-\/arm.inl}}
+\doxysubsubsection{\texorpdfstring{xor\_blocks()}{xor\_blocks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a10b2d890d871e1489bb02b7e70d9bdfb}{S\+T\+A\+T\+IC}} \mbox{\hyperlink{cn__turtle__hash-arm_8inl_a2eb6f9e0395b47b8d5e3eeae4fe0c116}{I\+N\+L\+I\+NE}} void xor\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
+

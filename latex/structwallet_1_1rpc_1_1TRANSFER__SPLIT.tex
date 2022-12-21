@@ -1,0 +1,101 @@
+\hypertarget{structwallet_1_1rpc_1_1TRANSFER__SPLIT}{}\doxysection{wallet\+::rpc\+::T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+IT Struct Reference}
+\label{structwallet_1_1rpc_1_1TRANSFER__SPLIT}\index{wallet::rpc::TRANSFER\_SPLIT@{wallet::rpc::TRANSFER\_SPLIT}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+IT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1TRANSFER__SPLIT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+IT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1TRANSFER__SPLIT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1TRANSFER__SPLIT_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a462826d874107d368f3b3c6df98c9017}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1TRANSFER__SPLIT_1_1REQUEST}{wallet\+::rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a2fdc2d1718252a9bbdec9eb5b46dd848}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Same as transfer, but can split into more than one tx if necessary.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily destinations} -- Array of destinations to receive O\+X\+EN\+:
+\begin{DoxyItemize}
+\item {\ttfamily T\+O\+DO\+:} fields here
+\end{DoxyItemize}
+\item {\ttfamily account\+\_\+index} -- (Optional) Transfer from this account index. (Defaults to 0)
+\item {\ttfamily subaddr\+\_\+indices} -- (Optional) Transfer from this set of subaddresses. (Defaults to 0)
+\item {\ttfamily priority} -- Set a priority for the transaction. Accepted values are\+: 1 for unimportant or 5 for blink. (0 and 2-\/4 are accepted for backwards compatibility and are equivalent to 5)
+\item {\ttfamily unlock\+\_\+time} -- Number of blocks before the oxen can be spent (0 to not add a lock).
+\item {\ttfamily payment\+\_\+id} -- (Optional) Random 32-\/byte/64-\/character hex string to identify a transaction.
+\item {\ttfamily get\+\_\+tx\+\_\+keys} -- (Optional) Return the transaction keys after sending.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, the newly created transaction will not be relayed to the oxen network. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- Return the transactions as hex string after sending.
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- Return list of transaction metadata needed to relay the transfer later.
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash\+\_\+list} -- The tx hashes of every transaction.
+\item {\ttfamily tx\+\_\+key\+\_\+list} -- The transaction keys for every transaction.
+\item {\ttfamily amount\+\_\+list} -- The amount transferred for every transaction.
+\item {\ttfamily fee\+\_\+list} -- The amount of fees paid for every transaction.
+\item {\ttfamily tx\+\_\+blob\+\_\+list} -- The tx as hex string for every transaction.
+\item {\ttfamily tx\+\_\+metadata\+\_\+list} -- List of transaction metadata needed to relay the transactions later.
+\item {\ttfamily multisig\+\_\+txset} -- The set of signing keys used in a multisig transaction (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a462826d874107d368f3b3c6df98c9017}\label{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a462826d874107d368f3b3c6df98c9017}} 
+\index{wallet::rpc::TRANSFER\_SPLIT@{wallet::rpc::TRANSFER\_SPLIT}!names@{names}}
+\index{names@{names}!wallet::rpc::TRANSFER\_SPLIT@{wallet::rpc::TRANSFER\_SPLIT}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a2fdc2d1718252a9bbdec9eb5b46dd848}\label{structwallet_1_1rpc_1_1TRANSFER__SPLIT_a2fdc2d1718252a9bbdec9eb5b46dd848}} 
+\index{wallet::rpc::TRANSFER\_SPLIT@{wallet::rpc::TRANSFER\_SPLIT}!request@{request}}
+\index{request@{request}!wallet::rpc::TRANSFER\_SPLIT@{wallet::rpc::TRANSFER\_SPLIT}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1TRANSFER__SPLIT_1_1REQUEST}{wallet\+::rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+S\+P\+L\+I\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

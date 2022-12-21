@@ -1,0 +1,167 @@
+\hypertarget{structlmdb_1_1basic__table}{}\doxysection{lmdb\+::basic\+\_\+table$<$ K, V $>$ Struct Template Reference}
+\label{structlmdb_1_1basic__table}\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+
+
+Helper for grouping typical L\+M\+DB D\+BI options when key and value are fixed types.  
+
+
+
+
+{\ttfamily \#include $<$table.\+h$>$}
+
+
+
+Inheritance diagram for lmdb\+::basic\+\_\+table$<$ K, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{structlmdb_1_1basic__table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for lmdb\+::basic\+\_\+table$<$ K, V $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{structlmdb_1_1basic__table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structlmdb_1_1basic__table_a77ef3473e4edc7cba35365a779681058}{key\+\_\+type}} = K
+\item 
+using \mbox{\hyperlink{structlmdb_1_1basic__table_a5880e2ef85011077debe6baa9ecc6d4a}{value\+\_\+type}} = V
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structlmdb_1_1basic__table_ab6bc8489b17add455e0c8af1790ef4be}{basic\+\_\+table}} (const char $\ast$\mbox{\hyperlink{structlmdb_1_1table_aaadcd47421a5b304ddd5072712ec50c4}{name}}, unsigned \mbox{\hyperlink{structlmdb_1_1table_a3c6b0af6e4a47b305a4d9cb8933e43f7}{flags}}=0, M\+D\+B\+\_\+cmp\+\_\+func \mbox{\hyperlink{structlmdb_1_1table_a5e3a7957fed1eafc0c1c2accdb7830f9}{value\+\_\+cmp}}=nullptr) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr unsigned \mbox{\hyperlink{structlmdb_1_1basic__table_aece2e04d53deca238cec76963336fd19}{compute\+\_\+flags}} (const unsigned \mbox{\hyperlink{structlmdb_1_1table_a3c6b0af6e4a47b305a4d9cb8933e43f7}{flags}}) noexcept
+\item 
+{\footnotesize template$<$typename U , typename F  = U, std\+::size\+\_\+t offset = 0$>$ }\\static \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}} $>$ \mbox{\hyperlink{structlmdb_1_1basic__table_afcea2a437d009b8f09594ee3f4956e21}{get\+\_\+value}} (M\+D\+B\+\_\+val value) noexcept
+\item 
+{\footnotesize template$<$typename D $>$ }\\static \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{classlmdb_1_1key__stream}{key\+\_\+stream}}$<$ K, V, D $>$ $>$ \mbox{\hyperlink{structlmdb_1_1basic__table_ace25bec214ff57c6173e57aa38693952}{get\+\_\+key\+\_\+stream}} (std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ cur) noexcept
+\item 
+{\footnotesize template$<$typename D $>$ }\\static \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$ V, D $>$ $>$ \mbox{\hyperlink{structlmdb_1_1basic__table_ac0b594196ccb1b4b81ac117d64a627e3}{get\+\_\+value\+\_\+stream}} (K const \&key, std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$ cur) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V$>$\newline
+struct lmdb\+::basic\+\_\+table$<$ K, V $>$}
+
+Helper for grouping typical L\+M\+DB D\+BI options when key and value are fixed types. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_a77ef3473e4edc7cba35365a779681058}\label{structlmdb_1_1basic__table_a77ef3473e4edc7cba35365a779681058}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!key\_type@{key\_type}}
+\index{key\_type@{key\_type}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{key\_type}{key\_type}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::\mbox{\hyperlink{structlmdb_1_1basic__table_a77ef3473e4edc7cba35365a779681058}{key\+\_\+type}} =  K}
+
+\mbox{\Hypertarget{structlmdb_1_1basic__table_a5880e2ef85011077debe6baa9ecc6d4a}\label{structlmdb_1_1basic__table_a5880e2ef85011077debe6baa9ecc6d4a}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+using \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::\mbox{\hyperlink{structlmdb_1_1basic__table_a5880e2ef85011077debe6baa9ecc6d4a}{value\+\_\+type}} =  V}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_ab6bc8489b17add455e0c8af1790ef4be}\label{structlmdb_1_1basic__table_ab6bc8489b17add455e0c8af1790ef4be}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!basic\_table@{basic\_table}}
+\index{basic\_table@{basic\_table}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{basic\_table()}{basic\_table()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+constexpr \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::\mbox{\hyperlink{structlmdb_1_1basic__table}{basic\+\_\+table}} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{unsigned}]{flags = {\ttfamily 0},  }\item[{M\+D\+B\+\_\+cmp\+\_\+func}]{value\+\_\+cmp = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_aece2e04d53deca238cec76963336fd19}\label{structlmdb_1_1basic__table_aece2e04d53deca238cec76963336fd19}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!compute\_flags@{compute\_flags}}
+\index{compute\_flags@{compute\_flags}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{compute\_flags()}{compute\_flags()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+static constexpr unsigned \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::compute\+\_\+flags (\begin{DoxyParamCaption}\item[{const unsigned}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+Additional L\+M\+DB flags based on {\ttfamily flags} value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_ace25bec214ff57c6173e57aa38693952}\label{structlmdb_1_1basic__table_ace25bec214ff57c6173e57aa38693952}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!get\_key\_stream@{get\_key\_stream}}
+\index{get\_key\_stream@{get\_key\_stream}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get\_key\_stream()}{get\_key\_stream()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+template$<$typename D $>$ \\
+static \mbox{\hyperlink{classexpect}{expect}}$<$\mbox{\hyperlink{classlmdb_1_1key__stream}{key\+\_\+stream}}$<$K, V, D$>$ $>$ \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::get\+\_\+key\+\_\+stream (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily cur != nullptr}. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & Active cursor on table. Returned in object on success, otherwise destroyed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the first key/value in the table linked to {\ttfamily cur} or an empty {\ttfamily \mbox{\hyperlink{classlmdb_1_1key__stream}{key\+\_\+stream}}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_afcea2a437d009b8f09594ee3f4956e21}\label{structlmdb_1_1basic__table_afcea2a437d009b8f09594ee3f4956e21}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+template$<$typename U , typename F  = U, std\+::size\+\_\+t offset = 0$>$ \\
+static \mbox{\hyperlink{classexpect}{expect}}$<$\mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}$>$ \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::get\+\_\+value (\begin{DoxyParamCaption}\item[{M\+D\+B\+\_\+val}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & must be same as {\ttfamily V}; used for sanity checking. \\
+\hline
+{\em F} & is the type within {\ttfamily U} that is being extracted. \\
+\hline
+{\em offset} & to {\ttfamily F} within {\ttfamily U}.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyNote}{Note}
+If using {\ttfamily F} and {\ttfamily offset} to retrieve a specific field, use {\ttfamily M\+O\+N\+E\+R\+O\+\_\+\+F\+I\+E\+LD} macro in {\ttfamily \mbox{\hyperlink{lmdb_2util_8h}{src/lmdb/util.\+h}}} which calculates the offset automatically.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Value of type {\ttfamily F} at {\ttfamily offset} within {\ttfamily value} which has type {\ttfamily U}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structlmdb_1_1basic__table_ac0b594196ccb1b4b81ac117d64a627e3}\label{structlmdb_1_1basic__table_ac0b594196ccb1b4b81ac117d64a627e3}} 
+\index{lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}!get\_value\_stream@{get\_value\_stream}}
+\index{get\_value\_stream@{get\_value\_stream}!lmdb::basic\_table$<$ K, V $>$@{lmdb::basic\_table$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{get\_value\_stream()}{get\_value\_stream()}}
+{\footnotesize\ttfamily template$<$typename K , typename V $>$ \\
+template$<$typename D $>$ \\
+static \mbox{\hyperlink{classexpect}{expect}}$<$\mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}$<$V, D$>$ $>$ \mbox{\hyperlink{structlmdb_1_1basic__table}{lmdb\+::basic\+\_\+table}}$<$ K, V $>$\+::get\+\_\+value\+\_\+stream (\begin{DoxyParamCaption}\item[{K const \&}]{key,  }\item[{std\+::unique\+\_\+ptr$<$ M\+D\+B\+\_\+cursor, D $>$}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyPrecond}{Precondition}
+{\ttfamily cur != nullptr}. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cur} & Active cursor on table. Returned in object on success, otherwise destroyed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A handle to the first value at {\ttfamily key} in the table linked to {\ttfamily cur} or an empty {\ttfamily \mbox{\hyperlink{classlmdb_1_1value__stream}{value\+\_\+stream}}}. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/lmdb/\mbox{\hyperlink{table_8h}{table.\+h}}\end{DoxyCompactItemize}

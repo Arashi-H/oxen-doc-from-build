@@ -1,0 +1,63 @@
+\hypertarget{service__node__rules_8cpp}{}\doxysection{src/cryptonote\+\_\+core/service\+\_\+node\+\_\+rules.cpp File Reference}
+\label{service__node__rules_8cpp}\index{src/cryptonote\_core/service\_node\_rules.cpp@{src/cryptonote\_core/service\_node\_rules.cpp}}
+{\ttfamily \#include \char`\"{}common/string\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/hardfork.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$oxenc/endian.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$boost/lexical\+\_\+cast.\+hpp$>$}\newline
+{\ttfamily \#include $<$cfenv$>$}\newline
+{\ttfamily \#include \char`\"{}oxen\+\_\+economy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}service\+\_\+node\+\_\+rules.\+h\char`\"{}}\newline
+Include dependency graph for service\+\_\+node\+\_\+rules.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{service__node__rules_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceservice__nodes}{service\+\_\+nodes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a8f4dc84dd9ca21434ef48a0e797bed73}{service\+\_\+nodes\+::get\+\_\+staking\+\_\+requirement}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, hf hardfork)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_af27e6bf932b991119bd0415ce7ac1afd}{service\+\_\+nodes\+::get\+\_\+staking\+\_\+requirement}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_afba38f786460d3a87da85828d8405123}{service\+\_\+nodes\+::portions\+\_\+to\+\_\+amount}} (uint64\+\_\+t portions, uint64\+\_\+t staking\+\_\+requirement)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a7c7ef55a390c8215cad19172d83cf6a1}{service\+\_\+nodes\+::check\+\_\+service\+\_\+node\+\_\+portions}} (hf hf\+\_\+version, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}, uint64\+\_\+t $>$$>$ \&portions)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespaceservice__nodes_a1af9223f7acc939e6d6b2fab2968a822}{service\+\_\+nodes\+::check\+\_\+service\+\_\+node\+\_\+stakes}} (hf hf\+\_\+version, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t staking\+\_\+requirement, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcryptonote_1_1account__public__address}{cryptonote\+::account\+\_\+public\+\_\+address}}, uint64\+\_\+t $>$$>$ \&stakes)
+\item 
+\mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \mbox{\hyperlink{namespaceservice__nodes_a39375dcbac5c905eeb9e4604b2458013}{service\+\_\+nodes\+::generate\+\_\+request\+\_\+stake\+\_\+unlock\+\_\+hash}} (uint32\+\_\+t nonce)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a41686f2c897f6f8972c221653a4d1562}{service\+\_\+nodes\+::get\+\_\+locked\+\_\+key\+\_\+image\+\_\+unlock\+\_\+height}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{cryptonote\+::network\+\_\+type}} nettype, uint64\+\_\+t node\+\_\+register\+\_\+height, uint64\+\_\+t curr\+\_\+height)
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ada3cf451fdd667874e32f8e49cb2ddf0}{service\+\_\+nodes\+::get\+\_\+min\+\_\+node\+\_\+contribution\+\_\+pre\+\_\+v11}} (uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a5104982f824a60531362048518cdf05c}{service\+\_\+nodes\+::get\+\_\+max\+\_\+node\+\_\+contribution}} (hf version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a8c52f16d66e0b53bb9b4bf6fe858b4d4}{service\+\_\+nodes\+::get\+\_\+min\+\_\+node\+\_\+contribution}} (hf version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved, size\+\_\+t num\+\_\+contributions)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_ab128a5a0ef4394ce7f1c5bd3f5ea3628}{service\+\_\+nodes\+::get\+\_\+min\+\_\+node\+\_\+contribution\+\_\+in\+\_\+portions}} (hf version, uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t total\+\_\+reserved, size\+\_\+t num\+\_\+contributions)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a459f06c1c3bc526051a1ed8844532c37}{service\+\_\+nodes\+::get\+\_\+portions\+\_\+to\+\_\+make\+\_\+amount}} (uint64\+\_\+t staking\+\_\+requirement, uint64\+\_\+t amount, uint64\+\_\+t max\+\_\+portions)
+\item 
+std\+::optional$<$ double $>$ \mbox{\hyperlink{namespaceservice__nodes_ae8818286fddb85de5d2a05cd6cfacfbd}{service\+\_\+nodes\+::parse\+\_\+fee\+\_\+percent}} (std\+::string\+\_\+view fee)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{namespaceservice__nodes_a191d5e68b2c27e3758e45b6652724628}{service\+\_\+nodes\+::percent\+\_\+to\+\_\+basis\+\_\+points}} (std\+::string percent\+\_\+string)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespaceservice__nodes_a4db1f85edb5655543da43d1f2ec60dd3}{service\+\_\+nodes\+::logcat}} = log\+::\+Cat(\char`\"{}service\+\_\+nodes\char`\"{})
+\end{DoxyCompactItemize}

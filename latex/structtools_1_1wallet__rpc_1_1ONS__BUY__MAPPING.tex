@@ -1,0 +1,82 @@
+\hypertarget{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING}{}\doxysection{tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG Struct Reference}
+\label{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING}\index{tools::wallet\_rpc::ONS\_BUY\_MAPPING@{tools::wallet\_rpc::ONS\_BUY\_MAPPING}}
+
+
+{\ttfamily \#include $<$wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tools\+::wallet\+\_\+rpc\+::O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+NG\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_1_1request}{request}}
+\item 
+struct \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_1_1response}{response}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_ac02c96592bfa719714ad3114451cd802}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const char $\ast$ \mbox{\hyperlink{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_acdaab1af3fe3a00fc364ceaaa97f3f85}{description}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_ac02c96592bfa719714ad3114451cd802}\label{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_ac02c96592bfa719714ad3114451cd802}} 
+\index{tools::wallet\_rpc::ONS\_BUY\_MAPPING@{tools::wallet\_rpc::ONS\_BUY\_MAPPING}!names@{names}}
+\index{names@{names}!tools::wallet\_rpc::ONS\_BUY\_MAPPING@{tools::wallet\_rpc::ONS\_BUY\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_acdaab1af3fe3a00fc364ceaaa97f3f85}\label{structtools_1_1wallet__rpc_1_1ONS__BUY__MAPPING_acdaab1af3fe3a00fc364ceaaa97f3f85}} 
+\index{tools::wallet\_rpc::ONS\_BUY\_MAPPING@{tools::wallet\_rpc::ONS\_BUY\_MAPPING}!description@{description}}
+\index{description@{description}!tools::wallet\_rpc::ONS\_BUY\_MAPPING@{tools::wallet\_rpc::ONS\_BUY\_MAPPING}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily constexpr const char$\ast$ tools\+::wallet\+\_\+rpc\+::\+O\+N\+S\+\_\+\+B\+U\+Y\+\_\+\+M\+A\+P\+P\+I\+N\+G\+::description\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{R\textcolor{stringliteral}{"(Buy a Loki Name System (ONS) mapping that maps a unique name to a Session ID or Lokinet address.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{Currently supports Session, Lokinet and Wallet registrations. Lokinet registrations can be for 1, 2, 5, or 10 years by specifying a type value of "lokinet", "lokinet\_2y", "lokinet\_5y", "lokinet\_10y". Session registrations do not expire.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{The owner of the ONS entry (by default, the purchasing wallet) will be permitted to submit ONS update transactions to the Loki blockchain (for example to update a Session pubkey or the target Lokinet address). You may change the primary owner or add a backup owner in the registration and can change them later with update transactions. Owner addresses can be either Loki wallets, or generic ed25519 pubkeys (for advanced uses).}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{For Session, the recommended owner or backup owner is the ed25519 public key of the user's Session ID.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{When specifying owners, either a wallet (sub)address or standard ed25519 public key is supported per mapping. Updating the value that a name maps to requires one of the owners to sign the update transaction. For wallets, this is signed using the (sub)address's spend key.}}
+\DoxyCodeLine{\textcolor{stringliteral}{}}
+\DoxyCodeLine{\textcolor{stringliteral}{For more information on updating and signing see the ONS\_UPDATE\_MAPPING documentation.)"}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet/\mbox{\hyperlink{wallet__rpc__server__commands__defs_8h}{wallet\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

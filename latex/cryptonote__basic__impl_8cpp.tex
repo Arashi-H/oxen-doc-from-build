@@ -1,0 +1,68 @@
+\hypertarget{cryptonote__basic__impl_8cpp}{}\doxysection{src/cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.cpp File Reference}
+\label{cryptonote__basic__impl_8cpp}\index{src/cryptonote\_basic/cryptonote\_basic\_impl.cpp@{src/cryptonote\_basic/cryptonote\_basic\_impl.cpp}}
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/binary\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/container.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/base58.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logging/oxen\+\_\+logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cfenv$>$}\newline
+Include dependency graph for cryptonote\+\_\+basic\+\_\+impl.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cryptonote__basic__impl_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1integrated__address}{cryptonote\+::integrated\+\_\+address}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a227ea7f60a5c82ac6a33373e6b8c7ff9}{cryptonote\+::block\+\_\+header\+\_\+has\+\_\+pulse\+\_\+components}} (block\+\_\+header const \&blk\+\_\+header)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_adc48c6ee37b47b2283110eadd40527cf}{cryptonote\+::block\+\_\+has\+\_\+pulse\+\_\+components}} (block const \&blk)
+\item 
+size\+\_\+t \mbox{\hyperlink{namespacecryptonote_a4d9bad27aa3c15014d4bedac3453f91d}{cryptonote\+::get\+\_\+min\+\_\+block\+\_\+weight}} (hf version)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_a699a00847a5dc6f6dd5b58e3f646ab2b}{cryptonote\+::block\+\_\+reward\+\_\+unpenalized\+\_\+formula\+\_\+v7}} (uint64\+\_\+t already\+\_\+generated\+\_\+coins, uint64\+\_\+t height)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_aca744ddeb46e8fd645aae60753f45190}{cryptonote\+::block\+\_\+reward\+\_\+unpenalized\+\_\+formula\+\_\+v8}} (uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_aad594df9c90b9b3f12bf097f74949a42}{cryptonote\+::get\+\_\+base\+\_\+block\+\_\+reward}} (size\+\_\+t median\+\_\+weight, size\+\_\+t current\+\_\+block\+\_\+weight, uint64\+\_\+t already\+\_\+generated\+\_\+coins, uint64\+\_\+t \&reward, uint64\+\_\+t \&reward\+\_\+unpenalized, hf version, uint64\+\_\+t height)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{namespacecryptonote_a7623dd9266af3109607b814d88655ee4}{cryptonote\+::get\+\_\+account\+\_\+address\+\_\+checksum}} (const public\+\_\+address\+\_\+outer\+\_\+blob \&bl)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{namespacecryptonote_ac43a35f1cb15d29defe5bab84f789de9}{cryptonote\+::get\+\_\+account\+\_\+integrated\+\_\+address\+\_\+checksum}} (const public\+\_\+integrated\+\_\+address\+\_\+outer\+\_\+blob \&bl)
+\item 
+std\+::string \mbox{\hyperlink{namespacecryptonote_a785cd9c7b74b6e4b159647f3a5f85a13}{cryptonote\+::get\+\_\+account\+\_\+address\+\_\+as\+\_\+str}} (network\+\_\+type nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} subaddress, account\+\_\+public\+\_\+address const \&adr)
+\item 
+std\+::string \mbox{\hyperlink{namespacecryptonote_adbd6c7c52572755ee7249557186f28d5}{cryptonote\+::get\+\_\+account\+\_\+integrated\+\_\+address\+\_\+as\+\_\+str}} (network\+\_\+type nettype, account\+\_\+public\+\_\+address const \&adr, \mbox{\hyperlink{structcrypto_1_1hash8}{crypto\+::hash8}} const \&payment\+\_\+id)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a93d77c9b98668547a80710da2ebea645}{cryptonote\+::is\+\_\+coinbase}} (const transaction \&tx)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a88eed0d86d212f42bc5c48c1f8ca8ddd}{cryptonote\+::get\+\_\+account\+\_\+address\+\_\+from\+\_\+str}} (address\+\_\+parse\+\_\+info \&info, network\+\_\+type nettype, const std\+::string\+\_\+view str)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a58837821447219a83f82b4464ac2174f}{cryptonote\+::operator==}} (const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&a, const \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \&b)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_ac3c7a66db5043a6d3c217654343b408d}{cryptonote\+::operator==}} (const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&a, const \mbox{\hyperlink{structcryptonote_1_1block}{cryptonote\+::block}} \&b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}cn\char`\"{})
+\end{DoxyCompactItemize}

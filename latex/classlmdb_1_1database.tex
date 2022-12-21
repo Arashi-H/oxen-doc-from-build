@@ -1,0 +1,208 @@
+\hypertarget{classlmdb_1_1database}{}\doxysection{lmdb\+::database Class Reference}
+\label{classlmdb_1_1database}\index{lmdb::database@{lmdb::database}}
+
+
+Manages a L\+M\+DB environment for safe memory-\/map resizing. Thread-\/safe.  
+
+
+
+
+{\ttfamily \#include $<$database.\+h$>$}
+
+
+
+Collaboration diagram for lmdb\+::database\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classlmdb_1_1database__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlmdb_1_1database_ae4728c0c298fbe13edc4a4a951392ba2}{database}} (\mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} \mbox{\hyperlink{classlmdb_1_1database_aee570dd4d767147bfeb66889df073a87}{env}})
+\item 
+\mbox{\hyperlink{classlmdb_1_1database_a5244a76771831c00084b797541c7c6b6}{database}} (\mbox{\hyperlink{classlmdb_1_1database}{database}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlmdb_1_1database_a09eaba1b8015d744de367100607b827b}{database}} (\mbox{\hyperlink{classlmdb_1_1database}{database}} const \&)=delete
+\item 
+virtual \mbox{\hyperlink{classlmdb_1_1database_a755db0cb00ad5df87db2bcd841a8f2e7}{$\sim$database}} () noexcept
+\item 
+\mbox{\hyperlink{classlmdb_1_1database}{database}} \& \mbox{\hyperlink{classlmdb_1_1database_a0810be4e46c0beee424adc7b6eca1491}{operator=}} (\mbox{\hyperlink{classlmdb_1_1database}{database}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classlmdb_1_1database}{database}} \& \mbox{\hyperlink{classlmdb_1_1database_a6f9f46dba61b63d47260eeb650cb23c1}{operator=}} (\mbox{\hyperlink{classlmdb_1_1database}{database}} const \&)=delete
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ void $>$ \mbox{\hyperlink{classlmdb_1_1database_a751d9065db760e15f5812437b469afa9}{resize}} () noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{read\+\_\+txn}} $>$ \mbox{\hyperlink{classlmdb_1_1database_abb5ab975b63dc48a64c8ca65dd7e1404}{create\+\_\+read\+\_\+txn}} (\mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{suspended\+\_\+txn}} txn=nullptr) noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{suspended\+\_\+txn}} $>$ \mbox{\hyperlink{classlmdb_1_1database_a338ddd87f37e5670c7a9a4e45990b144}{reset\+\_\+txn}} (\mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{read\+\_\+txn}} txn) noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} $>$ \mbox{\hyperlink{classlmdb_1_1database_a4734efda5212130120fc45c6ea2b8f78}{create\+\_\+write\+\_\+txn}} () noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ void $>$ \mbox{\hyperlink{classlmdb_1_1database_a41f62355d6c5cda485a91ca9cdd452ae}{commit}} (\mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} txn) noexcept
+\begin{DoxyCompactList}\small\item\em Commit the read-\/write transaction. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F $>$ }\\std\+::result\+\_\+of$<$ \mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}(M\+D\+B\+\_\+txn \&)$>$\+::type \mbox{\hyperlink{classlmdb_1_1database_aed16b35522ae27e53b4cafc1f8ff1d73}{try\+\_\+write}} (\mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}} f, unsigned attempts=3)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\+D\+B\+\_\+env $\ast$ \mbox{\hyperlink{classlmdb_1_1database_a39c50ccd8d183ae6129270b85a542817}{handle}} () const noexcept
+\item 
+\mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} $>$ \mbox{\hyperlink{classlmdb_1_1database_af1286563362e3ad7796f64b06e1c5190}{do\+\_\+create\+\_\+txn}} (unsigned int flags) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} \mbox{\hyperlink{classlmdb_1_1database_aee570dd4d767147bfeb66889df073a87}{env}}
+\item 
+\mbox{\hyperlink{structlmdb_1_1context}{context}} \mbox{\hyperlink{classlmdb_1_1database_ab90954ee2a8c8041de727b932f47ea6f}{ctx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a L\+M\+DB environment for safe memory-\/map resizing. Thread-\/safe. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlmdb_1_1database_ae4728c0c298fbe13edc4a4a951392ba2}\label{classlmdb_1_1database_ae4728c0c298fbe13edc4a4a951392ba2}} 
+\index{lmdb::database@{lmdb::database}!database@{database}}
+\index{database@{database}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{database()}{database()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lmdb\+::database\+::database (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}}}]{env }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a5244a76771831c00084b797541c7c6b6}\label{classlmdb_1_1database_a5244a76771831c00084b797541c7c6b6}} 
+\index{lmdb::database@{lmdb::database}!database@{database}}
+\index{database@{database}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{database()}{database()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lmdb\+::database\+::database (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1database}{database}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a09eaba1b8015d744de367100607b827b}\label{classlmdb_1_1database_a09eaba1b8015d744de367100607b827b}} 
+\index{lmdb::database@{lmdb::database}!database@{database}}
+\index{database@{database}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{database()}{database()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lmdb\+::database\+::database (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1database}{database}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a755db0cb00ad5df87db2bcd841a8f2e7}\label{classlmdb_1_1database_a755db0cb00ad5df87db2bcd841a8f2e7}} 
+\index{lmdb::database@{lmdb::database}!````~database@{$\sim$database}}
+\index{````~database@{$\sim$database}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{$\sim$database()}{~database()}}
+{\footnotesize\ttfamily lmdb\+::database\+::$\sim$database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlmdb_1_1database_a41f62355d6c5cda485a91ca9cdd452ae}\label{classlmdb_1_1database_a41f62355d6c5cda485a91ca9cdd452ae}} 
+\index{lmdb::database@{lmdb::database}!commit@{commit}}
+\index{commit@{commit}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ void $>$ lmdb\+::database\+::commit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}}}]{txn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Commit the read-\/write transaction. 
+
+\mbox{\Hypertarget{classlmdb_1_1database_abb5ab975b63dc48a64c8ca65dd7e1404}\label{classlmdb_1_1database_abb5ab975b63dc48a64c8ca65dd7e1404}} 
+\index{lmdb::database@{lmdb::database}!create\_read\_txn@{create\_read\_txn}}
+\index{create\_read\_txn@{create\_read\_txn}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{create\_read\_txn()}{create\_read\_txn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{read\+\_\+txn}} $>$ lmdb\+::database\+::create\+\_\+read\+\_\+txn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{suspended\+\_\+txn}}}]{txn = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+A read only L\+M\+DB transaction, reusing {\ttfamily txn} if provided. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1database_a4734efda5212130120fc45c6ea2b8f78}\label{classlmdb_1_1database_a4734efda5212130120fc45c6ea2b8f78}} 
+\index{lmdb::database@{lmdb::database}!create\_write\_txn@{create\_write\_txn}}
+\index{create\_write\_txn@{create\_write\_txn}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{create\_write\_txn()}{create\_write\_txn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} $>$ lmdb\+::database\+::create\+\_\+write\+\_\+txn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+A read-\/write L\+M\+DB transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1database_af1286563362e3ad7796f64b06e1c5190}\label{classlmdb_1_1database_af1286563362e3ad7796f64b06e1c5190}} 
+\index{lmdb::database@{lmdb::database}!do\_create\_txn@{do\_create\_txn}}
+\index{do\_create\_txn@{do\_create\_txn}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{do\_create\_txn()}{do\_create\_txn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a65034d380be2218338ea0eb620fff5f9}{write\+\_\+txn}} $>$ lmdb\+::database\+::do\+\_\+create\+\_\+txn (\begin{DoxyParamCaption}\item[{unsigned int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a39c50ccd8d183ae6129270b85a542817}\label{classlmdb_1_1database_a39c50ccd8d183ae6129270b85a542817}} 
+\index{lmdb::database@{lmdb::database}!handle@{handle}}
+\index{handle@{handle}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily M\+D\+B\+\_\+env$\ast$ lmdb\+::database\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+The L\+M\+DB environment associated with the object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1database_a0810be4e46c0beee424adc7b6eca1491}\label{classlmdb_1_1database_a0810be4e46c0beee424adc7b6eca1491}} 
+\index{lmdb::database@{lmdb::database}!operator=@{operator=}}
+\index{operator=@{operator=}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlmdb_1_1database}{database}}\& lmdb\+::database\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1database}{database}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a6f9f46dba61b63d47260eeb650cb23c1}\label{classlmdb_1_1database_a6f9f46dba61b63d47260eeb650cb23c1}} 
+\index{lmdb::database@{lmdb::database}!operator=@{operator=}}
+\index{operator=@{operator=}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlmdb_1_1database}{database}}\& lmdb\+::database\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlmdb_1_1database}{database}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_a338ddd87f37e5670c7a9a4e45990b144}\label{classlmdb_1_1database_a338ddd87f37e5670c7a9a4e45990b144}} 
+\index{lmdb::database@{lmdb::database}!reset\_txn@{reset\_txn}}
+\index{reset\_txn@{reset\_txn}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{reset\_txn()}{reset\_txn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ \mbox{\hyperlink{namespacelmdb_a1afc75406880e01ee5206a382d7a0668}{suspended\+\_\+txn}} $>$ lmdb\+::database\+::reset\+\_\+txn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelmdb_a5fbe291efd492943925b337373b8780c}{read\+\_\+txn}}}]{txn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily txn} after releasing context. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlmdb_1_1database_a751d9065db760e15f5812437b469afa9}\label{classlmdb_1_1database_a751d9065db760e15f5812437b469afa9}} 
+\index{lmdb::database@{lmdb::database}!resize@{resize}}
+\index{resize@{resize}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classexpect}{expect}}$<$ void $>$ lmdb\+::database\+::resize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Resize the memory map for the L\+M\+DB environment. Will block until all reads/writes on the environment complete. \mbox{\Hypertarget{classlmdb_1_1database_aed16b35522ae27e53b4cafc1f8ff1d73}\label{classlmdb_1_1database_aed16b35522ae27e53b4cafc1f8ff1d73}} 
+\index{lmdb::database@{lmdb::database}!try\_write@{try\_write}}
+\index{try\_write@{try\_write}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{try\_write()}{try\_write()}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+std\+::result\+\_\+of$<$\mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}(M\+D\+B\+\_\+txn\&)$>$\+::type lmdb\+::database\+::try\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{verify_8c_ab35e9bec34f95271ec8f184e471746db}{F}}}]{f,  }\item[{unsigned}]{attempts = {\ttfamily 3} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a write transaction, pass it to {\ttfamily f}, then try to commit the write if {\ttfamily f} succeeds.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & must be callable with signature {\ttfamily expect$<$T$>$(M\+D\+B\+\_\+txn\&)}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & must be re-\/startable if {\ttfamily lmdb\+::error(\+M\+D\+B\+\_\+\+M\+A\+P\+\_\+\+F\+U\+L\+L)}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of calling {\ttfamily f}. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlmdb_1_1database_ab90954ee2a8c8041de727b932f47ea6f}\label{classlmdb_1_1database_ab90954ee2a8c8041de727b932f47ea6f}} 
+\index{lmdb::database@{lmdb::database}!ctx@{ctx}}
+\index{ctx@{ctx}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{ctx}{ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlmdb_1_1context}{context}} lmdb\+::database\+::ctx\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classlmdb_1_1database_aee570dd4d767147bfeb66889df073a87}\label{classlmdb_1_1database_aee570dd4d767147bfeb66889df073a87}} 
+\index{lmdb::database@{lmdb::database}!env@{env}}
+\index{env@{env}!lmdb::database@{lmdb::database}}
+\doxysubsubsection{\texorpdfstring{env}{env}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelmdb_a36439bcedf1ef2d1738c0c5caf0e93c7}{environment}} lmdb\+::database\+::env\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lmdb/\mbox{\hyperlink{database_8h}{database.\+h}}\item 
+src/lmdb/\mbox{\hyperlink{lmdb_2database_8cpp}{database.\+cpp}}\end{DoxyCompactItemize}

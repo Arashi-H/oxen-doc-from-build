@@ -1,0 +1,35 @@
+\hypertarget{common_2random_8h}{}\doxysection{src/common/random.h File Reference}
+\label{common_2random_8h}\index{src/common/random.h@{src/common/random.h}}
+{\ttfamily \#include $<$random$>$}\newline
+Include dependency graph for random.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{common_2random_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{common_2random_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_a67d49c019e77c3dd4f3d62f0b82564fe}{tools\+::uniform\+\_\+distribution\+\_\+portable}} (std\+::mt19937\+\_\+64 \&rng, const uint64\+\_\+t n)
+\item 
+{\footnotesize template$<$typename Random\+It $>$ }\\void \mbox{\hyperlink{namespacetools_ae8a745db5db1c6fbb36ed88d5a581aa2}{tools\+::shuffle\+\_\+portable}} (Random\+It begin, Random\+It end, std\+::mt19937\+\_\+64 \&rng)
+\item 
+{\footnotesize template$<$typename Iter , typename Random\+Generator $>$ }\\Iter \mbox{\hyperlink{namespacetools_a2e66dba595a5a06051bd9a4e4a08fb79}{tools\+::select\+\_\+randomly}} (Iter begin, Iter end, Random\+Generator \&g)
+\begin{DoxyCompactList}\small\item\em Returns a random element between the elements in \mbox{[}begin, end) will use the random number generator provided as g. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iter $>$ }\\Iter \mbox{\hyperlink{namespacetools_aff1184c1807e839bd650c93d5de6ec9c}{tools\+::select\+\_\+randomly}} (Iter begin, Iter end)
+\begin{DoxyCompactList}\small\item\em Returns a random element same as above but defaults to the seeded random number generator defined in this file. \end{DoxyCompactList}\end{DoxyCompactItemize}

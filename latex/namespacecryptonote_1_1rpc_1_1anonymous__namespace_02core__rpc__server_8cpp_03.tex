@@ -1,0 +1,189 @@
+\hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03}{}\doxysection{cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\} Namespace Reference}
+\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03}\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_1_1extra__extractor}{extra\+\_\+extractor}}
+\item 
+class \mbox{\hyperlink{classcryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_1_1pruned__transaction}{pruned\+\_\+transaction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_af6f6ef95c67dde335ed41a6d0e266ae1}{register\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} $>$$>$ \&regs)
+\item 
+{\footnotesize template$<$typename R\+PC $>$ }\\void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_afc66fe642d8d9cda55f2b60f19a87fab}{register\+\_\+binary\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} $>$$>$ \&regs)
+\item 
+{\footnotesize template$<$typename... R\+PC, typename... Binary\+R\+PC$>$ }\\std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} $>$ $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a86fff542b08101b1890ed961364baca5}{register\+\_\+rpc\+\_\+commands}} (\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ R\+P\+C... $>$, \mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ Binary\+R\+P\+C... $>$)
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab5f2ebd68423344dffd5988d25ff78b4}{round\+\_\+up}} (uint64\+\_\+t value, uint64\+\_\+t quantum)
+\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a8ad2b9179a7e85d7d6283717a0b9aac5}{microportion}} (uint64\+\_\+t portion)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aaaec5c49e86c7ea9f6fde495008a5a90}{hexify}} (const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&v)
+\item 
+void \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab3d32d368bdb1ef8af79f79729306232}{load\+\_\+tx\+\_\+extra\+\_\+data}} (\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&e, const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&tx, \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} is\+\_\+bt)
+\item 
+\mbox{\hyperlink{structcryptonote_1_1rpc_1_1output__distribution__data}{output\+\_\+distribution\+\_\+data}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aa3d34bed5297702b3a81742f3c01d8e6}{process\+\_\+distribution}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cumulative, std\+::uint64\+\_\+t start\+\_\+height, std\+::vector$<$ std\+::uint64\+\_\+t $>$ distribution, std\+::uint64\+\_\+t \mbox{\hyperlink{ommentedCombined_2ge__scalarmult__base_8c_af3faf1ee7f5ff97e93d7e5e1c13d3269}{base}})
+\item 
+{\footnotesize template$<$typename Success $>$ }\\std\+::string \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ac4d7e0cc06879206800a229660786ed1}{handle\+\_\+ping}} (\mbox{\hyperlink{classcryptonote_1_1core}{core}} \&\mbox{\hyperlink{classcryptonote_1_1core}{core}}, std\+::array$<$ uint16\+\_\+t, 3 $>$ cur\+\_\+version, std\+::array$<$ uint16\+\_\+t, 3 $>$ \mbox{\hyperlink{structcryptonote_1_1rpc_1_1required}{required}}, std\+::string\+\_\+view ed25519\+\_\+pubkey, std\+::string\+\_\+view \mbox{\hyperlink{sn__key__tool_8cpp_a05c5dc1d909ffbabb803f4653c7d9c9c}{error}}, std\+::string\+\_\+view name, std\+::atomic$<$ std\+::time\+\_\+t $>$ \&update, std\+::chrono\+::seconds lifetime, Success \mbox{\hyperlink{expect_8h_ad0e3773cdda67d358ebf4f8b3b8719f6}{success}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a7c9a0d427f36b601bd470354aa52e291}{O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+C\+U\+T\+O\+F\+F\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+I\+ON}} = 3 $\ast$ 86400
+\item 
+constexpr uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a5dda58571188a98edefdd32d163b6396}{half\+\_\+microportion}} = 9223372036855U\+LL
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>std::mutex \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a4470634399bf97d6b67af2649a4b9fba}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::mutex}}\\
+\>std::vector$<$ std::uint64\_t $>$ \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a74a392fe566464aceb68d1624ff83461}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_distribution}}\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab4e394e5cfbbb190998693cf001bcd9c}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_from}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a1b3d61c09d24c591fbf980a9b3beef44}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_to}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a01145730545963a7f6caf211de168777}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_start\_height}} = 0\\
+\>std::uint64\_t \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a2c058940dde8eb804b7533ded9c10d15}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_base}} = 0\\
+\>\mbox{\hyperlink{structcrypto_1_1hash}{crypto::hash}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad61c72c85e672d66af20db00a3bcaf24}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_m10\_hash}} \{\}\\
+\>\mbox{\hyperlink{structcrypto_1_1hash}{crypto::hash}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a9b4c271f55a9ff1b20a833791b27c456}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached\_top\_hash}} \{\}\\
+\>\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad1ad6c0e50c84d57e0fccb260a98b0b0}{cryptonote::rpc::anonymous\_namespace\{core\_rpc\_server.cpp\}::cached}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\\
+\} \mbox{\hyperlink{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab708aca017a7d148b5a516910cac9fa0}{output\_dist\_cache}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ac4d7e0cc06879206800a229660786ed1}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ac4d7e0cc06879206800a229660786ed1}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!handle\_ping@{handle\_ping}}
+\index{handle\_ping@{handle\_ping}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{handle\_ping()}{handle\_ping()}}
+{\footnotesize\ttfamily template$<$typename Success $>$ \\
+std\+::string cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::handle\+\_\+ping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcryptonote_1_1core}{core}} \&}]{core,  }\item[{std\+::array$<$ uint16\+\_\+t, 3 $>$}]{cur\+\_\+version,  }\item[{std\+::array$<$ uint16\+\_\+t, 3 $>$}]{required,  }\item[{std\+::string\+\_\+view}]{ed25519\+\_\+pubkey,  }\item[{std\+::string\+\_\+view}]{error,  }\item[{std\+::string\+\_\+view}]{name,  }\item[{std\+::atomic$<$ std\+::time\+\_\+t $>$ \&}]{update,  }\item[{std\+::chrono\+::seconds}]{lifetime,  }\item[{Success}]{success }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aaaec5c49e86c7ea9f6fde495008a5a90}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aaaec5c49e86c7ea9f6fde495008a5a90}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!hexify@{hexify}}
+\index{hexify@{hexify}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{hexify()}{hexify()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$std\+::string$>$ cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::hexify (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab3d32d368bdb1ef8af79f79729306232}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab3d32d368bdb1ef8af79f79729306232}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!load\_tx\_extra\_data@{load\_tx\_extra\_data}}
+\index{load\_tx\_extra\_data@{load\_tx\_extra\_data}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{load\_tx\_extra\_data()}{load\_tx\_extra\_data()}}
+{\footnotesize\ttfamily void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::load\+\_\+tx\+\_\+extra\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{transport_8cpp_afd59c6c3ac6616bcae5b57d264500a83}{nlohmann\+::json}} \&}]{e,  }\item[{const \mbox{\hyperlink{classcryptonote_1_1transaction}{transaction}} \&}]{tx,  }\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{is\+\_\+bt }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a8ad2b9179a7e85d7d6283717a0b9aac5}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a8ad2b9179a7e85d7d6283717a0b9aac5}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!microportion@{microportion}}
+\index{microportion@{microportion}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{microportion()}{microportion()}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::microportion (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{portion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aa3d34bed5297702b3a81742f3c01d8e6}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_aa3d34bed5297702b3a81742f3c01d8e6}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!process\_distribution@{process\_distribution}}
+\index{process\_distribution@{process\_distribution}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{process\_distribution()}{process\_distribution()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1rpc_1_1output__distribution__data}{output\+\_\+distribution\+\_\+data}} cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::process\+\_\+distribution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{cumulative,  }\item[{std\+::uint64\+\_\+t}]{start\+\_\+height,  }\item[{std\+::vector$<$ std\+::uint64\+\_\+t $>$}]{distribution,  }\item[{std\+::uint64\+\_\+t}]{base }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_afc66fe642d8d9cda55f2b60f19a87fab}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_afc66fe642d8d9cda55f2b60f19a87fab}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!register\_binary\_rpc\_command@{register\_binary\_rpc\_command}}
+\index{register\_binary\_rpc\_command@{register\_binary\_rpc\_command}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{register\_binary\_rpc\_command()}{register\_binary\_rpc\_command()}}
+{\footnotesize\ttfamily template$<$typename R\+PC $>$ \\
+void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+binary\+\_\+rpc\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} $>$$>$ \&}]{regs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_af6f6ef95c67dde335ed41a6d0e266ae1}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_af6f6ef95c67dde335ed41a6d0e266ae1}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!register\_rpc\_command@{register\_rpc\_command}}
+\index{register\_rpc\_command@{register\_rpc\_command}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{register\_rpc\_command()}{register\_rpc\_command()}}
+{\footnotesize\ttfamily template$<$typename R\+PC $>$ \\
+void cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+command (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}} $>$$>$ \&}]{regs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a86fff542b08101b1890ed961364baca5}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a86fff542b08101b1890ed961364baca5}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!register\_rpc\_commands@{register\_rpc\_commands}}
+\index{register\_rpc\_commands@{register\_rpc\_commands}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{register\_rpc\_commands()}{register\_rpc\_commands()}}
+{\footnotesize\ttfamily template$<$typename... R\+PC, typename... Binary\+R\+PC$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structcryptonote_1_1rpc_1_1rpc__command}{rpc\+\_\+command}}$>$ $>$ cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+commands (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ R\+P\+C... $>$}]{,  }\item[{\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ Binary\+R\+P\+C... $>$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab5f2ebd68423344dffd5988d25ff78b4}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab5f2ebd68423344dffd5988d25ff78b4}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!round\_up@{round\_up}}
+\index{round\_up@{round\_up}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{round\_up()}{round\_up()}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::round\+\_\+up (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{value,  }\item[{uint64\+\_\+t}]{quantum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad1ad6c0e50c84d57e0fccb260a98b0b0}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad1ad6c0e50c84d57e0fccb260a98b0b0}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached@{cached}}
+\index{cached@{cached}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached}{cached}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a2c058940dde8eb804b7533ded9c10d15}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a2c058940dde8eb804b7533ded9c10d15}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_base@{cached\_base}}
+\index{cached\_base@{cached\_base}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_base}{cached\_base}}
+{\footnotesize\ttfamily std\+::uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+base = 0}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a74a392fe566464aceb68d1624ff83461}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a74a392fe566464aceb68d1624ff83461}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_distribution@{cached\_distribution}}
+\index{cached\_distribution@{cached\_distribution}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_distribution}{cached\_distribution}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::uint64\+\_\+t$>$ cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+distribution}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab4e394e5cfbbb190998693cf001bcd9c}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab4e394e5cfbbb190998693cf001bcd9c}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_from@{cached\_from}}
+\index{cached\_from@{cached\_from}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_from}{cached\_from}}
+{\footnotesize\ttfamily std\+::uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+from = 0}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad61c72c85e672d66af20db00a3bcaf24}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ad61c72c85e672d66af20db00a3bcaf24}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_m10\_hash@{cached\_m10\_hash}}
+\index{cached\_m10\_hash@{cached\_m10\_hash}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_m10\_hash}{cached\_m10\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+m10\+\_\+hash \{\}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a01145730545963a7f6caf211de168777}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a01145730545963a7f6caf211de168777}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_start\_height@{cached\_start\_height}}
+\index{cached\_start\_height@{cached\_start\_height}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_start\_height}{cached\_start\_height}}
+{\footnotesize\ttfamily std\+::uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+start\+\_\+height = 0}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a1b3d61c09d24c591fbf980a9b3beef44}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a1b3d61c09d24c591fbf980a9b3beef44}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_to@{cached\_to}}
+\index{cached\_to@{cached\_to}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_to}{cached\_to}}
+{\footnotesize\ttfamily std\+::uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+to = 0}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a9b4c271f55a9ff1b20a833791b27c456}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a9b4c271f55a9ff1b20a833791b27c456}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!cached\_top\_hash@{cached\_top\_hash}}
+\index{cached\_top\_hash@{cached\_top\_hash}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{cached\_top\_hash}{cached\_top\_hash}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::cached\+\_\+top\+\_\+hash \{\}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a5dda58571188a98edefdd32d163b6396}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a5dda58571188a98edefdd32d163b6396}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!half\_microportion@{half\_microportion}}
+\index{half\_microportion@{half\_microportion}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{half\_microportion}{half\_microportion}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::half\+\_\+microportion = 9223372036855U\+LL\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a4470634399bf97d6b67af2649a4b9fba}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a4470634399bf97d6b67af2649a4b9fba}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!mutex@{mutex}}
+\index{mutex@{mutex}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily std\+::mutex cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::mutex}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab708aca017a7d148b5a516910cac9fa0}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_ab708aca017a7d148b5a516910cac9fa0}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!output\_dist\_cache@{output\_dist\_cache}}
+\index{output\_dist\_cache@{output\_dist\_cache}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{output\_dist\_cache}{output\_dist\_cache}}
+{\footnotesize\ttfamily struct \{ ... \}  cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::output\+\_\+dist\+\_\+cache\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a7c9a0d427f36b601bd470354aa52e291}\label{namespacecryptonote_1_1rpc_1_1anonymous__namespace_02core__rpc__server_8cpp_03_a7c9a0d427f36b601bd470354aa52e291}} 
+\index{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}!OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION@{OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION}}
+\index{OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION@{OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION}!cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}@{cryptonote::rpc::anonymous\_namespace\lcurly{}core\_rpc\_server.cpp\rcurly{}}}
+\doxysubsubsection{\texorpdfstring{OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION}{OUTPUT\_HISTOGRAM\_RECENT\_CUTOFF\_RESTRICTION}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t cryptonote\+::rpc\+::anonymous\+\_\+namespace\{core\+\_\+rpc\+\_\+server.\+cpp\}\+::O\+U\+T\+P\+U\+T\+\_\+\+H\+I\+S\+T\+O\+G\+R\+A\+M\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+C\+U\+T\+O\+F\+F\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+I\+ON = 3 $\ast$ 86400\hspace{0.3cm}{\ttfamily [constexpr]}}
+

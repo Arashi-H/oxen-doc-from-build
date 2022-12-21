@@ -1,0 +1,45 @@
+\hypertarget{hardfork_8cpp}{}\doxysection{src/cryptonote\+\_\+basic/hardfork.cpp File Reference}
+\label{hardfork_8cpp}\index{src/cryptonote\_basic/hardfork.cpp@{src/cryptonote\_basic/hardfork.cpp}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include \char`\"{}hardfork.\+h\char`\"{}}\newline
+Include dependency graph for hardfork.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hardfork_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\static constexpr \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a84acd01dd26340cd6556e9c74bc590a0}{cryptonote\+::is\+\_\+ordered}} (const std\+::array$<$ hard\+\_\+fork, N $>$ \&forks)
+\item 
+std\+::pair$<$ const hard\+\_\+fork $\ast$, const hard\+\_\+fork $\ast$ $>$ \mbox{\hyperlink{namespacecryptonote_aaa0b3ba1c5e66ed0020c0f79d8c7daa1}{cryptonote\+::get\+\_\+hard\+\_\+forks}} (network\+\_\+type type)
+\item 
+std\+::pair$<$ std\+::optional$<$ uint64\+\_\+t $>$, std\+::optional$<$ uint64\+\_\+t $>$ $>$ \mbox{\hyperlink{namespacecryptonote_aa459a3fbcf0ae13b6f3fd617b55451a8}{cryptonote\+::get\+\_\+hard\+\_\+fork\+\_\+heights}} (network\+\_\+type nettype, hf version)
+\item 
+hf \mbox{\hyperlink{namespacecryptonote_a93973070b8da23bf9b0bc1ee7a790cd0}{cryptonote\+::hard\+\_\+fork\+\_\+ceil}} (network\+\_\+type nettype, hf version)
+\item 
+std\+::pair$<$ hf, uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_a38cdb8700a178422fc9ee8090cb7ada7}{cryptonote\+::get\+\_\+network\+\_\+version\+\_\+revision}} (network\+\_\+type nettype, uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a410eb370efee53f337fe0b0355086a46}{cryptonote\+::is\+\_\+hard\+\_\+fork\+\_\+at\+\_\+least}} (network\+\_\+type type, hf version, uint64\+\_\+t height)
+\item 
+std\+::pair$<$ hf, uint8\+\_\+t $>$ \mbox{\hyperlink{namespacecryptonote_ab02e8490e6343e681e6b10beb5edd53d}{cryptonote\+::get\+\_\+ideal\+\_\+block\+\_\+version}} (network\+\_\+type nettype, uint64\+\_\+t height)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_a5f2d6edb8bccdfec6d368cd781bc097f}{cryptonote\+::mainnet\+\_\+hard\+\_\+forks}}
+\item 
+static constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_a72f30cf743b0870d3896c24ddbe9de65}{cryptonote\+::testnet\+\_\+hard\+\_\+forks}}
+\item 
+static constexpr std\+::array \mbox{\hyperlink{namespacecryptonote_ab9da0d8751c265b382266cb2aa5b1663}{cryptonote\+::devnet\+\_\+hard\+\_\+forks}}
+\item 
+std\+::vector$<$ hard\+\_\+fork $>$ \mbox{\hyperlink{namespacecryptonote_a747a3f9c42d14f3b44aea39709954537}{cryptonote\+::fakechain\+\_\+hardforks}}
+\end{DoxyCompactItemize}

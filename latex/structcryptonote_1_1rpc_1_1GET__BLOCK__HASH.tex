@@ -1,0 +1,91 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+SH Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH}\index{cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+SH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+SH\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a0a58162755359be36990ae8f01ad56a2}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+S\+H\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_ae059277ac7d7a276fa60f604646fa587}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a74ec713d8329a4de7e5460cb1c2a3d6a}{M\+A\+X\+\_\+\+H\+E\+I\+G\+H\+TS}} = 1000
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Look up one or more blocks\textquotesingle{} hashes by their height.
+
+Inputs\+:
+\begin{DoxyItemize}
+\item heights array of block heights of which to look up the block hashes. Accepts at most 1000 heights per request.
+\end{DoxyItemize}
+
+Output values are pairs of heights as keys to block hashes as values\+:
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily height} the current blockchain height of this node
+\item {\ttfamily } $<$height$>$ the block hash of the block with the given height. Note that each height key is the stringified integer value, e.\+g. \char`\"{}3456\char`\"{} rather than 3456. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a0a58162755359be36990ae8f01ad56a2}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a0a58162755359be36990ae8f01ad56a2}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+S\+H\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a74ec713d8329a4de7e5460cb1c2a3d6a}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_a74ec713d8329a4de7e5460cb1c2a3d6a}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}!MAX\_HEIGHTS@{MAX\_HEIGHTS}}
+\index{MAX\_HEIGHTS@{MAX\_HEIGHTS}!cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}}
+\doxysubsubsection{\texorpdfstring{MAX\_HEIGHTS}{MAX\_HEIGHTS}}
+{\footnotesize\ttfamily constexpr size\+\_\+t cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+S\+H\+::\+M\+A\+X\+\_\+\+H\+E\+I\+G\+H\+TS = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_ae059277ac7d7a276fa60f604646fa587}\label{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_ae059277ac7d7a276fa60f604646fa587}} 
+\index{cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_BLOCK\_HASH@{cryptonote::rpc::GET\_BLOCK\_HASH}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__BLOCK__HASH_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+S\+H\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+B\+L\+O\+C\+K\+\_\+\+H\+A\+S\+H\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

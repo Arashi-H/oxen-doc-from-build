@@ -1,0 +1,86 @@
+\hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW}{}\doxysection{cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+AW Struct Reference}
+\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW}\index{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW@{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+AW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+AW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_a122ae20bb8f13c0400e901b6eb4a1007}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+A\+W\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_aa25ea103476b199d211480f546a0e5b0}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Returns the command that should be run to prepare a service node, includes correct parameters and service node ids formatted ready for cut and paste into daemon console.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily check} Instead of running check if the blockchain has already been pruned.
+\item {\ttfamily args} (Developer) The list of arguments used in raw registration, i.\+e. portions
+\item {\ttfamily make\+\_\+friendly} Provide information about how to use the command in the result.
+\item {\ttfamily staking\+\_\+requirement} The staking requirement to become a Service Node the registration command will be generated upon
+\end{DoxyItemize}
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily registration\+\_\+cmd} The command to execute in the wallet C\+LI to register the queried daemon as a Service Node. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_a122ae20bb8f13c0400e901b6eb4a1007}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_a122ae20bb8f13c0400e901b6eb4a1007}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW@{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW}!names@{names}}
+\index{names@{names}!cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW@{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+A\+W\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_aa25ea103476b199d211480f546a0e5b0}\label{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_aa25ea103476b199d211480f546a0e5b0}} 
+\index{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW@{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW}!request@{request}}
+\index{request@{request}!cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW@{cryptonote::rpc::GET\_SERVICE\_NODE\_REGISTRATION\_CMD\_RAW}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1GET__SERVICE__NODE__REGISTRATION__CMD__RAW_1_1request__parameters}{cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+A\+W\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+G\+E\+T\+\_\+\+S\+E\+R\+V\+I\+C\+E\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+G\+I\+S\+T\+R\+A\+T\+I\+O\+N\+\_\+\+C\+M\+D\+\_\+\+R\+A\+W\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

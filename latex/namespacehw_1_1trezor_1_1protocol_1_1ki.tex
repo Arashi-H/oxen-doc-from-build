@@ -1,0 +1,79 @@
+\hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki}{}\doxysection{hw\+::trezor\+::protocol\+::ki Namespace Reference}
+\label{namespacehw_1_1trezor_1_1protocol_1_1ki}\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} = messages\+::monero\+::\+Monero\+Key\+Image\+Sync\+Step\+Request\+\_\+\+Monero\+Transfer\+Details
+\item 
+using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_aeb2b6c8574ecbcb4d707da4555419518}{Monero\+Sub\+Address\+Indices\+List}} = messages\+::monero\+::\+Monero\+Key\+Image\+Export\+Init\+Request\+\_\+\+Monero\+Sub\+Address\+Indices\+List
+\item 
+using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a191d5e5b62f69f9d5741292c8a17b3b6}{Monero\+Exported\+Key\+Image}} = messages\+::monero\+::\+Monero\+Key\+Image\+Sync\+Step\+Ack\+\_\+\+Monero\+Exported\+Key\+Image
+\item 
+using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a302490f669ff00f300b8cd169b173c1f}{exported\+\_\+key\+\_\+image}} = \mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{hw\+::device\+\_\+cold\+::exported\+\_\+key\+\_\+image}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_adcbd91e885b6d6a0639790853c26db69}{key\+\_\+image\+\_\+data}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$wallet, const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&transfers, std\+::vector$<$ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} $>$ \&res, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} need\+\_\+all\+\_\+additionals)
+\item 
+std\+::string \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_aed49acf3cdc4d1d7f9c9035ba4b6c3fc}{compute\+\_\+hash}} (const \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} \&rr)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_aa3da241a1614aeac3f364d42ea81c878}{generate\+\_\+commitment}} (std\+::vector$<$ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} $>$ \&mtds, const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&transfers, std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Key\+Image\+Export\+Init\+Request $>$ \&req, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} need\+\_\+subaddr\+\_\+indices)
+\item 
+void \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_aa106e4c346dc334c335b8adff0cbe951}{live\+\_\+refresh\+\_\+ack}} (const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&view\+\_\+key\+\_\+priv, const \+::\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+key, const std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Live\+Refresh\+Step\+Ack $>$ \&ack, \+::\mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&in\+\_\+ephemeral, \+::\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_a302490f669ff00f300b8cd169b173c1f}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_a302490f669ff00f300b8cd169b173c1f}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!exported\_key\_image@{exported\_key\_image}}
+\index{exported\_key\_image@{exported\_key\_image}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{exported\_key\_image}{exported\_key\_image}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a302490f669ff00f300b8cd169b173c1f}{hw\+::trezor\+::protocol\+::ki\+::exported\+\_\+key\+\_\+image}} = typedef \mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{hw\+::device\+\_\+cold\+::exported\+\_\+key\+\_\+image}}}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_a191d5e5b62f69f9d5741292c8a17b3b6}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_a191d5e5b62f69f9d5741292c8a17b3b6}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!MoneroExportedKeyImage@{MoneroExportedKeyImage}}
+\index{MoneroExportedKeyImage@{MoneroExportedKeyImage}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{MoneroExportedKeyImage}{MoneroExportedKeyImage}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a191d5e5b62f69f9d5741292c8a17b3b6}{hw\+::trezor\+::protocol\+::ki\+::\+Monero\+Exported\+Key\+Image}} = typedef messages\+::monero\+::\+Monero\+Key\+Image\+Sync\+Step\+Ack\+\_\+\+Monero\+Exported\+Key\+Image}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_aeb2b6c8574ecbcb4d707da4555419518}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_aeb2b6c8574ecbcb4d707da4555419518}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!MoneroSubAddressIndicesList@{MoneroSubAddressIndicesList}}
+\index{MoneroSubAddressIndicesList@{MoneroSubAddressIndicesList}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{MoneroSubAddressIndicesList}{MoneroSubAddressIndicesList}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_aeb2b6c8574ecbcb4d707da4555419518}{hw\+::trezor\+::protocol\+::ki\+::\+Monero\+Sub\+Address\+Indices\+List}} = typedef messages\+::monero\+::\+Monero\+Key\+Image\+Export\+Init\+Request\+\_\+\+Monero\+Sub\+Address\+Indices\+List}
+
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!MoneroTransferDetails@{MoneroTransferDetails}}
+\index{MoneroTransferDetails@{MoneroTransferDetails}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{MoneroTransferDetails}{MoneroTransferDetails}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{hw\+::trezor\+::protocol\+::ki\+::\+Monero\+Transfer\+Details}} = typedef messages\+::monero\+::\+Monero\+Key\+Image\+Sync\+Step\+Request\+\_\+\+Monero\+Transfer\+Details}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_aed49acf3cdc4d1d7f9c9035ba4b6c3fc}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_aed49acf3cdc4d1d7f9c9035ba4b6c3fc}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!compute\_hash@{compute\_hash}}
+\index{compute\_hash@{compute\_hash}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{compute\_hash()}{compute\_hash()}}
+{\footnotesize\ttfamily std\+::string hw\+::trezor\+::protocol\+::ki\+::compute\+\_\+hash (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} \&}]{rr }\end{DoxyParamCaption})}
+
+Computes a hash over Monero\+Transfer\+Details. Commitment used in the KI sync. \mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_aa3da241a1614aeac3f364d42ea81c878}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_aa3da241a1614aeac3f364d42ea81c878}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!generate\_commitment@{generate\_commitment}}
+\index{generate\_commitment@{generate\_commitment}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{generate\_commitment()}{generate\_commitment()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::ki\+::generate\+\_\+commitment (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} $>$ \&}]{mtds,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&}]{transfers,  }\item[{std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Key\+Image\+Export\+Init\+Request $>$ \&}]{req,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{need\+\_\+subaddr\+\_\+indices = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Generates KI sync request with commitments computed. \mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_adcbd91e885b6d6a0639790853c26db69}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_adcbd91e885b6d6a0639790853c26db69}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!key\_image\_data@{key\_image\_data}}
+\index{key\_image\_data@{key\_image\_data}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{key\_image\_data()}{key\_image\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::trezor\+::protocol\+::ki\+::key\+\_\+image\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$}]{wallet,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&}]{transfers,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacehw_1_1trezor_1_1protocol_1_1ki_a49ac797554205cc98b80d32f48a7d638}{Monero\+Transfer\+Details}} $>$ \&}]{res,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{need\+\_\+all\+\_\+additionals = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})}
+
+Converts transfer details to the Monero\+Transfer\+Details required for KI sync \mbox{\Hypertarget{namespacehw_1_1trezor_1_1protocol_1_1ki_aa106e4c346dc334c335b8adff0cbe951}\label{namespacehw_1_1trezor_1_1protocol_1_1ki_aa106e4c346dc334c335b8adff0cbe951}} 
+\index{hw::trezor::protocol::ki@{hw::trezor::protocol::ki}!live\_refresh\_ack@{live\_refresh\_ack}}
+\index{live\_refresh\_ack@{live\_refresh\_ack}!hw::trezor::protocol::ki@{hw::trezor::protocol::ki}}
+\doxysubsubsection{\texorpdfstring{live\_refresh\_ack()}{live\_refresh\_ack()}}
+{\footnotesize\ttfamily void hw\+::trezor\+::protocol\+::ki\+::live\+\_\+refresh\+\_\+ack (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{view\+\_\+key\+\_\+priv,  }\item[{const \+::\mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{out\+\_\+key,  }\item[{const std\+::shared\+\_\+ptr$<$ messages\+::monero\+::\+Monero\+Live\+Refresh\+Step\+Ack $>$ \&}]{ack,  }\item[{\+::\mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&}]{in\+\_\+ephemeral,  }\item[{\+::\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki }\end{DoxyParamCaption})}
+
+Processes Live refresh step response, parses KI, checks the signature 

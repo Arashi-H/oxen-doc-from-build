@@ -1,0 +1,83 @@
+\hypertarget{oxen_8h}{}\doxysection{src/common/oxen.h File Reference}
+\label{oxen_8h}\index{src/common/oxen.h@{src/common/oxen.h}}
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for oxen.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{oxen_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oxen_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structoxen_1_1deferred}{oxen\+::deferred$<$ lambda\+\_\+t $>$}}
+\item 
+struct \mbox{\hyperlink{structoxen_1_1defer__helper}{oxen\+::defer\+\_\+helper}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceoxen}{oxen}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{oxen_8h_ad16a1d2836430194c6c427422c74aa2f}{O\+X\+E\+N\+\_\+\+R\+P\+C\+\_\+\+D\+O\+C\+\_\+\+I\+N\+T\+R\+O\+S\+P\+E\+CT}}
+\item 
+\#define \mbox{\hyperlink{oxen_8h_a953f95e054ba775dbd4cb2629530bfe2}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+N\+E2}}(x,  y)~x \#\# y
+\item 
+\#define \mbox{\hyperlink{oxen_8h_ac65a481956d7625a0c48809180f02bf4}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+NE}}(x,  y)~\mbox{\hyperlink{oxen_8h_a953f95e054ba775dbd4cb2629530bfe2}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+N\+E2}}(x, y)
+\item 
+\#define \mbox{\hyperlink{oxen_8h_a01ac59cae82f737428dbbeab2bb87fb7}{O\+X\+E\+N\+\_\+\+D\+E\+F\+ER}}~auto const \mbox{\hyperlink{oxen_8h_ac65a481956d7625a0c48809180f02bf4}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+NE}}(oxen\+\_\+defer\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+) = \mbox{\hyperlink{structoxen_1_1defer__helper}{oxen\+::defer\+\_\+helper}}() + \mbox{[}\&\mbox{]}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceoxen_a597f707055891757bc01951179f0461b}{oxen\+::round}} (double)
+\item 
+double \mbox{\hyperlink{namespaceoxen_a41092bdd5417104343314a26a9dfa7d5}{oxen\+::exp2}} (double)
+\item 
+{\footnotesize template$<$typename lambda\+\_\+t $>$ }\\deferred$<$ lambda\+\_\+t $>$ \mbox{\hyperlink{namespaceoxen_a0472003452dbc7abdecf2fa5d339c068}{oxen\+::defer}} (lambda\+\_\+t lambda)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespaceoxen_a8a1be004b5c20e142b6510a11d3d05f2}{oxen\+::array\+\_\+count}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}(\&)\mbox{[}N\mbox{]})
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespaceoxen_af6fbb4d063a282a360ff0d34ef32d4ff}{oxen\+::char\+\_\+count}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}}(\&)\mbox{[}N\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{oxen_8h_a01ac59cae82f737428dbbeab2bb87fb7}\label{oxen_8h_a01ac59cae82f737428dbbeab2bb87fb7}} 
+\index{oxen.h@{oxen.h}!OXEN\_DEFER@{OXEN\_DEFER}}
+\index{OXEN\_DEFER@{OXEN\_DEFER}!oxen.h@{oxen.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_DEFER}{OXEN\_DEFER}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+D\+E\+F\+ER~auto const \mbox{\hyperlink{oxen_8h_ac65a481956d7625a0c48809180f02bf4}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+NE}}(oxen\+\_\+defer\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+) = \mbox{\hyperlink{structoxen_1_1defer__helper}{oxen\+::defer\+\_\+helper}}() + \mbox{[}\&\mbox{]}()}
+
+\mbox{\Hypertarget{oxen_8h_ad16a1d2836430194c6c427422c74aa2f}\label{oxen_8h_ad16a1d2836430194c6c427422c74aa2f}} 
+\index{oxen.h@{oxen.h}!OXEN\_RPC\_DOC\_INTROSPECT@{OXEN\_RPC\_DOC\_INTROSPECT}}
+\index{OXEN\_RPC\_DOC\_INTROSPECT@{OXEN\_RPC\_DOC\_INTROSPECT}!oxen.h@{oxen.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_RPC\_DOC\_INTROSPECT}{OXEN\_RPC\_DOC\_INTROSPECT}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+R\+P\+C\+\_\+\+D\+O\+C\+\_\+\+I\+N\+T\+R\+O\+S\+P\+E\+CT}
+
+\mbox{\Hypertarget{oxen_8h_ac65a481956d7625a0c48809180f02bf4}\label{oxen_8h_ac65a481956d7625a0c48809180f02bf4}} 
+\index{oxen.h@{oxen.h}!OXEN\_TOKEN\_COMBINE@{OXEN\_TOKEN\_COMBINE}}
+\index{OXEN\_TOKEN\_COMBINE@{OXEN\_TOKEN\_COMBINE}!oxen.h@{oxen.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_TOKEN\_COMBINE}{OXEN\_TOKEN\_COMBINE}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+NE(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~\mbox{\hyperlink{oxen_8h_a953f95e054ba775dbd4cb2629530bfe2}{O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+N\+E2}}(x, y)}
+
+\mbox{\Hypertarget{oxen_8h_a953f95e054ba775dbd4cb2629530bfe2}\label{oxen_8h_a953f95e054ba775dbd4cb2629530bfe2}} 
+\index{oxen.h@{oxen.h}!OXEN\_TOKEN\_COMBINE2@{OXEN\_TOKEN\_COMBINE2}}
+\index{OXEN\_TOKEN\_COMBINE2@{OXEN\_TOKEN\_COMBINE2}!oxen.h@{oxen.h}}
+\doxysubsubsection{\texorpdfstring{OXEN\_TOKEN\_COMBINE2}{OXEN\_TOKEN\_COMBINE2}}
+{\footnotesize\ttfamily \#define O\+X\+E\+N\+\_\+\+T\+O\+K\+E\+N\+\_\+\+C\+O\+M\+B\+I\+N\+E2(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~x \#\# y}
+

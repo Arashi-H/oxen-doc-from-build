@@ -1,0 +1,108 @@
+\hypertarget{namespacehw}{}\doxysection{hw Namespace Reference}
+\label{namespacehw}\index{hw@{hw}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1core}{core}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1io}{io}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1ledger}{ledger}}
+\item 
+ \mbox{\hyperlink{namespacehw_1_1trezor}{trezor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhw_1_1device}{device}}
+\item 
+class \mbox{\hyperlink{classhw_1_1device__cold}{device\+\_\+cold}}
+\item 
+class \mbox{\hyperlink{classhw_1_1device__progress}{device\+\_\+progress}}
+\item 
+class \mbox{\hyperlink{classhw_1_1device__registry}{device\+\_\+registry}}
+\item 
+class \mbox{\hyperlink{classhw_1_1i__device__callback}{i\+\_\+device\+\_\+callback}}
+\item 
+struct \mbox{\hyperlink{structhw_1_1mode__resetter}{mode\+\_\+resetter}}
+\item 
+class \mbox{\hyperlink{classhw_1_1tx__aux__data}{tx\+\_\+aux\+\_\+data}}
+\item 
+struct \mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classhw_1_1device__registry}{device\+\_\+registry}} $\ast$ \mbox{\hyperlink{namespacehw_a6cc96aa633e9ee819dadb3e13430ec40}{get\+\_\+device\+\_\+registry}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} clear=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+static void \mbox{\hyperlink{namespacehw_af6eca4b0388480d4daa73ec73412eb5d}{clear\+\_\+device\+\_\+registry}} ()
+\item 
+\mbox{\hyperlink{classhw_1_1device}{device}} \& \mbox{\hyperlink{namespacehw_ab87bdd5076f345613704dc7793bca063}{get\+\_\+device}} (const std\+::string \&device\+\_\+descriptor)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacehw_aee893681a3feaee5586508e00f2ddf1c}{register\+\_\+device}} (const std\+::string \&device\+\_\+name, \mbox{\hyperlink{classhw_1_1device}{device}} $\ast$hw\+\_\+device)
+\item 
+void \mbox{\hyperlink{namespacehw_a5ac6c17733e6873d6055a1d41a570d57}{log\+\_\+hexbuffer}} (std\+::string\+\_\+view msg, const void $\ast$buff, size\+\_\+t len)
+\item 
+void \mbox{\hyperlink{namespacehw_a020303e4cb3a1470ff141227deb871e9}{log\+\_\+message}} (std\+::string\+\_\+view msg, std\+::string\+\_\+view info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacehw_a5a172516eef90562c31799574dd1592a}{logcat}} = log\+::\+Cat(\char`\"{}device\char`\"{})
+\item 
+static auto \mbox{\hyperlink{namespacehw_a5a172516eef90562c31799574dd1592a}{logcat}} = log\+::\+Cat(\char`\"{}device\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehw_af6eca4b0388480d4daa73ec73412eb5d}\label{namespacehw_af6eca4b0388480d4daa73ec73412eb5d}} 
+\index{hw@{hw}!clear\_device\_registry@{clear\_device\_registry}}
+\index{clear\_device\_registry@{clear\_device\_registry}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{clear\_device\_registry()}{clear\_device\_registry()}}
+{\footnotesize\ttfamily static void hw\+::clear\+\_\+device\+\_\+registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacehw_ab87bdd5076f345613704dc7793bca063}\label{namespacehw_ab87bdd5076f345613704dc7793bca063}} 
+\index{hw@{hw}!get\_device@{get\_device}}
+\index{get\_device@{get\_device}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{get\_device()}{get\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhw_1_1device}{device}} \& hw\+::get\+\_\+device (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+\_\+descriptor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_a6cc96aa633e9ee819dadb3e13430ec40}\label{namespacehw_a6cc96aa633e9ee819dadb3e13430ec40}} 
+\index{hw@{hw}!get\_device\_registry@{get\_device\_registry}}
+\index{get\_device\_registry@{get\_device\_registry}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{get\_device\_registry()}{get\_device\_registry()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classhw_1_1device__registry}{device\+\_\+registry}}$\ast$ hw\+::get\+\_\+device\+\_\+registry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}}]{clear = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacehw_a5ac6c17733e6873d6055a1d41a570d57}\label{namespacehw_a5ac6c17733e6873d6055a1d41a570d57}} 
+\index{hw@{hw}!log\_hexbuffer@{log\_hexbuffer}}
+\index{log\_hexbuffer@{log\_hexbuffer}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{log\_hexbuffer()}{log\_hexbuffer()}}
+{\footnotesize\ttfamily void hw\+::log\+\_\+hexbuffer (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{msg,  }\item[{const void $\ast$}]{buff,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_a020303e4cb3a1470ff141227deb871e9}\label{namespacehw_a020303e4cb3a1470ff141227deb871e9}} 
+\index{hw@{hw}!log\_message@{log\_message}}
+\index{log\_message@{log\_message}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{log\_message()}{log\_message()}}
+{\footnotesize\ttfamily void hw\+::log\+\_\+message (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{msg,  }\item[{std\+::string\+\_\+view}]{info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacehw_aee893681a3feaee5586508e00f2ddf1c}\label{namespacehw_aee893681a3feaee5586508e00f2ddf1c}} 
+\index{hw@{hw}!register\_device@{register\_device}}
+\index{register\_device@{register\_device}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{register\_device()}{register\_device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::register\+\_\+device (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{device\+\_\+name,  }\item[{\mbox{\hyperlink{classhw_1_1device}{device}} $\ast$}]{hw\+\_\+device }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacehw_a5a172516eef90562c31799574dd1592a}\label{namespacehw_a5a172516eef90562c31799574dd1592a}} 
+\index{hw@{hw}!logcat@{logcat}}
+\index{logcat@{logcat}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily auto hw\+::logcat = log\+::\+Cat(\char`\"{}device\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespacehw_a5a172516eef90562c31799574dd1592a}\label{namespacehw_a5a172516eef90562c31799574dd1592a}} 
+\index{hw@{hw}!logcat@{logcat}}
+\index{logcat@{logcat}!hw@{hw}}
+\doxysubsubsection{\texorpdfstring{logcat}{logcat}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily auto hw\+::logcat = log\+::\+Cat(\char`\"{}device\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+

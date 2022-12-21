@@ -1,0 +1,86 @@
+\hypertarget{electrum-words_8cpp}{}\doxysection{src/mnemonics/electrum-\/words.cpp File Reference}
+\label{electrum-words_8cpp}\index{src/mnemonics/electrum-\/words.cpp@{src/mnemonics/electrum-\/words.cpp}}
+
+
+Mnemonic seed generation and wallet restoration from them.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}epee/wipeable\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mnemonics/electrum-\/words.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/oxen.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$boost/crc.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}chinese\+\_\+simplified.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}english.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dutch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}french.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}italian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}german.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spanish.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}portuguese.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}japanese.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}russian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esperanto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lojban.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}english\+\_\+old.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}language\+\_\+base.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}singleton.\+h\char`\"{}}\newline
+Include dependency graph for electrum-\/words.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{electrum-words_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecrypto}{crypto}}
+\begin{DoxyCompactList}\small\item\em crypto namespace. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords}{crypto\+::\+Electrum\+Words}}
+\begin{DoxyCompactList}\small\item\em Mnemonic seed word generation and wallet restoration helper functions. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03}{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$ $>$ \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a2cdda05f3e17ad9e0646320017045161}{crypto\+::\+Electrum\+Words\+::get\+\_\+language\+\_\+list}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a06831687dba2f89440aa420dbe81cbe4}{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::create\+\_\+checksum\+\_\+index}} (const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&word\+\_\+list, const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$language)
+\begin{DoxyCompactList}\small\item\em Creates a checksum index in the word list array on the list of words. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a3f432550987b0f831aae4bda6a072723}{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::checksum\+\_\+test}} (std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ seed, const \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$language)
+\begin{DoxyCompactList}\small\item\em Does the checksum test on the seed passed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_ae4816951edd40fd247e3bbddc075507a}{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::find\+\_\+seed\+\_\+language}} (const std\+::vector$<$ epee\+::wipeable\+\_\+string $>$ \&seed, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} has\+\_\+checksum, std\+::vector$<$ uint32\+\_\+t $>$ \&matched\+\_\+indices, \mbox{\hyperlink{classLanguage_1_1Base}{Language\+::\+Base}} $\ast$$\ast$language)
+\begin{DoxyCompactList}\small\item\em Finds the word list that contains the seed words and puts the indices where matches occured in matched\+\_\+indices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a43b793456543ea74b629d388ba0e7892}{crypto\+::\+Electrum\+Words\+::words\+\_\+to\+\_\+bytes}} (const epee\+::wipeable\+\_\+string \&words, epee\+::wipeable\+\_\+string \&dst, size\+\_\+t len, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} duplicate, std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts seed words to bytes (secret key). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a953c0be8383470b44c318170f2c8bb37}{crypto\+::\+Electrum\+Words\+::words\+\_\+to\+\_\+bytes}} (const epee\+::wipeable\+\_\+string \&words, \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&dst, std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts seed words to bytes (secret key). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_acdfb7f7aa08c5e997ddba817e7b7bc85}{crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words}} (const unsigned char $\ast$src, size\+\_\+t len, epee\+::wipeable\+\_\+string \&words, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a0f3fb259f36212df1d1c4cd5361068cc}{crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&src, epee\+::wipeable\+\_\+string \&words, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a06443cd5fc3775b4284d6bc81573a24b}{crypto\+::\+Electrum\+Words\+::bytes\+\_\+to\+\_\+words}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&src, const std\+::string \&language\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Converts bytes (secret key) to seed words. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a84479b5257da3f88e699f2bb1e5ae160}{crypto\+::\+Electrum\+Words\+::get\+\_\+language\+\_\+list}} (std\+::vector$<$ std\+::string $>$ \&languages, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} english)
+\begin{DoxyCompactList}\small\item\em Gets a list of seed languages that are supported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a5831770e64b58a4917ccfde54be732e9}{crypto\+::\+Electrum\+Words\+::get\+\_\+is\+\_\+old\+\_\+style\+\_\+seed}} (const epee\+::wipeable\+\_\+string \&seed)
+\begin{DoxyCompactList}\small\item\em Tells if the seed passed is an old style seed or not. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacecrypto_1_1ElectrumWords_a65075d4d01a893a103596a19fe6229a6}{crypto\+::\+Electrum\+Words\+::get\+\_\+english\+\_\+name\+\_\+for}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Returns the name of a language in English. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacecrypto_1_1anonymous__namespace_02electrum-words_8cpp_03_a7845c2e6e7cfff0df25f317fefb771a6}{crypto\+::anonymous\+\_\+namespace\{electrum-\/words.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}mnemonic\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mnemonic seed generation and wallet restoration from them. 
+
+This file and its header file are for translating Electrum-\/style word lists into their equivalent byte representations for cross-\/compatibility with that method of \char`\"{}backing up\char`\"{} one\textquotesingle{}s wallet keys. 

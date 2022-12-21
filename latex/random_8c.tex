@@ -1,0 +1,91 @@
+\hypertarget{random_8c}{}\doxysection{src/crypto/random.c File Reference}
+\label{random_8c}\index{src/crypto/random.c@{src/crypto/random.c}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hash-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}initializer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}random.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$err.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for random.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{random_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{random_8c_a257ada94625f4e2423d8925776d3cfb8}{generate\+\_\+system\+\_\+random\+\_\+bytes}} (size\+\_\+t n, void $\ast$result)
+\item 
+\mbox{\hyperlink{random_8c_a7afd19e283e12f45a57f035f13222f1d}{F\+I\+N\+A\+L\+I\+Z\+ER}} (deinit\+\_\+random)
+\item 
+\mbox{\hyperlink{random_8c_afe2bc5196574dfc64645f38042c5f857}{I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}} (init\+\_\+random)
+\item 
+void \mbox{\hyperlink{random_8c_ab566302277e0b4a8b511f994c2f21e4d}{generate\+\_\+random\+\_\+bytes\+\_\+not\+\_\+thread\+\_\+safe}} (size\+\_\+t n, void $\ast$result)
+\item 
+void \mbox{\hyperlink{random_8c_a23b3124be3a84ec449bf0c5773d43f40}{add\+\_\+extra\+\_\+entropy\+\_\+not\+\_\+thread\+\_\+safe}} (const void $\ast$ptr, size\+\_\+t bytes)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} \mbox{\hyperlink{random_8c_a2371f07d597832e7fdcf7ff45c30bcfd}{state}}
+\item 
+static volatile int \mbox{\hyperlink{random_8c_abe8b35776b9499a84196040e840e612f}{curstate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{random_8c_a23b3124be3a84ec449bf0c5773d43f40}\label{random_8c_a23b3124be3a84ec449bf0c5773d43f40}} 
+\index{random.c@{random.c}!add\_extra\_entropy\_not\_thread\_safe@{add\_extra\_entropy\_not\_thread\_safe}}
+\index{add\_extra\_entropy\_not\_thread\_safe@{add\_extra\_entropy\_not\_thread\_safe}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{add\_extra\_entropy\_not\_thread\_safe()}{add\_extra\_entropy\_not\_thread\_safe()}}
+{\footnotesize\ttfamily void add\+\_\+extra\+\_\+entropy\+\_\+not\+\_\+thread\+\_\+safe (\begin{DoxyParamCaption}\item[{const void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{random_8c_a7afd19e283e12f45a57f035f13222f1d}\label{random_8c_a7afd19e283e12f45a57f035f13222f1d}} 
+\index{random.c@{random.c}!FINALIZER@{FINALIZER}}
+\index{FINALIZER@{FINALIZER}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{FINALIZER()}{FINALIZER()}}
+{\footnotesize\ttfamily F\+I\+N\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{deinit\+\_\+random}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{random_8c_ab566302277e0b4a8b511f994c2f21e4d}\label{random_8c_ab566302277e0b4a8b511f994c2f21e4d}} 
+\index{random.c@{random.c}!generate\_random\_bytes\_not\_thread\_safe@{generate\_random\_bytes\_not\_thread\_safe}}
+\index{generate\_random\_bytes\_not\_thread\_safe@{generate\_random\_bytes\_not\_thread\_safe}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{generate\_random\_bytes\_not\_thread\_safe()}{generate\_random\_bytes\_not\_thread\_safe()}}
+{\footnotesize\ttfamily void generate\+\_\+random\+\_\+bytes\+\_\+not\+\_\+thread\+\_\+safe (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{random_8c_a257ada94625f4e2423d8925776d3cfb8}\label{random_8c_a257ada94625f4e2423d8925776d3cfb8}} 
+\index{random.c@{random.c}!generate\_system\_random\_bytes@{generate\_system\_random\_bytes}}
+\index{generate\_system\_random\_bytes@{generate\_system\_random\_bytes}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{generate\_system\_random\_bytes()}{generate\_system\_random\_bytes()}}
+{\footnotesize\ttfamily static void generate\+\_\+system\+\_\+random\+\_\+bytes (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n,  }\item[{void $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{random_8c_afe2bc5196574dfc64645f38042c5f857}\label{random_8c_afe2bc5196574dfc64645f38042c5f857}} 
+\index{random.c@{random.c}!INITIALIZER@{INITIALIZER}}
+\index{INITIALIZER@{INITIALIZER}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{INITIALIZER()}{INITIALIZER()}}
+{\footnotesize\ttfamily I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER (\begin{DoxyParamCaption}\item[{init\+\_\+random}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{random_8c_abe8b35776b9499a84196040e840e612f}\label{random_8c_abe8b35776b9499a84196040e840e612f}} 
+\index{random.c@{random.c}!curstate@{curstate}}
+\index{curstate@{curstate}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{curstate}{curstate}}
+{\footnotesize\ttfamily volatile int curstate\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{random_8c_a2371f07d597832e7fdcf7ff45c30bcfd}\label{random_8c_a2371f07d597832e7fdcf7ff45c30bcfd}} 
+\index{random.c@{random.c}!state@{state}}
+\index{state@{state}!random.c@{random.c}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionhash__state}{hash\+\_\+state}} \mbox{\hyperlink{structstate}{state}}\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,85 @@
+\hypertarget{structcryptonote_1_1rpc_1_1SET__LIMIT}{}\doxysection{cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+I\+M\+IT Struct Reference}
+\label{structcryptonote_1_1rpc_1_1SET__LIMIT}\index{cryptonote::rpc::SET\_LIMIT@{cryptonote::rpc::SET\_LIMIT}}
+
+
+{\ttfamily \#include $<$core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h$>$}
+
+
+
+Inheritance diagram for cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+I\+M\+IT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{structcryptonote_1_1rpc_1_1SET__LIMIT__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cryptonote\+::rpc\+::S\+E\+T\+\_\+\+L\+I\+M\+IT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcryptonote_1_1rpc_1_1SET__LIMIT__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LIMIT_1_1request__parameters}{request\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LIMIT_a9acf65965bb846fbaabbe05b877a9624}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LIMIT_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+I\+M\+I\+T\+::request\+\_\+parameters}} \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LIMIT_a03432bfe624a66d582c9ea097c250ef3}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Set daemon \mbox{\hyperlink{namespacecryptonote_1_1p2p}{p2p}} bandwidth limits.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily limit\+\_\+down} Download limit in k\+Bytes per second. -\/1 means reset to default; 0 (or omitted) means don\textquotesingle{}t change the current limit
+\item {\ttfamily limit\+\_\+up} Upload limit in k\+Bytes per second. -\/1 means reset to default; 0 (or omitted) means don\textquotesingle{}t change the current limit
+\end{DoxyItemize}
+
+Output values available from a restricted/admin R\+PC endpoint\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily status} General R\+PC status string. {\ttfamily \char`\"{}\+O\+K\char`\"{}} means everything looks good.
+\item {\ttfamily limit\+\_\+up} The new (or existing, if unchanged) upload limit in ki\+B/s
+\item {\ttfamily limit\+\_\+down} The new (or existing, if unchanged) download limit in ki\+B/s 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SET__LIMIT_a9acf65965bb846fbaabbe05b877a9624}\label{structcryptonote_1_1rpc_1_1SET__LIMIT_a9acf65965bb846fbaabbe05b877a9624}} 
+\index{cryptonote::rpc::SET\_LIMIT@{cryptonote::rpc::SET\_LIMIT}!names@{names}}
+\index{names@{names}!cryptonote::rpc::SET\_LIMIT@{cryptonote::rpc::SET\_LIMIT}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+I\+M\+I\+T\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structcryptonote_1_1rpc_1_1SET__LIMIT_a03432bfe624a66d582c9ea097c250ef3}\label{structcryptonote_1_1rpc_1_1SET__LIMIT_a03432bfe624a66d582c9ea097c250ef3}} 
+\index{cryptonote::rpc::SET\_LIMIT@{cryptonote::rpc::SET\_LIMIT}!request@{request}}
+\index{request@{request}!cryptonote::rpc::SET\_LIMIT@{cryptonote::rpc::SET\_LIMIT}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcryptonote_1_1rpc_1_1SET__LIMIT_1_1request__parameters}{cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+I\+M\+I\+T\+::request\+\_\+parameters}} cryptonote\+::rpc\+::\+S\+E\+T\+\_\+\+L\+I\+M\+I\+T\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rpc/\mbox{\hyperlink{core__rpc__server__commands__defs_8h}{core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h}}\end{DoxyCompactItemize}

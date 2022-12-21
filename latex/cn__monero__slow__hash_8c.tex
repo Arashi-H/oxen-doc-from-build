@@ -1,0 +1,525 @@
+\hypertarget{cn__monero__slow__hash_8c}{}\doxysection{src/crypto/cn\+\_\+monero\+\_\+slow\+\_\+hash.c File Reference}
+\label{cn__monero__slow__hash_8c}\index{src/crypto/cn\_monero\_slow\_hash.c@{src/crypto/cn\_monero\_slow\_hash.c}}
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hash-\/ops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}oaes\+\_\+lib\+\_\+expand.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}variant2\+\_\+int\+\_\+sqrt.\+h\char`\"{}}\newline
+Include dependency graph for cn\+\_\+monero\+\_\+slow\+\_\+hash.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cn__monero__slow__hash_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unioncn__monero__hash__state}{cn\+\_\+monero\+\_\+hash\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}{M\+E\+M\+O\+RY}}~(1 $<$$<$ 21)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}{I\+T\+ER}}~(1 $<$$<$ 20)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}{A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}}~16
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a00dbdeb2d4320b60f33b916176932d60}{A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE}}~32
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_afd7ada9d805091ba8499cdaaed33ee9c}{A\+E\+S\+\_\+\+E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE}}~240
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_aff2cf76b1f1046f40c2e4d024a27968c}{I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+LK}}~8
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a11946686e5ccc5c4ae6bbea1abd137bb}{I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+Y\+TE}}~(\mbox{\hyperlink{cn__turtle__hash_8c_aff2cf76b1f1046f40c2e4d024a27968c}{I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+LK}} $\ast$ \mbox{\hyperlink{cn__turtle__hash_8c_af19ab913a847ad1e91c5291215116de1}{A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}})
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a0d3c242cfb5ec4f23dd63f60f3cd1941}{V\+A\+R\+I\+A\+N\+T1\+\_\+1}}(p)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a1dec909afd9bfebf04ccd3e8ffa15538}{V\+A\+R\+I\+A\+N\+T1\+\_\+2}}(p)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a531b8ce2445830c30306aa883fdd2cea}{V\+A\+R\+I\+A\+N\+T1\+\_\+\+C\+H\+E\+CK}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a0e65a2ede06b01b7c0efc799731d52fc}{N\+O\+N\+C\+E\+\_\+\+P\+O\+I\+N\+T\+ER}}~(((const uint8\+\_\+t$\ast$)data)+35)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a67e0d1e8ab62f00fb9e1dbb9f89dc9c9}{V\+A\+R\+I\+A\+N\+T1\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+IT}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_aedc574d9fb38a3fe73409a04090c7c22}{V\+A\+R\+I\+A\+N\+T1\+\_\+\+I\+N\+I\+T64}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a0a662ad10b0c8e88cd740a6a6c428914}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+I\+T64}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a9d13c993e422e61e280af057919c1ce5}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+IT}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_ae52490d820ea01941012ed33e07119ff}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+D\+D\+\_\+\+S\+S\+E2}}(base\+\_\+ptr,  offset)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a278f92dddd525a3f198b42be16d261b8}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+D\+D\+\_\+\+N\+E\+ON}}(base\+\_\+ptr,  offset)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a52ad9f44ed641f95e447c9a276805f87}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+DD}}(base\+\_\+ptr,  offset)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a33cbc9c958cf63bfa5a4b74e6f30087c}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+S\+T\+EP}}(b,  ptr)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_ade996ba4409d80d0e4c75aa31ee18533}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+S\+E2}}(b,  ptr)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a81dc1680153bccaacb1c28df0cc8fae1}{V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+TH}}(b,  ptr)
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a4489a0e5c1c19ada8c8f390735b0fd87}{V\+A\+R\+I\+A\+N\+T2\+\_\+2\+\_\+\+P\+O\+R\+T\+A\+B\+LE}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a5ef5cfe874db71812b496778eea53067}{V\+A\+R\+I\+A\+N\+T2\+\_\+2}}()
+\item 
+\#define \mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(x)~((uint64\+\_\+t $\ast$) (x))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cn__monero__slow__hash_8c_a8c098fd43b4d0b7b5dba024877e96983}{aesb\+\_\+single\+\_\+round}} (const uint8\+\_\+t $\ast$in, uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$expanded\+Key)
+\item 
+void \mbox{\hyperlink{cn__monero__slow__hash_8c_a153c914062da514d00d4d3d1e0771f45}{aesb\+\_\+pseudo\+\_\+round}} (const uint8\+\_\+t $\ast$in, uint8\+\_\+t $\ast$out, const uint8\+\_\+t $\ast$expanded\+Key)
+\item 
+void \mbox{\hyperlink{cn__monero__slow__hash_8c_a6e20629af8457c01f76231973b8f248d}{monero\+\_\+hash\+\_\+allocate\+\_\+state}} (void)
+\item 
+void \mbox{\hyperlink{cn__monero__slow__hash_8c_ad18554abe2e1a0a2edeaf60861bd5b20}{monero\+\_\+hash\+\_\+free\+\_\+state}} (void)
+\item 
+static size\+\_\+t \mbox{\hyperlink{cn__monero__slow__hash_8c_ac8328d9baa7d900951f478f0a31ab163}{e2i}} (const uint8\+\_\+t $\ast$a, size\+\_\+t count)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_a142b63d442a25163b2b6fe8e02af59a6}{mul}} (const uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b, uint8\+\_\+t $\ast$res)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_a7995c66f925960abcd510324d7644173}{sum\+\_\+half\+\_\+blocks}} (uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_afe30298f4973d919d14cae59b45582e1}{copy\+\_\+block}} (uint8\+\_\+t $\ast$dst, const uint8\+\_\+t $\ast$src)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_a3e8a21fd53a0938c299c2b76919ea5fe}{swap\+\_\+blocks}} (uint8\+\_\+t $\ast$a, uint8\+\_\+t $\ast$b)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_a9f6e6adeba568ba782a72a2fb02c403e}{xor\+\_\+blocks}} (uint8\+\_\+t $\ast$a, const uint8\+\_\+t $\ast$b)
+\item 
+static void \mbox{\hyperlink{cn__monero__slow__hash_8c_a4aadf2a19b403512e1625a0c40a8e0db}{xor64}} (uint8\+\_\+t $\ast$left, const uint8\+\_\+t $\ast$right)
+\item 
+void \mbox{\hyperlink{cn__monero__slow__hash_8c_a21b8c0ef0f16c4e73c45569faf8b34bb}{cn\+\_\+monero\+\_\+hash}} (const void $\ast$data, size\+\_\+t length, unsigned char $\ast$hash, int variant, int prehashed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static void($\ast$const \mbox{\hyperlink{cn__monero__slow__hash_8c_adb1fc1db4b17163eb7ba2aeb348c8ac1}{extra\+\_\+hashes}} \mbox{[}4\mbox{]})(const void $\ast$, size\+\_\+t, char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}\label{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!AES\_BLOCK\_SIZE@{AES\_BLOCK\_SIZE}}
+\index{AES\_BLOCK\_SIZE@{AES\_BLOCK\_SIZE}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{AES\_BLOCK\_SIZE}{AES\_BLOCK\_SIZE}}
+{\footnotesize\ttfamily \#define A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE~16}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_afd7ada9d805091ba8499cdaaed33ee9c}\label{cn__monero__slow__hash_8c_afd7ada9d805091ba8499cdaaed33ee9c}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!AES\_EXPANDED\_KEY\_SIZE@{AES\_EXPANDED\_KEY\_SIZE}}
+\index{AES\_EXPANDED\_KEY\_SIZE@{AES\_EXPANDED\_KEY\_SIZE}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{AES\_EXPANDED\_KEY\_SIZE}{AES\_EXPANDED\_KEY\_SIZE}}
+{\footnotesize\ttfamily \#define A\+E\+S\+\_\+\+E\+X\+P\+A\+N\+D\+E\+D\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE~240}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a00dbdeb2d4320b60f33b916176932d60}\label{cn__monero__slow__hash_8c_a00dbdeb2d4320b60f33b916176932d60}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!AES\_KEY\_SIZE@{AES\_KEY\_SIZE}}
+\index{AES\_KEY\_SIZE@{AES\_KEY\_SIZE}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{AES\_KEY\_SIZE}{AES\_KEY\_SIZE}}
+{\footnotesize\ttfamily \#define A\+E\+S\+\_\+\+K\+E\+Y\+\_\+\+S\+I\+ZE~32}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_aff2cf76b1f1046f40c2e4d024a27968c}\label{cn__monero__slow__hash_8c_aff2cf76b1f1046f40c2e4d024a27968c}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!INIT\_SIZE\_BLK@{INIT\_SIZE\_BLK}}
+\index{INIT\_SIZE\_BLK@{INIT\_SIZE\_BLK}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_SIZE\_BLK}{INIT\_SIZE\_BLK}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+LK~8}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a11946686e5ccc5c4ae6bbea1abd137bb}\label{cn__monero__slow__hash_8c_a11946686e5ccc5c4ae6bbea1abd137bb}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!INIT\_SIZE\_BYTE@{INIT\_SIZE\_BYTE}}
+\index{INIT\_SIZE\_BYTE@{INIT\_SIZE\_BYTE}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_SIZE\_BYTE}{INIT\_SIZE\_BYTE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+Y\+TE~(\mbox{\hyperlink{cn__turtle__hash_8c_aff2cf76b1f1046f40c2e4d024a27968c}{I\+N\+I\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+B\+LK}} $\ast$ \mbox{\hyperlink{cn__turtle__hash_8c_af19ab913a847ad1e91c5291215116de1}{A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}\label{cn__monero__slow__hash_8c_ab5b92945430bd0cb7a04673282cf70c3}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!ITER@{ITER}}
+\index{ITER@{ITER}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{ITER}{ITER}}
+{\footnotesize\ttfamily \#define I\+T\+ER~(1 $<$$<$ 20)}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}\label{cn__monero__slow__hash_8c_aaf08a63f67339d49d4c4efec7562496f}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!MEMORY@{MEMORY}}
+\index{MEMORY@{MEMORY}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{MEMORY}{MEMORY}}
+{\footnotesize\ttfamily \#define M\+E\+M\+O\+RY~(1 $<$$<$ 21)}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a0e65a2ede06b01b7c0efc799731d52fc}\label{cn__monero__slow__hash_8c_a0e65a2ede06b01b7c0efc799731d52fc}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!NONCE\_POINTER@{NONCE\_POINTER}}
+\index{NONCE\_POINTER@{NONCE\_POINTER}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{NONCE\_POINTER}{NONCE\_POINTER}}
+{\footnotesize\ttfamily \#define N\+O\+N\+C\+E\+\_\+\+P\+O\+I\+N\+T\+ER~(((const uint8\+\_\+t$\ast$)data)+35)}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}\label{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!U64@{U64}}
+\index{U64@{U64}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{U64}{U64}}
+{\footnotesize\ttfamily \#define U64(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((uint64\+\_\+t $\ast$) (x))}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a0d3c242cfb5ec4f23dd63f60f3cd1941}\label{cn__monero__slow__hash_8c_a0d3c242cfb5ec4f23dd63f60f3cd1941}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT1\_1@{VARIANT1\_1}}
+\index{VARIANT1\_1@{VARIANT1\_1}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT1\_1}{VARIANT1\_1}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T1\+\_\+1(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant == 1) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    const uint8\_t tmp = ((\textcolor{keyword}{const} uint8\_t*)(p))[11]; \(\backslash\)}
+\DoxyCodeLine{    static \textcolor{keyword}{const} uint32\_t table = 0x75310; \(\backslash\)}
+\DoxyCodeLine{    const uint8\_t index = (((tmp >> 3) \& 6) | (tmp \& 1)) << 1; \(\backslash\)}
+\DoxyCodeLine{    ((uint8\_t*)(p))[11] = tmp \string^ ((table >> index) \& 0x30); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a1dec909afd9bfebf04ccd3e8ffa15538}\label{cn__monero__slow__hash_8c_a1dec909afd9bfebf04ccd3e8ffa15538}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT1\_2@{VARIANT1\_2}}
+\index{VARIANT1\_2@{VARIANT1\_2}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT1\_2}{VARIANT1\_2}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T1\+\_\+2(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant == 1) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    xor64(p, tweak1\_2); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a531b8ce2445830c30306aa883fdd2cea}\label{cn__monero__slow__hash_8c_a531b8ce2445830c30306aa883fdd2cea}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT1\_CHECK@{VARIANT1\_CHECK}}
+\index{VARIANT1\_CHECK@{VARIANT1\_CHECK}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT1\_CHECK}{VARIANT1\_CHECK}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T1\+\_\+\+C\+H\+E\+CK(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (length < 43) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    fprintf(stderr, \textcolor{stringliteral}{"Cryptonight variant 1 needs at least 43 bytes of data"}); \(\backslash\)}
+\DoxyCodeLine{    \_exit(1); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_aedc574d9fb38a3fe73409a04090c7c22}\label{cn__monero__slow__hash_8c_aedc574d9fb38a3fe73409a04090c7c22}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT1\_INIT64@{VARIANT1\_INIT64}}
+\index{VARIANT1\_INIT64@{VARIANT1\_INIT64}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT1\_INIT64}{VARIANT1\_INIT64}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T1\+\_\+\+I\+N\+I\+T64(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (variant == 1) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    VARIANT1\_CHECK(); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  const uint64\_t tweak1\_2 = (variant == 1) ? (\mbox{\hyperlink{structstate}{state}}.hs.w[24] \string^ (*((\textcolor{keyword}{const} uint64\_t*)\mbox{\hyperlink{cn__monero__slow__hash_8c_a0e65a2ede06b01b7c0efc799731d52fc}{NONCE\_POINTER}}))) : 0}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a67e0d1e8ab62f00fb9e1dbb9f89dc9c9}\label{cn__monero__slow__hash_8c_a67e0d1e8ab62f00fb9e1dbb9f89dc9c9}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT1\_PORTABLE\_INIT@{VARIANT1\_PORTABLE\_INIT}}
+\index{VARIANT1\_PORTABLE\_INIT@{VARIANT1\_PORTABLE\_INIT}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT1\_PORTABLE\_INIT}{VARIANT1\_PORTABLE\_INIT}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T1\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  uint8\_t tweak1\_2[8]; \(\backslash\)}
+\DoxyCodeLine{  do \textcolor{keywordflow}{if} (variant == 1) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    VARIANT1\_CHECK(); \(\backslash\)}
+\DoxyCodeLine{    memcpy(\&tweak1\_2, \&\mbox{\hyperlink{structstate}{state}}.hs.b[192], \textcolor{keyword}{sizeof}(tweak1\_2)); \(\backslash\)}
+\DoxyCodeLine{    xor64(tweak1\_2, \mbox{\hyperlink{cn__monero__slow__hash_8c_a0e65a2ede06b01b7c0efc799731d52fc}{NONCE\_POINTER}}); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a5ef5cfe874db71812b496778eea53067}\label{cn__monero__slow__hash_8c_a5ef5cfe874db71812b496778eea53067}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_2@{VARIANT2\_2}}
+\index{VARIANT2\_2@{VARIANT2\_2}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_2}{VARIANT2\_2}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+2(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    *\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}} + (j \string^ 0x10)) \string^= hi; \(\backslash\)}
+\DoxyCodeLine{    *(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}} + (j \string^ 0x10)) + 1) \string^= lo; \(\backslash\)}
+\DoxyCodeLine{    hi \string^= *\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}} + (j \string^ 0x20)); \(\backslash\)}
+\DoxyCodeLine{    lo \string^= *(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}(\mbox{\hyperlink{cn__turtle__hash-amd64_8inl_a7a8fa72366fb13eb7ee56716fb724e7e}{hp\_state}} + (j \string^ 0x20)) + 1); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a4489a0e5c1c19ada8c8f390735b0fd87}\label{cn__monero__slow__hash_8c_a4489a0e5c1c19ada8c8f390735b0fd87}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_2\_PORTABLE@{VARIANT2\_2\_PORTABLE}}
+\index{VARIANT2\_2\_PORTABLE@{VARIANT2\_2\_PORTABLE}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_2\_PORTABLE}{VARIANT2\_2\_PORTABLE}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+2\+\_\+\+P\+O\+R\+T\+A\+B\+LE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (variant >= 2) \{ \(\backslash\)}
+\DoxyCodeLine{      xor\_blocks(long\_state + (j \string^ 0x10), \mbox{\hyperlink{namespaced}{d}}); \(\backslash\)}
+\DoxyCodeLine{      xor\_blocks(\mbox{\hyperlink{namespaced}{d}}, long\_state + (j \string^ 0x20)); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a0a662ad10b0c8e88cd740a6a6c428914}\label{cn__monero__slow__hash_8c_a0a662ad10b0c8e88cd740a6a6c428914}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_INIT64@{VARIANT2\_INIT64}}
+\index{VARIANT2\_INIT64@{VARIANT2\_INIT64}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INIT64}{VARIANT2\_INIT64}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+I\+T64(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  uint64\_t division\_result = 0; \(\backslash\)}
+\DoxyCodeLine{  uint64\_t sqrt\_result = 0; \(\backslash\)}
+\DoxyCodeLine{  do \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    U64(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}})[2] = \mbox{\hyperlink{structstate}{state}}.hs.w[8] \string^ \mbox{\hyperlink{structstate}{state}}.hs.w[10]; \(\backslash\)}
+\DoxyCodeLine{    U64(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}})[3] = \mbox{\hyperlink{structstate}{state}}.hs.w[9] \string^ \mbox{\hyperlink{structstate}{state}}.hs.w[11]; \(\backslash\)}
+\DoxyCodeLine{    division\_result = \mbox{\hyperlink{structstate}{state}}.hs.w[12]; \(\backslash\)}
+\DoxyCodeLine{    sqrt\_result = \mbox{\hyperlink{structstate}{state}}.hs.w[13]; \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a33cbc9c958cf63bfa5a4b74e6f30087c}\label{cn__monero__slow__hash_8c_a33cbc9c958cf63bfa5a4b74e6f30087c}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP@{VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP}}
+\index{VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP@{VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP}{VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+V\+I\+S\+I\+O\+N\+\_\+\+S\+T\+EP(\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{ptr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((uint64\_t*)(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}))[0] \string^= division\_result \string^ (sqrt\_result << 32); \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    const uint64\_t dividend = ((uint64\_t*)(ptr))[1]; \(\backslash\)}
+\DoxyCodeLine{    const uint32\_t divisor = (((uint64\_t*)(ptr))[0] + (uint32\_t)(sqrt\_result << 1)) | 0x80000001UL; \(\backslash\)}
+\DoxyCodeLine{    division\_result = ((uint32\_t)(dividend / divisor)) + \(\backslash\)}
+\DoxyCodeLine{                     (((uint64\_t)(dividend \% divisor)) << 32); \(\backslash\)}
+\DoxyCodeLine{  \} \(\backslash\)}
+\DoxyCodeLine{  const uint64\_t sqrt\_input = ((uint64\_t*)(ptr))[0] + division\_result}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_ade996ba4409d80d0e4c75aa31ee18533}\label{cn__monero__slow__hash_8c_ade996ba4409d80d0e4c75aa31ee18533}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_INTEGER\_MATH\_SSE2@{VARIANT2\_INTEGER\_MATH\_SSE2}}
+\index{VARIANT2\_INTEGER\_MATH\_SSE2@{VARIANT2\_INTEGER\_MATH\_SSE2}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_INTEGER\_MATH\_SSE2}{VARIANT2\_INTEGER\_MATH\_SSE2}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+T\+H\+\_\+\+S\+S\+E2(\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{ptr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}, ptr); \(\backslash\)}
+\DoxyCodeLine{    VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_SSE2(); \(\backslash\)}
+\DoxyCodeLine{    VARIANT2\_INTEGER\_MATH\_SQRT\_FIXUP(sqrt\_result); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a9d13c993e422e61e280af057919c1ce5}\label{cn__monero__slow__hash_8c_a9d13c993e422e61e280af057919c1ce5}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_PORTABLE\_INIT@{VARIANT2\_PORTABLE\_INIT}}
+\index{VARIANT2\_PORTABLE\_INIT@{VARIANT2\_PORTABLE\_INIT}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_PORTABLE\_INIT}{VARIANT2\_PORTABLE\_INIT}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  uint64\_t division\_result = 0; \(\backslash\)}
+\DoxyCodeLine{  uint64\_t sqrt\_result = 0; \(\backslash\)}
+\DoxyCodeLine{  do \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    memcpy(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} + \mbox{\hyperlink{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}{AES\_BLOCK\_SIZE}}, \mbox{\hyperlink{structstate}{state}}.hs.b + 64, \mbox{\hyperlink{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}{AES\_BLOCK\_SIZE}}); \(\backslash\)}
+\DoxyCodeLine{    xor64(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} + \mbox{\hyperlink{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}{AES\_BLOCK\_SIZE}}, \mbox{\hyperlink{structstate}{state}}.hs.b + 80); \(\backslash\)}
+\DoxyCodeLine{    xor64(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} + \mbox{\hyperlink{cn__monero__slow__hash_8c_af19ab913a847ad1e91c5291215116de1}{AES\_BLOCK\_SIZE}} + 8, \mbox{\hyperlink{structstate}{state}}.hs.b + 88); \(\backslash\)}
+\DoxyCodeLine{    division\_result = \mbox{\hyperlink{structstate}{state}}.hs.w[12]; \(\backslash\)}
+\DoxyCodeLine{    sqrt\_result = \mbox{\hyperlink{structstate}{state}}.hs.w[13]; \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a81dc1680153bccaacb1c28df0cc8fae1}\label{cn__monero__slow__hash_8c_a81dc1680153bccaacb1c28df0cc8fae1}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_PORTABLE\_INTEGER\_MATH@{VARIANT2\_PORTABLE\_INTEGER\_MATH}}
+\index{VARIANT2\_PORTABLE\_INTEGER\_MATH@{VARIANT2\_PORTABLE\_INTEGER\_MATH}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_PORTABLE\_INTEGER\_MATH}{VARIANT2\_PORTABLE\_INTEGER\_MATH}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+G\+E\+R\+\_\+\+M\+A\+TH(\begin{DoxyParamCaption}\item[{}]{b,  }\item[{}]{ptr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{      VARIANT2\_INTEGER\_MATH\_DIVISION\_STEP(\mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}, ptr); \(\backslash\)}
+\DoxyCodeLine{      VARIANT2\_INTEGER\_MATH\_SQRT\_STEP\_REF(); \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a52ad9f44ed641f95e447c9a276805f87}\label{cn__monero__slow__hash_8c_a52ad9f44ed641f95e447c9a276805f87}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_PORTABLE\_SHUFFLE\_ADD@{VARIANT2\_PORTABLE\_SHUFFLE\_ADD}}
+\index{VARIANT2\_PORTABLE\_SHUFFLE\_ADD@{VARIANT2\_PORTABLE\_SHUFFLE\_ADD}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_PORTABLE\_SHUFFLE\_ADD}{VARIANT2\_PORTABLE\_SHUFFLE\_ADD}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+DD(\begin{DoxyParamCaption}\item[{}]{base\+\_\+ptr,  }\item[{}]{offset }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    uint64\_t* chunk1 = \mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x10)); \(\backslash\)}
+\DoxyCodeLine{    uint64\_t* chunk2 = \mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x20)); \(\backslash\)}
+\DoxyCodeLine{    uint64\_t* chunk3 = \mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x30)); \(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    const uint64\_t chunk1\_old[2] = \{ chunk1[0], chunk1[1] \}; \(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    uint64\_t b1[2]; \(\backslash\)}
+\DoxyCodeLine{    memcpy(b1, \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}} + 16, 16); \(\backslash\)}
+\DoxyCodeLine{    chunk1[0] = chunk3[0] + b1[0]; \(\backslash\)}
+\DoxyCodeLine{    chunk1[1] = chunk3[1] + b1[1]; \(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    uint64\_t a0[2]; \(\backslash\)}
+\DoxyCodeLine{    memcpy(a0, \mbox{\hyperlink{namespaceMakeCryptoOps_a788b859b89f277e1252442fa34588fa7}{a}}, 16); \(\backslash\)}
+\DoxyCodeLine{    chunk3[0] = chunk2[0] + a0[0]; \(\backslash\)}
+\DoxyCodeLine{    chunk3[1] = chunk2[1] + a0[1]; \(\backslash\)}
+\DoxyCodeLine{    \(\backslash\)}
+\DoxyCodeLine{    uint64\_t b0[2]; \(\backslash\)}
+\DoxyCodeLine{    memcpy(b0, \mbox{\hyperlink{namespacebase_acad90f7e7db0cef6b10f63a920e4a10e}{b}}, 16); \(\backslash\)}
+\DoxyCodeLine{    chunk2[0] = chunk1\_old[0] + b0[0]; \(\backslash\)}
+\DoxyCodeLine{    chunk2[1] = chunk1\_old[1] + b0[1]; \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a278f92dddd525a3f198b42be16d261b8}\label{cn__monero__slow__hash_8c_a278f92dddd525a3f198b42be16d261b8}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_SHUFFLE\_ADD\_NEON@{VARIANT2\_SHUFFLE\_ADD\_NEON}}
+\index{VARIANT2\_SHUFFLE\_ADD\_NEON@{VARIANT2\_SHUFFLE\_ADD\_NEON}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_SHUFFLE\_ADD\_NEON}{VARIANT2\_SHUFFLE\_ADD\_NEON}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+D\+D\+\_\+\+N\+E\+ON(\begin{DoxyParamCaption}\item[{}]{base\+\_\+ptr,  }\item[{}]{offset }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    const uint64x2\_t chunk1 = vld1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x10))); \(\backslash\)}
+\DoxyCodeLine{    const uint64x2\_t chunk2 = vld1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x20))); \(\backslash\)}
+\DoxyCodeLine{    const uint64x2\_t chunk3 = vld1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x30))); \(\backslash\)}
+\DoxyCodeLine{    vst1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x10)), vaddq\_u64(chunk3, vreinterpretq\_u64\_u8(\_b1))); \(\backslash\)}
+\DoxyCodeLine{    vst1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x20)), vaddq\_u64(chunk1, vreinterpretq\_u64\_u8(\_b))); \(\backslash\)}
+\DoxyCodeLine{    vst1q\_u64(\mbox{\hyperlink{cn__monero__slow__hash_8c_a07eb808f20dd529e9acb42d417fbfaad}{U64}}((base\_ptr) + ((offset) \string^ 0x30)), vaddq\_u64(chunk2, vreinterpretq\_u64\_u8(\_a))); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_ae52490d820ea01941012ed33e07119ff}\label{cn__monero__slow__hash_8c_ae52490d820ea01941012ed33e07119ff}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!VARIANT2\_SHUFFLE\_ADD\_SSE2@{VARIANT2\_SHUFFLE\_ADD\_SSE2}}
+\index{VARIANT2\_SHUFFLE\_ADD\_SSE2@{VARIANT2\_SHUFFLE\_ADD\_SSE2}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{VARIANT2\_SHUFFLE\_ADD\_SSE2}{VARIANT2\_SHUFFLE\_ADD\_SSE2}}
+{\footnotesize\ttfamily \#define V\+A\+R\+I\+A\+N\+T2\+\_\+\+S\+H\+U\+F\+F\+L\+E\+\_\+\+A\+D\+D\+\_\+\+S\+S\+E2(\begin{DoxyParamCaption}\item[{}]{base\+\_\+ptr,  }\item[{}]{offset }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{do} \textcolor{keywordflow}{if} (variant >= 2) \(\backslash\)}
+\DoxyCodeLine{  \{ \(\backslash\)}
+\DoxyCodeLine{    const \_\_m128i chunk1 = \_mm\_load\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x10))); \(\backslash\)}
+\DoxyCodeLine{    const \_\_m128i chunk2 = \_mm\_load\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x20))); \(\backslash\)}
+\DoxyCodeLine{    const \_\_m128i chunk3 = \_mm\_load\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x30))); \(\backslash\)}
+\DoxyCodeLine{    \_mm\_store\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x10)), \_mm\_add\_epi64(chunk3, \_b1)); \(\backslash\)}
+\DoxyCodeLine{    \_mm\_store\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x20)), \_mm\_add\_epi64(chunk1, \_b)); \(\backslash\)}
+\DoxyCodeLine{    \_mm\_store\_si128((\_\_m128i *)((base\_ptr) + ((offset) \string^ 0x30)), \_mm\_add\_epi64(chunk2, \_a)); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a153c914062da514d00d4d3d1e0771f45}\label{cn__monero__slow__hash_8c_a153c914062da514d00d4d3d1e0771f45}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!aesb\_pseudo\_round@{aesb\_pseudo\_round}}
+\index{aesb\_pseudo\_round@{aesb\_pseudo\_round}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{aesb\_pseudo\_round()}{aesb\_pseudo\_round()}}
+{\footnotesize\ttfamily void aesb\+\_\+pseudo\+\_\+round (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{expanded\+Key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a8c098fd43b4d0b7b5dba024877e96983}\label{cn__monero__slow__hash_8c_a8c098fd43b4d0b7b5dba024877e96983}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!aesb\_single\_round@{aesb\_single\_round}}
+\index{aesb\_single\_round@{aesb\_single\_round}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{aesb\_single\_round()}{aesb\_single\_round()}}
+{\footnotesize\ttfamily void aesb\+\_\+single\+\_\+round (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{in,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t $\ast$}]{expanded\+Key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a21b8c0ef0f16c4e73c45569faf8b34bb}\label{cn__monero__slow__hash_8c_a21b8c0ef0f16c4e73c45569faf8b34bb}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!cn\_monero\_hash@{cn\_monero\_hash}}
+\index{cn\_monero\_hash@{cn\_monero\_hash}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{cn\_monero\_hash()}{cn\_monero\_hash()}}
+{\footnotesize\ttfamily void cn\+\_\+monero\+\_\+hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned char $\ast$}]{hash,  }\item[{int}]{variant,  }\item[{int}]{prehashed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_afe30298f4973d919d14cae59b45582e1}\label{cn__monero__slow__hash_8c_afe30298f4973d919d14cae59b45582e1}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!copy\_block@{copy\_block}}
+\index{copy\_block@{copy\_block}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{copy\_block()}{copy\_block()}}
+{\footnotesize\ttfamily static void copy\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dst,  }\item[{const uint8\+\_\+t $\ast$}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_ac8328d9baa7d900951f478f0a31ab163}\label{cn__monero__slow__hash_8c_ac8328d9baa7d900951f478f0a31ab163}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!e2i@{e2i}}
+\index{e2i@{e2i}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{e2i()}{e2i()}}
+{\footnotesize\ttfamily static size\+\_\+t e2i (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{a,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a6e20629af8457c01f76231973b8f248d}\label{cn__monero__slow__hash_8c_a6e20629af8457c01f76231973b8f248d}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!monero\_hash\_allocate\_state@{monero\_hash\_allocate\_state}}
+\index{monero\_hash\_allocate\_state@{monero\_hash\_allocate\_state}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{monero\_hash\_allocate\_state()}{monero\_hash\_allocate\_state()}}
+{\footnotesize\ttfamily void monero\+\_\+hash\+\_\+allocate\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_ad18554abe2e1a0a2edeaf60861bd5b20}\label{cn__monero__slow__hash_8c_ad18554abe2e1a0a2edeaf60861bd5b20}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!monero\_hash\_free\_state@{monero\_hash\_free\_state}}
+\index{monero\_hash\_free\_state@{monero\_hash\_free\_state}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{monero\_hash\_free\_state()}{monero\_hash\_free\_state()}}
+{\footnotesize\ttfamily void monero\+\_\+hash\+\_\+free\+\_\+state (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a142b63d442a25163b2b6fe8e02af59a6}\label{cn__monero__slow__hash_8c_a142b63d442a25163b2b6fe8e02af59a6}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!mul@{mul}}
+\index{mul@{mul}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{mul()}{mul()}}
+{\footnotesize\ttfamily static void mul (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b,  }\item[{uint8\+\_\+t $\ast$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a7995c66f925960abcd510324d7644173}\label{cn__monero__slow__hash_8c_a7995c66f925960abcd510324d7644173}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!sum\_half\_blocks@{sum\_half\_blocks}}
+\index{sum\_half\_blocks@{sum\_half\_blocks}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{sum\_half\_blocks()}{sum\_half\_blocks()}}
+{\footnotesize\ttfamily static void sum\+\_\+half\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a3e8a21fd53a0938c299c2b76919ea5fe}\label{cn__monero__slow__hash_8c_a3e8a21fd53a0938c299c2b76919ea5fe}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!swap\_blocks@{swap\_blocks}}
+\index{swap\_blocks@{swap\_blocks}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{swap\_blocks()}{swap\_blocks()}}
+{\footnotesize\ttfamily static void swap\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a4aadf2a19b403512e1625a0c40a8e0db}\label{cn__monero__slow__hash_8c_a4aadf2a19b403512e1625a0c40a8e0db}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!xor64@{xor64}}
+\index{xor64@{xor64}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{xor64()}{xor64()}}
+{\footnotesize\ttfamily static void xor64 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{left,  }\item[{const uint8\+\_\+t $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_a9f6e6adeba568ba782a72a2fb02c403e}\label{cn__monero__slow__hash_8c_a9f6e6adeba568ba782a72a2fb02c403e}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!xor\_blocks@{xor\_blocks}}
+\index{xor\_blocks@{xor\_blocks}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{xor\_blocks()}{xor\_blocks()}}
+{\footnotesize\ttfamily static void xor\+\_\+blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{const uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cn__monero__slow__hash_8c_adb1fc1db4b17163eb7ba2aeb348c8ac1}\label{cn__monero__slow__hash_8c_adb1fc1db4b17163eb7ba2aeb348c8ac1}} 
+\index{cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}!extra\_hashes@{extra\_hashes}}
+\index{extra\_hashes@{extra\_hashes}!cn\_monero\_slow\_hash.c@{cn\_monero\_slow\_hash.c}}
+\doxysubsubsection{\texorpdfstring{extra\_hashes}{extra\_hashes}}
+{\footnotesize\ttfamily void($\ast$const extra\+\_\+hashes\mbox{[}4\mbox{]})(const void $\ast$, size\+\_\+t, char $\ast$)\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \mbox{\hyperlink{hash-extra-blake_8c_a55c4579196fc715f407ee2c75a9899e5}{hash\_extra\_blake}}, \mbox{\hyperlink{hash-extra-groestl_8c_aa1b761a61f8c2f5d9f586511cae6bcd9}{hash\_extra\_groestl}}, \mbox{\hyperlink{hash-extra-jh_8c_ac767f7f2c73702e51e3be44c02b74552}{hash\_extra\_jh}}, \mbox{\hyperlink{hash-extra-skein_8c_a5bb2d6e926702f764f9ae51462998448}{hash\_extra\_skein}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

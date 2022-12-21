@@ -1,0 +1,346 @@
+\hypertarget{crypto__ops__builder_2crypto-ops_8h}{}\doxysection{src/crypto/crypto\+\_\+ops\+\_\+builder/crypto-\/ops.h File Reference}
+\label{crypto__ops__builder_2crypto-ops_8h}\index{src/crypto/crypto\_ops\_builder/crypto-\/ops.h@{src/crypto/crypto\_ops\_builder/crypto-\/ops.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for crypto-\/ops.h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{crypto__ops__builder_2crypto-ops_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{crypto__ops__builder_2crypto-ops_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}}
+\item 
+struct \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}}
+\item 
+struct \mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}}
+\item 
+struct \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}}
+\item 
+struct \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int32\+\_\+t \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a4bf4b32d60adea568200023c272e9adf}{fe}}\mbox{[}10\mbox{]}
+\item 
+typedef \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a1957f0085ec944bca5987d9c5701b739}{ge\+\_\+add}} (\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a5d1383b2bc7fad1ddbcb91941bf229c1}{ge\+\_\+dsm\+\_\+precomp}} (\mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}} r, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aad43748460394f6a39804dc1ea7b46e9}{ge\+\_\+double\+\_\+scalarmult\+\_\+base\+\_\+vartime}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const unsigned char $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const unsigned char $\ast$)
+\item 
+int \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a7be2e1c43f20ccf85c2039142fd1626a}{ge\+\_\+frombytes\+\_\+vartime}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a5d26e139d32b03c3b8ae37e81368abd9}{ge\+\_\+p1p1\+\_\+to\+\_\+p2}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const \mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aa61ddf461d72f476255ae16be48c31b3}{ge\+\_\+p1p1\+\_\+to\+\_\+p3}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const \mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a90817aae2764fc622579f8e856b26cca}{ge\+\_\+p2\+\_\+dbl}} (\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$, const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a67e4175a86b3653c53613aa708f1497f}{ge\+\_\+p3\+\_\+to\+\_\+cached}} (\mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aa4049f9ad6c53fc487a3396710760278}{ge\+\_\+p3\+\_\+to\+\_\+p2}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_af5042f3509748817a3d6faf25f7a2129}{ge\+\_\+p3\+\_\+tobytes}} (unsigned char $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a39743f4a02c802d5046735802ae804b0}{ge\+\_\+scalarmult\+\_\+base}} (\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a866c763ee7043cc39f92fc82cdc4a966}{ge\+\_\+tobytes}} (unsigned char $\ast$, const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_ac83da5f138239ce3f2fe8c7aa76020ca}{sc\+\_\+reduce}} (unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aee4a6d02294b67fc6fafd3b5088ce792}{ge\+\_\+scalarmult}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const unsigned char $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a2761eb62e3b92f6066c2f67e824f76bc}{ge\+\_\+double\+\_\+scalarmult\+\_\+precomp\+\_\+vartime}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const unsigned char $\ast$, const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$, const unsigned char $\ast$, const \mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}})
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aa231cf470f5c1f83ca603cab7f38aa78}{ge\+\_\+mul8}} (\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$, const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aeb5e75ee2732c37917751d911b89579d}{ge\+\_\+fromfe\+\_\+frombytes\+\_\+vartime}} (\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$, const unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a292f63810749c14fd5e40b95b413f229}{sc\+\_\+0}} (unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a5c464573c9df923a5f22dcec3484693e}{sc\+\_\+reduce32}} (unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_ae5436d61b0296ae267dc1b19960dc3e0}{sc\+\_\+add}} (unsigned char $\ast$, const unsigned char $\ast$, const unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a836890d1d33f6b57ad1b98fbc277cb94}{sc\+\_\+sub}} (unsigned char $\ast$, const unsigned char $\ast$, const unsigned char $\ast$)
+\item 
+void \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a9777388132ee8d8418658841ca5009e6}{sc\+\_\+mulsub}} (unsigned char $\ast$, const unsigned char $\ast$, const unsigned char $\ast$, const unsigned char $\ast$)
+\item 
+int \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aa474d08b4627c33ea91ea1b0fd426fdc}{sc\+\_\+check}} (const unsigned char $\ast$)
+\item 
+int \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_ab6f288d0891884aa73d18c175fb6d38b}{sc\+\_\+isnonzero}} (const unsigned char $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aa2bc98100af089cf631ada5b22d94bcb}{ge\+\_\+\+Bi}} \mbox{[}8\mbox{]}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_aafedceb3f2905bf1c33befb47ff73a1d}{fe\+\_\+sqrtm1}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a7ce35b625f136874bcea90654d132768}{fe\+\_\+d}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a2188e43719bf7b0a01fcbb6aa9da3f9f}{fe\+\_\+d2}}
+\item 
+const \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a51df6aaa2690a9662f3e4f44b58f8bbd}{ge\+\_\+base}} \mbox{[}32\mbox{]}\mbox{[}8\mbox{]}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a4b5927a0adef27cffd671c87cbb302eb}{fe\+\_\+ma2}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a51dc0a5b687e05ff720552abe174b0d3}{fe\+\_\+ma}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a8afb43c47469a1afaa298e68d861ab1a}{fe\+\_\+fffb1}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_af8c7820535b4fe59123d4e6c6400b346}{fe\+\_\+fffb2}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a36df1f8e0c753344451ff6d09c1e1fd7}{fe\+\_\+fffb3}}
+\item 
+const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} \mbox{\hyperlink{crypto__ops__builder_2crypto-ops_8h_a1249f6b1ed3d20aabcfcedd79e2cc658}{fe\+\_\+fffb4}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a4bf4b32d60adea568200023c272e9adf}\label{crypto__ops__builder_2crypto-ops_8h_a4bf4b32d60adea568200023c272e9adf}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe@{fe}}
+\index{fe@{fe}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe}{fe}}
+{\footnotesize\ttfamily typedef int32\+\_\+t fe\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}\label{crypto__ops__builder_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_dsmp@{ge\_dsmp}}
+\index{ge\_dsmp@{ge\_dsmp}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_dsmp}{ge\_dsmp}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} ge\+\_\+dsmp\mbox{[}8\mbox{]}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a1957f0085ec944bca5987d9c5701b739}\label{crypto__ops__builder_2crypto-ops_8h_a1957f0085ec944bca5987d9c5701b739}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_add@{ge\_add}}
+\index{ge\_add@{ge\_add}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_add()}{ge\_add()}}
+{\footnotesize\ttfamily void ge\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aad43748460394f6a39804dc1ea7b46e9}\label{crypto__ops__builder_2crypto-ops_8h_aad43748460394f6a39804dc1ea7b46e9}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_double\_scalarmult\_base\_vartime@{ge\_double\_scalarmult\_base\_vartime}}
+\index{ge\_double\_scalarmult\_base\_vartime@{ge\_double\_scalarmult\_base\_vartime}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_double\_scalarmult\_base\_vartime()}{ge\_double\_scalarmult\_base\_vartime()}}
+{\footnotesize\ttfamily void ge\+\_\+double\+\_\+scalarmult\+\_\+base\+\_\+vartime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a2761eb62e3b92f6066c2f67e824f76bc}\label{crypto__ops__builder_2crypto-ops_8h_a2761eb62e3b92f6066c2f67e824f76bc}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_double\_scalarmult\_precomp\_vartime@{ge\_double\_scalarmult\_precomp\_vartime}}
+\index{ge\_double\_scalarmult\_precomp\_vartime@{ge\_double\_scalarmult\_precomp\_vartime}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_double\_scalarmult\_precomp\_vartime()}{ge\_double\_scalarmult\_precomp\_vartime()}}
+{\footnotesize\ttfamily void ge\+\_\+double\+\_\+scalarmult\+\_\+precomp\+\_\+vartime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const}]{ge\+\_\+dsmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a5d1383b2bc7fad1ddbcb91941bf229c1}\label{crypto__ops__builder_2crypto-ops_8h_a5d1383b2bc7fad1ddbcb91941bf229c1}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_dsm\_precomp@{ge\_dsm\_precomp}}
+\index{ge\_dsm\_precomp@{ge\_dsm\_precomp}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_dsm\_precomp()}{ge\_dsm\_precomp()}}
+{\footnotesize\ttfamily void ge\+\_\+dsm\+\_\+precomp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{crypto__ops__builder_2ref10CommentedCombined_2crypto-ops_8h_a4669e1283b73550ab69cb3d1e72301b8}{ge\+\_\+dsmp}}}]{r,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a7be2e1c43f20ccf85c2039142fd1626a}\label{crypto__ops__builder_2crypto-ops_8h_a7be2e1c43f20ccf85c2039142fd1626a}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_frombytes\_vartime@{ge\_frombytes\_vartime}}
+\index{ge\_frombytes\_vartime@{ge\_frombytes\_vartime}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_frombytes\_vartime()}{ge\_frombytes\_vartime()}}
+{\footnotesize\ttfamily int ge\+\_\+frombytes\+\_\+vartime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aeb5e75ee2732c37917751d911b89579d}\label{crypto__ops__builder_2crypto-ops_8h_aeb5e75ee2732c37917751d911b89579d}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_fromfe\_frombytes\_vartime@{ge\_fromfe\_frombytes\_vartime}}
+\index{ge\_fromfe\_frombytes\_vartime@{ge\_fromfe\_frombytes\_vartime}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_fromfe\_frombytes\_vartime()}{ge\_fromfe\_frombytes\_vartime()}}
+{\footnotesize\ttfamily void ge\+\_\+fromfe\+\_\+frombytes\+\_\+vartime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aa231cf470f5c1f83ca603cab7f38aa78}\label{crypto__ops__builder_2crypto-ops_8h_aa231cf470f5c1f83ca603cab7f38aa78}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_mul8@{ge\_mul8}}
+\index{ge\_mul8@{ge\_mul8}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_mul8()}{ge\_mul8()}}
+{\footnotesize\ttfamily void ge\+\_\+mul8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a5d26e139d32b03c3b8ae37e81368abd9}\label{crypto__ops__builder_2crypto-ops_8h_a5d26e139d32b03c3b8ae37e81368abd9}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p1p1\_to\_p2@{ge\_p1p1\_to\_p2}}
+\index{ge\_p1p1\_to\_p2@{ge\_p1p1\_to\_p2}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p1p1\_to\_p2()}{ge\_p1p1\_to\_p2()}}
+{\footnotesize\ttfamily void ge\+\_\+p1p1\+\_\+to\+\_\+p2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aa61ddf461d72f476255ae16be48c31b3}\label{crypto__ops__builder_2crypto-ops_8h_aa61ddf461d72f476255ae16be48c31b3}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p1p1\_to\_p3@{ge\_p1p1\_to\_p3}}
+\index{ge\_p1p1\_to\_p3@{ge\_p1p1\_to\_p3}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p1p1\_to\_p3()}{ge\_p1p1\_to\_p3()}}
+{\footnotesize\ttfamily void ge\+\_\+p1p1\+\_\+to\+\_\+p3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a90817aae2764fc622579f8e856b26cca}\label{crypto__ops__builder_2crypto-ops_8h_a90817aae2764fc622579f8e856b26cca}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p2\_dbl@{ge\_p2\_dbl}}
+\index{ge\_p2\_dbl@{ge\_p2\_dbl}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p2\_dbl()}{ge\_p2\_dbl()}}
+{\footnotesize\ttfamily void ge\+\_\+p2\+\_\+dbl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p1p1}{ge\+\_\+p1p1}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a67e4175a86b3653c53613aa708f1497f}\label{crypto__ops__builder_2crypto-ops_8h_a67e4175a86b3653c53613aa708f1497f}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p3\_to\_cached@{ge\_p3\_to\_cached}}
+\index{ge\_p3\_to\_cached@{ge\_p3\_to\_cached}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p3\_to\_cached()}{ge\_p3\_to\_cached()}}
+{\footnotesize\ttfamily void ge\+\_\+p3\+\_\+to\+\_\+cached (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__cached}{ge\+\_\+cached}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aa4049f9ad6c53fc487a3396710760278}\label{crypto__ops__builder_2crypto-ops_8h_aa4049f9ad6c53fc487a3396710760278}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p3\_to\_p2@{ge\_p3\_to\_p2}}
+\index{ge\_p3\_to\_p2@{ge\_p3\_to\_p2}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p3\_to\_p2()}{ge\_p3\_to\_p2()}}
+{\footnotesize\ttfamily void ge\+\_\+p3\+\_\+to\+\_\+p2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_af5042f3509748817a3d6faf25f7a2129}\label{crypto__ops__builder_2crypto-ops_8h_af5042f3509748817a3d6faf25f7a2129}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_p3\_tobytes@{ge\_p3\_tobytes}}
+\index{ge\_p3\_tobytes@{ge\_p3\_tobytes}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_p3\_tobytes()}{ge\_p3\_tobytes()}}
+{\footnotesize\ttfamily void ge\+\_\+p3\+\_\+tobytes (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aee4a6d02294b67fc6fafd3b5088ce792}\label{crypto__ops__builder_2crypto-ops_8h_aee4a6d02294b67fc6fafd3b5088ce792}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_scalarmult@{ge\_scalarmult}}
+\index{ge\_scalarmult@{ge\_scalarmult}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_scalarmult()}{ge\_scalarmult()}}
+{\footnotesize\ttfamily void ge\+\_\+scalarmult (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a39743f4a02c802d5046735802ae804b0}\label{crypto__ops__builder_2crypto-ops_8h_a39743f4a02c802d5046735802ae804b0}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_scalarmult\_base@{ge\_scalarmult\_base}}
+\index{ge\_scalarmult\_base@{ge\_scalarmult\_base}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_scalarmult\_base()}{ge\_scalarmult\_base()}}
+{\footnotesize\ttfamily void ge\+\_\+scalarmult\+\_\+base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structge__p3}{ge\+\_\+p3}} $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a866c763ee7043cc39f92fc82cdc4a966}\label{crypto__ops__builder_2crypto-ops_8h_a866c763ee7043cc39f92fc82cdc4a966}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_tobytes@{ge\_tobytes}}
+\index{ge\_tobytes@{ge\_tobytes}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_tobytes()}{ge\_tobytes()}}
+{\footnotesize\ttfamily void ge\+\_\+tobytes (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{const \mbox{\hyperlink{structge__p2}{ge\+\_\+p2}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a292f63810749c14fd5e40b95b413f229}\label{crypto__ops__builder_2crypto-ops_8h_a292f63810749c14fd5e40b95b413f229}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_0@{sc\_0}}
+\index{sc\_0@{sc\_0}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_0()}{sc\_0()}}
+{\footnotesize\ttfamily void sc\+\_\+0 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_ae5436d61b0296ae267dc1b19960dc3e0}\label{crypto__ops__builder_2crypto-ops_8h_ae5436d61b0296ae267dc1b19960dc3e0}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_add@{sc\_add}}
+\index{sc\_add@{sc\_add}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_add()}{sc\_add()}}
+{\footnotesize\ttfamily void sc\+\_\+add (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aa474d08b4627c33ea91ea1b0fd426fdc}\label{crypto__ops__builder_2crypto-ops_8h_aa474d08b4627c33ea91ea1b0fd426fdc}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_check@{sc\_check}}
+\index{sc\_check@{sc\_check}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_check()}{sc\_check()}}
+{\footnotesize\ttfamily int sc\+\_\+check (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_ab6f288d0891884aa73d18c175fb6d38b}\label{crypto__ops__builder_2crypto-ops_8h_ab6f288d0891884aa73d18c175fb6d38b}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_isnonzero@{sc\_isnonzero}}
+\index{sc\_isnonzero@{sc\_isnonzero}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_isnonzero()}{sc\_isnonzero()}}
+{\footnotesize\ttfamily int sc\+\_\+isnonzero (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a9777388132ee8d8418658841ca5009e6}\label{crypto__ops__builder_2crypto-ops_8h_a9777388132ee8d8418658841ca5009e6}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_mulsub@{sc\_mulsub}}
+\index{sc\_mulsub@{sc\_mulsub}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_mulsub()}{sc\_mulsub()}}
+{\footnotesize\ttfamily void sc\+\_\+mulsub (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_ac83da5f138239ce3f2fe8c7aa76020ca}\label{crypto__ops__builder_2crypto-ops_8h_ac83da5f138239ce3f2fe8c7aa76020ca}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_reduce@{sc\_reduce}}
+\index{sc\_reduce@{sc\_reduce}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_reduce()}{sc\_reduce()}}
+{\footnotesize\ttfamily void sc\+\_\+reduce (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a5c464573c9df923a5f22dcec3484693e}\label{crypto__ops__builder_2crypto-ops_8h_a5c464573c9df923a5f22dcec3484693e}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_reduce32@{sc\_reduce32}}
+\index{sc\_reduce32@{sc\_reduce32}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_reduce32()}{sc\_reduce32()}}
+{\footnotesize\ttfamily void sc\+\_\+reduce32 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a836890d1d33f6b57ad1b98fbc277cb94}\label{crypto__ops__builder_2crypto-ops_8h_a836890d1d33f6b57ad1b98fbc277cb94}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!sc\_sub@{sc\_sub}}
+\index{sc\_sub@{sc\_sub}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{sc\_sub()}{sc\_sub()}}
+{\footnotesize\ttfamily void sc\+\_\+sub (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{,  }\item[{const unsigned char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a7ce35b625f136874bcea90654d132768}\label{crypto__ops__builder_2crypto-ops_8h_a7ce35b625f136874bcea90654d132768}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_d@{fe\_d}}
+\index{fe\_d@{fe\_d}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_d}{fe\_d}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+d}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a2188e43719bf7b0a01fcbb6aa9da3f9f}\label{crypto__ops__builder_2crypto-ops_8h_a2188e43719bf7b0a01fcbb6aa9da3f9f}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_d2@{fe\_d2}}
+\index{fe\_d2@{fe\_d2}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_d2}{fe\_d2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+d2}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a8afb43c47469a1afaa298e68d861ab1a}\label{crypto__ops__builder_2crypto-ops_8h_a8afb43c47469a1afaa298e68d861ab1a}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_fffb1@{fe\_fffb1}}
+\index{fe\_fffb1@{fe\_fffb1}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_fffb1}{fe\_fffb1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+fffb1}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_af8c7820535b4fe59123d4e6c6400b346}\label{crypto__ops__builder_2crypto-ops_8h_af8c7820535b4fe59123d4e6c6400b346}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_fffb2@{fe\_fffb2}}
+\index{fe\_fffb2@{fe\_fffb2}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_fffb2}{fe\_fffb2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+fffb2}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a36df1f8e0c753344451ff6d09c1e1fd7}\label{crypto__ops__builder_2crypto-ops_8h_a36df1f8e0c753344451ff6d09c1e1fd7}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_fffb3@{fe\_fffb3}}
+\index{fe\_fffb3@{fe\_fffb3}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_fffb3}{fe\_fffb3}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+fffb3}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a1249f6b1ed3d20aabcfcedd79e2cc658}\label{crypto__ops__builder_2crypto-ops_8h_a1249f6b1ed3d20aabcfcedd79e2cc658}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_fffb4@{fe\_fffb4}}
+\index{fe\_fffb4@{fe\_fffb4}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_fffb4}{fe\_fffb4}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+fffb4}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a51dc0a5b687e05ff720552abe174b0d3}\label{crypto__ops__builder_2crypto-ops_8h_a51dc0a5b687e05ff720552abe174b0d3}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_ma@{fe\_ma}}
+\index{fe\_ma@{fe\_ma}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_ma}{fe\_ma}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+ma}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a4b5927a0adef27cffd671c87cbb302eb}\label{crypto__ops__builder_2crypto-ops_8h_a4b5927a0adef27cffd671c87cbb302eb}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_ma2@{fe\_ma2}}
+\index{fe\_ma2@{fe\_ma2}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_ma2}{fe\_ma2}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+ma2}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aafedceb3f2905bf1c33befb47ff73a1d}\label{crypto__ops__builder_2crypto-ops_8h_aafedceb3f2905bf1c33befb47ff73a1d}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!fe\_sqrtm1@{fe\_sqrtm1}}
+\index{fe\_sqrtm1@{fe\_sqrtm1}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{fe\_sqrtm1}{fe\_sqrtm1}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{ommentedCombined_2fe_8h_ab45785043c0b08061589d510f7054e51}{fe}} fe\+\_\+sqrtm1}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_a51df6aaa2690a9662f3e4f44b58f8bbd}\label{crypto__ops__builder_2crypto-ops_8h_a51df6aaa2690a9662f3e4f44b58f8bbd}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_base@{ge\_base}}
+\index{ge\_base@{ge\_base}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_base}{ge\_base}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} ge\+\_\+base\mbox{[}32\mbox{]}\mbox{[}8\mbox{]}}
+
+\mbox{\Hypertarget{crypto__ops__builder_2crypto-ops_8h_aa2bc98100af089cf631ada5b22d94bcb}\label{crypto__ops__builder_2crypto-ops_8h_aa2bc98100af089cf631ada5b22d94bcb}} 
+\index{crypto-\/ops.h@{crypto-\/ops.h}!ge\_Bi@{ge\_Bi}}
+\index{ge\_Bi@{ge\_Bi}!crypto-\/ops.h@{crypto-\/ops.h}}
+\doxysubsubsection{\texorpdfstring{ge\_Bi}{ge\_Bi}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structge__precomp}{ge\+\_\+precomp}} ge\+\_\+\+Bi\mbox{[}8\mbox{]}}
+

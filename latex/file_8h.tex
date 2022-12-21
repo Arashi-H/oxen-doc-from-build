@@ -1,0 +1,53 @@
+\hypertarget{file_8h}{}\doxysection{src/common/file.h File Reference}
+\label{file_8h}\index{src/common/file.h@{src/common/file.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$system\+\_\+error$>$}\newline
+{\ttfamily \#include \char`\"{}fs.\+h\char`\"{}}\newline
+Include dependency graph for file.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtools_1_1close__file}{tools\+::close\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em Functional class for closing C file handles. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtools_1_1private__file}{tools\+::private\+\_\+file}}
+\begin{DoxyCompactList}\small\item\em A file restricted to process owner A\+ND process. Deletes file on destruction. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtools_1_1file__locker}{tools\+::file\+\_\+locker}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+fs\+::path \mbox{\hyperlink{namespacetools_a2f6c201eed2a27d6fed5c59ef9085f55}{tools\+::get\+\_\+default\+\_\+data\+\_\+dir}} ()
+\begin{DoxyCompactList}\small\item\em Returns the default data directory. \end{DoxyCompactList}\item 
+fs\+::path \mbox{\hyperlink{namespacetools_ad10ad2f8ad2acbb8af9e5bdcb715b8b1}{tools\+::get\+\_\+depreciated\+\_\+default\+\_\+data\+\_\+dir}} ()
+\item 
+void \mbox{\hyperlink{namespacetools_a4c473913d209e8f4f935691c9490eb14}{tools\+::set\+\_\+strict\+\_\+default\+\_\+file\+\_\+permissions}} (\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} strict)
+\item 
+void \mbox{\hyperlink{namespacetools_aca51679755e50afe3213b27bc212de3d}{tools\+::closefrom}} (int \mbox{\hyperlink{aesb_8c_a78eca4dcca91c6f7a65890d87d4795c5}{fd}})
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a029b755a4f57d9dde02a2fc934857faa}{tools\+::slurp\+\_\+file}} (const fs\+::path \&filename, std\+::string \&contents)
+\begin{DoxyCompactList}\small\item\em Reads a (binary) file from disk into the string {\ttfamily contents}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_a0b3cb93fe139420afd4a1dcaf3f6f1f6}{tools\+::dump\+\_\+file}} (const fs\+::path \&filename, std\+::string\+\_\+view contents)
+\begin{DoxyCompactList}\small\item\em Dumps (binary) string contents to disk. The file is overwritten if it already exists. \end{DoxyCompactList}\end{DoxyCompactItemize}

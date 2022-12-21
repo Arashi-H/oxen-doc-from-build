@@ -1,0 +1,69 @@
+\hypertarget{tx__pool_8cpp}{}\doxysection{src/cryptonote\+\_\+core/tx\+\_\+pool.cpp File Reference}
+\label{tx__pool_8cpp}\index{src/cryptonote\_core/tx\_pool.cpp@{src/cryptonote\_core/tx\_pool.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}common/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tx\+\_\+pool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+tx\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+boost\+\_\+serialization.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/service\+\_\+node\+\_\+list.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/locked\+\_\+txn.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}blockchain\+\_\+db/blockchain\+\_\+db.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/boost\+\_\+serialization\+\_\+helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/lock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/hex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/median.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/int-\/util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/warnings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+Include dependency graph for tx\+\_\+pool.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tx__pool_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecryptonote}{cryptonote}}
+\begin{DoxyCompactList}\small\item\em Holds cryptonote related classes and helpers. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tx__pool_8cpp_af383dd9b65e44f9b5cb5b67b49b9cb52}{D\+I\+S\+A\+B\+L\+E\+\_\+\+V\+S\+\_\+\+W\+A\+R\+N\+I\+N\+GS}} (4244 4345 4503) using namespace crypto
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03_a874f693887fb82335355ea546d506140}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}\+::get\+\_\+relay\+\_\+delay}} (time\+\_\+t now, time\+\_\+t received)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03_a09c859f4e839bfc76eae4b121aa1fb1c}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}\+::get\+\_\+transaction\+\_\+weight\+\_\+limit}} (hf version)
+\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_afdc8e199890a6736c859e9d2c4c50d93}{cryptonote\+::have\+\_\+key\+\_\+images}} (const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&k\+\_\+images, const transaction\+\_\+prefix \&tx)
+\begin{DoxyCompactList}\small\item\em check if any of a transaction\textquotesingle{}s spent key images are present in a given set \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacecryptonote_a6f14f572bdd30d3ea607d237aae3dc1b}{cryptonote\+::append\+\_\+key\+\_\+images}} (std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} $>$ \&k\+\_\+images, const transaction\+\_\+prefix \&tx)
+\begin{DoxyCompactList}\small\item\em append the key images from a transaction to the given set \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{namespacecryptonote_ac6dff86d388c8ae4a38d0c82b27f1dab}{cryptonote\+::logcat}} = log\+::\+Cat(\char`\"{}txpool\char`\"{})
+\item 
+const time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03_a431e73880f14e2c18fd73438e5e3b885}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}\+::\+M\+I\+N\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+T\+I\+ME}} = (60 $\ast$ 5)
+\item 
+const time\+\_\+t \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03_ac999f98e12a6bd775d6de49e1ecc2880}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}\+::\+M\+A\+X\+\_\+\+R\+E\+L\+A\+Y\+\_\+\+T\+I\+ME}} = (60 $\ast$ 60 $\ast$ 4)
+\item 
+const float \mbox{\hyperlink{namespacecryptonote_1_1anonymous__namespace_02tx__pool_8cpp_03_a64f0dfec67ba77a57987371a26fc2729}{cryptonote\+::anonymous\+\_\+namespace\{tx\+\_\+pool.\+cpp\}\+::\+A\+C\+C\+E\+P\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 1.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tx__pool_8cpp_af383dd9b65e44f9b5cb5b67b49b9cb52}\label{tx__pool_8cpp_af383dd9b65e44f9b5cb5b67b49b9cb52}} 
+\index{tx\_pool.cpp@{tx\_pool.cpp}!DISABLE\_VS\_WARNINGS@{DISABLE\_VS\_WARNINGS}}
+\index{DISABLE\_VS\_WARNINGS@{DISABLE\_VS\_WARNINGS}!tx\_pool.cpp@{tx\_pool.cpp}}
+\doxysubsubsection{\texorpdfstring{DISABLE\_VS\_WARNINGS()}{DISABLE\_VS\_WARNINGS()}}
+{\footnotesize\ttfamily D\+I\+S\+A\+B\+L\+E\+\_\+\+V\+S\+\_\+\+W\+A\+R\+N\+I\+N\+GS (\begin{DoxyParamCaption}\item[{4244 4345}]{4503 }\end{DoxyParamCaption})}
+

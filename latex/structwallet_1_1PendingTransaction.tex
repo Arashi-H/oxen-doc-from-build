@@ -1,0 +1,221 @@
+\hypertarget{structwallet_1_1PendingTransaction}{}\doxysection{wallet\+::Pending\+Transaction Struct Reference}
+\label{structwallet_1_1PendingTransaction}\index{wallet::PendingTransaction@{wallet::PendingTransaction}}
+
+
+{\ttfamily \#include $<$pending\+\_\+transaction.\+hpp$>$}
+
+
+
+Collaboration diagram for wallet\+::Pending\+Transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1PendingTransaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a3d3998ce0454920a2897cd360970a93a}{extra\+\_\+size}} () const
+\item 
+\mbox{\hyperlink{structwallet_1_1PendingTransaction_ae3ac0bdeb26544e0dff9f84c704cc049}{Pending\+Transaction}} ()=default
+\item 
+\mbox{\hyperlink{structwallet_1_1PendingTransaction_a383db232eb11e561aad7548d8637207e}{Pending\+Transaction}} (const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&new\+\_\+recipients)
+\item 
+int64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a95e80201b8f1945e81fcc308d7adae9f}{get\+\_\+fee}} () const
+\item 
+int64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_ac0decc8ab4ca0a536d9d137dd6fa9da2}{get\+\_\+fee}} (int64\+\_\+t n\+\_\+inputs) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a05063ea8ca60106b0d408e74f6738ca1}{get\+\_\+tx\+\_\+weight}} (int64\+\_\+t n\+\_\+inputs) const
+\item 
+void \mbox{\hyperlink{structwallet_1_1PendingTransaction_ac8ef72957fe5b35dbca534c386841bbe}{update\+\_\+change}} ()
+\item 
+int64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a935bb6074fff9ffaba3bd256e37ae1f9}{sum\+\_\+inputs}} () const
+\item 
+int64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a2438326a53ae1d1630fe7a27f823b14e}{sum\+\_\+outputs}} () const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1PendingTransaction_ad6fb1e069fe61131382cbbb987297a1d}{finalise}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \mbox{\hyperlink{structwallet_1_1PendingTransaction_aea4f0dfd247ba1870f9230cba5c833fa}{recipients}}
+\item 
+\mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} \mbox{\hyperlink{structwallet_1_1PendingTransaction_a0295f0a93a3bdb70f64d01de8f13859f}{change}}
+\item 
+std\+::string \mbox{\hyperlink{structwallet_1_1PendingTransaction_a2f798b188a04a2bdff095111638e2ed0}{memo}}
+\item 
+\mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} \mbox{\hyperlink{structwallet_1_1PendingTransaction_ab18a00b3f96ab5ca3360cb2d7c0cc190}{tx}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Output}{Output}} $>$ \mbox{\hyperlink{structwallet_1_1PendingTransaction_abb56a15fe3aa80385ee6da32ebc6136a}{chosen\+\_\+outputs}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}} $>$ $>$ \mbox{\hyperlink{structwallet_1_1PendingTransaction_a5a4069286f7221dbc85a4f6fa27bfda5}{decoys}}
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{structwallet_1_1PendingTransaction_a1e8d40fd89de969362ae0cf5eafbb198}{blink}} = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a7dc820c95aab2a6e59813315e94cd998}{unlock\+\_\+time}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_aafd80e3ba8f5a225cab353b85babafb9}{change\+\_\+unlock\+\_\+time}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_aedf722bc218814335b6bf95efbe84a85}{fee}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a60e2de9c14720e1c5378fc43f4f6ce15}{fee\+\_\+per\+\_\+byte}} = \mbox{\hyperlink{namespacecryptonote_ab7217d4bb9e010da1ec099921c98c250}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V13}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a7f5d090929ec43899e070d26ff8f3e22}{fee\+\_\+per\+\_\+output}} = \mbox{\hyperlink{namespacecryptonote_a01a05f31eeb91828b9e54b4856a5b7e5}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V18}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structwallet_1_1PendingTransaction_a0149556794feb4a120c2d6241895c8b6}{mixin\+\_\+count}} = \mbox{\hyperlink{namespacecryptonote_a9ac9d5d290db926f69ff6620be3d00a1}{cryptonote\+::\+T\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+E\+C\+O\+YS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_ae3ac0bdeb26544e0dff9f84c704cc049}\label{structwallet_1_1PendingTransaction_ae3ac0bdeb26544e0dff9f84c704cc049}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!PendingTransaction@{PendingTransaction}}
+\index{PendingTransaction@{PendingTransaction}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{PendingTransaction()}{PendingTransaction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily wallet\+::\+Pending\+Transaction\+::\+Pending\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a383db232eb11e561aad7548d8637207e}\label{structwallet_1_1PendingTransaction_a383db232eb11e561aad7548d8637207e}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!PendingTransaction@{PendingTransaction}}
+\index{PendingTransaction@{PendingTransaction}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{PendingTransaction()}{PendingTransaction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily wallet\+::\+Pending\+Transaction\+::\+Pending\+Transaction (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} $>$ \&}]{new\+\_\+recipients }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a3d3998ce0454920a2897cd360970a93a}\label{structwallet_1_1PendingTransaction_a3d3998ce0454920a2897cd360970a93a}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!extra\_size@{extra\_size}}
+\index{extra\_size@{extra\_size}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{extra\_size()}{extra\_size()}}
+{\footnotesize\ttfamily size\+\_\+t wallet\+::\+Pending\+Transaction\+::extra\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_ad6fb1e069fe61131382cbbb987297a1d}\label{structwallet_1_1PendingTransaction_ad6fb1e069fe61131382cbbb987297a1d}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!finalise@{finalise}}
+\index{finalise@{finalise}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{finalise()}{finalise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::\+Pending\+Transaction\+::finalise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a95e80201b8f1945e81fcc308d7adae9f}\label{structwallet_1_1PendingTransaction_a95e80201b8f1945e81fcc308d7adae9f}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!get\_fee@{get\_fee}}
+\index{get\_fee@{get\_fee}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{get\_fee()}{get\_fee()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Pending\+Transaction\+::get\+\_\+fee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_ac0decc8ab4ca0a536d9d137dd6fa9da2}\label{structwallet_1_1PendingTransaction_ac0decc8ab4ca0a536d9d137dd6fa9da2}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!get\_fee@{get\_fee}}
+\index{get\_fee@{get\_fee}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{get\_fee()}{get\_fee()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Pending\+Transaction\+::get\+\_\+fee (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{n\+\_\+inputs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a05063ea8ca60106b0d408e74f6738ca1}\label{structwallet_1_1PendingTransaction_a05063ea8ca60106b0d408e74f6738ca1}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!get\_tx\_weight@{get\_tx\_weight}}
+\index{get\_tx\_weight@{get\_tx\_weight}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_weight()}{get\_tx\_weight()}}
+{\footnotesize\ttfamily size\+\_\+t wallet\+::\+Pending\+Transaction\+::get\+\_\+tx\+\_\+weight (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{n\+\_\+inputs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a935bb6074fff9ffaba3bd256e37ae1f9}\label{structwallet_1_1PendingTransaction_a935bb6074fff9ffaba3bd256e37ae1f9}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!sum\_inputs@{sum\_inputs}}
+\index{sum\_inputs@{sum\_inputs}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{sum\_inputs()}{sum\_inputs()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Pending\+Transaction\+::sum\+\_\+inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a2438326a53ae1d1630fe7a27f823b14e}\label{structwallet_1_1PendingTransaction_a2438326a53ae1d1630fe7a27f823b14e}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!sum\_outputs@{sum\_outputs}}
+\index{sum\_outputs@{sum\_outputs}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{sum\_outputs()}{sum\_outputs()}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Pending\+Transaction\+::sum\+\_\+outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_ac8ef72957fe5b35dbca534c386841bbe}\label{structwallet_1_1PendingTransaction_ac8ef72957fe5b35dbca534c386841bbe}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!update\_change@{update\_change}}
+\index{update\_change@{update\_change}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{update\_change()}{update\_change()}}
+{\footnotesize\ttfamily void wallet\+::\+Pending\+Transaction\+::update\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a1e8d40fd89de969362ae0cf5eafbb198}\label{structwallet_1_1PendingTransaction_a1e8d40fd89de969362ae0cf5eafbb198}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!blink@{blink}}
+\index{blink@{blink}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{blink}{blink}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} wallet\+::\+Pending\+Transaction\+::blink = \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a0295f0a93a3bdb70f64d01de8f13859f}\label{structwallet_1_1PendingTransaction_a0295f0a93a3bdb70f64d01de8f13859f}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!change@{change}}
+\index{change@{change}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{change}{change}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}} wallet\+::\+Pending\+Transaction\+::change}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_aafd80e3ba8f5a225cab353b85babafb9}\label{structwallet_1_1PendingTransaction_aafd80e3ba8f5a225cab353b85babafb9}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!change\_unlock\_time@{change\_unlock\_time}}
+\index{change\_unlock\_time@{change\_unlock\_time}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{change\_unlock\_time}{change\_unlock\_time}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Pending\+Transaction\+::change\+\_\+unlock\+\_\+time = 0}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_abb56a15fe3aa80385ee6da32ebc6136a}\label{structwallet_1_1PendingTransaction_abb56a15fe3aa80385ee6da32ebc6136a}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!chosen\_outputs@{chosen\_outputs}}
+\index{chosen\_outputs@{chosen\_outputs}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{chosen\_outputs}{chosen\_outputs}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structwallet_1_1Output}{Output}}$>$ wallet\+::\+Pending\+Transaction\+::chosen\+\_\+outputs}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a5a4069286f7221dbc85a4f6fa27bfda5}\label{structwallet_1_1PendingTransaction_a5a4069286f7221dbc85a4f6fa27bfda5}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!decoys@{decoys}}
+\index{decoys@{decoys}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{decoys}{decoys}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{structwallet_1_1Decoy}{Decoy}}$>$ $>$ wallet\+::\+Pending\+Transaction\+::decoys}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_aedf722bc218814335b6bf95efbe84a85}\label{structwallet_1_1PendingTransaction_aedf722bc218814335b6bf95efbe84a85}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!fee@{fee}}
+\index{fee@{fee}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{fee}{fee}}
+{\footnotesize\ttfamily int64\+\_\+t wallet\+::\+Pending\+Transaction\+::fee = 0}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a60e2de9c14720e1c5378fc43f4f6ce15}\label{structwallet_1_1PendingTransaction_a60e2de9c14720e1c5378fc43f4f6ce15}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!fee\_per\_byte@{fee\_per\_byte}}
+\index{fee\_per\_byte@{fee\_per\_byte}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{fee\_per\_byte}{fee\_per\_byte}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Pending\+Transaction\+::fee\+\_\+per\+\_\+byte = \mbox{\hyperlink{namespacecryptonote_ab7217d4bb9e010da1ec099921c98c250}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+B\+Y\+T\+E\+\_\+\+V13}}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a7f5d090929ec43899e070d26ff8f3e22}\label{structwallet_1_1PendingTransaction_a7f5d090929ec43899e070d26ff8f3e22}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!fee\_per\_output@{fee\_per\_output}}
+\index{fee\_per\_output@{fee\_per\_output}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{fee\_per\_output}{fee\_per\_output}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Pending\+Transaction\+::fee\+\_\+per\+\_\+output = \mbox{\hyperlink{namespacecryptonote_a01a05f31eeb91828b9e54b4856a5b7e5}{cryptonote\+::\+F\+E\+E\+\_\+\+P\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V18}}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a2f798b188a04a2bdff095111638e2ed0}\label{structwallet_1_1PendingTransaction_a2f798b188a04a2bdff095111638e2ed0}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!memo@{memo}}
+\index{memo@{memo}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{memo}{memo}}
+{\footnotesize\ttfamily std\+::string wallet\+::\+Pending\+Transaction\+::memo}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a0149556794feb4a120c2d6241895c8b6}\label{structwallet_1_1PendingTransaction_a0149556794feb4a120c2d6241895c8b6}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!mixin\_count@{mixin\_count}}
+\index{mixin\_count@{mixin\_count}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{mixin\_count}{mixin\_count}}
+{\footnotesize\ttfamily size\+\_\+t wallet\+::\+Pending\+Transaction\+::mixin\+\_\+count = \mbox{\hyperlink{namespacecryptonote_a9ac9d5d290db926f69ff6620be3d00a1}{cryptonote\+::\+T\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+E\+C\+O\+YS}}}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_aea4f0dfd247ba1870f9230cba5c833fa}\label{structwallet_1_1PendingTransaction_aea4f0dfd247ba1870f9230cba5c833fa}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!recipients@{recipients}}
+\index{recipients@{recipients}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{recipients}{recipients}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structcryptonote_1_1tx__destination__entry}{cryptonote\+::tx\+\_\+destination\+\_\+entry}}$>$ wallet\+::\+Pending\+Transaction\+::recipients}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_ab18a00b3f96ab5ca3360cb2d7c0cc190}\label{structwallet_1_1PendingTransaction_ab18a00b3f96ab5ca3360cb2d7c0cc190}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!tx@{tx}}
+\index{tx@{tx}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{tx}{tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1transaction}{cryptonote\+::transaction}} wallet\+::\+Pending\+Transaction\+::tx}
+
+\mbox{\Hypertarget{structwallet_1_1PendingTransaction_a7dc820c95aab2a6e59813315e94cd998}\label{structwallet_1_1PendingTransaction_a7dc820c95aab2a6e59813315e94cd998}} 
+\index{wallet::PendingTransaction@{wallet::PendingTransaction}!unlock\_time@{unlock\_time}}
+\index{unlock\_time@{unlock\_time}!wallet::PendingTransaction@{wallet::PendingTransaction}}
+\doxysubsubsection{\texorpdfstring{unlock\_time}{unlock\_time}}
+{\footnotesize\ttfamily uint64\+\_\+t wallet\+::\+Pending\+Transaction\+::unlock\+\_\+time = 0}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/\mbox{\hyperlink{pending__transaction_8hpp}{pending\+\_\+transaction.\+hpp}}\item 
+src/wallet3/\mbox{\hyperlink{_2pending__transaction_8cpp}{pending\+\_\+transaction.\+cpp}}\end{DoxyCompactItemize}

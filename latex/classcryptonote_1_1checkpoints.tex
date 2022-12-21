@@ -1,0 +1,239 @@
+\hypertarget{classcryptonote_1_1checkpoints}{}\doxysection{cryptonote\+::checkpoints Class Reference}
+\label{classcryptonote_1_1checkpoints}\index{cryptonote::checkpoints@{cryptonote::checkpoints}}
+
+
+A container for blockchain checkpoints.  
+
+
+
+
+{\ttfamily \#include $<$checkpoints.\+h$>$}
+
+
+
+Collaboration diagram for cryptonote\+::checkpoints\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcryptonote_1_1checkpoints__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1checkpoints_aadca58f3b1011750fcc44fa0cf7a88a5}{block\+\_\+add}} (const \mbox{\hyperlink{structcryptonote_1_1block__add__info}{block\+\_\+add\+\_\+info}} \&info)
+\item 
+void \mbox{\hyperlink{classcryptonote_1_1checkpoints_a868362933dcc589221afcb2a332eeb84}{blockchain\+\_\+detached}} (uint64\+\_\+t height)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_ab47dcc19932b3c1ebd9bd5330493ece5}{get\+\_\+checkpoint}} (uint64\+\_\+t height, \mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&checkpoint) const
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a764ef614550eeb040c1eecf44bd8f1f1}{add\+\_\+checkpoint}} (uint64\+\_\+t height, const std\+::string \&hash\+\_\+str)
+\begin{DoxyCompactList}\small\item\em adds a checkpoint to the container \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a2b3325cc6d0a0265597d98c22a2ce987}{update\+\_\+checkpoint}} (\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} const \&checkpoint)
+\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a9cd9aca9fa9762e781a822303726560f}{is\+\_\+in\+\_\+checkpoint\+\_\+zone}} (uint64\+\_\+t height) const
+\begin{DoxyCompactList}\small\item\em checks if there is a checkpoint in the future \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a854d4d46a78d0a57e4c8b7c8e1feec00}{check\+\_\+block}} (uint64\+\_\+t height, const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&h, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$is\+\_\+a\+\_\+checkpoint=nullptr, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$service\+\_\+node\+\_\+checkpoint=nullptr) const
+\begin{DoxyCompactList}\small\item\em checks if the given height and hash agree with the checkpoints \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a634d4ad0bc7178e0e0d767553cb64284}{is\+\_\+alternative\+\_\+block\+\_\+allowed}} (uint64\+\_\+t blockchain\+\_\+height, uint64\+\_\+t block\+\_\+height, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$service\+\_\+node\+\_\+checkpoint=nullptr)
+\begin{DoxyCompactList}\small\item\em checks if alternate chain blocks should be kept for a given height and updates m\+\_\+immutable\+\_\+height based on the available checkpoints \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1checkpoints_aea81ba398e12322699852d180838c049}{get\+\_\+max\+\_\+height}} () const
+\begin{DoxyCompactList}\small\item\em gets the highest checkpoint height \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a6941989f0d72741fbd4ad0bca7976aa8}{init}} (\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} nettype, class \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$db)
+\begin{DoxyCompactList}\small\item\em loads the default main chain checkpoints \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} \mbox{\hyperlink{classcryptonote_1_1checkpoints_a8443c313b4cf6f0aa84831a1992b1843}{m\+\_\+nettype}} = \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aa0db45d2a4141101bdfe48e3314cfbca3}{network\+\_\+type\+::\+U\+N\+D\+E\+F\+I\+N\+ED}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1checkpoints_a3c6d940f8251b562205788f40118db77}{m\+\_\+last\+\_\+cull\+\_\+height}} = 0
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classcryptonote_1_1checkpoints_a523bfc231e44c476cc897af219bbf37e}{m\+\_\+immutable\+\_\+height}} = 0
+\item 
+\mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$ \mbox{\hyperlink{classcryptonote_1_1checkpoints_accc42dccdcb443fe87abff2ff1c69943}{m\+\_\+db}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A container for blockchain checkpoints. 
+
+A checkpoint is a pre-\/defined hash for the block at a given height. Some of these are compiled-\/in, while others can be loaded at runtime either from a json file or via D\+NS from a checkpoint-\/hosting server. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a764ef614550eeb040c1eecf44bd8f1f1}\label{classcryptonote_1_1checkpoints_a764ef614550eeb040c1eecf44bd8f1f1}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!add\_checkpoint@{add\_checkpoint}}
+\index{add\_checkpoint@{add\_checkpoint}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{add\_checkpoint()}{add\_checkpoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::add\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const std\+::string \&}]{hash\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+adds a checkpoint to the container 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height of the block the checkpoint is for \\
+\hline
+{\em hash\+\_\+str} & the hash of the block, as a string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if parsing the hash fails, or if the height is a duplicate A\+ND the existing checkpoint hash does not match the new one, otherwise returns true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_aadca58f3b1011750fcc44fa0cf7a88a5}\label{classcryptonote_1_1checkpoints_aadca58f3b1011750fcc44fa0cf7a88a5}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!block\_add@{block\_add}}
+\index{block\_add@{block\_add}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{block\_add()}{block\_add()}}
+{\footnotesize\ttfamily void cryptonote\+::checkpoints\+::block\+\_\+add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structcryptonote_1_1block__add__info}{block\+\_\+add\+\_\+info}} \&}]{info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a868362933dcc589221afcb2a332eeb84}\label{classcryptonote_1_1checkpoints_a868362933dcc589221afcb2a332eeb84}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!blockchain\_detached@{blockchain\_detached}}
+\index{blockchain\_detached@{blockchain\_detached}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{blockchain\_detached()}{blockchain\_detached()}}
+{\footnotesize\ttfamily void cryptonote\+::checkpoints\+::blockchain\+\_\+detached (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a854d4d46a78d0a57e4c8b7c8e1feec00}\label{classcryptonote_1_1checkpoints_a854d4d46a78d0a57e4c8b7c8e1feec00}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!check\_block@{check\_block}}
+\index{check\_block@{check\_block}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{check\_block()}{check\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::check\+\_\+block (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{const \mbox{\hyperlink{structcrypto_1_1hash}{crypto\+::hash}} \&}]{h,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$}]{is\+\_\+a\+\_\+checkpoint = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$}]{service\+\_\+node\+\_\+checkpoint = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+
+
+checks if the given height and hash agree with the checkpoints 
+
+This function checks if the given height and hash exist in the checkpoints container. If so, it returns whether or not the passed parameters match the stored values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height to be checked \\
+\hline
+{\em h} & the hash to be checked \\
+\hline
+{\em blockchain} & the blockchain to query ancestor blocks from the current height \\
+\hline
+{\em is\+\_\+a\+\_\+checkpoint} & optional return-\/by-\/pointer if there is a checkpoint at the given height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is no checkpoint at the given height, true if the passed parameters match the stored checkpoint, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_ab47dcc19932b3c1ebd9bd5330493ece5}\label{classcryptonote_1_1checkpoints_ab47dcc19932b3c1ebd9bd5330493ece5}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!get\_checkpoint@{get\_checkpoint}}
+\index{get\_checkpoint@{get\_checkpoint}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{get\_checkpoint()}{get\_checkpoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::get\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height,  }\item[{\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} \&}]{checkpoint }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_aea81ba398e12322699852d180838c049}\label{classcryptonote_1_1checkpoints_aea81ba398e12322699852d180838c049}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!get\_max\_height@{get\_max\_height}}
+\index{get\_max\_height@{get\_max\_height}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{get\_max\_height()}{get\_max\_height()}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::checkpoints\+::get\+\_\+max\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+gets the highest checkpoint height 
+
+\begin{DoxyReturn}{Returns}
+the height of the highest checkpoint 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a6941989f0d72741fbd4ad0bca7976aa8}\label{classcryptonote_1_1checkpoints_a6941989f0d72741fbd4ad0bca7976aa8}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!init@{init}}
+\index{init@{init}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}}}]{nettype,  }\item[{class \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}} $\ast$}]{db }\end{DoxyParamCaption})}
+
+
+
+loads the default main chain checkpoints 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nettype} & network type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true unless adding a checkpoint fails 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a634d4ad0bc7178e0e0d767553cb64284}\label{classcryptonote_1_1checkpoints_a634d4ad0bc7178e0e0d767553cb64284}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!is\_alternative\_block\_allowed@{is\_alternative\_block\_allowed}}
+\index{is\_alternative\_block\_allowed@{is\_alternative\_block\_allowed}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{is\_alternative\_block\_allowed()}{is\_alternative\_block\_allowed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::is\+\_\+alternative\+\_\+block\+\_\+allowed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{blockchain\+\_\+height,  }\item[{uint64\+\_\+t}]{block\+\_\+height,  }\item[{\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $\ast$}]{service\+\_\+node\+\_\+checkpoint = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+checks if alternate chain blocks should be kept for a given height and updates m\+\_\+immutable\+\_\+height based on the available checkpoints 
+
+this basically says if the blockchain is smaller than the first checkpoint then alternate blocks are allowed. Alternatively, if the last checkpoint {\itshape before} the end of the current chain is also before the block to be added, then this is fine.
+
+
+\begin{DoxyParams}{Parameters}
+{\em blockchain\+\_\+height} & the current blockchain height \\
+\hline
+{\em block\+\_\+height} & the height of the block to be added as alternate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if alternate blocks are allowed given the parameters, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a9cd9aca9fa9762e781a822303726560f}\label{classcryptonote_1_1checkpoints_a9cd9aca9fa9762e781a822303726560f}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!is\_in\_checkpoint\_zone@{is\_in\_checkpoint\_zone}}
+\index{is\_in\_checkpoint\_zone@{is\_in\_checkpoint\_zone}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{is\_in\_checkpoint\_zone()}{is\_in\_checkpoint\_zone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::is\+\_\+in\+\_\+checkpoint\+\_\+zone (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{height }\end{DoxyParamCaption}) const}
+
+
+
+checks if there is a checkpoint in the future 
+
+This function checks if the height passed is lower than the highest checkpoint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & the height to check against\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if no checkpoints, otherwise returns whether or not the height passed is lower than the highest checkpoint. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a2b3325cc6d0a0265597d98c22a2ce987}\label{classcryptonote_1_1checkpoints_a2b3325cc6d0a0265597d98c22a2ce987}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!update\_checkpoint@{update\_checkpoint}}
+\index{update\_checkpoint@{update\_checkpoint}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{update\_checkpoint()}{update\_checkpoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} cryptonote\+::checkpoints\+::update\+\_\+checkpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcryptonote_1_1checkpoint__t}{checkpoint\+\_\+t}} const \&}]{checkpoint }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_accc42dccdcb443fe87abff2ff1c69943}\label{classcryptonote_1_1checkpoints_accc42dccdcb443fe87abff2ff1c69943}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!m\_db@{m\_db}}
+\index{m\_db@{m\_db}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{m\_db}{m\_db}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcryptonote_1_1BlockchainDB}{Blockchain\+DB}}$\ast$ cryptonote\+::checkpoints\+::m\+\_\+db\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a523bfc231e44c476cc897af219bbf37e}\label{classcryptonote_1_1checkpoints_a523bfc231e44c476cc897af219bbf37e}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!m\_immutable\_height@{m\_immutable\_height}}
+\index{m\_immutable\_height@{m\_immutable\_height}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{m\_immutable\_height}{m\_immutable\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::checkpoints\+::m\+\_\+immutable\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a3c6d940f8251b562205788f40118db77}\label{classcryptonote_1_1checkpoints_a3c6d940f8251b562205788f40118db77}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!m\_last\_cull\_height@{m\_last\_cull\_height}}
+\index{m\_last\_cull\_height@{m\_last\_cull\_height}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{m\_last\_cull\_height}{m\_last\_cull\_height}}
+{\footnotesize\ttfamily uint64\+\_\+t cryptonote\+::checkpoints\+::m\+\_\+last\+\_\+cull\+\_\+height = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classcryptonote_1_1checkpoints_a8443c313b4cf6f0aa84831a1992b1843}\label{classcryptonote_1_1checkpoints_a8443c313b4cf6f0aa84831a1992b1843}} 
+\index{cryptonote::checkpoints@{cryptonote::checkpoints}!m\_nettype@{m\_nettype}}
+\index{m\_nettype@{m\_nettype}!cryptonote::checkpoints@{cryptonote::checkpoints}}
+\doxysubsubsection{\texorpdfstring{m\_nettype}{m\_nettype}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70a}{network\+\_\+type}} cryptonote\+::checkpoints\+::m\+\_\+nettype = \mbox{\hyperlink{namespacecryptonote_a1823e8e194e85c09ac7231f927cca70aa0db45d2a4141101bdfe48e3314cfbca3}{network\+\_\+type\+::\+U\+N\+D\+E\+F\+I\+N\+ED}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/checkpoints/\mbox{\hyperlink{checkpoints_8h}{checkpoints.\+h}}\item 
+src/checkpoints/\mbox{\hyperlink{checkpoints_8cpp}{checkpoints.\+cpp}}\end{DoxyCompactItemize}

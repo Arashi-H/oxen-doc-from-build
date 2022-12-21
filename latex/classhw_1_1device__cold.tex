@@ -1,0 +1,112 @@
+\hypertarget{classhw_1_1device__cold}{}\doxysection{hw\+::device\+\_\+cold Class Reference}
+\label{classhw_1_1device__cold}\index{hw::device\_cold@{hw::device\_cold}}
+
+
+{\ttfamily \#include $<$device\+\_\+cold.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classhw_1_1device__cold_1_1op__progress}{op\+\_\+progress}}
+\item 
+struct \mbox{\hyperlink{structhw_1_1device__cold_1_1tx__key__data__t}{tx\+\_\+key\+\_\+data\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classhw_1_1device__cold_1_1tx__progress}{tx\+\_\+progress}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{exported\+\_\+key\+\_\+image}} = std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_a94e3b0471822b5e4a682e7a477467c00}{ki\+\_\+sync}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$wallet, const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&transfers, \mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{exported\+\_\+key\+\_\+image}} \&ski)=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_ad0598781d63e62cf77faf83c2db11ac3}{tx\+\_\+sign}} (\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$wallet, const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}} \&unsigned\+\_\+tx, \mbox{\hyperlink{structwallet_1_1signed__tx__set}{wallet\+::signed\+\_\+tx\+\_\+set}} \&signed\+\_\+tx, \mbox{\hyperlink{classhw_1_1tx__aux__data}{tx\+\_\+aux\+\_\+data}} \&aux\+\_\+data)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device__cold_a46c9ba60a3b5a10c5fcb0b7a8dc8f46c}{is\+\_\+get\+\_\+tx\+\_\+key\+\_\+supported}} () const
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_aa23b161edb5001d6dbd07385d7a9b893}{load\+\_\+tx\+\_\+key\+\_\+data}} (\mbox{\hyperlink{structhw_1_1device__cold_1_1tx__key__data__t}{tx\+\_\+key\+\_\+data\+\_\+t}} \&res, const std\+::string \&\mbox{\hyperlink{classhw_1_1tx__aux__data}{tx\+\_\+aux\+\_\+data}})=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_ab3f98869dd67ff42d78e7cd66677e1fe}{get\+\_\+tx\+\_\+key}} (std\+::vector$<$\+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&tx\+\_\+keys, const \mbox{\hyperlink{structhw_1_1device__cold_1_1tx__key__data__t}{tx\+\_\+key\+\_\+data\+\_\+t}} \&\mbox{\hyperlink{classhw_1_1tx__aux__data}{tx\+\_\+aux\+\_\+data}}, const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&view\+\_\+key\+\_\+priv)=0
+\item 
+virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{classhw_1_1device__cold_ab1824ea4259002fc0c1c75617a9f42b4}{is\+\_\+live\+\_\+refresh\+\_\+supported}} () const
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_a25b9017b86ef92668295263b6d411beb}{live\+\_\+refresh\+\_\+start}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_a41acff5cf16b5c7aa5722b207411d2db}{live\+\_\+refresh}} (const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&view\+\_\+key\+\_\+priv, const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&out\+\_\+key, const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&recv\+\_\+derivation, size\+\_\+t real\+\_\+output\+\_\+index, const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&received\+\_\+index, \mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&in\+\_\+ephemeral, \mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&ki)=0
+\item 
+virtual void \mbox{\hyperlink{classhw_1_1device__cold_aa3d667e52dbeb28bfc64f7975606f822}{live\+\_\+refresh\+\_\+finish}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}\label{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}} 
+\index{hw::device\_cold@{hw::device\_cold}!exported\_key\_image@{exported\_key\_image}}
+\index{exported\_key\_image@{exported\_key\_image}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{exported\_key\_image}{exported\_key\_image}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{hw\+::device\+\_\+cold\+::exported\+\_\+key\+\_\+image}} =  std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}}, \mbox{\hyperlink{structcrypto_1_1signature}{crypto\+::signature}}$>$ $>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhw_1_1device__cold_ab3f98869dd67ff42d78e7cd66677e1fe}\label{classhw_1_1device__cold_ab3f98869dd67ff42d78e7cd66677e1fe}} 
+\index{hw::device\_cold@{hw::device\_cold}!get\_tx\_key@{get\_tx\_key}}
+\index{get\_tx\_key@{get\_tx\_key}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{get\_tx\_key()}{get\_tx\_key()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::get\+\_\+tx\+\_\+key (\begin{DoxyParamCaption}\item[{std\+::vector$<$\+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&}]{tx\+\_\+keys,  }\item[{const \mbox{\hyperlink{structhw_1_1device__cold_1_1tx__key__data__t}{tx\+\_\+key\+\_\+data\+\_\+t}} \&}]{tx\+\_\+aux\+\_\+data,  }\item[{const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{view\+\_\+key\+\_\+priv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Decrypts TX keys. \mbox{\Hypertarget{classhw_1_1device__cold_a46c9ba60a3b5a10c5fcb0b7a8dc8f46c}\label{classhw_1_1device__cold_a46c9ba60a3b5a10c5fcb0b7a8dc8f46c}} 
+\index{hw::device\_cold@{hw::device\_cold}!is\_get\_tx\_key\_supported@{is\_get\_tx\_key\_supported}}
+\index{is\_get\_tx\_key\_supported@{is\_get\_tx\_key\_supported}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{is\_get\_tx\_key\_supported()}{is\_get\_tx\_key\_supported()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+\_\+cold\+::is\+\_\+get\+\_\+tx\+\_\+key\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get tx key support check. \mbox{\Hypertarget{classhw_1_1device__cold_ab1824ea4259002fc0c1c75617a9f42b4}\label{classhw_1_1device__cold_ab1824ea4259002fc0c1c75617a9f42b4}} 
+\index{hw::device\_cold@{hw::device\_cold}!is\_live\_refresh\_supported@{is\_live\_refresh\_supported}}
+\index{is\_live\_refresh\_supported@{is\_live\_refresh\_supported}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{is\_live\_refresh\_supported()}{is\_live\_refresh\_supported()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} hw\+::device\+\_\+cold\+::is\+\_\+live\+\_\+refresh\+\_\+supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Live refresh support check \mbox{\Hypertarget{classhw_1_1device__cold_a94e3b0471822b5e4a682e7a477467c00}\label{classhw_1_1device__cold_a94e3b0471822b5e4a682e7a477467c00}} 
+\index{hw::device\_cold@{hw::device\_cold}!ki\_sync@{ki\_sync}}
+\index{ki\_sync@{ki\_sync}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{ki\_sync()}{ki\_sync()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::ki\+\_\+sync (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$}]{wallet,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structwallet_1_1transfer__details}{wallet\+::transfer\+\_\+details}} $>$ \&}]{transfers,  }\item[{\mbox{\hyperlink{classhw_1_1device__cold_a7b729c8fdcad3ed2b57fe798b542f43a}{exported\+\_\+key\+\_\+image}} \&}]{ski }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Key image sync with the cold protocol. \mbox{\Hypertarget{classhw_1_1device__cold_a41acff5cf16b5c7aa5722b207411d2db}\label{classhw_1_1device__cold_a41acff5cf16b5c7aa5722b207411d2db}} 
+\index{hw::device\_cold@{hw::device\_cold}!live\_refresh@{live\_refresh}}
+\index{live\_refresh@{live\_refresh}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{live\_refresh()}{live\_refresh()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::live\+\_\+refresh (\begin{DoxyParamCaption}\item[{const \+::\mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&}]{view\+\_\+key\+\_\+priv,  }\item[{const \mbox{\hyperlink{structcrypto_1_1public__key}{crypto\+::public\+\_\+key}} \&}]{out\+\_\+key,  }\item[{const \mbox{\hyperlink{structcrypto_1_1key__derivation}{crypto\+::key\+\_\+derivation}} \&}]{recv\+\_\+derivation,  }\item[{size\+\_\+t}]{real\+\_\+output\+\_\+index,  }\item[{const \mbox{\hyperlink{structcryptonote_1_1subaddress__index}{cryptonote\+::subaddress\+\_\+index}} \&}]{received\+\_\+index,  }\item[{\mbox{\hyperlink{structcryptonote_1_1keypair}{cryptonote\+::keypair}} \&}]{in\+\_\+ephemeral,  }\item[{\mbox{\hyperlink{structcrypto_1_1key__image}{crypto\+::key\+\_\+image}} \&}]{ki }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+One live refresh step \mbox{\Hypertarget{classhw_1_1device__cold_aa3d667e52dbeb28bfc64f7975606f822}\label{classhw_1_1device__cold_aa3d667e52dbeb28bfc64f7975606f822}} 
+\index{hw::device\_cold@{hw::device\_cold}!live\_refresh\_finish@{live\_refresh\_finish}}
+\index{live\_refresh\_finish@{live\_refresh\_finish}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{live\_refresh\_finish()}{live\_refresh\_finish()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::live\+\_\+refresh\+\_\+finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Live refresh process termination \mbox{\Hypertarget{classhw_1_1device__cold_a25b9017b86ef92668295263b6d411beb}\label{classhw_1_1device__cold_a25b9017b86ef92668295263b6d411beb}} 
+\index{hw::device\_cold@{hw::device\_cold}!live\_refresh\_start@{live\_refresh\_start}}
+\index{live\_refresh\_start@{live\_refresh\_start}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{live\_refresh\_start()}{live\_refresh\_start()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::live\+\_\+refresh\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Starts live refresh process with the device \mbox{\Hypertarget{classhw_1_1device__cold_aa23b161edb5001d6dbd07385d7a9b893}\label{classhw_1_1device__cold_aa23b161edb5001d6dbd07385d7a9b893}} 
+\index{hw::device\_cold@{hw::device\_cold}!load\_tx\_key\_data@{load\_tx\_key\_data}}
+\index{load\_tx\_key\_data@{load\_tx\_key\_data}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{load\_tx\_key\_data()}{load\_tx\_key\_data()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::load\+\_\+tx\+\_\+key\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1device__cold_1_1tx__key__data__t}{tx\+\_\+key\+\_\+data\+\_\+t}} \&}]{res,  }\item[{const std\+::string \&}]{tx\+\_\+aux\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Loads TX aux data required for tx key. \mbox{\Hypertarget{classhw_1_1device__cold_ad0598781d63e62cf77faf83c2db11ac3}\label{classhw_1_1device__cold_ad0598781d63e62cf77faf83c2db11ac3}} 
+\index{hw::device\_cold@{hw::device\_cold}!tx\_sign@{tx\_sign}}
+\index{tx\_sign@{tx\_sign}!hw::device\_cold@{hw::device\_cold}}
+\doxysubsubsection{\texorpdfstring{tx\_sign()}{tx\_sign()}}
+{\footnotesize\ttfamily virtual void hw\+::device\+\_\+cold\+::tx\+\_\+sign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhw_1_1wallet__shim}{wallet\+\_\+shim}} $\ast$}]{wallet,  }\item[{const \mbox{\hyperlink{structwallet_1_1unsigned__tx__set}{wallet\+::unsigned\+\_\+tx\+\_\+set}} \&}]{unsigned\+\_\+tx,  }\item[{\mbox{\hyperlink{structwallet_1_1signed__tx__set}{wallet\+::signed\+\_\+tx\+\_\+set}} \&}]{signed\+\_\+tx,  }\item[{\mbox{\hyperlink{classhw_1_1tx__aux__data}{tx\+\_\+aux\+\_\+data}} \&}]{aux\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Signs unsigned transaction with the cold protocol. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/device/\mbox{\hyperlink{device__cold_8hpp}{device\+\_\+cold.\+hpp}}\end{DoxyCompactItemize}

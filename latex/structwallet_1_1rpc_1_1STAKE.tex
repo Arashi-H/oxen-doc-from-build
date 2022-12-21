@@ -1,0 +1,97 @@
+\hypertarget{structwallet_1_1rpc_1_1STAKE}{}\doxysection{wallet\+::rpc\+::S\+T\+A\+KE Struct Reference}
+\label{structwallet_1_1rpc_1_1STAKE}\index{wallet::rpc::STAKE@{wallet::rpc::STAKE}}
+
+
+{\ttfamily \#include $<$commands.\+h$>$}
+
+
+
+Inheritance diagram for wallet\+::rpc\+::S\+T\+A\+KE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{structwallet_1_1rpc_1_1STAKE__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for wallet\+::rpc\+::S\+T\+A\+KE\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structwallet_1_1rpc_1_1STAKE__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1STAKE_1_1REQUEST}{R\+E\+Q\+U\+E\+ST}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structwallet_1_1rpc_1_1STAKE_a3bd32af2e2be327003ec370e47b879d2}{names}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwallet_1_1rpc_1_1STAKE_1_1REQUEST}{wallet\+::rpc\+::\+S\+T\+A\+K\+E\+::\+R\+E\+Q\+U\+E\+ST}} \mbox{\hyperlink{structwallet_1_1rpc_1_1STAKE_a31656b3bdd12e70d7e291bbbde6d3114}{request}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Stake for Service Node.
+
+Inputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily destination} -- Primary Public address that the rewards will go to.
+\item {\ttfamily amount} -- Amount of Loki to stake in atomic units.
+\item {\ttfamily subaddr\+\_\+indices} -- (Optional) Transfer from this set of subaddresses. (Defaults to 0)
+\item {\ttfamily service\+\_\+node\+\_\+key} -- Service Node Public Address.
+\item {\ttfamily priority} -- Set a priority for the transaction. Accepted values are\+: or 0-\/4 for\+: default, unimportant, normal, elevated, priority.
+\item {\ttfamily get\+\_\+tx\+\_\+key} -- (Optional) Return the transaction key after sending.
+\item {\ttfamily do\+\_\+not\+\_\+relay} -- (Optional) If true, the newly created transaction will not be relayed to the oxen network. (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+hex} -- Return the transaction as hex string after sending (Defaults to false)
+\item {\ttfamily get\+\_\+tx\+\_\+metadata} -- Return the metadata needed to relay the transaction. (Defaults to false)
+\end{DoxyItemize}
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily tx\+\_\+hash} -- Publicly searchable transaction hash.
+\item {\ttfamily tx\+\_\+key} -- Transaction key if {\ttfamily get\+\_\+tx\+\_\+key} is {\ttfamily true}, otherwise, blank string.
+\item {\ttfamily amount} -- Amount transferred for the transaction in atomic units.
+\item {\ttfamily fee} -- Value in atomic units of the fee charged for the tx.
+\item {\ttfamily tx\+\_\+blob} -- Raw transaction represented as hex string, if get\+\_\+tx\+\_\+hex is true.
+\item {\ttfamily tx\+\_\+metadata} -- Set of transaction metadata needed to relay this transfer later, if {\ttfamily get\+\_\+tx\+\_\+metadata} is {\ttfamily true}.
+\item {\ttfamily multisig\+\_\+txset} -- Set of multisig transactions in the process of being signed (empty for non-\/multisig).
+\item {\ttfamily unsigned\+\_\+txset} -- Set of unsigned tx for cold-\/signing purposes. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1STAKE_a3bd32af2e2be327003ec370e47b879d2}\label{structwallet_1_1rpc_1_1STAKE_a3bd32af2e2be327003ec370e47b879d2}} 
+\index{wallet::rpc::STAKE@{wallet::rpc::STAKE}!names@{names}}
+\index{names@{names}!wallet::rpc::STAKE@{wallet::rpc::STAKE}}
+\doxysubsubsection{\texorpdfstring{names()}{names()}}
+{\footnotesize\ttfamily static constexpr auto wallet\+::rpc\+::\+S\+T\+A\+K\+E\+::names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structwallet_1_1rpc_1_1STAKE_a31656b3bdd12e70d7e291bbbde6d3114}\label{structwallet_1_1rpc_1_1STAKE_a31656b3bdd12e70d7e291bbbde6d3114}} 
+\index{wallet::rpc::STAKE@{wallet::rpc::STAKE}!request@{request}}
+\index{request@{request}!wallet::rpc::STAKE@{wallet::rpc::STAKE}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structwallet_1_1rpc_1_1STAKE_1_1REQUEST}{wallet\+::rpc\+::\+S\+T\+A\+K\+E\+::\+R\+E\+Q\+U\+E\+ST}} wallet\+::rpc\+::\+S\+T\+A\+K\+E\+::request}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/wallet3/rpc/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{wallet__rpc__server_8cpp}{}\doxysection{src/wallet/wallet\+\_\+rpc\+\_\+server.cpp File Reference}
+\label{wallet__rpc__server_8cpp}\index{src/wallet/wallet\_rpc\_server.cpp@{src/wallet/wallet\_rpc\_server.cpp}}
+{\ttfamily \#include $<$boost/format.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/address.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+basic\+\_\+impl.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$oxenc/base64.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}wallet\+\_\+rpc\+\_\+server\+\_\+error\+\_\+codes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet\+\_\+rpc\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wallet/wallet\+\_\+args.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/command\+\_\+line.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/i18n.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/signal\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/fs-\/format.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/cryptonote\+\_\+format\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+basic/account.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}multisig/multisig.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/string\+\_\+tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}epee/wipeable\+\_\+string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crypto/hash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mnemonics/electrum-\/words.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/common/rpc\+\_\+args.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rpc/core\+\_\+rpc\+\_\+server\+\_\+commands\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}daemonizer/daemonizer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cryptonote\+\_\+core/oxen\+\_\+name\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}serialization/boost\+\_\+std\+\_\+variant.\+h\char`\"{}}\newline
+Include dependency graph for wallet\+\_\+rpc\+\_\+server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wallet__rpc__server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_1_1wallet__rpc__error}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::wallet\+\_\+rpc\+\_\+error}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetools}{tools}}
+\begin{DoxyCompactList}\small\item\em Dumping ground for random functions. Please think long and hard before you add anything here. \end{DoxyCompactList}\item 
+ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a0fdadda069ed8aeebdb5d882ee0fbd1c}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::rpc\+\_\+func\+\_\+data}} = std\+::pair$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}}, std\+::string($\ast$)(epee\+::serialization\+::portable\+\_\+storage \&ps, epee\+::serialization\+::storage\+\_\+entry id, std\+::optional$<$ epee\+::serialization\+::storage\+\_\+entry $>$ params, \mbox{\hyperlink{classtools_1_1wallet__rpc__server}{tools\+::wallet\+\_\+rpc\+\_\+server}} \&server)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::optional$<$ \mbox{\hyperlink{classtools_1_1password__container}{tools\+::password\+\_\+container}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a3fc7f66a8d3398d40a9d86705fed1e2d}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::password\+\_\+prompter}} (const char $\ast$prompt, \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} verify)
+\item 
+{\footnotesize template$<$typename R\+PC , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ R\+P\+C\+\_\+\+C\+O\+M\+M\+A\+N\+D, R\+P\+C $>$, int $>$  = 0$>$ }\\void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_ab93baaacdc1fa5e22add6abb99e8f163}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+command}} (std\+::unordered\+\_\+map$<$ std\+::string, rpc\+\_\+func\+\_\+data $>$ \&regs)
+\item 
+{\footnotesize template$<$typename... R\+PC$>$ }\\std\+::unordered\+\_\+map$<$ std\+::string, rpc\+\_\+func\+\_\+data $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_ac12b52c87088baed9631889533046c1a}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::register\+\_\+rpc\+\_\+commands}} (\mbox{\hyperlink{structtools_1_1type__list}{tools\+::type\+\_\+list}}$<$ R\+P\+C... $>$)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a3c22c9c92b783c6f137c1a581c446877}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::convert\+\_\+priority}} (uint32\+\_\+t priority)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_aa471649d0c9c25a3654e4c6f1dd72c85}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::ptx\+\_\+to\+\_\+string}} (const \mbox{\hyperlink{structwallet_1_1pending__tx}{wallet\+::pending\+\_\+tx}} \&ptx)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_ad40da22a6df4ddd4fdfb97b726728fb7}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::is\+\_\+empty\+\_\+string}} (const \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&val)
+\item 
+{\footnotesize template$<$typename T , typename V $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a2de7dfd6247eb0045ea6aa2d7f4af013}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::fill}} (\mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} \&where, V \&\&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+{\footnotesize template$<$typename T , typename V $>$ }\\\mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a6e88454d765ed5cea62c2fe676781af4}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::fill}} (std\+::list$<$ \mbox{\hyperlink{groestl__tables_8h_a0735f92342601a6dcd26111ace40500a}{T}} $>$ \&where, V \&\&\mbox{\hyperlink{aesb_8c_a20c782a91c883391b9bdf9e3176e447c}{s}})
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a0c8c17b0335e1161299c2d9d1ae244b9}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::total\+\_\+amount}} (const \mbox{\hyperlink{structwallet_1_1pending__tx}{wallet\+::pending\+\_\+tx}} \&ptx)
+\item 
+void \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a40b0ee05a578acadbde761902decc828}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::append\+\_\+hex\+\_\+tx\+\_\+keys}} (std\+::string \&to, const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&k, const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&more)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a201f3f079eda3dfaa3c8fde3d74c561c}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::hex\+\_\+tx\+\_\+keys}} (const \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} \&k, const std\+::vector$<$ \mbox{\hyperlink{namespacecrypto_ab89b0197c5ff5ab6ba8e87bd76ef676e}{crypto\+::secret\+\_\+key}} $>$ \&more)
+\item 
+std\+::string \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a86eee6966c084772c9ab856980a44d2c}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::hex\+\_\+tx\+\_\+keys}} (const \mbox{\hyperlink{structwallet_1_1pending__tx}{wallet\+::pending\+\_\+tx}} \&ptx)
+\item 
+po\+::variables\+\_\+map \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_aa2380f964943e5e39a2b4c7ae5ce6bd5}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::password\+\_\+arg\+\_\+hack}} (const std\+::string \&password, po\+::variables\+\_\+map vm)
+\item 
+static fs\+::path \mbox{\hyperlink{namespacetools_aeb26284e221a1c8af69761f7047d04c3}{tools\+::get\+\_\+wallet\+\_\+path}} (fs\+::path dir, fs\+::path filename)
+\item 
+int \mbox{\hyperlink{wallet__rpc__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a9a6c92874071f086047d63744878fe08}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::logcat}} = log\+::\+Cat(\char`\"{}wallet.\+rpc\char`\"{})
+\item 
+constexpr auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_ad1d325b9d5c952726ac2a8d729896c43}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+U\+T\+O\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+P\+E\+R\+I\+OD}} = 20s
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ uint16\+\_\+t, \mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_afa79fa682cc6eb5c4348d8f033f1e4fb}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::arg\+\_\+rpc\+\_\+bind\+\_\+port}} = \{\char`\"{}rpc-\/bind-\/port\char`\"{}, \char`\"{}Sets bind port \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} server\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a2deef8cc8568caea26efe416c6eb77e8}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::arg\+\_\+disable\+\_\+rpc\+\_\+login}} = \{\char`\"{}disable-\/rpc-\/login\char`\"{}, \char`\"{}Disable H\+T\+TP authentication \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} R\+PC connections served by this process\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_abab983ba0d110bf2aff3f86a2551fab7}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::arg\+\_\+restricted}} = \{\char`\"{}restricted-\/rpc\char`\"{}, \char`\"{}Restricts to view-\/only commands\char`\"{}, false\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a148a4eb5dc3f8b4d714a48b9506f2b06}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::arg\+\_\+wallet\+\_\+dir}} = \{\char`\"{}wallet-\/dir\char`\"{}, \char`\"{}Directory \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} newly created wallets\char`\"{}\}
+\item 
+const \mbox{\hyperlink{structcommand__line_1_1arg__descriptor}{command\+\_\+line\+::arg\+\_\+descriptor}}$<$ \mbox{\hyperlink{stdbool_8h_a1062901a7428fdd9c7f180f5e01ea056}{bool}} $>$ \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a25561a65fd40b35ff50338239fa73d9b}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::arg\+\_\+prompt\+\_\+for\+\_\+password}} = \{\char`\"{}prompt-\/\mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}}-\/password\char`\"{}, \char`\"{}Prompts \mbox{\hyperlink{ommentedCombined_2pow225521_8h_a67d1613adb06cf7e2b1da5a5f82c5900}{for}} password when not provided\char`\"{}, false\}
+\item 
+constexpr const char \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_ad959ce7a803dd9bc5fc573bc63b66fa3}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::default\+\_\+rpc\+\_\+username}} \mbox{[}$\,$\mbox{]} = \char`\"{}oxen\char`\"{}
+\item 
+const auto \mbox{\hyperlink{namespacetools_1_1anonymous__namespace_02wallet__rpc__server_8cpp_03_a0206e373d23e01e84ab5508972b949ef}{tools\+::anonymous\+\_\+namespace\{wallet\+\_\+rpc\+\_\+server.\+cpp\}\+::rpc\+\_\+commands}} = register\+\_\+rpc\+\_\+commands(\mbox{\hyperlink{namespacetools_1_1wallet__rpc_afe05d9271fd09ff26083576a99aab69a}{wallet\+\_\+rpc\+\_\+types}}\{\})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wallet__rpc__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{wallet__rpc__server_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{wallet\_rpc\_server.cpp@{wallet\_rpc\_server.cpp}!main@{main}}
+\index{main@{main}!wallet\_rpc\_server.cpp@{wallet\_rpc\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
